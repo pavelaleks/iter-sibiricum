@@ -38,7 +38,8 @@ window.SibMap = (() => {
         .map((r) => ({...r, stops: r.stops.filter(inBox)})).filter((r) => r.stops.length > 1);
       const line = (r) => path({type: 'LineString', coordinates: r.stops.map((s) => [s[2], s[3]])});
       g.append('g').selectAll('path').data(R.filter((r) => r.work !== o.focusWork)).join('path')
-        .attr('class', (r) => 'route' + (r.method === 'auto' ? ' auto' : '')).attr('stroke-width', 1.6).attr('d', line).style('stroke-opacity', (r) => o.autoOpacity && r.method === 'auto' ? o.autoOpacity : null)
+        .attr('class', (r) => 'route' + (r.method === 'auto' ? ' auto' : '') + (o.animate ? ' draw' : '')).attr('stroke-width', o.routeWidth || 1.6).attr('d', line)
+        .attr('pathLength', o.animate ? 1 : null).style('animation-delay', (r, i) => o.animate ? (300 + i * 140) + 'ms' : null).style('stroke-opacity', (r) => o.autoOpacity && r.method === 'auto' ? o.autoOpacity : null)
         .on('mousemove', (ev, r) => { const w = workById[r.work] || {}; show(ev, `<b>${esc(w.label || r.work)}</b>${esc(w.author || '')}<br>${esc(w.nat_ru || '')} · ${esc(w.stay_ru || '')}<br>${r.method === 'auto' ? 'автомаршрут (по порядку упоминаний), требует проверки' : 'маршрут с абзацами-доказательствами'}`); })
         .on('mouseleave', hide).on('click', (ev, r) => o.onWork && o.onWork(r.work));
       const F0 = R.find((r) => r.work === o.focusWork) || o.routes.find((r) => r.work === o.focusWork);
@@ -65,7 +66,7 @@ window.SibMap = (() => {
         g.append('g').selectAll('text').data(top).join('text').attr('class', 'mlabel').attr('transform', (p) => { const q = proj([p.lon, p.lat]); return `translate(${q[0] + 5},${q[1] + 3})`; }).text((p) => p.name);
       }
     }
-    const zoom = d3.zoom().scaleExtent([1, 8]).on('zoom', (ev) => { g.attr('transform', ev.transform); g.selectAll('.mlabel').attr('font-size', 11 / ev.transform.k); g.selectAll('.route').attr('stroke-width', function () { return (this.classList.contains('hi') ? 3 : 1.6) / ev.transform.k; }); });
+    const zoom = d3.zoom().scaleExtent([1, 8]).on('zoom', (ev) => { g.attr('transform', ev.transform); g.selectAll('.mlabel').attr('font-size', 11 / ev.transform.k); g.selectAll('.route').attr('stroke-width', function () { return (this.classList.contains('hi') ? 3 : (o.routeWidth || 1.6)) / ev.transform.k; }); });
     if (o.zoom !== false) svg.call(zoom);
     return {svg, proj};
   }

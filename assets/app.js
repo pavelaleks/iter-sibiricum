@@ -1,17 +1,18 @@
-/* Сибирь в травелогах — одностраничный статический сайт (GitHub Pages). Маршрутизация по #имени. */
+/* Iter Sibiricum — одностраничный статический сайт (GitHub Pages). Маршрутизация по #имени. */
 {
 const V = document.getElementById('view');
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
 const yr = (n) => n == null || isNaN(n) ? '—' : String(Math.round(n));
 const inBox = (s) => s[2] >= 40 && s[2] <= 195 && s[3] >= 34 && s[3] <= 79;
 const fmt = (n, d = 0) => n == null || isNaN(n) ? '—' : Number(n).toLocaleString('ru-RU', {maximumFractionDigits: d, minimumFractionDigits: d});
+const pl = (n, f) => { const a = Math.abs(n) % 100, b = a % 10; return fmt(n) + ' ' + (a > 10 && a < 20 ? f[2] : b === 1 ? f[0] : b > 1 && b < 5 ? f[1] : f[2]); };
 const C = {};
 const get = (n) => (C[n] ||= fetch('data/' + n).then((r) => { if (!r.ok) throw new Error(n); return r.json(); }));
 const toH = (id) => String(id).replace(/_/g, '-'); const fromH = (h) => h.replace(/-/g, '_');
 const NAT = {british: 'Великобритания', french: 'Франция/Бельгия', german: 'Германия/Австрия', scandinavian: 'Скандинавия', finnish: 'Финляндия', polish: 'Польша', italian: 'Италия', central_european: 'Центральная Европа', dutch: 'Нидерланды'};
 const PER = {'P1 до 1855': 'до 1855', 'P2 1856–1880': '1856–1880', 'P3 1881–1904': '1881–1904', 'P4 1905–1917': '1905–1917', 'P5 1918–1930': '1918–1930'};
 const CAT = {indigenous: 'коренные народы', settler: 'русские и пришлые', social: 'социальные группы', neighbour: 'соседи', foreign: 'иностранцы', generic: 'обобщённые «туземцы»'};
-const CATC = {indigenous: '#2b6a9a', settler: '#c4361c', social: '#8a5a00', neighbour: '#6b5bb5', foreign: '#5b636b', generic: '#2f7d4f', work: '#c4361c', authority: '#8a8f96'};
+const CATC = {indigenous: '#3f7296', settler: '#a3173a', social: '#9a6b1f', neighbour: '#6a5a9e', foreign: '#6b7785', generic: '#3c7a5a', work: '#a3173a', authority: '#8e9aa6'};
 let mapRO = null;
 
 function setMenu(r) { document.querySelectorAll('#menu a').forEach((a) => a.classList.toggle('on', r.startsWith(a.dataset.r) || (a.dataset.r === 'peoples' && r.startsWith('people')) || (a.dataset.r === 'library' && r.startsWith('book')))); }
@@ -31,10 +32,12 @@ async function route() {
     else if (h === 'publications') await publications();
     else if (h === 'method') await method();
     else await home();
+    const tk = Object.keys(TITLES).find((k) => h === k || h.startsWith(k + '-')); document.title = tk ? TITLES[tk] + ' — Iter Sibiricum' : 'Iter Sibiricum — европейские травелоги о Сибири, 1800–1930';
     if (!/^book-.*-p\d+$/.test(h) && !h.startsWith('analytics-')) window.scrollTo(0, 0);
   } catch (e) { V.innerHTML = `<div class="wrap band"><h2>Не удалось загрузить данные</h2><p class="mute">${esc(e.message)}. Сайт читает файлы из папки data/; откройте его через веб-сервер (GitHub Pages или python -m http.server).</p></div>`; }
 }
 window.addEventListener('hashchange', route);
+const TITLES = {atlas: 'Атлас', peoples: 'Народы', people: 'Народы', library: 'Библиотека', book: 'Библиотека', links: 'Связи', analytics: 'Аналитика', publications: 'Публикации', method: 'Метод и данные'};
 
 function mapIn(el, opts) {
   const draw = () => SibMap.draw(el, opts());
@@ -53,48 +56,87 @@ function bars(rows, opt = {}) {
 }
 
 // ---------------- главная ----------------
+const REPO = 'https://github.com/pavelaleks/iter-sibiricum';
+async function project() { try { return await get('project.json'); } catch (e) { return {}; } }
+function citation(P, extra = '') {
+  const d = new Date(), dd = String(d.getDate()).padStart(2, '0') + '.' + String(d.getMonth() + 1).padStart(2, '0') + '.' + d.getFullYear();
+  const team = (P.team || []).length ? ' / ' + P.team.join(', ') : '';
+  const grant = P.grant ? `. Проект РНФ № ${P.grant}` : '';
+  const url = P.url || location.href.split('#')[0];
+  return `Iter Sibiricum: европейские травелоги о Сибири и её народах, 1800–1930 : цифровой ресурс${team}${grant}. Версия ${P.version || '1.0'}. ${P.year || d.getFullYear()}. URL: ${url}${extra} (дата обращения: ${dd}).`;
+}
 async function home() {
-  const [A, works, routes, places, geo, groups, reuse] = await Promise.all([get('analytics.json'), get('works.json'), get('routes.json'), get('places.json'), get('geo.json'), get('groups.json'), get('reuse.json')]);
+  const [A, works, routes, places, geo, groups, reuse, P] = await Promise.all([get('analytics.json'), get('works.json'), get('routes.json'), get('places.json'), get('geo.json'), get('groups.json'), get('reuse.json'), project()]);
   const S = A.summary;
-  const ex = A.expert.find((r) => r.dimension === 'all');
   const mod = A.models.find((m) => m.term === 'personal' && m.model.startsWith('pos'));
+  const langs = new Set(works.map((w) => w.lang)).size;
+  const manual = routes.filter((r) => r.method === 'manual').length;
+  const ind = groups.filter((g) => g.category === 'indigenous');
   V.innerHTML = `
-  <section class="band"><div class="wrap hero">
-    <div>
-      <h1>Сибирь глазами европейских путешественников, 1800–1930</h1>
-      <p>Как европейцы видели народы Сибири и отношения между ними — с русскими, казаками, ссыльными, переселенцами и друг с другом. Каждая цифра здесь ведёт к абзацу источника.</p>
-      <div class="figs">
-        <div><div class="fig-n">${fmt(S.works)}</div><div class="fig-l">изданий 9 языков</div></div>
-        <div><div class="fig-n">${fmt(S.words_total / 1e6, 1)} млн</div><div class="fig-l">слов, из них ${fmt(S.words_siberia / 1e6, 1)} млн о Сибири</div></div>
-        <div><div class="fig-n">${fmt(S.mentions_siberia)}</div><div class="fig-l">упоминаний народов в Сибири</div></div>
-        <div><div class="fig-n">${fmt(S.indigenous_groups)}</div><div class="fig-l">коренных групп из ${fmt(S.groups_found)}</div></div>
-      </div>
-      <p class="small mute">Красные линии — маршруты, восстановленные вручную по абзацам-доказательствам; остальные (автоматические) — в атласе. Синие пятна — схематичные ареалы народов около 1900 г.</p>
+  <section class="wrap masthead">
+    <h1 class="title">Iter<span>Sibiricum</span></h1>
+    <div class="sub">
+      <p>Как европейские путешественники 1800–1930 годов видели народы Сибири и отношения между ними.</p>
+      <dl class="facts">
+        <div><dt>книг на ${langs} языках</dt><dd>${fmt(S.works)}</dd></div>
+        <div><dt>слов о Сибири</dt><dd>${fmt(S.words_siberia / 1e6, 1)} млн</dd></div>
+        <div><dt>упоминаний народов</dt><dd>${fmt(S.mentions_siberia)}</dd></div>
+      </dl>
     </div>
-    <div class="mapbox" id="homeMap"></div>
+  </section>
+  <section class="wrap">
+    <div class="mapbox heromap" id="homeMap"></div>
+    <div class="mapnote"><span><i></i>${manual} маршрутов, восстановленных по тексту книг; ещё ${routes.length - manual} — в атласе</span><span><i class="a"></i>ареалы коренных народов около 1900 года, схематично</span></div>
+  </section>
+  <section class="band"><div class="wrap etym">
+    <div class="word"><i>iter, itineris</i> <span class="mute">(лат.)</span><small>путь, дорога; путешествие; маршрут</small></div>
+    <div>
+      <p><i>Iter Sibiricum</i> — «сибирский путь». Латинским словом <i>iter</i> учёные XVIII века называли и само путешествие, и его отчёт: так Карл Линней озаглавил дневник своей поездки в Лапландию 1732 года — <i>Iter Lapponicum</i>. По-латыни писали и первые академические исследователи Сибири: достаточно вспомнить <i>Flora Sibirica</i> Иоганна Георга Гмелина.</p>
+      <p>Европейцы XIX — начала XX века ехали по их следам и постоянно на них ссылались: Паллас — самый цитируемый авторитет в корпусе. Название напоминает об этой традиции и о трёх вещах, из которых собран ресурс: маршрутах, текстах и встречах в пути.</p>
+    </div>
   </div></section>
   <section class="band alt"><div class="wrap">
-    <h2>Что показывает корпус</h2>
-    <div class="cols">
-      <div><h3>Оценка зависит от опыта встречи</h3><p>В ручной выборке отрицательно оценены ${fmt(100 * ex.neg, 1)}% описаний коренных народов, положительно — ${fmt(100 * ex.pos, 1)}%. Личное наблюдение повышает шансы положительной оценки в ${fmt(mod.OR, 1)} раза (95% ДИ ${fmt(mod.lo, 1)}–${fmt(mod.hi, 1)}).</p><a href="#analytics">Аналитика →</a></div>
-      <div><h3>Мотив «вымирания» нарастает</h3><p>Его доля в абзацах о коренных народах растёт от 0,4% до 1855 года к 2,9% в 1905–1917 годах, а внимание к каторге в 1890-е сменяется вниманием к переселенцам.</p><a href="#analytics-ngram">Ngram и дискурсы →</a></div>
-      <div><h3>Тексты переписывают друг друга</h3><p>Найдено ${fmt(reuse.length)} пар абзацев с общими фрагментами: компиляции, самоповторы, неатрибутированные заимствования. Самый цитируемый авторитет — Паллас.</p><a href="#links">Связи →</a></div>
-    </div>
+    <h2>Содержание</h2>
+    <ul class="toc">
+      <li><a href="#atlas"><span class="t">Атлас</span><span class="d">Маршруты путешественников, места, о которых они писали, и ареалы народов. Фильтры по эпохе, стране автора, типу поездки.</span><span class="n">${pl(routes.length, ['маршрут', 'маршрута', 'маршрутов'])}</span></a></li>
+      <li><a href="#peoples"><span class="t">Народы</span><span class="d">Кто, когда и какими словами описывал каждый народ: авторы, коллокации на трёх языках, дискурсы, цитаты.</span><span class="n">${pl(groups.length, ['карточка', 'карточки', 'карточек'])}</span></a></li>
+      <li><a href="#library"><span class="t">Библиотека</span><span class="d">Полные очищенные тексты с подсветкой этнонимов и постоянными номерами абзацев для ссылок.</span><span class="n">${pl(works.length, ['книга', 'книги', 'книг'])}</span></a></li>
+      <li><a href="#links"><span class="t">Связи</span><span class="d">Какие народы упоминаются вместе в разные эпохи и кто из авторов на кого ссылается и у кого заимствует.</span><span class="n">5 периодов</span></a></li>
+      <li><a href="#analytics"><span class="t">Аналитика</span><span class="d">Оценки и рамки описания, Ngram по десятилетиям, дискурсы, отношения, темы, текстовые заимствования.</span><span class="n">6 разделов</span></a></li>
+      <li><a href="#publications"><span class="t">Публикации</span><span class="d">Статьи и монографии проекта: опубликованные и в печати.</span><span class="n"></span></a></li>
+      <li><a href="#method"><span class="t">Метод и данные</span><span class="d">Как собран и размечен корпус, насколько можно доверять каждой цифре, что скачать.</span><span class="n">${pl(A.quality.length, ['проверка', 'проверки', 'проверок'])}</span></a></li>
+    </ul>
   </div></section>
   <section class="band"><div class="wrap">
-    <h2>Разделы</h2>
-    <div class="cards">
-      <a class="card" href="#atlas"><div class="t">Атлас</div><div class="s">${routes.length} маршрутов, ${places.length} мест, ареалы народов, фильтры по эпохе и стране автора</div></a>
-      <a class="card" href="#peoples"><div class="t">Народы</div><div class="s">${groups.length} карточек: кто описывал, какими словами, когда, цитаты</div></a>
-      <a class="card" href="#library"><div class="t">Библиотека</div><div class="s">${works.length} текстов с подсветкой этнонимов и абзацами о Сибири</div></a>
-      <a class="card" href="#links"><div class="t">Связи 3D</div><div class="s">сети групп по периодам и сеть цитирований</div></a>
-      <a class="card" href="#analytics"><div class="t">Аналитика</div><div class="s">дискурсы, Ngram, рамки, модели, темы, заимствования</div></a>
-      <a class="card" href="#publications"><div class="t">Публикации</div><div class="s">статьи и монографии проекта</div></a>
-      <a class="card" href="#method"><div class="t">Метод</div><div class="s">конвейер, проверки качества, данные для загрузки</div></a>
+    <h2>Что показывает корпус</h2>
+    <div class="findings">
+      <div><div class="k">×${fmt(mod.OR, 1)}</div><h3>Оценка зависит от встречи</h3><p>Автор, писавший по личному наблюдению, в ${fmt(mod.OR, 1)} раза чаще оценивает народ положительно (95% ДИ ${fmt(mod.lo, 1)}–${fmt(mod.hi, 1)}).</p><a href="#analytics">Модели и рамки описания</a></div>
+      <div><div class="k">0,4 → 2,9%</div><h3>Мотив вымирания нарастает</h3><p>Такова его доля в абзацах о коренных народах до 1855 года и в 1905–1917 годах. В те же десятилетия внимание к каторге сменяется вниманием к переселенцам.</p><a href="#analytics-ngram">Ngram и дискурсы</a></div>
+      <div><div class="k">${fmt(reuse.length)}</div><h3>Тексты переписывают друг друга</h3><p>Столько пар абзацев с общими фрагментами нашлось в корпусе: компиляции, самоповторы, заимствования без ссылки.</p><a href="#links">Сеть цитирований</a></div>
+    </div>
+  </div></section>
+  <section class="band alt"><div class="wrap research">
+    <div>
+      <h2>Как цитировать</h2>
+      <div class="cite" id="citeBox">${esc(citation(P))}</div>
+      <p class="small mute">У каждого абзаца в библиотеке постоянный номер: ссылка вида <code>#book-lansdell1883-p00502</code> откроет именно его.</p>
+      <button id="copyCite">Скопировать ссылку</button>
+    </div>
+    <div>
+      <h2>Данные и код</h2>
+      <dl>
+        <dt>Тексты</dt><dd><a href="${REPO}/tree/main/texts">${fmt(works.length)} файлов JSON</a> с абзацами и разметкой</dd>
+        <dt>Таблицы</dt><dd><a href="${REPO}/tree/main/pipeline/data">упоминания, места, маршруты, ручная разметка</a> в CSV</dd>
+        <dt>Конвейер</dt><dd><a href="${REPO}/tree/main/pipeline/analysis">скрипты на Python</a> от очистки OCR до сайта</dd>
+        <dt>Проверки</dt><dd><a href="${REPO}/tree/main/pipeline/validation">выборки и протоколы</a> оценки качества</dd>
+        <dt>Лицензии</dt><dd>данные CC BY 4.0, код MIT</dd>
+      </dl>
     </div>
   </div></section>`;
-  const ind = groups.filter((g) => g.category === 'indigenous');
-  mapIn(document.getElementById('homeMap'), () => ({geo, routes, places, works, areas: ind, showPlaces: false, labels: false, zoom: false, showAuto: false, onWork: (w) => location.hash = 'book-' + toH(w), onGroup: (g) => location.hash = 'people-' + toH(g)}));
+  document.getElementById('copyCite').addEventListener('click', async (e) => { try { await navigator.clipboard.writeText(document.getElementById('citeBox').textContent); e.target.textContent = 'Ссылка скопирована'; } catch (err) { e.target.textContent = 'Выделите текст и скопируйте вручную'; } });
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let first = !reduce;
+  mapIn(document.getElementById('homeMap'), () => { const o = {geo, routes, places, works, areas: ind, showPlaces: false, labels: false, zoom: false, showAuto: false, animate: first, routeWidth: 2, onWork: (w) => location.hash = 'book-' + toH(w), onGroup: (g) => location.hash = 'people-' + toH(g)}; first = false; return o; });
 }
 
 // ---------------- атлас ----------------
@@ -255,7 +297,7 @@ async function book(id, par) {
       ms.slice().sort((a, b) => a[0] - b[0]).forEach(([a, b, g]) => { if (a < pos) return; out += esc(text.slice(pos, a)) + `<mark class="${hg && GN[g] === hg ? 'sel' : ''}" title="${esc(GN[g] || g)}">${esc(text.slice(a, b))}</mark>`; pos = b; });
       out += esc(text.slice(pos));
       if (re) { const c = (text.match(re) || []).length; if (!c) return ''; hits += c; }
-      return `<p id="p${n}" class="${type === 'h' ? 'h' : ''}${sib ? ' sib' : ''}"><span class="pid">${n}</span>${out}</p>`;
+      return `<p id="p${n}" class="${type === 'h' ? 'h' : ''}${sib ? ' sib' : ''}"><a class="pid" href="#book-${toH(id)}-p${n}" title="Постоянная ссылка на абзац">${n}</a>${out}</p>`;
     }).join('');
     document.getElementById('txt').innerHTML = html || '<p class="mute">Ничего не найдено.</p>';
     document.getElementById('tqn').textContent = re ? `Совпадений: ${hits}` : '';
@@ -297,16 +339,16 @@ async function links() {
       const deg = {}; d.links.forEach((l) => { deg[l.target] = (deg[l.target] || 0) + l.weight; });
       const nodes = d.nodes.filter((n) => n.kind === 'work' || (deg[n.id] || 0) >= 5);
       const ids = new Set(nodes.map((n) => n.id));
-      data = {nodes: nodes.map((n) => ({...n, color: CATC[n.kind], val: Math.max(1, Math.sqrt(deg[n.id] || 1))})), links: d.links.filter((l) => ids.has(l.source) && ids.has(l.target)).map((l) => ({...l, color: l.type === 'reuse' ? '#ff6b4f' : '#7f8b95'}))};
-      legend = `<span><i style="background:${CATC.work}"></i>книги корпуса</span><span><i style="background:${CATC.authority}"></i>авторитеты вне корпуса</span><span><i style="background:#ff6b4f"></i>заимствование</span><span><i style="background:#7f8b95"></i>ссылка</span>`;
+      data = {nodes: nodes.map((n) => ({...n, color: CATC[n.kind], val: Math.max(1, Math.sqrt(deg[n.id] || 1))})), links: d.links.filter((l) => ids.has(l.source) && ids.has(l.target)).map((l) => ({...l, color: l.type === 'reuse' ? '#f0607a' : '#8597a8'}))};
+      legend = `<span><i style="background:${CATC.work}"></i>книги корпуса</span><span><i style="background:${CATC.authority}"></i>авторитеты вне корпуса</span><span><i style="background:#f0607a"></i>заимствование</span><span><i style="background:#8597a8"></i>ссылка</span>`;
       document.getElementById('g3info').innerHTML = 'Чаще всего упоминают: Pallas, Atkinson, Castrén, Humboldt, Schrenck, Erman, Middendorff.';
     }
     document.getElementById('g3l').innerHTML = legend;
     document.getElementById('perCtl').hidden = mode !== 'g';
     if (!FG) {
-      FG = ForceGraph3D()(el).backgroundColor('#0d1114').width(el.clientWidth).height(el.clientHeight)
+      FG = ForceGraph3D()(el).backgroundColor('#0e1a26').width(el.clientWidth).height(el.clientHeight)
         .nodeLabel((n) => esc(n.label || n.name || n.id)).nodeColor('color').nodeVal('val').nodeOpacity(.92).nodeRelSize(3)
-        .linkWidth((l) => Math.min(4, Math.sqrt(l.weight || 1) / 2)).linkOpacity(.35).linkColor((l) => l.color || '#7f8b95')
+        .linkWidth((l) => Math.min(4, Math.sqrt(l.weight || 1) / 2)).linkOpacity(.35).linkColor((l) => l.color || '#8597a8')
         .linkDirectionalArrowLength((l) => mode === 'i' ? 3 : 0).linkDirectionalArrowRelPos(1).cooldownTicks(150)
         .onEngineStop(() => { if (FG.__fit) { FG.__fit = false; FG.zoomToFit(600, 40); } })
         .onNodeClick((n) => { if (mode === 'g') location.hash = 'people-' + toH(n.id); else if (n.kind === 'work') location.hash = 'book-' + toH(n.id); });
@@ -399,7 +441,7 @@ function ngramChart(el, NG, q, sm) {
   const x = d3.scaleLinear().domain([y0, y1]).range([m.l, w - m.r]);
   const ymax = d3.max(series.flatMap((s) => s.pts.map((p) => p[1]))) || 1;
   const y = d3.scaleLinear().domain([0, ymax]).nice().range([h - m.b, m.t]);
-  const cols = ['#c4361c', '#2b6a9a', '#2f7d4f', '#8a5a00', '#6b5bb5', '#5b636b'];
+  const cols = ['#a3173a', '#3f7296', '#3c7a5a', '#9a6b1f', '#6a5a9e', '#6b7785'];
   const line = d3.line().x((p) => x(p[0])).y((p) => y(p[1]));
   const labs = series.filter((s) => s.pts.length).map((s, i) => ({s, i, y: y(s.pts[s.pts.length - 1][1])})).sort((a, b) => a.y - b.y);
   for (let k = 1; k < labs.length; k++) if (labs[k].y - labs[k - 1].y < 15) labs[k].y = labs[k - 1].y + 15;
@@ -444,7 +486,7 @@ async function publications() {
 
 // ---------------- метод ----------------
 async function method() {
-  const A = await get('analytics.json');
+  const [A, P] = await Promise.all([get('analytics.json'), project()]);
   const steps = [['Поиск корпуса', 'Опорная библиография (Cross, «In the Lands of the Romanovs»; национальные каталоги), затем поиск каждой книги и широкий многоязычный поиск по archive.org. Полнота по Cross: 76% европейских позиций.'],
     ['Очистка OCR', 'Колонтитулы, номера страниц, переносы, подписи к иллюстрациям, рекламные страницы и дисклеймеры Google Books; контроль качества по доле служебных слов.'],
     ['Сегментация и TEI', 'Главы и абзацы с постоянными ID; оглавления, указатели и аннотации глав не считаются текстом; TEI P5 для каждой книги.'],
@@ -461,10 +503,11 @@ async function method() {
     <h2 style="margin-top:28px">Ограничения</h2>
     <ul><li>Ручную выборку размечал один разметчик (модель Claude); нужен второй, человек, и расчёт α Криппендорфа.</li>
     <li>В OCR-книгах без распознанных глав регион «Сибирь» у абзацев без своих топонимов верен примерно в 77% случаев.</li>
-    <li>Корпус открытый и неполный: нет Czaplicka, Noble, Labbé и других книг, которых нет на archive.org; это не корпус проекта РНФ.</li>
+    <li>Корпус открытый и неполный: в него вошли только книги, доступные в открытых электронных библиотеках; нет, например, Czaplicka, Noble и Labbé. Корпус будет пополняться.</li>
     <li>Ареалы народов на карте схематичны и служат только для ориентира.</li></ul>
     <h2 style="margin-top:28px">Данные</h2>
-    <p>Все наборы данных лежат в папке <code>data/</code> этого сайта (JSON), тексты — в <code>texts/</code>. Полный конвейер с CSV-таблицами, TEI и ручной разметкой — в репозитории проекта.</p>
+    <p>Наборы данных сайта лежат в папке <code>data/</code> (JSON), тексты — в <code>texts/</code>. Конвейер, CSV-таблицы упоминаний, мест и маршрутов, ручная разметка и протоколы проверок — в <a href="${REPO}">репозитории на GitHub</a>, в папке <code>pipeline/</code>.</p>
+    <div class="cite">${esc(citation(P))}</div>
   </div></section>`;
 }
 route();
