@@ -1,0 +1,51 @@
+k	pol	obs	themes	stereotype_ru	note
+50	P	re	violence;administration	дружественные отношения с русскими, без зверств	coexistence Russians–Japanese
+51	0	ge	religion		
+52	N	ge	health_decline	«сами роют себе могилу», неизбежное вымирание	
+53	0	bo	language	урало-алтайская «семья»	racial-linguistic classification
+54	0	ge	subsistence		
+55	N	pe	violence	возможные убийцы	
+56	0	bo	administration	права по царским грамотам	administration Russians–Samoyeds
+57	0	ge	religion		
+58	0	bo	religion		
+59	0	un			mention outside focus sentence
+60	0	pe	subsistence		
+61	0	re			
+62	0	ge	administration		
+63	0	pe	administration		
+64	P	pe	character	добродушные казаки (против «угрюмых коряков»)	contrast Cossacks/Koryaks
+65	0	pe			
+66	0	pe	administration		deportation of Poles 1915
+67	0	ge	religion		
+68	P	pe	appearance;character	разрушение образа «свирепого татарина»	stereotype-breaking
+69	0	pe	religion		
+70	N	ge	administration	«рабство» под деспотией	
+71	0	bo	violence		
+72	P	bo	education_civ	ссыльные-учёные	
+73	P	ge	subsistence	идиллия кочевника	
+74	0	pe			labour
+75	N	pe	hygiene;economy_trade	грязь (молоко)	
+76	A	ge	economy_trade;alcohol	жертвы торговцев; пьянство	exploitation merchants–natives
+77	0	bo	language		
+78	0	pe	dwelling		
+79	N	pe	character	враждебность к иностранцам	
+80	0	ge	subsistence		
+81	0	pe			
+82	0	bo	violence		
+83	N	ge	administration	атаманы-узурпаторы	
+84	0	bo	administration	колонизация	
+85	0	pe	health_decline;religion		
+86	0	pe			
+87	P	ge	hospitality	гостеприимство	
+88	0	pe			
+89	N	pe	character	«азиатская» медлительность	assimilation (samoyedized Tungus)
+90	0	ge	economy_trade		
+91	N	pe	administration		
+92	0	ge	character	оседлые в противопоставлении «смелым кочевникам»	
+93	N	re	hygiene;dwelling	паразиты, дым в пологах	
+94	0	pe	subsistence		
+95	0	ge	religion		
+96	P	ge	education_civ;dwelling	«более развиты, чем самоеды»	ranking
+97	0	bo	subsistence		
+98	0	pe	administration		deportation of German colonists 1916
+99	0	re	religion		

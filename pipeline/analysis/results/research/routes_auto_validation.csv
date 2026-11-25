@@ -1,0 +1,15 @@
+work_id,manual_stops,found,recall,auto_stops,kendall_tau
+barzini1908,16,16,1.0,34,0.82
+dewindt1889,13,12,0.92,34,0.79
+dewindt1903,14,12,0.86,26,0.73
+donner1915,5,5,1.0,13,0.8
+gaunt1919,11,8,0.73,17,0.86
+grano1893,12,11,0.92,18,0.2
+kubalski1856,0,0,0.0,13,
+leroybeaulieu1900,0,0,0.0,33,
+meignan1877,20,16,0.8,24,0.83
+michie1864,26,21,0.81,30,0.93
+price1892,11,9,0.82,17,1.0
+ready1904,7,6,0.86,8,0.73
+svinhufvud1928,7,7,1.0,12,0.5
+ward1920,9,7,0.78,15,0.33

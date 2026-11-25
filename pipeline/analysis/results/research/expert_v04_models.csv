@@ -1,0 +1,13 @@
+model,term,OR,lo,hi,p
+neg ~ brit + C(per3) + transit + personal,Intercept,0.1,0.03,0.31,0.0
+neg ~ brit + C(per3) + transit + personal,C(per3)[T.b_1881_1904],1.01,0.3,3.39,0.986
+neg ~ brit + C(per3) + transit + personal,C(per3)[T.c_после1904],1.59,0.47,5.42,0.459
+neg ~ brit + C(per3) + transit + personal,brit,0.84,0.3,2.35,0.743
+neg ~ brit + C(per3) + transit + personal,transit,1.46,0.52,4.14,0.474
+neg ~ brit + C(per3) + transit + personal,personal,0.51,0.2,1.3,0.161
+pos ~ brit + C(per3) + transit + personal,Intercept,0.05,0.02,0.13,0.0
+pos ~ brit + C(per3) + transit + personal,C(per3)[T.b_1881_1904],0.46,0.15,1.44,0.183
+pos ~ brit + C(per3) + transit + personal,C(per3)[T.c_после1904],0.88,0.32,2.43,0.807
+pos ~ brit + C(per3) + transit + personal,brit,2.2,0.9,5.37,0.084
+pos ~ brit + C(per3) + transit + personal,transit,1.35,0.58,3.13,0.489
+pos ~ brit + C(per3) + transit + personal,personal,4.39,1.87,10.33,0.001

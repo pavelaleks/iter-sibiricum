@@ -1,0 +1,167 @@
+work_id,seq,place_id,label_ru,lat,lon,region,evidence_pid,evidence_status,mentions_total
+michie1864,1,peking,Пекин,39.9075,116.3972,china,michie1864_p00112,attested_in_order,98
+michie1864,2,kalgan,Калган (Чжанцзякоу),40.81,114.88,china,michie1864_p00157,attested_in_order,33
+michie1864,3,urga,Урга (Улан-Батор),47.9077,106.8832,mongolia,michie1864_p00186,attested_in_order,32
+michie1864,4,maimachin,Маймачен,50.32,106.46,mongolia,michie1864_p00398,attested_in_order,14
+michie1864,5,kiakhta,Кяхта,50.3574,106.4503,east_siberia,michie1864_p00399,attested_in_order,69
+michie1864,6,selenginsk,Селенгинск,51.3,106.88,east_siberia,michie1864_p00560,attested_in_order,4
+michie1864,7,verkhneudinsk,Верхнеудинск (Улан-Удэ),51.8272,107.6063,east_siberia,michie1864_p00561,attested_in_order,1
+michie1864,8,baikal,оз. Байкал,53.5,108.0,east_siberia,michie1864_p00564,attested_in_order,35
+michie1864,9,irkutsk,Иркутск,52.2978,104.2964,east_siberia,michie1864_p00564,attested_in_order,67
+michie1864,10,nizhneudinsk,Нижнеудинск,54.9076,99.0276,east_siberia,,not_found_in_text,0
+michie1864,11,kansk,Канск,56.2017,95.7175,east_siberia,michie1864_p00647,attested_in_order,4
+michie1864,12,krasnoyarsk,Красноярск,56.0184,92.8672,east_siberia,michie1864_p00647,attested_in_order,11
+michie1864,13,achinsk,Ачинск,56.2694,90.4993,east_siberia,michie1864_p00666,attested_in_order,7
+michie1864,14,mariinsk,Мариинск,56.2139,87.7472,west_siberia,michie1864_p00671,attested_in_order,3
+michie1864,15,tomsk,Томск,56.4977,84.9744,west_siberia,michie1864_p00672,attested_in_order,37
+michie1864,16,kolyvan,Колывань,55.307,82.739,west_siberia,michie1864_p00705,attested_in_order,5
+michie1864,17,kainsk,Каинск (Куйбышев),55.4475,78.3218,west_siberia,michie1864_p00720,attested_in_order,1
+michie1864,18,omsk,Омск,54.9924,73.3686,west_siberia,michie1864_p00720,attested_in_order,8
+michie1864,19,petropavlovsk_kz,Петропавловск (Степной край),54.873,69.143,kazakh_steppe,,not_found_in_text,0
+michie1864,20,ishim,Ишим,56.1128,69.4901,west_siberia,michie1864_p00731,attested_in_order,1
+michie1864,21,tyumen,Тюмень,57.1522,65.5272,west_siberia,michie1864_p00731,attested_in_order,15
+michie1864,22,ekaterinburg,Екатеринбург,56.8519,60.6122,urals,michie1864_p00732,attested_in_order,15
+michie1864,23,perm,Пермь,58.0105,56.2502,urals,michie1864_p00732,attested_in_order,11
+michie1864,24,kazan,Казань,55.7887,49.1221,european_russia,michie1864_p00751,attested_in_order,26
+michie1864,25,nizhny,Нижний Новгород,56.3287,44.002,european_russia,michie1864_p00751,attested_in_order,19
+michie1864,26,moscow,Москва,55.7522,37.6156,european_russia,michie1864_p00781,attested_in_order,26
+michie1864,27,stpetersburg,Санкт-Петербург,59.9386,30.3141,european_russia,michie1864_p00801,attested_in_order,33
+dewindt1889,1,peking,Пекин,39.9075,116.3972,china,dewindt1889_p00020,attested_in_order,145
+dewindt1889,2,kalgan,Калган (Чжанцзякоу),40.81,114.88,china,dewindt1889_p00057,attested_in_order,65
+dewindt1889,3,gobi,пустыня Гоби,43.0,106.0,mongolia,dewindt1889_p00057,attested_in_order,50
+dewindt1889,4,urga,Урга (Улан-Батор),47.9077,106.8832,mongolia,dewindt1889_p00082,attested_in_order,79
+dewindt1889,5,kiakhta,Кяхта,50.3574,106.4503,east_siberia,dewindt1889_p00082,attested_in_order,87
+dewindt1889,6,verkhneudinsk,Верхнеудинск (Улан-Удэ),51.8272,107.6063,east_siberia,dewindt1889_p00213,attested_in_order,1
+dewindt1889,7,baikal,оз. Байкал,53.5,108.0,east_siberia,dewindt1889_p00213,attested_in_order,51
+dewindt1889,8,irkutsk,Иркутск,52.2978,104.2964,east_siberia,dewindt1889_p00213,attested_in_order,176
+dewindt1889,9,krasnoyarsk,Красноярск,56.0184,92.8672,east_siberia,dewindt1889_p00616,attested_in_order,25
+dewindt1889,10,tomsk,Томск,56.4977,84.9744,west_siberia,dewindt1889_p00616,attested_in_order,107
+dewindt1889,11,tobolsk,Тобольск,58.198,68.254,west_siberia,dewindt1889_p00661,attested_in_order,31
+dewindt1889,12,tyumen,Тюмень,57.1522,65.5272,west_siberia,dewindt1889_p00707,attested_in_order,26
+dewindt1889,13,ekaterinburg,Екатеринбург,56.8519,60.6122,urals,dewindt1889_p00877,attested_in_order,10
+dewindt1889,14,perm,Пермь,58.0105,56.2502,urals,dewindt1889_p00877,attested_in_order,14
+dewindt1889,15,moscow,Москва,55.7522,37.6156,european_russia,dewindt1889_p00881,attested_in_order,42
+dewindt1903,1,paris,Париж,48.8534,2.3488,europe,dewindt1903_p00010,attested_in_order,46
+dewindt1903,2,moscow,Москва,55.7522,37.6156,european_russia,dewindt1903_p00031,attested_in_order,20
+dewindt1903,3,irkutsk,Иркутск,52.2978,104.2964,east_siberia,dewindt1903_p00031,attested_in_order,52
+dewindt1903,4,kachug,Качуг,53.9606,105.8817,east_siberia,,not_found_in_text,0
+dewindt1903,5,zhigalovo,Жигалово,54.8106,105.1581,east_siberia,,not_found_in_text,0
+dewindt1903,6,kirensk,Киренск,57.7853,108.1119,east_siberia,dewindt1903_p00071,attested_in_order,7
+dewindt1903,7,vitim,Витим,59.4433,112.5699,east_siberia,dewindt1903_p00071,attested_in_order,14
+dewindt1903,8,olekminsk,Олёкминск,60.374,120.426,yakutia_ne,dewindt1903_p00071,attested_in_order,7
+dewindt1903,9,yakutsk,Якутск,62.0339,129.7331,yakutia_ne,dewindt1903_p00071,attested_in_order,128
+dewindt1903,10,verkhoyansk,Верхоянск,67.5539,133.3898,yakutia_ne,dewindt1903_p00077,attested_in_order,76
+dewindt1903,11,srednekolymsk,Среднеколымск,67.4566,153.7025,yakutia_ne,dewindt1903_p00141,attested_in_order,60
+dewindt1903,12,nizhnekolymsk,Нижнеколымск,68.533,160.917,yakutia_ne,dewindt1903_p00269,attested_in_order,19
+dewindt1903,13,eastcape,мыс Дежнёва / Уэлен,66.16,-169.8,kamchatka_chukotka,dewindt1903_p00331,attested_in_order,40
+dewindt1903,14,beringstrait,Берингов пролив,65.8,-169.0,kamchatka_chukotka,dewindt1903_p00336,attested_in_order,54
+dewindt1903,15,alaska,Аляска,64.5,-165.4,america,dewindt1903_p00344,attested_in_order,237
+meignan1877,1,paris,Париж,48.8534,2.3488,europe,meignan1877_p00042,attested_in_order,18
+meignan1877,2,stpetersburg,Санкт-Петербург,59.9386,30.3141,european_russia,meignan1877_p00051,attested_in_order,38
+meignan1877,3,moscow,Москва,55.7522,37.6156,european_russia,meignan1877_p00089,attested_in_order,22
+meignan1877,4,nizhny,Нижний Новгород,56.3287,44.002,european_russia,meignan1877_p00107,attested_in_order,16
+meignan1877,5,kazan,Казань,55.7887,49.1221,european_russia,meignan1877_p00149,attested_in_order,22
+meignan1877,6,perm,Пермь,58.0105,56.2502,urals,meignan1877_p00337,attested_in_order,18
+meignan1877,7,ekaterinburg,Екатеринбург,56.8519,60.6122,urals,,not_found_in_text,0
+meignan1877,8,tyumen,Тюмень,57.1522,65.5272,west_siberia,meignan1877_p00420,attested_in_order,13
+meignan1877,9,ishim,Ишим,56.1128,69.4901,west_siberia,meignan1877_p00478,attested_in_order,1
+meignan1877,10,omsk,Омск,54.9924,73.3686,west_siberia,meignan1877_p00496,attested_in_order,23
+meignan1877,11,kainsk,Каинск (Куйбышев),55.4475,78.3218,west_siberia,,not_found_in_text,0
+meignan1877,12,tomsk,Томск,56.4977,84.9744,west_siberia,meignan1877_p00556,attested_in_order,20
+meignan1877,13,krasnoyarsk,Красноярск,56.0184,92.8672,east_siberia,meignan1877_p00591,attested_in_order,17
+meignan1877,14,irkutsk,Иркутск,52.2978,104.2964,east_siberia,meignan1877_p00606,attested_in_order,61
+meignan1877,15,baikal,оз. Байкал,53.5,108.0,east_siberia,meignan1877_p00641,attested_in_order,23
+meignan1877,16,verkhneudinsk,Верхнеудинск (Улан-Удэ),51.8272,107.6063,east_siberia,meignan1877_p00848,attested_in_order,6
+meignan1877,17,kiakhta,Кяхта,50.3574,106.4503,east_siberia,meignan1877_p00922,attested_in_order,32
+meignan1877,18,maimachin,Маймачен,50.32,106.46,mongolia,meignan1877_p00922,attested_in_order,11
+meignan1877,19,urga,Урга (Улан-Батор),47.9077,106.8832,mongolia,meignan1877_p00960,attested_in_order,20
+meignan1877,20,gobi,пустыня Гоби,43.0,106.0,mongolia,meignan1877_p00960,attested_in_order,16
+meignan1877,21,kalgan,Калган (Чжанцзякоу),40.81,114.88,china,,not_found_in_text,0
+meignan1877,22,peking,Пекин,39.9075,116.3972,china,meignan1877_p01030,attested_in_order,38
+price1892,1,karasea,Карское море,72.0,70.0,arctic_siberia,price1892_p00063,attested_in_order,13
+price1892,2,yenisei,р. Енисей,62.0,90.0,east_siberia,price1892_p00063,attested_in_order,18
+price1892,3,yeniseisk,Енисейск,58.4494,92.1797,east_siberia,price1892_p00063,attested_in_order,65
+price1892,4,krasnoyarsk,Красноярск,56.0184,92.8672,east_siberia,price1892_p00224,attested_in_order,35
+price1892,5,kansk,Канск,56.2017,95.7175,east_siberia,price1892_p00744,attested_in_order,2
+price1892,6,nizhneudinsk,Нижнеудинск,54.9076,99.0276,east_siberia,price1892_p00744,attested_in_order,1
+price1892,7,irkutsk,Иркутск,52.2978,104.2964,east_siberia,price1892_p00760,attested_in_order,57
+price1892,8,baikal,оз. Байкал,53.5,108.0,east_siberia,price1892_p00798,attested_in_order,17
+price1892,9,verkhneudinsk,Верхнеудинск (Улан-Удэ),51.8272,107.6063,east_siberia,price1892_p00960,attested_in_order,2
+price1892,10,kiakhta,Кяхта,50.3574,106.4503,east_siberia,price1892_p00960,attested_in_order,18
+price1892,11,maimachin,Маймачен,50.32,106.46,mongolia,price1892_p01011,attested_in_order,1
+price1892,12,urga,Урга (Улан-Батор),47.9077,106.8832,mongolia,price1892_p01021,attested_in_order,37
+price1892,13,gobi,пустыня Гоби,43.0,106.0,mongolia,price1892_p01121,attested_in_order,14
+price1892,14,kalgan,Калган (Чжанцзякоу),40.81,114.88,china,price1892_p01122,attested_in_order,21
+price1892,15,peking,Пекин,39.9075,116.3972,china,price1892_p01192,attested_in_order,34
+ready1904,1,london,Лондон,51.5085,-0.1257,europe,ready1904_p00007,attested_in_order,2
+ready1904,2,moscow,Москва,55.7522,37.6156,european_russia,ready1904_p00039,attested_in_order,5
+ready1904,3,omsk,Омск,54.9924,73.3686,west_siberia,ready1904_p00055,attested_in_order,2
+ready1904,4,krasnoyarsk,Красноярск,56.0184,92.8672,east_siberia,ready1904_p00057,attested_in_order,1
+ready1904,5,irkutsk,Иркутск,52.2978,104.2964,east_siberia,ready1904_p00059,attested_in_order,2
+ready1904,6,baikal,оз. Байкал,53.5,108.0,east_siberia,ready1904_p00059,attested_in_order,4
+ready1904,7,harbin,Харбин,45.75,126.65,manchuria,ready1904_p00076,attested_in_order,4
+ready1904,8,shanghai,Шанхай,31.222,121.458,china,ready1904_p00086,attested_in_order,4
+barzini1908,1,peking,Пекин,39.9075,116.3972,china,barzini1908_p00002,attested_in_order,145
+barzini1908,2,kalgan,Калган (Чжанцзякоу),40.81,114.88,china,barzini1908_p00174,attested_in_order,81
+barzini1908,3,urga,Урга (Улан-Батор),47.9077,106.8832,mongolia,barzini1908_p00201,attested_in_order,66
+barzini1908,4,kiakhta,Кяхта,50.3574,106.4503,east_siberia,barzini1908_p00228,attested_in_order,69
+barzini1908,5,verkhneudinsk,Верхнеудинск (Улан-Удэ),51.8272,107.6063,east_siberia,barzini1908_p00229,attested_in_order,25
+barzini1908,6,baikal,оз. Байкал,53.5,108.0,east_siberia,barzini1908_p01274,attested_in_order,29
+barzini1908,7,irkutsk,Иркутск,52.2978,104.2964,east_siberia,barzini1908_p01359,attested_in_order,49
+barzini1908,8,krasnoyarsk,Красноярск,56.0184,92.8672,east_siberia,barzini1908_p01501,attested_in_order,18
+barzini1908,9,tomsk,Томск,56.4977,84.9744,west_siberia,barzini1908_p01637,attested_in_order,33
+barzini1908,10,omsk,Омск,54.9924,73.3686,west_siberia,barzini1908_p01637,attested_in_order,31
+barzini1908,11,ekaterinburg,Екатеринбург,56.8519,60.6122,urals,barzini1908_p02043,attested_in_order,11
+barzini1908,12,perm,Пермь,58.0105,56.2502,urals,barzini1908_p02043,attested_in_order,19
+barzini1908,13,kazan,Казань,55.7887,49.1221,european_russia,barzini1908_p02043,attested_in_order,19
+barzini1908,14,moscow,Москва,55.7522,37.6156,european_russia,barzini1908_p02267,attested_in_order,42
+barzini1908,15,stpetersburg,Санкт-Петербург,59.9386,30.3141,european_russia,barzini1908_p02362,attested_in_order,33
+barzini1908,16,berlin,Берлин,52.5244,13.4105,europe,barzini1908_p02362,attested_in_order,19
+barzini1908,17,paris,Париж,48.8534,2.3488,europe,barzini1908_p02376,attested_in_order,94
+gaunt1919,1,peking,Пекин,39.9075,116.3972,china,gaunt1919_p00028,attested_in_order,21
+gaunt1919,2,harbin,Харбин,45.75,126.65,manchuria,gaunt1919_p00527,attested_in_order,27
+gaunt1919,3,vladivostok,Владивосток,43.1056,131.8735,far_east,gaunt1919_p00538,attested_in_order,11
+gaunt1919,4,sakhalin,о. Сахалин,50.5,142.8,far_east,gaunt1919_p00600,attested_in_order,44
+gaunt1919,5,nikolaevsk,Николаевск-на-Амуре,53.1466,140.7229,far_east,gaunt1919_p00600,attested_in_order,30
+gaunt1919,6,khabarovsk,Хабаровск,48.4827,135.0838,far_east,,not_found_in_text,0
+gaunt1919,7,blagoveshchensk,Благовещенск,50.2796,127.5405,far_east,gaunt1919_p00662,attested_in_order,21
+gaunt1919,8,sretensk,Сретенск,52.2478,117.7083,east_siberia,gaunt1919_p00689,attested_in_order,13
+gaunt1919,9,chita,Чита,52.0317,113.5009,east_siberia,gaunt1919_p00706,attested_in_order,3
+gaunt1919,10,irkutsk,Иркутск,52.2978,104.2964,east_siberia,gaunt1919_p00822,attested_in_order,8
+gaunt1919,11,omsk,Омск,54.9924,73.3686,west_siberia,,not_found_in_text,0
+gaunt1919,12,moscow,Москва,55.7522,37.6156,european_russia,gaunt1919_p00889,attested_in_order,1
+ward1920,1,vladivostok,Владивосток,43.1056,131.8735,far_east,ward1920_p00039,attested_in_order,35
+ward1920,2,khabarovsk,Хабаровск,48.4827,135.0838,far_east,,not_found_in_text,0
+ward1920,3,harbin,Харбин,45.75,126.65,manchuria,ward1920_p00158,attested_in_order,20
+ward1920,4,chita,Чита,52.0317,113.5009,east_siberia,ward1920_p00183,attested_in_order,9
+ward1920,5,irkutsk,Иркутск,52.2978,104.2964,east_siberia,ward1920_p00188,attested_in_order,23
+ward1920,6,krasnoyarsk,Красноярск,56.0184,92.8672,east_siberia,ward1920_p00214,attested_in_order,13
+ward1920,7,omsk,Омск,54.9924,73.3686,west_siberia,ward1920_p00215,attested_in_order,93
+ward1920,8,chelyabinsk,Челябинск,55.154,61.4291,urals,,not_found_in_text,0
+ward1920,9,ekaterinburg,Екатеринбург,56.8519,60.6122,urals,ward1920_p00235,attested_in_order,13
+grano1893,1,helsinki,Хельсинки,60.1695,24.9354,europe,grano1893_p00005,attested_in_order,13
+grano1893,2,stpetersburg,Санкт-Петербург,59.9386,30.3141,european_russia,grano1893_p00017,attested_in_order,29
+grano1893,3,moscow,Москва,55.7522,37.6156,european_russia,grano1893_p00017,attested_in_order,39
+grano1893,4,nizhny,Нижний Новгород,56.3287,44.002,european_russia,grano1893_p00540,attested_in_order,1
+grano1893,5,perm,Пермь,58.0105,56.2502,urals,grano1893_p00031,attested_out_of_order,8
+grano1893,6,ekaterinburg,Екатеринбург,56.8519,60.6122,urals,grano1893_p00032,attested_out_of_order,9
+grano1893,7,tyumen,Тюмень,57.1522,65.5272,west_siberia,grano1893_p00039,attested_out_of_order,27
+grano1893,8,omsk,Омск,54.9924,73.3686,west_siberia,grano1893_p00549,attested_in_order,121
+grano1893,9,irtysh,р. Иртыш,58.0,68.5,west_siberia,grano1893_p00048,attested_out_of_order,38
+grano1893,10,tobolsk,Тобольск,58.198,68.254,west_siberia,grano1893_p00011,attested_out_of_order,52
+grano1893,11,tomsk,Томск,56.4977,84.9744,west_siberia,grano1893_p00011,attested_out_of_order,49
+grano1893,12,krasnoyarsk,Красноярск,56.0184,92.8672,east_siberia,grano1893_p00101,attested_out_of_order,4
+grano1893,13,irkutsk,Иркутск,52.2978,104.2964,east_siberia,grano1893_p00098,attested_out_of_order,16
+donner1915,1,helsinki,Хельсинки,60.1695,24.9354,europe,donner1915_p00005,attested_in_order,4
+donner1915,2,tomsk,Томск,56.4977,84.9744,west_siberia,donner1915_p00011,attested_in_order,43
+donner1915,3,narym,Нарым,58.96,81.64,west_siberia,donner1915_p00039,attested_in_order,28
+donner1915,4,tymskoye,Тымское,59.47,80.29,west_siberia,donner1915_p00047,attested_in_order,20
+donner1915,5,ket,р. Кеть,58.5,84.0,west_siberia,donner1915_p00072,attested_in_order,20
+donner1915,6,krasnoyarsk,Красноярск,56.0184,92.8672,east_siberia,donner1915_p00130,attested_in_order,12
+svinhufvud1928,1,viipuri,Выборг,60.7076,28.7528,european_russia,svinhufvud1928_p00021,attested_in_order,88
+svinhufvud1928,2,stpetersburg,Санкт-Петербург,59.9386,30.3141,european_russia,svinhufvud1928_p00111,attested_in_order,66
+svinhufvud1928,3,tomsk,Томск,56.4977,84.9744,west_siberia,svinhufvud1928_p00199,attested_in_order,57
+svinhufvud1928,4,tymskoye,Тымское,59.47,80.29,west_siberia,svinhufvud1928_p00383,attested_in_order,63
+svinhufvud1928,5,narym,Нарым,58.96,81.64,west_siberia,svinhufvud1928_p00403,attested_in_order,36
+svinhufvud1928,6,tomsk,Томск,56.4977,84.9744,west_siberia,svinhufvud1928_p00411,attested_in_order,57
+svinhufvud1928,7,kolyvan,Колывань,55.307,82.739,west_siberia,svinhufvud1928_p00424,attested_in_order,111

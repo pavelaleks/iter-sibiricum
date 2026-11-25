@@ -1,0 +1,50 @@
+100	neu	personal	contact	
+101	neu	generalization	decline	
+102	amb	generalization	ethno	«меланхолия расы»
+103	pos	personal	contact	гостеприимство (приглашают на чай)
+104	neu	generalization	ethno	
+105	neu	generalization	econ	
+106	neu	reported	relig	оспа пришла с русскими
+107	neu	bookish	ethno	
+108	pos	reported	ethno	смелые охотники, отличные лучники
+109	neu	reported	relig	
+110	neu	personal	other	русские не знают якутского языка
+111	amb	personal	decline	чем меньше обрусели, тем беднее
+112	neg	generalization	civ	«нам, европейцам, ничуть не симпатичны»
+113	neu	bookish	ethno	
+114	neu	reported	relig	
+115	neu	personal	contact	
+116	neu	personal	other	
+117	neu	generalization	admin	утрата прежней вольности
+118	pos	personal	contact	проводники, знающие путь
+119	neu	personal	ethno	«бедный тунгус»
+120	pos	generalization	ethno	умеют делать подлинные произведения искусства
+121	neu	bookish	ethno	
+122	neu	bookish	ethno	
+123	pos	personal	contact	внимание к чужим, самоотверженность
+124	invalid	-	-	не Сибирь (Гавайи)
+125	neu	generalization	other	
+126	pos	personal	contact	уважение к их обычаям: «много доброго и даже благородного»
+127	neu	personal	econ	
+128	neu	personal	econ	
+129	neu	personal	other	
+130	neu	reported	relig	
+131	neu	bookish	relig	
+132	neu	bookish	ethno	
+133	neg	generalization	conflict	буряты убивают беглых за награду
+134	invalid	-	-	коренные жители Америки
+135	neu	bookish	other	
+136	pos	personal	ethno	воровство — дело пришлых, туземцы честны
+137	neu	personal	relig	
+138	neu	generalization	decline	вымирающие, обложенные данью трёх держав
+139	neu	personal	contact	
+140	neu	personal	econ	
+141	pos	personal	contact	достоинство и честное рукопожатие
+142	neg	generalization	civ	«дикари самого низкого разряда»; вороваты, коварны, трусливы
+143	pos	personal	conflict	«молодой и храбрый татарин»
+144	neu	personal	contact	
+145	amb	personal	contact	самоуничижение «бедного киргиза»
+146	neu	personal	other	
+147	neu	personal	other	
+148	neu	reported	ethno	
+149	pos	personal	contact	ответный дар

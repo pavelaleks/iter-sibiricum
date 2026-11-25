@@ -1,0 +1,50 @@
+150	pos	personal	contact	живописный старый вождь, почётный гость
+151	neu	reported	decline	причина болезни — быт туземцев
+152	neu	generalization	ethno	не ценят почту, говорят громко
+153	neu	personal	econ	
+154	neg	personal	ethno	грязные (в сравнении с «чистоплотными» долганами)
+155	neu	personal	contact	
+156	pos	generalization	ethno	«отвага татарина»
+157	neu	generalization	conflict	
+158	neu	personal	contact	
+159	neu	bookish	conflict	
+160	neu	reported	ethno	
+161	neu	generalization	econ	
+162	neu	reported	other	
+163	neu	bookish	ethno	
+164	pos	personal	ethno	красивый, умное лицо
+165	pos	personal	econ	искусные пастухи
+166	neu	reported	conflict	
+167	neu	personal	ethno	
+168	neu	generalization	ethno	смешанное население
+169	neu	reported	conflict	
+170	neu	generalization	ethno	
+171	neu	bookish	conflict	
+172	neu	bookish	conflict	завоевание не обошлось без крови
+173	neu	generalization	other	
+174	neu	bookish	ethno	
+175	pos	personal	contact	дружеские отношения с торговцем
+176	neu	personal	contact	
+177	neu	bookish	conflict	
+178	neu	personal	other	
+179	neu	bookish	ethno	
+180	neg	generalization	civ	кочуют, «ведомые расовым инстинктом»
+181	neu	personal	contact	
+182	neg	bookish	conflict	набеги и угон людей
+183	neu	bookish	ethno	
+184	neu	personal	contact	
+185	pos	personal	contact	щедрые дары без просьбы
+186	invalid	-	-	«Kirghis frontier» — топоним
+187	amb	generalization	civ	«переходная эпоха»: без общества и почти без домов
+188	neu	personal	relig	
+189	neu	reported	ethno	
+190	neu	bookish	relig	
+191	neu	personal	other	
+192	neu	personal	ethno	
+193	neu	personal	contact	
+194	neu	personal	relig	
+195	pos	personal	contact	татарский обычай встречать друга хлебом-солью
+196	pos	personal	econ	чукчи честнее русских на ярмарке
+197	invalid	-	-	«Buriat steppe» — топоним
+198	invalid	-	-	«terre tunguse» — топоним
+199	pos	personal	ethno	опрятные татарские деревни

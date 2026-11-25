@@ -1,0 +1,102 @@
+place_id,label_ru,pattern,region,in_siberia,type,lat,lon,coord_source
+paris,Париж,\bParis\b,europe,False,city,48.8534,2.3488,geonames_cities1000:Paris|Ile-de-France
+london,Лондон,\bLondon\b|\bLondres\b,europe,False,city,51.5085,-0.1257,geonames_cities1000:London|England
+berlin,Берлин,\bBerlin\b,europe,False,city,52.5244,13.4105,geonames_cities1000:Berlin|Berlin
+helsinki,Хельсинки,\bHelsin\w*|\bHelsingfors\b,europe,False,city,60.1695,24.9354,geonames_cities1000:Helsinki|Uusimaa
+viipuri,Выборг,\bViipur\w*|\b[VW]iborg\b,european_russia,False,city,60.7076,28.7528,geonames_cities1000:Vyborg|Leningrad
+stpetersburg,Санкт-Петербург,\b(?:St\.? ?|Saint[- ]|Sankt[- ])?P[ée]t[ea]rsb[ou]u?rg\w*|\bPietari\w*|\bPetrograd\w*,european_russia,False,city,59.9386,30.3141,geonames_cities1000:Saint Petersburg|St.-Petersburg
+moscow,Москва,\bMoscow\b|\bMoscou\b|\bMoskau\b|\bMoskova\w*,european_russia,False,city,55.7522,37.6156,geonames_cities1000:Moscow|Moscow
+nizhny,Нижний Новгород,\bNi[jzs]c?h?n[iy][- ]Nov[go]orod\b|\bNijni\b,european_russia,False,city,56.3287,44.002,geonames_cities1000:Nizhniy Novgorod|Nizjnij Novgorod
+kazan,Казань,\bKa[sz]an\w*,european_russia,False,city,55.7887,49.1221,geonames_cities1000:Kazan|Tatarstan
+perm,Пермь,\bPerm\b|\bPermi\w*,urals,False,city,58.0105,56.2502,geonames_cities1000:Perm|Perm
+ekaterinburg,Екатеринбург,\b[EJIY]e?[ck]ath?[ae]rin(?:[aeo]n?)?[bB][eou]?u?rg\w*,urals,False,city,56.8519,60.6122,geonames_cities1000:Yekaterinburg|Sverdlovsk
+chelyabinsk,Челябинск,\bT?[CT]s?ch?el[iy]a?j?ab[iy]nsk\w*,urals,False,city,55.154,61.4291,geonames_cities1000:Chelyabinsk|Chelyabinsk
+zlatoust,Златоуст,\bZlato[uo]u?st\w*,urals,False,city,55.1711,59.6508,geonames_cities1000:Zlatoust|Chelyabinsk
+ural,Уральские горы,\bUral(?:s|-?Gebirge|in)?\b|\bOu?ral\b|\bOeral\b,urals,False,mountains,59.0,59.5,manual centroid (area feature)
+tyumen,Тюмень,\bT[iy]?(?:[uo]u?|oe)men\w*|\bTjumen\w*,west_siberia,True,city,57.1522,65.5272,geonames_cities1000:Tyumen|Tjumen
+tobolsk,Тобольск,\bTobolsk\w*,west_siberia,True,city,58.198,68.254,manual (approximate; verify)
+omsk,Омск,\bOmsk\w*,west_siberia,True,city,54.9924,73.3686,geonames_cities1000:Omsk|Omsk
+tomsk,Томск,\bTomsk\w*,west_siberia,True,city,56.4977,84.9744,geonames_cities1000:Tomsk|Tomsk
+ishim,Ишим,\bI[s]?c?hi?m\b|\bIchim\b,west_siberia,True,city,56.1128,69.4901,geonames_cities1000:Ishim|Tjumen
+tara,Тара,\bTara\b,west_siberia,True,city,56.8944,74.371,geonames_cities1000:Tara|Omsk
+kainsk,Каинск (Куйбышев),\bKa[iï]nsk\w*,west_siberia,True,city,55.4475,78.3218,geonames_cities1000:Kuybyshev|Novosibirsk
+kolyvan,Колывань,\bKol[yi]van\w*|\bKolywan\w*,west_siberia,True,town,55.307,82.739,manual (approximate; verify)
+barnaul,Барнаул,\bBarna[uo]u?l\w*,west_siberia,True,city,53.3606,83.7636,geonames_cities1000:Barnaul|Altai Krai
+biysk,Бийск,\bBi[iyj]sk\w*,west_siberia,True,city,52.5364,85.2072,geonames_cities1000:Biysk|Altai Krai
+narym,Нарым,\bNarym\w*|\bNarim\b,west_siberia,True,village,58.96,81.64,manual (approximate; verify)
+tymskoye,Тымское,\bTymsk\w*,west_siberia,True,village,59.47,80.29,manual (approximate; verify)
+berezov,Берёзово,\bBere?[sz][oa]w?v\b|\bBerjosow\b|\bBérézov\b,west_siberia,True,village,63.934,65.045,manual (approximate; verify)
+surgut,Сургут,\bSurgut\w*|\bSourgout\b,west_siberia,True,town,61.25,73.4167,manual (approximate; verify)
+obdorsk,Обдорск (Салехард),\bObdorsk\w*,west_siberia,True,town,66.53,66.6,manual (approximate; verify)
+kurgan,Курган,\bKourgan\b|\bKurgan\b,west_siberia,True,city,55.45,65.3333,geonames_cities1000:Kurgan|Kurgan
+novonikolaevsk,Ново-Николаевск,\bNovo-?[Nn]ikola[ie]v?sk\w*|\bNowo-?Nikolajewsk\w*,west_siberia,True,city,55.0415,82.9346,geonames_cities1000:Novosibirsk|Novosibirsk
+mariinsk,Мариинск,\bMar[ii]i?nsk\w*,west_siberia,True,city,56.2139,87.7472,geonames_cities1000:Mariinsk|Kemerovo
+ob,р. Обь,\bObi?\b(?![a-zäö])|\bObin\b|\bObi-joki\w*,west_siberia,True,river,61.0,76.0,manual centroid (area feature)
+irtysh,р. Иртыш,\bIrt[iy]s?c?h\w*|\bIrtych\b|\bIrtisch\w*,west_siberia,True,river,58.0,68.5,manual centroid (area feature)
+ket,р. Кеть,\bKet-?joe?\w*|\bKetin\b,west_siberia,True,river,58.5,84.0,manual centroid (area feature)
+karasea,Карское море,\bKara Sea\b|\bKarisches Meer\b,arctic_siberia,True,sea,72.0,70.0,manual centroid (area feature)
+semipalatinsk,Семипалатинск,\bSemipalatinsk\w*,kazakh_steppe,True,city,50.411,80.227,manual (approximate; verify)
+akmolinsk,Акмолинск,\bAkmolinsk\w*,kazakh_steppe,True,town,51.18,71.45,manual (approximate; verify)
+petropavlovsk_kz,Петропавловск (Степной край),,kazakh_steppe,True,city,54.873,69.143,manual (approximate; verify)
+om_colonies,финские колонии на р. Омь (Рыжково и др.),,west_siberia,True,villages,55.1,75.4,manual (approximate; verify)
+krasnoyarsk,Красноярск,"\bKra[sn]{1,2}o[iyj]?a?r?sk\w*|\bKrasnojarsk\w*|\bKrasnoiarsk\w*",east_siberia,True,city,56.0184,92.8672,geonames_cities1000:Krasnoyarsk|Krasnoyarskiy
+yeniseisk,Енисейск,\b[YJI][eé]n[iïe]s+[eé]i?sk\w*,east_siberia,True,town,58.4494,92.1797,geonames_cities1000:Yeniseysk|Krasnoyarskiy
+yenisei,р. Енисей,\b[YJI][eé]n[iïe]s+[eé]i\b|\bJenisei\w*|\bJenissei\b|\bYenisei\b|\bJeniseje?\w*|\bJenisej\w*,east_siberia,True,river,62.0,90.0,manual centroid (area feature)
+achinsk,Ачинск,\bAt?s?chinsk\w*|\bAtchinsk\b,east_siberia,True,city,56.2694,90.4993,geonames_cities1000:Achinsk|Krasnoyarskiy
+kansk,Канск,\bKansk\w*,east_siberia,True,city,56.2017,95.7175,geonames_cities1000:Kansk|Krasnoyarskiy
+minusinsk,Минусинск,\bMinou?sinsk\w*,east_siberia,True,city,53.7103,91.6875,geonames_cities1000:Minusinsk|Krasnoyarskiy
+nizhneudinsk,Нижнеудинск,\bNi[jzs]c?h?n[eiy][- ]?[OU]u?dinsk\w*,east_siberia,True,city,54.9076,99.0276,geonames_cities1000:Nizhneudinsk|Irkutsk
+irkutsk,Иркутск,\bIrk(?:[ou]u?|oe)tsk\w*|\bIrkuck\w*,east_siberia,True,city,52.2978,104.2964,geonames_cities1000:Irkutsk|Irkutsk
+baikal,оз. Байкал,\bBa[iïj]kal\w*,east_siberia,True,lake,53.5,108.0,manual centroid (area feature)
+angara,р. Ангара,\bAngara\w*,east_siberia,True,river,57.0,100.0,manual centroid (area feature)
+listvyanka,Листвянка,\bListv[ie]ni?t?c?h\w*|\bListvianka\b,east_siberia,True,village,51.856,104.866,manual (approximate; verify)
+verkhneudinsk,Верхнеудинск (Улан-Удэ),\bVer(?:kh?|ch)[nu][eiy]?[- ]?[OU]u?dinsk\w*|\bWerchne-?Udinsk\w*,east_siberia,True,city,51.8272,107.6063,geonames_cities1000:Ulan-Ude|Respublika Buryatiya
+kiakhta,Кяхта,\bKi[aä]k?h?c?h?ta\w*|\bKjachta\w*|\bKiaxta\b,east_siberia,True,town,50.3574,106.4503,geonames_cities1000:Kyakhta|Respublika Buryatiya
+selenginsk,Селенгинск,\bSelenginsk\w*,east_siberia,True,village,51.3,106.88,manual (approximate; verify)
+chita,Чита,\bT?[CT]s?chita\w*|\bChita\b,east_siberia,True,city,52.0317,113.5009,geonames_cities1000:Chita|Transbaikal Territory
+nerchinsk,Нерчинск,\bNer[ct]s?chinsk\w*|\bNerchinsk\b,east_siberia,True,town,51.9833,116.5833,geonames_cities1000:Nerchinsk|Transbaikal Territory
+sretensk,Сретенск,\bS[tr]?r[ei]e?t[ei]nsk\w*,east_siberia,True,town,52.2478,117.7083,geonames_cities1000:Sretensk|Transbaikal Territory
+kirensk,Киренск,\bKirensk\w*,east_siberia,True,town,57.7853,108.1119,geonames_cities1000:Kirensk|Irkutsk
+kachug,Качуг,\bKat?chug\w*,east_siberia,True,village,53.9606,105.8817,geonames_cities1000:Kachug|Irkutsk
+zhigalovo,Жигалово,\b[JZ]h?igalov\w*,east_siberia,True,village,54.8106,105.1581,geonames_cities1000:Zhigalovo|Irkutsk
+vitim,Витим,\bVitim\w*,east_siberia,True,village,59.4433,112.5699,geonames_cities1000:Vitim|Sakha
+lena,р. Лена,\bLena\b(?! Rivers)|\bLenaa\b|\bLenan\b,yakutia_ne,True,river,60.0,120.0,manual centroid (area feature)
+olekminsk,Олёкминск,\bOlekminsk\w*,yakutia_ne,True,town,60.374,120.426,manual (approximate; verify)
+yakutsk,Якутск,\b[YJI]ak(?:[ou]u?|oe)tsk\w*|\bJakuck\w*,yakutia_ne,True,city,62.0339,129.7331,geonames_cities1000:Yakutsk|Sakha
+verkhoyansk,Верхоянск,\bVerk?h?o[iy]ansk\w*|\bWerchojansk\w*,yakutia_ne,True,town,67.5539,133.3898,geonames_cities1000:Verkhoyansk|Sakha
+srednekolymsk,Среднеколымск,\bSredn[eiy]-?Kolymsk\w*,yakutia_ne,True,town,67.4566,153.7025,geonames_cities1000:Srednekolymsk|Sakha
+nizhnekolymsk,Нижнеколымск,\bNi[jz]h?n[eiy]-?Kolymsk\w*,yakutia_ne,True,village,68.533,160.917,manual (approximate; verify)
+kolyma,р. Колыма,\bKolyma\b,yakutia_ne,True,river,67.0,155.0,manual centroid (area feature)
+blagoveshchensk,Благовещенск,\bBlagov\w*|\bBlagowest\w*,far_east,True,city,50.2796,127.5405,manual (approximate; verify)
+khabarovsk,Хабаровск,\b[KH]h?abarov\w*|\bHabarof\w*|\bChabarowsk\w*,far_east,True,city,48.4827,135.0838,geonames_cities1000:Khabarovsk|Khabarovsk Krai
+vladivostok,Владивосток,\b[VW]ladiv?w?ostok\w*,far_east,True,city,43.1056,131.8735,geonames_cities1000:Vladivostok|Primorskiy
+nikolaevsk,Николаевск-на-Амуре,\bNi[ck]ola(?:[iy]?e?[vu]|ie?v?|yc?u)sk\w*,far_east,True,town,53.1466,140.7229,geonames_cities1000:Nikolayevsk-on-Amure|Khabarovsk Krai
+okhotsk,Охотск,\bO[ck]?h?otsk\w*|\bOchotsk\w*,far_east,True,town,59.362,143.2147,geonames_cities1000:Okhotsk|Khabarovsk Krai
+sakhalin,о. Сахалин,\bSa[gk]h?al[iy]e?n\w*|\bSachalin\w*,far_east,True,island,50.5,142.8,manual centroid (area feature)
+amur,р. Амур,\bAm(?:u|oo|ou|oe)r\b|\bAmurin\b,far_east,True,river,52.0,130.0,manual centroid (area feature)
+ussuri,р. Уссури,\bOu?ss?ou?ri\w*,far_east,True,river,46.5,134.0,manual centroid (area feature)
+ayan,Аян,\bAyan\b|\bAjan\b,far_east,True,village,56.453,138.168,manual (approximate; verify)
+gizhiga,Гижига,\bGh?i[zj]h?i[gn]?ga\w*|\bGichiga\b,kamchatka_chukotka,True,village,61.98,160.35,manual (approximate; verify)
+petropavlovsk,Петропавловск-Камчатский,\bPetrop[ao]u?[vl]\w*sk[iy]?\b,kamchatka_chukotka,True,town,53.0444,158.6508,manual (approximate; verify)
+kamchatka,Камчатка,\bKam(?:t|s)?[cs]?ch?atk\w*|\bKam(?:cz|č|ci|tsj)atk\w*,kamchatka_chukotka,True,peninsula,56.0,159.0,manual centroid (area feature)
+tigil,Тигиль,\bTigil\w*,kamchatka_chukotka,True,village,57.76,158.67,manual (approximate; verify)
+anadyr,Анадырь,\bAnad[iy]r\w*,kamchatka_chukotka,True,town,64.7342,177.5103,geonames_cities1000:Anadyr|Chukotskiy Avtonomnyy Okrug
+markovo,Марково,\bMarkov[oa]\b,kamchatka_chukotka,True,village,64.68,170.41,manual (approximate; verify)
+eastcape,мыс Дежнёва / Уэлен,\bEast Cape\b|\bUelen\b|\bOumwaidjik\w*,kamchatka_chukotka,True,cape,66.16,-169.8,manual centroid (area feature)
+beringstrait,Берингов пролив,\bBe[h]?ring(?:'s)? Strai?ts?\b|\bBehring\b,kamchatka_chukotka,True,strait,65.8,-169.0,manual centroid (area feature)
+urga,Урга (Улан-Батор),\b[OU]u?rgh?a\b,mongolia,False,city,47.9077,106.8832,geonames_cities1000:Ulaanbaatar|Ulaanbaatar
+maimachin,Маймачен,\bMa[iï]-?ma-?t?chin\w*|\bMaimatschin\w*,mongolia,False,town,50.32,106.46,manual (approximate; verify)
+gobi,пустыня Гоби,\bGobi\w*,mongolia,False,desert,43.0,106.0,manual centroid (area feature)
+kalgan,Калган (Чжанцзякоу),\bKalgan\w*|\bChan[g]?-?kia-?kow\w*,china,False,city,40.81,114.88,manual (approximate; verify)
+peking,Пекин,\bP[eé]kin[g]?\w*,china,False,city,39.9075,116.3972,manual (approximate; verify)
+tientsin,Тяньцзинь,\bTien-?tsin\w*,china,False,city,39.142,117.177,manual (approximate; verify)
+shanghai,Шанхай,\bShanghai\b|\bSchanghai\b,china,False,city,31.222,121.458,manual (approximate; verify)
+taiyuan,Тайюань,\bT'?ai[- ]?Yuan\w*,china,False,city,37.869,112.56,manual (approximate; verify)
+harbin,Харбин,\b[KC]?[Hh]arbin\w*,manchuria,False,city,45.75,126.65,manual (approximate; verify)
+mukden,Мукден,\bMukden\w*|\bMoukden\b,manchuria,False,city,41.79,123.43,manual (approximate; verify)
+portarthur,Порт-Артур,\bPort[- ]Arthur\w*,manchuria,False,city,38.81,121.26,manual (approximate; verify)
+japan,Япония,\bJapan\b|\bJapon\b|\bNagasaki\b|\bTok[iy]o\b|\bYokohama\b,japan_korea,False,country,35.68,139.69,manual centroid (area feature)
+korea,Корея,\b[KC]orea\b|\bSeoul\b|\bF[uo]u?san\b,japan_korea,False,country,37.56,126.97,manual centroid (area feature)
+alaska,Аляска,\bAlaska\w*|\bNome\b|\bDawson\b|\bYukon\b|\bCape Prince of Wales\b,america,False,region,64.5,-165.4,manual centroid (area feature)
+sanfrancisco,Сан-Франциско,\bSan Francisco\b,america,False,city,37.77,-122.42,manual (approximate; verify)
+newyork,Нью-Йорк,\bNew York\b,america,False,city,40.71,-74.01,manual (approximate; verify)

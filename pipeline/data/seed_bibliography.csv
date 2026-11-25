@@ -1,0 +1,169 @@
+seed_id,seed_source,author,title_keywords,year,origin,decision,work_id,ia_id,next_library,note
+E6,cross2014,Kotzebue,most remarkable year exile,1802,Germany,include,kotzebue1802,,,
+F21,cross2014,"Campbell, Archibald",voyage round world kamschatka,1816,UK,check,,,HathiTrust,Kamchatka episode only
+F30,cross2014,Dobell,travels kamtchatka siberia,1830,Ireland/Russia,include,dobell1830,,,
+F82,cross2014,Cochrane,pedestrian journey siberian tartary,1824,UK,include,cochrane1829,,,
+F89,cross2014,Holman,travels russia siberia poland,1825,UK,include,holman1825,,,
+G4,cross2014,Erman,travels siberia,1848,Germany,include,erman1833,,,plan uses German original
+G57,cross2014,Du Boulay,travels spitzbergen siberia,1880,UK,include,,,HathiTrust/Google Books,not found on IA
+G65a,cross2014,Felińska,revelations siberia,1852,Poland,include,felinska1854,,,
+G73,cross2014,Cottrell,recollections siberia,1842,UK,include,cottrell1842,,,
+G80,cross2014,"Simpson, George",narrative journey round world,1847,UK,include,gsimpson1847,narrativeofjourn02simp,,NEW v0.3
+G87a,cross2014,Piotrowski,escape siberia,1863,Poland,include,piotrowski1863,storyasiberiane00piotgoog,,NEW v0.3; Cross lists Routledge ed.
+G104,cross2014,Hill,travels siberia,1854,UK,include,hill1854,,,
+G106,cross2014,"Atkinson, Thomas",oriental western siberia,1858,UK,include,atkinson1858,,,
+G107,cross2014,"Atkinson, Thomas",travels regions amoor,1860,UK,include,atkinson1860,,,
+G108,cross2014,"Atkinson, Lucy",recollections tartar steppes,1863,UK,check,latkinson1863,,,
+G110,cross2014,Hooper,ten months tents tuski,1853,UK,include,hooper1853,tenmonthsamongte00hoop,,NEW v0.3
+H127,cross2014,Tronson,personal narrative voyage japan kamtschatka,1859,UK,include,tronson1859,,,
+I31,cross2014,Tilley,japan amoor pacific,1861,UK,include,tilley1861,india.history.resource.89169,,NEW v0.3
+I47,cross2014,Michie,siberian overland route,1864,UK,include,michie1864,,,
+I49,cross2014,Zychlinski,memoirs siberia,1993,Poland,exclude_genre,,,,modern edition/translation
+I68,cross2014,Sheepshanks,life mongolia siberia,1903,UK,include,sheepshanks1903,,,
+I86,cross2014,Whyte,land journey asia europe,1871,UK,include,whyte1871,,,
+I94,cross2014,"Wilkinson, David",whaling cast adrift siberia,1906,UK,include,,,HathiTrust,not found on IA
+I96,cross2014,Bax,eastern seas dwarf,1875,UK,check,,,HathiTrust,Amur/Tartary coast chapters only
+I120,cross2014,Meignan,paris pekin siberian snows,1885,France,include,meignan1877,,,plan uses French original
+I121,cross2014,"Johnson, Henry",life voyages joseph wiggins,1907,UK,check,johnson1907,lifevoyagesofjo00john,,NEW v0.3
+I129,cross2014,Seebohm,siberia europe petchora,1880,UK,exclude_scope,,,,Pechora = European Russia
+I145,cross2014,Seebohm,siberia asia yenesay,1882,UK,include,seebohm1882,,,
+I159,cross2014,Nordenskiöld,voyage vega,1881,Sweden,check,,,gutenberg 24365,NEW candidate: Chukchi wintering; mostly maritime/scientific
+I171,cross2014,Lansdell,through siberia,1882,UK,include,lansdell1883,,,
+J15,cross2014,Guillemard,cruise marchesa kamschatka,1886,UK,include,guillemard1889,,,
+J47,cross2014,Bateson,letters steppe,1928,UK,include,,,HathiTrust,not on IA
+J53,cross2014,De Windt,pekin calais,1889,UK,include,dewindt1889,,,
+J64,cross2014,Gowing,five thousand miles sledge,1889,UK,include,gowing1889,,,
+J96,cross2014,Norman,peoples politics far east,1895,UK,check,,,,partial; plan has norman1902 All the Russias
+J98,cross2014,De Windt,siberia as it is,1892,UK,include,dewindt1892,,,
+J101,cross2014,"Price, Julius",arctic ocean yellow sea,1892,UK,include,price1892,,,
+J102,cross2014,Marsden,sledge horseback lepers,1892,UK,include,marsden1892,,,
+J123,cross2014,Dunmore,pamirs,1893,UK,exclude_scope,,,,"Pamirs, return via Siberia only briefly"
+J126,cross2014,Wenyon,across siberia great post-road,1896,UK,include,wenyon1896,,,
+J127,cross2014,"Jackson, Frederick",great frozen land,1895,UK,exclude_scope,,,,Bolshezemelskaya tundra = European Russia
+J128,cross2014,Welzl,thirty years golden north,1932,Czech,include,,thirtyyearsingol00welz,,IA item is lending-only (restricted)
+J130,cross2014,Peel,polar gleams,1894,UK,include,peel1894,,,
+J135,cross2014,De Windt,new siberia sakhalin,1896,UK,include,dewindt1896,,,
+K27,cross2014,"Simpson, James Young",side-lights siberia,1898,UK,include,simpson1898,,,
+K30,cross2014,Jefferson,roughing siberia,1897,UK,include,jefferson1897,,,
+K35,cross2014,Ridley,reminiscences russia ural,1898,UK,include,,,HathiTrust/BL,not on IA
+K47,cross2014,Colquhoun,overland china,1900,UK,include,colquhoun1900,,,
+K50,cross2014,Stadling,through siberia,1901,Sweden,include,stadling1901,,,
+K53,cross2014,"Reid, Arnot",peking petersburg,1899,UK,check,reid1899,,,
+K54,cross2014,Leroy-Beaulieu,awakening east siberia,1900,France,include,leroybeaulieu1900,,,
+K61,cross2014,Ossendowski,man mystery asia,1924,Poland,check,,bwb_Y0-BQA-768,,lending-only
+K62,cross2014,Ossendowski,shadow gloomy east,1925,Poland,check,,shadowofthegloom013750mbp,,to screen
+K73,cross2014,Meakin,ribbon iron,1901,UK,include,meakin1901,,,
+K76,cross2014,Norman,all russias,1902,UK,include,norman1902,,,
+K80,cross2014,"Morgan, Christopher",china rail,1902,UK,include,,,HathiTrust/NLS,not on IA
+K84,cross2014,Hawes,uttermost east,1903,UK,include,hawes1903,,,
+K85,cross2014,Gerrare,greater russia,1903,UK,include,gerrare1903,greaterrussiacon00gerruoft,,NEW v0.3
+K88,cross2014,"Fraser, John Foster",real siberia,1902,UK,include,fraser1902,,,
+K98,cross2014,Polhill-Turner,across siberia baby,1910,UK,include,,,HathiTrust/BL,not on IA
+K101,cross2014,Vay de Vaya,empires emperors russia,1906,Hungary,include,vaydevaya1906,cu31924023523669,,NEW v0.3
+K102,cross2014,"Turner, Samuel",siberia record travel climbing,1905,UK,include,turner1905,cu31924028467474,,NEW v0.3
+K105,cross2014,Fell,russian nomad kirghiz,1916,UK,include,fell1916,cu31924028425621,,NEW v0.3
+K106,cross2014,Ronaldshay,outskirts empire asia,1904,UK,include,ronaldshay1904,dli.pahar.1651,,NEW v0.3
+K108,cross2014,Swayne,highlands siberia,1904,UK,include,swayne1904,,,
+K114,cross2014,Weale,manchu muscovite,1904,UK,exclude_scope,,,,Manchuria letters
+K115,cross2014,Ready,through siberia manchuria rail,1904,UK,include,ready1904,,,
+K134,cross2014,Baring,russians manchuria,1905,UK,exclude_scope,,withrussiansinma00bariuoft,,screen: siberia density 7.5/10k
+K139,cross2014,"Noble, Algernon",siberian days,1928,UK,include,,,HathiTrust,not on IA
+K158,cross2014,Niedieck,cruises bering sea,1909,Germany,include,niedieck1909,cruisesinberings00nieduoft,,NEW v0.3
+K166,cross2014,Barzini,pekin paris,1908,Italy,include,barzini1908,,,
+K169,cross2014,"Fischer, Emil",overland trans-siberian,1908,Austria,include,,,HathiTrust,not on IA (Tientsin ed.)
+K204,cross2014,Harrison,peace war east baikal,1910,UK,include,harrison1910,cu31924023038437,,NEW v0.3
+K206,cross2014,Etherton,across roof world,1911,UK,include,etherton1911,acrossroofofworl00etherich,,NEW v0.3
+K219,cross2014,"Price, Morgan Philips",siberia,1912,UK,include,mpprice1912,,,
+K223,cross2014,Lied,return happiness,1943,Norway,exclude_date,,,,"published 1943, in copyright"
+K235,cross2014,Donner,among samoyed,1954,Finland,include,donner1915,,,plan uses original
+K236,cross2014,Digby,tigers gold witch-doctors,1928,UK,include,digby1928,in.ernet.dli.2015.76016,,NEW v0.3
+K237,cross2014,Wright & Digby,through siberia empire making,1913,US/UK,check,,throughsiberiaem00wrig,,co-author US; NY ed. only
+K240,cross2014,Perry-Ayscough,russians mongolia,1914,UK,include,perryayscough1914,bwb_T3-BGL-717,,NEW v0.3
+K268,cross2014,Nansen,through siberia land future,1914,Norway,include,nansen1914,,,
+K284,cross2014,Czaplicka,siberian year,1916,Poland/UK,include,,,HathiTrust (full view),NOT on IA - top priority
+K290,cross2014,Haviland,summer yenisei,1915,UK,include,haviland1915,,,
+K292,cross2014,Lethbridge,new russia white sea siberian steppe,1915,UK,include,lethbridge1915,cu31924028397887,,NEW v0.3
+K296,cross2014,Gaunt,broken journey,1919,Australia/UK,include,gaunt1919,,,
+K298,cross2014,Kroeger,forgotten village,1936,Germany,include,,,HathiTrust (limited),in copyright
+K303,cross2014,Brändström,prisoners war russia siberia,1929,Sweden,include,,,HathiTrust,not on IA
+K307,cross2014,Dietrich,tovarish,1935,Germany,include,,,—,in copyright
+K327,cross2014,"Price, Hereward",boche bolshevik,1919,UK,include,hprice1919,bochebolshevikex00pricrich,,NEW v0.3
+K334,cross2014,Dwinger,army behind barbed wire,1930,Germany,check,dwinger1930,prisonerwarsiberiandiary,,NEW v0.3
+F16,cross2014,D'Wolf,,0,USA,exclude_us,,,,
+I2,cross2014,Habersham,,0,USA,exclude_us,,,,
+I15,cross2014,Collins,,0,USA,exclude_us,,,,
+I58,cross2014,Bush,,0,USA,exclude_us,,,,
+I59,cross2014,Kennan,,0,USA,exclude_us,,,,
+I63,cross2014,Knox,,0,USA,exclude_us,,,,
+J5,cross2014,Melville,,0,USA,exclude_us,,,,
+J9,cross2014,Gilder,,0,USA,exclude_us,,,,
+J19,cross2014,Buel,,0,USA,exclude_us,,,,
+J36,cross2014,Kennan,,0,USA,exclude_us,,,,
+J71,cross2014,Aldrich,,0,USA,exclude_us,,,,
+K49,cross2014,Vanderlip,,0,USA,exclude_us,,,,
+K51,cross2014,Bookwalter,,0,USA,exclude_us,,,,
+K66,cross2014,Curtin,,0,USA,exclude_us,,,,
+K70,cross2014,Clark,,0,USA,exclude_us,,,,
+K72,cross2014,Roberts,,0,USA,exclude_us,,,,
+K81,cross2014,Senn,,0,USA,exclude_us,,,,
+K94,cross2014,Shoemaker,,0,USA,exclude_us,,,,
+K95,cross2014,Cary,,0,USA,exclude_us,,,,
+K195,cross2014,Taft,,0,USA,exclude_us,,,,
+K250,cross2014,Lee,,0,USA,exclude_us,,,,
+K31,cross2014,Demidov,,0,Russia,exclude_russian,,,,
+K69,cross2014,Demidov,,0,Russia,exclude_russian,,,,
+S1,Moussa&Stroev,Hansteen,souvenirs voyage sibérie,1857,Norway,include,hansteen1857,,,
+S2,Moussa&Stroev,Kubalski,voyages sibérie,1856,Poland/France,include,kubalski1856,,,
+S3,Moussa&Stroev,Cotteau,pékin saint-pétersbourg sibérie,1885,France,include,cotteau1885,,,
+S4,Moussa&Stroev,Boulangier,notes voyage sibérie,1891,France,include,boulangier1891,,,
+S5,Moussa&Stroev,Legras,en sibérie,1899,France,include,legras1899,,,
+S6,Moussa&Stroev,Baye,penza minoussinsk,1897,France,include,debaye1897,,,
+S7,Moussa&Stroev,Bordeaux,sibérie notes voyage,1904,France,include,bordeaux1904,,,
+S8,Moussa&Stroev,Tytgat,reportage sibérie,1901,Belgium,include,tytgat1901,,,
+S9,Moussa&Stroev,Asselin,paysages asie sibérie,1911,France,include,asselin1911,,,
+S10,Moussa&Stroev,Labbé,bagne russe sakhaline,1903,France,include,,,Gallica,Gallica behind Cloudflare - user must open
+S11,Moussa&Stroev,Labbé,chez lamas sibérie,1909,France,include,,,Gallica,
+S12,sweep:fr,Rabot,travers russie boréale,1894,France,include,rabot1894,atraverslarussi00rabogoog,,
+S13,sweep:fr,Lasies,tragédie sibérienne,1920,France,include,lasies1920,latragdiesib00lasi,,
+S14,sweep:fr,Monnier,tour asie,1899,France,exclude_scope,,letourdasie00monngoog,,siberia density 0.2
+S15,sweep:fr,Enselme,travers mandchourie,1903,France,exclude_scope,,traverslamandc00ense,,Manchuria
+S16,DDB/BSB,Finsch,reise westsibirien,1879,Germany,include,finsch1879,,,
+S17,DDB/BSB,"Müller, Ferdinand",tungusen jakuten,1882,Germany,include,muller1882,untertungusenun00mlgoog,,
+S18,DDB/BSB,"Rose, Gustav",reise ural altai,1837,Germany,check,rose1837,10430650bsb,,
+S19,DDB/BSB,Ledebour,reise altai-gebirge,1829,Germany,check,ledebour1829,reisedurchdasalt01lede,,
+S20,DDB/BSB,Volck,wölfe flucht sibirien,1938,Germany,check,volck1938,herbert-volck-die-woelfe.-eine-deutsche-flucht-durch-sibirien-1938,re-OCR,Fraktur
+S21,DDB/BSB,Pfizenmayer,mammutleichen urwaldmenschen,1926,Germany,include,,bwb_KU-358-303,HathiTrust/DNB,English 1939 lending-only
+S22,DDB/BSB,Hesse-Wartegg,sibirien,1900,Austria,check,,,BSB/MDZ,not found on IA
+S23,sweep:it,Sommier,estate siberia ostiacchi,1885,Italy,include,sommier1885,unestateinsiber00sommgoog,,
+S24,sweep:it,Cipolla,siberia cina giappone,1919,Italy,include,cipolla1919,per-la-siberia-in-cina-e-giappone,,
+S25,sweep:da,Patursson,sibirien vore dage,1901,Denmark,include,patursson1901,sibirienivoredag00patu,,
+S26,sweep:da,Rosenberg,ny sibirien,1904,Denmark,include,rosenberg1904,detnysibirienafh00rose,,
+S27,Runeberg,Nansen,gjennem sibirien,1914,Norway,check,nansen1914_no,arkivkopia.se-runeberg-gjennemsib,,
+S28,sweep:pl,Giller,podróż więźnia syberii,1866,Poland,check,giller1866,podrwiniaetapa01gill,,
+S29,sweep:pl,Sieroszewski,lat kraju jakutów,1900,Poland,check,,iedwanacielatwk00siergoog,,exile-ethnographer; fp 3.7
+S30,sweep:cs,Heller,sibiř druhá amerika,1930,Austria,check,heller1930,sibir-druha_amerika,,
+S31,sweep:en,Niemojowski,siberian pictures,1883,Poland,include,niemojowski1883,siberianpictures01niem,,
+S32,sweep:en,Carruthers,unknown mongolia,1914,UK,include,carruthers1914,unknownmongoliar01carr,,
+S33,sweep:en,Eden,frozen asia,1879,UK,check,eden1879,frozenasiasketch00eden,,
+S34,sweep:en,Ossendowski,beasts men gods,1922,Poland,check,ossendowski1922,beastsmengods00osseuoft,,
+S35,sweep:nl,Stadling (nl),door siberië,0,Sweden,check,,,Delpher,Dutch translations: ask user for list; IA has none
+X-Herzen,sweep,Herzen,,0,,exclude_russian,,,,
+X-Rosen,sweep,Rosen,,0,,exclude_russian,,,,
+X-Deutsch,sweep,Deutsch,,0,,exclude_russian,,,,
+X-Dioneo,sweep,Dioneo (Shklovsky),,0,,exclude_russian,,,,
+X-Wrangel,sweep,Wrangel,,0,,exclude_russian,,,,
+X-Middendorff,sweep,Middendorff,,0,,exclude_russian,,,,
+X-Schrenck,sweep,Schrenck,,0,,exclude_russian,,,,
+X-Radde,sweep,Radde,,0,,exclude_russian,,,,
+X-Maydell,sweep,Maydell,,0,,exclude_russian,,,,
+X-Obolensky,sweep,Obolensky,,0,,exclude_russian,,,,
+X-Cottin,sweep,Cottin,,0,,exclude_genre,,,,
+X-de,sweep,de Maistre,,0,,exclude_genre,,,,
+X-Henty,sweep,Henty,,0,,exclude_genre,,,,
+X-Tissot,sweep,Tissot,,0,,exclude_genre,,,,
+X-Wörishöffer,sweep,Wörishöffer,,0,,exclude_genre,,,,
+X-Markovits,sweep,Markovits,,0,,exclude_genre,,,,
+X-Lanoye,sweep,Lanoye,,0,,exclude_genre,,,,
+X-Sachot,sweep,Sachot,,0,,exclude_genre,,,,
+X-Kohn/Andree,sweep,Kohn/Andree,,0,,exclude_genre,,,,
+X-Volpicelli,sweep,Volpicelli,,0,,exclude_genre,,,,

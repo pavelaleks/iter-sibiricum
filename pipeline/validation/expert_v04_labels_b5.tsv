@@ -1,0 +1,50 @@
+200	neu	personal	admin	
+201	amb	generalization	ethno	некрасивы «по нашим понятиям», но есть и миловидные
+202	neu	bookish	ethno	
+203	neg	personal	civ	туземцам полезен пример трудолюбия
+204	invalid	-	-	крымские татары, не Сибирь
+205	neu	reported	decline	население вымерло, заменено якутами
+206	amb	personal	relig	крещены, но боятся утратить народность; сочувствие
+207	neu	personal	contact	
+208	invalid	-	-	татары в Польше, не Сибирь
+209	pos	personal	contact	знание погоды и пути
+210	neg	bookish	relig	«никакой религии»
+211	neu	reported	ethno	хранят тайну лечебной травы
+212	amb	personal	contact	гостеприимство и ростовщичество богача
+213	neu	personal	ethno	
+214	neu	personal	ethno	обрусение выше Берёзова
+215	invalid	-	-	туземцы Цейлона/Индии
+216	neu	bookish	decline	тунгусы исчезли из округи
+217	neu	reported	admin	поборы китайских мандаринов
+218	neu	generalization	ethno	
+219	neu	bookish	other	
+220	invalid	-	-	«district tunguse» — топоним
+221	neg	generalization	civ	«остались дикарями», мечтают о независимости
+222	neg	personal	civ	«буряты остались детьми»
+223	neu	bookish	relig	бесплодность миссии
+224	neu	personal	other	
+225	neu	personal	decline	вымирание или отатаривание камасинцев
+226	neu	personal	contact	
+227	pos	reported	ethno	честность; вор — несчастнейший человек
+228	pos	personal	contact	почётный приём у старосты
+229	neu	generalization	ethno	
+230	neu	reported	other	
+231	neu	bookish	econ	
+232	neu	personal	other	
+233	neu	personal	contact	
+234	neu	personal	relig	
+235	neu	personal	econ	
+236	invalid	-	-	«Tchuktchi peninsula» — топоним
+237	neu	reported	ethno	антропометрия
+238	neu	generalization	econ	
+239	neu	bookish	other	
+240	neu	personal	other	
+241	neu	personal	conflict	
+242	neg	personal	contact	выпрашивают водку
+243	neu	reported	relig	
+244	neg	personal	ethno	«отвратительная еда» татар
+245	neg	generalization	civ	«отстали» на стадии пастушества
+246	neu	personal	other	
+247	invalid	-	-	«rivières tunguses» — топоним
+248	invalid	-	-	язык енисейских остяков (кетов) сопоставлен с хантами
+249	neu	bookish	ethno	

@@ -1,0 +1,51 @@
+k	pol	obs	themes	stereotype_ru	note
+200	0	ge	subsistence	утрата оленеводства, оседание	sedentarization
+201	N	pe	character	хитрые (смотрители станций)	
+202	0	ge	administration		
+203	0	bo	language		racial-linguistic classification
+204	0	bo	health_decline;language	исчезновение языка	historical conflict Tatars–Samoyeds
+205	0	ge	education_civ;language	русские жёны «осамоедились» языково	intermarriage; reverse assimilation
+206	0	ge	religion;dwelling		
+207	0	ge	subsistence		
+208	0	pe	administration		
+209	P	pe	hospitality	угощение кумысом	
+210	0	pe	language		
+211	0	ge	subsistence		
+212	N	bo	violence	«варварские племена», набеги	civilizing narrative
+213	N	pe	hygiene;character	грязные отчаянные преступники	
+214	0	bo	violence		
+215	N	re	violence	беглые каторжники опасны на дорогах	
+216	P	ge	education_civ	меньше контакта с русскими — лучше живут	contact with Russians as harmful
+217	0	re			
+218	0	ge	language		
+219	0	pe	language		
+220	0	ge	economy_trade		trade natives–Tatars–Russians (historical)
+221	0	pe	religion		
+222	N	pe	character;economy_trade	воровство	
+223	0	ge	administration		
+224	0	pe			
+225	N	bo	economy_trade;administration	«обречены служить сильным» (Кастрен)	fatalist framing
+226	N	ge	administration	«проползают» в край	exclusion by Russians
+227	N	pe	appearance;character	«разбойничьи» лица ссыльнопоселенцев	
+228	0	pe			
+229	0	pe	education_civ		
+230	0	pe			
+231	N	pe	dwelling	убогие деревни	
+232	0	pe	clothing		
+233	A	ge	dwelling;education_civ	чем меньше обрусели, тем беднее	assimilation gradient
+234	0	re	violence		
+235	0	ge	economy_trade		trade Koryak–Tungus
+236	0	ge	subsistence		
+237	0	re	administration	у туземцев отнимают грамоты	exploitation/administration
+238	P	ge	education_civ	«более цивилизованы», чем монголы	ranking
+239	0	ge	subsistence		
+240	0	pe	clothing		
+241	0	bo			
+242	0	bo	language	расовая классификация туземцев	racial classification
+243	N	pe	appearance;education_civ	неопрятные ученики	
+244	A	pe	subsistence	лодки — «единственное красивое»	
+245	N	pe	hygiene	чешутся (вши)	
+246	A	bo	character;appearance	«аристократия Сибири», но «некрасивые скулы»	quote from Castrén
+247	0	ge	administration		
+248	0	bo	administration		
+249	0	pe			

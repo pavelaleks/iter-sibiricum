@@ -1,0 +1,50 @@
+50	neu	reported	ethno	
+51	neu	generalization	other	
+52	neu	bookish	relig	
+53	neu	bookish	ethno	
+54	neg	personal	conflict	враждебность (плевок вслед)
+55	pos	generalization	econ	ловушки открыты всем — честность и взаимопомощь
+56	neu	personal	other	
+57	neu	personal	econ	татары — мелкие торговцы
+58	neg	generalization	ethno	презирают ручной труд
+59	invalid	-	-	гавайцы, не Сибирь
+60	neu	personal	ethno	
+61	pos	personal	contact	
+62	amb	generalization	ethno	«нищета делает остяков добродетельными»
+63	neu	reported	other	
+64	pos	personal	contact	«добрые туземцы»
+65	invalid	-	-	«cream of tartar» — лекарство
+66	neu	personal	econ	трезвость в торговле вводит компания
+67	pos	personal	econ	даже киргизы покупают машины — прогресс
+68	neu	personal	ethno	смешение рас
+69	neu	bookish	ethno	
+70	neu	bookish	ethno	
+71	neu	generalization	other	
+72	neu	personal	econ	
+73	amb	generalization	conflict	право кочевников непонятно крестьянам
+74	neu	personal	conflict	
+75	neu	reported	ethno	
+76	invalid	-	-	жители Сахары
+77	neu	bookish	ethno	
+78	neu	generalization	other	
+79	neu	generalization	econ	
+80	neg	reported	relig	пьянство как религиозный обряд
+81	pos	reported	conflict	татары защитили монастырь
+82	neg	bookish	conflict	«дикие орды киргизов»
+83	neu	personal	other	
+84	amb	reported	conflict	«крепкий и строптивый народ», не признаёт власти
+85	neu	reported	econ	богач-татарин
+86	neu	generalization	econ	
+87	amb	personal	admin	откровенны, но мстительны; русские обращаются с ними как с рабами
+88	pos	personal	ethno	непревзойдённые наездники
+89	neu	personal	ethno	
+90	neg	generalization	decline	вымирание при контакте с цивилизацией; водка торговцев
+91	neu	reported	ethno	
+92	neu	personal	other	
+93	invalid	-	-	хунхузы («не путать с тунгусами»)
+94	neu	bookish	ethno	
+95	neu	personal	ethno	
+96	neu	personal	other	
+97	neu	reported	relig	
+98	neu	bookish	ethno	
+99	amb	generalization	econ	умеренны, но погибнут от водки торговцев

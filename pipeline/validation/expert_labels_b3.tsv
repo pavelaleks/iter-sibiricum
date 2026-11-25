@@ -1,0 +1,51 @@
+k	pol	obs	themes	stereotype_ru	note
+100	0	pe			
+101	0	pe	appearance;subsistence	«раскосые» (расовый дескриптор)	racial descriptor
+102	0	bo	religion		religious mission Russians–Buryats
+103	0	un			
+104	0	pe	subsistence		
+105	N	re	education_civ	нетронутые цивилизацией, «как Центральная Африка»	exoticization
+106	0	pe			
+107	0	bo			
+108	0	pe	administration		
+109	N	re	economy_trade;character	обманщики-торговцы	
+110	N	pe	violence	грубость конвоя	
+111	0	ge	economy_trade		
+112	0	bo	gender_family		
+113	0	ge	administration		
+114	N	re	dwelling;education_civ	низшие по «цивилизованности»	ranking Ostyaks>Samoyeds
+115	A	ge	education_civ	отсталые, но умеют путешествовать	
+116	0	pe	religion		
+117	0	pe			
+118	N	re	economy_trade;hygiene	покупают падаль	
+119	0	pe			
+120	0	un	language		
+121	0	un			breed name, not people
+122	0	ge	religion	скрывают смысл обрядов от русских	natives–Russians concealment
+123	N	re	administration	атаманы-самозванцы	
+124	P	re	appearance;hygiene;clothing	киргизки чище и красивее русских	comparison Kazakh vs Russian women
+125	0	pe	dwelling		
+126	0	bo	violence		
+127	0	un			
+128	0	pe			
+129	0	pe	religion	сочувствие «угнетённым» самоедам	
+130	0	pe	economy_trade		
+131	0	ge	dwelling		
+132	N	ge	education_civ	«менее цивилизованы», чем буряты	ranking Buryats>Mongols
+133	0	ge	economy_trade;subsistence		
+134	0	pe			
+135	N	ge	violence		
+136	0	pe	dwelling		
+137	0	ge	subsistence		
+138	N	pe	appearance;clothing	нелепый, засаленный вид	
+139	0	pe	subsistence		
+140	0	ge	religion		
+141	0	un			place (Chinese side), not people
+142	0	ge	economy_trade		
+143	0	pe			
+144	0	ge	subsistence;dwelling		
+145	N	pe	alcohol;hygiene	пьянство и вонь	
+146	0	un			
+147	N	un	religion	«странный народ», «страшные» обряды	translator's preface
+148	N	ge	subsistence	«полудикие» метисы	mixing Slav–Mongol
+149	0	pe	violence		

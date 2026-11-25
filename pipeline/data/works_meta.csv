@@ -1,0 +1,110 @@
+work_id,gender,nationality,nat_group,role,stay_type,journey_start,journey_end,date_cert,meta_note
+kotzebue1802,m,German,german,writer/dramatist,exile,1800,1800,high,banished to Kurgan 1800
+cochrane1829,m,British,british,naval officer,transit,1820,1823,high,pedestrian journey to Kamchatka
+holman1825,m,British,british,naval officer (blind traveller),transit,1823,1824,high,arrested in Irkutsk and expelled
+dobell1830,m,Irish,british,merchant/Russian official,residence,1812,1819,medium,resident in Kamchatka/Okhotsk; Russian service
+erman1833,m,German,german,scientist (physicist),expedition,1828,1830,high,geomagnetic expedition
+cottrell1842,m,British,british,traveller,transit,1840,1841,high,
+felinska1854,f,Polish,polish,exile,exile,1839,1844,high,exiled to Berezov
+hill1854,m,British,british,traveller,transit,1847,1848,medium,
+hansteen1857,m,Norwegian,scandinavian,scientist (astronomer),expedition,1828,1830,high,geomagnetic expedition with Erman
+castren1856,m,Finnish,finnish,scholar (linguist),expedition,1845,1849,high,Siberian expedition
+atkinson1858,m,British,british,artist/architect,expedition,1848,1853,high,
+atkinson1860,m,British,british,artist/architect,expedition,1848,1853,high,
+latkinson1863,f,British,british,traveller (wife of T. W. Atkinson),expedition,1848,1853,high,
+tronson1859,m,British,british,naval officer,voyage,1854,1856,high,Crimean War Pacific squadron
+whittingham1856,m,British,british,army officer,voyage,1854,1855,high,Crimean War Pacific operations
+maynard1859,m,French,french,ship's surgeon/whaler,voyage,1840,1850,low,whaling voyages Okhotsk
+whyte1871,m,British,british,traveller,transit,1868,1869,medium,Canton to St Petersburg
+meignan1877,m,French,french,traveller,transit,1873,1874,high,
+kittlitz1858,m,German,german,naturalist,voyage,1827,1829,high,Senyavin circumnavigation
+joest1883,m,German,german,ethnographer/traveller,transit,1881,1881,medium,
+lansdell1883,m,British,british,clergyman/missionary,transit,1879,1879,high,prison visits
+seebohm1882,m,British,british,naturalist (ornithologist),expedition,1877,1877,high,Yenisei
+cotteau1885,m,French,french,traveller,transit,1881,1882,medium,
+gowing1889,m,British,british,journalist,transit,1886,1887,medium,
+guillemard1889,m,British,british,naturalist,voyage,1881,1884,high,Marchesa cruise
+radloff1893,m,German,german,scholar (turkologist; Russian service),expedition,1860,1870,high,Altai and steppe
+boulangier1891,m,French,french,engineer,transit,1887,1888,medium,
+dewindt1892,m,British,british,traveller/writer,transit,1890,1890,medium,prison tour
+dewindt1896,m,British,british,traveller/writer,transit,1894,1894,medium,Sakhalin
+peel1894,f,British,british,traveller,voyage,1893,1893,high,Kara Sea voyage
+jefferson1896,m,British,british,cyclist/journalist,transit,1895,1895,medium,
+jefferson1897,m,British,british,cyclist/journalist,transit,1896,1896,medium,
+finsch1879,m,German,german,naturalist (ornithologist),expedition,1876,1876,high,West Siberia expedition with Brehm
+debaye1897,m,French,french,archaeologist,expedition,1896,1896,medium,
+debaye1898,m,French,french,archaeologist,expedition,1897,1897,medium,
+wenyon1896,m,British,british,missionary (medical),transit,1893,1893,medium,
+legras1899,m,French,french,scholar (slavist),transit,1897,1897,medium,
+marsden1892,f,British,british,nurse/missionary,expedition,1891,1892,high,lepers of Yakutia
+colquhoun1900,m,British,british,colonial administrator/journalist,transit,1899,1899,medium,
+simpson1898,m,British,british,scientist (zoologist),transit,1896,1896,medium,
+leroybeaulieu1900,m,French,french,economist/publicist,transit,1896,1898,high,
+meakin1901,f,British,british,writer,transit,1900,1900,high,Trans-Siberian
+reid1899,m,British,british,journalist,transit,1898,1898,medium,
+tytgat1901,m,Belgian,french,journalist,transit,1900,1900,low,
+stadling1901,m,Swedish,scandinavian,journalist/relief worker,expedition,1891,1898,medium,several journeys incl. Andrée search
+fraser1902,m,British,british,journalist,transit,1901,1901,high,
+norman1902,m,British,british,journalist/politician,transit,1901,1901,medium,
+sheepshanks1903,m,British,british,clergyman,transit,1856,1857,high,memoir published late
+pistor1905,m,Austrian,german,traveller,transit,1902,1903,low,
+swayne1904,m,British,british,army officer/hunter,expedition,1903,1903,medium,Altai hunting
+mpprice1912,m,British,british,traveller/later journalist,expedition,1910,1911,high,Yenisei and Mongolia
+scarfoglio1909,m,Italian,italian,journalist,transit,1908,1908,high,New York-Paris race
+hawes1903,m,British,british,anthropologist,expedition,1901,1902,high,Sakhalin
+bordeaux1904,m,French,french,mining engineer,transit,1902,1903,medium,
+fuchs1925,m,German,german,POW,pow,1915,1920,medium,
+nansen1914,m,Norwegian,scandinavian,scientist/explorer,expedition,1913,1913,high,Kara Sea and Yenisei
+asselin1911,m,French,french,traveller,transit,1910,1910,low,
+haviland1915,f,British,british,naturalist (ornithologist),expedition,1914,1914,high,Yenisei
+bergman1927,m,Swedish,scandinavian,zoologist,expedition,1920,1923,high,Kamchatka
+grondijs1922,m,Dutch,dutch,war correspondent/scholar,war,1918,1920,high,Civil War
+drei1925,m,German,german,POW/hunter,pow,1915,1920,low,
+price1892,m,British,british,artist-correspondent,voyage,1890,1891,high,Kara Sea and Yenisei
+wlad1918,m,Austrian,german,POW,pow,1915,1917,medium,
+michie1864,m,British,british,merchant/journalist,transit,1863,1863,high,
+dewindt1889,m,British,british,traveller/writer,transit,1887,1887,high,
+dewindt1903,m,British,british,traveller/writer,expedition,1901,1902,high,Bering Strait attempt
+ready1904,m,British,british,traveller,transit,1903,1903,high,
+kubalski1856,m,Polish,polish,compiler,compilation,,,low,compilation of travel accounts
+barzini1908,m,Italian,italian,journalist,transit,1907,1907,high,Peking-Paris race
+gaunt1919,f,Australian-British,british,writer,transit,1913,1914,high,
+ward1920,m,British,british,army officer/MP,war,1918,1919,high,Civil War
+grano1893,m,Finnish,finnish,clergyman (pastor),residence,1885,1891,high,pastor to Finnish colonists
+donner1915,m,Finnish,finnish,scholar (linguist/ethnographer),expedition,1911,1914,high,
+svinhufvud1928,m,Finnish,finnish,politician (exile),exile,1915,1917,high,
+lethbridge1915,m,British,british,traveller/writer,transit,1913,1914,medium,
+turner1905,m,British,british,mountaineer/businessman,expedition,1903,1904,medium,Altai
+fell1916,m,British,british,mining engineer,residence,1900,1910,low,Kirghiz steppe copper mines
+harrison1910,m,British,british,journalist,transit,1908,1909,low,
+etherton1911,m,British,british,army officer,expedition,1909,1910,high,
+ronaldshay1904,m,British,british,aristocrat/politician,transit,1903,1903,medium,
+vaydevaya1906,m,Hungarian,central_european,clergyman (Catholic prelate),transit,1902,1903,low,
+niedieck1909,m,German,german,hunter,expedition,1905,1907,low,
+gerrare1903,m,British,british,writer,transit,1902,1902,low,
+hooper1853,m,British,british,naval officer,expedition,1848,1849,high,Franklin search; Chukotka
+gsimpson1847,m,British,british,HBC governor,transit,1842,1842,high,
+johnson1907,m,British,british,biographer (Wiggins journals),voyage,1874,1894,medium,biography
+piotrowski1863,m,Polish,polish,exile,exile,1844,1846,high,escape
+niemojowski1883,m,Polish,polish,exile,exile,1863,1870,low,
+hprice1919,m,British,british,POW (German army),pow,1915,1917,high,
+perryayscough1914,m,British,british,army officers,transit,1912,1913,medium,
+tilley1861,m,British,british,traveller,voyage,1858,1860,high,Russian squadron circumnavigation
+digby1928,m,British,british,writer,expedition,1912,1913,medium,
+carruthers1914,m,British,british,explorer/naturalist,expedition,1910,1911,high,
+rabot1894,m,French,french,geographer,expedition,1890,1890,medium,
+lasies1920,m,French,french,deputy/officer,war,1918,1919,medium,Civil War
+sommier1885,m,Italian,italian,botanist/anthropologist,expedition,1880,1880,high,Ob
+cipolla1919,m,Italian,italian,journalist,war,1918,1918,medium,
+muller1882,m,German,german,scientist,expedition,1874,1875,high,Olenek expedition
+patursson1901,m,Faroese,scandinavian,farmer/politician,residence,1895,1900,low,
+rosenberg1904,m,Danish,scandinavian,journalist,transit,1902,1903,low,
+nansen1914_no,m,Norwegian,scandinavian,scientist/explorer,expedition,1913,1913,high,Norwegian original
+giller1866,m,Polish,polish,exile,exile,1854,1856,high,
+heller1930,m,Austrian,central_european,journalist (communist),transit,1929,1929,medium,
+eden1879,m,British,british,compiler,compilation,,,low,compilation
+ossendowski1922,m,Polish,polish,scientist/adventurer,war,1920,1921,medium,
+dwinger1930,m,German,german,POW,pow,1915,1920,high,
+ujfalvy1879,m,Hungarian-French,central_european,scholar (orientalist),expedition,1876,1878,medium,
+rose1837,m,German,german,scientist (mineralogist),expedition,1829,1829,high,Humboldt expedition
+ledebour1829,m,German,german,scientist (botanist; Dorpat),expedition,1826,1826,high,

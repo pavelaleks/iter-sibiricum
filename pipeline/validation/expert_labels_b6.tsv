@@ -1,0 +1,51 @@
+k	pol	obs	themes	stereotype_ru	note
+250	0	pe	subsistence	«остатки коренных жителей»; долблёные лодки	
+251	0	ge	administration		
+252	0	ge	economy_trade		
+253	0	pe	administration		
+254	0	pe			
+255	0	pe	language		
+256	0	bo	religion		
+257	0	pe			
+258	0	bo	subsistence		
+259	0	ge	language	«класс североамериканских индейцев»	racial classification
+260	0	ge	language		intermarriage; Russians rarely learn Samoyed
+261	P	pe	clothing	«бравый» монгол в великолепном халате	
+262	0	pe	economy_trade		
+263	0	pe			
+264	N	pe	character	некомпетентная команда	
+265	0	ge	administration	старожилы против переселенцев	conflict old settlers–newcomers
+266	0	pe	administration		
+267	A	pe	hospitality	радушный приём; «обычная для туземцев подозрительность»	
+268	0	re	administration		natives fleeing to Russians from Chinese laws
+269	0	ge	clothing		
+270	0	ge	administration		
+271	A	pe	character;language	«самый умный чукча», но грубая речь	
+272	0	pe	appearance;clothing		
+273	0	pe			
+274	0	bo	administration		
+275	0	un			place (Kirghis steppe)
+276	0	ge	religion	«природные народы»	
+277	0	pe	economy_trade	евреи «конечно» торгуют	antisemitic trope
+278	0	pe			
+279	0	pe	appearance	кривоногие наездники	
+280	0	re			
+281	N	re	character;hygiene	«свиньи» (сибиряки)	quoted speech
+282	0	bo	language		racial-linguistic boundary Finns/Samoyeds
+283	N	pe	education_civ	«тёмный разум» безграмотных	
+284	0	pe	subsistence		
+285	P	ge	appearance;health_decline	здоровые, крепкие русские против «жалких» самоедов	contrast
+286	0	un			
+287	0	ge	economy_trade	переселение дорожает землю	competition settlers–natives
+288	A	ge	character	подозрительны, но щедры в доверии	
+289	0	ge	religion	формально крещены	religious mission
+290	0	ge	economy_trade		trade settlers–natives
+291	0	pe			
+292	N	ge	character	«странная неприязнь» к чужакам	avoidance natives–Russians
+293	0	pe	language		
+294	0	pe	subsistence		
+295	0	pe			
+296	0	pe	religion;gender_family		
+297	0	pe			
+298	0	pe	appearance;subsistence		
+299	N	bo	violence	«буйные орды» усмирены	

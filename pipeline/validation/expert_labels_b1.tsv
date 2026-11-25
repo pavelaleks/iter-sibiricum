@@ -1,0 +1,51 @@
+k	pol	obs	themes	stereotype_ru	note
+0	N	ge	language;gender_family	«смешанная» кровь и язык	intermarriage Koryak–Tungus–Russian
+1	P	ge	health_decline	лучше понимают опасность оспы	
+2	0	pe	economy_trade		
+3	0	pe	dwelling		
+4	0	un			
+5	P	pe	language	доверие к туземцам как работникам	labour
+6	0	pe			
+7	0	pe	economy_trade;subsistence		
+8	0	ge	subsistence	кочевой образ жизни	
+9	N	re	religion;character	воровство, списанное на духов	
+10	P	pe	hospitality	радушие хозяйки юрты	
+11	0	re	gender_family		
+12	0	ge	administration		
+13	0	re	language	«татары» как родовое имя для киргизов	naming practice
+14	N	ge	character	не понимают вежливости	
+15	N	pe	character	подозрительность ссыльных	
+16	0	pe			
+17	N	pe	dwelling;hygiene	грязные жилища	
+18	0	ge	subsistence;economy_trade		
+19	0	pe			
+20	0	ge	dwelling		
+21	A	ge	health_decline;language	бедность и упадок при сохранении самобытности	
+22	0	ge	administration		
+23	0	pe			
+24	0	pe			
+25	P	bo	administration	могущественное прошлое (Югра)	
+26	N	ge	economy_trade;character	хитрые торговцы, «евреи Сибири», мотовство	antisemitic comparison
+27	N	re	violence	опасные туземцы	
+28	0	pe			
+29	0	re	subsistence		
+30	0	ge		сравнение с индейцами Америки	comparison frame
+31	0	pe			
+32	P	ge	education_civ;subsistence	зажиточность и сохранённая самобытность	
+33	0	pe	subsistence		
+34	0	ge	subsistence;dwelling	переход к оседлости	sedentarization
+35	0	re			
+36	0	pe			
+37	0	ge	subsistence		
+38	A	pe	hospitality;appearance	гостеприимство; «ужасная» татуировка	
+39	0	un			region name (Tartar steppe), not people
+40	0	ge	religion	буддисты	
+41	N	pe	character	безрассудство	
+42	0	re	economy_trade;violence		
+43	0	pe			
+44	0	pe			conflict Russians–Koreans
+45	0	re			
+46	P	pe	clothing	нарядные меховые одежды	
+47	0	pe			
+48	0	pe	appearance		
+49	0	bo	administration		

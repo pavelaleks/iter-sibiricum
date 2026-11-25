@@ -1,0 +1,704 @@
+slice,lang,period,group_id,group,collocate,f_xy,f_x,f_y,works,logdice,ll,example_pid
+de,de,,altai_kalmyk,алтайцы / ойраты ('калмыки'),teleuten,3,110,98,2,8.88,14.1,radloff1893_p00817
+de,de,,altai_kalmyk,алтайцы / ойраты ('калмыки'),altai,5,110,274,3,8.74,18.5,finsch1879_p00765
+de,de,,altai_kalmyk,алтайцы / ойраты ('калмыки'),gegend,5,110,600,3,7.85,11.4,ledebour1829_p00247
+de,de,,chinese,китайцы,nennen,5,198,176,2,8.78,17.2,joest1883_p00308
+de,de,,cossack,казаки,unser,11,392,366,4,8.89,25.5,castren1856_p01437
+de,de,,cossack,казаки,bewohnt,5,392,84,4,8.43,17.9,barzini1908_p01695
+de,de,,cossack,казаки,geht,6,392,184,3,8.42,14.7,castren1856_p01156
+de,de,,cossack,казаки,denn,18,392,1459,6,8.32,16.2,castren1856_p01442
+de,de,,cossack,казаки,beschäftigen,4,392,47,3,8.22,17.1,finsch1879_p00461
+de,de,,cossack,казаки,voller,4,392,71,3,8.15,13.9,finsch1879_p00661
+de,de,,cossack,казаки,gelang,4,392,93,2,8.08,11.8,finsch1879_p00765
+de,de,,cossack,казаки,kühne,3,392,8,3,7.94,22.6,castren1856_p00547
+de,de,,cossack,казаки,kanonen,3,392,11,2,7.93,20.3,castren1856_p00544
+de,de,,cossack,казаки,schicken,3,392,18,3,7.91,17.0,castren1856_p00947
+de,de,,cossack,казаки,vorposten,3,392,20,3,7.9,16.3,castren1856_p01422
+de,de,,cossack,казаки,überfallen,3,392,28,2,7.87,14.2,pistor1905_p00652
+de,de,,cossack,казаки,uniform,3,392,32,3,7.86,13.4,finsch1879_p00460
+de,de,,evenki_even,эвенки / эвены,kosacken,4,258,67,2,8.66,17.5,erman1833_p00093
+de,de,,evenki_even,эвенки / эвены,alten,6,258,291,2,8.48,14.3,erman1833_p04753
+de,de,,evenki_even,эвенки / эвены,unsere,8,258,499,2,8.44,15.5,erman1833_p07165
+de,de,,evenki_even,эвенки / эвены,junger,3,258,43,2,8.35,14.0,erman1833_p07175
+de,de,,finn_estonian,финны и эстонцы,altai,3,26,274,2,8.36,16.5,castren1856_p00356
+de,de,,jew,евреи,russischen,4,54,576,3,7.7,12.9,barzini1908_p01485
+de,de,,kamas,камасинцы,wald,13,59,201,2,10.68,96.7,castren1856_p01637
+de,de,,kamas,камасинцы,nachbarn,3,59,76,2,9.51,19.3,castren1856_p01664
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),schwarzen,13,617,148,2,9.12,45.3,finsch1879_p00748
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),horde,10,617,64,3,8.91,46.5,finsch1879_p00765
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),bussen,9,617,82,2,8.72,35.3,finsch1879_p00765
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),vieh,7,617,101,2,8.32,21.2,finsch1879_p00476
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),grosse,8,617,288,2,8.18,11.5,finsch1879_p00830
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),nomaden,6,617,66,3,8.17,21.3,barzini1908_p00709
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),nachbarn,6,617,76,2,8.15,19.7,finsch1879_p00688
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),reiche,6,617,90,3,8.12,17.8,drei1925_p01319
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),heerden,5,617,68,3,7.9,15.7,erman1833_p02098
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),bewohnt,5,617,84,2,7.87,13.7,radloff1893_p00176
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),steppen,5,617,90,2,7.86,13.1,barzini1908_p01686
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),einwanderer,4,617,25,2,7.67,18.8,finsch1879_p00945
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),wohnenden,4,617,56,3,7.61,12.4,finsch1879_p00748
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),vertreibung,3,617,5,2,7.3,23.7,castren1856_p01637
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),gelingt,3,617,13,2,7.29,16.5,erman1833_p02098
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),sultan,3,617,13,2,7.29,16.5,erman1833_p02141
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),nomadisirenden,3,617,18,3,7.27,14.4,erman1833_p02098
+de,de,,kazakh_kirghiz,казахи ('киргизы' XIX в.),mir,3,617,2078,2,5.19,11.4,finsch1879_p00820
+de,de,,khanty,ханты,sowohl,19,668,314,2,9.31,50.1,castren1856_p00274
+de,de,,khanty,ханты,jenissei,12,668,274,3,8.71,24.7,castren1856_p00956
+de,de,,khanty,ханты,wogulen,7,668,28,2,8.36,38.6,castren1856_p00540
+de,de,,khanty,ханты,obdorsk,8,668,198,3,8.24,15.4,castren1856_p00609
+de,de,,khanty,ханты,jurten,8,668,268,2,8.13,11.4,castren1856_p00301
+de,de,,khanty,ханты,wohnenden,6,668,56,3,8.09,22.4,castren1856_p00274
+de,de,,khanty,ханты,nennen,7,668,176,3,8.09,13.3,castren1856_p01613
+de,de,,khanty,ханты,bogen,6,668,124,3,7.96,13.4,castren1856_p00544
+de,de,,khanty,ханты,gute,6,668,136,2,7.93,12.4,castren1856_p01069
+de,de,,khanty,ханты,längst,5,668,68,2,7.8,15.0,erman1833_p02369
+de,de,,khanty,ханты,bewohnt,5,668,84,2,7.77,13.0,castren1856_p00533
+de,de,,khanty,ханты,christen,4,668,17,2,7.58,21.5,erman1833_p03373
+de,de,,khanty,ханты,klaproth,4,668,20,2,7.57,20.1,castren1856_p00918
+de,de,,khanty,ханты,religion,4,668,34,2,7.54,15.7,erman1833_p03373
+de,de,,khanty,ханты,abtheilung,4,668,45,2,7.52,13.5,castren1856_p00462
+de,de,,khanty,ханты,stamme,4,668,47,3,7.52,13.1,castren1856_p00617
+de,de,,khanty,ханты,uebrigens,4,668,51,3,7.51,12.5,castren1856_p00688
+de,de,,khanty,ханты,geschicklichkeit,3,668,24,2,7.15,12.1,erman1833_p02685
+de,de,,mongol,монголы,chinesische,3,123,81,2,8.91,14.6,erman1833_p04986
+de,de,,mongol,монголы,hälfte,3,123,143,2,8.53,11.3,barzini1908_p01353
+de,de,,natives_generic,"«туземцы», «инородцы» (обобщённо)",angaben,4,75,92,2,9.62,24.6,muller1882_p00467
+de,de,,natives_generic,"«туземцы», «инородцы» (обобщённо)",sibiriens,3,75,169,2,8.65,13.1,muller1882_p00387
+de,de,,pereselentsy,переселенцы,russische,6,52,322,4,9.04,31.1,castren1856_p02015
+de,de,,pereselentsy,переселенцы,russischen,9,52,576,4,8.88,43.6,castren1856_p00518
+de,de,,pereselentsy,переселенцы,land,3,52,308,2,8.09,11.8,pistor1905_p00260
+de,de,,russian,русские,nennen,17,492,176,7,9.7,69.7,barzini1908_p01429
+de,de,,russian,русские,hiesigen,17,492,297,2,9.46,52.5,erman1833_p02593
+de,de,,russian,русские,genannt,12,492,288,7,8.98,30.0,castren1856_p00889
+de,de,,russian,русские,selbst,16,492,1198,7,8.28,11.4,castren1856_p00664
+de,de,,russian,русские,kaufen,5,492,46,2,8.25,21.7,drei1925_p00871
+de,de,,russian,русские,beispiel,5,492,54,2,8.23,20.1,erman1833_p02445
+de,de,,russian,русские,sibirischen,7,492,286,2,8.2,11.1,castren1856_p01000
+de,de,,russian,русские,bezeichnen,5,492,75,2,8.17,16.9,erman1833_p02244
+de,de,,russian,русские,ankunft,6,492,208,4,8.13,11.1,castren1856_p00309
+de,de,,russian,русские,dortigen,4,492,62,3,7.89,13.2,erman1833_p05582
+de,de,,russian,русские,schwaben,3,492,3,2,7.63,31.7,finsch1879_p00352
+de,de,,russian,русские,ansässigen,3,492,18,3,7.59,15.7,drei1925_p01311
+de,de,,russian,русские,verkauf,3,492,21,2,7.58,14.7,castren1856_p00913
+de,de,,sakha,якуты (саха),dolganen,4,197,14,2,9.28,32.9,castren1856_p01186
+de,de,,sakha,якуты (саха),begleitung,4,197,38,2,9.12,24.2,erman1833_p00093
+de,de,,sakha,якуты (саха),ansässigen,3,197,18,2,8.84,21.1,erman1833_p05574
+de,de,,samoyedic,самодийские народы (без уточнения),nördlichen,14,493,183,2,9.41,50.9,castren1856_p00161
+de,de,,samoyedic,самодийские народы (без уточнения),theils,11,493,326,2,8.78,23.4,castren1856_p00513
+de,de,,samoyedic,самодийские народы (без уточнения),völkerschaften,7,493,33,2,8.77,40.2,castren1856_p00192
+de,de,,samoyedic,самодийские народы (без уточнения),jenissei,10,493,274,2,8.74,22.6,castren1856_p00817
+de,de,,samoyedic,самодийские народы (без уточнения),wohnenden,7,493,56,2,8.71,32.3,castren1856_p00259
+de,de,,samoyedic,самодийские народы (без уточнения),wald,8,493,201,2,8.56,19.3,castren1856_p00892
+de,de,,samoyedic,самодийские народы (без уточнения),sprache,9,493,332,2,8.48,15.8,castren1856_p00664
+de,de,,samoyedic,самодийские народы (без уточнения),ausserdem,7,493,219,2,8.33,14.2,castren1856_p00540
+de,de,,samoyedic,самодийские народы (без уточнения),tasowschen,5,493,15,2,8.33,33.9,castren1856_p01063
+de,de,,samoyedic,самодийские народы (без уточнения),num,5,493,25,2,8.31,28.1,castren1856_p00823
+de,de,,samoyedic,самодийские народы (без уточнения),gouvernement,6,493,136,2,8.29,15.6,castren1856_p00473
+de,de,,samoyedic,самодийские народы (без уточнения),castren,5,493,62,2,8.21,18.7,finsch1879_p01698
+de,de,,samoyedic,самодийские народы (без уточнения),branntwein,5,493,68,3,8.19,17.8,castren1856_p00938
+de,de,,samoyedic,самодийские народы (без уточнения),überein,4,493,24,3,7.99,20.9,castren1856_p00373
+de,de,,samoyedic,самодийские народы (без уточнения),stimmen,4,493,31,2,7.97,18.7,castren1856_p00473
+de,de,,samoyedic,самодийские народы (без уточнения),stamme,4,493,47,3,7.92,15.4,castren1856_p01168
+de,de,,samoyedic,самодийские народы (без уточнения),uebrigens,4,493,51,2,7.91,14.7,castren1856_p00826
+de,de,,samoyedic,самодийские народы (без уточнения),geschlecht,4,493,85,2,7.83,10.9,castren1856_p00758
+de,de,,samoyedic,самодийские народы (без уточнения),volksstamm,3,493,17,2,7.59,16.0,castren1856_p00817
+de,de,,samoyedic,самодийские народы (без уточнения),nomadisirenden,3,493,18,2,7.59,15.7,castren1856_p01138
+de,de,,samoyedic,самодийские народы (без уточнения),steuer,3,493,27,2,7.56,13.1,castren1856_p00478
+de,de,,siberian_tatar,татары (в т.ч. сибирские),schmiede,17,430,17,2,10.28,184.5,erman1833_p04786
+de,de,,siberian_tatar,татары (в т.ч. сибирские),abakan,14,430,47,2,9.91,94.9,castren1856_p01318
+de,de,,siberian_tatar,татары (в т.ч. сибирские),nennen,11,430,176,3,9.22,38.5,castren1856_p01637
+de,de,,siberian_tatar,татары (в т.ч. сибирские),irtisch,10,430,185,2,9.06,32.2,finsch1879_p00763
+de,de,,siberian_tatar,татары (в т.ч. сибирские),namen,12,430,457,2,8.79,23.1,castren1856_p01645
+de,de,,siberian_tatar,татары (в т.ч. сибирские),minussinskischen,6,430,26,2,8.75,37.2,castren1856_p01518
+de,de,,siberian_tatar,татары (в т.ч. сибирские),nachbarn,6,430,76,3,8.6,23.7,castren1856_p01672
+de,de,,siberian_tatar,татары (в т.ч. сибирские),erwähnt,7,430,177,2,8.56,18.5,castren1856_p00599
+de,de,,siberian_tatar,татары (в т.ч. сибирские),katscha,5,430,15,2,8.52,35.2,castren1856_p01385
+de,de,,siberian_tatar,татары (в т.ч. сибирские),bald,13,430,880,2,8.35,13.3,castren1856_p01340
+de,de,,siberian_tatar,татары (в т.ч. сибирские),tatarischen,5,430,71,3,8.35,18.7,castren1856_p01666
+de,de,,siberian_tatar,татары (в т.ч. сибирские),russischen,10,430,576,3,8.35,12.6,drei1925_p00512
+de,de,,siberian_tatar,татары (в т.ч. сибирские),genannt,7,430,288,2,8.32,12.6,castren1856_p01557
+de,de,,siberian_tatar,татары (в т.ч. сибирские),wald,6,430,201,2,8.28,12.9,castren1856_p01647
+de,de,,siberian_tatar,татары (в т.ч. сибирские),theils,7,430,326,2,8.25,11.1,castren1856_p00247
+de,de,,siberian_tatar,татары (в т.ч. сибирские),süden,6,430,214,2,8.25,12.2,drei1925_p00527
+de,de,,siberian_tatar,татары (в т.ч. сибирские),fürst,5,430,111,2,8.24,14.4,drei1925_p01376
+de,de,,siberian_tatar,татары (в т.ч. сибирские),allgemeinen,5,430,116,2,8.23,14.0,drei1925_p00516
+de,de,,siberian_tatar,татары (в т.ч. сибирские),türken,4,430,21,2,8.18,23.1,castren1856_p00356
+de,de,,siberian_tatar,татары (в т.ч. сибирские),bewohnen,4,430,31,3,8.15,19.8,castren1856_p00813
+de,de,,siberian_tatar,татары (в т.ч. сибирские),dörfer,5,430,146,3,8.15,11.9,drei1925_p00517
+de,de,,siberian_tatar,татары (в т.ч. сибирские),herkunft,4,430,58,2,8.07,14.8,castren1856_p01304
+de,de,,siberian_tatar,татары (в т.ч. сибирские),diejenigen,4,430,67,2,8.04,13.6,castren1856_p01661
+de,de,,siberian_tatar,татары (в т.ч. сибирские),jahrhundert,4,430,74,2,8.02,12.9,finsch1879_p00763
+de,de,,siberian_tatar,татары (в т.ч. сибирские),unterscheiden,4,430,87,4,7.99,11.7,castren1856_p01423
+de,de,,siberian_tatar,татары (в т.ч. сибирские),christlichen,3,430,20,2,7.77,15.8,castren1856_p00789
+de,de,,siberian_tatar,татары (в т.ч. сибирские),nordöstlichen,3,430,21,2,7.77,15.5,castren1856_p01602
+de,de,,siberian_tatar,татары (в т.ч. сибирские),atschinsk,3,430,23,2,7.76,14.9,castren1856_p00946
+de,de,,siberian_tatar,татары (в т.ч. сибирские),wohnte,3,430,26,2,7.75,14.1,castren1856_p00766
+de,de,,siberian_tatar,татары (в т.ч. сибирские),ursprungs,3,430,26,2,7.75,14.1,castren1856_p01506
+de,de,,siberian_tatar,татары (в т.ч. сибирские),wohnsitze,3,430,29,3,7.74,13.5,castren1856_p01645
+de,de,,siberian_tatar,татары (в т.ч. сибирские),tobolsker,3,430,43,2,7.7,11.1,erman1833_p05659
+de,de,,volga_peoples,народы Поволжья и Приуралья,volk,5,69,141,2,9.61,29.5,castren1856_p00189
+en,en,,ainu,айны,sakhalin,5,73,485,3,8.2,28.1,gerrare1903_p00612
+en,en,,ainu,айны,island,6,73,1008,3,7.51,27.4,hawes1903_p00931
+en,en,,ainu,айны,south,5,73,1279,3,6.92,18.8,hawes1903_p01118
+en,en,,buryat,буряты,buddhists,7,472,17,4,8.87,67.9,colquhoun1900_p00251
+en,en,,buryat,буряты,tribe,10,472,316,10,8.7,42.1,cochrane1829_p01414
+en,en,,buryat,буряты,baptized,6,472,34,3,8.6,46.3,digby1928_p00443
+en,en,,buryat,буряты,tribes,10,472,553,9,8.32,31.5,dewindt1889_p00634
+en,en,,buryat,буряты,shaman,6,472,154,6,8.29,27.7,eden1879_p00488
+en,en,,buryat,буряты,buddhist,5,472,54,4,8.28,31.8,digby1928_p00552
+en,en,,buryat,буряты,neighbours,6,472,166,6,8.27,26.8,carruthers1914_p00781
+en,en,,buryat,буряты,religion,6,472,190,5,8.21,25.2,dewindt1903_p00049
+en,en,,buryat,буряты,mongolian,7,472,325,6,8.17,24.3,gowing1889_p00551
+en,en,,buryat,буряты,civilized,5,472,106,5,8.15,24.9,dewindt1889_p00678
+en,en,,buryat,буряты,race,8,472,536,7,8.02,22.4,cottrell1842_p00404
+en,en,,buryat,буряты,inhabited,5,472,251,5,7.82,16.6,atkinson1860_p01961
+en,en,,buryat,буряты,numerous,7,472,629,5,7.7,15.9,atkinson1860_p02027
+en,en,,buryat,буряты,baikal,8,472,844,6,7.64,16.0,digby1928_p00287
+en,en,,buryat,буряты,single,5,472,475,5,7.43,10.9,digby1928_p00443
+en,en,,chinese,китайцы,treaty,6,534,161,4,8.14,25.7,harrison1910_p00072
+en,en,,chinese,китайцы,neighbours,5,534,166,5,7.87,19.4,hill1854_p02544
+en,en,,chinese,китайцы,equal,5,534,242,4,7.72,15.8,harrison1910_p01774
+en,en,,chinese,китайцы,hands,8,534,719,6,7.71,16.5,atkinson1860_p02275
+en,en,,chinese,китайцы,yellow,5,534,300,3,7.62,13.9,gaunt1919_p00623
+en,en,,chukchi,чукчи,tribe,6,253,316,4,8.43,26.5,cochrane1829_p00880
+en,en,,chukchi,чукчи,country,13,253,3227,7,6.94,21.0,cochrane1829_p00911
+en,en,,cossack,казаки,guard,25,1511,255,13,8.86,105.3,atkinson1858_p00826
+en,en,,cossack,казаки,post,27,1511,624,11,8.69,71.4,atkinson1858_p01047
+en,en,,cossack,казаки,sent,34,1511,1231,18,8.67,63.2,atkinson1858_p01045
+en,en,,cossack,казаки,mounted,19,1511,166,9,8.54,86.0,atkinson1858_p00713
+en,en,,cossack,казаки,posts,15,1511,135,7,8.22,67.0,atkinson1858_p00829
+en,en,,cossack,казаки,chief,23,1511,1049,13,8.2,34.1,atkinson1858_p01238
+en,en,,cossack,казаки,amur,21,1511,1171,5,8.0,24.6,harrison1910_p00309
+en,en,,cossack,казаки,myself,19,1511,962,6,7.98,25.1,atkinson1858_p01304
+en,en,,cossack,казаки,party,17,1511,784,9,7.92,24.9,atkinson1860_p00228
+en,en,,cossack,казаки,military,14,1511,483,8,7.85,27.1,cochrane1829_p00549
+en,en,,cossack,казаки,band,12,1511,200,9,7.84,39.0,atkinson1858_p01379
+en,en,,cossack,казаки,settlements,12,1511,252,8,7.8,33.8,fraser1902_p01305
+en,en,,cossack,казаки,followed,14,1511,593,9,7.77,22.4,atkinson1858_p00713
+en,en,,cossack,казаки,siberian,24,1511,2147,14,7.75,13.1,atkinson1858_p01153
+en,en,,cossack,казаки,charge,12,1511,318,9,7.75,28.8,atkinson1858_p01495
+en,en,,cossack,казаки,hundred,21,1511,1718,14,7.74,13.7,atkinson1858_p01051
+en,en,,cossack,казаки,ataman,10,1511,36,6,7.73,64.4,dewindt1896_p00444
+en,en,,cossack,казаки,seventeenth,10,1511,69,8,7.7,50.1,cottrell1842_p00322
+en,en,,cossack,казаки,accompanied,12,1511,395,8,7.69,24.2,atkinson1858_p01289
+en,en,,cossack,казаки,regiment,10,1511,80,6,7.69,47.1,atkinson1860_p00245
+en,en,,cossack,казаки,yermak,10,1511,79,8,7.69,47.3,atkinson1860_p02171
+en,en,,cossack,казаки,ordered,11,1511,257,5,7.67,28.9,atkinson1858_p01089
+en,en,,cossack,казаки,station,17,1511,1258,8,7.65,13.2,atkinson1858_p01075
+en,en,,cossack,казаки,century,11,1511,304,9,7.63,25.6,cottrell1842_p00322
+en,en,,cossack,казаки,formed,13,1511,660,6,7.62,17.1,atkinson1858_p02277
+en,en,,cossack,казаки,forts,9,1511,38,4,7.57,54.7,atkinson1858_p00829
+en,en,,cossack,казаки,armed,10,1511,215,10,7.57,27.8,atkinson1858_p01125
+en,en,,cossack,казаки,placed,13,1511,773,8,7.54,14.0,atkinson1858_p01278
+en,en,,cossack,казаки,stations,10,1511,399,5,7.42,17.0,gerrare1903_p00476
+en,en,,cossack,казаки,rode,9,1511,260,6,7.38,20.2,atkinson1858_p01016
+en,en,,cossack,казаки,named,9,1511,273,7,7.37,19.4,atkinson1860_p00310
+en,en,,cossack,казаки,stationed,8,1511,87,8,7.36,32.7,atkinson1858_p01039
+en,en,,cossack,казаки,trans-baikal,8,1511,150,4,7.3,24.2,gerrare1903_p00648
+en,en,,cossack,казаки,barracks,8,1511,180,5,7.28,21.5,dewindt1896_p00353
+en,en,,cossack,казаки,army,8,1511,238,5,7.23,17.5,atkinson1860_p02462
+en,en,,cossack,казаки,don,7,1511,27,6,7.22,44.0,cochrane1829_p00514
+en,en,,cossack,казаки,escorted,7,1511,39,6,7.21,38.3,dewindt1889_p00627
+en,en,,cossack,казаки,established,8,1511,295,5,7.18,14.6,atkinson1860_p02139
+en,en,,cossack,казаки,shilka,7,1511,218,4,7.05,14.8,atkinson1860_p02155
+en,en,,cossack,казаки,including,7,1511,235,7,7.04,13.9,cottrell1842_p00888
+en,en,,cossack,казаки,guide,7,1511,243,4,7.03,13.5,atkinson1858_p01329
+en,en,,cossack,казаки,colonel,7,1511,263,4,7.01,12.6,atkinson1858_p01047
+en,en,,cossack,казаки,guarded,6,1511,71,6,6.96,23.5,atkinson1858_p00881
+en,en,,cossack,казаки,escort,6,1511,95,4,6.94,20.1,atkinson1858_p01121
+en,en,,cossack,казаки,instant,6,1511,104,4,6.93,19.1,atkinson1858_p01072
+en,en,,cossack,казаки,examined,6,1511,117,3,6.92,17.7,atkinson1858_p01343
+en,en,,cossack,казаки,fort,6,1511,118,4,6.92,17.6,atkinson1860_p00224
+en,en,,cossack,казаки,rifles,6,1511,123,5,6.91,17.2,atkinson1858_p02226
+en,en,,cossack,казаки,declared,6,1511,206,4,6.84,11.7,atkinson1858_p01257
+en,en,,cossack,казаки,regiments,5,1511,18,4,6.74,32.2,atkinson1860_p01985
+en,en,,cossack,казаки,khabaroff,5,1511,34,3,6.73,25.2,atkinson1860_p02232
+en,en,,cossack,казаки,bands,5,1511,64,5,6.7,18.8,colquhoun1900_p00141
+en,en,,cossack,казаки,dance,5,1511,103,4,6.67,14.3,atkinson1858_p01378
+en,en,,cossack,казаки,founded,5,1511,120,4,6.65,12.9,dewindt1903_p00113
+en,en,,cossack,казаки,fortress,5,1511,131,5,6.64,12.1,atkinson1860_p00302
+en,en,,evenki_even,эвенки / эвены,tribes,24,604,553,14,9.41,104.5,bergman1927_p00649
+en,en,,evenki_even,эвенки / эвены,reindeer,21,604,871,10,8.87,67.8,bergman1927_p00496
+en,en,,evenki_even,эвенки / эвены,race,16,604,536,8,8.85,58.1,atkinson1860_p02505
+en,en,,evenki_even,эвенки / эвены,tribe,12,604,316,9,8.74,49.1,eden1879_p00532
+en,en,,evenki_even,эвенки / эвены,races,10,604,252,7,8.58,41.8,atkinson1860_p02494
+en,en,,evenki_even,эвенки / эвены,hunting,8,604,325,6,8.14,26.1,atkinson1860_p02373
+en,en,,evenki_even,эвенки / эвены,inhabited,6,604,251,5,7.85,19.3,atkinson1860_p02442
+en,en,,evenki_even,эвенки / эвены,native,8,604,579,6,7.79,17.8,gowing1889_p00289
+en,en,,evenki_even,эвенки / эвены,wandering,5,604,151,4,7.76,19.1,cochrane1829_p00942
+en,en,,evenki_even,эвенки / эвены,family,9,604,762,5,7.75,17.6,bergman1927_p00673
+en,en,,evenki_even,эвенки / эвены,hunters,5,604,224,3,7.63,15.4,atkinson1860_p02183
+en,en,,evenki_even,эвенки / эвены,village,13,604,1792,8,7.47,15.4,atkinson1860_p02441
+en,en,,evenki_even,эвенки / эвены,couple,6,604,510,3,7.46,11.7,bergman1927_p00663
+en,en,,evenki_even,эвенки / эвены,wild,8,604,952,4,7.4,11.2,dobell1830_p00725
+en,en,,exiles,ссыльные и каторжные,criminal,36,1492,173,16,9.47,209.3,dewindt1889_p00800
+en,en,,exiles,ссыльные и каторжные,escaped,36,1492,227,18,9.42,188.3,atkinson1858_p00838
+en,en,,exiles,ссыльные и каторжные,number,55,1492,1500,21,9.23,130.4,atkinson1860_p05599
+en,en,,exiles,ссыльные и каторжные,sent,49,1492,1231,23,9.2,123.4,atkinson1860_p02053
+en,en,,exiles,ссыльные и каторжные,sakhalin,33,1492,485,8,9.1,116.1,dewindt1892_p00181
+en,en,,exiles,ссыльные и каторжные,labour,32,1492,501,12,9.04,108.7,dewindt1892_p01097
+en,en,,exiles,ссыльные и каторжные,prison,37,1492,1050,13,8.9,85.1,dewindt1892_p00304
+en,en,,exiles,ссыльные и каторжные,mines,28,1492,691,14,8.72,71.4,atkinson1860_p02183
+en,en,,exiles,ссыльные и каторжные,descendants,19,1492,78,10,8.63,117.1,cottrell1842_p00923
+en,en,,exiles,ссыльные и каторжные,work,33,1492,1754,17,8.38,41.7,atkinson1860_p02081
+en,en,,exiles,ссыльные и каторжные,prisons,18,1492,303,12,8.36,58.6,dewindt1889_p00689
+en,en,,exiles,ссыльные и каторжные,siberia,56,1492,4546,26,8.25,38.1,atkinson1858_p00824
+en,en,,exiles,ссыльные и каторжные,employed,17,1492,371,12,8.22,47.1,atkinson1860_p01986
+en,en,,exiles,ссыльные и каторжные,gang,14,1492,109,8,8.16,67.0,dewindt1892_p00561
+en,en,,exiles,ссыльные и каторжные,female,14,1492,147,7,8.13,58.5,dewindt1896_p00097
+en,en,,exiles,ссыльные и каторжные,siberian,30,1492,2147,13,8.08,25.2,dewindt1889_p00682
+en,en,,exiles,ссыльные и каторжные,free,17,1492,639,12,8.03,30.9,cottrell1842_p00923
+en,en,,exiles,ссыльные и каторжные,escape,15,1492,392,10,8.03,36.7,dewindt1889_p00782
+en,en,,exiles,ссыльные и каторжные,class,15,1492,421,12,8.01,34.8,cottrell1842_p00851
+en,en,,exiles,ссыльные и каторжные,voluntary,12,1492,64,6,7.98,67.0,dewindt1892_p00899
+en,en,,exiles,ссыльные и каторжные,life,23,1492,1683,9,7.89,18.6,dewindt1892_p00825
+en,en,,exiles,ссыльные и каторжные,sentence,11,1492,148,7,7.78,40.6,atkinson1860_p02106
+en,en,,exiles,ссыльные и каторжные,runaway,10,1492,23,6,7.76,75.6,dewindt1889_p00700
+en,en,,exiles,ссыльные и каторжные,gangs,10,1492,39,7,7.74,62.8,cochrane1829_p01548
+en,en,,exiles,ссыльные и каторжные,penal,10,1492,149,8,7.64,34.9,atkinson1858_p02283
+en,en,,exiles,ссыльные и каторжные,criminals,10,1492,225,8,7.58,27.2,atkinson1860_p00250
+en,en,,exiles,ссыльные и каторжные,system,11,1492,410,8,7.57,20.1,gerrare1903_p00697
+en,en,,exiles,ссыльные и каторжные,children,13,1492,848,9,7.51,12.6,cochrane1829_p01530
+en,en,,exiles,ссыльные и каторжные,generally,13,1492,908,11,7.47,11.3,cochrane1829_p00666
+en,en,,exiles,ссыльные и каторжные,settlement,10,1492,436,6,7.41,15.7,dewindt1889_p00739
+en,en,,exiles,ссыльные и каторжные,kara,11,1492,658,5,7.39,12.0,dewindt1889_p00624
+en,en,,exiles,ссыльные и каторжные,nertchinsk,9,1492,264,6,7.39,20.2,dewindt1889_p00624
+en,en,,exiles,ссыльные и каторжные,rights,8,1492,114,4,7.35,28.6,hawes1903_p01939
+en,en,,exiles,ссыльные и каторжные,wives,8,1492,183,7,7.29,21.5,dewindt1892_p00366
+en,en,,exiles,ссыльные и каторжные,ordinary,9,1492,463,6,7.24,11.8,dewindt1892_p00366
+en,en,,exiles,ссыльные и каторжные,classes,8,1492,244,7,7.24,17.4,dewindt1896_p00520
+en,en,,exiles,ссыльные и каторжные,settlements,8,1492,252,6,7.23,16.9,atkinson1858_p02283
+en,en,,exiles,ссыльные и каторжные,guard,8,1492,255,6,7.23,16.8,atkinson1860_p02136
+en,en,,exiles,ссыльные и каторжные,working,8,1492,280,6,7.21,15.5,atkinson1860_p02122
+en,en,,exiles,ссыльные и каторжные,fellow,8,1492,290,8,7.2,15.0,dewindt1892_p00962
+en,en,,exiles,ссыльные и каторжные,dress,8,1492,320,7,7.18,13.7,dewindt1892_p00366
+en,en,,exiles,ссыльные и каторжные,barge,7,1492,128,4,7.15,21.7,dewindt1892_p00611
+en,en,,exiles,ссыльные и каторжные,exiled,7,1492,125,6,7.15,22.0,dewindt1896_p00520
+en,en,,exiles,ссыльные и каторжные,cent,7,1492,211,4,7.07,15.3,dewindt1896_p00520
+en,en,,exiles,ссыльные и каторжные,worst,7,1492,224,5,7.06,14.6,gsimpson1847_p00827
+en,en,,exiles,ссыльные и каторжные,proportion,7,1492,246,4,7.04,13.5,harrison1910_p00288
+en,en,,exiles,ссыльные и каторжные,consists,7,1492,264,6,7.03,12.7,dewindt1896_p00214
+en,en,,exiles,ссыльные и каторжные,batch,6,1492,18,4,7.02,41.4,dewindt1892_p00896
+en,en,,exiles,ссыльные и каторжные,employment,6,1492,89,6,6.96,21.0,dewindt1892_p00556
+en,en,,exiles,ссыльные и каторжные,sending,6,1492,116,6,6.93,18.0,dewindt1892_p00181
+en,en,,exiles,ссыльные и каторжные,granted,6,1492,126,3,6.92,17.1,lansdell1883_p01708
+en,en,,exiles,ссыльные и каторжные,treatment,6,1492,146,5,6.91,15.4,atkinson1858_p02973
+en,en,,exiles,ссыльные и каторжные,evidence,6,1492,142,4,6.91,15.7,dewindt1892_p00906
+en,en,,exiles,ссыльные и каторжные,confined,6,1492,156,4,6.9,14.7,dewindt1896_p00520
+en,en,,exiles,ссыльные и каторжные,establishment,6,1492,171,5,6.89,13.7,atkinson1860_p02154
+en,en,,exiles,ссыльные и каторжные,hard-labour,5,1492,16,3,6.76,33.7,dewindt1892_p00826
+en,en,,exiles,ссыльные и каторжные,infested,5,1492,29,3,6.75,27.0,dewindt1889_p00700
+en,en,,exiles,ссыльные и каторжные,murderers,5,1492,49,5,6.73,21.6,dewindt1892_p00898
+en,en,,exiles,ссыльные и каторжные,offences,5,1492,71,4,6.71,17.9,cochrane1829_p00669
+en,en,,exiles,ссыльные и каторжные,employ,5,1492,80,5,6.7,16.8,atkinson1860_p02152
+en,en,,exiles,ссыльные и каторжные,sentenced,5,1492,88,5,6.7,15.9,dewindt1896_p00820
+en,en,,exiles,ссыльные и каторжные,regards,5,1492,99,4,6.69,14.8,dewindt1896_p00239
+en,en,,exiles,ссыльные и каторжные,despatched,5,1492,111,3,6.68,13.7,dewindt1892_p00304
+en,en,,exiles,ссыльные и каторжные,department,5,1492,102,3,6.68,14.5,hawes1903_p01846
+en,en,,exiles,ссыльные и каторжные,wretched,5,1492,129,4,6.66,12.3,dewindt1889_p00674
+en,en,,exiles,ссыльные и каторжные,wear,5,1492,151,4,6.64,10.9,dewindt1903_p00179
+en,en,,exiles,ссыльные и каторжные,now,7,1492,4136,6,5.35,11.0,atkinson1858_p00838
+en,en,,exiles,ссыльные и каторжные,river,6,1492,5008,5,4.92,19.2,atkinson1860_p02187
+en,en,,japanese,японцы,against,5,119,1136,3,7.03,15.3,colquhoun1900_p00371
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),rode,15,692,260,4,9.01,69.8,atkinson1858_p01172
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),steppes,16,692,492,12,8.79,56.6,atkinson1858_p01146
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),aoul,11,692,139,3,8.76,58.1,atkinson1858_p01154
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),hordes,9,692,52,7,8.63,62.3,atkinson1858_p02283
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),nomad,7,692,93,6,8.19,36.3,colquhoun1900_p00175
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),inhabited,8,692,251,7,8.12,28.0,atkinson1858_p00881
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),steppe,11,692,629,7,8.09,26.4,atkinson1858_p00105
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),tribes,10,692,553,4,8.04,24.6,atkinson1860_p00270
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),horses,24,692,2575,8,7.91,32.5,atkinson1858_p01051
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),encampment,6,692,131,5,7.9,25.2,atkinson1858_p01172
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),met,12,692,1028,4,7.84,20.5,atkinson1858_p01261
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),ride,7,692,315,4,7.83,19.8,atkinson1858_p02227
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),sheep,7,692,365,5,7.76,17.9,atkinson1858_p01163
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),cattle,8,692,536,6,7.74,17.0,atkinson1858_p00829
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),chiefs,5,692,163,4,7.58,17.1,atkinson1858_p02229
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),mounted,5,692,166,3,7.58,17.0,atkinson1860_p00517
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),curious,6,692,376,6,7.52,13.4,atkinson1858_p01143
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),living,7,692,578,6,7.5,12.4,atkinson1858_p01051
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),mountain,8,692,764,4,7.49,12.3,atkinson1858_p01323
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),races,5,692,252,4,7.44,13.1,atkinson1860_p02497
+en,en,,kazakh_kirghiz,казахи ('киргизы' XIX в.),chief,9,692,1049,4,7.4,11.1,atkinson1858_p01251
+en,en,,khanty,ханты,voguls,7,385,18,4,9.15,69.7,eden1879_p00440
+en,en,,khanty,ханты,finnish,5,385,60,3,8.52,32.7,lansdell1883_p00258
+en,en,,khanty,ханты,bows,5,385,104,4,8.39,27.1,eden1879_p00426
+en,en,,khanty,ханты,tribes,9,385,553,7,8.3,29.9,carruthers1914_p00304
+en,en,,khanty,ханты,hunters,5,385,224,4,8.07,19.6,dewindt1892_p00693
+en,en,,khanty,ханты,inhabited,5,385,251,3,8.01,18.5,cochrane1829_p00500
+en,en,,khanty,ханты,stock,5,385,262,4,7.98,18.1,eden1879_p00440
+en,en,,khanty,ханты,instance,5,385,389,5,7.73,14.4,carruthers1914_p00395
+en,en,,khanty,ханты,live,7,385,701,5,7.72,17.1,dewindt1889_p00878
+en,en,,khanty,ханты,race,5,385,536,4,7.47,11.6,cochrane1829_p00500
+en,en,,koryak,коряки,kamchatdales,5,210,26,3,9.44,47.6,dewindt1889_p00665
+en,en,,koryak,коряки,wandering,7,210,151,3,9.31,45.8,dewindt1889_p00667
+en,en,,koryak,коряки,settled,7,210,344,3,8.69,34.3,dewindt1889_p00667
+en,en,,koryak,коряки,races,5,210,252,5,8.47,24.3,bergman1927_p00311
+en,en,,koryak,коряки,reindeer,9,210,871,3,8.09,32.4,bergman1927_p00680
+en,en,,koryak,коряки,north,8,210,1585,6,7.19,18.4,bergman1927_p00864
+en,en,,koryak,коряки,both,7,210,1548,3,7.03,14.8,bergman1927_p00701
+en,en,,manchu,маньчжуры,dynasty,6,164,34,5,9.96,59.0,colquhoun1900_p00555
+en,en,,manchu,маньчжуры,amur,9,164,1171,4,7.79,31.6,harrison1910_p00255
+en,en,,manchu,маньчжуры,black,6,164,964,3,7.45,18.7,colquhoun1900_p00150
+en,en,,manchu,маньчжуры,known,5,164,833,3,7.36,15.3,hawes1903_p01019
+en,en,,mongol,монголы,tribes,20,616,553,9,9.13,79.2,carruthers1914_p00944
+en,en,,mongol,монголы,tribe,10,616,316,6,8.46,37.0,carruthers1914_p00980
+en,en,,mongol,монголы,race,12,616,536,9,8.42,36.6,carruthers1914_p00847
+en,en,,mongol,монголы,desert,9,616,338,5,8.27,30.4,dewindt1889_p00207
+en,en,,mongol,монголы,typical,6,616,103,3,8.1,29.4,carruthers1914_p00829
+en,en,,mongol,монголы,thirteenth,5,616,18,4,8.01,41.1,carruthers1914_p00948
+en,en,,mongol,монголы,turks,5,616,34,5,7.98,34.0,hawes1903_p01123
+en,en,,mongol,монголы,century,7,616,304,5,7.96,21.7,carruthers1914_p00948
+en,en,,mongol,монголы,hordes,5,616,52,5,7.94,29.5,carruthers1914_p00518
+en,en,,mongol,монголы,type,6,616,204,3,7.91,21.4,carruthers1914_p00351
+en,en,,mongol,монголы,wool,5,616,93,3,7.85,23.7,carruthers1914_p01008
+en,en,,mongol,монголы,lamas,5,616,140,3,7.76,19.7,carruthers1914_p00172
+en,en,,mongol,монголы,language,7,616,471,6,7.72,16.2,carruthers1914_p00781
+en,en,,mongol,монголы,chiefs,5,616,163,4,7.72,18.2,carruthers1914_p00981
+en,en,,mongol,монголы,mongolian,6,616,325,3,7.71,16.2,carruthers1914_p02317
+en,en,,mongol,монголы,mongolia,7,616,485,3,7.7,15.8,carruthers1914_p00255
+en,en,,mongol,монголы,influence,6,616,348,3,7.67,15.5,carruthers1914_p00827
+en,en,,mongol,монголы,true,7,616,524,7,7.65,14.9,carruthers1914_p00255
+en,en,,mongol,монголы,authorities,6,616,384,3,7.62,14.4,carruthers1914_p01425
+en,en,,mongol,монголы,tents,5,616,226,4,7.6,15.2,carruthers1914_p00963
+en,en,,mongol,монголы,races,5,616,252,3,7.56,14.2,carruthers1914_p00385
+en,en,,mongol,монголы,word,6,616,487,6,7.48,12.0,carruthers1914_p01018
+en,en,,nanai_amur,нанайцы и др. народы Амура,tribes,7,136,553,6,8.38,33.7,atkinson1860_p02215
+en,en,,nanai_amur,нанайцы и др. народы Амура,amur,5,136,1171,3,6.97,13.9,harrison1910_p00496
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",call,14,1160,448,8,8.16,35.3,atkinson1858_p02432
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",coast,14,1160,770,9,7.89,22.4,dewindt1903_p00143
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",trade,14,1160,796,8,7.87,21.6,colquhoun1900_p00269
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",use,15,1160,953,11,7.86,20.6,carruthers1914_p01427
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",poor,14,1160,942,7,7.77,18.0,cochrane1829_p00706
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",region,13,1160,837,10,7.74,17.6,carruthers1914_p00381
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",barter,8,1160,106,8,7.69,33.6,dewindt1903_p00336
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",language,10,1160,471,7,7.65,18.5,bergman1927_p00285
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",fish,14,1160,1241,8,7.58,12.4,carruthers1914_p00694
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",told,14,1160,1264,9,7.56,12.1,dewindt1889_p00500
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",living,10,1160,578,8,7.56,15.2,dewindt1903_p00098
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",northern,11,1160,763,5,7.55,13.6,dewindt1903_p00153
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",sometimes,12,1160,1018,9,7.5,11.4,dewindt1892_p00689
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",met,12,1160,1028,9,7.49,11.2,dobell1830_p00113
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",interesting,9,1160,491,8,7.48,14.5,digby1928_p00656
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",fishing,8,1160,406,5,7.39,13.8,haviland1915_p00220
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",furs,8,1160,436,6,7.36,12.9,carruthers1914_p00692
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",information,8,1160,483,7,7.32,11.6,cochrane1829_p01411
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",canoes,6,1160,135,5,7.25,19.0,digby1928_p00718
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",trading,6,1160,137,6,7.24,18.9,carruthers1914_p01296
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",eaten,6,1160,141,6,7.24,18.5,cochrane1829_p00953
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",killed,7,1160,362,6,7.24,11.9,dewindt1889_p00669
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",tundra,7,1160,358,3,7.24,12.0,digby1928_p00666
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",treated,6,1160,250,4,7.12,12.4,dewindt1903_p00398
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",bartering,5,1160,22,4,7.11,32.5,hawes1903_p00952
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",tribute,5,1160,103,4,7.02,16.7,cottrell1842_p00322
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",alike,5,1160,129,5,6.99,14.6,dewindt1903_p00260
+en,en,,natives_generic,"«туземцы», «инородцы» (обобщённо)",spend,5,1160,195,3,6.92,10.9,haviland1915_p00319
+en,en,,nivkh,нивхи,amur,14,406,1171,4,8.18,37.3,colquhoun1900_p00169
+en,en,,nivkh,нивхи,village,18,406,1792,3,8.07,42.4,dewindt1896_p00298
+en,en,,nivkh,нивхи,native,8,406,579,6,8.06,23.4,dewindt1892_p00907
+en,en,,nivkh,нивхи,race,7,406,536,4,7.93,19.8,hawes1903_p01276
+en,en,,pereselentsy,переселенцы,voluntary,11,530,64,8,9.25,81.8,colquhoun1900_p00297
+en,en,,pereselentsy,переселенцы,free,19,530,639,9,9.06,73.5,dewindt1892_p01354
+en,en,,pereselentsy,переселенцы,eussian,12,530,339,4,8.82,50.4,felinska1854_p00285
+en,en,,pereselentsy,переселенцы,settled,12,530,344,8,8.81,50.1,cottrell1842_p00398
+en,en,,pereselentsy,переселенцы,peasant,12,530,431,8,8.68,44.9,colquhoun1900_p00297
+en,en,,pereselentsy,переселенцы,colonisation,6,530,41,3,8.43,42.5,gerrare1903_p00647
+en,en,,pereselentsy,переселенцы,number,21,530,1500,10,8.41,52.0,atkinson1860_p05367
+en,en,,pereselentsy,переселенцы,descendants,6,530,78,5,8.34,34.5,gerrare1903_p00646
+en,en,,pereselentsy,переселенцы,russia,20,530,1657,10,8.23,44.3,dewindt1896_p00363
+en,en,,pereselentsy,переселенцы,exiled,6,530,125,3,8.23,28.8,gerrare1903_p00648
+en,en,,pereselentsy,переселенцы,agricultural,6,530,207,4,8.06,22.9,gerrare1903_p00452
+en,en,,pereselentsy,переселенцы,sent,14,530,1231,10,8.03,29.6,atkinson1860_p02446
+en,en,,pereselentsy,переселенцы,land,19,530,1923,15,7.99,35.6,carruthers1914_p00680
+en,en,,pereselentsy,переселенцы,returning,6,530,259,5,7.96,20.4,gerrare1903_p00984
+en,en,,pereselentsy,переселенцы,increased,6,530,317,6,7.86,18.1,carruthers1914_p00682
+en,en,,pereselentsy,переселенцы,original,5,530,214,5,7.78,17.0,cottrell1842_p00311
+en,en,,pereselentsy,переселенцы,siberian,17,530,2147,9,7.7,25.8,carruthers1914_p00340
+en,en,,pereselentsy,переселенцы,returned,7,530,615,3,7.65,14.8,nansen1914_p01453
+en,en,,pereselentsy,переселенцы,european,6,530,555,3,7.5,12.1,dewindt1896_p00433
+en,en,,pereselentsy,переселенцы,province,6,530,553,4,7.5,12.2,gerrare1903_p00646
+en,en,,pereselentsy,переселенцы,living,6,530,578,5,7.47,11.7,dewindt1896_p00314
+en,en,,pereselentsy,переселенцы,stations,5,530,399,4,7.46,11.4,gerrare1903_p00445
+en,en,,pereselentsy,переселенцы,government,13,530,1920,9,7.44,16.5,cochrane1829_p01564
+en,en,,pereselentsy,переселенцы,class,5,530,421,4,7.43,10.9,gerrare1903_p00399
+en,en,,pereselentsy,переселенцы,early,7,530,823,4,7.41,11.4,carruthers1914_p00340
+en,en,,pereselentsy,переселенцы,district,7,530,817,6,7.41,11.5,gerrare1903_p00570
+en,en,,pereselentsy,переселенцы,region,7,530,837,6,7.39,11.2,carruthers1914_p00635
+en,en,,pereselentsy,переселенцы,siberia,26,530,4546,15,7.39,26.7,dewindt1896_p00520
+en,en,,pereselentsy,переселенцы,year,10,530,1512,3,7.33,12.4,meakin1901_p00853
+en,en,,political_exiles,политические ссыльные,criminals,12,348,225,9,9.42,70.0,dewindt1889_p00632
+en,en,,political_exiles,политические ссыльные,akatui,6,348,39,4,8.99,48.2,dewindt1896_p00520
+en,en,,political_exiles,политические ссыльные,criminal,8,348,173,7,8.97,44.3,dewindt1889_p00800
+en,en,,political_exiles,политические ссыльные,exiled,6,348,125,5,8.7,33.7,dewindt1889_p00688
+en,en,,political_exiles,политические ссыльные,sent,19,348,1231,10,8.62,64.9,dewindt1889_p00624
+en,en,,political_exiles,политические ссыльные,confined,6,348,156,5,8.61,31.1,dewindt1892_p00815
+en,en,,political_exiles,политические ссыльные,treated,7,348,250,6,8.58,31.9,dewindt1889_p00634
+en,en,,political_exiles,политические ссыльные,banished,5,348,125,5,8.44,26.3,dewindt1903_p00198
+en,en,,political_exiles,политические ссыльные,treatment,5,348,146,3,8.37,24.7,dewindt1892_p00811
+en,en,,political_exiles,политические ссыльные,prison,13,348,1050,5,8.25,39.1,dewindt1892_p00815
+en,en,,political_exiles,политические ссыльные,number,15,348,1500,6,8.06,39.3,eden1879_p00155
+en,en,,political_exiles,политические ссыльные,class,5,348,421,5,7.74,14.6,haviland1915_p00335
+en,en,,political_exiles,политические ссыльные,condition,5,348,570,4,7.48,11.9,dewindt1896_p00573
+en,en,,political_exiles,политические ссыльные,generally,6,348,908,6,7.29,11.4,dewindt1889_p00693
+en,en,,political_exiles,политические ссыльные,siberia,21,348,4546,15,7.14,28.0,cottrell1842_p01095
+en,en,,russian,русские,call,20,1426,448,16,8.45,56.1,carruthers1914_p00700
+en,en,,russian,русские,contact,14,1426,146,10,8.19,59.9,colquhoun1900_p00251
+en,en,,russian,русские,amur,21,1426,1171,10,8.05,26.4,colquhoun1900_p00109
+en,en,,russian,русские,against,20,1426,1136,13,8.0,24.6,carruthers1914_p00304
+en,en,,russian,русские,themselves,20,1426,1303,16,7.91,20.6,atkinson1858_p01668
+en,en,,russian,русские,since,16,1426,1027,11,7.74,16.8,carruthers1914_p00214
+en,en,,russian,русские,use,15,1426,953,9,7.69,16.0,cochrane1829_p01859
+en,en,,russian,русские,both,18,1426,1548,12,7.63,11.9,atkinson1858_p01749
+en,en,,russian,русские,classes,10,1426,244,6,7.62,26.5,cochrane1829_p00093
+en,en,,russian,русские,foreigners,9,1426,100,6,7.59,37.4,fell1916_p00944
+en,en,,russian,русские,known,13,1426,833,11,7.56,13.7,cochrane1829_p01063
+en,en,,russian,русские,treaty,9,1426,161,7,7.54,29.0,eden1879_p00082
+en,en,,russian,русские,introduced,9,1426,176,6,7.52,27.5,bergman1927_p00839
+en,en,,russian,русские,knew,11,1426,663,10,7.43,12.6,bergman1927_p00952
+en,en,,russian,русские,century,9,1426,304,7,7.41,18.6,carruthers1914_p00373
+en,en,,russian,русские,race,10,1426,536,8,7.38,13.2,bergman1927_p00208
+en,en,,russian,русские,class,9,1426,421,7,7.32,13.8,dewindt1896_p00340
+en,en,,russian,русские,races,8,1426,252,6,7.29,17.5,bergman1927_p00600
+en,en,,russian,русские,possession,8,1426,259,6,7.28,17.2,bergman1927_p00595
+en,en,,russian,русские,mostly,7,1426,215,6,7.13,15.7,dewindt1892_p00746
+en,en,,russian,русские,advent,6,1426,31,3,7.08,34.5,dewindt1892_p00684
+en,en,,russian,русские,seventeenth,6,1426,69,5,7.04,24.5,carruthers1914_p00373
+en,en,,russian,русские,conquered,6,1426,74,6,7.03,23.7,eden1879_p00559
+en,en,,russian,русские,attempts,6,1426,125,6,6.99,17.6,gerrare1903_p00963
+en,en,,russian,русские,terms,6,1426,190,5,6.93,13.1,cottrell1842_p00561
+en,en,,russian,русские,religious,6,1426,208,5,6.91,12.2,etherton1911_p02079
+en,en,,russian,русские,despise,5,1426,9,3,6.84,41.6,hprice1919_p00188
+en,en,,russian,русские,descendants,5,1426,78,4,6.77,17.4,cochrane1829_p00847
+en,en,,russian,русские,orthodox,5,1426,77,3,6.77,17.6,gerrare1903_p00666
+en,en,,russian,русские,treat,5,1426,80,5,6.77,17.2,harrison1910_p00630
+en,en,,russian,русские,methods,5,1426,99,5,6.75,15.2,harrison1910_p00515
+en,en,,sakha,якуты (саха),language,21,749,471,10,9.14,83.9,cochrane1829_p00743
+en,en,,sakha,якуты (саха),hut,9,749,477,3,7.91,21.5,dewindt1903_p00201
+en,en,,sakha,якуты (саха),horses,24,749,2575,10,7.89,29.7,cochrane1829_p00742
+en,en,,sakha,якуты (саха),dwellings,7,749,219,6,7.89,23.5,dewindt1889_p00674
+en,en,,sakha,якуты (саха),cattle,9,749,536,4,7.84,19.7,cochrane1829_p01248
+en,en,,sakha,якуты (саха),called,16,749,1557,7,7.83,22.1,cochrane1829_p01016
+en,en,,sakha,якуты (саха),informed,8,749,419,3,7.81,19.3,dobell1830_p01042
+en,en,,sakha,якуты (саха),mixed,6,749,186,3,7.72,20.2,dobell1830_p00764
+en,en,,sakha,якуты (саха),race,8,749,536,6,7.67,15.9,cochrane1829_p00874
+en,en,,sakha,якуты (саха),guide,6,749,243,3,7.63,17.3,cochrane1829_p00938
+en,en,,sakha,якуты (саха),guides,5,749,91,5,7.61,22.0,cochrane1829_p01301
+en,en,,sakha,якуты (саха),inhabit,5,749,100,5,7.59,21.1,dewindt1892_p00652
+en,en,,sakha,якуты (саха),horse,8,749,664,5,7.54,13.1,dewindt1903_p00230
+en,en,,sakha,якуты (саха),huts,6,749,350,4,7.48,13.4,dewindt1903_p00075
+en,en,,sakha,якуты (саха),generally,9,749,908,4,7.48,12.0,dewindt1903_p00138
+en,en,,sakha,якуты (саха),tribes,7,749,553,7,7.46,12.0,colquhoun1900_p00114
+en,en,,sakha,якуты (саха),customs,5,749,226,5,7.39,13.4,dewindt1889_p00677
+en,en,,samoyedic,самодийские народы (без уточнения),tribes,19,376,553,9,9.39,91.3,colquhoun1900_p00114
+en,en,,samoyedic,самодийские народы (без уточнения),voguls,6,376,18,4,8.96,57.8,lansdell1883_p00258
+en,en,,samoyedic,самодийские народы (без уточнения),reindeer,14,376,871,5,8.52,46.9,haviland1915_p00330
+en,en,,samoyedic,самодийские народы (без уточнения),boat,10,376,734,3,8.21,30.4,haviland1915_p00483
+en,en,,samoyedic,самодийские народы (без уточнения),tribe,6,376,316,3,8.15,21.9,carruthers1914_p00781
+en,en,,samoyedic,самодийские народы (без уточнения),races,5,376,252,3,8.03,18.7,haviland1915_p00317
+en,en,,samoyedic,самодийские народы (без уточнения),fishing,6,376,406,4,7.97,19.1,felinska1854_p00824
+en,en,,samoyedic,самодийские народы (без уточнения),language,6,376,471,4,7.86,17.5,felinska1854_p02037
+en,en,,samoyedic,самодийские народы (без уточнения),board,7,376,652,4,7.8,18.3,haviland1915_p00717
+en,en,,samoyedic,самодийские народы (без уточнения),came,11,376,2378,5,7.03,13.4,haviland1915_p00323
+en,en,,siberian_tatar,татары (в т.ч. сибирские),tribes,19,603,553,11,9.07,74.1,cochrane1829_p00518
+en,en,,siberian_tatar,татары (в т.ч. сибирские),inhabited,9,603,251,6,8.43,35.8,cochrane1829_p00653
+en,en,,siberian_tatar,татары (в т.ч. сибирские),turkish,7,603,82,7,8.39,39.9,carruthers1914_p00780
+en,en,,siberian_tatar,татары (в т.ч. сибирские),steppes,11,603,492,5,8.36,34.0,jefferson1897_p00378
+en,en,,siberian_tatar,татары (в т.ч. сибирские),race,11,603,536,9,8.31,32.3,carruthers1914_p00354
+en,en,,siberian_tatar,татары (в т.ч. сибирские),tents,8,603,226,3,8.3,31.7,holman1825_p02293
+en,en,,siberian_tatar,татары (в т.ч. сибирские),live,12,603,701,9,8.24,31.2,bergman1927_p00389
+en,en,,siberian_tatar,татары (в т.ч. сибирские),villages,11,603,660,8,8.16,28.1,cochrane1829_p00529
+en,en,,siberian_tatar,татары (в т.ч. сибирские),altai,9,603,512,4,8.05,23.9,lansdell1883_p00516
+en,en,,siberian_tatar,татары (в т.ч. сибирские),khan,6,603,174,5,7.98,23.4,dewindt1889_p00891
+en,en,,siberian_tatar,татары (в т.ч. сибирские),races,6,603,252,6,7.85,19.2,bergman1927_p00172
+en,en,,siberian_tatar,татары (в т.ч. сибирские),living,8,603,578,5,7.79,17.8,carruthers1914_p00373
+en,en,,siberian_tatar,татары (в т.ч. сибирские),minusinsk,5,603,137,3,7.79,20.1,lansdell1883_p00715
+en,en,,siberian_tatar,татары (в т.ч. сибирские),language,7,603,471,6,7.74,16.5,carruthers1914_p00781
+en,en,,siberian_tatar,татары (в т.ч. сибирские),tribe,6,603,316,5,7.74,16.7,cochrane1829_p01618
+en,en,,siberian_tatar,татары (в т.ч. сибирские),origin,5,603,161,4,7.74,18.5,cottrell1842_p00298
+en,en,,siberian_tatar,татары (в т.ч. сибирские),including,5,603,235,4,7.61,15.0,carruthers1914_p00683
+en,en,,siberian_tatar,татары (в т.ч. сибирские),consists,5,603,264,5,7.56,13.9,cochrane1829_p01542
+en,en,,siberian_tatar,татары (в т.ч. сибирские),dress,5,603,320,3,7.47,12.2,cochrane1829_p00528
+en,en,,siberian_tatar,татары (в т.ч. сибирские),mongolian,5,603,325,3,7.46,12.1,lansdell1883_p00258
+en,en,,siberian_tatar,татары (в т.ч. сибирские),settled,5,603,344,5,7.43,11.6,cottrell1842_p01095
+en,en,,siberian_tatar,татары (в т.ч. сибирские),village,12,603,1792,7,7.36,12.8,atkinson1858_p01495
+en,en,,sibiriak,сибиряки / старожилы,native,5,223,579,4,7.67,15.8,dewindt1889_p00313
+en,en,,sibiriak,сибиряки / старожилы,themselves,7,223,1303,7,7.23,16.1,carruthers1914_p00692
+en,en,,sibiriak,сибиряки / старожилы,generally,5,223,908,4,7.18,11.7,fraser1902_p00681
+en,en,,tuvan,тувинцы,live,8,223,701,3,8.15,29.4,carruthers1914_p00634
+en@P1 до 1855,en,P1 до 1855,cossack,казаки,sent,22,1511,1231,7,8.04,25.7,
+en@P1 до 1855,en,P1 до 1855,cossack,казаки,post,16,1511,624,5,7.94,27.7,
+en@P1 до 1855,en,P1 до 1855,cossack,казаки,myself,18,1511,962,5,7.9,22.3,
+en@P1 до 1855,en,P1 до 1855,cossack,казаки,mounted,12,1511,166,4,7.87,43.3,
+en@P1 до 1855,en,P1 до 1855,cossack,казаки,guard,11,1511,255,6,7.67,29.0,
+en@P1 до 1855,en,P1 до 1855,cossack,казаки,party,12,1511,784,5,7.42,11.4,
+en@P1 до 1855,en,P1 до 1855,cossack,казаки,ordered,9,1511,257,3,7.38,20.4,
+en@P1 до 1855,en,P1 до 1855,cossack,казаки,rode,8,1511,260,5,7.21,16.3,
+en@P1 до 1855,en,P1 до 1855,cossack,казаки,dance,5,1511,103,4,6.67,14.3,
+en@P1 до 1855,en,P1 до 1855,cossack,казаки,river,6,1511,5008,4,4.91,19.7,
+en@P1 до 1855,en,P1 до 1855,cossack,казаки,time,5,1511,4779,3,4.7,20.9,
+en@P1 до 1855,en,P1 до 1855,exiles,ссыльные и каторжные,descendants,8,1492,78,3,7.38,34.6,
+en@P1 до 1855,en,P1 до 1855,exiles,ссыльные и каторжные,siberia,8,1492,4546,5,5.44,11.4,
+en@P1 до 1855,en,P1 до 1855,exiles,ссыльные и каторжные,great,5,1492,4779,5,4.71,20.4,
+en@P1 до 1855,en,P1 до 1855,kazakh_kirghiz,казахи ('киргизы' XIX в.),aoul,11,692,139,3,8.76,58.1,
+en@P1 до 1855,en,P1 до 1855,kazakh_kirghiz,казахи ('киргизы' XIX в.),steppes,8,692,492,5,7.79,18.2,
+en@P1 до 1855,en,P1 до 1855,kazakh_kirghiz,казахи ('киргизы' XIX в.),hordes,5,692,52,3,7.78,28.4,
+en@P1 до 1855,en,P1 до 1855,kazakh_kirghiz,казахи ('киргизы' XIX в.),met,11,692,1028,3,7.71,17.3,
+en@P1 до 1855,en,P1 до 1855,kazakh_kirghiz,казахи ('киргизы' XIX в.),ride,6,692,315,3,7.61,15.3,
+en@P1 до 1855,en,P1 до 1855,kazakh_kirghiz,казахи ('киргизы' XIX в.),chiefs,5,692,163,4,7.58,17.1,
+en@P1 до 1855,en,P1 до 1855,russian,русские,great,6,1426,4779,4,4.99,16.1,
+en@P1 до 1855,en,P1 до 1855,russian,русские,made,5,1426,4055,4,4.9,13.9,
+en@P1 до 1855,en,P1 до 1855,russian,русские,siberia,5,1426,4546,4,4.78,17.3,
+en@P1 до 1855,en,P1 до 1855,sakha,якуты (саха),language,7,749,471,4,7.55,13.9,
+en@P1 до 1855,en,P1 до 1855,sakha,якуты (саха),horses,17,749,2575,5,7.39,12.8,
+en@P1 до 1855,en,P1 до 1855,siberian_tatar,татары (в т.ч. сибирские),inhabited,6,603,251,4,7.85,19.3,
+en@P1 до 1855,en,P1 до 1855,siberian_tatar,татары (в т.ч. сибирские),race,7,603,536,5,7.65,14.9,
+en@P1 до 1855,en,P1 до 1855,siberian_tatar,татары (в т.ч. сибирские),villages,7,603,660,5,7.5,12.4,
+en@P2 1856–1880,en,P2 1856–1880,exiles,ссыльные и каторжные,siberia,8,1492,4546,3,5.44,11.4,
+en@P2 1856–1880,en,P2 1856–1880,mongol,монголы,tribes,8,616,553,5,7.81,18.1,
+en@P2 1856–1880,en,P2 1856–1880,russian,русские,contact,5,1426,146,3,6.7,11.6,
+en@P2 1856–1880,en,P2 1856–1880,russian,русские,river,8,1426,5008,3,5.35,12.9,
+en@P2 1856–1880,en,P2 1856–1880,russian,русские,siberia,6,1426,4546,4,5.04,14.6,
+en@P2 1856–1880,en,P2 1856–1880,russian,русские,now,5,1426,4136,3,4.88,14.5,
+en@P3 1881–1904,en,P3 1881–1904,buryat,буряты,buddhists,5,472,17,3,8.39,44.4,
+en@P3 1881–1904,en,P3 1881–1904,cossack,казаки,guard,8,1511,255,3,7.21,16.6,
+en@P3 1881–1904,en,P3 1881–1904,cossack,казаки,yermak,6,1511,79,5,6.95,22.2,
+en@P3 1881–1904,en,P3 1881–1904,cossack,казаки,siberia,5,1511,4546,4,4.76,19.1,
+en@P3 1881–1904,en,P3 1881–1904,evenki_even,эвенки / эвены,race,9,604,536,5,8.02,23.1,
+en@P3 1881–1904,en,P3 1881–1904,evenki_even,эвенки / эвены,tribes,7,604,553,6,7.63,14.5,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,sakhalin,30,1492,485,7,8.96,100.1,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,escaped,22,1492,227,10,8.71,92.7,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,criminal,21,1492,173,10,8.69,98.1,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,labour,23,1492,501,9,8.56,63.8,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,prison,25,1492,1050,9,8.33,40.8,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,sent,25,1492,1231,11,8.23,34.5,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,number,24,1492,1500,9,8.04,24.6,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,mines,16,1492,691,6,7.91,25.4,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,escape,13,1492,392,8,7.82,28.5,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,work,21,1492,1754,8,7.73,13.5,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,prisons,11,1492,303,10,7.65,25.9,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,female,10,1492,147,4,7.64,35.2,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,voluntary,9,1492,64,4,7.57,44.8,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,system,11,1492,410,8,7.57,20.1,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,gang,9,1492,109,5,7.53,35.1,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,sentence,8,1492,148,4,7.32,24.6,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,runaway,7,1492,23,4,7.24,46.7,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,descendants,7,1492,78,5,7.19,28.4,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,nertchinsk,7,1492,264,4,7.03,12.7,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,gangs,6,1492,39,5,7.0,31.0,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,barge,6,1492,128,3,6.92,16.9,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,cent,6,1492,211,3,6.85,11.6,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,batch,5,1492,18,3,6.76,32.3,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,infested,5,1492,29,3,6.75,27.0,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,employment,5,1492,89,5,6.7,15.8,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,department,5,1492,102,3,6.68,14.5,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,sending,5,1492,116,5,6.67,13.3,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,exiled,5,1492,125,5,6.66,12.6,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,evidence,5,1492,142,3,6.65,11.5,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,penal,5,1492,149,3,6.64,11.1,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,time,9,1492,4779,6,5.56,10.9,
+en@P3 1881–1904,en,P3 1881–1904,exiles,ссыльные и каторжные,great,6,1492,4779,4,4.97,17.6,
+en@P3 1881–1904,en,P3 1881–1904,kazakh_kirghiz,казахи ('киргизы' XIX в.),nomad,5,692,93,4,7.71,22.6,
+en@P3 1881–1904,en,P3 1881–1904,mongol,монголы,desert,5,616,338,3,7.42,11.5,
+en@P3 1881–1904,en,P3 1881–1904,nivkh,нивхи,native,7,406,579,5,7.86,18.8,
+en@P3 1881–1904,en,P3 1881–1904,pereselentsy,переселенцы,free,16,530,639,6,8.81,56.7,
+en@P3 1881–1904,en,P3 1881–1904,pereselentsy,переселенцы,eussian,10,530,339,3,8.56,38.5,
+en@P3 1881–1904,en,P3 1881–1904,pereselentsy,переселенцы,colonisation,6,530,41,3,8.43,42.5,
+en@P3 1881–1904,en,P3 1881–1904,pereselentsy,переселенцы,voluntary,5,530,64,5,8.11,28.9,
+en@P3 1881–1904,en,P3 1881–1904,pereselentsy,переселенцы,returning,6,530,259,5,7.96,20.4,
+en@P3 1881–1904,en,P3 1881–1904,pereselentsy,переселенцы,peasant,6,530,431,4,7.68,14.8,
+en@P3 1881–1904,en,P3 1881–1904,pereselentsy,переселенцы,russia,13,530,1657,5,7.61,19.5,
+en@P3 1881–1904,en,P3 1881–1904,pereselentsy,переселенцы,number,11,530,1500,5,7.47,15.3,
+en@P3 1881–1904,en,P3 1881–1904,pereselentsy,переселенцы,land,12,530,1923,10,7.32,13.8,
+en@P3 1881–1904,en,P3 1881–1904,political_exiles,политические ссыльные,criminals,10,348,225,7,9.16,54.6,
+en@P3 1881–1904,en,P3 1881–1904,political_exiles,политические ссыльные,akatui,6,348,39,4,8.99,48.2,
+en@P3 1881–1904,en,P3 1881–1904,political_exiles,политические ссыльные,criminal,6,348,173,5,8.56,29.8,
+en@P3 1881–1904,en,P3 1881–1904,political_exiles,политические ссыльные,exiled,5,348,125,4,8.44,26.3,
+en@P3 1881–1904,en,P3 1881–1904,political_exiles,политические ссыльные,banished,5,348,125,5,8.44,26.3,
+en@P3 1881–1904,en,P3 1881–1904,political_exiles,политические ссыльные,sent,10,348,1231,6,7.7,22.5,
+en@P3 1881–1904,en,P3 1881–1904,political_exiles,политические ссыльные,prison,7,348,1050,4,7.36,13.4,
+en@P3 1881–1904,en,P3 1881–1904,russian,русские,call,9,1426,448,7,7.3,12.9,
+en@P3 1881–1904,en,P3 1881–1904,russian,русские,foreigners,5,1426,100,4,6.75,15.1,
+en@P3 1881–1904,en,P3 1881–1904,russian,русские,great,5,1426,4779,5,4.72,18.9,
+en@P3 1881–1904,en,P3 1881–1904,sakha,якуты (саха),language,12,749,471,4,8.33,35.2,
+en@P4 1905–1917,en,P4 1905–1917,chinese,китайцы,yellow,5,534,300,3,7.62,13.9,
+en@P4 1905–1917,en,P4 1905–1917,cossack,казаки,river,5,1511,5008,4,4.65,22.6,
+en@P4 1905–1917,en,P4 1905–1917,evenki_even,эвенки / эвены,tribes,9,604,553,3,7.99,22.6,
+en@P4 1905–1917,en,P4 1905–1917,exiles,ссыльные и каторжные,criminal,8,1492,173,3,7.3,22.3,
+en@P4 1905–1917,en,P4 1905–1917,exiles,ссыльные и каторжные,siberia,8,1492,4546,3,5.44,11.4,
+en@P4 1905–1917,en,P4 1905–1917,mongol,монголы,race,6,616,536,3,7.42,11.0,
+en@P4 1905–1917,en,P4 1905–1917,russian,русские,contact,5,1426,146,4,6.7,11.6,
+en@P4 1905–1917,en,P4 1905–1917,russian,русские,day,5,1426,3606,3,5.03,11.0,
+en@P4 1905–1917,en,P4 1905–1917,russian,русские,time,5,1426,4779,4,4.72,18.9,
+en@P4 1905–1917,en,P4 1905–1917,samoyedic,самодийские народы (без уточнения),tribes,12,376,553,3,8.73,47.0,
+en@P4 1905–1917,en,P4 1905–1917,samoyedic,самодийские народы (без уточнения),races,5,376,252,3,8.03,18.7,
+fr,fr,,buryat,буряты,l'ingénieur,3,77,31,2,9.83,19.7,bordeaux1904_p00233
+fr,fr,,buryat,буряты,race,4,77,68,3,9.82,22.2,cotteau1885_p00606
+fr,fr,,chinese,китайцы,mandchoux,5,176,21,2,9.7,34.4,cotteau1885_p01023
+fr,fr,,chinese,китайцы,déportation,3,176,14,2,9.02,19.9,leroybeaulieu1900_p00093
+fr,fr,,chinese,китайцы,opposée,3,176,30,2,8.9,15.1,leroybeaulieu1900_p00280
+fr,fr,,chinese,китайцы,littoral,3,176,38,2,8.84,13.6,cotteau1885_p01356
+fr,fr,,cossack,казаки,militaires,6,269,69,4,9.18,23.5,bordeaux1904_p00263
+fr,fr,,cossack,казаки,chef,8,269,194,3,9.15,20.1,cotteau1885_p00656
+fr,fr,,cossack,казаки,premiers,5,269,90,3,8.83,15.3,boulangier1891_p00987
+fr,fr,,cossack,казаки,lieutenant,4,269,53,2,8.67,14.6,boulangier1891_p00768
+fr,fr,,cossack,казаки,l'ordre,4,269,63,2,8.62,13.3,grondijs1922_p02457
+fr,fr,,cossack,казаки,renforts,3,269,6,2,8.48,23.6,grondijs1922_p01297
+fr,fr,,cossack,казаки,envoyés,3,269,17,2,8.43,16.1,cotteau1885_p00966
+fr,fr,,cossack,казаки,l'arrivée,3,269,31,3,8.36,12.4,boulangier1891_p03037
+fr,fr,,cossack,казаки,l'ataman,3,269,34,2,8.34,11.9,grondijs1922_p01286
+fr,fr,,cossack,казаки,résistance,3,269,39,2,8.32,11.0,leroybeaulieu1900_p00215
+fr,fr,,evenki_even,эвенки / эвены,etc,4,51,164,3,9.25,18.4,bordeaux1904_p00655
+fr,fr,,exiles,ссыльные и каторжные,descendants,5,205,12,3,9.56,39.5,cotteau1885_p00657
+fr,fr,,exiles,ссыльные и каторжные,libres,5,205,30,3,9.45,28.9,bordeaux1904_p00655
+fr,fr,,exiles,ссыльные и каторжные,évadés,4,205,7,2,9.27,35.1,bordeaux1904_p00282
+fr,fr,,exiles,ссыльные и каторжные,prisonniers,5,205,79,3,9.17,19.1,bordeaux1904_p00585
+fr,fr,,exiles,ссыльные и каторжные,furent,6,205,151,4,9.11,17.6,bordeaux1904_p00804
+fr,fr,,exiles,ссыльные и каторжные,commun,4,205,34,2,9.1,20.2,boulangier1891_p00773
+fr,fr,,exiles,ссыльные и каторжные,seront,4,205,54,2,8.98,16.5,boulangier1891_p00638
+fr,fr,,exiles,ссыльные и каторжные,employés,4,205,65,2,8.92,15.0,bordeaux1904_p00655
+fr,fr,,exiles,ссыльные и каторжные,libérés,3,205,5,3,8.87,26.8,bordeaux1904_p00282
+fr,fr,,exiles,ссыльные и каторжные,contingent,3,205,5,2,8.87,26.8,boulangier1891_p01616
+fr,fr,,exiles,ссыльные и каторжные,déportation,3,205,14,2,8.81,19.0,bordeaux1904_p00494
+fr,fr,,exiles,ссыльные и каторжные,droit,5,205,165,2,8.79,12.2,boulangier1891_p00600
+fr,fr,,exiles,ссыльные и каторжные,forcés,3,205,31,3,8.7,14.0,boulangier1891_p02510
+fr,fr,,exiles,ссыльные и каторжные,réellement,3,205,33,2,8.69,13.6,leroybeaulieu1900_p00450
+fr,fr,,exiles,ссыльные и каторжные,sibérie,13,205,1109,5,8.34,11.9,cotteau1885_p00337
+fr,fr,,japanese,японцы,italiens,3,72,8,3,10.26,29.2,grondijs1922_p02441
+fr,fr,,japanese,японцы,japonaises,3,72,31,2,9.9,20.1,cotteau1885_p01281
+fr,fr,,japanese,японцы,alliés,4,72,92,2,9.64,20.3,grondijs1922_p02441
+fr,fr,,kazakh_kirghiz,казахи ('киргизы' XIX в.),steppes,9,85,45,2,11.15,71.4,boulangier1891_p00178
+fr,fr,,kazakh_kirghiz,казахи ('киргизы' XIX в.),steppe,3,85,80,2,9.22,13.4,leroybeaulieu1900_p00245
+fr,fr,,kazakh_kirghiz,казахи ('киргизы' XIX в.),pauvres,3,85,107,2,9.0,11.7,hansteen1857_p00662
+fr,fr,,khanty,ханты,l'ob,6,174,40,2,9.84,35.3,boulangier1891_p00761
+fr,fr,,khanty,ханты,iourtes,3,174,12,2,9.05,21.0,debaye1897_p00155
+fr,fr,,khanty,ханты,l'ours,3,174,34,2,8.88,14.4,debaye1897_p00154
+fr,fr,,khanty,ханты,ceux,6,174,279,3,8.76,12.7,debaye1897_p00199
+fr,fr,,korean,корейцы,nombre,3,35,295,2,8.22,11.0,cotteau1885_p01348
+fr,fr,,koryak,коряки,nord,4,32,329,2,8.5,16.7,maynard1859_p00402
+fr,fr,,mongol,монголы,race,7,74,68,4,10.66,47.5,boulangier1891_p01353
+fr,fr,,mongol,монголы,type,4,74,50,3,10.05,25.0,cotteau1885_p01107
+fr,fr,,mongol,монголы,langue,4,74,95,2,9.6,19.9,hansteen1857_p00432
+fr,fr,,mongol,монголы,chef,5,74,194,2,9.26,20.0,grondijs1922_p02509
+fr,fr,,mongol,монголы,eux,4,74,263,4,8.6,12.1,boulangier1891_p02974
+fr,fr,,natives_generic,"«туземцы», «инородцы» (обобщённо)",tribus,5,144,40,2,9.8,29.4,boulangier1891_p00740
+fr,fr,,natives_generic,"«туземцы», «инородцы» (обобщённо)",chasseurs,5,144,50,4,9.72,27.0,boulangier1891_p00713
+fr,fr,,pereselentsy,переселенцы,libres,5,104,30,3,10.26,35.6,bordeaux1904_p00655
+fr,fr,,pereselentsy,переселенцы,venus,5,104,49,3,10.06,30.4,boulangier1891_p00616
+fr,fr,,pereselentsy,переселенцы,installés,3,104,21,3,9.62,20.4,boulangier1891_p01200
+fr,fr,,pereselentsy,переселенцы,établis,3,104,21,3,9.62,20.4,boulangier1891_p01578
+fr,fr,,pereselentsy,переселенцы,volontaires,3,104,25,3,9.57,19.3,boulangier1891_p02892
+fr,fr,,pereselentsy,переселенцы,eux-mêmes,3,104,40,3,9.42,16.4,boulangier1891_p00745
+fr,fr,,pereselentsy,переселенцы,plupart,4,104,112,3,9.25,16.0,boulangier1891_p00664
+fr,fr,,pereselentsy,переселенцы,venir,3,104,62,2,9.21,13.7,cotteau1885_p01102
+fr,fr,,pereselentsy,переселенцы,militaires,3,104,69,3,9.15,13.1,bordeaux1904_p00278
+fr,fr,,pereselentsy,переселенцы,femmes,4,104,207,4,8.72,11.3,bordeaux1904_p00278
+fr,fr,,pole,поляки,sibérie,7,43,1109,4,7.64,16.9,bordeaux1904_p00426
+fr,fr,,russian,русские,conquête,5,287,30,2,9.01,25.7,maynard1859_p00502
+fr,fr,,russian,русские,appellent,4,287,14,4,8.77,25.3,bordeaux1904_p00573
+fr,fr,,russian,русские,font,7,287,246,5,8.75,12.3,bordeaux1904_p01026
+fr,fr,,russian,русские,disent,4,287,33,3,8.68,17.9,bordeaux1904_p00566
+fr,fr,,russian,русские,l’arrivée,3,287,8,2,8.38,20.9,cotteau1885_p00306
+fr,fr,,russian,русские,auxquels,3,287,36,3,8.25,11.2,boulangier1891_p02255
+fr,fr,,siberian_tatar,татары (в т.ч. сибирские),jeunes,4,84,130,2,9.26,16.4,cotteau1885_p00376
+fr,fr,,sibiriak,сибиряки / старожилы,vivaient,3,66,9,3,10.36,28.8,boulangier1891_p00787

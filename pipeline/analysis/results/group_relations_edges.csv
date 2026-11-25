@@ -1,0 +1,1106 @@
+group_a,group_b,rel_type,n,works,example
+ainu,chinese,co_mention,1,['lansdell1883'],lansdell1883_p02022
+ainu,chukchi,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+ainu,evenki_even,co_mention,8,"['bergman1927', 'hawes1903', 'lansdell1883', 'simpson1898']",bergman1927_p00600
+ainu,evenki_even,exploitation,1,['lansdell1883'],lansdell1883_p02058
+ainu,evenki_even,trade_exchange,1,['hawes1903'],hawes1903_p01117
+ainu,exiles,co_mention,2,['hawes1903'],hawes1903_p01249
+ainu,itelmen_kamchadal,co_mention,1,['bergman1927'],bergman1927_p00600
+ainu,japanese,co_mention,2,"['tronson1859', 'whittingham1856']",tronson1859_p00621
+ainu,japanese,labour_service,1,['whittingham1856'],whittingham1856_p00521
+ainu,ket,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+ainu,khanty,co_mention,1,['drei1925'],drei1925_p00440
+ainu,korean,co_mention,1,['bergman1927'],bergman1927_p00600
+ainu,koryak,co_mention,1,['bergman1927'],bergman1927_p00600
+ainu,koryak,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+ainu,manchu,co_mention,2,['hawes1903'],hawes1903_p01019
+ainu,manchu,exploitation,1,['lansdell1883'],lansdell1883_p02058
+ainu,mongol,co_mention,2,"['hawes1903', 'tronson1859']",hawes1903_p01277
+ainu,nanai_amur,co_mention,5,"['hawes1903', 'lansdell1883', 'simpson1898']",hawes1903_p01471
+ainu,nanai_amur,exploitation,1,['lansdell1883'],lansdell1883_p02058
+ainu,natives_generic,co_mention,8,"['hawes1903', 'nansen1914', 'tilley1861', 'tronson1859', 'whittingham1856']",hawes1903_p01025
+ainu,natives_generic,coexistence_neighbourhood,1,['gerrare1903'],gerrare1903_p00612
+ainu,natives_generic,conflict,1,['gerrare1903'],gerrare1903_p00612
+ainu,natives_generic,labour_service,1,['whittingham1856'],whittingham1856_p00527
+ainu,nivkh,co_mention,12,"['dewindt1896', 'drei1925', 'hawes1903', 'lansdell1883', 'simpson1898']",dewindt1896_p00299
+ainu,nivkh,exploitation,1,['lansdell1883'],lansdell1883_p02058
+ainu,nivkh,trade_exchange,2,['hawes1903'],hawes1903_p01117
+ainu,russian,co_mention,3,"['bergman1927', 'hawes1903', 'lansdell1883']",bergman1927_p00600
+ainu,sakha,co_mention,1,['hawes1903'],hawes1903_p01116
+ainu,siberian_tatar,co_mention,2,"['bergman1927', 'whittingham1856']",bergman1927_p00600
+ainu,sibiriak,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+ainu,tramps,co_mention,1,['hawes1903'],hawes1903_p01774
+ainu,yukaghir,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+altai_kalmyk,buryat,co_mention,3,"['cottrell1842', 'lansdell1883', 'michie1864']",cottrell1842_p00313
+altai_kalmyk,chinese,co_mention,3,"['finsch1879', 'radloff1893', 'rosenberg1904']",finsch1879_p00748
+altai_kalmyk,chinese,trade_exchange,1,['turner1905'],turner1905_p00518
+altai_kalmyk,cossack,co_mention,3,"['atkinson1858', 'atkinson1860', 'latkinson1863']",atkinson1858_p02263
+altai_kalmyk,cossack,conflict,2,"['finsch1879', 'gerrare1903']",finsch1879_p01091
+altai_kalmyk,cossack,intermarriage_mixing,1,['atkinson1860'],atkinson1860_p00300
+altai_kalmyk,cossack,religious_mission,1,['debaye1897'],debaye1897_p00168
+altai_kalmyk,cossack,trade_exchange,1,['gerrare1903'],gerrare1903_p00666
+altai_kalmyk,evenki_even,co_mention,1,['atkinson1860'],atkinson1860_p02405
+altai_kalmyk,evenki_even,trade_exchange,1,['atkinson1860'],atkinson1860_p02494
+altai_kalmyk,finn_estonian,co_mention,1,['grano1893'],grano1893_p00441
+altai_kalmyk,german,co_mention,1,['grano1893'],grano1893_p00441
+altai_kalmyk,jew,co_mention,1,['grano1893'],grano1893_p00441
+altai_kalmyk,kazakh_kirghiz,administration_tribute,4,"['cochrane1829', 'colquhoun1900', 'radloff1893']",cochrane1829_p00626
+altai_kalmyk,kazakh_kirghiz,co_mention,41,"['atkinson1858', 'atkinson1860', 'boulangier1891', 'carruthers1914', 'cochrane1829', 'cottrell1842', 'dobell1830', 'finsch1879', 'gerrare1903', 'grano1893', 'grondijs1922', 'kotzebue1802', 'kubalski1856', 'lansdell1883', 'latkinson1863', 'perryayscough1914', 'radloff1893', 'rosenberg1904', 'ujfalvy1879', 'vaydevaya1906']",atkinson1858_p02260
+altai_kalmyk,kazakh_kirghiz,coexistence_neighbourhood,1,['radloff1893'],radloff1893_p00880
+altai_kalmyk,kazakh_kirghiz,conflict,4,"['finsch1879', 'gerrare1903', 'radloff1893']",finsch1879_p00765
+altai_kalmyk,kazakh_kirghiz,intermarriage_mixing,1,['atkinson1860'],atkinson1860_p00300
+altai_kalmyk,kazakh_kirghiz,religious_mission,1,['debaye1897'],debaye1897_p00168
+altai_kalmyk,kazakh_kirghiz,trade_exchange,3,"['atkinson1860', 'cochrane1829', 'gerrare1903']",atkinson1860_p01032
+altai_kalmyk,khanty,co_mention,1,['boulangier1891'],boulangier1891_p02244
+altai_kalmyk,manchu,co_mention,1,['finsch1879'],finsch1879_p01081
+altai_kalmyk,mongol,co_mention,10,"['carruthers1914', 'cottrell1842', 'dobell1830', 'grondijs1922', 'hansteen1857', 'joest1883', 'michie1864', 'radloff1893']",carruthers1914_p00792
+altai_kalmyk,mongol,trade_exchange,2,"['michie1864', 'ronaldshay1904']",michie1864_p00714
+altai_kalmyk,natives_generic,co_mention,1,['rosenberg1904'],rosenberg1904_p01038
+altai_kalmyk,natives_generic,trade_exchange,1,['atkinson1860'],atkinson1860_p02494
+altai_kalmyk,russian,administration_tribute,1,['atkinson1858'],atkinson1858_p01677
+altai_kalmyk,russian,co_mention,9,"['atkinson1858', 'finsch1879', 'grano1893', 'hansteen1857', 'kotzebue1802', 'radloff1893', 'turner1905']",atkinson1858_p01674
+altai_kalmyk,russian,coexistence_neighbourhood,1,['radloff1893'],radloff1893_p00880
+altai_kalmyk,russian,conflict,1,['gerrare1903'],gerrare1903_p00666
+altai_kalmyk,russian,trade_exchange,1,['gerrare1903'],gerrare1903_p00666
+altai_kalmyk,sakha,co_mention,1,['lansdell1883'],lansdell1883_p00258
+altai_kalmyk,siberian_tatar,administration_tribute,1,['atkinson1858'],atkinson1858_p01491
+altai_kalmyk,siberian_tatar,co_mention,14,"['atkinson1858', 'atkinson1860', 'cottrell1842', 'finsch1879', 'grano1893', 'kotzebue1802', 'kubalski1856', 'lansdell1883', 'michie1864', 'radloff1893']",atkinson1858_p01491
+altai_kalmyk,siberian_tatar,intermarriage_mixing,1,['atkinson1860'],atkinson1860_p00300
+altai_kalmyk,siberian_tatar,labour_service,2,"['cottrell1842', 'ossendowski1922']",cottrell1842_p00701
+altai_kalmyk,siberian_tatar,religious_mission,1,['debaye1897'],debaye1897_p00168
+altai_kalmyk,sibiriak,administration_tribute,1,['colquhoun1900'],colquhoun1900_p00341
+altai_kalmyk,volga_peoples,co_mention,4,"['boulangier1891', 'gerrare1903', 'grondijs1922', 'vaydevaya1906']",boulangier1891_p02244
+buryat,chinese,co_mention,10,"['dewindt1903', 'digby1928', 'gerrare1903', 'heller1930', 'lansdell1883', 'meignan1877', 'scarfoglio1909', 'vaydevaya1906', 'wenyon1896']",dewindt1903_p00049
+buryat,chinese,trade_exchange,1,['legras1899'],legras1899_p00822
+buryat,chukchi,co_mention,1,['gsimpson1847'],gsimpson1847_p01160
+buryat,cossack,administration_tribute,1,['lansdell1883'],lansdell1883_p00938
+buryat,cossack,co_mention,9,"['boulangier1891', 'carruthers1914', 'gowing1889', 'latkinson1863', 'mpprice1912', 'perryayscough1914']",boulangier1891_p00871
+buryat,cossack,coexistence_neighbourhood,1,['latkinson1863'],latkinson1863_p01423
+buryat,cossack,conflict,1,['boulangier1891'],boulangier1891_p00882
+buryat,cossack,intermarriage_mixing,2,"['gowing1889', 'lansdell1883']",gowing1889_p00551
+buryat,cossack,labour_service,1,['erman1833'],erman1833_p07265
+buryat,cossack,trade_exchange,4,"['boulangier1891', 'erman1833', 'gerrare1903', 'gowing1889']",boulangier1891_p00882
+buryat,evenki_even,administration_tribute,1,['carruthers1914'],carruthers1914_p00781
+buryat,evenki_even,assimilation,1,['carruthers1914'],carruthers1914_p00781
+buryat,evenki_even,co_mention,30,"['atkinson1860', 'bordeaux1904', 'boulangier1891', 'carruthers1914', 'colquhoun1900', 'cotteau1885', 'cottrell1842', 'dewindt1889', 'digby1928', 'erman1833', 'gsimpson1847', 'harrison1910', 'heller1930', 'lansdell1883', 'meakin1901', 'meignan1877', 'muller1882', 'nansen1914', 'patursson1901', 'simpson1898', 'vaydevaya1906']",atkinson1860_p02079
+buryat,evenki_even,coexistence_neighbourhood,2,"['carruthers1914', 'sheepshanks1903']",carruthers1914_p00781
+buryat,evenki_even,trade_exchange,1,['carruthers1914'],carruthers1914_p00781
+buryat,exiles,co_mention,10,"['cottrell1842', 'dewindt1889', 'fraser1902', 'harrison1910', 'hill1854', 'lansdell1883', 'niemojowski1883', 'patursson1901']",cottrell1842_p00917
+buryat,itelmen_kamchadal,co_mention,1,['whyte1871'],whyte1871_p00670
+buryat,jew,co_mention,2,"['heller1930', 'lansdell1883']",heller1930_p00424
+buryat,kamas,coexistence_neighbourhood,1,['radloff1893'],radloff1893_p00964
+buryat,kazakh_kirghiz,co_mention,11,"['boulangier1891', 'cottrell1842', 'gsimpson1847', 'harrison1910', 'heller1930', 'jefferson1897', 'meignan1877', 'pistor1905']",boulangier1891_p01616
+buryat,kazakh_kirghiz,coexistence_neighbourhood,1,['lansdell1883'],lansdell1883_p01781
+buryat,kazakh_kirghiz,religious_mission,1,['lansdell1883'],lansdell1883_p01781
+buryat,khanty,co_mention,5,"['colquhoun1900', 'heller1930', 'patursson1901']",colquhoun1900_p00147
+buryat,khanty,coexistence_neighbourhood,1,['sheepshanks1903'],sheepshanks1903_p00305
+buryat,korean,co_mention,1,['harrison1910'],harrison1910_p00478
+buryat,koryak,co_mention,1,['dewindt1889'],dewindt1889_p00680
+buryat,manchu,administration_tribute,2,"['colquhoun1900', 'harrison1910']",colquhoun1900_p00095
+buryat,manchu,co_mention,5,"['digby1928', 'lansdell1883', 'meignan1877']",digby1928_p00230
+buryat,manchu,coexistence_neighbourhood,1,['harrison1910'],harrison1910_p00255
+buryat,manchu,religious_mission,1,['hill1854'],hill1854_p02473
+buryat,mongol,administration_tribute,5,"['colquhoun1900', 'digby1928', 'gsimpson1847', 'harrison1910', 'michie1864']",colquhoun1900_p00095
+buryat,mongol,co_mention,38,"['boulangier1891', 'carruthers1914', 'castren1856', 'cottrell1842', 'dewindt1889', 'digby1928', 'erman1833', 'gerrare1903', 'hawes1903', 'heller1930', 'lansdell1883', 'leroybeaulieu1900', 'meignan1877', 'michie1864', 'mpprice1912', 'nansen1914', 'nansen1914_no', 'ossendowski1922', 'perryayscough1914', 'pistor1905', 'radloff1893', 'ready1904', 'wenyon1896', 'whyte1871']",boulangier1891_p00871
+buryat,mongol,coexistence_neighbourhood,6,"['castren1856', 'dewindt1889', 'gsimpson1847', 'harrison1910', 'michie1864', 'wenyon1896']",castren1856_p01669
+buryat,mongol,conflict,2,"['atkinson1860', 'radloff1893']",atkinson1860_p02044
+buryat,mongol,exploitation,1,['perryayscough1914'],perryayscough1914_p00620
+buryat,mongol,labour_service,1,['michie1864'],michie1864_p00557
+buryat,mongol,trade_exchange,3,"['digby1928', 'gerrare1903', 'gsimpson1847']",digby1928_p00443
+buryat,natives_generic,co_mention,16,"['bordeaux1904', 'dewindt1889', 'digby1928', 'eden1879', 'gsimpson1847', 'harrison1910', 'hill1854', 'legras1899', 'leroybeaulieu1900', 'meakin1901', 'meignan1877', 'niemojowski1883', 'stadling1901']",bordeaux1904_p00445
+buryat,natives_generic,exploitation,1,['boulangier1891'],boulangier1891_p02692
+buryat,nenets,co_mention,1,['patursson1901'],patursson1901_p00307
+buryat,nivkh,co_mention,1,['lansdell1883'],lansdell1883_p00315
+buryat,pereselentsy,administration_tribute,1,['gsimpson1847'],gsimpson1847_p01307
+buryat,pereselentsy,assimilation,1,['stadling1901'],stadling1901_p00236
+buryat,pereselentsy,co_mention,5,"['fraser1902', 'harrison1910', 'legras1899']",fraser1902_p01365
+buryat,pereselentsy,coexistence_neighbourhood,1,['wenyon1896'],wenyon1896_p00478
+buryat,pole,co_mention,1,['harrison1910'],harrison1910_p00478
+buryat,russian,administration_tribute,4,"['colquhoun1900', 'cottrell1842', 'michie1864', 'stadling1901']",colquhoun1900_p00095
+buryat,russian,co_mention,17,"['castren1856', 'cotteau1885', 'digby1928', 'harrison1910', 'hill1854', 'lansdell1883', 'sheepshanks1903', 'stadling1901']",castren1856_p01603
+buryat,russian,coexistence_neighbourhood,1,['lansdell1883'],lansdell1883_p01781
+buryat,russian,exploitation,1,['perryayscough1914'],perryayscough1914_p00620
+buryat,russian,intermarriage_mixing,2,"['cottrell1842', 'michie1864']",cottrell1842_p00923
+buryat,russian,labour_service,1,['lansdell1883'],lansdell1883_p01212
+buryat,russian,religious_mission,2,"['holman1825', 'lansdell1883']",holman1825_p02198
+buryat,sakha,administration_tribute,1,['dewindt1889'],dewindt1889_p00682
+buryat,sakha,assimilation,1,['stadling1901'],stadling1901_p00236
+buryat,sakha,co_mention,18,"['boulangier1891', 'colquhoun1900', 'cotteau1885', 'dewindt1889', 'dewindt1892', 'digby1928', 'eden1879', 'gsimpson1847', 'heller1930', 'lansdell1883', 'niemojowski1883', 'patursson1901', 'simpson1898', 'stadling1901']",boulangier1891_p00871
+buryat,samoyedic,administration_tribute,1,['carruthers1914'],carruthers1914_p00781
+buryat,samoyedic,assimilation,1,['carruthers1914'],carruthers1914_p00781
+buryat,samoyedic,co_mention,5,"['colquhoun1900', 'heller1930', 'jefferson1897', 'meignan1877']",colquhoun1900_p00147
+buryat,samoyedic,coexistence_neighbourhood,2,"['carruthers1914', 'sheepshanks1903']",carruthers1914_p00781
+buryat,samoyedic,trade_exchange,1,['carruthers1914'],carruthers1914_p00781
+buryat,siberian_tatar,administration_tribute,2,"['carruthers1914', 'michie1864']",carruthers1914_p00683
+buryat,siberian_tatar,co_mention,13,"['carruthers1914', 'castren1856', 'eden1879', 'harrison1910', 'heller1930', 'hill1854', 'lansdell1883', 'michie1864', 'niemojowski1883', 'patursson1901', 'pistor1905']",carruthers1914_p00724
+buryat,siberian_tatar,religious_mission,1,['wenyon1896'],wenyon1896_p00653
+buryat,siberian_tatar,trade_exchange,1,['carruthers1914'],carruthers1914_p00683
+buryat,sibiriak,administration_tribute,2,"['carruthers1914', 'colquhoun1900']",carruthers1914_p00683
+buryat,sibiriak,co_mention,2,['hill1854'],hill1854_p02692
+buryat,sibiriak,trade_exchange,1,['carruthers1914'],carruthers1914_p00683
+buryat,tuvan,co_mention,4,"['carruthers1914', 'castren1856']",carruthers1914_p00724
+buryat,volga_peoples,co_mention,1,['jefferson1897'],jefferson1897_p00116
+chinese,cossack,co_mention,27,"['atkinson1860', 'colquhoun1900', 'digby1928', 'fraser1902', 'gerrare1903', 'grondijs1922', 'harrison1910', 'joest1883', 'legras1899', 'mpprice1912', 'nansen1914', 'nansen1914_no', 'norman1902', 'pistor1905', 'rose1837', 'rosenberg1904', 'tytgat1901']",atkinson1860_p02160
+chinese,cossack,conflict,1,['nansen1914'],nansen1914_p01664
+chinese,cossack,labour_service,3,"['dobell1830', 'nansen1914']",dobell1830_p00828
+chinese,cossack,trade_exchange,1,['mpprice1912'],mpprice1912_p00740
+chinese,evenki_even,co_mention,13,"['atkinson1860', 'bordeaux1904', 'cochrane1829', 'colquhoun1900', 'heller1930', 'kubalski1856', 'lansdell1883', 'maynard1859', 'meignan1877', 'vaydevaya1906']",atkinson1860_p02191
+chinese,evenki_even,trade_exchange,1,['lansdell1883'],lansdell1883_p02054
+chinese,exiles,co_mention,6,"['atkinson1860', 'dwinger1930', 'erman1833', 'lansdell1883', 'leroybeaulieu1900']",atkinson1860_p05599
+chinese,exiles,labour_service,1,['debaye1897'],debaye1897_p00198
+chinese,finn_estonian,co_mention,1,['castren1856'],castren1856_p00734
+chinese,finn_estonian,conflict,1,['lansdell1883'],lansdell1883_p02200
+chinese,finn_estonian,exploitation,1,['castren1856'],castren1856_p00537
+chinese,finn_estonian,trade_exchange,1,['lansdell1883'],lansdell1883_p02200
+chinese,german,trade_exchange,1,['colquhoun1900'],colquhoun1900_p00346
+chinese,itelmen_kamchadal,co_mention,2,"['bergman1927', 'maynard1859']",bergman1927_p00457
+chinese,japanese,co_mention,9,"['bordeaux1904', 'joest1883', 'legras1899', 'leroybeaulieu1900', 'meignan1877']",bordeaux1904_p00704
+chinese,japanese,coexistence_neighbourhood,1,['nansen1914'],nansen1914_p01656
+chinese,japanese,conflict,2,"['bergman1927', 'harrison1910']",bergman1927_p00171
+chinese,japanese,labour_service,4,"['bergman1927', 'legras1899', 'leroybeaulieu1900', 'meakin1901']",bergman1927_p00171
+chinese,japanese,trade_exchange,4,"['bergman1927', 'cotteau1885', 'leroybeaulieu1900', 'maynard1859']",bergman1927_p00171
+chinese,jew,assimilation,1,['legras1899'],legras1899_p01065
+chinese,jew,co_mention,7,"['heller1930', 'joest1883', 'michie1864', 'reid1899']",heller1930_p00424
+chinese,jew,conflict,1,['joest1883'],joest1883_p00730
+chinese,jew,labour_service,1,['debaye1897'],debaye1897_p00198
+chinese,jew,trade_exchange,2,"['joest1883', 'leroybeaulieu1900']",joest1883_p00730
+chinese,kamas,co_mention,1,['radloff1893'],radloff1893_p00910
+chinese,kazakh_kirghiz,co_mention,11,"['atkinson1860', 'finsch1879', 'heller1930', 'meignan1877', 'nansen1914_no', 'radloff1893', 'scarfoglio1909', 'ujfalvy1879']",atkinson1860_p02447
+chinese,kazakh_kirghiz,coexistence_neighbourhood,2,"['finsch1879', 'radloff1893']",finsch1879_p00688
+chinese,ket,co_mention,1,['radloff1893'],radloff1893_p00553
+chinese,khanty,co_mention,1,['heller1930'],heller1930_p00424
+chinese,korean,administration_tribute,1,['fraser1902'],fraser1902_p01458
+chinese,korean,co_mention,24,"['bergman1927', 'bordeaux1904', 'cotteau1885', 'fraser1902', 'gerrare1903', 'hawes1903', 'joest1883', 'lansdell1883', 'legras1899', 'leroybeaulieu1900', 'nansen1914']",bergman1927_p00312
+chinese,korean,coexistence_neighbourhood,1,['nansen1914'],nansen1914_p01656
+chinese,korean,labour_service,2,"['fraser1902', 'nansen1914']",fraser1902_p01458
+chinese,korean,trade_exchange,4,"['cotteau1885', 'dewindt1896', 'leroybeaulieu1900', 'wenyon1896']",cotteau1885_p01348
+chinese,koryak,co_mention,1,['maynard1859'],maynard1859_p00544
+chinese,manchu,administration_tribute,1,['lansdell1883'],lansdell1883_p01866
+chinese,manchu,co_mention,10,"['colquhoun1900', 'hawes1903', 'lansdell1883', 'meignan1877', 'nansen1914']",colquhoun1900_p00601
+chinese,manchu,labour_service,1,['hawes1903'],hawes1903_p01020
+chinese,manchu,trade_exchange,1,['lansdell1883'],lansdell1883_p02054
+chinese,mongol,administration_tribute,8,"['carruthers1914', 'mpprice1912', 'ossendowski1922', 'perryayscough1914', 'reid1899']",carruthers1914_p02329
+chinese,mongol,co_mention,27,"['boulangier1891', 'colquhoun1900', 'dewindt1889', 'digby1928', 'erman1833', 'gerrare1903', 'grondijs1922', 'heller1930', 'maynard1859', 'meignan1877', 'perryayscough1914', 'pistor1905', 'ready1904', 'reid1899', 'scarfoglio1909', 'tilley1861', 'ward1920', 'whyte1871']",boulangier1891_p02218
+chinese,mongol,coexistence_neighbourhood,1,['sheepshanks1903'],sheepshanks1903_p00305
+chinese,mongol,conflict,3,"['erman1833', 'gerrare1903', 'joest1883']",erman1833_p02181
+chinese,mongol,labour_service,5,"['cochrane1829', 'meignan1877', 'perryayscough1914']",cochrane1829_p01503
+chinese,mongol,trade_exchange,6,"['carruthers1914', 'etherton1911', 'mpprice1912', 'perryayscough1914', 'whyte1871']",carruthers1914_p00970
+chinese,nanai_amur,co_mention,5,"['colquhoun1900', 'gaunt1919', 'hawes1903', 'lansdell1883']",colquhoun1900_p00267
+chinese,natives_generic,co_mention,5,"['drei1925', 'gaunt1919', 'gerrare1903', 'lansdell1883', 'leroybeaulieu1900']",drei1925_p01302
+chinese,natives_generic,coexistence_neighbourhood,1,['nansen1914'],nansen1914_p01590
+chinese,natives_generic,trade_exchange,2,"['gerrare1903', 'leroybeaulieu1900']",gerrare1903_p00945
+chinese,nivkh,co_mention,6,"['gaunt1919', 'gerrare1903', 'hawes1903', 'lansdell1883']",gaunt1919_p00584
+chinese,nivkh,trade_exchange,1,['tronson1859'],tronson1859_p00978
+chinese,pereselentsy,co_mention,8,"['boulangier1891', 'carruthers1914', 'nansen1914', 'nansen1914_no', 'radloff1893', 'rosenberg1904', 'tilley1861']",boulangier1891_p02892
+chinese,pereselentsy,trade_exchange,1,['wenyon1896'],wenyon1896_p00289
+chinese,pole,administration_tribute,1,['michie1864'],michie1864_p00793
+chinese,pole,labour_service,1,['debaye1897'],debaye1897_p00198
+chinese,russian,administration_tribute,4,"['fraser1902', 'michie1864', 'ossendowski1922', 'perryayscough1914']",fraser1902_p01458
+chinese,russian,co_mention,65,"['atkinson1860', 'bergman1927', 'bordeaux1904', 'boulangier1891', 'cochrane1829', 'colquhoun1900', 'cotteau1885', 'cottrell1842', 'eden1879', 'erman1833', 'finsch1879', 'fraser1902', 'gaunt1919', 'gerrare1903', 'gsimpson1847', 'hansteen1857', 'harrison1910', 'heller1930', 'hill1854', 'joest1883', 'kubalski1856', 'lansdell1883', 'legras1899', 'leroybeaulieu1900', 'maynard1859', 'meignan1877', 'michie1864', 'nansen1914', 'nansen1914_no', 'ossendowski1922', 'perryayscough1914', 'rose1837', 'rosenberg1904', 'turner1905', 'tytgat1901', 'wenyon1896']",atkinson1860_p02226
+chinese,russian,coexistence_neighbourhood,3,"['hansteen1857', 'harrison1910', 'lansdell1883']",hansteen1857_p00667
+chinese,russian,conflict,8,"['bergman1927', 'cotteau1885', 'erman1833', 'gsimpson1847', 'hawes1903', 'joest1883', 'michie1864']",bergman1927_p00171
+chinese,russian,exploitation,2,['lansdell1883'],lansdell1883_p01194
+chinese,russian,labour_service,7,"['bergman1927', 'fraser1902', 'gaunt1919', 'gerrare1903', 'harrison1910', 'hawes1903', 'meakin1901']",bergman1927_p00171
+chinese,russian,religious_mission,1,['gerrare1903'],gerrare1903_p01040
+chinese,russian,trade_exchange,16,"['bergman1927', 'cottrell1842', 'dewindt1896', 'dobell1830', 'erman1833', 'gerrare1903', 'harrison1910', 'hill1854', 'joest1883', 'lansdell1883', 'leroybeaulieu1900', 'mpprice1912', 'swayne1904']",bergman1927_p00171
+chinese,sakha,co_mention,2,"['colquhoun1900', 'heller1930']",colquhoun1900_p00267
+chinese,sakha,conflict,1,['muller1882'],muller1882_p00622
+chinese,samoyedic,co_mention,4,"['heller1930', 'meignan1877', 'radloff1893']",heller1930_p00061
+chinese,siberian_tatar,administration_tribute,1,['michie1864'],michie1864_p00793
+chinese,siberian_tatar,co_mention,8,"['bergman1927', 'grondijs1922', 'heller1930', 'joest1883', 'radloff1893', 'ward1920']",bergman1927_p00374
+chinese,siberian_tatar,labour_service,1,['debaye1897'],debaye1897_p00198
+chinese,siberian_tatar,trade_exchange,4,"['atkinson1860', 'carruthers1914', 'latkinson1863', 'mpprice1912']",atkinson1860_p01880
+chinese,sibiriak,co_mention,4,"['cotteau1885', 'cottrell1842', 'lansdell1883', 'scarfoglio1909']",cotteau1885_p01280
+chinese,sibiriak,exploitation,1,['meignan1877'],meignan1877_p00597
+chinese,sibiriak,trade_exchange,1,['lansdell1883'],lansdell1883_p01145
+chinese,tuvan,administration_tribute,2,"['carruthers1914', 'ossendowski1922']",carruthers1914_p00805
+chinese,tuvan,co_mention,2,['castren1856'],castren1856_p01251
+chinese,tuvan,trade_exchange,3,['carruthers1914'],carruthers1914_p00678
+chinese,volga_peoples,co_mention,1,['grondijs1922'],grondijs1922_p02451
+chukchi,cossack,administration_tribute,1,['gsimpson1847'],gsimpson1847_p00722
+chukchi,cossack,co_mention,2,"['cochrane1829', 'cottrell1842']",cochrane1829_p00911
+chukchi,cossack,labour_service,1,['gsimpson1847'],gsimpson1847_p00722
+chukchi,cossack,trade_exchange,2,"['dewindt1903', 'gsimpson1847']",dewindt1903_p00418
+chukchi,evenki_even,co_mention,6,"['cochrane1829', 'gsimpson1847', 'harrison1910', 'hawes1903', 'lansdell1883', 'simpson1898']",cochrane1829_p00847
+chukchi,evenki_even,coexistence_neighbourhood,1,['erman1833'],erman1833_p03372
+chukchi,evenki_even,labour_service,2,"['cochrane1829', 'cottrell1842']",cochrane1829_p00873
+chukchi,evenki_even,trade_exchange,3,"['bergman1927', 'erman1833', 'gsimpson1847']",bergman1927_p00436
+chukchi,itelmen_kamchadal,co_mention,2,"['harrison1910', 'simpson1898']",harrison1910_p00310
+chukchi,itelmen_kamchadal,coexistence_neighbourhood,1,['nansen1914'],nansen1914_p01608
+chukchi,japanese,trade_exchange,1,['maynard1859'],maynard1859_p00411
+chukchi,ket,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+chukchi,khanty,co_mention,3,"['heller1930', 'niemojowski1883', 'sommier1885']",heller1930_p00423
+chukchi,korean,co_mention,1,['harrison1910'],harrison1910_p00310
+chukchi,koryak,administration_tribute,1,['maynard1859'],maynard1859_p00501
+chukchi,koryak,co_mention,17,"['cochrane1829', 'dewindt1889', 'eden1879', 'harrison1910', 'hawes1903', 'lansdell1883', 'maynard1859', 'simpson1898']",cochrane1829_p00722
+chukchi,koryak,coexistence_neighbourhood,2,"['cochrane1829', 'digby1928']",cochrane1829_p01166
+chukchi,koryak,conflict,1,['cochrane1829'],cochrane1829_p01166
+chukchi,koryak,trade_exchange,4,"['bergman1927', 'cochrane1829', 'guillemard1889', 'maynard1859']",bergman1927_p00436
+chukchi,manchu,co_mention,1,['simpson1898'],simpson1898_p00145
+chukchi,nanai_amur,coexistence_neighbourhood,1,['nansen1914'],nansen1914_p01608
+chukchi,natives_generic,co_mention,7,"['dewindt1903', 'gsimpson1847', 'hooper1853', 'niedieck1909']",dewindt1903_p00333
+chukchi,natives_generic,coexistence_neighbourhood,2,['dewindt1903'],dewindt1903_p00143
+chukchi,natives_generic,labour_service,1,['dewindt1903'],dewindt1903_p00286
+chukchi,nivkh,co_mention,1,['harrison1910'],harrison1910_p00310
+chukchi,nivkh,coexistence_neighbourhood,1,['nansen1914'],nansen1914_p01608
+chukchi,russian,administration_tribute,2,"['cochrane1829', 'niedieck1909']",cochrane1829_p00864
+chukchi,russian,co_mention,11,"['cochrane1829', 'erman1833', 'harrison1910', 'hill1854', 'lansdell1883']",cochrane1829_p00847
+chukchi,russian,coexistence_neighbourhood,1,['cochrane1829'],cochrane1829_p01166
+chukchi,russian,conflict,1,['cochrane1829'],cochrane1829_p01166
+chukchi,russian,labour_service,2,"['cochrane1829', 'dewindt1903']",cochrane1829_p00861
+chukchi,russian,trade_exchange,4,['cochrane1829'],cochrane1829_p00864
+chukchi,sakha,co_mention,10,"['cochrane1829', 'dewindt1903', 'eden1879', 'gsimpson1847', 'lansdell1883', 'muller1882']",cochrane1829_p00722
+chukchi,sakha,coexistence_neighbourhood,1,['dewindt1903'],dewindt1903_p00143
+chukchi,sakha,labour_service,2,"['cochrane1829', 'cottrell1842']",cochrane1829_p00873
+chukchi,sakha,trade_exchange,1,['gsimpson1847'],gsimpson1847_p01089
+chukchi,samoyedic,co_mention,1,['sommier1885'],sommier1885_p01722
+chukchi,siberian_tatar,co_mention,1,['cochrane1829'],cochrane1829_p00847
+chukchi,sibiriak,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+chukchi,yukaghir,co_mention,5,"['cochrane1829', 'eden1879', 'simpson1898']",cochrane1829_p00722
+chukchi,yukaghir,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+chukchi,yukaghir,labour_service,2,"['cochrane1829', 'cottrell1842']",cochrane1829_p00873
+cossack,czech_slovak,administration_tribute,1,['ward1920'],ward1920_p00052
+cossack,czech_slovak,co_mention,4,"['grondijs1922', 'ward1920']",grondijs1922_p02485
+cossack,czech_slovak,coexistence_neighbourhood,1,['ward1920'],ward1920_p00398
+cossack,czech_slovak,conflict,3,['ward1920'],ward1920_p00087
+cossack,evenki_even,administration_tribute,3,"['cochrane1829', 'cottrell1842', 'muller1882']",cochrane1829_p00706
+cossack,evenki_even,co_mention,8,"['atkinson1860', 'boulangier1891', 'carruthers1914', 'cochrane1829', 'cottrell1842', 'gsimpson1847', 'mpprice1912']",atkinson1860_p02171
+cossack,evenki_even,coexistence_neighbourhood,1,['erman1833'],erman1833_p04996
+cossack,evenki_even,trade_exchange,2,"['atkinson1860', 'lansdell1883']",atkinson1860_p02186
+cossack,exiles,administration_tribute,4,"['dewindt1896', 'gerrare1903', 'jefferson1897', 'joest1883']",dewindt1896_p00433
+cossack,exiles,co_mention,28,"['atkinson1860', 'barzini1908', 'cotteau1885', 'dewindt1889', 'dewindt1892', 'dewindt1903', 'dobell1830', 'gsimpson1847', 'hansteen1857', 'jefferson1896', 'lansdell1883', 'michie1864', 'mpprice1912', 'nansen1914', 'nansen1914_no', 'niemojowski1883', 'rosenberg1904', 'svinhufvud1928']",atkinson1860_p02136
+cossack,exiles,coexistence_neighbourhood,1,['dewindt1889'],dewindt1889_p00630
+cossack,exiles,conflict,5,"['barzini1908', 'gerrare1903', 'grondijs1922', 'jefferson1897', 'joest1883']",barzini1908_p01444
+cossack,exiles,exploitation,1,['holman1825'],holman1825_p02031
+cossack,exiles,labour_service,1,['michie1864'],michie1864_p00615
+cossack,exiles,trade_exchange,9,"['gerrare1903', 'gowing1889', 'hill1854', 'holman1825', 'joest1883', 'lansdell1883', 'meakin1901']",gerrare1903_p00649
+cossack,finn_estonian,intermarriage_mixing,2,"['mpprice1912', 'tronson1859']",mpprice1912_p00503
+cossack,japanese,co_mention,3,"['grondijs1922', 'joest1883']",grondijs1922_p02609
+cossack,japanese,conflict,1,['grondijs1922'],grondijs1922_p03126
+cossack,japanese,labour_service,1,['grondijs1922'],grondijs1922_p03126
+cossack,jew,co_mention,1,['felinska1854'],felinska1854_p00576
+cossack,kazakh_kirghiz,administration_tribute,4,"['atkinson1860', 'boulangier1891', 'finsch1879', 'jefferson1897']",atkinson1860_p05573
+cossack,kazakh_kirghiz,co_mention,70,"['atkinson1858', 'atkinson1860', 'castren1856', 'colquhoun1900', 'finsch1879', 'grondijs1922', 'hansteen1857', 'jefferson1896', 'jefferson1897', 'latkinson1863', 'lethbridge1915', 'piotrowski1863', 'radloff1893', 'rose1837', 'sommier1885', 'turner1905']",atkinson1858_p01163
+cossack,kazakh_kirghiz,coexistence_neighbourhood,2,"['jefferson1896', 'radloff1893']",jefferson1896_p00642
+cossack,kazakh_kirghiz,conflict,17,"['atkinson1858', 'atkinson1860', 'cottrell1842', 'finsch1879', 'gerrare1903', 'jefferson1897', 'michie1864', 'mpprice1912', 'radloff1893']",atkinson1858_p01125
+cossack,kazakh_kirghiz,exploitation,1,['atkinson1858'],atkinson1858_p01125
+cossack,kazakh_kirghiz,intermarriage_mixing,4,"['atkinson1860', 'jefferson1896', 'piotrowski1863']",atkinson1860_p00300
+cossack,kazakh_kirghiz,labour_service,5,"['atkinson1858', 'finsch1879', 'hansteen1857']",atkinson1858_p01329
+cossack,kazakh_kirghiz,religious_mission,1,['debaye1897'],debaye1897_p00168
+cossack,kazakh_kirghiz,trade_exchange,9,"['atkinson1858', 'atkinson1860', 'boulangier1891', 'cottrell1842', 'gerrare1903', 'radloff1893', 'sommier1885']",atkinson1858_p01320
+cossack,khanty,administration_tribute,3,['sommier1885'],sommier1885_p00615
+cossack,khanty,co_mention,26,"['castren1856', 'cottrell1842', 'eden1879', 'felinska1854', 'radloff1893', 'sommier1885']",castren1856_p00544
+cossack,khanty,conflict,3,"['castren1856', 'erman1833']",castren1856_p00544
+cossack,khanty,exploitation,1,['sommier1885'],sommier1885_p02664
+cossack,khanty,labour_service,2,['sommier1885'],sommier1885_p02072
+cossack,khanty,trade_exchange,4,"['erman1833', 'sommier1885']",erman1833_p02018
+cossack,korean,co_mention,1,['joest1883'],joest1883_p00041
+cossack,koryak,co_mention,1,['eden1879'],eden1879_p00397
+cossack,koryak,coexistence_neighbourhood,1,['cochrane1829'],cochrane1829_p01162
+cossack,manchu,co_mention,1,['nansen1914'],nansen1914_p01638
+cossack,manchu,conflict,1,['joest1883'],joest1883_p00422
+cossack,manchu,trade_exchange,1,['lansdell1883'],lansdell1883_p01664
+cossack,mongol,administration_tribute,1,['radloff1893'],radloff1893_p00745
+cossack,mongol,co_mention,12,"['boulangier1891', 'grondijs1922', 'hansteen1857', 'mpprice1912', 'perryayscough1914', 'price1892']",boulangier1891_p00871
+cossack,mongol,conflict,2,"['radloff1893', 'whyte1871']",radloff1893_p00745
+cossack,mongol,trade_exchange,2,"['dewindt1889', 'gerrare1903']",dewindt1889_p00408
+cossack,nanai_amur,co_mention,4,"['atkinson1860', 'dewindt1896']",atkinson1860_p02179
+cossack,natives_generic,administration_tribute,4,"['boulangier1891', 'cochrane1829', 'leroybeaulieu1900', 'tronson1859']",boulangier1891_p00870
+cossack,natives_generic,co_mention,18,"['cottrell1842', 'dewindt1903', 'dobell1830', 'lansdell1883', 'nansen1914', 'patursson1901', 'rabot1894', 'radloff1893', 'rosenberg1904', 'sommier1885']",cottrell1842_p00843
+cossack,natives_generic,coexistence_neighbourhood,1,['eden1879'],eden1879_p00219
+cossack,natives_generic,conflict,1,['lansdell1883'],lansdell1883_p01674
+cossack,natives_generic,exploitation,2,"['boulangier1891', 'lansdell1883']",boulangier1891_p00870
+cossack,natives_generic,intermarriage_mixing,1,['mpprice1912'],mpprice1912_p00547
+cossack,natives_generic,labour_service,3,"['eden1879', 'gsimpson1847', 'sommier1885']",eden1879_p00219
+cossack,natives_generic,trade_exchange,2,"['meakin1901', 'sommier1885']",meakin1901_p00554
+cossack,old_believer,conflict,1,['joest1883'],joest1883_p00776
+cossack,old_believer,trade_exchange,1,['joest1883'],joest1883_p00776
+cossack,pereselentsy,administration_tribute,2,['gerrare1903'],gerrare1903_p00648
+cossack,pereselentsy,co_mention,36,"['barzini1908', 'bordeaux1904', 'boulangier1891', 'carruthers1914', 'colquhoun1900', 'cotteau1885', 'gerrare1903', 'grondijs1922', 'harrison1910', 'joest1883', 'lansdell1883', 'nansen1914', 'nansen1914_no', 'ossendowski1922', 'radloff1893', 'ronaldshay1904', 'rosenberg1904', 'stadling1901', 'tilley1861', 'turner1905']",barzini1908_p01607
+cossack,pereselentsy,conflict,3,"['barzini1908', 'gerrare1903', 'ossendowski1922']",barzini1908_p01444
+cossack,pereselentsy,intermarriage_mixing,1,['mpprice1912'],mpprice1912_p00547
+cossack,pereselentsy,trade_exchange,3,"['joest1883', 'meakin1901', 'nansen1914_no']",joest1883_p00425
+cossack,pole,co_mention,2,"['latkinson1863', 'patursson1901']",latkinson1863_p01470
+cossack,pole,intermarriage_mixing,1,['tronson1859'],tronson1859_p00627
+cossack,political_exiles,administration_tribute,1,['ward1920'],ward1920_p00324
+cossack,political_exiles,co_mention,3,"['dewindt1903', 'lansdell1883', 'nansen1914']",dewindt1903_p00153
+cossack,russian,administration_tribute,2,"['kubalski1856', 'sommier1885']",kubalski1856_p00052
+cossack,russian,co_mention,25,"['atkinson1860', 'barzini1908', 'bordeaux1904', 'castren1856', 'colquhoun1900', 'cottrell1842', 'eden1879', 'fraser1902', 'grondijs1922', 'hansteen1857', 'harrison1910', 'heller1930', 'hill1854', 'hprice1919', 'joest1883', 'latkinson1863', 'lethbridge1915', 'nansen1914_no', 'patursson1901', 'rose1837', 'rosenberg1904', 'sommier1885', 'turner1905']",atkinson1860_p02508
+cossack,russian,coexistence_neighbourhood,2,"['atkinson1858', 'lansdell1883']",atkinson1858_p01491
+cossack,russian,conflict,6,"['colquhoun1900', 'dewindt1892', 'finsch1879', 'fraser1902', 'gerrare1903', 'pistor1905']",colquhoun1900_p00633
+cossack,russian,exploitation,1,['colquhoun1900'],colquhoun1900_p00633
+cossack,russian,intermarriage_mixing,3,"['mpprice1912', 'norman1902', 'tronson1859']",mpprice1912_p00503
+cossack,russian,labour_service,1,['hansteen1857'],hansteen1857_p00662
+cossack,russian,religious_mission,1,['cochrane1829'],cochrane1829_p00864
+cossack,russian,trade_exchange,6,"['cochrane1829', 'dewindt1903', 'gerrare1903', 'heller1930', 'joest1883', 'mpprice1912']",cochrane1829_p00864
+cossack,sakha,administration_tribute,1,['gsimpson1847'],gsimpson1847_p00849
+cossack,sakha,co_mention,25,"['boulangier1891', 'cochrane1829', 'dewindt1903', 'dobell1830', 'eden1879', 'erman1833', 'gsimpson1847', 'heller1930', 'lansdell1883', 'marsden1892']",boulangier1891_p00871
+cossack,sakha,conflict,1,['cochrane1829'],cochrane1829_p01321
+cossack,sakha,intermarriage_mixing,2,['cochrane1829'],cochrane1829_p00925
+cossack,sakha,labour_service,5,"['cochrane1829', 'gsimpson1847', 'stadling1901']",cochrane1829_p00938
+cossack,sakha,religious_mission,1,['cochrane1829'],cochrane1829_p01010
+cossack,sakha,trade_exchange,1,['cochrane1829'],cochrane1829_p01314
+cossack,samoyedic,administration_tribute,2,['sommier1885'],sommier1885_p01650
+cossack,samoyedic,co_mention,7,"['heller1930', 'radloff1893', 'sommier1885']",heller1930_p00095
+cossack,samoyedic,conflict,1,['donner1915'],donner1915_p00124
+cossack,samoyedic,exploitation,1,['sommier1885'],sommier1885_p02664
+cossack,samoyedic,trade_exchange,2,"['donner1915', 'sommier1885']",donner1915_p00124
+cossack,siberian_tatar,administration_tribute,1,['sommier1885'],sommier1885_p00615
+cossack,siberian_tatar,co_mention,29,"['castren1856', 'cottrell1842', 'debaye1897', 'drei1925', 'eden1879', 'fell1916', 'finsch1879', 'grondijs1922', 'hansteen1857', 'kubalski1856', 'leroybeaulieu1900', 'mpprice1912', 'ossendowski1922', 'patursson1901', 'radloff1893', 'sommier1885', 'turner1905', 'ward1920']",castren1856_p01385
+cossack,siberian_tatar,coexistence_neighbourhood,1,['atkinson1858'],atkinson1858_p01491
+cossack,siberian_tatar,conflict,9,"['dewindt1892', 'mpprice1912', 'norman1902', 'radloff1893', 'ronaldshay1904', 'rose1837']",dewindt1892_p00530
+cossack,siberian_tatar,exploitation,1,['ronaldshay1904'],ronaldshay1904_p01162
+cossack,siberian_tatar,intermarriage_mixing,4,"['atkinson1860', 'mpprice1912', 'piotrowski1863']",atkinson1860_p00300
+cossack,siberian_tatar,labour_service,2,"['ossendowski1922', 'rose1837']",ossendowski1922_p00189
+cossack,siberian_tatar,religious_mission,1,['debaye1897'],debaye1897_p00168
+cossack,siberian_tatar,trade_exchange,3,"['grondijs1922', 'leroybeaulieu1900', 'patursson1901']",grondijs1922_p01130
+cossack,sibiriak,co_mention,1,['turner1905'],turner1905_p00187
+cossack,tuvan,co_mention,1,['ossendowski1922'],ossendowski1922_p00240
+cossack,tuvan,trade_exchange,1,['castren1856'],castren1856_p01423
+cossack,ukrainian,co_mention,1,['svinhufvud1928'],svinhufvud1928_p00498
+cossack,volga_peoples,co_mention,3,"['dewindt1892', 'grondijs1922']",dewindt1892_p01356
+cossack,volga_peoples,exploitation,1,['holman1825'],holman1825_p02031
+cossack,volga_peoples,trade_exchange,1,['holman1825'],holman1825_p02031
+czech_slovak,exiles,conflict,1,['grondijs1922'],grondijs1922_p02480
+czech_slovak,exiles,exploitation,1,['grondijs1922'],grondijs1922_p02475
+czech_slovak,exiles,trade_exchange,1,['grondijs1922'],grondijs1922_p02475
+czech_slovak,japanese,co_mention,4,['grondijs1922'],grondijs1922_p02441
+czech_slovak,pole,co_mention,1,['grondijs1922'],grondijs1922_p02441
+czech_slovak,pole,conflict,1,['grondijs1922'],grondijs1922_p02480
+czech_slovak,russian,co_mention,3,['grondijs1922'],grondijs1922_p03262
+evenki_even,exiles,co_mention,6,"['cottrell1842', 'donner1915', 'erman1833', 'hawes1903', 'joest1883', 'kubalski1856']",cottrell1842_p00917
+evenki_even,finn_estonian,co_mention,3,"['castren1856', 'hansteen1857']",castren1856_p00751
+evenki_even,itelmen_kamchadal,co_mention,12,"['bergman1927', 'boulangier1891', 'erman1833', 'harrison1910', 'simpson1898']",bergman1927_p00600
+evenki_even,itelmen_kamchadal,trade_exchange,1,['gerrare1903'],gerrare1903_p00628
+evenki_even,jew,co_mention,2,"['barzini1908', 'heller1930']",barzini1908_p01686
+evenki_even,kamas,co_mention,2,"['nansen1914', 'nansen1914_no']",nansen1914_no_p00704
+evenki_even,kazakh_kirghiz,co_mention,6,"['barzini1908', 'heller1930', 'meignan1877', 'patursson1901']",barzini1908_p01686
+evenki_even,ket,co_mention,3,"['castren1856', 'nansen1914']",castren1856_p01153
+evenki_even,ket,conflict,1,['nansen1914'],nansen1914_p01418
+evenki_even,ket,trade_exchange,1,['nansen1914'],nansen1914_p01622
+evenki_even,khanty,administration_tribute,3,"['castren1856', 'nansen1914', 'stadling1901']",castren1856_p00985
+evenki_even,khanty,assimilation,1,['niemojowski1883'],niemojowski1883_p00138
+evenki_even,khanty,co_mention,49,"['boulangier1891', 'castren1856', 'colquhoun1900', 'donner1915', 'drei1925', 'eden1879', 'erman1833', 'hansteen1857', 'haviland1915', 'heller1930', 'kubalski1856', 'lansdell1883', 'michie1864', 'muller1882', 'nansen1914', 'nansen1914_no', 'niemojowski1883', 'patursson1901', 'rosenberg1904', 'stadling1901', 'whyte1871']",boulangier1891_p00730
+evenki_even,khanty,coexistence_neighbourhood,2,"['donner1915', 'sheepshanks1903']",donner1915_p00279
+evenki_even,khanty,conflict,3,"['donner1915', 'erman1833']",donner1915_p00124
+evenki_even,khanty,trade_exchange,2,"['gerrare1903', 'heller1930']",gerrare1903_p00628
+evenki_even,korean,co_mention,6,"['bergman1927', 'bordeaux1904', 'gerrare1903', 'harrison1910', 'lansdell1883']",bergman1927_p00600
+evenki_even,koryak,co_mention,44,"['bergman1927', 'dewindt1889', 'digby1928', 'erman1833', 'guillemard1889', 'harrison1910', 'hawes1903', 'lansdell1883', 'maynard1859', 'simpson1898']",bergman1927_p00269
+evenki_even,koryak,conflict,1,['bergman1927'],bergman1927_p00681
+evenki_even,koryak,trade_exchange,2,['bergman1927'],bergman1927_p00436
+evenki_even,manchu,administration_tribute,1,['eden1879'],eden1879_p00080
+evenki_even,manchu,co_mention,15,"['castren1856', 'hawes1903', 'lansdell1883', 'meignan1877', 'mpprice1912', 'nansen1914', 'simpson1898']",castren1856_p00751
+evenki_even,manchu,exploitation,1,['lansdell1883'],lansdell1883_p02058
+evenki_even,manchu,religious_mission,1,['lansdell1883'],lansdell1883_p00723
+evenki_even,manchu,trade_exchange,1,['lansdell1883'],lansdell1883_p02054
+evenki_even,mongol,co_mention,18,"['boulangier1891', 'castren1856', 'donner1915', 'erman1833', 'gerrare1903', 'hawes1903', 'heller1930', 'meignan1877', 'nansen1914', 'nansen1914_no', 'stadling1901', 'wenyon1896']",boulangier1891_p00871
+evenki_even,nanai_amur,co_mention,20,"['atkinson1860', 'colquhoun1900', 'hawes1903', 'lansdell1883', 'nansen1914', 'simpson1898', 'wenyon1896']",atkinson1860_p02442
+evenki_even,nanai_amur,coexistence_neighbourhood,1,['hawes1903'],hawes1903_p01124
+evenki_even,nanai_amur,exploitation,1,['lansdell1883'],lansdell1883_p02058
+evenki_even,nanai_amur,intermarriage_mixing,1,['hawes1903'],hawes1903_p01124
+evenki_even,nanai_amur,trade_exchange,1,['atkinson1860'],atkinson1860_p02433
+evenki_even,natives_generic,administration_tribute,1,['dewindt1903'],dewindt1903_p00239
+evenki_even,natives_generic,co_mention,25,"['bordeaux1904', 'boulangier1891', 'digby1928', 'donner1915', 'gsimpson1847', 'hawes1903', 'lansdell1883', 'meakin1901', 'meignan1877', 'muller1882', 'nansen1914', 'rosenberg1904', 'stadling1901', 'wenyon1896']",bordeaux1904_p00445
+evenki_even,natives_generic,coexistence_neighbourhood,1,['lansdell1883'],lansdell1883_p01727
+evenki_even,natives_generic,trade_exchange,5,"['atkinson1860', 'bergman1927', 'hawes1903', 'lansdell1883', 'nansen1914']",atkinson1860_p02494
+evenki_even,nenets,administration_tribute,2,"['nansen1914', 'stadling1901']",nansen1914_p00708
+evenki_even,nenets,co_mention,7,"['donner1915', 'lansdell1883', 'nansen1914', 'nansen1914_no', 'patursson1901', 'rosenberg1904']",donner1915_p00270
+evenki_even,nenets,coexistence_neighbourhood,1,['donner1915'],donner1915_p00279
+evenki_even,nenets,conflict,1,['donner1915'],donner1915_p00268
+evenki_even,nenets,trade_exchange,1,['castren1856'],castren1856_p01168
+evenki_even,nivkh,co_mention,23,"['bordeaux1904', 'harrison1910', 'hawes1903', 'lansdell1883', 'nansen1914', 'simpson1898']",bordeaux1904_p00655
+evenki_even,nivkh,coexistence_neighbourhood,2,['hawes1903'],hawes1903_p01124
+evenki_even,nivkh,conflict,1,['hawes1903'],hawes1903_p01647
+evenki_even,nivkh,exploitation,1,['lansdell1883'],lansdell1883_p02058
+evenki_even,nivkh,intermarriage_mixing,1,['hawes1903'],hawes1903_p01124
+evenki_even,nivkh,religious_mission,1,['hawes1903'],hawes1903_p01646
+evenki_even,nivkh,trade_exchange,1,['hawes1903'],hawes1903_p01117
+evenki_even,pereselentsy,administration_tribute,1,['dewindt1903'],dewindt1903_p00239
+evenki_even,pereselentsy,conflict,1,['gowing1889'],gowing1889_p00289
+evenki_even,pereselentsy,labour_service,1,['gowing1889'],gowing1889_p00289
+evenki_even,pereselentsy,trade_exchange,1,['gowing1889'],gowing1889_p00289
+evenki_even,political_exiles,co_mention,1,['stadling1901'],stadling1901_p00412
+evenki_even,russian,administration_tribute,2,"['eden1879', 'nansen1914']",eden1879_p00080
+evenki_even,russian,co_mention,42,"['bergman1927', 'castren1856', 'cochrane1829', 'colquhoun1900', 'dewindt1889', 'dewindt1892', 'eden1879', 'erman1833', 'gsimpson1847', 'harrison1910', 'hawes1903', 'heller1930', 'kubalski1856', 'muller1882', 'nansen1914_no', 'patursson1901', 'rosenberg1904']",bergman1927_p00600
+evenki_even,russian,conflict,2,"['carruthers1914', 'erman1833']",carruthers1914_p00304
+evenki_even,russian,trade_exchange,3,['erman1833'],erman1833_p05431
+evenki_even,sakha,administration_tribute,3,"['cochrane1829', 'dewindt1903', 'nansen1914']",cochrane1829_p01043
+evenki_even,sakha,assimilation,1,['niemojowski1883'],niemojowski1883_p00138
+evenki_even,sakha,co_mention,57,"['bordeaux1904', 'boulangier1891', 'castren1856', 'cochrane1829', 'colquhoun1900', 'cotteau1885', 'dewindt1889', 'dewindt1892', 'dewindt1903', 'digby1928', 'eden1879', 'erman1833', 'gsimpson1847', 'hansteen1857', 'hawes1903', 'heller1930', 'hill1854', 'lansdell1883', 'muller1882', 'nansen1914', 'nansen1914_no', 'niemojowski1883', 'patursson1901', 'sommier1885', 'stadling1901']",bordeaux1904_p00952
+evenki_even,sakha,coexistence_neighbourhood,2,"['erman1833', 'stadling1901']",erman1833_p06940
+evenki_even,sakha,conflict,2,"['erman1833', 'muller1882']",erman1833_p06940
+evenki_even,sakha,intermarriage_mixing,1,['dewindt1903'],dewindt1903_p00292
+evenki_even,sakha,labour_service,3,"['bordeaux1904', 'cochrane1829', 'cottrell1842']",bordeaux1904_p00358
+evenki_even,sakha,religious_mission,1,['nansen1914'],nansen1914_p01136
+evenki_even,sakha,trade_exchange,5,"['donner1915', 'erman1833', 'gsimpson1847', 'lansdell1883']",donner1915_p00254
+evenki_even,samoyedic,administration_tribute,3,"['carruthers1914', 'castren1856', 'nansen1914']",carruthers1914_p00781
+evenki_even,samoyedic,assimilation,2,"['carruthers1914', 'donner1915']",carruthers1914_p00781
+evenki_even,samoyedic,co_mention,60,"['castren1856', 'colquhoun1900', 'digby1928', 'donner1915', 'erman1833', 'haviland1915', 'heller1930', 'meignan1877', 'muller1882', 'nansen1914', 'nansen1914_no', 'rosenberg1904']",castren1856_p00789
+evenki_even,samoyedic,coexistence_neighbourhood,5,"['carruthers1914', 'donner1915', 'nansen1914', 'sheepshanks1903', 'stadling1901']",carruthers1914_p00781
+evenki_even,samoyedic,conflict,2,"['erman1833', 'nansen1914']",erman1833_p07005
+evenki_even,samoyedic,exploitation,1,['heller1930'],heller1930_p00412
+evenki_even,samoyedic,intermarriage_mixing,1,['nansen1914'],nansen1914_p01235
+evenki_even,samoyedic,trade_exchange,7,"['carruthers1914', 'castren1856', 'donner1915', 'gerrare1903', 'heller1930', 'nansen1914']",carruthers1914_p00781
+evenki_even,selkup,administration_tribute,2,"['castren1856', 'nansen1914']",castren1856_p00985
+evenki_even,selkup,co_mention,3,"['donner1915', 'nansen1914']",donner1915_p00279
+evenki_even,siberian_tatar,administration_tribute,1,['eden1879'],eden1879_p00080
+evenki_even,siberian_tatar,assimilation,1,['niemojowski1883'],niemojowski1883_p00138
+evenki_even,siberian_tatar,co_mention,18,"['barzini1908', 'bergman1927', 'carruthers1914', 'castren1856', 'cochrane1829', 'gerrare1903', 'heller1930', 'kubalski1856', 'nansen1914', 'nansen1914_no', 'niemojowski1883', 'patursson1901', 'whyte1871']",barzini1908_p01686
+evenki_even,siberian_tatar,coexistence_neighbourhood,1,['niemojowski1883'],niemojowski1883_p00381
+evenki_even,siberian_tatar,conflict,2,"['carruthers1914', 'donner1915']",carruthers1914_p00304
+evenki_even,siberian_tatar,labour_service,1,['bordeaux1904'],bordeaux1904_p00358
+evenki_even,sibiriak,co_mention,1,['erman1833'],erman1833_p04757
+evenki_even,sibiriak,labour_service,1,['bordeaux1904'],bordeaux1904_p00358
+evenki_even,tramps,co_mention,1,['hawes1903'],hawes1903_p01645
+evenki_even,tramps,conflict,1,['hawes1903'],hawes1903_p01749
+evenki_even,tuvan,co_mention,3,"['bergman1927', 'carruthers1914', 'castren1856']",bergman1927_p00649
+evenki_even,ukrainian,labour_service,1,['bordeaux1904'],bordeaux1904_p00358
+evenki_even,yukaghir,administration_tribute,1,['stadling1901'],stadling1901_p00361
+evenki_even,yukaghir,co_mention,5,"['cochrane1829', 'dewindt1889', 'lansdell1883', 'marsden1892', 'simpson1898']",cochrane1829_p00727
+evenki_even,yukaghir,labour_service,2,"['cochrane1829', 'cottrell1842']",cochrane1829_p00873
+exiles,finn_estonian,co_mention,8,"['grano1893', 'svinhufvud1928']",grano1893_p00062
+exiles,finn_estonian,coexistence_neighbourhood,1,['grano1893'],grano1893_p00062
+exiles,finn_estonian,conflict,2,['grano1893'],grano1893_p00319
+exiles,finn_estonian,labour_service,1,['grano1893'],grano1893_p00062
+exiles,finn_estonian,trade_exchange,3,"['grano1893', 'svinhufvud1928']",grano1893_p00065
+exiles,german,co_mention,9,"['erman1833', 'grano1893', 'leroybeaulieu1900', 'svinhufvud1928']",erman1833_p02255
+exiles,german,coexistence_neighbourhood,1,['svinhufvud1928'],svinhufvud1928_p00663
+exiles,german,conflict,1,['svinhufvud1928'],svinhufvud1928_p00663
+exiles,german,trade_exchange,1,['svinhufvud1928'],svinhufvud1928_p00663
+exiles,itelmen_kamchadal,trade_exchange,1,['eden1879'],eden1879_p00621
+exiles,japanese,co_mention,3,"['barzini1908', 'leroybeaulieu1900']",barzini1908_p01497
+exiles,japanese,trade_exchange,2,"['atkinson1860', 'dewindt1896']",atkinson1860_p02549
+exiles,jew,administration_tribute,1,['simpson1898'],simpson1898_p00789
+exiles,jew,co_mention,4,"['colquhoun1900', 'rosenberg1904', 'svinhufvud1928', 'wenyon1896']",colquhoun1900_p00311
+exiles,jew,labour_service,1,['debaye1897'],debaye1897_p00198
+exiles,jew,trade_exchange,2,['svinhufvud1928'],svinhufvud1928_p00489
+exiles,kazakh_kirghiz,administration_tribute,1,['jefferson1897'],jefferson1897_p00218
+exiles,kazakh_kirghiz,co_mention,7,"['atkinson1858', 'atkinson1860', 'erman1833', 'harrison1910', 'jefferson1896', 'rosenberg1904']",atkinson1858_p02283
+exiles,kazakh_kirghiz,conflict,1,['jefferson1897'],jefferson1897_p00218
+exiles,kazakh_kirghiz,trade_exchange,1,['cottrell1842'],cottrell1842_p00570
+exiles,khanty,co_mention,1,['sommier1885'],sommier1885_p00596
+exiles,khanty,religious_mission,1,['sommier1885'],sommier1885_p02200
+exiles,korean,co_mention,3,"['harrison1910', 'leroybeaulieu1900', 'simpson1898']",harrison1910_p00478
+exiles,koryak,intermarriage_mixing,1,['maynard1859'],maynard1859_p00402
+exiles,koryak,trade_exchange,1,['eden1879'],eden1879_p00621
+exiles,manchu,co_mention,1,['lansdell1883'],lansdell1883_p01869
+exiles,natives_generic,administration_tribute,2,"['cochrane1829', 'dewindt1903']",cochrane1829_p01530
+exiles,natives_generic,co_mention,8,"['cochrane1829', 'hawes1903', 'lansdell1883', 'piotrowski1863', 'rosenberg1904', 'sommier1885']",cochrane1829_p01227
+exiles,natives_generic,coexistence_neighbourhood,2,"['dewindt1903', 'haviland1915']",dewindt1903_p00260
+exiles,natives_generic,conflict,1,['dewindt1903'],dewindt1903_p00260
+exiles,natives_generic,exploitation,1,['donner1915'],donner1915_p00234
+exiles,natives_generic,labour_service,2,"['donner1915', 'lansdell1883']",donner1915_p00234
+exiles,natives_generic,religious_mission,2,"['price1892', 'sommier1885']",price1892_p00484
+exiles,natives_generic,trade_exchange,3,"['donner1915', 'meakin1901', 'price1892']",donner1915_p00234
+exiles,nivkh,co_mention,3,"['hawes1903', 'lansdell1883']",hawes1903_p00036
+exiles,old_believer,co_mention,2,"['finsch1879', 'lansdell1883']",finsch1879_p01482
+exiles,pereselentsy,administration_tribute,7,"['dewindt1892', 'gerrare1903', 'lansdell1883', 'simpson1898']",dewindt1892_p00898
+exiles,pereselentsy,co_mention,40,"['barzini1908', 'bordeaux1904', 'colquhoun1900', 'cotteau1885', 'debaye1897', 'dewindt1896', 'erman1833', 'fraser1902', 'gaunt1919', 'gerrare1903', 'gsimpson1847', 'harrison1910', 'hawes1903', 'lansdell1883', 'mpprice1912', 'nansen1914', 'nansen1914_no', 'patursson1901', 'rosenberg1904', 'seebohm1882', 'simpson1898', 'svinhufvud1928', 'turner1905', 'wenyon1896']",barzini1908_p01607
+exiles,pereselentsy,coexistence_neighbourhood,3,"['gerrare1903', 'hill1854', 'simpson1898']",gerrare1903_p00648
+exiles,pereselentsy,conflict,3,"['barzini1908', 'gerrare1903', 'grano1893']",barzini1908_p01444
+exiles,pereselentsy,exploitation,1,['boulangier1891'],boulangier1891_p01200
+exiles,pereselentsy,labour_service,5,"['bordeaux1904', 'boulangier1891', 'cotteau1885', 'dewindt1892', 'hill1854']",bordeaux1904_p00655
+exiles,pereselentsy,trade_exchange,5,"['dewindt1892', 'dobell1830', 'hill1854', 'joest1883', 'meakin1901']",dewindt1892_p00898
+exiles,pole,co_mention,22,"['boulangier1891', 'cotteau1885', 'dewindt1903', 'giller1866', 'harrison1910', 'kubalski1856', 'lansdell1883', 'legras1899', 'leroybeaulieu1900', 'meignan1877', 'muller1882', 'rosenberg1904', 'svinhufvud1928', 'whyte1871']",boulangier1891_p00680
+exiles,pole,conflict,1,['grondijs1922'],grondijs1922_p02480
+exiles,pole,labour_service,3,"['debaye1897', 'lansdell1883']",debaye1897_p00198
+exiles,pole,religious_mission,1,['svinhufvud1928'],svinhufvud1928_p00484
+exiles,pole,trade_exchange,2,"['meignan1877', 'piotrowski1863']",meignan1877_p00719
+exiles,political_exiles,administration_tribute,4,"['dewindt1903', 'gsimpson1847', 'norman1902']",dewindt1903_p00104
+exiles,political_exiles,co_mention,36,"['colquhoun1900', 'dewindt1889', 'dewindt1892', 'dewindt1896', 'dewindt1903', 'fraser1902', 'gaunt1919', 'gerrare1903', 'hawes1903', 'hill1854', 'lansdell1883', 'lethbridge1915', 'maynard1859', 'mpprice1912', 'nansen1914', 'piotrowski1863', 'reid1899', 'simpson1898']",colquhoun1900_p00297
+exiles,political_exiles,coexistence_neighbourhood,2,"['haviland1915', 'simpson1898']",haviland1915_p00335
+exiles,political_exiles,conflict,4,"['fraser1902', 'gaunt1919', 'leroybeaulieu1900', 'stadling1901']",fraser1902_p00796
+exiles,political_exiles,labour_service,4,"['simpson1898', 'turner1905', 'whyte1871']",simpson1898_p00252
+exiles,russian,administration_tribute,2,"['donner1915', 'hawes1903']",donner1915_p00076
+exiles,russian,co_mention,24,"['cochrane1829', 'erman1833', 'fraser1902', 'grano1893', 'harrison1910', 'hawes1903', 'kubalski1856', 'lansdell1883', 'legras1899', 'nansen1914', 'nansen1914_no', 'patursson1901', 'svinhufvud1928']",cochrane1829_p01227
+exiles,russian,conflict,3,"['dewindt1889', 'grano1893', 'ward1920']",dewindt1889_p00748
+exiles,russian,labour_service,1,['bordeaux1904'],bordeaux1904_p00655
+exiles,russian,trade_exchange,2,"['donner1915', 'ward1920']",donner1915_p00076
+exiles,sakha,administration_tribute,1,['stadling1901'],stadling1901_p00358
+exiles,sakha,co_mention,6,"['dewindt1903', 'heller1930', 'muller1882', 'simpson1898']",dewindt1903_p00218
+exiles,sakha,coexistence_neighbourhood,1,['dewindt1903'],dewindt1903_p00224
+exiles,sakha,exploitation,1,['cochrane1829'],cochrane1829_p01227
+exiles,sakha,trade_exchange,1,['stadling1901'],stadling1901_p00358
+exiles,samoyedic,administration_tribute,1,['donner1915'],donner1915_p00076
+exiles,samoyedic,co_mention,1,['haviland1915'],haviland1915_p00578
+exiles,samoyedic,trade_exchange,1,['donner1915'],donner1915_p00076
+exiles,siberian_tatar,co_mention,3,"['harrison1910', 'lansdell1883', 'simpson1898']",harrison1910_p00478
+exiles,siberian_tatar,labour_service,1,['debaye1897'],debaye1897_p00198
+exiles,sibiriak,co_mention,5,"['erman1833', 'fraser1902', 'hill1854', 'simpson1898']",erman1833_p02263
+exiles,sibiriak,labour_service,1,['boulangier1891'],boulangier1891_p02467
+exiles,tramps,administration_tribute,2,['hawes1903'],hawes1903_p00734
+exiles,tramps,co_mention,7,"['dewindt1892', 'hawes1903', 'michie1864']",dewindt1892_p00911
+exiles,tramps,conflict,2,['hawes1903'],hawes1903_p01758
+exiles,tramps,labour_service,2,"['gerrare1903', 'hawes1903']",gerrare1903_p00697
+exiles,tramps,trade_exchange,2,['hawes1903'],hawes1903_p01758
+exiles,ukrainian,co_mention,2,['svinhufvud1928'],svinhufvud1928_p00491
+exiles,volga_peoples,co_mention,1,['dewindt1892'],dewindt1892_p01356
+exiles,volga_peoples,exploitation,1,['holman1825'],holman1825_p02031
+exiles,volga_peoples,trade_exchange,1,['holman1825'],holman1825_p02031
+finn_estonian,german,co_mention,12,"['grano1893', 'svinhufvud1928']",grano1893_p00062
+finn_estonian,german,conflict,1,['grano1893'],grano1893_p00524
+finn_estonian,jew,co_mention,1,['grano1893'],grano1893_p00441
+finn_estonian,jew,trade_exchange,1,['svinhufvud1928'],svinhufvud1928_p00489
+finn_estonian,kazakh_kirghiz,co_mention,3,"['grano1893', 'mpprice1912', 'niemojowski1883']",grano1893_p00441
+finn_estonian,khanty,co_mention,7,"['castren1856', 'donner1915', 'lansdell1883', 'mpprice1912', 'rabot1894']",castren1856_p00888
+finn_estonian,khanty,coexistence_neighbourhood,1,['donner1915'],donner1915_p00359
+finn_estonian,manchu,co_mention,1,['castren1856'],castren1856_p00751
+finn_estonian,mansi,co_mention,1,['rabot1894'],rabot1894_p00975
+finn_estonian,mongol,co_mention,5,"['castren1856', 'mpprice1912', 'niemojowski1883', 'turner1905']",castren1856_p00218
+finn_estonian,natives_generic,co_mention,1,['donner1915'],donner1915_p00056
+finn_estonian,nenets,co_mention,1,['lansdell1883'],lansdell1883_p00258
+finn_estonian,pereselentsy,co_mention,5,"['debaye1898', 'grano1893', 'mpprice1912']",debaye1898_p00075
+finn_estonian,pereselentsy,conflict,1,['grano1893'],grano1893_p00319
+finn_estonian,pole,co_mention,2,['mpprice1912'],mpprice1912_p00180
+finn_estonian,pole,intermarriage_mixing,1,['tronson1859'],tronson1859_p00627
+finn_estonian,russian,co_mention,13,"['digby1928', 'donner1915', 'grano1893', 'mpprice1912', 'svinhufvud1928']",digby1928_p00256
+finn_estonian,russian,conflict,2,['svinhufvud1928'],svinhufvud1928_p00994
+finn_estonian,russian,intermarriage_mixing,2,"['mpprice1912', 'tronson1859']",mpprice1912_p00503
+finn_estonian,russian,labour_service,1,['svinhufvud1928'],svinhufvud1928_p00999
+finn_estonian,sakha,co_mention,1,['hansteen1857'],hansteen1857_p00474
+finn_estonian,samoyedic,co_mention,7,"['carruthers1914', 'castren1856', 'donner1915', 'lansdell1883', 'mpprice1912', 'turner1905']",carruthers1914_p00774
+finn_estonian,samoyedic,coexistence_neighbourhood,1,['donner1915'],donner1915_p00018
+finn_estonian,samoyedic,conflict,3,"['castren1856', 'donner1915']",castren1856_p00888
+finn_estonian,samoyedic,trade_exchange,1,['donner1915'],donner1915_p00018
+finn_estonian,siberian_tatar,co_mention,7,"['castren1856', 'grano1893', 'mpprice1912']",castren1856_p00356
+finn_estonian,siberian_tatar,intermarriage_mixing,1,['mpprice1912'],mpprice1912_p00503
+finn_estonian,sibiriak,co_mention,2,"['digby1928', 'mpprice1912']",digby1928_p00256
+finn_estonian,tuvan,co_mention,1,['carruthers1914'],carruthers1914_p00834
+finn_estonian,ukrainian,co_mention,1,['debaye1898'],debaye1898_p00075
+finn_estonian,volga_peoples,co_mention,1,['debaye1898'],debaye1898_p00075
+german,jew,co_mention,5,"['fell1916', 'grano1893', 'hprice1919', 'johnson1907', 'lethbridge1915']",fell1916_p00388
+german,jew,conflict,1,['joest1883'],joest1883_p00604
+german,jew,exploitation,1,['joest1883'],joest1883_p00604
+german,jew,trade_exchange,2,"['grano1893', 'joest1883']",grano1893_p00170
+german,kazakh_kirghiz,co_mention,1,['grano1893'],grano1893_p00441
+german,pereselentsy,co_mention,2,"['erman1833', 'svinhufvud1928']",erman1833_p02255
+german,pole,co_mention,9,"['fell1916', 'hprice1919', 'johnson1907', 'lansdell1883', 'leroybeaulieu1900', 'meignan1877', 'svinhufvud1928']",fell1916_p00388
+german,pole,coexistence_neighbourhood,1,['svinhufvud1928'],svinhufvud1928_p00485
+german,russian,administration_tribute,2,"['leroybeaulieu1900', 'svinhufvud1928']",leroybeaulieu1900_p00341
+german,russian,co_mention,15,"['dewindt1892', 'grano1893', 'hprice1919', 'johnson1907', 'lansdell1883', 'lasies1920', 'latkinson1863', 'meignan1877', 'ready1904', 'svinhufvud1928']",dewindt1892_p00542
+german,russian,coexistence_neighbourhood,2,"['ronaldshay1904', 'svinhufvud1928']",ronaldshay1904_p01202
+german,russian,conflict,1,['svinhufvud1928'],svinhufvud1928_p00369
+german,russian,exploitation,1,['gerrare1903'],gerrare1903_p00699
+german,russian,trade_exchange,2,"['grano1893', 'svinhufvud1928']",grano1893_p00132
+german,siberian_tatar,co_mention,4,"['dewindt1892', 'grano1893', 'johnson1907', 'lansdell1883']",dewindt1892_p00542
+german,sibiriak,co_mention,2,"['erman1833', 'meignan1877']",erman1833_p02024
+itelmen_kamchadal,khanty,labour_service,1,['cottrell1842'],cottrell1842_p00313
+itelmen_kamchadal,khanty,trade_exchange,1,['gerrare1903'],gerrare1903_p00628
+itelmen_kamchadal,korean,co_mention,2,"['bergman1927', 'harrison1910']",bergman1927_p00600
+itelmen_kamchadal,korean,coexistence_neighbourhood,1,['bergman1927'],bergman1927_p00389
+itelmen_kamchadal,koryak,co_mention,10,"['bergman1927', 'harrison1910', 'hooper1853', 'meignan1877', 'simpson1898']",bergman1927_p00600
+itelmen_kamchadal,koryak,trade_exchange,1,['eden1879'],eden1879_p00621
+itelmen_kamchadal,manchu,co_mention,1,['simpson1898'],simpson1898_p00145
+itelmen_kamchadal,mongol,co_mention,1,['maynard1859'],maynard1859_p00474
+itelmen_kamchadal,nanai_amur,coexistence_neighbourhood,1,['nansen1914'],nansen1914_p01608
+itelmen_kamchadal,natives_generic,co_mention,1,['hill1854'],hill1854_p03610
+itelmen_kamchadal,natives_generic,trade_exchange,1,['hill1854'],hill1854_p03619
+itelmen_kamchadal,nivkh,co_mention,1,['harrison1910'],harrison1910_p00310
+itelmen_kamchadal,nivkh,coexistence_neighbourhood,1,['nansen1914'],nansen1914_p01608
+itelmen_kamchadal,russian,co_mention,13,"['bergman1927', 'erman1833', 'harrison1910', 'kittlitz1858', 'maynard1859']",bergman1927_p00285
+itelmen_kamchadal,russian,coexistence_neighbourhood,1,['bergman1927'],bergman1927_p00389
+itelmen_kamchadal,russian,conflict,1,['kittlitz1858'],kittlitz1858_p00839
+itelmen_kamchadal,russian,trade_exchange,1,['hill1854'],hill1854_p03619
+itelmen_kamchadal,sakha,co_mention,4,"['boulangier1891', 'erman1833', 'hill1854']",boulangier1891_p02892
+itelmen_kamchadal,sakha,intermarriage_mixing,1,['bergman1927'],bergman1927_p00172
+itelmen_kamchadal,sakha,labour_service,1,['cottrell1842'],cottrell1842_p00313
+itelmen_kamchadal,samoyedic,co_mention,1,['erman1833'],erman1833_p03457
+itelmen_kamchadal,samoyedic,trade_exchange,1,['gerrare1903'],gerrare1903_p00628
+itelmen_kamchadal,siberian_tatar,co_mention,1,['bergman1927'],bergman1927_p00600
+itelmen_kamchadal,siberian_tatar,intermarriage_mixing,1,['bergman1927'],bergman1927_p00172
+itelmen_kamchadal,yukaghir,co_mention,1,['simpson1898'],simpson1898_p00145
+itelmen_kamchadal,yukaghir,labour_service,1,['cottrell1842'],cottrell1842_p00313
+japanese,jew,conflict,1,['joest1883'],joest1883_p00166
+japanese,jew,trade_exchange,2,"['joest1883', 'leroybeaulieu1900']",joest1883_p00166
+japanese,khanty,co_mention,1,['finsch1879'],finsch1879_p01897
+japanese,korean,co_mention,9,"['bergman1927', 'bordeaux1904', 'harrison1910', 'joest1883', 'legras1899', 'leroybeaulieu1900']",bergman1927_p00167
+japanese,korean,coexistence_neighbourhood,1,['nansen1914'],nansen1914_p01656
+japanese,korean,conflict,1,['nansen1914'],nansen1914_p01664
+japanese,korean,labour_service,1,['gerrare1903'],gerrare1903_p00964
+japanese,korean,trade_exchange,2,"['cotteau1885', 'leroybeaulieu1900']",cotteau1885_p01348
+japanese,koryak,trade_exchange,1,['maynard1859'],maynard1859_p00411
+japanese,mongol,trade_exchange,1,['niemojowski1883'],niemojowski1883_p00125
+japanese,natives_generic,co_mention,4,"['cotteau1885', 'maynard1859', 'tronson1859', 'whittingham1856']",cotteau1885_p01281
+japanese,natives_generic,trade_exchange,2,"['hawes1903', 'leroybeaulieu1900']",hawes1903_p01531
+japanese,nivkh,co_mention,1,['hawes1903'],hawes1903_p01353
+japanese,pereselentsy,conflict,1,['nansen1914'],nansen1914_p01438
+japanese,pole,co_mention,1,['grondijs1922'],grondijs1922_p02441
+japanese,russian,co_mention,10,"['bergman1927', 'gaunt1919', 'gerrare1903', 'hawes1903', 'hill1854', 'joest1883', 'lansdell1883', 'legras1899', 'nansen1914']",bergman1927_p00167
+japanese,russian,conflict,1,['bergman1927'],bergman1927_p00171
+japanese,russian,labour_service,2,"['bergman1927', 'meakin1901']",bergman1927_p00171
+japanese,russian,trade_exchange,2,"['bergman1927', 'leroybeaulieu1900']",bergman1927_p00171
+jew,kazakh_kirghiz,co_mention,3,"['barzini1908', 'grano1893', 'heller1930']",barzini1908_p01686
+jew,kazakh_kirghiz,trade_exchange,1,['piotrowski1863'],piotrowski1863_p00351
+jew,khanty,co_mention,1,['heller1930'],heller1930_p00424
+jew,korean,trade_exchange,1,['leroybeaulieu1900'],leroybeaulieu1900_p00435
+jew,mongol,co_mention,2,"['heller1930', 'leroybeaulieu1900']",heller1930_p00424
+jew,natives_generic,co_mention,1,['leroybeaulieu1900'],leroybeaulieu1900_p00243
+jew,natives_generic,trade_exchange,1,['leroybeaulieu1900'],leroybeaulieu1900_p00435
+jew,old_believer,co_mention,1,['leroybeaulieu1900'],leroybeaulieu1900_p00243
+jew,pereselentsy,co_mention,1,['wenyon1896'],wenyon1896_p00384
+jew,pole,co_mention,4,"['fell1916', 'gsimpson1847', 'hprice1919', 'johnson1907']",fell1916_p00388
+jew,pole,labour_service,1,['debaye1897'],debaye1897_p00198
+jew,political_exiles,co_mention,5,"['haviland1915', 'lansdell1883', 'nansen1914', 'simpson1898', 'turner1905']",haviland1915_p00459
+jew,russian,co_mention,16,"['castren1856', 'cochrane1829', 'drei1925', 'erman1833', 'fraser1902', 'grano1893', 'grondijs1922', 'gsimpson1847', 'hprice1919', 'joest1883', 'johnson1907', 'lansdell1883', 'leroybeaulieu1900']",castren1856_p01000
+jew,russian,trade_exchange,3,"['dewindt1903', 'grano1893', 'leroybeaulieu1900']",dewindt1903_p00138
+jew,sakha,co_mention,1,['heller1930'],heller1930_p00424
+jew,sakha,trade_exchange,1,['dewindt1903'],dewindt1903_p00138
+jew,samoyedic,co_mention,1,['heller1930'],heller1930_p00424
+jew,siberian_tatar,co_mention,9,"['barzini1908', 'castren1856', 'drei1925', 'grano1893', 'gsimpson1847', 'heller1930', 'hprice1919', 'johnson1907']",barzini1908_p01686
+jew,siberian_tatar,labour_service,1,['debaye1897'],debaye1897_p00198
+jew,siberian_tatar,trade_exchange,2,"['grano1893', 'piotrowski1863']",grano1893_p00441
+kamas,khanty,co_mention,2,"['nansen1914_no', 'radloff1893']",nansen1914_no_p00704
+kamas,russian,co_mention,4,"['castren1856', 'donner1915']",castren1856_p01623
+kamas,sakha,co_mention,2,"['nansen1914', 'nansen1914_no']",nansen1914_no_p00704
+kamas,samoyedic,administration_tribute,2,"['nansen1914', 'nansen1914_no']",nansen1914_no_p00690
+kamas,samoyedic,co_mention,15,"['castren1856', 'donner1915', 'nansen1914', 'nansen1914_no', 'radloff1893']",castren1856_p01602
+kamas,samoyedic,religious_mission,1,['nansen1914_no'],nansen1914_no_p00690
+kamas,selkup,co_mention,2,"['donner1915', 'nansen1914']",donner1915_p00378
+kamas,siberian_tatar,co_mention,14,"['castren1856', 'donner1915', 'nansen1914', 'nansen1914_no']",castren1856_p01602
+kamas,siberian_tatar,coexistence_neighbourhood,1,['radloff1893'],radloff1893_p00969
+kamas,tuvan,co_mention,2,['castren1856'],castren1856_p01415
+kazakh_kirghiz,khanty,co_mention,11,"['boulangier1891', 'castren1856', 'finsch1879', 'heller1930', 'lansdell1883', 'meakin1901', 'mpprice1912', 'rosenberg1904', 'sommier1885']",boulangier1891_p02244
+kazakh_kirghiz,khanty,trade_exchange,1,['erman1833'],erman1833_p02551
+kazakh_kirghiz,korean,co_mention,1,['harrison1910'],harrison1910_p00478
+kazakh_kirghiz,manchu,co_mention,1,['meignan1877'],meignan1877_p00646
+kazakh_kirghiz,manchu,conflict,1,['finsch1879'],finsch1879_p01293
+kazakh_kirghiz,mongol,administration_tribute,2,"['carruthers1914', 'radloff1893']",carruthers1914_p01567
+kazakh_kirghiz,mongol,co_mention,26,"['carruthers1914', 'castren1856', 'dobell1830', 'finsch1879', 'grondijs1922', 'heller1930', 'meignan1877', 'niemojowski1883', 'ossendowski1922', 'pistor1905', 'radloff1893', 'scarfoglio1909', 'sommier1885']",carruthers1914_p00385
+kazakh_kirghiz,mongol,coexistence_neighbourhood,2,"['carruthers1914', 'gsimpson1847']",carruthers1914_p02733
+kazakh_kirghiz,mongol,conflict,4,"['castren1856', 'colquhoun1900', 'radloff1893']",castren1856_p01742
+kazakh_kirghiz,mongol,exploitation,1,['atkinson1858'],atkinson1858_p02229
+kazakh_kirghiz,mongol,trade_exchange,3,"['carruthers1914', 'castren1856', 'radloff1893']",carruthers1914_p01568
+kazakh_kirghiz,natives_generic,co_mention,3,"['meignan1877', 'radloff1893', 'rosenberg1904']",meignan1877_p00786
+kazakh_kirghiz,natives_generic,intermarriage_mixing,1,['colquhoun1900'],colquhoun1900_p00264
+kazakh_kirghiz,nenets,co_mention,1,['patursson1901'],patursson1901_p00320
+kazakh_kirghiz,pereselentsy,administration_tribute,1,['stadling1901'],stadling1901_p00163
+kazakh_kirghiz,pereselentsy,co_mention,8,"['grondijs1922', 'harrison1910', 'radloff1893', 'rosenberg1904', 'stadling1901']",grondijs1922_p02498
+kazakh_kirghiz,pereselentsy,labour_service,1,['legras1899'],legras1899_p00121
+kazakh_kirghiz,pereselentsy,trade_exchange,1,['holman1825'],holman1825_p02292
+kazakh_kirghiz,pole,co_mention,1,['harrison1910'],harrison1910_p00478
+kazakh_kirghiz,russian,administration_tribute,2,['radloff1893'],radloff1893_p00877
+kazakh_kirghiz,russian,co_mention,41,"['barzini1908', 'carruthers1914', 'castren1856', 'cottrell1842', 'etherton1911', 'fell1916', 'finsch1879', 'grano1893', 'hansteen1857', 'harrison1910', 'heller1930', 'jefferson1896', 'kotzebue1802', 'lansdell1883', 'michie1864', 'radloff1893', 'rosenberg1904', 'sommier1885', 'turner1905']",barzini1908_p00050
+kazakh_kirghiz,russian,coexistence_neighbourhood,6,"['cottrell1842', 'erman1833', 'hansteen1857', 'lansdell1883', 'radloff1893']",cottrell1842_p00297
+kazakh_kirghiz,russian,conflict,3,"['erman1833', 'gerrare1903', 'sommier1885']",erman1833_p02241
+kazakh_kirghiz,russian,exploitation,1,['erman1833'],erman1833_p02241
+kazakh_kirghiz,russian,intermarriage_mixing,1,['colquhoun1900'],colquhoun1900_p00264
+kazakh_kirghiz,russian,labour_service,1,['hansteen1857'],hansteen1857_p00662
+kazakh_kirghiz,russian,religious_mission,1,['lansdell1883'],lansdell1883_p01781
+kazakh_kirghiz,russian,trade_exchange,2,"['gerrare1903', 'hansteen1857']",gerrare1903_p00666
+kazakh_kirghiz,sakha,co_mention,4,"['gsimpson1847', 'heller1930', 'lansdell1883', 'radloff1893']",gsimpson1847_p00969
+kazakh_kirghiz,samoyedic,co_mention,9,"['castren1856', 'heller1930', 'jefferson1897', 'lansdell1883', 'meignan1877', 'mpprice1912', 'rosenberg1904', 'sommier1885']",castren1856_p01557
+kazakh_kirghiz,siberian_tatar,assimilation,1,['castren1856'],castren1856_p01471
+kazakh_kirghiz,siberian_tatar,co_mention,72,"['atkinson1860', 'barzini1908', 'castren1856', 'cipolla1919', 'cottrell1842', 'digby1928', 'drei1925', 'erman1833', 'finsch1879', 'grano1893', 'grondijs1922', 'gsimpson1847', 'hansteen1857', 'harrison1910', 'heller1930', 'holman1825', 'jefferson1896', 'kotzebue1802', 'kubalski1856', 'lansdell1883', 'legras1899', 'michie1864', 'mpprice1912', 'nansen1914', 'nansen1914_no', 'niemojowski1883', 'patursson1901', 'pistor1905', 'radloff1893', 'sommier1885', 'turner1905', 'ward1920']",atkinson1860_p00504
+kazakh_kirghiz,siberian_tatar,coexistence_neighbourhood,1,['niemojowski1883'],niemojowski1883_p00228
+kazakh_kirghiz,siberian_tatar,conflict,2,"['mpprice1912', 'sommier1885']",mpprice1912_p00488
+kazakh_kirghiz,siberian_tatar,intermarriage_mixing,4,"['atkinson1860', 'piotrowski1863', 'sommier1885']",atkinson1860_p00300
+kazakh_kirghiz,siberian_tatar,labour_service,1,['holman1825'],holman1825_p02295
+kazakh_kirghiz,siberian_tatar,religious_mission,1,['debaye1897'],debaye1897_p00168
+kazakh_kirghiz,siberian_tatar,trade_exchange,7,"['atkinson1860', 'piotrowski1863', 'radloff1893', 'sommier1885']",atkinson1860_p01557
+kazakh_kirghiz,sibiriak,administration_tribute,1,['colquhoun1900'],colquhoun1900_p00341
+kazakh_kirghiz,sibiriak,co_mention,3,"['barzini1908', 'scarfoglio1909', 'turner1905']",barzini1908_p00050
+kazakh_kirghiz,sibiriak,trade_exchange,1,['erman1833'],erman1833_p02110
+kazakh_kirghiz,tuvan,co_mention,2,['carruthers1914'],carruthers1914_p00385
+kazakh_kirghiz,tuvan,coexistence_neighbourhood,1,['carruthers1914'],carruthers1914_p02733
+kazakh_kirghiz,volga_peoples,co_mention,10,"['boulangier1891', 'debaye1898', 'erman1833', 'gerrare1903', 'grondijs1922', 'hansteen1857', 'jefferson1897', 'vaydevaya1906']",boulangier1891_p02244
+ket,khanty,co_mention,4,"['castren1856', 'nansen1914']",castren1856_p00822
+ket,khanty,conflict,1,['radloff1893'],radloff1893_p00904
+ket,khanty,intermarriage_mixing,1,['nansen1914'],nansen1914_p01222
+ket,khanty,trade_exchange,1,['radloff1893'],radloff1893_p01085
+ket,koryak,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+ket,natives_generic,co_mention,1,['nansen1914'],nansen1914_p01197
+ket,nenets,co_mention,2,['nansen1914'],nansen1914_p00268
+ket,russian,co_mention,2,['nansen1914'],nansen1914_p00152
+ket,russian,intermarriage_mixing,1,['nansen1914'],nansen1914_p01222
+ket,samoyedic,co_mention,12,"['castren1856', 'nansen1914', 'radloff1893']",castren1856_p00822
+ket,samoyedic,conflict,2,"['castren1856', 'nansen1914']",castren1856_p01304
+ket,samoyedic,trade_exchange,2,"['castren1856', 'radloff1893']",castren1856_p01218
+ket,siberian_tatar,co_mention,1,['radloff1893'],radloff1893_p00906
+ket,siberian_tatar,conflict,1,['castren1856'],castren1856_p01304
+ket,sibiriak,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+ket,tuvan,conflict,1,['castren1856'],castren1856_p01304
+ket,yukaghir,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+khanty,koryak,co_mention,2,['erman1833'],erman1833_p02552
+khanty,mansi,co_mention,8,"['cochrane1829', 'rabot1894']",cochrane1829_p00513
+khanty,mansi,coexistence_neighbourhood,1,['svinhufvud1928'],svinhufvud1928_p00522
+khanty,mansi,trade_exchange,1,['svinhufvud1928'],svinhufvud1928_p00522
+khanty,mongol,co_mention,5,"['castren1856', 'heller1930', 'rabot1894', 'sommier1885']",castren1856_p00247
+khanty,mongol,trade_exchange,1,['finsch1879'],finsch1879_p02240
+khanty,natives_generic,administration_tribute,3,"['rabot1894', 'sommier1885', 'stadling1901']",rabot1894_p01207
+khanty,natives_generic,co_mention,41,"['boulangier1891', 'cotteau1885', 'donner1915', 'drei1925', 'heller1930', 'lansdell1883', 'patursson1901', 'price1892', 'rabot1894', 'rosenberg1904', 'sommier1885', 'stadling1901', 'wenyon1896']",boulangier1891_p00730
+khanty,natives_generic,conflict,1,['nansen1914'],nansen1914_p01199
+khanty,natives_generic,labour_service,1,['sommier1885'],sommier1885_p02666
+khanty,natives_generic,religious_mission,3,"['lansdell1883', 'sommier1885']",lansdell1883_p00452
+khanty,natives_generic,trade_exchange,4,"['lansdell1883', 'sommier1885', 'stadling1901']",lansdell1883_p00452
+khanty,nenets,administration_tribute,2,"['nansen1914', 'stadling1901']",nansen1914_p00708
+khanty,nenets,co_mention,9,"['castren1856', 'lansdell1883', 'nansen1914_no', 'patursson1901', 'rosenberg1904']",castren1856_p01143
+khanty,nenets,coexistence_neighbourhood,1,['donner1915'],donner1915_p00279
+khanty,nenets,conflict,1,['donner1915'],donner1915_p00268
+khanty,nenets,intermarriage_mixing,1,['haviland1915'],haviland1915_p00696
+khanty,nivkh,co_mention,1,['drei1925'],drei1925_p00440
+khanty,pereselentsy,religious_mission,1,['legras1899'],legras1899_p00420
+khanty,russian,administration_tribute,6,"['eden1879', 'nansen1914', 'sommier1885']",eden1879_p00432
+khanty,russian,assimilation,1,['finsch1879'],finsch1879_p02285
+khanty,russian,co_mention,79,"['castren1856', 'dewindt1889', 'donner1915', 'eden1879', 'erman1833', 'finsch1879', 'heller1930', 'lansdell1883', 'nansen1914', 'nansen1914_no', 'patursson1901', 'rabot1894', 'rosenberg1904', 'sommier1885', 'svinhufvud1928']",castren1856_p00273
+khanty,russian,coexistence_neighbourhood,3,"['castren1856', 'eden1879', 'erman1833']",castren1856_p00371
+khanty,russian,conflict,7,"['erman1833', 'finsch1879', 'sommier1885', 'svinhufvud1928']",erman1833_p02369
+khanty,russian,exploitation,3,"['erman1833', 'sommier1885']",erman1833_p03524
+khanty,russian,intermarriage_mixing,1,['nansen1914'],nansen1914_p01222
+khanty,russian,labour_service,2,"['eden1879', 'felinska1854']",eden1879_p00451
+khanty,russian,religious_mission,2,"['debaye1897', 'eden1879']",debaye1897_p00142
+khanty,russian,trade_exchange,19,"['drei1925', 'eden1879', 'erman1833', 'sommier1885', 'svinhufvud1928']",drei1925_p00871
+khanty,sakha,administration_tribute,2,"['eden1879', 'nansen1914']",eden1879_p00161
+khanty,sakha,assimilation,1,['niemojowski1883'],niemojowski1883_p00138
+khanty,sakha,co_mention,18,"['castren1856', 'dewindt1892', 'eden1879', 'erman1833', 'hansteen1857', 'heller1930', 'muller1882', 'nansen1914', 'nansen1914_no', 'niemojowski1883', 'patursson1901', 'piotrowski1863']",castren1856_p01634
+khanty,sakha,labour_service,1,['cottrell1842'],cottrell1842_p00313
+khanty,sakha,trade_exchange,1,['eden1879'],eden1879_p00161
+khanty,samoyedic,administration_tribute,13,"['castren1856', 'finsch1879', 'nansen1914', 'sommier1885', 'stadling1901']",castren1856_p00985
+khanty,samoyedic,assimilation,2,"['donner1915', 'finsch1879']",donner1915_p00052
+khanty,samoyedic,co_mention,261,"['castren1856', 'cochrane1829', 'colquhoun1900', 'dewindt1889', 'donner1915', 'erman1833', 'felinska1854', 'finsch1879', 'haviland1915', 'heller1930', 'lansdell1883', 'mpprice1912', 'muller1882', 'nansen1914', 'nansen1914_no', 'niemojowski1883', 'price1892', 'rabot1894', 'rosenberg1904', 'simpson1898', 'sommier1885', 'stadling1901', 'svinhufvud1928']",castren1856_p00367
+khanty,samoyedic,coexistence_neighbourhood,4,"['donner1915', 'finsch1879', 'radloff1893', 'sheepshanks1903']",donner1915_p00279
+khanty,samoyedic,conflict,12,"['castren1856', 'erman1833', 'finsch1879']",castren1856_p00464
+khanty,samoyedic,exploitation,4,"['castren1856', 'sommier1885']",castren1856_p00987
+khanty,samoyedic,intermarriage_mixing,1,['nansen1914'],nansen1914_p00415
+khanty,samoyedic,labour_service,5,"['castren1856', 'finsch1879', 'nansen1914_no', 'sommier1885']",castren1856_p00671
+khanty,samoyedic,religious_mission,8,"['castren1856', 'erman1833', 'finsch1879', 'lansdell1883', 'nansen1914_no', 'sommier1885']",castren1856_p00464
+khanty,samoyedic,trade_exchange,33,"['castren1856', 'donner1915', 'erman1833', 'felinska1854', 'finsch1879', 'gerrare1903', 'heller1930', 'lansdell1883', 'mpprice1912', 'niemojowski1883', 'radloff1893', 'sommier1885', 'stadling1901', 'svinhufvud1928']",castren1856_p00667
+khanty,selkup,administration_tribute,2,"['castren1856', 'nansen1914']",castren1856_p00985
+khanty,selkup,co_mention,6,"['castren1856', 'donner1915']",castren1856_p01147
+khanty,siberian_tatar,administration_tribute,2,"['boulangier1891', 'sommier1885']",boulangier1891_p00870
+khanty,siberian_tatar,assimilation,2,"['finsch1879', 'niemojowski1883']",finsch1879_p02275
+khanty,siberian_tatar,co_mention,39,"['boulangier1891', 'castren1856', 'cottrell1842', 'dewindt1889', 'drei1925', 'erman1833', 'felinska1854', 'heller1930', 'kubalski1856', 'lansdell1883', 'mpprice1912', 'patursson1901', 'radloff1893', 'rosenberg1904', 'sommier1885', 'whyte1871']",boulangier1891_p00682
+khanty,siberian_tatar,coexistence_neighbourhood,2,"['carruthers1914', 'finsch1879']",carruthers1914_p00304
+khanty,siberian_tatar,conflict,2,"['donner1915', 'sommier1885']",donner1915_p00124
+khanty,siberian_tatar,religious_mission,1,['kubalski1856'],kubalski1856_p00091
+khanty,sibiriak,trade_exchange,1,['erman1833'],erman1833_p01374
+khanty,tuvan,co_mention,2,['castren1856'],castren1856_p01197
+khanty,tuvan,conflict,1,['castren1856'],castren1856_p01594
+khanty,volga_peoples,co_mention,5,"['boulangier1891', 'eden1879', 'erman1833', 'finsch1879']",boulangier1891_p02244
+khanty,volga_peoples,conflict,1,['erman1833'],erman1833_p02363
+khanty,yukaghir,labour_service,1,['cottrell1842'],cottrell1842_p00313
+korean,koryak,co_mention,2,"['bergman1927', 'harrison1910']",bergman1927_p00600
+korean,manchu,co_mention,3,"['hawes1903', 'lansdell1883']",hawes1903_p00711
+korean,nanai_amur,co_mention,2,['hawes1903'],hawes1903_p00711
+korean,natives_generic,co_mention,3,"['gerrare1903', 'hawes1903', 'leroybeaulieu1900']",gerrare1903_p01026
+korean,natives_generic,trade_exchange,2,"['gaunt1919', 'leroybeaulieu1900']",gaunt1919_p00569
+korean,nivkh,co_mention,3,"['harrison1910', 'hawes1903']",harrison1910_p00309
+korean,pereselentsy,assimilation,1,['harrison1910'],harrison1910_p01245
+korean,pereselentsy,co_mention,2,"['harrison1910', 'nansen1914']",harrison1910_p00478
+korean,pereselentsy,trade_exchange,1,['wenyon1896'],wenyon1896_p00289
+korean,pole,co_mention,1,['harrison1910'],harrison1910_p00478
+korean,russian,administration_tribute,1,['fraser1902'],fraser1902_p01458
+korean,russian,assimilation,1,['harrison1910'],harrison1910_p01245
+korean,russian,co_mention,20,"['bergman1927', 'bordeaux1904', 'cotteau1885', 'dewindt1896', 'gaunt1919', 'gerrare1903', 'harrison1910', 'hawes1903', 'joest1883', 'legras1899', 'leroybeaulieu1900', 'nansen1914']",bergman1927_p00153
+korean,russian,coexistence_neighbourhood,1,['bergman1927'],bergman1927_p00389
+korean,russian,labour_service,1,['fraser1902'],fraser1902_p01458
+korean,russian,trade_exchange,2,"['gaunt1919', 'leroybeaulieu1900']",gaunt1919_p00569
+korean,sakha,co_mention,1,['gerrare1903'],gerrare1903_p00716
+korean,siberian_tatar,co_mention,3,"['bergman1927', 'harrison1910']",bergman1927_p00541
+korean,sibiriak,co_mention,2,"['cotteau1885', 'simpson1898']",cotteau1885_p01280
+koryak,manchu,co_mention,1,['simpson1898'],simpson1898_p00145
+koryak,mongol,co_mention,1,['maynard1859'],maynard1859_p00470
+koryak,mongol,coexistence_neighbourhood,1,['maynard1859'],maynard1859_p00466
+koryak,mongol,conflict,1,['maynard1859'],maynard1859_p00466
+koryak,mongol,labour_service,1,['maynard1859'],maynard1859_p00470
+koryak,natives_generic,co_mention,1,['niedieck1909'],niedieck1909_p00577
+koryak,natives_generic,coexistence_neighbourhood,1,['maynard1859'],maynard1859_p00728
+koryak,natives_generic,trade_exchange,1,['bergman1927'],bergman1927_p00451
+koryak,nivkh,co_mention,1,['harrison1910'],harrison1910_p00310
+koryak,russian,co_mention,7,"['bergman1927', 'cochrane1829', 'eden1879', 'harrison1910', 'lansdell1883', 'tronson1859']",bergman1927_p00600
+koryak,russian,coexistence_neighbourhood,3,"['bergman1927', 'cochrane1829', 'lansdell1883']",bergman1927_p00768
+koryak,russian,conflict,1,['cochrane1829'],cochrane1829_p01166
+koryak,russian,trade_exchange,2,"['bergman1927', 'cochrane1829']",bergman1927_p00768
+koryak,sakha,co_mention,3,"['cochrane1829', 'dewindt1889', 'lansdell1883']",cochrane1829_p00722
+koryak,sakha,labour_service,1,['maynard1859'],maynard1859_p00470
+koryak,samoyedic,co_mention,2,"['dewindt1892', 'erman1833']",dewindt1892_p00688
+koryak,siberian_tatar,co_mention,1,['bergman1927'],bergman1927_p00600
+koryak,sibiriak,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+koryak,yukaghir,co_mention,2,"['cochrane1829', 'simpson1898']",cochrane1829_p00722
+koryak,yukaghir,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+koryak,yukaghir,labour_service,1,['maynard1859'],maynard1859_p00470
+manchu,mongol,administration_tribute,3,"['colquhoun1900', 'harrison1910']",colquhoun1900_p00095
+manchu,mongol,co_mention,10,"['castren1856', 'digby1928', 'gerrare1903', 'hawes1903', 'lansdell1883', 'meignan1877', 'nansen1914']",castren1856_p00751
+manchu,mongol,coexistence_neighbourhood,1,['harrison1910'],harrison1910_p00255
+manchu,mongol,labour_service,1,['hawes1903'],hawes1903_p01002
+manchu,nanai_amur,administration_tribute,1,['lansdell1883'],lansdell1883_p02053
+manchu,nanai_amur,co_mention,8,"['hawes1903', 'lansdell1883', 'nansen1914']",hawes1903_p00711
+manchu,nanai_amur,exploitation,1,['lansdell1883'],lansdell1883_p02058
+manchu,nanai_amur,intermarriage_mixing,1,['dewindt1896'],dewindt1896_p00442
+manchu,nanai_amur,trade_exchange,1,['lansdell1883'],lansdell1883_p02029
+manchu,natives_generic,co_mention,3,"['lansdell1883', 'meakin1901']",lansdell1883_p01866
+manchu,natives_generic,conflict,1,['lansdell1883'],lansdell1883_p01677
+manchu,nivkh,co_mention,3,"['hawes1903', 'lansdell1883']",hawes1903_p01265
+manchu,nivkh,exploitation,2,['lansdell1883'],lansdell1883_p02053
+manchu,russian,administration_tribute,2,"['colquhoun1900', 'eden1879']",colquhoun1900_p00095
+manchu,russian,co_mention,10,"['colquhoun1900', 'gerrare1903', 'harrison1910', 'hawes1903', 'lansdell1883', 'meakin1901', 'michie1864']",colquhoun1900_p00555
+manchu,russian,conflict,1,['harrison1910'],harrison1910_p00255
+manchu,russian,trade_exchange,1,['lansdell1883'],lansdell1883_p01872
+manchu,samoyedic,co_mention,2,"['meignan1877', 'nansen1914']",meignan1877_p00646
+manchu,siberian_tatar,administration_tribute,1,['eden1879'],eden1879_p00080
+manchu,siberian_tatar,co_mention,7,"['colquhoun1900', 'eden1879', 'lansdell1883', 'nansen1914', 'whittingham1856']",colquhoun1900_p00568
+manchu,siberian_tatar,conflict,1,['lansdell1883'],lansdell1883_p01883
+manchu,siberian_tatar,trade_exchange,1,['gerrare1903'],gerrare1903_p00947
+manchu,sibiriak,administration_tribute,1,['colquhoun1900'],colquhoun1900_p00095
+manchu,yukaghir,co_mention,1,['simpson1898'],simpson1898_p00145
+mansi,natives_generic,co_mention,2,['rabot1894'],rabot1894_p00963
+mansi,siberian_tatar,co_mention,1,['ujfalvy1879'],ujfalvy1879_p01329
+mongol,nanai_amur,co_mention,2,"['hawes1903', 'wenyon1896']",hawes1903_p01469
+mongol,natives_generic,administration_tribute,1,['carruthers1914'],carruthers1914_p00688
+mongol,natives_generic,co_mention,9,"['boulangier1891', 'digby1928', 'leroybeaulieu1900', 'meignan1877', 'wenyon1896', 'whyte1871']",boulangier1891_p01353
+mongol,natives_generic,exploitation,2,"['legras1899', 'wenyon1896']",legras1899_p00879
+mongol,nivkh,co_mention,1,['hawes1903'],hawes1903_p01277
+mongol,nivkh,conflict,1,['lansdell1883'],lansdell1883_p02135
+mongol,nivkh,religious_mission,1,['lansdell1883'],lansdell1883_p02135
+mongol,old_believer,co_mention,1,['leroybeaulieu1900'],leroybeaulieu1900_p00243
+mongol,pereselentsy,administration_tribute,1,['gsimpson1847'],gsimpson1847_p01307
+mongol,pereselentsy,co_mention,5,"['boulangier1891', 'erman1833', 'grondijs1922', 'ossendowski1922', 'tilley1861']",boulangier1891_p01292
+mongol,pereselentsy,coexistence_neighbourhood,1,['wenyon1896'],wenyon1896_p00478
+mongol,pereselentsy,labour_service,1,['boulangier1891'],boulangier1891_p02937
+mongol,pole,administration_tribute,1,['gerrare1903'],gerrare1903_p00171
+mongol,political_exiles,co_mention,1,['stadling1901'],stadling1901_p00412
+mongol,russian,administration_tribute,9,"['carruthers1914', 'colquhoun1900', 'gerrare1903', 'michie1864', 'ossendowski1922', 'perryayscough1914', 'radloff1893', 'sommier1885']",carruthers1914_p00827
+mongol,russian,co_mention,11,"['carruthers1914', 'castren1856', 'eden1879', 'gerrare1903', 'heller1930', 'joest1883', 'leroybeaulieu1900', 'maynard1859', 'michie1864', 'perryayscough1914']",carruthers1914_p02310
+mongol,russian,conflict,3,"['erman1833', 'joest1883', 'sommier1885']",erman1833_p05143
+mongol,russian,exploitation,1,['perryayscough1914'],perryayscough1914_p00620
+mongol,russian,labour_service,2,"['carruthers1914', 'sheepshanks1903']",carruthers1914_p00827
+mongol,russian,trade_exchange,4,"['carruthers1914', 'debaye1897', 'perryayscough1914', 'whyte1871']",carruthers1914_p00827
+mongol,sakha,co_mention,4,"['boulangier1891', 'dobell1830', 'gsimpson1847', 'heller1930']",boulangier1891_p00871
+mongol,sakha,coexistence_neighbourhood,1,['erman1833'],erman1833_p05457
+mongol,sakha,conflict,1,['erman1833'],erman1833_p05457
+mongol,sakha,labour_service,1,['maynard1859'],maynard1859_p00470
+mongol,sakha,trade_exchange,1,['erman1833'],erman1833_p05457
+mongol,samoyedic,co_mention,10,"['castren1856', 'cipolla1919', 'heller1930', 'meignan1877', 'nansen1914', 'nansen1914_no', 'turner1905']",castren1856_p00801
+mongol,siberian_tatar,administration_tribute,2,"['michie1864', 'sommier1885']",michie1864_p00533
+mongol,siberian_tatar,co_mention,39,"['carruthers1914', 'castren1856', 'cochrane1829', 'cotteau1885', 'debaye1897', 'dewindt1889', 'digby1928', 'dobell1830', 'gerrare1903', 'grondijs1922', 'heller1930', 'kubalski1856', 'lansdell1883', 'michie1864', 'mpprice1912', 'nansen1914', 'nansen1914_no', 'niemojowski1883', 'ossendowski1922', 'pistor1905', 'radloff1893', 'sommier1885', 'ward1920', 'wenyon1896']",carruthers1914_p00351
+mongol,siberian_tatar,conflict,1,['sommier1885'],sommier1885_p03035
+mongol,siberian_tatar,exploitation,1,['wenyon1896'],wenyon1896_p00460
+mongol,siberian_tatar,intermarriage_mixing,1,['mpprice1912'],mpprice1912_p00429
+mongol,siberian_tatar,labour_service,1,['carruthers1914'],carruthers1914_p00678
+mongol,siberian_tatar,trade_exchange,2,"['carruthers1914', 'mpprice1912']",carruthers1914_p00678
+mongol,sibiriak,administration_tribute,1,['colquhoun1900'],colquhoun1900_p00095
+mongol,sibiriak,co_mention,3,"['atkinson1860', 'mpprice1912', 'scarfoglio1909']",atkinson1860_p02022
+mongol,sibiriak,trade_exchange,1,['lansdell1883'],lansdell1883_p01120
+mongol,tuvan,administration_tribute,2,"['carruthers1914', 'ossendowski1922']",carruthers1914_p00827
+mongol,tuvan,co_mention,15,"['carruthers1914', 'castren1856', 'ossendowski1922', 'perryayscough1914']",carruthers1914_p00383
+mongol,tuvan,coexistence_neighbourhood,3,['carruthers1914'],carruthers1914_p00781
+mongol,tuvan,labour_service,3,['carruthers1914'],carruthers1914_p00678
+mongol,tuvan,trade_exchange,3,['carruthers1914'],carruthers1914_p00678
+mongol,volga_peoples,co_mention,3,['grondijs1922'],grondijs1922_p02451
+mongol,yukaghir,labour_service,1,['maynard1859'],maynard1859_p00470
+nanai_amur,natives_generic,co_mention,6,"['lansdell1883', 'nansen1914', 'wenyon1896']",lansdell1883_p02025
+nanai_amur,nivkh,administration_tribute,1,['hawes1903'],hawes1903_p01398
+nanai_amur,nivkh,co_mention,23,"['dewindt1896', 'gaunt1919', 'gerrare1903', 'hawes1903', 'lansdell1883', 'simpson1898']",dewindt1896_p00442
+nanai_amur,nivkh,coexistence_neighbourhood,2,"['hawes1903', 'nansen1914']",hawes1903_p01124
+nanai_amur,nivkh,conflict,1,['lansdell1883'],lansdell1883_p02119
+nanai_amur,nivkh,exploitation,1,['lansdell1883'],lansdell1883_p02058
+nanai_amur,nivkh,intermarriage_mixing,1,['hawes1903'],hawes1903_p01124
+nanai_amur,nivkh,religious_mission,2,['lansdell1883'],lansdell1883_p01781
+nanai_amur,russian,co_mention,5,"['colquhoun1900', 'gaunt1919', 'hawes1903', 'lansdell1883']",colquhoun1900_p00267
+nanai_amur,russian,coexistence_neighbourhood,1,['lansdell1883'],lansdell1883_p02135
+nanai_amur,russian,religious_mission,2,['lansdell1883'],lansdell1883_p02029
+nanai_amur,sakha,co_mention,1,['colquhoun1900'],colquhoun1900_p00267
+natives_generic,nenets,co_mention,6,"['haviland1915', 'nansen1914', 'patursson1901']",haviland1915_p00213
+natives_generic,nenets,labour_service,1,['haviland1915'],haviland1915_p00311
+natives_generic,nivkh,co_mention,16,"['bordeaux1904', 'gerrare1903', 'hawes1903', 'lansdell1883', 'tronson1859']",bordeaux1904_p00655
+natives_generic,nivkh,exploitation,1,['lansdell1883'],lansdell1883_p02055
+natives_generic,nivkh,labour_service,1,['hawes1903'],hawes1903_p01532
+natives_generic,nivkh,trade_exchange,1,['lansdell1883'],lansdell1883_p02055
+natives_generic,old_believer,co_mention,1,['leroybeaulieu1900'],leroybeaulieu1900_p00243
+natives_generic,pereselentsy,administration_tribute,1,['dewindt1903'],dewindt1903_p00239
+natives_generic,pereselentsy,co_mention,15,"['dewindt1903', 'drei1925', 'gerrare1903', 'haviland1915', 'hawes1903', 'leroybeaulieu1900', 'patursson1901', 'radloff1893', 'rosenberg1904', 'wenyon1896']",dewindt1903_p00113
+natives_generic,pereselentsy,conflict,2,"['radloff1893', 'stadling1901']",radloff1893_p01034
+natives_generic,pereselentsy,intermarriage_mixing,2,"['mpprice1912', 'turner1905']",mpprice1912_p00547
+natives_generic,pereselentsy,trade_exchange,3,"['drei1925', 'gerrare1903', 'meakin1901']",drei1925_p00100
+natives_generic,political_exiles,administration_tribute,1,['stadling1901'],stadling1901_p00383
+natives_generic,political_exiles,co_mention,1,['stadling1901'],stadling1901_p00384
+natives_generic,russian,administration_tribute,5,"['donner1915', 'jefferson1897', 'patursson1901', 'sommier1885', 'stadling1901']",donner1915_p00124
+natives_generic,russian,assimilation,2,"['patursson1901', 'sommier1885']",patursson1901_p00308
+natives_generic,russian,co_mention,87,"['boulangier1891', 'carruthers1914', 'castren1856', 'cochrane1829', 'cottrell1842', 'dobell1830', 'donner1915', 'drei1925', 'gerrare1903', 'gsimpson1847', 'guillemard1889', 'haviland1915', 'hawes1903', 'hill1854', 'lansdell1883', 'leroybeaulieu1900', 'maynard1859', 'meignan1877', 'nansen1914', 'niemojowski1883', 'patursson1901', 'rabot1894', 'radloff1893', 'rosenberg1904', 'sommier1885', 'stadling1901', 'svinhufvud1928', 'tronson1859']",boulangier1891_p00986
+natives_generic,russian,coexistence_neighbourhood,3,"['bergman1927', 'donner1915', 'tronson1859']",bergman1927_p00837
+natives_generic,russian,conflict,1,['cochrane1829'],cochrane1829_p01228
+natives_generic,russian,exploitation,1,['lansdell1883'],lansdell1883_p02053
+natives_generic,russian,intermarriage_mixing,1,['colquhoun1900'],colquhoun1900_p00264
+natives_generic,russian,labour_service,1,['donner1915'],donner1915_p00054
+natives_generic,russian,religious_mission,3,"['cochrane1829', 'tronson1859']",cochrane1829_p01220
+natives_generic,russian,trade_exchange,16,"['carruthers1914', 'cottrell1842', 'donner1915', 'finsch1879', 'gaunt1919', 'hill1854', 'lansdell1883', 'leroybeaulieu1900', 'nansen1914', 'patursson1901', 'sommier1885', 'stadling1901']",carruthers1914_p00724
+natives_generic,sakha,administration_tribute,2,"['cochrane1829', 'dewindt1903']",cochrane1829_p00978
+natives_generic,sakha,co_mention,21,"['bordeaux1904', 'dewindt1889', 'dewindt1892', 'dewindt1903', 'dobell1830', 'drei1925', 'gsimpson1847', 'lansdell1883', 'legras1899', 'marsden1892', 'stadling1901']",bordeaux1904_p00952
+natives_generic,sakha,coexistence_neighbourhood,2,"['dewindt1903', 'marsden1892']",dewindt1903_p00143
+natives_generic,sakha,labour_service,2,"['gsimpson1847', 'hill1854']",gsimpson1847_p00945
+natives_generic,sakha,trade_exchange,4,"['lansdell1883', 'niemojowski1883', 'patursson1901', 'stadling1901']",lansdell1883_p02207
+natives_generic,samoyedic,administration_tribute,4,"['donner1915', 'sommier1885', 'stadling1901']",donner1915_p00086
+natives_generic,samoyedic,co_mention,26,"['donner1915', 'heller1930', 'leroybeaulieu1900', 'nansen1914', 'peel1894', 'price1892', 'sommier1885', 'stadling1901']",donner1915_p00103
+natives_generic,samoyedic,coexistence_neighbourhood,1,['donner1915'],donner1915_p00086
+natives_generic,samoyedic,conflict,1,['donner1915'],donner1915_p00086
+natives_generic,samoyedic,religious_mission,2,"['lansdell1883', 'sommier1885']",lansdell1883_p00452
+natives_generic,samoyedic,trade_exchange,10,"['donner1915', 'johnson1907', 'lansdell1883', 'price1892', 'sommier1885', 'stadling1901']",donner1915_p00085
+natives_generic,selkup,co_mention,1,['donner1915'],donner1915_p00248
+natives_generic,siberian_tatar,administration_tribute,1,['cochrane1829'],cochrane1829_p01618
+natives_generic,siberian_tatar,co_mention,11,"['carruthers1914', 'donner1915', 'drei1925', 'mpprice1912', 'niemojowski1883', 'piotrowski1863', 'rabot1894', 'radloff1893', 'svinhufvud1928']",carruthers1914_p00781
+natives_generic,siberian_tatar,conflict,1,['radloff1893'],radloff1893_p00849
+natives_generic,siberian_tatar,exploitation,1,['wenyon1896'],wenyon1896_p00460
+natives_generic,siberian_tatar,trade_exchange,3,"['mpprice1912', 'niemojowski1883']",mpprice1912_p00439
+natives_generic,sibiriak,conflict,1,['guillemard1889'],guillemard1889_p00788
+natives_generic,sibiriak,exploitation,1,['carruthers1914'],carruthers1914_p00692
+natives_generic,sibiriak,intermarriage_mixing,1,['guillemard1889'],guillemard1889_p00788
+natives_generic,sibiriak,trade_exchange,2,"['carruthers1914', 'mpprice1912']",carruthers1914_p00692
+natives_generic,tramps,co_mention,3,['hawes1903'],hawes1903_p00828
+natives_generic,tuvan,co_mention,2,['carruthers1914'],carruthers1914_p00694
+natives_generic,ukrainian,co_mention,1,['cottrell1842'],cottrell1842_p00398
+natives_generic,volga_peoples,trade_exchange,1,['finsch1879'],finsch1879_p02112
+natives_generic,yukaghir,co_mention,1,['lansdell1883'],lansdell1883_p00981
+nenets,russian,administration_tribute,1,['nansen1914'],nansen1914_p00708
+nenets,russian,co_mention,6,"['castren1856', 'nansen1914', 'nansen1914_no', 'patursson1901']",castren1856_p01204
+nenets,sakha,administration_tribute,1,['nansen1914'],nansen1914_p00708
+nenets,sakha,co_mention,3,"['nansen1914_no', 'patursson1901']",nansen1914_no_p00686
+nenets,samoyedic,administration_tribute,1,['nansen1914'],nansen1914_p00708
+nenets,samoyedic,co_mention,37,"['castren1856', 'donner1915', 'finsch1879', 'haviland1915', 'lansdell1883', 'nansen1914', 'nansen1914_no', 'rosenberg1904']",castren1856_p01141
+nenets,samoyedic,coexistence_neighbourhood,2,"['castren1856', 'donner1915']",castren1856_p01211
+nenets,samoyedic,labour_service,1,['nansen1914_no'],nansen1914_no_p00620
+nenets,samoyedic,trade_exchange,3,"['castren1856', 'haviland1915', 'nansen1914']",castren1856_p01168
+nenets,selkup,administration_tribute,1,['nansen1914'],nansen1914_p00708
+nenets,selkup,co_mention,1,['donner1915'],donner1915_p00291
+nenets,siberian_tatar,co_mention,1,['patursson1901'],patursson1901_p00307
+nenets,sibiriak,co_mention,1,['haviland1915'],haviland1915_p00615
+nivkh,pereselentsy,co_mention,1,['gerrare1903'],gerrare1903_p00831
+nivkh,russian,co_mention,14,"['gaunt1919', 'harrison1910', 'hawes1903', 'lansdell1883']",gaunt1919_p00584
+nivkh,russian,coexistence_neighbourhood,1,['lansdell1883'],lansdell1883_p02131
+nivkh,russian,religious_mission,2,['lansdell1883'],lansdell1883_p02029
+nivkh,sakha,co_mention,1,['hawes1903'],hawes1903_p01116
+nivkh,sibiriak,co_mention,1,['gerrare1903'],gerrare1903_p00831
+nivkh,sibiriak,labour_service,1,['digby1928'],digby1928_p00649
+nivkh,tramps,co_mention,1,['hawes1903'],hawes1903_p01660
+old_believer,pereselentsy,co_mention,1,['lansdell1883'],lansdell1883_p01807
+old_believer,russian,co_mention,2,"['lansdell1883', 'leroybeaulieu1900']",lansdell1883_p01771
+old_believer,russian,religious_mission,1,['lansdell1883'],lansdell1883_p02671
+pereselentsy,pole,co_mention,2,"['harrison1910', 'niemojowski1883']",harrison1910_p00478
+pereselentsy,political_exiles,administration_tribute,1,['dewindt1903'],dewindt1903_p00177
+pereselentsy,political_exiles,co_mention,6,"['colquhoun1900', 'fraser1902', 'gerrare1903', 'mpprice1912']",colquhoun1900_p00297
+pereselentsy,russian,administration_tribute,2,"['fraser1902', 'perryayscough1914']",fraser1902_p00451
+pereselentsy,russian,assimilation,1,['harrison1910'],harrison1910_p01245
+pereselentsy,russian,co_mention,15,"['carruthers1914', 'dewindt1896', 'erman1833', 'gerrare1903', 'harrison1910', 'heller1930', 'joest1883', 'leroybeaulieu1900', 'nansen1914', 'nansen1914_no', 'patursson1901', 'stadling1901', 'whittingham1856']",carruthers1914_p00683
+pereselentsy,russian,labour_service,2,"['bordeaux1904', 'nansen1914']",bordeaux1904_p00655
+pereselentsy,russian,trade_exchange,3,"['carruthers1914', 'patursson1901', 'stadling1901']",carruthers1914_p00680
+pereselentsy,sakha,administration_tribute,2,['dewindt1903'],dewindt1903_p00177
+pereselentsy,sakha,assimilation,1,['stadling1901'],stadling1901_p00236
+pereselentsy,samoyedic,co_mention,1,['gowing1889'],gowing1889_p00865
+pereselentsy,siberian_tatar,co_mention,4,"['drei1925', 'erman1833', 'grondijs1922', 'harrison1910']",drei1925_p00516
+pereselentsy,siberian_tatar,coexistence_neighbourhood,1,['carruthers1914'],carruthers1914_p00340
+pereselentsy,sibiriak,co_mention,3,"['carruthers1914', 'gerrare1903', 'turner1905']",carruthers1914_p00433
+pereselentsy,tramps,co_mention,1,['hawes1903'],hawes1903_p01224
+pereselentsy,tuvan,administration_tribute,1,['carruthers1914'],carruthers1914_p00704
+pereselentsy,tuvan,co_mention,2,['carruthers1914'],carruthers1914_p00683
+pereselentsy,tuvan,labour_service,1,['carruthers1914'],carruthers1914_p00827
+pereselentsy,tuvan,trade_exchange,2,"['carruthers1914', 'perryayscough1914']",carruthers1914_p00704
+pereselentsy,ukrainian,co_mention,2,"['debaye1898', 'harrison1910']",debaye1898_p00075
+pereselentsy,ukrainian,trade_exchange,1,['gerrare1903'],gerrare1903_p00651
+pereselentsy,volga_peoples,co_mention,2,"['debaye1898', 'grondijs1922']",debaye1898_p00075
+pole,political_exiles,administration_tribute,1,['lansdell1883'],lansdell1883_p01604
+pole,political_exiles,co_mention,6,"['dewindt1889', 'finsch1879', 'lansdell1883', 'piotrowski1863', 'seebohm1882']",dewindt1889_p00628
+pole,political_exiles,coexistence_neighbourhood,1,['haviland1915'],haviland1915_p00474
+pole,russian,administration_tribute,2,"['gerrare1903', 'lansdell1883']",gerrare1903_p00171
+pole,russian,co_mention,14,"['bordeaux1904', 'gaunt1919', 'gsimpson1847', 'harrison1910', 'johnson1907', 'lansdell1883', 'latkinson1863', 'meignan1877', 'michie1864', 'mpprice1912']",bordeaux1904_p00427
+pole,russian,coexistence_neighbourhood,1,['svinhufvud1928'],svinhufvud1928_p00485
+pole,russian,conflict,1,['whyte1871'],whyte1871_p00617
+pole,russian,intermarriage_mixing,1,['tronson1859'],tronson1859_p00627
+pole,russian,trade_exchange,1,['lansdell1883'],lansdell1883_p01286
+pole,siberian_tatar,administration_tribute,1,['michie1864'],michie1864_p00793
+pole,siberian_tatar,co_mention,6,"['gsimpson1847', 'harrison1910', 'johnson1907', 'mpprice1912', 'patursson1901']",gsimpson1847_p01404
+pole,siberian_tatar,conflict,1,['finsch1879'],finsch1879_p01713
+pole,siberian_tatar,labour_service,1,['debaye1897'],debaye1897_p00198
+pole,sibiriak,co_mention,2,"['meignan1877', 'mpprice1912']",meignan1877_p00819
+political_exiles,russian,co_mention,2,['lansdell1883'],lansdell1883_p00300
+political_exiles,russian,conflict,1,['lansdell1883'],lansdell1883_p01260
+political_exiles,russian,trade_exchange,1,['lansdell1883'],lansdell1883_p01260
+political_exiles,sakha,administration_tribute,1,['dewindt1903'],dewindt1903_p00177
+political_exiles,sakha,assimilation,1,['simpson1898'],simpson1898_p01189
+political_exiles,samoyedic,co_mention,1,['haviland1915'],haviland1915_p00655
+political_exiles,siberian_tatar,co_mention,2,"['lansdell1883', 'mpprice1912']",lansdell1883_p01394
+russian,sakha,administration_tribute,6,"['eden1879', 'gsimpson1847', 'hill1854', 'nansen1914', 'stadling1901']",eden1879_p00559
+russian,sakha,co_mention,42,"['castren1856', 'cochrane1829', 'colquhoun1900', 'cottrell1842', 'dewindt1889', 'dewindt1892', 'dewindt1903', 'digby1928', 'dobell1830', 'eden1879', 'erman1833', 'gsimpson1847', 'hill1854', 'kubalski1856', 'lansdell1883', 'marsden1892', 'muller1882', 'nansen1914_no', 'niemojowski1883', 'stadling1901']",castren1856_p01186
+russian,sakha,coexistence_neighbourhood,7,"['eden1879', 'erman1833', 'gsimpson1847', 'hill1854', 'simpson1898']",eden1879_p00559
+russian,sakha,conflict,1,['gsimpson1847'],gsimpson1847_p01083
+russian,sakha,intermarriage_mixing,1,['dobell1830'],dobell1830_p01236
+russian,sakha,labour_service,2,"['dewindt1903', 'gsimpson1847']",dewindt1903_p00138
+russian,sakha,trade_exchange,6,"['dewindt1903', 'erman1833', 'hill1854']",dewindt1903_p00138
+russian,samoyedic,administration_tribute,5,"['donner1915', 'nansen1914', 'sommier1885']",donner1915_p00076
+russian,samoyedic,assimilation,1,['donner1915'],donner1915_p00071
+russian,samoyedic,co_mention,63,"['castren1856', 'dewindt1889', 'donner1915', 'finsch1879', 'heller1930', 'johnson1907', 'lansdell1883', 'leroybeaulieu1900', 'nansen1914', 'nansen1914_no', 'peel1894', 'sommier1885', 'svinhufvud1928']",castren1856_p00688
+russian,samoyedic,coexistence_neighbourhood,2,['donner1915'],donner1915_p00071
+russian,samoyedic,conflict,4,"['donner1915', 'finsch1879']",donner1915_p00069
+russian,samoyedic,exploitation,3,"['donner1915', 'sommier1885']",donner1915_p00069
+russian,samoyedic,intermarriage_mixing,1,['donner1915'],donner1915_p00055
+russian,samoyedic,trade_exchange,12,"['castren1856', 'donner1915', 'erman1833', 'johnson1907', 'sommier1885']",castren1856_p00913
+russian,selkup,administration_tribute,1,['nansen1914'],nansen1914_p00708
+russian,selkup,co_mention,1,['donner1915'],donner1915_p00378
+russian,siberian_tatar,administration_tribute,7,"['eden1879', 'fraser1902', 'michie1864', 'mpprice1912', 'sommier1885']",eden1879_p00080
+russian,siberian_tatar,assimilation,2,"['castren1856', 'mpprice1912']",castren1856_p01422
+russian,siberian_tatar,co_mention,87,"['bergman1927', 'boulangier1891', 'carruthers1914', 'castren1856', 'cochrane1829', 'cotteau1885', 'cottrell1842', 'dewindt1889', 'dewindt1892', 'donner1915', 'drei1925', 'eden1879', 'erman1833', 'fraser1902', 'gerrare1903', 'grano1893', 'gsimpson1847', 'hansteen1857', 'harrison1910', 'haviland1915', 'hill1854', 'hprice1919', 'jefferson1896', 'johnson1907', 'kotzebue1802', 'kubalski1856', 'lansdell1883', 'michie1864', 'mpprice1912', 'radloff1893', 'rosenberg1904', 'sommier1885', 'turner1905']",bergman1927_p00541
+russian,siberian_tatar,coexistence_neighbourhood,1,['atkinson1858'],atkinson1858_p01491
+russian,siberian_tatar,conflict,10,"['carruthers1914', 'dewindt1892', 'drei1925', 'leroybeaulieu1900', 'mpprice1912', 'radloff1893', 'sommier1885']",carruthers1914_p00304
+russian,siberian_tatar,exploitation,2,['sommier1885'],sommier1885_p00422
+russian,siberian_tatar,intermarriage_mixing,1,['mpprice1912'],mpprice1912_p00503
+russian,siberian_tatar,labour_service,2,"['castren1856', 'radloff1893']",castren1856_p01423
+russian,siberian_tatar,religious_mission,2,"['castren1856', 'grano1893']",castren1856_p01423
+russian,siberian_tatar,trade_exchange,7,"['donner1915', 'drei1925', 'fell1916', 'grano1893', 'sommier1885']",donner1915_p00373
+russian,sibiriak,administration_tribute,3,"['colquhoun1900', 'hill1854', 'niemojowski1883']",colquhoun1900_p00095
+russian,sibiriak,co_mention,22,"['barzini1908', 'castren1856', 'cotteau1885', 'dewindt1889', 'digby1928', 'drei1925', 'erman1833', 'grano1893', 'hawes1903', 'hill1854', 'legras1899', 'meignan1877', 'mpprice1912', 'reid1899', 'stadling1901', 'turner1905']",barzini1908_p00050
+russian,sibiriak,coexistence_neighbourhood,1,['hill1854'],hill1854_p02867
+russian,sibiriak,conflict,1,['dewindt1889'],dewindt1889_p00645
+russian,sibiriak,labour_service,1,['legras1899'],legras1899_p00823
+russian,sibiriak,trade_exchange,3,"['carruthers1914', 'hill1854']",carruthers1914_p00803
+russian,tuvan,administration_tribute,2,"['carruthers1914', 'ossendowski1922']",carruthers1914_p00827
+russian,tuvan,co_mention,3,"['carruthers1914', 'perryayscough1914']",carruthers1914_p00683
+russian,tuvan,labour_service,2,['carruthers1914'],carruthers1914_p00827
+russian,tuvan,trade_exchange,2,['carruthers1914'],carruthers1914_p00803
+russian,volga_peoples,co_mention,2,"['finsch1879', 'svinhufvud1928']",finsch1879_p02431
+russian,volga_peoples,conflict,2,['finsch1879'],finsch1879_p02292
+russian,volga_peoples,trade_exchange,1,['finsch1879'],finsch1879_p02112
+russian,yukaghir,co_mention,3,"['cochrane1829', 'dewindt1889']",cochrane1829_p00727
+sakha,samoyedic,administration_tribute,1,['nansen1914'],nansen1914_p00708
+sakha,samoyedic,co_mention,15,"['castren1856', 'colquhoun1900', 'digby1928', 'heller1930', 'muller1882', 'nansen1914', 'nansen1914_no']",castren1856_p01186
+sakha,selkup,administration_tribute,1,['nansen1914'],nansen1914_p00708
+sakha,selkup,co_mention,1,['nansen1914'],nansen1914_p00728
+sakha,siberian_tatar,assimilation,1,['niemojowski1883'],niemojowski1883_p00138
+sakha,siberian_tatar,co_mention,15,"['cochrane1829', 'cottrell1842', 'dewindt1903', 'dobell1830', 'heller1930', 'lansdell1883', 'nansen1914', 'niemojowski1883', 'patursson1901', 'radloff1893', 'stadling1901']",cochrane1829_p00847
+sakha,siberian_tatar,intermarriage_mixing,1,['bergman1927'],bergman1927_p00172
+sakha,siberian_tatar,labour_service,1,['bordeaux1904'],bordeaux1904_p00358
+sakha,sibiriak,administration_tribute,1,['hill1854'],hill1854_p02867
+sakha,sibiriak,co_mention,1,['eden1879'],eden1879_p00556
+sakha,sibiriak,coexistence_neighbourhood,1,['hill1854'],hill1854_p02867
+sakha,sibiriak,labour_service,1,['bordeaux1904'],bordeaux1904_p00358
+sakha,sibiriak,trade_exchange,1,['hill1854'],hill1854_p02867
+sakha,ukrainian,labour_service,1,['bordeaux1904'],bordeaux1904_p00358
+sakha,volga_peoples,co_mention,2,['erman1833'],erman1833_p05513
+sakha,yukaghir,co_mention,6,"['cochrane1829', 'dewindt1889', 'eden1879', 'lansdell1883']",cochrane1829_p00722
+sakha,yukaghir,labour_service,4,"['cochrane1829', 'cottrell1842', 'maynard1859']",cochrane1829_p00873
+samoyedic,selkup,administration_tribute,2,"['castren1856', 'nansen1914']",castren1856_p00985
+samoyedic,selkup,co_mention,3,"['donner1915', 'nansen1914']",donner1915_p00248
+samoyedic,siberian_tatar,administration_tribute,1,['wenyon1896'],wenyon1896_p00624
+samoyedic,siberian_tatar,assimilation,1,['finsch1879'],finsch1879_p02275
+samoyedic,siberian_tatar,co_mention,33,"['castren1856', 'dewindt1889', 'donner1915', 'heller1930', 'lansdell1883', 'mpprice1912', 'nansen1914', 'nansen1914_no', 'radloff1893', 'sommier1885', 'wenyon1896']",castren1856_p00688
+samoyedic,siberian_tatar,coexistence_neighbourhood,1,['finsch1879'],finsch1879_p02275
+samoyedic,siberian_tatar,conflict,1,['castren1856'],castren1856_p01304
+samoyedic,siberian_tatar,trade_exchange,1,['donner1915'],donner1915_p00156
+samoyedic,sibiriak,co_mention,1,['haviland1915'],haviland1915_p00615
+samoyedic,tuvan,co_mention,2,"['carruthers1914', 'castren1856']",carruthers1914_p00373
+samoyedic,tuvan,conflict,2,['castren1856'],castren1856_p01304
+samoyedic,volga_peoples,co_mention,4,"['castren1856', 'finsch1879', 'jefferson1897']",castren1856_p00238
+samoyedic,volga_peoples,conflict,1,['finsch1879'],finsch1879_p02511
+samoyedic,volga_peoples,trade_exchange,1,['finsch1879'],finsch1879_p02511
+selkup,siberian_tatar,co_mention,1,['nansen1914'],nansen1914_p00728
+siberian_tatar,sibiriak,administration_tribute,1,['carruthers1914'],carruthers1914_p00683
+siberian_tatar,sibiriak,co_mention,5,"['digby1928', 'erman1833', 'mpprice1912', 'stadling1901', 'turner1905']",digby1928_p00568
+siberian_tatar,sibiriak,labour_service,2,"['bordeaux1904', 'mpprice1912']",bordeaux1904_p00358
+siberian_tatar,sibiriak,trade_exchange,2,['carruthers1914'],carruthers1914_p00351
+siberian_tatar,tuvan,co_mention,10,"['carruthers1914', 'castren1856', 'radloff1893']",carruthers1914_p00724
+siberian_tatar,tuvan,conflict,5,"['castren1856', 'ossendowski1922']",castren1856_p01304
+siberian_tatar,tuvan,labour_service,1,['carruthers1914'],carruthers1914_p00678
+siberian_tatar,tuvan,trade_exchange,3,"['carruthers1914', 'castren1856']",carruthers1914_p00678
+siberian_tatar,ukrainian,labour_service,1,['bordeaux1904'],bordeaux1904_p00358
+siberian_tatar,volga_peoples,co_mention,3,"['grondijs1922', 'hansteen1857']",grondijs1922_p02451
+siberian_tatar,yukaghir,co_mention,1,['cochrane1829'],cochrane1829_p00874
+sibiriak,tuvan,trade_exchange,1,['carruthers1914'],carruthers1914_p00803
+sibiriak,ukrainian,labour_service,1,['bordeaux1904'],bordeaux1904_p00358
+sibiriak,yukaghir,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
+ukrainian,volga_peoples,co_mention,1,['debaye1898'],debaye1898_p00075

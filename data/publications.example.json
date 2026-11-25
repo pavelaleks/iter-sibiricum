@@ -1,0 +1,19 @@
+[
+  {
+    "authors": "Иванова А. А., Петров Б. Б.",
+    "title": "Название статьи",
+    "venue": "Сибирский исторический журнал",
+    "year": 2025,
+    "status": "published",
+    "doi": "10.0000/xxxx",
+    "url": "https://…",
+    "pdf": "pubs/ivanova2025.pdf",
+    "abstract": "Две-три фразы.",
+    "groups": ["sakha", "buryat"],
+    "works": ["lansdell1883"]
+  },
+  {
+    "authors": "…", "title": "…", "venue": "…", "year": 2026,
+    "status": "in_press", "abstract": "…"
+  }
+]

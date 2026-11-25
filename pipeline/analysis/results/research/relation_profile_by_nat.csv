@@ -1,0 +1,55 @@
+nat,nat_ru,works,rel_type,rel_ru,n_typed,share,lo,hi
+british,Великобритания,31,trade_exchange,торговля и обмен,189,0.233,0.161,0.302
+british,Великобритания,31,exploitation,"эксплуатация, обман, долги",189,0.021,0.004,0.043
+british,Великобритания,31,conflict,"конфликт, насилие",189,0.138,0.086,0.204
+british,Великобритания,31,intermarriage_mixing,браки и смешение,189,0.09,0.039,0.15
+british,Великобритания,31,assimilation,"ассимиляция, обрусение",189,0.011,0.0,0.028
+british,Великобритания,31,administration_tribute,"власть, ясак, подати",189,0.206,0.135,0.283
+british,Великобритания,31,labour_service,наём и служба,189,0.101,0.053,0.153
+british,Великобритания,31,religious_mission,"миссия, крещение",189,0.048,0.005,0.109
+british,Великобритания,31,coexistence_neighbourhood,соседство,189,0.153,0.089,0.226
+finnish,Финляндия,4,trade_exchange,торговля и обмен,41,0.39,0.296,0.667
+finnish,Финляндия,4,exploitation,"эксплуатация, обман, долги",41,0.049,0.0,0.071
+finnish,Финляндия,4,conflict,"конфликт, насилие",41,0.22,0.118,0.273
+finnish,Финляндия,4,intermarriage_mixing,браки и смешение,41,0.024,0.0,0.036
+finnish,Финляндия,4,assimilation,"ассимиляция, обрусение",41,0.049,0.0,0.111
+finnish,Финляндия,4,administration_tribute,"власть, ясак, подати",41,0.073,0.0,0.107
+finnish,Финляндия,4,labour_service,наём и служба,41,0.024,0.0,0.111
+finnish,Финляндия,4,religious_mission,"миссия, крещение",41,0.049,0.0,0.235
+finnish,Финляндия,4,coexistence_neighbourhood,соседство,41,0.122,0.0,0.143
+french,Франция/Бельгия,6,trade_exchange,торговля и обмен,22,0.136,0.0,0.385
+french,Франция/Бельгия,6,exploitation,"эксплуатация, обман, долги",22,0.0,0.0,0.0
+french,Франция/Бельгия,6,conflict,"конфликт, насилие",22,0.091,0.0,0.25
+french,Франция/Бельгия,6,intermarriage_mixing,браки и смешение,22,0.045,0.0,0.214
+french,Франция/Бельгия,6,assimilation,"ассимиляция, обрусение",22,0.0,0.0,0.0
+french,Франция/Бельгия,6,administration_tribute,"власть, ясак, подати",22,0.045,0.0,0.143
+french,Франция/Бельгия,6,labour_service,наём и служба,22,0.455,0.067,0.792
+french,Франция/Бельгия,6,religious_mission,"миссия, крещение",22,0.227,0.0,0.455
+french,Франция/Бельгия,6,coexistence_neighbourhood,соседство,22,0.0,0.0,0.0
+german,Германия/Австрия,8,trade_exchange,торговля и обмен,78,0.321,0.048,0.53
+german,Германия/Австрия,8,exploitation,"эксплуатация, обман, долги",78,0.026,0.0,0.047
+german,Германия/Австрия,8,conflict,"конфликт, насилие",78,0.41,0.254,0.6
+german,Германия/Австрия,8,intermarriage_mixing,браки и смешение,78,0.0,0.0,0.0
+german,Германия/Австрия,8,assimilation,"ассимиляция, обрусение",78,0.013,0.0,0.05
+german,Германия/Австрия,8,administration_tribute,"власть, ясак, подати",78,0.064,0.017,0.207
+german,Германия/Австрия,8,labour_service,наём и служба,78,0.064,0.029,0.157
+german,Германия/Австрия,8,religious_mission,"миссия, крещение",78,0.0,0.0,0.0
+german,Германия/Австрия,8,coexistence_neighbourhood,соседство,78,0.103,0.0,0.165
+polish,Польша,3,trade_exchange,торговля и обмен,7,0.286,0.0,0.5
+polish,Польша,3,exploitation,"эксплуатация, обман, долги",7,0.0,0.0,0.0
+polish,Польша,3,conflict,"конфликт, насилие",7,0.0,0.0,0.0
+polish,Польша,3,intermarriage_mixing,браки и смешение,7,0.286,0.0,0.5
+polish,Польша,3,assimilation,"ассимиляция, обрусение",7,0.0,0.0,0.0
+polish,Польша,3,administration_tribute,"власть, ясак, подати",7,0.143,0.0,0.5
+polish,Польша,3,labour_service,наём и служба,7,0.286,0.0,1.0
+polish,Польша,3,religious_mission,"миссия, крещение",7,0.0,0.0,0.0
+polish,Польша,3,coexistence_neighbourhood,соседство,7,0.0,0.0,0.0
+scandinavian,Скандинавия,5,trade_exchange,торговля и обмен,24,0.167,0.057,0.417
+scandinavian,Скандинавия,5,exploitation,"эксплуатация, обман, долги",24,0.0,0.0,0.0
+scandinavian,Скандинавия,5,conflict,"конфликт, насилие",24,0.0,0.0,0.0
+scandinavian,Скандинавия,5,intermarriage_mixing,браки и смешение,24,0.083,0.0,0.2
+scandinavian,Скандинавия,5,assimilation,"ассимиляция, обрусение",24,0.083,0.0,0.2
+scandinavian,Скандинавия,5,administration_tribute,"власть, ясак, подати",24,0.417,0.0,0.632
+scandinavian,Скандинавия,5,labour_service,наём и служба,24,0.125,0.0,0.308
+scandinavian,Скандинавия,5,religious_mission,"миссия, крещение",24,0.0,0.0,0.0
+scandinavian,Скандинавия,5,coexistence_neighbourhood,соседство,24,0.125,0.0,0.417

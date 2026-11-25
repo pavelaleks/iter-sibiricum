@@ -1,0 +1,43 @@
+group_id,mentions,works,name_ru,category
+russian,2815,107,русские,settler
+cossack,2419,98,казаки,settler
+exiles,2123,91,ссыльные и каторжные,social
+khanty,2043,49,ханты,indigenous
+natives_generic,1773,79,"«туземцы», «инородцы» (обобщённо)",generic
+samoyedic,1728,45,самодийские народы (без уточнения),indigenous
+kazakh_kirghiz,1611,67,казахи ('киргизы' XIX в.),indigenous
+siberian_tatar,1363,85,татары (в т.ч. сибирские),indigenous
+evenki_even,1054,58,эвенки / эвены,indigenous
+sakha,1024,45,якуты (саха),indigenous
+chinese,998,85,китайцы,neighbour
+mongol,840,71,монголы,neighbour
+pereselentsy,762,77,переселенцы,settler
+buryat,611,57,буряты,indigenous
+nivkh,414,16,нивхи,indigenous
+political_exiles,381,48,политические ссыльные,social
+finn_estonian,361,21,финны и эстонцы,settler
+sibiriak,352,62,сибиряки / старожилы,settler
+altai_kalmyk,337,36,алтайцы / ойраты ('калмыки'),indigenous
+chukchi,289,31,чукчи,indigenous
+tuvan,273,6,тувинцы,indigenous
+koryak,244,17,коряки,indigenous
+jew,243,61,евреи,settler
+german,206,44,немцы,settler
+japanese,205,42,японцы,foreign
+pole,185,55,поляки,settler
+manchu,172,27,маньчжуры,neighbour
+czech_slovak,168,7,чехи и словаки,foreign
+itelmen_kamchadal,163,17,ительмены / камчадалы,indigenous
+nenets,161,11,ненцы,indigenous
+nanai_amur,136,12,нанайцы и др. народы Амура,indigenous
+korean,128,19,корейцы,neighbour
+tramps,108,18,бродяги,social
+volga_peoples,98,19,народы Поволжья и Приуралья,settler
+kamas,86,5,камасинцы,indigenous
+ket,82,4,кеты,indigenous
+ainu,77,15,айны,indigenous
+old_believer,45,12,старообрядцы,settler
+yukaghir,36,12,юкагиры,indigenous
+selkup,25,3,селькупы,indigenous
+ukrainian,17,10,украинцы ('малороссы'),settler
+mansi,16,4,манси,indigenous

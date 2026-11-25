@@ -1,0 +1,79 @@
+work_id,author,origin,text_lang,original_lang,is_translation,edition_year,edition_place,source,ia_ids,gallica_arks,pg_id,ocr_function_word_share,ocr_junk_share,first_person_per1k,travel_lex_per1k,ocr_verdict,genre_verdict,status,notes
+kotzebue1802,August von Kotzebue,Germany,en,de,true,1802,London,archive.org,mostremarkableye00kotz,,,0.474,0.0022,48.7,3.32,good,travelogue/exile memoir,include,English translation; German original not found on IA
+cochrane1829,John Dundas Cochrane,UK,en,en,false,1829,Edinburgh,archive.org,pedestrianjourne01cochuoft;pedestrianjourne02cochuoft,,,,0.0006,,,good,travelogue,include,2 vols; fw not measured (language misdetected in check)
+holman1825,James Holman,UK,en,en,false,1825,London,archive.org,india.history.resource.36205;india.history.resource.36206,,,0.459,0.0029,21.6,3.29,good,travelogue,include,2 vols
+dobell1830,Peter Dobell,Ireland/UK,en,en,false,1830,London,archive.org,travelsinkamtch00dobegoog;travelsinkamtch01dobegoog,,,0.453,0.0035,46.6,7.61,good,travelogue,include,2 vols
+erman1833,Adolph Erman,Germany,de,de,false,1833,Berlin,archive.org,bub_gb_XlM6AQAAIAAJ;bub_gb_uFM6AQAAIAAJ,,,0.351,0.002,7.1,2.51,good,travel+science,include,original German; English 1848 London ed. available: travelsinsiberia01erma;travelsinsiberia02erma
+cottrell1842,Charles Herbert Cottrell,UK,en,en,false,1842,London,archive.org,india.history.resource.41555,,,0.482,0.0017,14.5,3.17,good,travelogue,include,
+felinska1854,Ewa Felińska,Poland (exile),en,pl,true,1854,London,archive.org,revelationsofsib01feliuoft;revelationsofsib02feliuoft,,,0.461,0.0007,33.4,3.07,good,exile memoir,include,Polish exile; English translation
+hill1854,S. S. Hill,UK,en,en,false,1854,London,archive.org,india.history.resource.70730;india.history.resource.70731,,,0.483,0.0034,31.9,4.79,good,travelogue,include,2 vols
+hansteen1857,Christopher Hansteen,Norway,fr,no,true,1857,Paris,archive.org,souvenirsdunvoy00hansgoog,,,0.382,0.0016,41.7,6.87,good,travelogue,include,"French translation (good OCR); German 1854 Fraktur scans: 10738416bsb usable, others reject"
+castren1856,M. A. Castrén,Finland,de,sv,true,1856,St Petersburg,archive.org,reiseberichteun00castgoog,,,0.338,0.0036,27,4.43,good,travel letters (scholar),include,German ed. of travel reports 1845–49
+atkinson1858,Thomas Witlam Atkinson,UK,en,en,false,1858,London,archive.org,orientalwesterns00atki,,,0.453,0.0006,41.7,9.74,good,travelogue,include,
+atkinson1860,Thomas Witlam Atkinson,UK,en,en,false,1860,London,archive.org,travelsinregions00atkiuoft,,,0.441,0.0003,17.8,6.83,good,travelogue,include,
+latkinson1863,Lucy Atkinson,UK,en,en,false,1863,London,archive.org,dli.ministry.05617,,,,,,,unchecked,travelogue,check,download failed in check; retry
+tronson1859,J. M. Tronson,UK,en,en,false,1859,London,archive.org,personalnarrativ00tron,,,0.429,0.0008,18.9,1.93,good,voyage narrative,include,
+whittingham1856,Bernard Whittingham,UK,en,en,false,1856,London,archive.org,notesoflateexped00whit,,,0.441,0.0002,17.5,1.67,good,military narrative,include,
+maynard1859,Félix Maynard,France,fr,fr,false,1859,Paris,archive.org,undramedanslesme00mayn,,,0.393,0.0008,21.7,1.68,good,"check: souvenirs, possibly fictionalised",include,verify genre
+whyte1871,William Athenry Whyte,UK,en,en,false,1871,London,archive.org,cu31924023061504,,,0.46,0.0009,55.8,8.69,good,travelogue,include,
+meignan1877,Victor Meignan,France,fr,fr,false,1877,Paris,archive.org,deparispkinp00meiguoft,,,0.381,0.0007,44.5,4.7,good,travelogue,include,French original replaces English translation
+kittlitz1858,F. H. von Kittlitz,Germany,de,de,false,1858,Gotha,archive.org,cihm_37557,,,0.343,0.0306,32.2,1.76,usable,travelogue (naturalist),include,"Fraktur OCR, junk 3%"
+joest1883,Wilhelm Joest,Germany,de,de,false,1883,Berlin,archive.org,11828551bsb,,,0.372,0.0016,31.9,4.91,good,travelogue,include,
+lansdell1883,Henry Lansdell,UK,en,en,false,1883,London,archive.org,throughsiberia00lans,,,0.463,0.0012,22.1,4.46,good,travelogue,include,
+seebohm1882,Henry Seebohm,UK,en,en,false,1882,London,archive.org,siberiainasiavis00seeb,,,0.414,0.0009,26.3,4.08,good,travelogue (naturalist),include,
+cotteau1885,Edmond Cotteau,France,fr,fr,false,1885,Paris,archive.org,ldpd_11894503_000,,,0.38,0.0102,27.3,5.83,usable,travelogue,include,
+gowing1889,Lionel F. Gowing,UK,en,en,false,1889,London,archive.org,fivethousandmil00gowigoog,,,0.415,0.0023,29.9,12.27,good,travelogue,include,
+guillemard1889,F. H. H. Guillemard,UK,en,en,false,1889,London,archive.org,cruisemarchesat00guilgoog,,,0.465,0.0013,27.1,2.34,good,voyage narrative,include,Kamchatka chapters only fall in Siberia
+radloff1893,Wilhelm Radloff,Germany (Russian service),de,de,false,1893,Leipzig,archive.org,aussibirienlose00radlgoog,,,0.379,0.0014,15.6,3.29,good,travel diary (scholar),include,check whether both volumes are needed
+boulangier1891,Edgar Boulangier,France,fr,fr,false,1891,Paris,archive.org,notesdevoyageen00boulgoog,,,0.37,0.0027,14.8,5.37,good,travelogue,include,
+dewindt1892,Harry de Windt,UK,en,en,false,1892,London,archive.org,siberiaasitis00dewi,,,,0.0009,,,good,travelogue,include,
+dewindt1896,Harry de Windt,UK,en,en,false,1896,London,archive.org,newsiberiabeinga00dewiiala,,,,0.0007,,,good,travelogue,include,
+peel1894,Helen Peel,UK,en,en,false,1894,London,archive.org,polargleamsaccou00peelrich,,,0.417,0.0002,30.9,3.07,good,travelogue,include,
+jefferson1896,Robert L. Jefferson,UK,en,en,false,1896,London,archive.org,acrosssiberiaonb00jeff,,,0.426,0.0091,39.9,7.94,good,travelogue,include,
+jefferson1897,Robert L. Jefferson,UK,en,en,false,1897,London,archive.org,roughingitinsibe00jeff,,,0.47,0.0004,29.9,7.61,good,travelogue,include,
+finsch1879,Otto Finsch,Germany,de,de,false,1879,Berlin,archive.org,reisenachwestsi00finsgoog,,,0.348,0.0031,21,3.08,good,travelogue (expedition),include,
+debaye1897,Joseph de Baye,France,fr,fr,false,1897,Paris,archive.org,rcin.org.pl.WA51_104156_PAN59031-r1897_Moscou-Krasnoiarsk_82324,,,0.362,0.0114,27.9,2.33,usable,travelogue (short),include,
+debaye1898,Joseph de Baye,France,fr,fr,false,1898,Paris,archive.org,dePenzaaMinoussinsk,,,0.382,0.0109,13.4,3.82,usable,travelogue (short),include,
+wenyon1896,Charles Wenyon,UK,en,en,false,1896,London,archive.org,acrosssiberiaong00weny,,,0.475,0.0004,21.9,8.25,good,travelogue,include,
+legras1899,Jules Legras,France,fr,fr,false,1899,Paris,archive.org,ensibrie00legrgoog,,,0.374,0.0025,35.4,2.82,good,travelogue,include,
+marsden1892,Kate Marsden,UK,en,en,false,1892,London,archive.org,b21952450,,,0.457,0.0013,35.3,8.26,good,travelogue,include,
+colquhoun1900,Archibald R. Colquhoun,UK,en,en,false,1900,London,archive.org,overlandtochina00colquoft,,,0.426,0.001,3.0,2.1,good,travel+analysis,include,low first-person rate
+simpson1898,James Young Simpson,UK,en,en,false,1898,Edinburgh,archive.org,sidelightsonsib00simp,,,,0.0004,,,good,travelogue,include,
+leroybeaulieu1900,Pierre Leroy-Beaulieu,France,fr,fr,false,1900,Paris,archive.org,india.history.resource.111125,,,0.379,0.0052,11.1,1.04,good,travel+analysis,include,French original replaces English translation
+meakin1901,Annette M. B. Meakin,UK,en,en,false,1901,Westminster,archive.org,ribbonofiron00meak,,,0.474,0.0006,38.3,5.05,good,travelogue,include,
+reid1899,Arnot Reid,UK,en,en,false,1899,London,archive.org,dli.ministry.05111,,,,,,,unchecked,travelogue,check,download failed in check; retry
+tytgat1901,Charles Tytgat,Belgium,fr,fr,false,1901,Brussels,archive.org,unreportageench00tytggoog,,,0.36,0.004,40.7,1.78,good,travelogue,include,
+stadling1901,Jonas Stadling,Sweden,en,sv,true,1901,Westminster,archive.org,throughsiberia00staduoft,,,0.449,0.0004,19,4.57,good,travelogue,include,English translation; Swedish original 'Genom Sibirien' not on IA
+fraser1902,John Foster Fraser,UK,en,en,false,1902,London,archive.org,cu31924023035912,,,0.432,0.0007,23,4.44,good,travelogue,include,
+norman1902,Henry Norman,UK,en,en,false,1902,London,archive.org,allrussiastravel00normuoft,,,0.432,0.001,12.5,2.88,good,travel+analysis,include,Siberia chapters only
+sheepshanks1903,John Sheepshanks,UK,en,en,false,1903,London,archive.org,cu31924023499498,,,0.481,0.0005,28.9,3.11,good,travel memoir,include,
+pistor1905,Erich Pistor,Austria/Germany,de,de,false,1905,Wien,archive.org,bub_gb_kf8pAAAAYAAJ,,,0.354,0.0042,22,2.23,good,travelogue,include,
+swayne1904,H. G. C. Swayne,UK,en,en,false,1904,London,archive.org,throughhighlands00sway,,,0.441,0.0016,35.8,7.24,good,travelogue (hunting),include,
+mpprice1912,M. Philips Price,UK,en,en,false,1912,London,archive.org,siberia_00pricuoft,,,0.404,0.0018,12,1.86,good,travel+analysis,include,
+scarfoglio1909,Antonio Scarfoglio,Italy,en,it,true,1909,London/New York,archive.org,roundworldinmoto00scar,,,0.465,0.0032,36.9,8.57,good,travelogue,include,English translation
+hawes1903,Charles H. Hawes,UK,en,en,false,1903,London,archive.org,inuttermosteastb00hawe,,,0.46,0.0009,22.9,4.15,good,travelogue (anthropologist),include,
+bordeaux1904,Albert Bordeaux,France,fr,fr,false,1904,Paris,archive.org,sibrienotesdevo00bordgoog,,,0.388,0.0021,29.2,2.8,good,travelogue,include,
+fuchs1925,Paul Fuchs,Germany,de,de,false,1925,?,archive.org,paul-fuchs-kreuz-und-quer-durch-asien.-erinnerungen-an-meine-flucht-aus-russisch,,,0.394,0.0006,83.6,4.38,good,POW escape memoir,include,place of publication unknown
+nansen1914,Fridtjof Nansen,Norway,en,no,true,1914,London,archive.org,throughsiberiala00nans,,,0.474,0.0007,18.5,4.54,good,travelogue,include,English translation; German 1914 scan rejected (OCR)
+asselin1911,Henry Asselin,France,fr,fr,false,1911,Paris,archive.org,paysagesdasiesib00asse,,,0.364,0.0021,26.7,1.83,good,travelogue,include,
+haviland1915,Maud D. Haviland,UK,en,en,false,1915,London,archive.org,summeronyenesei00havi,,,0.468,0.0005,24,3.44,good,travelogue (naturalist),include,
+bergman1927,Sten Bergman,Sweden,en,sv,true,1927,London?,archive.org,throughkamchatka0000unse,,,0.474,0.0036,37.3,6.11,good,travelogue,include,English translation; check place
+grondijs1922,Lodewijk H. Grondijs,Netherlands,fr,fr,false,1922,Paris,archive.org,laguerreenrussie00gronuoft,,,0.369,0.0023,22.9,1.18,good,war memoir/analysis,include,Dutch author writing in French
+drei1925,unknown,Germany,de,de,false,1925,Stuttgart?,archive.org,rcin.org.pl.WA51_146105_PTG2740-r1925_Drei-Jahre-in-Sibiri_120967,,,0.331,0.0341,22.9,1.31,usable,travel/hunting memoir,include,author to identify; OCR junk 3.4%
+price1892,Julius M. Price,UK,en,en,false,1892,London,archive.org,cu31924023061470,,,0.469,0.0013,37.5,6.7,good,travelogue,include,London edition replaces New York (PG)
+wlad1918,Franz Wlad,Austria,de,de,false,1918,?,archive.org,k.u.-k-hauptmann-franz-wlad-meine-flucht-durchs-mongolische-sandmeer-1918,,,,0.0235,,,check,POW escape memoir,check,OCR quality unclear
+michie1864,Alexander Michie,UK,en,en,false,1864,,gutenberg,,,45167,,,,,proofread (PG),travelogue,include,kept from v0.1
+dewindt1889,Harry de Windt,UK,en,en,false,1889,,gutenberg,,,48992,,,,,proofread (PG),travelogue,include,kept from v0.1
+dewindt1903,Harry de Windt,UK,en,en,false,1903,,gutenberg,,,26007,,,,,proofread (PG),travelogue,include,kept from v0.1
+ready1904,Oliver George Ready,UK,en,en,false,1904,,gutenberg,,,27733,,,,,proofread (PG),travelogue,include,kept from v0.1
+kubalski1856,N.-A. Kubalski,Poland/France,fr,fr,false,1856,,gutenberg,,,52431,,,,,proofread (PG),compilation,include,kept from v0.1
+barzini1908,Luigi Barzini,Italy,de,it,true,1908,,gutenberg,,,47798,,,,,proofread (PG),travelogue,include,kept from v0.1
+gaunt1919,Mary Gaunt,Australia/UK,en,en,false,1919,,gutenberg,,,54402,,,,,proofread (PG),travelogue,include,kept from v0.1
+ward1920,John Ward,UK,en,en,false,1920,,gutenberg,,,10972,,,,,proofread (PG),travelogue,include,kept from v0.1
+grano1893,Johannes Granö,Finland,fi,fi,false,1893,,gutenberg,,,37620,,,,,proofread (PG),travelogue,include,kept from v0.1
+donner1915,Kai Donner,Finland,fi,fi,false,1915,,gutenberg,,,49142,,,,,proofread (PG),travelogue,include,kept from v0.1
+svinhufvud1928,P. E. Svinhufvud,Finland,fi,fi,false,1928,,gutenberg,,,75772,,,,,proofread (PG),travelogue,include,kept from v0.1
+keyserlingk1899,Robert Keyserlingk,Germany,,,,,,archive.org,vomjapanischenm00keysgoog,,,0.088,0.0491,,,reject,,reject,reject: Fraktur OCR garbage — need better scan (BSB/Gallica/Google Books)
+zabel1902,Rudolf Zabel,Germany,,,,,,archive.org,bub_gb_mi5LAAAAYAAJ,,,0.085,0.0568,,,reject,,reject,reject: Fraktur OCR garbage
+huber1906,Max Huber,Switzerland,,,,,,archive.org,bub_gb_1mmCAAAAIAAJ,,,0.115,0.0213,,,reject,,reject,reject: OCR garbage
+nansen1914_de,Fridtjof Nansen,Norway,,,,,,archive.org,siberieneinzukun00nans,,,0.124,0.0336,,,reject,,reject,reject: use English ed.

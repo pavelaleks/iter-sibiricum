@@ -1,0 +1,50 @@
+0	neu	reported	ethno	
+1	invalid	-	-	топоним Братский острог, не буряты
+2	neu	personal	contact	
+3	neu	generalization	admin	
+4	neg	reported	econ	«глупость туземцев» в устах торговца
+5	neu	personal	ethno	
+6	neu	reported	ethno	
+7	neu	personal	other	
+8	neu	generalization	admin	
+9	pos	personal	econ	процветание и порядок у бурят
+10	amb	reported	contact	честны во всём, кроме водки
+11	amb	personal	civ	«дикие племена», но со вкусом к украшениям
+12	neu	personal	conflict	
+13	neu	generalization	relig	
+14	neu	reported	econ	
+15	neg	personal	ethno	некрасивы (в сравнении с черкесами)
+16	neu	bookish	ethno	
+17	neu	personal	econ	
+18	neu	personal	contact	
+19	neu	personal	econ	туземцы — жертвы неравного обмена
+20	neu	generalization	admin	
+21	neu	generalization	ethno	
+22	neg	generalization	civ	«низшая ступень культуры»
+23	neu	generalization	relig	
+24	neu	bookish	ethno	
+25	invalid	-	-	Самоа, не Сибирь
+26	neu	reported	decline	
+27	neu	generalization	econ	
+28	invalid	-	-	топоним Братский острог
+29	neu	personal	contact	
+30	neu	generalization	decline	обнищание и болезни
+31	amb	generalization	relig	суеверие, но богатая эпическая поэзия
+32	neu	bookish	ethno	
+33	invalid	-	-	буряты названы «Tartar tribe»: группа сопоставлена неверно
+34	pos	generalization	contact	строгая честность
+35	neu	personal	econ	
+36	neu	reported	ethno	
+37	neu	generalization	other	
+38	neu	personal	ethno	
+39	pos	personal	econ	знают цену вещам
+40	neg	generalization	civ	сохранили «первобытный характер»
+41	neu	personal	contact	
+42	neu	reported	conflict	
+43	neu	generalization	relig	
+44	pos	bookish	conflict	«доблестные татары» против «трусливых остяков»
+45	neu	personal	ethno	
+46	neu	personal	other	
+47	pos	personal	contact	гостеприимство
+48	neu	personal	ethno	
+49	neu	bookish	ethno	

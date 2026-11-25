@@ -1,0 +1,4 @@
+observer_group,administration,alcohol,appearance,character,clothing,dwelling,economy_trade,education_civ,gender_family,health_decline,hospitality,hygiene,language,religion,subsistence,violence
+europe_finland,0.041,0.024,0.04,0.028,0.03,0.073,0.065,0.024,0.041,0.028,0.012,0.001,0.157,0.062,0.104,0.046
+europe_poland,0.063,0.019,0.077,0.079,0.053,0.125,0.118,0.065,0.067,0.009,0.019,0.016,0.067,0.072,0.172,0.023
+europe_west,0.033,0.019,0.046,0.058,0.027,0.068,0.085,0.028,0.043,0.022,0.014,0.013,0.05,0.053,0.15,0.043

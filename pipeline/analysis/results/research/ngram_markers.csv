@@ -1,0 +1,972 @@
+work_id,marker,count,edition_year,jy,text_language,nat_group,period,words_siberia,decade
+atkinson1858,savage(s),8,1858,1848,en,british,P1 до 1855,73147,1840
+atkinson1858,barbarous/barbarian,2,1858,1848,en,british,P1 до 1855,73147,1840
+atkinson1858,race(s),8,1858,1848,en,british,P1 до 1855,73147,1840
+atkinson1858,tribe(s),20,1858,1848,en,british,P1 до 1855,73147,1840
+atkinson1858,natives,1,1858,1848,en,british,P1 до 1855,73147,1840
+atkinson1858,exile(s),2,1858,1848,en,british,P1 до 1855,73147,1840
+atkinson1858,convict(s),9,1858,1848,en,british,P1 до 1855,73147,1840
+atkinson1858,yasak/tribute,2,1858,1848,en,british,P1 до 1855,73147,1840
+atkinson1858,vodka,2,1858,1848,en,british,P1 до 1855,73147,1840
+atkinson1860,savage(s),14,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,barbarous/barbarian,2,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,civilised/civilized,8,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,civilisation,7,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,race(s),43,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,tribe(s),87,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,natives,10,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,extinct/dying out,3,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,exile(s),29,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,convict(s),18,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,settler(s)/colonist(s),7,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,shaman,22,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,yasak/tribute,1,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,vodka,10,1860,1848,en,british,P1 до 1855,85132,1840
+atkinson1860,civilisation (fr),7,1860,1848,en,british,P1 до 1855,85132,1840
+barzini1908,Russified,1,1908,1907,de,italian,P4 1905–1917,47694,1900
+barzini1908,Kultur (de),1,1908,1907,de,italian,P4 1905–1917,47694,1900
+bergman1927,savage(s),2,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bergman1927,primitive,7,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bergman1927,civilised/civilized,4,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bergman1927,uncivilised,1,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bergman1927,civilisation,4,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bergman1927,race(s),31,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bergman1927,tribe(s),3,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bergman1927,natives,17,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bergman1927,extinct/dying out,1,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bergman1927,Russified,1,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bergman1927,settler(s)/colonist(s),1,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bergman1927,shaman,11,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bergman1927,vodka,1,1927,1920,en,scandinavian,P5 1918–1930,69602,1920
+bordeaux1904,primitive,1,1904,1902,fr,french,P3 1881–1904,51597,1900
+bordeaux1904,civilisation,5,1904,1902,fr,french,P3 1881–1904,51597,1900
+bordeaux1904,race(s),10,1904,1902,fr,french,P3 1881–1904,51597,1900
+bordeaux1904,vodka,4,1904,1902,fr,french,P3 1881–1904,51597,1900
+bordeaux1904,sauvages (fr),11,1904,1902,fr,french,P3 1881–1904,51597,1900
+bordeaux1904,civilisation (fr),5,1904,1902,fr,french,P3 1881–1904,51597,1900
+bordeaux1904,indigènes (fr),11,1904,1902,fr,french,P3 1881–1904,51597,1900
+boulangier1891,civilisation,8,1891,1887,fr,french,P3 1881–1904,71075,1880
+boulangier1891,race(s),14,1891,1887,fr,french,P3 1881–1904,71075,1880
+boulangier1891,convict(s),4,1891,1887,fr,french,P3 1881–1904,71075,1880
+boulangier1891,vodka,4,1891,1887,fr,french,P3 1881–1904,71075,1880
+boulangier1891,sauvages (fr),13,1891,1887,fr,french,P3 1881–1904,71075,1880
+boulangier1891,civilisation (fr),8,1891,1887,fr,french,P3 1881–1904,71075,1880
+boulangier1891,indigènes (fr),24,1891,1887,fr,french,P3 1881–1904,71075,1880
+carruthers1914,savage(s),2,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,barbarous/barbarian,1,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,primitive,12,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,civilised/civilized,3,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,civilisation,9,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,race(s),67,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,tribe(s),142,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,natives,27,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,aborigines,2,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,extinct/dying out,1,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,Russified,2,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,exile(s),3,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,settler(s)/colonist(s),29,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,yasak/tribute,10,1914,1910,en,british,P4 1905–1917,80102,1910
+carruthers1914,vodka,1,1914,1910,en,british,P4 1905–1917,80102,1910
+castren1856,civilisation,7,1856,1845,de,finnish,P1 до 1855,117457,1840
+castren1856,race(s),2,1856,1845,de,finnish,P1 до 1855,117457,1840
+castren1856,Russified,2,1856,1845,de,finnish,P1 до 1855,117457,1840
+castren1856,shaman,37,1856,1845,de,finnish,P1 до 1855,117457,1840
+castren1856,civilisation (fr),7,1856,1845,de,finnish,P1 до 1855,117457,1840
+castren1856,Wilde (de),1,1856,1845,de,finnish,P1 до 1855,117457,1840
+castren1856,Eingeborene (de),2,1856,1845,de,finnish,P1 до 1855,117457,1840
+cipolla1919,primitive,1,1919,1918,it,italian,P5 1918–1930,16961,1910
+cipolla1919,Russified,1,1919,1918,it,italian,P5 1918–1930,16961,1910
+cochrane1829,savage(s),15,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,barbarous/barbarian,4,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,civilised/civilized,11,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,civilisation,6,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,race(s),19,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,tribe(s),23,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,natives,22,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,aborigines,26,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,extinct/dying out,2,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,Russified,1,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,exile(s),8,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,convict(s),22,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,settler(s)/colonist(s),6,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,shaman,8,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,yasak/tribute,21,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,vodka,15,1829,1820,en,british,P1 до 1855,123961,1820
+cochrane1829,civilisation (fr),2,1829,1820,en,british,P1 до 1855,123961,1820
+colquhoun1900,savage(s),3,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,primitive,6,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,civilised/civilized,3,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,civilisation,1,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,race(s),5,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,tribe(s),13,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,natives,7,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,aborigines,3,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,extinct/dying out,3,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,exile(s),4,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,convict(s),3,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,settler(s)/colonist(s),15,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,yasak/tribute,2,1900,1899,en,british,P3 1881–1904,26291,1890
+colquhoun1900,vodka,2,1900,1899,en,british,P3 1881–1904,26291,1890
+cotteau1885,primitive,4,1885,1881,fr,french,P3 1881–1904,67937,1880
+cotteau1885,civilisation,3,1885,1881,fr,french,P3 1881–1904,67937,1880
+cotteau1885,race(s),17,1885,1881,fr,french,P3 1881–1904,67937,1880
+cotteau1885,Russified,2,1885,1881,fr,french,P3 1881–1904,67937,1880
+cotteau1885,convict(s),4,1885,1881,fr,french,P3 1881–1904,67937,1880
+cotteau1885,vodka,5,1885,1881,fr,french,P3 1881–1904,67937,1880
+cotteau1885,sauvages (fr),22,1885,1881,fr,french,P3 1881–1904,67937,1880
+cotteau1885,civilisation (fr),3,1885,1881,fr,french,P3 1881–1904,67937,1880
+cotteau1885,indigènes (fr),7,1885,1881,fr,french,P3 1881–1904,67937,1880
+cottrell1842,savage(s),4,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,barbarous/barbarian,1,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,primitive,2,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,civilised/civilized,6,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,uncivilised,3,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,civilisation,3,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,race(s),9,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,tribe(s),14,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,natives,18,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,aborigines,1,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,extinct/dying out,1,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,exile(s),15,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,convict(s),5,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,settler(s)/colonist(s),2,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,shaman,2,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,yasak/tribute,5,1842,1840,en,british,P1 до 1855,50664,1840
+cottrell1842,vodka,15,1842,1840,en,british,P1 до 1855,50664,1840
+debaye1897,race(s),2,1897,1896,fr,french,P3 1881–1904,5450,1890
+debaye1897,vodka,4,1897,1896,fr,french,P3 1881–1904,5450,1890
+debaye1897,sauvages (fr),1,1897,1896,fr,french,P3 1881–1904,5450,1890
+debaye1897,indigènes (fr),1,1897,1896,fr,french,P3 1881–1904,5450,1890
+dewindt1889,savage(s),7,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,primitive,3,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,civilised/civilized,14,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,uncivilised,2,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,civilisation,8,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,race(s),18,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,tribe(s),18,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,natives,12,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,aborigines,10,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,extinct/dying out,3,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,Russified,2,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,exile(s),29,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,convict(s),36,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,shaman,2,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,yasak/tribute,1,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1889,vodka,35,1889,1887,en,british,P3 1881–1904,55012,1880
+dewindt1892,savage(s),5,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,primitive,4,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,civilised/civilized,5,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,uncivilised,1,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,civilisation,3,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,race(s),9,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,tribe(s),11,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,natives,3,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,aborigines,3,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,Russified,1,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,exile(s),85,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,convict(s),79,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,settler(s)/colonist(s),4,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,shaman,1,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,yasak/tribute,1,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1892,vodka,10,1892,1890,en,british,P3 1881–1904,46075,1890
+dewindt1896,savage(s),1,1896,1894,en,british,P3 1881–1904,35760,1890
+dewindt1896,barbarous/barbarian,1,1896,1894,en,british,P3 1881–1904,35760,1890
+dewindt1896,civilised/civilized,1,1896,1894,en,british,P3 1881–1904,35760,1890
+dewindt1896,race(s),4,1896,1894,en,british,P3 1881–1904,35760,1890
+dewindt1896,tribe(s),1,1896,1894,en,british,P3 1881–1904,35760,1890
+dewindt1896,natives,3,1896,1894,en,british,P3 1881–1904,35760,1890
+dewindt1896,extinct/dying out,1,1896,1894,en,british,P3 1881–1904,35760,1890
+dewindt1896,Russified,1,1896,1894,en,british,P3 1881–1904,35760,1890
+dewindt1896,exile(s),33,1896,1894,en,british,P3 1881–1904,35760,1890
+dewindt1896,convict(s),73,1896,1894,en,british,P3 1881–1904,35760,1890
+dewindt1896,settler(s)/colonist(s),5,1896,1894,en,british,P3 1881–1904,35760,1890
+dewindt1896,vodka,3,1896,1894,en,british,P3 1881–1904,35760,1890
+dewindt1903,savage(s),4,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,primitive,8,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,civilised/civilized,7,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,uncivilised,1,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,civilisation,12,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,race(s),12,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,tribe(s),1,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,natives,49,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,aborigines,1,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,Russified,1,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,half-breed,3,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,exile(s),74,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,convict(s),6,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,settler(s)/colonist(s),6,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,shaman,15,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,vodka,1,1903,1901,en,british,P3 1881–1904,56388,1900
+dewindt1903,civilisation (fr),12,1903,1901,en,british,P3 1881–1904,56388,1900
+digby1928,savage(s),3,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,primitive,4,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,civilised/civilized,4,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,civilisation,1,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,race(s),17,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,tribe(s),8,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,natives,25,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,extinct/dying out,4,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,half-breed,1,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,exile(s),9,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,convict(s),11,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,settler(s)/colonist(s),3,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,shaman,7,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,yasak/tribute,1,1928,1912,en,british,P4 1905–1917,39606,1910
+digby1928,vodka,12,1928,1912,en,british,P4 1905–1917,39606,1910
+dobell1830,savage(s),3,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,barbarous/barbarian,2,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,civilised/civilized,7,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,uncivilised,2,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,civilisation,3,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,race(s),10,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,tribe(s),10,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,natives,35,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,aborigines,1,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,extinct/dying out,4,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,exile(s),7,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,convict(s),4,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,settler(s)/colonist(s),2,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,shaman,2,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,yasak/tribute,3,1830,1812,en,british,P1 до 1855,80528,1810
+dobell1830,vodka,1,1830,1812,en,british,P1 до 1855,80528,1810
+drei1925,primitive,1,1925,1915,de,german,P4 1905–1917,23562,1910
+drei1925,Russified,1,1925,1915,de,german,P4 1905–1917,23562,1910
+drei1925,Wilde (de),2,1925,1915,de,german,P4 1905–1917,23562,1910
+drei1925,Kultur (de),2,1925,1915,de,german,P4 1905–1917,23562,1910
+drei1925,Eingeborene (de),21,1925,1915,de,german,P4 1905–1917,23562,1910
+dwinger1930,savage(s),3,1930,1915,en,german,P4 1905–1917,30344,1910
+dwinger1930,barbarous/barbarian,1,1930,1915,en,german,P4 1905–1917,30344,1910
+dwinger1930,primitive,1,1930,1915,en,german,P4 1905–1917,30344,1910
+dwinger1930,civilised/civilized,2,1930,1915,en,german,P4 1905–1917,30344,1910
+dwinger1930,civilisation,1,1930,1915,en,german,P4 1905–1917,30344,1910
+dwinger1930,race(s),1,1930,1915,en,german,P4 1905–1917,30344,1910
+dwinger1930,exile(s),2,1930,1915,en,german,P4 1905–1917,30344,1910
+dwinger1930,convict(s),1,1930,1915,en,german,P4 1905–1917,30344,1910
+dwinger1930,vodka,1,1930,1915,en,german,P4 1905–1917,30344,1910
+eden1879,savage(s),3,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,barbarous/barbarian,4,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,primitive,3,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,civilised/civilized,4,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,uncivilised,2,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,civilisation,4,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,race(s),57,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,tribe(s),38,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,natives,22,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,aborigines,3,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,extinct/dying out,4,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,exile(s),3,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,convict(s),1,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,settler(s)/colonist(s),2,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,shaman,25,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,yasak/tribute,2,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,vodka,7,1879,1877,en,british,P2 1856–1880,53644,1870
+eden1879,civilisation (fr),4,1879,1877,en,british,P2 1856–1880,53644,1870
+erman1833,race(s),1,1833,1828,de,german,P1 до 1855,184339,1820
+erman1833,exile(s),1,1833,1828,de,german,P1 до 1855,184339,1820
+erman1833,shaman,23,1833,1828,de,german,P1 до 1855,184339,1820
+erman1833,Wilde (de),5,1833,1828,de,german,P1 до 1855,184339,1820
+erman1833,Kultur (de),3,1833,1828,de,german,P1 до 1855,184339,1820
+etherton1911,primitive,1,1911,1909,en,british,P4 1905–1917,19584,1900
+etherton1911,civilised/civilized,1,1911,1909,en,british,P4 1905–1917,19584,1900
+etherton1911,civilisation,1,1911,1909,en,british,P4 1905–1917,19584,1900
+etherton1911,race(s),3,1911,1909,en,british,P4 1905–1917,19584,1900
+etherton1911,natives,2,1911,1909,en,british,P4 1905–1917,19584,1900
+etherton1911,exile(s),1,1911,1909,en,british,P4 1905–1917,19584,1900
+etherton1911,convict(s),2,1911,1909,en,british,P4 1905–1917,19584,1900
+etherton1911,vodka,3,1911,1909,en,british,P4 1905–1917,19584,1900
+etherton1911,civilisation (fr),1,1911,1909,en,british,P4 1905–1917,19584,1900
+felinska1854,savage(s),3,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,barbarous/barbarian,8,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,primitive,6,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,civilised/civilized,4,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,civilisation,9,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,race(s),12,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,tribe(s),30,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,natives,22,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,aborigines,1,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,extinct/dying out,1,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,exile(s),17,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,convict(s),3,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,settler(s)/colonist(s),2,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,shaman,4,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,yasak/tribute,5,1854,1839,en,polish,P1 до 1855,106798,1830
+felinska1854,vodka,6,1854,1839,en,polish,P1 до 1855,106798,1830
+fell1916,primitive,1,1916,1900,en,british,P3 1881–1904,32191,1900
+fell1916,civilised/civilized,3,1916,1900,en,british,P3 1881–1904,32191,1900
+fell1916,civilisation,4,1916,1900,en,british,P3 1881–1904,32191,1900
+fell1916,race(s),7,1916,1900,en,british,P3 1881–1904,32191,1900
+fell1916,settler(s)/colonist(s),1,1916,1900,en,british,P3 1881–1904,32191,1900
+fell1916,vodka,13,1916,1900,en,british,P3 1881–1904,32191,1900
+finsch1879,primitive,4,1879,1876,de,german,P2 1856–1880,143686,1870
+finsch1879,civilisation,3,1879,1876,de,german,P2 1856–1880,143686,1870
+finsch1879,Russified,7,1879,1876,de,german,P2 1856–1880,143686,1870
+finsch1879,shaman,18,1879,1876,de,german,P2 1856–1880,143686,1870
+finsch1879,civilisation (fr),3,1879,1876,de,german,P2 1856–1880,143686,1870
+finsch1879,Wilde (de),4,1879,1876,de,german,P2 1856–1880,143686,1870
+finsch1879,Eingeborene (de),7,1879,1876,de,german,P2 1856–1880,143686,1870
+fraser1902,savage(s),1,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,barbarous/barbarian,3,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,primitive,1,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,civilised/civilized,4,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,civilisation,3,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,race(s),4,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,tribe(s),3,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,natives,2,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,extinct/dying out,1,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,exile(s),13,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,convict(s),38,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,settler(s)/colonist(s),4,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,vodka,1,1902,1901,en,british,P3 1881–1904,37777,1900
+fraser1902,civilisation (fr),3,1902,1901,en,british,P3 1881–1904,37777,1900
+gaunt1919,primitive,4,1919,1913,en,british,P4 1905–1917,27972,1910
+gaunt1919,civilisation,4,1919,1913,en,british,P4 1905–1917,27972,1910
+gaunt1919,race(s),1,1919,1913,en,british,P4 1905–1917,27972,1910
+gaunt1919,tribe(s),1,1919,1913,en,british,P4 1905–1917,27972,1910
+gaunt1919,natives,2,1919,1913,en,british,P4 1905–1917,27972,1910
+gaunt1919,aborigines,3,1919,1913,en,british,P4 1905–1917,27972,1910
+gaunt1919,Russified,1,1919,1913,en,british,P4 1905–1917,27972,1910
+gaunt1919,exile(s),13,1919,1913,en,british,P4 1905–1917,27972,1910
+gaunt1919,convict(s),7,1919,1913,en,british,P4 1905–1917,27972,1910
+gaunt1919,settler(s)/colonist(s),1,1919,1913,en,british,P4 1905–1917,27972,1910
+gaunt1919,civilisation (fr),4,1919,1913,en,british,P4 1905–1917,27972,1910
+gerrare1903,savage(s),3,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,barbarous/barbarian,1,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,primitive,7,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,civilised/civilized,4,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,civilisation,4,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,race(s),15,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,tribe(s),11,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,natives,19,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,aborigines,2,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,extinct/dying out,2,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,Russified,1,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,exile(s),17,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,convict(s),13,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,settler(s)/colonist(s),72,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,shaman,3,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,yasak/tribute,2,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,vodka,1,1903,1902,en,british,P3 1881–1904,46567,1900
+gerrare1903,civilisation (fr),4,1903,1902,en,british,P3 1881–1904,46567,1900
+gowing1889,savage(s),3,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,barbarous/barbarian,1,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,primitive,1,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,civilised/civilized,3,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,civilisation,7,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,race(s),13,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,tribe(s),3,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,natives,2,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,exile(s),15,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,convict(s),8,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,settler(s)/colonist(s),1,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,shaman,1,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,vodka,16,1889,1886,en,british,P3 1881–1904,50195,1880
+gowing1889,civilisation (fr),7,1889,1886,en,british,P3 1881–1904,50195,1880
+grano1893,shaman,1,1893,1885,fi,finnish,P3 1881–1904,42111,1880
+grondijs1922,primitive,1,1922,1918,fr,dutch,P5 1918–1930,58283,1910
+grondijs1922,race(s),6,1922,1918,fr,dutch,P5 1918–1930,58283,1910
+grondijs1922,vodka,6,1922,1918,fr,dutch,P5 1918–1930,58283,1910
+grondijs1922,sauvages (fr),5,1922,1918,fr,dutch,P5 1918–1930,58283,1910
+grondijs1922,indigènes (fr),1,1922,1918,fr,dutch,P5 1918–1930,58283,1910
+gsimpson1847,savage(s),3,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,barbarous/barbarian,1,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,civilised/civilized,2,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,civilisation,5,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,race(s),12,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,tribe(s),19,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,natives,11,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,aborigines,10,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,half-breed,1,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,exile(s),7,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,convict(s),10,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,settler(s)/colonist(s),6,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,shaman,1,1847,1842,en,british,P1 до 1855,53062,1840
+gsimpson1847,yasak/tribute,3,1847,1842,en,british,P1 до 1855,53062,1840
+guillemard1889,savage(s),3,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,civilised/civilized,2,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,uncivilised,1,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,civilisation,4,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,race(s),17,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,tribe(s),8,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,natives,63,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,aborigines,3,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,extinct/dying out,5,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,half-breed,3,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,exile(s),1,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,convict(s),1,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,vodka,3,1889,1881,en,british,P3 1881–1904,61361,1880
+guillemard1889,civilisation (fr),4,1889,1881,en,british,P3 1881–1904,61361,1880
+hansteen1857,race(s),8,1857,1828,fr,scandinavian,P1 до 1855,39676,1820
+hansteen1857,shaman,2,1857,1828,fr,scandinavian,P1 до 1855,39676,1820
+hansteen1857,sauvages (fr),8,1857,1828,fr,scandinavian,P1 до 1855,39676,1820
+hansteen1857,indigènes (fr),1,1857,1828,fr,scandinavian,P1 до 1855,39676,1820
+harrison1910,primitive,4,1910,1908,en,british,P4 1905–1917,40661,1900
+harrison1910,civilisation,1,1910,1908,en,british,P4 1905–1917,40661,1900
+harrison1910,race(s),3,1910,1908,en,british,P4 1905–1917,40661,1900
+harrison1910,tribe(s),5,1910,1908,en,british,P4 1905–1917,40661,1900
+harrison1910,natives,3,1910,1908,en,british,P4 1905–1917,40661,1900
+harrison1910,aborigines,2,1910,1908,en,british,P4 1905–1917,40661,1900
+harrison1910,extinct/dying out,1,1910,1908,en,british,P4 1905–1917,40661,1900
+harrison1910,exile(s),4,1910,1908,en,british,P4 1905–1917,40661,1900
+harrison1910,convict(s),5,1910,1908,en,british,P4 1905–1917,40661,1900
+harrison1910,settler(s)/colonist(s),9,1910,1908,en,british,P4 1905–1917,40661,1900
+harrison1910,shaman,11,1910,1908,en,british,P4 1905–1917,40661,1900
+harrison1910,yasak/tribute,1,1910,1908,en,british,P4 1905–1917,40661,1900
+harrison1910,vodka,3,1910,1908,en,british,P4 1905–1917,40661,1900
+haviland1915,primitive,13,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,civilised/civilized,5,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,civilisation,6,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,race(s),36,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,tribe(s),11,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,natives,72,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,aborigines,5,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,extinct/dying out,1,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,half-breed,3,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,exile(s),16,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,convict(s),1,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,settler(s)/colonist(s),6,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,vodka,19,1915,1914,en,british,P4 1905–1917,87975,1910
+haviland1915,civilisation (fr),5,1915,1914,en,british,P4 1905–1917,87975,1910
+hawes1903,savage(s),4,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,barbarous/barbarian,1,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,primitive,12,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,civilised/civilized,14,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,civilisation,3,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,race(s),32,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,tribe(s),39,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,natives,82,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,aborigines,2,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,extinct/dying out,5,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,Russified,1,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,exile(s),74,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,convict(s),157,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,settler(s)/colonist(s),33,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,shaman,2,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,yasak/tribute,2,1903,1901,en,british,P3 1881–1904,116511,1900
+hawes1903,vodka,10,1903,1901,en,british,P3 1881–1904,116511,1900
+hill1854,savage(s),4,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,barbarous/barbarian,8,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,civilised/civilized,31,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,civilisation,10,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,race(s),63,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,tribe(s),37,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,natives,17,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,aborigines,10,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,extinct/dying out,1,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,exile(s),56,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,settler(s)/colonist(s),8,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,yasak/tribute,1,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,vodka,9,1854,1847,en,british,P1 до 1855,140995,1840
+hill1854,civilisation (fr),10,1854,1847,en,british,P1 до 1855,140995,1840
+holman1825,savage(s),2,1825,1823,en,british,P1 до 1855,27031,1820
+holman1825,civilised/civilized,1,1825,1823,en,british,P1 до 1855,27031,1820
+holman1825,tribe(s),3,1825,1823,en,british,P1 до 1855,27031,1820
+holman1825,exile(s),10,1825,1823,en,british,P1 до 1855,27031,1820
+holman1825,convict(s),1,1825,1823,en,british,P1 до 1855,27031,1820
+holman1825,settler(s)/colonist(s),1,1825,1823,en,british,P1 до 1855,27031,1820
+holman1825,yasak/tribute,1,1825,1823,en,british,P1 до 1855,27031,1820
+holman1825,vodka,5,1825,1823,en,british,P1 до 1855,27031,1820
+hooper1853,savage(s),5,1853,1848,en,british,P1 до 1855,31223,1840
+hooper1853,primitive,4,1853,1848,en,british,P1 до 1855,31223,1840
+hooper1853,civilised/civilized,4,1853,1848,en,british,P1 до 1855,31223,1840
+hooper1853,civilisation,1,1853,1848,en,british,P1 до 1855,31223,1840
+hooper1853,race(s),3,1853,1848,en,british,P1 до 1855,31223,1840
+hooper1853,tribe(s),10,1853,1848,en,british,P1 до 1855,31223,1840
+hooper1853,natives,37,1853,1848,en,british,P1 до 1855,31223,1840
+hooper1853,extinct/dying out,1,1853,1848,en,british,P1 до 1855,31223,1840
+hooper1853,shaman,5,1853,1848,en,british,P1 до 1855,31223,1840
+hooper1853,yasak/tribute,1,1853,1848,en,british,P1 до 1855,31223,1840
+hooper1853,civilisation (fr),1,1853,1848,en,british,P1 до 1855,31223,1840
+hprice1919,savage(s),2,1919,1915,en,british,P4 1905–1917,31057,1910
+hprice1919,barbarous/barbarian,2,1919,1915,en,british,P4 1905–1917,31057,1910
+hprice1919,primitive,1,1919,1915,en,british,P4 1905–1917,31057,1910
+hprice1919,civilised/civilized,1,1919,1915,en,british,P4 1905–1917,31057,1910
+hprice1919,race(s),8,1919,1915,en,british,P4 1905–1917,31057,1910
+hprice1919,tribe(s),1,1919,1915,en,british,P4 1905–1917,31057,1910
+hprice1919,natives,1,1919,1915,en,british,P4 1905–1917,31057,1910
+hprice1919,convict(s),2,1919,1915,en,british,P4 1905–1917,31057,1910
+jefferson1896,savage(s),2,1896,1895,en,british,P3 1881–1904,17412,1890
+jefferson1896,primitive,1,1896,1895,en,british,P3 1881–1904,17412,1890
+jefferson1896,civilisation,2,1896,1895,en,british,P3 1881–1904,17412,1890
+jefferson1896,race(s),6,1896,1895,en,british,P3 1881–1904,17412,1890
+jefferson1896,tribe(s),1,1896,1895,en,british,P3 1881–1904,17412,1890
+jefferson1896,exile(s),9,1896,1895,en,british,P3 1881–1904,17412,1890
+jefferson1896,convict(s),13,1896,1895,en,british,P3 1881–1904,17412,1890
+jefferson1897,primitive,7,1897,1896,en,british,P3 1881–1904,29339,1890
+jefferson1897,civilised/civilized,1,1897,1896,en,british,P3 1881–1904,29339,1890
+jefferson1897,civilisation,2,1897,1896,en,british,P3 1881–1904,29339,1890
+jefferson1897,race(s),3,1897,1896,en,british,P3 1881–1904,29339,1890
+jefferson1897,tribe(s),4,1897,1896,en,british,P3 1881–1904,29339,1890
+jefferson1897,aborigines,1,1897,1896,en,british,P3 1881–1904,29339,1890
+jefferson1897,Russified,1,1897,1896,en,british,P3 1881–1904,29339,1890
+jefferson1897,exile(s),11,1897,1896,en,british,P3 1881–1904,29339,1890
+jefferson1897,convict(s),3,1897,1896,en,british,P3 1881–1904,29339,1890
+jefferson1897,yasak/tribute,8,1897,1896,en,british,P3 1881–1904,29339,1890
+joest1883,primitive,2,1883,1881,de,german,P3 1881–1904,51933,1880
+joest1883,civilisation,7,1883,1881,de,german,P3 1881–1904,51933,1880
+joest1883,shaman,4,1883,1881,de,german,P3 1881–1904,51933,1880
+joest1883,civilisation (fr),7,1883,1881,de,german,P3 1881–1904,51933,1880
+joest1883,Wilde (de),2,1883,1881,de,german,P3 1881–1904,51933,1880
+joest1883,Kultur (de),2,1883,1881,de,german,P3 1881–1904,51933,1880
+joest1883,Eingeborene (de),4,1883,1881,de,german,P3 1881–1904,51933,1880
+johnson1907,primitive,4,1907,1874,en,british,P2 1856–1880,65157,1870
+johnson1907,civilised/civilized,2,1907,1874,en,british,P2 1856–1880,65157,1870
+johnson1907,civilisation,1,1907,1874,en,british,P2 1856–1880,65157,1870
+johnson1907,race(s),1,1907,1874,en,british,P2 1856–1880,65157,1870
+johnson1907,tribe(s),4,1907,1874,en,british,P2 1856–1880,65157,1870
+johnson1907,natives,29,1907,1874,en,british,P2 1856–1880,65157,1870
+johnson1907,extinct/dying out,1,1907,1874,en,british,P2 1856–1880,65157,1870
+johnson1907,exile(s),5,1907,1874,en,british,P2 1856–1880,65157,1870
+johnson1907,settler(s)/colonist(s),1,1907,1874,en,british,P2 1856–1880,65157,1870
+johnson1907,yasak/tribute,2,1907,1874,en,british,P2 1856–1880,65157,1870
+johnson1907,vodka,4,1907,1874,en,british,P2 1856–1880,65157,1870
+johnson1907,civilisation (fr),1,1907,1874,en,british,P2 1856–1880,65157,1870
+kittlitz1858,race(s),3,1858,1827,de,german,P1 до 1855,85893,1820
+kittlitz1858,Kultur (de),2,1858,1827,de,german,P1 до 1855,85893,1820
+kotzebue1802,savage(s),1,1802,1800,en,german,P1 до 1855,31908,1800
+kotzebue1802,barbarous/barbarian,1,1802,1800,en,german,P1 до 1855,31908,1800
+kotzebue1802,natives,1,1802,1800,en,german,P1 до 1855,31908,1800
+kotzebue1802,exile(s),25,1802,1800,en,german,P1 до 1855,31908,1800
+kotzebue1802,vodka,10,1802,1800,en,german,P1 до 1855,31908,1800
+kubalski1856,sauvages (fr),1,1856,1854,fr,polish,P1 до 1855,22490,1850
+kubalski1856,indigènes (fr),2,1856,1854,fr,polish,P1 до 1855,22490,1850
+lansdell1883,savage(s),1,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,primitive,3,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,civilised/civilized,7,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,civilisation,1,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,race(s),22,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,tribe(s),29,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,natives,70,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,aborigines,20,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,extinct/dying out,5,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,Russified,5,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,exile(s),116,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,convict(s),121,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,settler(s)/colonist(s),20,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,shaman,34,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,yasak/tribute,8,1883,1879,en,british,P2 1856–1880,165184,1870
+lansdell1883,vodka,32,1883,1879,en,british,P2 1856–1880,165184,1870
+lasies1920,sauvages (fr),1,1920,1918,fr,french,P5 1918–1930,16498,1910
+latkinson1863,savage(s),1,1863,1848,en,british,P1 до 1855,62853,1840
+latkinson1863,civilised/civilized,3,1863,1848,en,british,P1 до 1855,62853,1840
+latkinson1863,civilisation,1,1863,1848,en,british,P1 до 1855,62853,1840
+latkinson1863,race(s),3,1863,1848,en,british,P1 до 1855,62853,1840
+latkinson1863,tribe(s),10,1863,1848,en,british,P1 до 1855,62853,1840
+latkinson1863,extinct/dying out,1,1863,1848,en,british,P1 до 1855,62853,1840
+latkinson1863,exile(s),27,1863,1848,en,british,P1 до 1855,62853,1840
+latkinson1863,convict(s),1,1863,1848,en,british,P1 до 1855,62853,1840
+latkinson1863,yasak/tribute,2,1863,1848,en,british,P1 до 1855,62853,1840
+latkinson1863,civilisation (fr),1,1863,1848,en,british,P1 до 1855,62853,1840
+ledebour1829,shaman,7,1829,1826,de,german,P1 до 1855,75813,1820
+ledebour1829,vodka,1,1829,1826,de,german,P1 до 1855,75813,1820
+ledebour1829,Wilde (de),1,1829,1826,de,german,P1 до 1855,75813,1820
+ledebour1829,Kultur (de),3,1829,1826,de,german,P1 до 1855,75813,1820
+legras1899,primitive,1,1899,1897,fr,french,P3 1881–1904,80269,1890
+legras1899,civilisation,15,1899,1897,fr,french,P3 1881–1904,80269,1890
+legras1899,race(s),5,1899,1897,fr,french,P3 1881–1904,80269,1890
+legras1899,natives,1,1899,1897,fr,french,P3 1881–1904,80269,1890
+legras1899,vodka,6,1899,1897,fr,french,P3 1881–1904,80269,1890
+legras1899,sauvages (fr),24,1899,1897,fr,french,P3 1881–1904,80269,1890
+legras1899,civilisation (fr),15,1899,1897,fr,french,P3 1881–1904,80269,1890
+legras1899,indigènes (fr),9,1899,1897,fr,french,P3 1881–1904,80269,1890
+leroybeaulieu1900,primitive,3,1900,1896,fr,french,P3 1881–1904,32776,1890
+leroybeaulieu1900,civilisation,3,1900,1896,fr,french,P3 1881–1904,32776,1890
+leroybeaulieu1900,race(s),10,1900,1896,fr,french,P3 1881–1904,32776,1890
+leroybeaulieu1900,vodka,1,1900,1896,fr,french,P3 1881–1904,32776,1890
+leroybeaulieu1900,sauvages (fr),3,1900,1896,fr,french,P3 1881–1904,32776,1890
+leroybeaulieu1900,civilisation (fr),3,1900,1896,fr,french,P3 1881–1904,32776,1890
+leroybeaulieu1900,indigènes (fr),22,1900,1896,fr,french,P3 1881–1904,32776,1890
+lethbridge1915,primitive,1,1915,1913,en,british,P4 1905–1917,12422,1910
+lethbridge1915,civilisation,1,1915,1913,en,british,P4 1905–1917,12422,1910
+lethbridge1915,race(s),2,1915,1913,en,british,P4 1905–1917,12422,1910
+lethbridge1915,tribe(s),1,1915,1913,en,british,P4 1905–1917,12422,1910
+lethbridge1915,exile(s),5,1915,1913,en,british,P4 1905–1917,12422,1910
+lethbridge1915,convict(s),1,1915,1913,en,british,P4 1905–1917,12422,1910
+lethbridge1915,settler(s)/colonist(s),2,1915,1913,en,british,P4 1905–1917,12422,1910
+lethbridge1915,vodka,12,1915,1913,en,british,P4 1905–1917,12422,1910
+lethbridge1915,civilisation (fr),1,1915,1913,en,british,P4 1905–1917,12422,1910
+marsden1892,savage(s),3,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,barbarous/barbarian,1,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,primitive,5,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,civilised/civilized,1,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,civilisation,4,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,race(s),1,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,tribe(s),8,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,natives,34,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,extinct/dying out,1,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,exile(s),2,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,convict(s),11,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,yasak/tribute,2,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,vodka,2,1892,1891,en,british,P3 1881–1904,51928,1890
+marsden1892,civilisation (fr),4,1892,1891,en,british,P3 1881–1904,51928,1890
+maynard1859,civilisation,1,1859,1840,fr,french,P1 до 1855,37129,1840
+maynard1859,race(s),4,1859,1840,fr,french,P1 до 1855,37129,1840
+maynard1859,sauvages (fr),18,1859,1840,fr,french,P1 до 1855,37129,1840
+maynard1859,civilisation (fr),1,1859,1840,fr,french,P1 до 1855,37129,1840
+maynard1859,indigènes (fr),13,1859,1840,fr,french,P1 до 1855,37129,1840
+meakin1901,savage(s),2,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,primitive,1,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,civilised/civilized,3,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,civilisation,3,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,race(s),3,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,tribe(s),4,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,natives,5,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,aborigines,2,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,Russified,2,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,exile(s),4,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,convict(s),18,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,settler(s)/colonist(s),3,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,shaman,1,1901,1900,en,british,P3 1881–1904,39142,1900
+meakin1901,vodka,1,1901,1900,en,british,P3 1881–1904,39142,1900
+meignan1877,primitive,1,1877,1873,fr,french,P2 1856–1880,30637,1870
+meignan1877,civilisation,1,1877,1873,fr,french,P2 1856–1880,30637,1870
+meignan1877,race(s),6,1877,1873,fr,french,P2 1856–1880,30637,1870
+meignan1877,sauvages (fr),6,1877,1873,fr,french,P2 1856–1880,30637,1870
+meignan1877,civilisation (fr),1,1877,1873,fr,french,P2 1856–1880,30637,1870
+meignan1877,indigènes (fr),11,1877,1873,fr,french,P2 1856–1880,30637,1870
+michie1864,savage(s),6,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,barbarous/barbarian,14,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,primitive,7,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,civilised/civilized,14,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,uncivilised,1,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,civilisation,12,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,race(s),13,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,tribe(s),24,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,natives,1,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,aborigines,2,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,extinct/dying out,2,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,Russified,1,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,exile(s),14,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,convict(s),7,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,settler(s)/colonist(s),4,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,yasak/tribute,1,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,vodka,7,1864,1863,en,british,P2 1856–1880,46531,1860
+michie1864,civilisation (fr),12,1864,1863,en,british,P2 1856–1880,46531,1860
+mpprice1912,primitive,14,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,civilised/civilized,1,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,civilisation,18,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,race(s),30,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,tribe(s),27,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,natives,21,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,aborigines,2,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,extinct/dying out,1,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,Russified,7,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,half-breed,2,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,exile(s),35,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,convict(s),26,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,settler(s)/colonist(s),18,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,yasak/tribute,3,1912,1910,en,british,P4 1905–1917,47190,1910
+mpprice1912,vodka,12,1912,1910,en,british,P4 1905–1917,47190,1910
+muller1882,primitive,2,1882,1874,de,german,P2 1856–1880,64162,1870
+muller1882,civilisation,2,1882,1874,de,german,P2 1856–1880,64162,1870
+muller1882,inorodtsy,1,1882,1874,de,german,P2 1856–1880,64162,1870
+muller1882,shaman,23,1882,1874,de,german,P2 1856–1880,64162,1870
+muller1882,civilisation (fr),2,1882,1874,de,german,P2 1856–1880,64162,1870
+muller1882,Wilde (de),1,1882,1874,de,german,P2 1856–1880,64162,1870
+muller1882,Eingeborene (de),16,1882,1874,de,german,P2 1856–1880,64162,1870
+nansen1914,savage(s),3,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,barbarous/barbarian,1,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,primitive,12,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,civilised/civilized,2,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,civilisation,13,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,race(s),44,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,tribe(s),52,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,natives,75,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,extinct/dying out,8,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,exile(s),38,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,convict(s),19,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,settler(s)/colonist(s),44,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,shaman,13,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,yasak/tribute,5,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914,vodka,17,1914,1913,en,scandinavian,P4 1905–1917,135793,1910
+nansen1914_no,primitive,3,1914,1913,no,scandinavian,P4 1905–1917,109653,1910
+nansen1914_no,civilisation,4,1914,1913,no,scandinavian,P4 1905–1917,109653,1910
+nansen1914_no,race(s),13,1914,1913,no,scandinavian,P4 1905–1917,109653,1910
+nansen1914_no,vodka,10,1914,1913,no,scandinavian,P4 1905–1917,109653,1910
+nansen1914_no,civilisation (fr),4,1914,1913,no,scandinavian,P4 1905–1917,109653,1910
+nansen1914_no,Kultur (de),21,1914,1913,no,scandinavian,P4 1905–1917,109653,1910
+niedieck1909,savage(s),1,1909,1905,en,german,P4 1905–1917,16943,1900
+niedieck1909,civilised/civilized,1,1909,1905,en,german,P4 1905–1917,16943,1900
+niedieck1909,civilisation,3,1909,1905,en,german,P4 1905–1917,16943,1900
+niedieck1909,tribe(s),2,1909,1905,en,german,P4 1905–1917,16943,1900
+niedieck1909,natives,9,1909,1905,en,german,P4 1905–1917,16943,1900
+niedieck1909,aborigines,1,1909,1905,en,german,P4 1905–1917,16943,1900
+niedieck1909,extinct/dying out,1,1909,1905,en,german,P4 1905–1917,16943,1900
+niedieck1909,vodka,4,1909,1905,en,german,P4 1905–1917,16943,1900
+niedieck1909,civilisation (fr),3,1909,1905,en,german,P4 1905–1917,16943,1900
+niemojowski1883,savage(s),19,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,barbarous/barbarian,5,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,primitive,23,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,civilised/civilized,7,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,civilisation,19,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,race(s),23,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,tribe(s),51,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,natives,3,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,aborigines,14,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,exile(s),1,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,convict(s),22,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,settler(s)/colonist(s),3,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,shaman,41,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,vodka,7,1883,1863,en,polish,P2 1856–1880,65951,1860
+niemojowski1883,civilisation (fr),1,1883,1863,en,polish,P2 1856–1880,65951,1860
+norman1902,savage(s),1,1902,1901,en,british,P3 1881–1904,12160,1900
+norman1902,barbarous/barbarian,1,1902,1901,en,british,P3 1881–1904,12160,1900
+norman1902,civilised/civilized,6,1902,1901,en,british,P3 1881–1904,12160,1900
+norman1902,uncivilised,1,1902,1901,en,british,P3 1881–1904,12160,1900
+norman1902,civilisation,4,1902,1901,en,british,P3 1881–1904,12160,1900
+norman1902,race(s),3,1902,1901,en,british,P3 1881–1904,12160,1900
+norman1902,natives,1,1902,1901,en,british,P3 1881–1904,12160,1900
+norman1902,extinct/dying out,1,1902,1901,en,british,P3 1881–1904,12160,1900
+norman1902,exile(s),7,1902,1901,en,british,P3 1881–1904,12160,1900
+norman1902,convict(s),15,1902,1901,en,british,P3 1881–1904,12160,1900
+norman1902,settler(s)/colonist(s),2,1902,1901,en,british,P3 1881–1904,12160,1900
+norman1902,civilisation (fr),4,1902,1901,en,british,P3 1881–1904,12160,1900
+ossendowski1922,primitive,1,1922,1920,en,polish,P5 1918–1930,24161,1920
+ossendowski1922,civilised/civilized,1,1922,1920,en,polish,P5 1918–1930,24161,1920
+ossendowski1922,tribe(s),4,1922,1920,en,polish,P5 1918–1930,24161,1920
+ossendowski1922,extinct/dying out,1,1922,1920,en,polish,P5 1918–1930,24161,1920
+ossendowski1922,convict(s),1,1922,1920,en,polish,P5 1918–1930,24161,1920
+ossendowski1922,settler(s)/colonist(s),20,1922,1920,en,polish,P5 1918–1930,24161,1920
+ossendowski1922,yasak/tribute,1,1922,1920,en,polish,P5 1918–1930,24161,1920
+ossendowski1922,vodka,2,1922,1920,en,polish,P5 1918–1930,24161,1920
+patursson1901,primitive,3,1901,1895,da,scandinavian,P3 1881–1904,84596,1890
+patursson1901,civilisation,1,1901,1895,da,scandinavian,P3 1881–1904,84596,1890
+patursson1901,race(s),5,1901,1895,da,scandinavian,P3 1881–1904,84596,1890
+patursson1901,Russified,2,1901,1895,da,scandinavian,P3 1881–1904,84596,1890
+patursson1901,shaman,26,1901,1895,da,scandinavian,P3 1881–1904,84596,1890
+patursson1901,vodka,3,1901,1895,da,scandinavian,P3 1881–1904,84596,1890
+patursson1901,civilisation (fr),1,1901,1895,da,scandinavian,P3 1881–1904,84596,1890
+patursson1901,Kultur (de),3,1901,1895,da,scandinavian,P3 1881–1904,84596,1890
+peel1894,primitive,1,1894,1893,en,british,P3 1881–1904,24379,1890
+peel1894,civilised/civilized,3,1894,1893,en,british,P3 1881–1904,24379,1890
+peel1894,uncivilised,2,1894,1893,en,british,P3 1881–1904,24379,1890
+peel1894,civilisation,5,1894,1893,en,british,P3 1881–1904,24379,1890
+peel1894,tribe(s),4,1894,1893,en,british,P3 1881–1904,24379,1890
+peel1894,natives,8,1894,1893,en,british,P3 1881–1904,24379,1890
+peel1894,exile(s),1,1894,1893,en,british,P3 1881–1904,24379,1890
+peel1894,convict(s),1,1894,1893,en,british,P3 1881–1904,24379,1890
+peel1894,settler(s)/colonist(s),5,1894,1893,en,british,P3 1881–1904,24379,1890
+peel1894,shaman,1,1894,1893,en,british,P3 1881–1904,24379,1890
+peel1894,vodka,3,1894,1893,en,british,P3 1881–1904,24379,1890
+peel1894,civilisation (fr),5,1894,1893,en,british,P3 1881–1904,24379,1890
+perryayscough1914,barbarous/barbarian,1,1914,1912,en,british,P4 1905–1917,22792,1910
+perryayscough1914,primitive,3,1914,1912,en,british,P4 1905–1917,22792,1910
+perryayscough1914,civilised/civilized,1,1914,1912,en,british,P4 1905–1917,22792,1910
+perryayscough1914,civilisation,2,1914,1912,en,british,P4 1905–1917,22792,1910
+perryayscough1914,race(s),6,1914,1912,en,british,P4 1905–1917,22792,1910
+perryayscough1914,extinct/dying out,1,1914,1912,en,british,P4 1905–1917,22792,1910
+perryayscough1914,convict(s),1,1914,1912,en,british,P4 1905–1917,22792,1910
+perryayscough1914,settler(s)/colonist(s),16,1914,1912,en,british,P4 1905–1917,22792,1910
+perryayscough1914,yasak/tribute,1,1914,1912,en,british,P4 1905–1917,22792,1910
+perryayscough1914,vodka,2,1914,1912,en,british,P4 1905–1917,22792,1910
+perryayscough1914,civilisation (fr),2,1914,1912,en,british,P4 1905–1917,22792,1910
+piotrowski1863,savage(s),4,1863,1844,en,polish,P1 до 1855,14495,1840
+piotrowski1863,race(s),3,1863,1844,en,polish,P1 до 1855,14495,1840
+piotrowski1863,tribe(s),2,1863,1844,en,polish,P1 до 1855,14495,1840
+piotrowski1863,natives,5,1863,1844,en,polish,P1 до 1855,14495,1840
+piotrowski1863,extinct/dying out,1,1863,1844,en,polish,P1 до 1855,14495,1840
+piotrowski1863,exile(s),18,1863,1844,en,polish,P1 до 1855,14495,1840
+piotrowski1863,convict(s),21,1863,1844,en,polish,P1 до 1855,14495,1840
+pistor1905,primitive,1,1905,1902,de,german,P3 1881–1904,37132,1900
+pistor1905,Russified,1,1905,1902,de,german,P3 1881–1904,37132,1900
+pistor1905,Kultur (de),2,1905,1902,de,german,P3 1881–1904,37132,1900
+price1892,primitive,3,1892,1890,en,british,P3 1881–1904,42619,1890
+price1892,civilised/civilized,2,1892,1890,en,british,P3 1881–1904,42619,1890
+price1892,civilisation,4,1892,1890,en,british,P3 1881–1904,42619,1890
+price1892,race(s),3,1892,1890,en,british,P3 1881–1904,42619,1890
+price1892,tribe(s),1,1892,1890,en,british,P3 1881–1904,42619,1890
+price1892,natives,4,1892,1890,en,british,P3 1881–1904,42619,1890
+price1892,aborigines,2,1892,1890,en,british,P3 1881–1904,42619,1890
+price1892,Russified,1,1892,1890,en,british,P3 1881–1904,42619,1890
+price1892,exile(s),17,1892,1890,en,british,P3 1881–1904,42619,1890
+price1892,convict(s),11,1892,1890,en,british,P3 1881–1904,42619,1890
+price1892,vodka,6,1892,1890,en,british,P3 1881–1904,42619,1890
+rabot1894,primitive,7,1894,1890,fr,french,P3 1881–1904,20461,1890
+rabot1894,civilisation,12,1894,1890,fr,french,P3 1881–1904,20461,1890
+rabot1894,race(s),8,1894,1890,fr,french,P3 1881–1904,20461,1890
+rabot1894,Russified,2,1894,1890,fr,french,P3 1881–1904,20461,1890
+rabot1894,yasak/tribute,1,1894,1890,fr,french,P3 1881–1904,20461,1890
+rabot1894,vodka,1,1894,1890,fr,french,P3 1881–1904,20461,1890
+rabot1894,sauvages (fr),11,1894,1890,fr,french,P3 1881–1904,20461,1890
+rabot1894,civilisation (fr),12,1894,1890,fr,french,P3 1881–1904,20461,1890
+rabot1894,indigènes (fr),69,1894,1890,fr,french,P3 1881–1904,20461,1890
+radloff1893,civilisation,7,1893,1860,de,german,P2 1856–1880,93470,1860
+radloff1893,shaman,16,1893,1860,de,german,P2 1856–1880,93470,1860
+radloff1893,civilisation (fr),7,1893,1860,de,german,P2 1856–1880,93470,1860
+radloff1893,Kultur (de),3,1893,1860,de,german,P2 1856–1880,93470,1860
+radloff1893,Eingeborene (de),39,1893,1860,de,german,P2 1856–1880,93470,1860
+ready1904,exile(s),1,1904,1903,en,british,P3 1881–1904,2212,1900
+reid1899,civilisation,1,1899,1898,en,british,P3 1881–1904,17678,1890
+reid1899,race(s),1,1899,1898,en,british,P3 1881–1904,17678,1890
+reid1899,exile(s),7,1899,1898,en,british,P3 1881–1904,17678,1890
+reid1899,convict(s),1,1899,1898,en,british,P3 1881–1904,17678,1890
+reid1899,settler(s)/colonist(s),1,1899,1898,en,british,P3 1881–1904,17678,1890
+reid1899,vodka,4,1899,1898,en,british,P3 1881–1904,17678,1890
+ronaldshay1904,savage(s),2,1904,1903,en,british,P3 1881–1904,12902,1900
+ronaldshay1904,barbarous/barbarian,1,1904,1903,en,british,P3 1881–1904,12902,1900
+ronaldshay1904,civilisation,1,1904,1903,en,british,P3 1881–1904,12902,1900
+ronaldshay1904,race(s),3,1904,1903,en,british,P3 1881–1904,12902,1900
+ronaldshay1904,tribe(s),1,1904,1903,en,british,P3 1881–1904,12902,1900
+ronaldshay1904,exile(s),1,1904,1903,en,british,P3 1881–1904,12902,1900
+ronaldshay1904,convict(s),2,1904,1903,en,british,P3 1881–1904,12902,1900
+ronaldshay1904,settler(s)/colonist(s),6,1904,1903,en,british,P3 1881–1904,12902,1900
+ronaldshay1904,yasak/tribute,2,1904,1903,en,british,P3 1881–1904,12902,1900
+ronaldshay1904,vodka,2,1904,1903,en,british,P3 1881–1904,12902,1900
+ronaldshay1904,civilisation (fr),1,1904,1903,en,british,P3 1881–1904,12902,1900
+rose1837,civilisation,1,1837,1829,de,german,P1 до 1855,39838,1820
+rose1837,shaman,3,1837,1829,de,german,P1 до 1855,39838,1820
+rose1837,civilisation (fr),1,1837,1829,de,german,P1 до 1855,39838,1820
+rose1837,Kultur (de),1,1837,1829,de,german,P1 до 1855,39838,1820
+rosenberg1904,primitive,2,1904,1902,da,scandinavian,P3 1881–1904,68611,1900
+rosenberg1904,race(s),2,1904,1902,da,scandinavian,P3 1881–1904,68611,1900
+rosenberg1904,Russified,1,1904,1902,da,scandinavian,P3 1881–1904,68611,1900
+rosenberg1904,shaman,10,1904,1902,da,scandinavian,P3 1881–1904,68611,1900
+rosenberg1904,vodka,5,1904,1902,da,scandinavian,P3 1881–1904,68611,1900
+rosenberg1904,Kultur (de),8,1904,1902,da,scandinavian,P3 1881–1904,68611,1900
+scarfoglio1909,savage(s),3,1909,1908,en,italian,P4 1905–1917,15541,1900
+scarfoglio1909,primitive,1,1909,1908,en,italian,P4 1905–1917,15541,1900
+scarfoglio1909,civilised/civilized,2,1909,1908,en,italian,P4 1905–1917,15541,1900
+scarfoglio1909,uncivilised,1,1909,1908,en,italian,P4 1905–1917,15541,1900
+scarfoglio1909,civilisation,2,1909,1908,en,italian,P4 1905–1917,15541,1900
+scarfoglio1909,race(s),7,1909,1908,en,italian,P4 1905–1917,15541,1900
+scarfoglio1909,tribe(s),1,1909,1908,en,italian,P4 1905–1917,15541,1900
+scarfoglio1909,Russified,1,1909,1908,en,italian,P4 1905–1917,15541,1900
+scarfoglio1909,exile(s),1,1909,1908,en,italian,P4 1905–1917,15541,1900
+scarfoglio1909,vodka,5,1909,1908,en,italian,P4 1905–1917,15541,1900
+scarfoglio1909,civilisation (fr),2,1909,1908,en,italian,P4 1905–1917,15541,1900
+seebohm1882,barbarous/barbarian,1,1882,1877,en,british,P2 1856–1880,16605,1870
+seebohm1882,civilisation,2,1882,1877,en,british,P2 1856–1880,16605,1870
+seebohm1882,race(s),5,1882,1877,en,british,P2 1856–1880,16605,1870
+seebohm1882,tribe(s),1,1882,1877,en,british,P2 1856–1880,16605,1870
+seebohm1882,natives,2,1882,1877,en,british,P2 1856–1880,16605,1870
+seebohm1882,exile(s),5,1882,1877,en,british,P2 1856–1880,16605,1870
+seebohm1882,yasak/tribute,1,1882,1877,en,british,P2 1856–1880,16605,1870
+seebohm1882,vodka,1,1882,1877,en,british,P2 1856–1880,16605,1870
+seebohm1882,civilisation (fr),2,1882,1877,en,british,P2 1856–1880,16605,1870
+sheepshanks1903,uncivilised,2,1903,1856,en,british,P2 1856–1880,9848,1850
+sheepshanks1903,civilisation,2,1903,1856,en,british,P2 1856–1880,9848,1850
+sheepshanks1903,race(s),5,1903,1856,en,british,P2 1856–1880,9848,1850
+sheepshanks1903,tribe(s),12,1903,1856,en,british,P2 1856–1880,9848,1850
+sheepshanks1903,aborigines,1,1903,1856,en,british,P2 1856–1880,9848,1850
+sheepshanks1903,Russified,1,1903,1856,en,british,P2 1856–1880,9848,1850
+sheepshanks1903,exile(s),1,1903,1856,en,british,P2 1856–1880,9848,1850
+sheepshanks1903,shaman,31,1903,1856,en,british,P2 1856–1880,9848,1850
+simpson1898,savage(s),2,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,primitive,8,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,civilised/civilized,1,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,civilisation,2,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,race(s),8,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,tribe(s),4,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,natives,2,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,exile(s),92,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,convict(s),123,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,settler(s)/colonist(s),36,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,shaman,7,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,yasak/tribute,3,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,vodka,2,1898,1896,en,british,P3 1881–1904,75072,1890
+simpson1898,civilisation (fr),2,1898,1896,en,british,P3 1881–1904,75072,1890
+sommier1885,primitive,3,1885,1880,it,italian,P2 1856–1880,141860,1880
+sommier1885,yasak/tribute,1,1885,1880,it,italian,P2 1856–1880,141860,1880
+stadling1901,savage(s),2,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,barbarous/barbarian,6,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,primitive,8,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,civilised/civilized,10,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,uncivilised,1,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,civilisation,10,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,race(s),10,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,tribe(s),10,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,natives,154,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,extinct/dying out,4,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,exile(s),50,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,convict(s),1,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,settler(s)/colonist(s),18,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,shaman,77,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,vodka,21,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+stadling1901,civilisation (fr),10,1901,1891,en,scandinavian,P3 1881–1904,50663,1890
+swayne1904,primitive,1,1904,1903,en,british,P3 1881–1904,4825,1900
+swayne1904,natives,1,1904,1903,en,british,P3 1881–1904,4825,1900
+swayne1904,settler(s)/colonist(s),1,1904,1903,en,british,P3 1881–1904,4825,1900
+tilley1861,savage(s),1,1861,1858,en,british,P2 1856–1880,7606,1850
+tilley1861,civilised/civilized,2,1861,1858,en,british,P2 1856–1880,7606,1850
+tilley1861,tribe(s),1,1861,1858,en,british,P2 1856–1880,7606,1850
+tilley1861,natives,3,1861,1858,en,british,P2 1856–1880,7606,1850
+tilley1861,settler(s)/colonist(s),4,1861,1858,en,british,P2 1856–1880,7606,1850
+tronson1859,barbarous/barbarian,2,1859,1854,en,british,P1 до 1855,21231,1850
+tronson1859,primitive,1,1859,1854,en,british,P1 до 1855,21231,1850
+tronson1859,civilised/civilized,1,1859,1854,en,british,P1 до 1855,21231,1850
+tronson1859,civilisation,1,1859,1854,en,british,P1 до 1855,21231,1850
+tronson1859,race(s),14,1859,1854,en,british,P1 до 1855,21231,1850
+tronson1859,tribe(s),3,1859,1854,en,british,P1 до 1855,21231,1850
+tronson1859,natives,15,1859,1854,en,british,P1 до 1855,21231,1850
+tronson1859,aborigines,1,1859,1854,en,british,P1 до 1855,21231,1850
+tronson1859,extinct/dying out,1,1859,1854,en,british,P1 до 1855,21231,1850
+tronson1859,yasak/tribute,6,1859,1854,en,british,P1 до 1855,21231,1850
+tronson1859,vodka,3,1859,1854,en,british,P1 до 1855,21231,1850
+tronson1859,civilisation (fr),1,1859,1854,en,british,P1 до 1855,21231,1850
+turner1905,barbarous/barbarian,2,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,primitive,4,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,civilised/civilized,3,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,civilisation,5,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,race(s),8,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,tribe(s),4,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,natives,4,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,aborigines,1,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,exile(s),15,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,convict(s),18,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,settler(s)/colonist(s),8,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,shaman,2,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,yasak/tribute,1,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,vodka,4,1911,1903,en,british,P3 1881–1904,47558,1900
+turner1905,civilisation (fr),5,1911,1903,en,british,P3 1881–1904,47558,1900
+tytgat1901,race(s),1,1901,1900,fr,french,P3 1881–1904,11092,1900
+tytgat1901,sauvages (fr),2,1901,1900,fr,french,P3 1881–1904,11092,1900
+ujfalvy1879,race(s),2,1879,1876,fr,central_european,P2 1856–1880,4838,1870
+ujfalvy1879,sauvages (fr),1,1879,1876,fr,central_european,P2 1856–1880,4838,1870
+vaydevaya1906,barbarous/barbarian,1,1906,1902,en,central_european,P3 1881–1904,6866,1900
+vaydevaya1906,primitive,4,1906,1902,en,central_european,P3 1881–1904,6866,1900
+vaydevaya1906,civilisation,1,1906,1902,en,central_european,P3 1881–1904,6866,1900
+vaydevaya1906,race(s),7,1906,1902,en,central_european,P3 1881–1904,6866,1900
+vaydevaya1906,tribe(s),3,1906,1902,en,central_european,P3 1881–1904,6866,1900
+vaydevaya1906,natives,2,1906,1902,en,central_european,P3 1881–1904,6866,1900
+vaydevaya1906,exile(s),3,1906,1902,en,central_european,P3 1881–1904,6866,1900
+vaydevaya1906,convict(s),1,1906,1902,en,central_european,P3 1881–1904,6866,1900
+vaydevaya1906,settler(s)/colonist(s),3,1906,1902,en,central_european,P3 1881–1904,6866,1900
+ward1920,savage(s),2,1920,1918,en,british,P5 1918–1930,38652,1910
+ward1920,civilisation,1,1920,1918,en,british,P5 1918–1930,38652,1910
+ward1920,race(s),6,1920,1918,en,british,P5 1918–1930,38652,1910
+ward1920,tribe(s),4,1920,1918,en,british,P5 1918–1930,38652,1910
+ward1920,exile(s),4,1920,1918,en,british,P5 1918–1930,38652,1910
+ward1920,vodka,4,1920,1918,en,british,P5 1918–1930,38652,1910
+ward1920,civilisation (fr),1,1920,1918,en,british,P5 1918–1930,38652,1910
+wenyon1896,civilisation,2,1896,1893,en,british,P3 1881–1904,37338,1890
+wenyon1896,race(s),12,1896,1893,en,british,P3 1881–1904,37338,1890
+wenyon1896,tribe(s),17,1896,1893,en,british,P3 1881–1904,37338,1890
+wenyon1896,natives,1,1896,1893,en,british,P3 1881–1904,37338,1890
+wenyon1896,aborigines,9,1896,1893,en,british,P3 1881–1904,37338,1890
+wenyon1896,extinct/dying out,1,1896,1893,en,british,P3 1881–1904,37338,1890
+wenyon1896,exile(s),27,1896,1893,en,british,P3 1881–1904,37338,1890
+wenyon1896,convict(s),11,1896,1893,en,british,P3 1881–1904,37338,1890
+wenyon1896,settler(s)/colonist(s),19,1896,1893,en,british,P3 1881–1904,37338,1890
+wenyon1896,shaman,6,1896,1893,en,british,P3 1881–1904,37338,1890
+wenyon1896,vodka,10,1896,1893,en,british,P3 1881–1904,37338,1890
+whittingham1856,savage(s),3,1856,1854,en,british,P1 до 1855,16544,1850
+whittingham1856,civilised/civilized,1,1856,1854,en,british,P1 до 1855,16544,1850
+whittingham1856,civilisation,1,1856,1854,en,british,P1 до 1855,16544,1850
+whittingham1856,tribe(s),4,1856,1854,en,british,P1 до 1855,16544,1850
+whittingham1856,natives,19,1856,1854,en,british,P1 до 1855,16544,1850
+whittingham1856,extinct/dying out,1,1856,1854,en,british,P1 до 1855,16544,1850
+whittingham1856,exile(s),1,1856,1854,en,british,P1 до 1855,16544,1850
+whittingham1856,settler(s)/colonist(s),3,1856,1854,en,british,P1 до 1855,16544,1850
+whittingham1856,civilisation (fr),1,1856,1854,en,british,P1 до 1855,16544,1850
+whyte1871,savage(s),4,1871,1868,en,british,P2 1856–1880,39888,1860
+whyte1871,barbarous/barbarian,1,1871,1868,en,british,P2 1856–1880,39888,1860
+whyte1871,civilised/civilized,5,1871,1868,en,british,P2 1856–1880,39888,1860
+whyte1871,civilisation,4,1871,1868,en,british,P2 1856–1880,39888,1860
+whyte1871,race(s),2,1871,1868,en,british,P2 1856–1880,39888,1860
+whyte1871,tribe(s),8,1871,1868,en,british,P2 1856–1880,39888,1860
+whyte1871,natives,15,1871,1868,en,british,P2 1856–1880,39888,1860
+whyte1871,extinct/dying out,1,1871,1868,en,british,P2 1856–1880,39888,1860
+whyte1871,Russified,1,1871,1868,en,british,P2 1856–1880,39888,1860
+whyte1871,exile(s),7,1871,1868,en,british,P2 1856–1880,39888,1860
+whyte1871,convict(s),3,1871,1868,en,british,P2 1856–1880,39888,1860
+whyte1871,vodka,2,1871,1868,en,british,P2 1856–1880,39888,1860
+whyte1871,civilisation (fr),4,1871,1868,en,british,P2 1856–1880,39888,1860

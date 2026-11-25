@@ -1,0 +1,48 @@
+{
+ "mention_precision_round1": {
+  "n": 150,
+  "precision": 0.933
+ },
+ "mention_precision_round2": {
+  "n": 100,
+  "precision": 0.97,
+  "ci95": [
+   0.915,
+   0.99
+  ]
+ },
+ "region_in_siberia_accuracy": {
+  "n": 80,
+  "accuracy": 0.9,
+  "ci95": [
+   0.815,
+   0.948
+  ]
+ },
+ "auto_vs_gold": {
+  "n": 84,
+  "polarity_kappa": 0.25,
+  "polarity_agreement": 0.69,
+  "obs_type_kappa": 0.24,
+  "obs_type_agreement": 0.49,
+  "themes_microF1": 0.51,
+  "themes_P": 0.49,
+  "themes_R": 0.53
+ },
+ "annotator": "Claude (model), single annotator; human second annotator required",
+ "errors_found": [
+  "adjective: Finnish ship (country, not people)",
+  "adjective: Chinese frontier (en text matched by de pattern)",
+  "adjective: Russian documents (state)",
+  "'term of exile' = banishment, not person",
+  "adjective: German-language service",
+  "Chinese empire (state; de pattern on en text)",
+  "group mapping: Michie's 'Tartars' in Gobi = Mongols",
+  "'Chinese title' = language",
+  "Russo-Japanese war (compound)",
+  "Estonian-language service",
+  "'into an exile' = banishment",
+  "'Mongol Tartar' racial term mapped to Tatars",
+  "adjective: Siberian sheepskin hats"
+ ]
+}

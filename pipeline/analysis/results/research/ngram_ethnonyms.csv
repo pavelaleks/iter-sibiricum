@@ -1,0 +1,1649 @@
+work_id,group_id,mentions,edition_year,jy,text_language,nat_group,period,words_siberia,decade,group
+asselin1911,chinese,1,1911,1910,fr,french,P4 1905–1917,2110,1910,китайцы
+asselin1911,cossack,1,1911,1910,fr,french,P4 1905–1917,2110,1910,казаки
+asselin1911,pereselentsy,2,1911,1910,fr,french,P4 1905–1917,2110,1910,переселенцы
+asselin1911,russian,1,1911,1910,fr,french,P4 1905–1917,2110,1910,русские
+atkinson1858,altai_kalmyk,39,1858,1848,en,british,P1 до 1855,73147,1840,алтайцы / ойраты ('калмыки')
+atkinson1858,buryat,2,1858,1848,en,british,P1 до 1855,73147,1840,буряты
+atkinson1858,cossack,148,1858,1848,en,british,P1 до 1855,73147,1840,казаки
+atkinson1858,exiles,4,1858,1848,en,british,P1 до 1855,73147,1840,ссыльные и каторжные
+atkinson1858,kazakh_kirghiz,178,1858,1848,en,british,P1 до 1855,73147,1840,казахи ('киргизы' XIX в.)
+atkinson1858,mongol,1,1858,1848,en,british,P1 до 1855,73147,1840,монголы
+atkinson1858,natives_generic,1,1858,1848,en,british,P1 до 1855,73147,1840,"«туземцы», «инородцы» (обобщённо)"
+atkinson1858,russian,6,1858,1848,en,british,P1 до 1855,73147,1840,русские
+atkinson1858,siberian_tatar,12,1858,1848,en,british,P1 до 1855,73147,1840,татары (в т.ч. сибирские)
+atkinson1860,altai_kalmyk,24,1860,1848,en,british,P1 до 1855,85132,1840,алтайцы / ойраты ('калмыки')
+atkinson1860,buryat,10,1860,1848,en,british,P1 до 1855,85132,1840,буряты
+atkinson1860,chinese,36,1860,1848,en,british,P1 до 1855,85132,1840,китайцы
+atkinson1860,cossack,181,1860,1848,en,british,P1 до 1855,85132,1840,казаки
+atkinson1860,evenki_even,33,1860,1848,en,british,P1 до 1855,85132,1840,эвенки / эвены
+atkinson1860,exiles,36,1860,1848,en,british,P1 до 1855,85132,1840,ссыльные и каторжные
+atkinson1860,japanese,2,1860,1848,en,british,P1 до 1855,85132,1840,японцы
+atkinson1860,kazakh_kirghiz,121,1860,1848,en,british,P1 до 1855,85132,1840,казахи ('киргизы' XIX в.)
+atkinson1860,mongol,2,1860,1848,en,british,P1 до 1855,85132,1840,монголы
+atkinson1860,nanai_amur,33,1860,1848,en,british,P1 до 1855,85132,1840,нанайцы и др. народы Амура
+atkinson1860,natives_generic,10,1860,1848,en,british,P1 до 1855,85132,1840,"«туземцы», «инородцы» (обобщённо)"
+atkinson1860,pereselentsy,6,1860,1848,en,british,P1 до 1855,85132,1840,переселенцы
+atkinson1860,pole,2,1860,1848,en,british,P1 до 1855,85132,1840,поляки
+atkinson1860,russian,16,1860,1848,en,british,P1 до 1855,85132,1840,русские
+atkinson1860,siberian_tatar,22,1860,1848,en,british,P1 до 1855,85132,1840,татары (в т.ч. сибирские)
+atkinson1860,sibiriak,5,1860,1848,en,british,P1 до 1855,85132,1840,сибиряки / старожилы
+barzini1908,chinese,8,1908,1907,de,italian,P4 1905–1917,47694,1900,китайцы
+barzini1908,cossack,12,1908,1907,de,italian,P4 1905–1917,47694,1900,казаки
+barzini1908,evenki_even,1,1908,1907,de,italian,P4 1905–1917,47694,1900,эвенки / эвены
+barzini1908,exiles,5,1908,1907,de,italian,P4 1905–1917,47694,1900,ссыльные и каторжные
+barzini1908,japanese,4,1908,1907,de,italian,P4 1905–1917,47694,1900,японцы
+barzini1908,jew,2,1908,1907,de,italian,P4 1905–1917,47694,1900,евреи
+barzini1908,kazakh_kirghiz,9,1908,1907,de,italian,P4 1905–1917,47694,1900,казахи ('киргизы' XIX в.)
+barzini1908,mongol,7,1908,1907,de,italian,P4 1905–1917,47694,1900,монголы
+barzini1908,pereselentsy,2,1908,1907,de,italian,P4 1905–1917,47694,1900,переселенцы
+barzini1908,political_exiles,1,1908,1907,de,italian,P4 1905–1917,47694,1900,политические ссыльные
+barzini1908,russian,6,1908,1907,de,italian,P4 1905–1917,47694,1900,русские
+barzini1908,siberian_tatar,4,1908,1907,de,italian,P4 1905–1917,47694,1900,татары (в т.ч. сибирские)
+barzini1908,sibiriak,10,1908,1907,de,italian,P4 1905–1917,47694,1900,сибиряки / старожилы
+bergman1927,ainu,4,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,айны
+bergman1927,chinese,13,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,китайцы
+bergman1927,chukchi,1,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,чукчи
+bergman1927,evenki_even,156,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,эвенки / эвены
+bergman1927,finn_estonian,1,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,финны и эстонцы
+bergman1927,itelmen_kamchadal,102,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,ительмены / камчадалы
+bergman1927,japanese,13,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,японцы
+bergman1927,korean,8,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,корейцы
+bergman1927,koryak,116,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,коряки
+bergman1927,natives_generic,17,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,"«туземцы», «инородцы» (обобщённо)"
+bergman1927,pereselentsy,1,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,переселенцы
+bergman1927,russian,39,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,русские
+bergman1927,sakha,1,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,якуты (саха)
+bergman1927,siberian_tatar,9,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,татары (в т.ч. сибирские)
+bergman1927,tuvan,1,1927,1920,en,scandinavian,P5 1918–1930,69602,1920,тувинцы
+bordeaux1904,buryat,8,1904,1902,fr,french,P3 1881–1904,51597,1900,буряты
+bordeaux1904,chinese,46,1904,1902,fr,french,P3 1881–1904,51597,1900,китайцы
+bordeaux1904,cossack,22,1904,1902,fr,french,P3 1881–1904,51597,1900,казаки
+bordeaux1904,evenki_even,8,1904,1902,fr,french,P3 1881–1904,51597,1900,эвенки / эвены
+bordeaux1904,exiles,15,1904,1902,fr,french,P3 1881–1904,51597,1900,ссыльные и каторжные
+bordeaux1904,german,2,1904,1902,fr,french,P3 1881–1904,51597,1900,немцы
+bordeaux1904,japanese,4,1904,1902,fr,french,P3 1881–1904,51597,1900,японцы
+bordeaux1904,kazakh_kirghiz,1,1904,1902,fr,french,P3 1881–1904,51597,1900,казахи ('киргизы' XIX в.)
+bordeaux1904,korean,20,1904,1902,fr,french,P3 1881–1904,51597,1900,корейцы
+bordeaux1904,manchu,1,1904,1902,fr,french,P3 1881–1904,51597,1900,маньчжуры
+bordeaux1904,mongol,2,1904,1902,fr,french,P3 1881–1904,51597,1900,монголы
+bordeaux1904,natives_generic,9,1904,1902,fr,french,P3 1881–1904,51597,1900,"«туземцы», «инородцы» (обобщённо)"
+bordeaux1904,nivkh,1,1904,1902,fr,french,P3 1881–1904,51597,1900,нивхи
+bordeaux1904,pereselentsy,9,1904,1902,fr,french,P3 1881–1904,51597,1900,переселенцы
+bordeaux1904,pole,3,1904,1902,fr,french,P3 1881–1904,51597,1900,поляки
+bordeaux1904,russian,38,1904,1902,fr,french,P3 1881–1904,51597,1900,русские
+bordeaux1904,sakha,2,1904,1902,fr,french,P3 1881–1904,51597,1900,якуты (саха)
+bordeaux1904,siberian_tatar,1,1904,1902,fr,french,P3 1881–1904,51597,1900,татары (в т.ч. сибирские)
+bordeaux1904,sibiriak,6,1904,1902,fr,french,P3 1881–1904,51597,1900,сибиряки / старожилы
+bordeaux1904,tramps,1,1904,1902,fr,french,P3 1881–1904,51597,1900,бродяги
+bordeaux1904,ukrainian,1,1904,1902,fr,french,P3 1881–1904,51597,1900,украинцы ('малороссы')
+boulangier1891,altai_kalmyk,6,1891,1887,fr,french,P3 1881–1904,71075,1880,алтайцы / ойраты ('калмыки')
+boulangier1891,buryat,26,1891,1887,fr,french,P3 1881–1904,71075,1880,буряты
+boulangier1891,chinese,6,1891,1887,fr,french,P3 1881–1904,71075,1880,китайцы
+boulangier1891,cossack,32,1891,1887,fr,french,P3 1881–1904,71075,1880,казаки
+boulangier1891,evenki_even,6,1891,1887,fr,french,P3 1881–1904,71075,1880,эвенки / эвены
+boulangier1891,exiles,46,1891,1887,fr,french,P3 1881–1904,71075,1880,ссыльные и каторжные
+boulangier1891,german,2,1891,1887,fr,french,P3 1881–1904,71075,1880,немцы
+boulangier1891,itelmen_kamchadal,1,1891,1887,fr,french,P3 1881–1904,71075,1880,ительмены / камчадалы
+boulangier1891,jew,2,1891,1887,fr,french,P3 1881–1904,71075,1880,евреи
+boulangier1891,kazakh_kirghiz,20,1891,1887,fr,french,P3 1881–1904,71075,1880,казахи ('киргизы' XIX в.)
+boulangier1891,khanty,17,1891,1887,fr,french,P3 1881–1904,71075,1880,ханты
+boulangier1891,mongol,8,1891,1887,fr,french,P3 1881–1904,71075,1880,монголы
+boulangier1891,natives_generic,20,1891,1887,fr,french,P3 1881–1904,71075,1880,"«туземцы», «инородцы» (обобщённо)"
+boulangier1891,pereselentsy,17,1891,1887,fr,french,P3 1881–1904,71075,1880,переселенцы
+boulangier1891,pole,3,1891,1887,fr,french,P3 1881–1904,71075,1880,поляки
+boulangier1891,political_exiles,5,1891,1887,fr,french,P3 1881–1904,71075,1880,политические ссыльные
+boulangier1891,russian,31,1891,1887,fr,french,P3 1881–1904,71075,1880,русские
+boulangier1891,sakha,4,1891,1887,fr,french,P3 1881–1904,71075,1880,якуты (саха)
+boulangier1891,samoyedic,1,1891,1887,fr,french,P3 1881–1904,71075,1880,самодийские народы (без уточнения)
+boulangier1891,siberian_tatar,5,1891,1887,fr,french,P3 1881–1904,71075,1880,татары (в т.ч. сибирские)
+boulangier1891,sibiriak,10,1891,1887,fr,french,P3 1881–1904,71075,1880,сибиряки / старожилы
+boulangier1891,tramps,7,1891,1887,fr,french,P3 1881–1904,71075,1880,бродяги
+boulangier1891,volga_peoples,1,1891,1887,fr,french,P3 1881–1904,71075,1880,народы Поволжья и Приуралья
+carruthers1914,altai_kalmyk,19,1914,1910,en,british,P4 1905–1917,80102,1910,алтайцы / ойраты ('калмыки')
+carruthers1914,buryat,7,1914,1910,en,british,P4 1905–1917,80102,1910,буряты
+carruthers1914,chinese,26,1914,1910,en,british,P4 1905–1917,80102,1910,китайцы
+carruthers1914,cossack,4,1914,1910,en,british,P4 1905–1917,80102,1910,казаки
+carruthers1914,evenki_even,8,1914,1910,en,british,P4 1905–1917,80102,1910,эвенки / эвены
+carruthers1914,exiles,1,1914,1910,en,british,P4 1905–1917,80102,1910,ссыльные и каторжные
+carruthers1914,finn_estonian,2,1914,1910,en,british,P4 1905–1917,80102,1910,финны и эстонцы
+carruthers1914,japanese,1,1914,1910,en,british,P4 1905–1917,80102,1910,японцы
+carruthers1914,kazakh_kirghiz,28,1914,1910,en,british,P4 1905–1917,80102,1910,казахи ('киргизы' XIX в.)
+carruthers1914,khanty,2,1914,1910,en,british,P4 1905–1917,80102,1910,ханты
+carruthers1914,mongol,124,1914,1910,en,british,P4 1905–1917,80102,1910,монголы
+carruthers1914,natives_generic,28,1914,1910,en,british,P4 1905–1917,80102,1910,"«туземцы», «инородцы» (обобщённо)"
+carruthers1914,pereselentsy,29,1914,1910,en,british,P4 1905–1917,80102,1910,переселенцы
+carruthers1914,russian,35,1914,1910,en,british,P4 1905–1917,80102,1910,русские
+carruthers1914,samoyedic,8,1914,1910,en,british,P4 1905–1917,80102,1910,самодийские народы (без уточнения)
+carruthers1914,siberian_tatar,22,1914,1910,en,british,P4 1905–1917,80102,1910,татары (в т.ч. сибирские)
+carruthers1914,sibiriak,11,1914,1910,en,british,P4 1905–1917,80102,1910,сибиряки / старожилы
+carruthers1914,tuvan,191,1914,1910,en,british,P4 1905–1917,80102,1910,тувинцы
+castren1856,buryat,35,1856,1845,de,finnish,P1 до 1855,117457,1840,буряты
+castren1856,chinese,12,1856,1845,de,finnish,P1 до 1855,117457,1840,китайцы
+castren1856,cossack,34,1856,1845,de,finnish,P1 до 1855,117457,1840,казаки
+castren1856,evenki_even,45,1856,1845,de,finnish,P1 до 1855,117457,1840,эвенки / эвены
+castren1856,finn_estonian,23,1856,1845,de,finnish,P1 до 1855,117457,1840,финны и эстонцы
+castren1856,jew,3,1856,1845,de,finnish,P1 до 1855,117457,1840,евреи
+castren1856,kamas,47,1856,1845,de,finnish,P1 до 1855,117457,1840,камасинцы
+castren1856,kazakh_kirghiz,32,1856,1845,de,finnish,P1 до 1855,117457,1840,казахи ('киргизы' XIX в.)
+castren1856,ket,35,1856,1845,de,finnish,P1 до 1855,117457,1840,кеты
+castren1856,khanty,242,1856,1845,de,finnish,P1 до 1855,117457,1840,ханты
+castren1856,manchu,2,1856,1845,de,finnish,P1 до 1855,117457,1840,маньчжуры
+castren1856,mongol,16,1856,1845,de,finnish,P1 до 1855,117457,1840,монголы
+castren1856,natives_generic,2,1856,1845,de,finnish,P1 до 1855,117457,1840,"«туземцы», «инородцы» (обобщённо)"
+castren1856,nenets,15,1856,1845,de,finnish,P1 до 1855,117457,1840,ненцы
+castren1856,pereselentsy,2,1856,1845,de,finnish,P1 до 1855,117457,1840,переселенцы
+castren1856,pole,1,1856,1845,de,finnish,P1 до 1855,117457,1840,поляки
+castren1856,russian,69,1856,1845,de,finnish,P1 до 1855,117457,1840,русские
+castren1856,sakha,7,1856,1845,de,finnish,P1 до 1855,117457,1840,якуты (саха)
+castren1856,samoyedic,321,1856,1845,de,finnish,P1 до 1855,117457,1840,самодийские народы (без уточнения)
+castren1856,selkup,6,1856,1845,de,finnish,P1 до 1855,117457,1840,селькупы
+castren1856,siberian_tatar,130,1856,1845,de,finnish,P1 до 1855,117457,1840,татары (в т.ч. сибирские)
+castren1856,sibiriak,3,1856,1845,de,finnish,P1 до 1855,117457,1840,сибиряки / старожилы
+castren1856,tuvan,48,1856,1845,de,finnish,P1 до 1855,117457,1840,тувинцы
+castren1856,volga_peoples,28,1856,1845,de,finnish,P1 до 1855,117457,1840,народы Поволжья и Приуралья
+cipolla1919,exiles,2,1919,1918,it,italian,P5 1918–1930,16961,1910,ссыльные и каторжные
+cipolla1919,kazakh_kirghiz,7,1919,1918,it,italian,P5 1918–1930,16961,1910,казахи ('киргизы' XIX в.)
+cipolla1919,mongol,4,1919,1918,it,italian,P5 1918–1930,16961,1910,монголы
+cipolla1919,russian,2,1919,1918,it,italian,P5 1918–1930,16961,1910,русские
+cipolla1919,samoyedic,1,1919,1918,it,italian,P5 1918–1930,16961,1910,самодийские народы (без уточнения)
+cipolla1919,siberian_tatar,1,1919,1918,it,italian,P5 1918–1930,16961,1910,татары (в т.ч. сибирские)
+cochrane1829,altai_kalmyk,4,1829,1820,en,british,P1 до 1855,123961,1820,алтайцы / ойраты ('калмыки')
+cochrane1829,buryat,12,1829,1820,en,british,P1 до 1855,123961,1820,буряты
+cochrane1829,chinese,5,1829,1820,en,british,P1 до 1855,123961,1820,китайцы
+cochrane1829,chukchi,53,1829,1820,en,british,P1 до 1855,123961,1820,чукчи
+cochrane1829,cossack,137,1829,1820,en,british,P1 до 1855,123961,1820,казаки
+cochrane1829,evenki_even,27,1829,1820,en,british,P1 до 1855,123961,1820,эвенки / эвены
+cochrane1829,exiles,29,1829,1820,en,british,P1 до 1855,123961,1820,ссыльные и каторжные
+cochrane1829,japanese,1,1829,1820,en,british,P1 до 1855,123961,1820,японцы
+cochrane1829,jew,5,1829,1820,en,british,P1 до 1855,123961,1820,евреи
+cochrane1829,kazakh_kirghiz,12,1829,1820,en,british,P1 до 1855,123961,1820,казахи ('киргизы' XIX в.)
+cochrane1829,khanty,2,1829,1820,en,british,P1 до 1855,123961,1820,ханты
+cochrane1829,koryak,10,1829,1820,en,british,P1 до 1855,123961,1820,коряки
+cochrane1829,mansi,1,1829,1820,en,british,P1 до 1855,123961,1820,манси
+cochrane1829,mongol,4,1829,1820,en,british,P1 до 1855,123961,1820,монголы
+cochrane1829,natives_generic,46,1829,1820,en,british,P1 до 1855,123961,1820,"«туземцы», «инородцы» (обобщённо)"
+cochrane1829,pereselentsy,5,1829,1820,en,british,P1 до 1855,123961,1820,переселенцы
+cochrane1829,pole,2,1829,1820,en,british,P1 до 1855,123961,1820,поляки
+cochrane1829,russian,59,1829,1820,en,british,P1 до 1855,123961,1820,русские
+cochrane1829,sakha,109,1829,1820,en,british,P1 до 1855,123961,1820,якуты (саха)
+cochrane1829,samoyedic,1,1829,1820,en,british,P1 до 1855,123961,1820,самодийские народы (без уточнения)
+cochrane1829,siberian_tatar,33,1829,1820,en,british,P1 до 1855,123961,1820,татары (в т.ч. сибирские)
+cochrane1829,sibiriak,2,1829,1820,en,british,P1 до 1855,123961,1820,сибиряки / старожилы
+cochrane1829,tramps,1,1829,1820,en,british,P1 до 1855,123961,1820,бродяги
+cochrane1829,yukaghir,11,1829,1820,en,british,P1 до 1855,123961,1820,юкагиры
+colquhoun1900,altai_kalmyk,1,1900,1899,en,british,P3 1881–1904,26291,1890,алтайцы / ойраты ('калмыки')
+colquhoun1900,buryat,6,1900,1899,en,british,P3 1881–1904,26291,1890,буряты
+colquhoun1900,chinese,10,1900,1899,en,british,P3 1881–1904,26291,1890,китайцы
+colquhoun1900,chukchi,1,1900,1899,en,british,P3 1881–1904,26291,1890,чукчи
+colquhoun1900,cossack,21,1900,1899,en,british,P3 1881–1904,26291,1890,казаки
+colquhoun1900,evenki_even,4,1900,1899,en,british,P3 1881–1904,26291,1890,эвенки / эвены
+colquhoun1900,exiles,5,1900,1899,en,british,P3 1881–1904,26291,1890,ссыльные и каторжные
+colquhoun1900,german,1,1900,1899,en,british,P3 1881–1904,26291,1890,немцы
+colquhoun1900,japanese,1,1900,1899,en,british,P3 1881–1904,26291,1890,японцы
+colquhoun1900,jew,1,1900,1899,en,british,P3 1881–1904,26291,1890,евреи
+colquhoun1900,kazakh_kirghiz,12,1900,1899,en,british,P3 1881–1904,26291,1890,казахи ('киргизы' XIX в.)
+colquhoun1900,khanty,2,1900,1899,en,british,P3 1881–1904,26291,1890,ханты
+colquhoun1900,manchu,12,1900,1899,en,british,P3 1881–1904,26291,1890,маньчжуры
+colquhoun1900,mongol,12,1900,1899,en,british,P3 1881–1904,26291,1890,монголы
+colquhoun1900,nanai_amur,4,1900,1899,en,british,P3 1881–1904,26291,1890,нанайцы и др. народы Амура
+colquhoun1900,natives_generic,9,1900,1899,en,british,P3 1881–1904,26291,1890,"«туземцы», «инородцы» (обобщённо)"
+colquhoun1900,nivkh,1,1900,1899,en,british,P3 1881–1904,26291,1890,нивхи
+colquhoun1900,pereselentsy,14,1900,1899,en,british,P3 1881–1904,26291,1890,переселенцы
+colquhoun1900,political_exiles,1,1900,1899,en,british,P3 1881–1904,26291,1890,политические ссыльные
+colquhoun1900,russian,20,1900,1899,en,british,P3 1881–1904,26291,1890,русские
+colquhoun1900,sakha,4,1900,1899,en,british,P3 1881–1904,26291,1890,якуты (саха)
+colquhoun1900,samoyedic,3,1900,1899,en,british,P3 1881–1904,26291,1890,самодийские народы (без уточнения)
+colquhoun1900,siberian_tatar,4,1900,1899,en,british,P3 1881–1904,26291,1890,татары (в т.ч. сибирские)
+colquhoun1900,sibiriak,5,1900,1899,en,british,P3 1881–1904,26291,1890,сибиряки / старожилы
+cotteau1885,buryat,13,1885,1881,fr,french,P3 1881–1904,67937,1880,буряты
+cotteau1885,chinese,32,1885,1881,fr,french,P3 1881–1904,67937,1880,китайцы
+cotteau1885,chukchi,2,1885,1881,fr,french,P3 1881–1904,67937,1880,чукчи
+cotteau1885,cossack,25,1885,1881,fr,french,P3 1881–1904,67937,1880,казаки
+cotteau1885,evenki_even,4,1885,1881,fr,french,P3 1881–1904,67937,1880,эвенки / эвены
+cotteau1885,exiles,20,1885,1881,fr,french,P3 1881–1904,67937,1880,ссыльные и каторжные
+cotteau1885,japanese,3,1885,1881,fr,french,P3 1881–1904,67937,1880,японцы
+cotteau1885,jew,1,1885,1881,fr,french,P3 1881–1904,67937,1880,евреи
+cotteau1885,khanty,7,1885,1881,fr,french,P3 1881–1904,67937,1880,ханты
+cotteau1885,korean,3,1885,1881,fr,french,P3 1881–1904,67937,1880,корейцы
+cotteau1885,mongol,5,1885,1881,fr,french,P3 1881–1904,67937,1880,монголы
+cotteau1885,natives_generic,7,1885,1881,fr,french,P3 1881–1904,67937,1880,"«туземцы», «инородцы» (обобщённо)"
+cotteau1885,nivkh,3,1885,1881,fr,french,P3 1881–1904,67937,1880,нивхи
+cotteau1885,pereselentsy,14,1885,1881,fr,french,P3 1881–1904,67937,1880,переселенцы
+cotteau1885,pole,8,1885,1881,fr,french,P3 1881–1904,67937,1880,поляки
+cotteau1885,political_exiles,6,1885,1881,fr,french,P3 1881–1904,67937,1880,политические ссыльные
+cotteau1885,russian,36,1885,1881,fr,french,P3 1881–1904,67937,1880,русские
+cotteau1885,sakha,1,1885,1881,fr,french,P3 1881–1904,67937,1880,якуты (саха)
+cotteau1885,siberian_tatar,4,1885,1881,fr,french,P3 1881–1904,67937,1880,татары (в т.ч. сибирские)
+cotteau1885,sibiriak,12,1885,1881,fr,french,P3 1881–1904,67937,1880,сибиряки / старожилы
+cotteau1885,tramps,1,1885,1881,fr,french,P3 1881–1904,67937,1880,бродяги
+cottrell1842,altai_kalmyk,6,1842,1840,en,british,P1 до 1855,50664,1840,алтайцы / ойраты ('калмыки')
+cottrell1842,buryat,26,1842,1840,en,british,P1 до 1855,50664,1840,буряты
+cottrell1842,chinese,12,1842,1840,en,british,P1 до 1855,50664,1840,китайцы
+cottrell1842,chukchi,6,1842,1840,en,british,P1 до 1855,50664,1840,чукчи
+cottrell1842,cossack,27,1842,1840,en,british,P1 до 1855,50664,1840,казаки
+cottrell1842,evenki_even,16,1842,1840,en,british,P1 до 1855,50664,1840,эвенки / эвены
+cottrell1842,exiles,13,1842,1840,en,british,P1 до 1855,50664,1840,ссыльные и каторжные
+cottrell1842,itelmen_kamchadal,1,1842,1840,en,british,P1 до 1855,50664,1840,ительмены / камчадалы
+cottrell1842,kazakh_kirghiz,27,1842,1840,en,british,P1 до 1855,50664,1840,казахи ('киргизы' XIX в.)
+cottrell1842,khanty,5,1842,1840,en,british,P1 до 1855,50664,1840,ханты
+cottrell1842,mongol,5,1842,1840,en,british,P1 до 1855,50664,1840,монголы
+cottrell1842,natives_generic,19,1842,1840,en,british,P1 до 1855,50664,1840,"«туземцы», «инородцы» (обобщённо)"
+cottrell1842,pereselentsy,2,1842,1840,en,british,P1 до 1855,50664,1840,переселенцы
+cottrell1842,political_exiles,2,1842,1840,en,british,P1 до 1855,50664,1840,политические ссыльные
+cottrell1842,russian,36,1842,1840,en,british,P1 до 1855,50664,1840,русские
+cottrell1842,sakha,12,1842,1840,en,british,P1 до 1855,50664,1840,якуты (саха)
+cottrell1842,siberian_tatar,27,1842,1840,en,british,P1 до 1855,50664,1840,татары (в т.ч. сибирские)
+cottrell1842,sibiriak,2,1842,1840,en,british,P1 до 1855,50664,1840,сибиряки / старожилы
+cottrell1842,tramps,1,1842,1840,en,british,P1 до 1855,50664,1840,бродяги
+cottrell1842,ukrainian,1,1842,1840,en,british,P1 до 1855,50664,1840,украинцы ('малороссы')
+cottrell1842,yukaghir,4,1842,1840,en,british,P1 до 1855,50664,1840,юкагиры
+debaye1897,altai_kalmyk,1,1897,1896,fr,french,P3 1881–1904,5450,1890,алтайцы / ойраты ('калмыки')
+debaye1897,chinese,1,1897,1896,fr,french,P3 1881–1904,5450,1890,китайцы
+debaye1897,cossack,4,1897,1896,fr,french,P3 1881–1904,5450,1890,казаки
+debaye1897,exiles,4,1897,1896,fr,french,P3 1881–1904,5450,1890,ссыльные и каторжные
+debaye1897,jew,1,1897,1896,fr,french,P3 1881–1904,5450,1890,евреи
+debaye1897,kazakh_kirghiz,1,1897,1896,fr,french,P3 1881–1904,5450,1890,казахи ('киргизы' XIX в.)
+debaye1897,khanty,29,1897,1896,fr,french,P3 1881–1904,5450,1890,ханты
+debaye1897,mongol,2,1897,1896,fr,french,P3 1881–1904,5450,1890,монголы
+debaye1897,natives_generic,1,1897,1896,fr,french,P3 1881–1904,5450,1890,"«туземцы», «инородцы» (обобщённо)"
+debaye1897,pereselentsy,1,1897,1896,fr,french,P3 1881–1904,5450,1890,переселенцы
+debaye1897,pole,1,1897,1896,fr,french,P3 1881–1904,5450,1890,поляки
+debaye1897,russian,2,1897,1896,fr,french,P3 1881–1904,5450,1890,русские
+debaye1897,siberian_tatar,7,1897,1896,fr,french,P3 1881–1904,5450,1890,татары (в т.ч. сибирские)
+debaye1898,finn_estonian,1,1898,1897,fr,french,P3 1881–1904,2105,1890,финны и эстонцы
+debaye1898,kazakh_kirghiz,3,1898,1897,fr,french,P3 1881–1904,2105,1890,казахи ('киргизы' XIX в.)
+debaye1898,pereselentsy,16,1898,1897,fr,french,P3 1881–1904,2105,1890,переселенцы
+debaye1898,ukrainian,1,1898,1897,fr,french,P3 1881–1904,2105,1890,украинцы ('малороссы')
+debaye1898,volga_peoples,2,1898,1897,fr,french,P3 1881–1904,2105,1890,народы Поволжья и Приуралья
+dewindt1889,buryat,15,1889,1887,en,british,P3 1881–1904,55012,1880,буряты
+dewindt1889,chinese,2,1889,1887,en,british,P3 1881–1904,55012,1880,китайцы
+dewindt1889,chukchi,2,1889,1887,en,british,P3 1881–1904,55012,1880,чукчи
+dewindt1889,cossack,29,1889,1887,en,british,P3 1881–1904,55012,1880,казаки
+dewindt1889,evenki_even,7,1889,1887,en,british,P3 1881–1904,55012,1880,эвенки / эвены
+dewindt1889,exiles,43,1889,1887,en,british,P3 1881–1904,55012,1880,ссыльные и каторжные
+dewindt1889,german,1,1889,1887,en,british,P3 1881–1904,55012,1880,немцы
+dewindt1889,japanese,1,1889,1887,en,british,P3 1881–1904,55012,1880,японцы
+dewindt1889,jew,4,1889,1887,en,british,P3 1881–1904,55012,1880,евреи
+dewindt1889,khanty,14,1889,1887,en,british,P3 1881–1904,55012,1880,ханты
+dewindt1889,koryak,17,1889,1887,en,british,P3 1881–1904,55012,1880,коряки
+dewindt1889,mongol,20,1889,1887,en,british,P3 1881–1904,55012,1880,монголы
+dewindt1889,natives_generic,15,1889,1887,en,british,P3 1881–1904,55012,1880,"«туземцы», «инородцы» (обобщённо)"
+dewindt1889,pole,5,1889,1887,en,british,P3 1881–1904,55012,1880,поляки
+dewindt1889,political_exiles,22,1889,1887,en,british,P3 1881–1904,55012,1880,политические ссыльные
+dewindt1889,russian,18,1889,1887,en,british,P3 1881–1904,55012,1880,русские
+dewindt1889,sakha,16,1889,1887,en,british,P3 1881–1904,55012,1880,якуты (саха)
+dewindt1889,samoyedic,2,1889,1887,en,british,P3 1881–1904,55012,1880,самодийские народы (без уточнения)
+dewindt1889,siberian_tatar,7,1889,1887,en,british,P3 1881–1904,55012,1880,татары (в т.ч. сибирские)
+dewindt1889,sibiriak,9,1889,1887,en,british,P3 1881–1904,55012,1880,сибиряки / старожилы
+dewindt1889,tramps,3,1889,1887,en,british,P3 1881–1904,55012,1880,бродяги
+dewindt1889,yukaghir,1,1889,1887,en,british,P3 1881–1904,55012,1880,юкагиры
+dewindt1892,buryat,4,1892,1890,en,british,P3 1881–1904,46075,1890,буряты
+dewindt1892,cossack,9,1892,1890,en,british,P3 1881–1904,46075,1890,казаки
+dewindt1892,evenki_even,5,1892,1890,en,british,P3 1881–1904,46075,1890,эвенки / эвены
+dewindt1892,exiles,116,1892,1890,en,british,P3 1881–1904,46075,1890,ссыльные и каторжные
+dewindt1892,german,1,1892,1890,en,british,P3 1881–1904,46075,1890,немцы
+dewindt1892,jew,6,1892,1890,en,british,P3 1881–1904,46075,1890,евреи
+dewindt1892,khanty,15,1892,1890,en,british,P3 1881–1904,46075,1890,ханты
+dewindt1892,koryak,7,1892,1890,en,british,P3 1881–1904,46075,1890,коряки
+dewindt1892,natives_generic,3,1892,1890,en,british,P3 1881–1904,46075,1890,"«туземцы», «инородцы» (обобщённо)"
+dewindt1892,nivkh,4,1892,1890,en,british,P3 1881–1904,46075,1890,нивхи
+dewindt1892,pereselentsy,2,1892,1890,en,british,P3 1881–1904,46075,1890,переселенцы
+dewindt1892,pole,2,1892,1890,en,british,P3 1881–1904,46075,1890,поляки
+dewindt1892,political_exiles,30,1892,1890,en,british,P3 1881–1904,46075,1890,политические ссыльные
+dewindt1892,russian,17,1892,1890,en,british,P3 1881–1904,46075,1890,русские
+dewindt1892,sakha,13,1892,1890,en,british,P3 1881–1904,46075,1890,якуты (саха)
+dewindt1892,samoyedic,7,1892,1890,en,british,P3 1881–1904,46075,1890,самодийские народы (без уточнения)
+dewindt1892,siberian_tatar,14,1892,1890,en,british,P3 1881–1904,46075,1890,татары (в т.ч. сибирские)
+dewindt1892,sibiriak,6,1892,1890,en,british,P3 1881–1904,46075,1890,сибиряки / старожилы
+dewindt1892,tramps,9,1892,1890,en,british,P3 1881–1904,46075,1890,бродяги
+dewindt1892,volga_peoples,1,1892,1890,en,british,P3 1881–1904,46075,1890,народы Поволжья и Приуралья
+dewindt1896,ainu,3,1896,1894,en,british,P3 1881–1904,35760,1890,айны
+dewindt1896,chinese,5,1896,1894,en,british,P3 1881–1904,35760,1890,китайцы
+dewindt1896,cossack,18,1896,1894,en,british,P3 1881–1904,35760,1890,казаки
+dewindt1896,exiles,78,1896,1894,en,british,P3 1881–1904,35760,1890,ссыльные и каторжные
+dewindt1896,japanese,1,1896,1894,en,british,P3 1881–1904,35760,1890,японцы
+dewindt1896,jew,1,1896,1894,en,british,P3 1881–1904,35760,1890,евреи
+dewindt1896,korean,2,1896,1894,en,british,P3 1881–1904,35760,1890,корейцы
+dewindt1896,manchu,2,1896,1894,en,british,P3 1881–1904,35760,1890,маньчжуры
+dewindt1896,nanai_amur,4,1896,1894,en,british,P3 1881–1904,35760,1890,нанайцы и др. народы Амура
+dewindt1896,natives_generic,3,1896,1894,en,british,P3 1881–1904,35760,1890,"«туземцы», «инородцы» (обобщённо)"
+dewindt1896,nivkh,10,1896,1894,en,british,P3 1881–1904,35760,1890,нивхи
+dewindt1896,pereselentsy,9,1896,1894,en,british,P3 1881–1904,35760,1890,переселенцы
+dewindt1896,political_exiles,18,1896,1894,en,british,P3 1881–1904,35760,1890,политические ссыльные
+dewindt1896,russian,7,1896,1894,en,british,P3 1881–1904,35760,1890,русские
+dewindt1903,buryat,4,1903,1901,en,british,P3 1881–1904,56388,1900,буряты
+dewindt1903,chinese,1,1903,1901,en,british,P3 1881–1904,56388,1900,китайцы
+dewindt1903,chukchi,65,1903,1901,en,british,P3 1881–1904,56388,1900,чукчи
+dewindt1903,cossack,33,1903,1901,en,british,P3 1881–1904,56388,1900,казаки
+dewindt1903,evenki_even,5,1903,1901,en,british,P3 1881–1904,56388,1900,эвенки / эвены
+dewindt1903,exiles,55,1903,1901,en,british,P3 1881–1904,56388,1900,ссыльные и каторжные
+dewindt1903,jew,1,1903,1901,en,british,P3 1881–1904,56388,1900,евреи
+dewindt1903,natives_generic,49,1903,1901,en,british,P3 1881–1904,56388,1900,"«туземцы», «инородцы» (обобщённо)"
+dewindt1903,pereselentsy,4,1903,1901,en,british,P3 1881–1904,56388,1900,переселенцы
+dewindt1903,pole,1,1903,1901,en,british,P3 1881–1904,56388,1900,поляки
+dewindt1903,political_exiles,27,1903,1901,en,british,P3 1881–1904,56388,1900,политические ссыльные
+dewindt1903,russian,10,1903,1901,en,british,P3 1881–1904,56388,1900,русские
+dewindt1903,sakha,66,1903,1901,en,british,P3 1881–1904,56388,1900,якуты (саха)
+dewindt1903,siberian_tatar,2,1903,1901,en,british,P3 1881–1904,56388,1900,татары (в т.ч. сибирские)
+dewindt1903,sibiriak,2,1903,1901,en,british,P3 1881–1904,56388,1900,сибиряки / старожилы
+dewindt1903,yukaghir,2,1903,1901,en,british,P3 1881–1904,56388,1900,юкагиры
+digby1928,ainu,2,1928,1912,en,british,P4 1905–1917,39606,1910,айны
+digby1928,buryat,46,1928,1912,en,british,P4 1905–1917,39606,1910,буряты
+digby1928,chinese,6,1928,1912,en,british,P4 1905–1917,39606,1910,китайцы
+digby1928,chukchi,3,1928,1912,en,british,P4 1905–1917,39606,1910,чукчи
+digby1928,cossack,6,1928,1912,en,british,P4 1905–1917,39606,1910,казаки
+digby1928,evenki_even,13,1928,1912,en,british,P4 1905–1917,39606,1910,эвенки / эвены
+digby1928,exiles,12,1928,1912,en,british,P4 1905–1917,39606,1910,ссыльные и каторжные
+digby1928,finn_estonian,2,1928,1912,en,british,P4 1905–1917,39606,1910,финны и эстонцы
+digby1928,japanese,1,1928,1912,en,british,P4 1905–1917,39606,1910,японцы
+digby1928,kazakh_kirghiz,1,1928,1912,en,british,P4 1905–1917,39606,1910,казахи ('киргизы' XIX в.)
+digby1928,ket,1,1928,1912,en,british,P4 1905–1917,39606,1910,кеты
+digby1928,khanty,1,1928,1912,en,british,P4 1905–1917,39606,1910,ханты
+digby1928,koryak,3,1928,1912,en,british,P4 1905–1917,39606,1910,коряки
+digby1928,manchu,2,1928,1912,en,british,P4 1905–1917,39606,1910,маньчжуры
+digby1928,mongol,13,1928,1912,en,british,P4 1905–1917,39606,1910,монголы
+digby1928,natives_generic,25,1928,1912,en,british,P4 1905–1917,39606,1910,"«туземцы», «инородцы» (обобщённо)"
+digby1928,nivkh,2,1928,1912,en,british,P4 1905–1917,39606,1910,нивхи
+digby1928,pereselentsy,3,1928,1912,en,british,P4 1905–1917,39606,1910,переселенцы
+digby1928,pole,1,1928,1912,en,british,P4 1905–1917,39606,1910,поляки
+digby1928,political_exiles,3,1928,1912,en,british,P4 1905–1917,39606,1910,политические ссыльные
+digby1928,russian,14,1928,1912,en,british,P4 1905–1917,39606,1910,русские
+digby1928,sakha,11,1928,1912,en,british,P4 1905–1917,39606,1910,якуты (саха)
+digby1928,samoyedic,2,1928,1912,en,british,P4 1905–1917,39606,1910,самодийские народы (без уточнения)
+digby1928,siberian_tatar,5,1928,1912,en,british,P4 1905–1917,39606,1910,татары (в т.ч. сибирские)
+digby1928,sibiriak,10,1928,1912,en,british,P4 1905–1917,39606,1910,сибиряки / старожилы
+digby1928,yukaghir,1,1928,1912,en,british,P4 1905–1917,39606,1910,юкагиры
+dobell1830,altai_kalmyk,1,1830,1812,en,british,P1 до 1855,80528,1810,алтайцы / ойраты ('калмыки')
+dobell1830,chinese,22,1830,1812,en,british,P1 до 1855,80528,1810,китайцы
+dobell1830,chukchi,11,1830,1812,en,british,P1 до 1855,80528,1810,чукчи
+dobell1830,cossack,71,1830,1812,en,british,P1 до 1855,80528,1810,казаки
+dobell1830,evenki_even,4,1830,1812,en,british,P1 до 1855,80528,1810,эвенки / эвены
+dobell1830,exiles,9,1830,1812,en,british,P1 до 1855,80528,1810,ссыльные и каторжные
+dobell1830,kazakh_kirghiz,2,1830,1812,en,british,P1 до 1855,80528,1810,казахи ('киргизы' XIX в.)
+dobell1830,mongol,6,1830,1812,en,british,P1 до 1855,80528,1810,монголы
+dobell1830,natives_generic,35,1830,1812,en,british,P1 до 1855,80528,1810,"«туземцы», «инородцы» (обобщённо)"
+dobell1830,pereselentsy,2,1830,1812,en,british,P1 до 1855,80528,1810,переселенцы
+dobell1830,pole,1,1830,1812,en,british,P1 до 1855,80528,1810,поляки
+dobell1830,russian,16,1830,1812,en,british,P1 до 1855,80528,1810,русские
+dobell1830,sakha,111,1830,1812,en,british,P1 до 1855,80528,1810,якуты (саха)
+dobell1830,siberian_tatar,11,1830,1812,en,british,P1 до 1855,80528,1810,татары (в т.ч. сибирские)
+dobell1830,sibiriak,1,1830,1812,en,british,P1 до 1855,80528,1810,сибиряки / старожилы
+donner1915,cossack,6,1915,1911,fi,finnish,P4 1905–1917,46944,1910,казаки
+donner1915,evenki_even,51,1915,1911,fi,finnish,P4 1905–1917,46944,1910,эвенки / эвены
+donner1915,exiles,25,1915,1911,fi,finnish,P4 1905–1917,46944,1910,ссыльные и каторжные
+donner1915,finn_estonian,12,1915,1911,fi,finnish,P4 1905–1917,46944,1910,финны и эстонцы
+donner1915,german,7,1915,1911,fi,finnish,P4 1905–1917,46944,1910,немцы
+donner1915,japanese,1,1915,1911,fi,finnish,P4 1905–1917,46944,1910,японцы
+donner1915,kamas,16,1915,1911,fi,finnish,P4 1905–1917,46944,1910,камасинцы
+donner1915,khanty,49,1915,1911,fi,finnish,P4 1905–1917,46944,1910,ханты
+donner1915,mongol,3,1915,1911,fi,finnish,P4 1905–1917,46944,1910,монголы
+donner1915,natives_generic,50,1915,1911,fi,finnish,P4 1905–1917,46944,1910,"«туземцы», «инородцы» (обобщённо)"
+donner1915,nenets,10,1915,1911,fi,finnish,P4 1905–1917,46944,1910,ненцы
+donner1915,old_believer,1,1915,1911,fi,finnish,P4 1905–1917,46944,1910,старообрядцы
+donner1915,pereselentsy,1,1915,1911,fi,finnish,P4 1905–1917,46944,1910,переселенцы
+donner1915,russian,91,1915,1911,fi,finnish,P4 1905–1917,46944,1910,русские
+donner1915,sakha,2,1915,1911,fi,finnish,P4 1905–1917,46944,1910,якуты (саха)
+donner1915,samoyedic,333,1915,1911,fi,finnish,P4 1905–1917,46944,1910,самодийские народы (без уточнения)
+donner1915,selkup,16,1915,1911,fi,finnish,P4 1905–1917,46944,1910,селькупы
+donner1915,siberian_tatar,18,1915,1911,fi,finnish,P4 1905–1917,46944,1910,татары (в т.ч. сибирские)
+donner1915,sibiriak,5,1915,1911,fi,finnish,P4 1905–1917,46944,1910,сибиряки / старожилы
+drei1925,ainu,1,1925,1915,de,german,P4 1905–1917,23562,1910,айны
+drei1925,buryat,1,1925,1915,de,german,P4 1905–1917,23562,1910,буряты
+drei1925,chinese,1,1925,1915,de,german,P4 1905–1917,23562,1910,китайцы
+drei1925,chukchi,1,1925,1915,de,german,P4 1905–1917,23562,1910,чукчи
+drei1925,cossack,7,1925,1915,de,german,P4 1905–1917,23562,1910,казаки
+drei1925,evenki_even,2,1925,1915,de,german,P4 1905–1917,23562,1910,эвенки / эвены
+drei1925,exiles,3,1925,1915,de,german,P4 1905–1917,23562,1910,ссыльные и каторжные
+drei1925,jew,1,1925,1915,de,german,P4 1905–1917,23562,1910,евреи
+drei1925,kazakh_kirghiz,2,1925,1915,de,german,P4 1905–1917,23562,1910,казахи ('киргизы' XIX в.)
+drei1925,khanty,14,1925,1915,de,german,P4 1905–1917,23562,1910,ханты
+drei1925,natives_generic,18,1925,1915,de,german,P4 1905–1917,23562,1910,"«туземцы», «инородцы» (обобщённо)"
+drei1925,nivkh,2,1925,1915,de,german,P4 1905–1917,23562,1910,нивхи
+drei1925,pereselentsy,11,1925,1915,de,german,P4 1905–1917,23562,1910,переселенцы
+drei1925,political_exiles,1,1925,1915,de,german,P4 1905–1917,23562,1910,политические ссыльные
+drei1925,russian,16,1925,1915,de,german,P4 1905–1917,23562,1910,русские
+drei1925,sakha,1,1925,1915,de,german,P4 1905–1917,23562,1910,якуты (саха)
+drei1925,samoyedic,1,1925,1915,de,german,P4 1905–1917,23562,1910,самодийские народы (без уточнения)
+drei1925,siberian_tatar,35,1925,1915,de,german,P4 1905–1917,23562,1910,татары (в т.ч. сибирские)
+drei1925,sibiriak,2,1925,1915,de,german,P4 1905–1917,23562,1910,сибиряки / старожилы
+drei1925,tramps,1,1925,1915,de,german,P4 1905–1917,23562,1910,бродяги
+drei1925,volga_peoples,3,1925,1915,de,german,P4 1905–1917,23562,1910,народы Поволжья и Приуралья
+dwinger1930,chinese,2,1930,1915,en,german,P4 1905–1917,30344,1910,китайцы
+dwinger1930,cossack,20,1930,1915,en,german,P4 1905–1917,30344,1910,казаки
+dwinger1930,czech_slovak,1,1930,1915,en,german,P4 1905–1917,30344,1910,чехи и словаки
+dwinger1930,exiles,2,1930,1915,en,german,P4 1905–1917,30344,1910,ссыльные и каторжные
+dwinger1930,german,2,1930,1915,en,german,P4 1905–1917,30344,1910,немцы
+dwinger1930,jew,2,1930,1915,en,german,P4 1905–1917,30344,1910,евреи
+dwinger1930,russian,8,1930,1915,en,german,P4 1905–1917,30344,1910,русские
+eden1879,buryat,14,1879,1877,en,british,P2 1856–1880,53644,1870,буряты
+eden1879,chinese,6,1879,1877,en,british,P2 1856–1880,53644,1870,китайцы
+eden1879,chukchi,5,1879,1877,en,british,P2 1856–1880,53644,1870,чукчи
+eden1879,cossack,21,1879,1877,en,british,P2 1856–1880,53644,1870,казаки
+eden1879,evenki_even,31,1879,1877,en,british,P2 1856–1880,53644,1870,эвенки / эвены
+eden1879,exiles,3,1879,1877,en,british,P2 1856–1880,53644,1870,ссыльные и каторжные
+eden1879,finn_estonian,1,1879,1877,en,british,P2 1856–1880,53644,1870,финны и эстонцы
+eden1879,itelmen_kamchadal,4,1879,1877,en,british,P2 1856–1880,53644,1870,ительмены / камчадалы
+eden1879,jew,2,1879,1877,en,british,P2 1856–1880,53644,1870,евреи
+eden1879,kazakh_kirghiz,11,1879,1877,en,british,P2 1856–1880,53644,1870,казахи ('киргизы' XIX в.)
+eden1879,khanty,52,1879,1877,en,british,P2 1856–1880,53644,1870,ханты
+eden1879,koryak,9,1879,1877,en,british,P2 1856–1880,53644,1870,коряки
+eden1879,manchu,3,1879,1877,en,british,P2 1856–1880,53644,1870,маньчжуры
+eden1879,mongol,3,1879,1877,en,british,P2 1856–1880,53644,1870,монголы
+eden1879,natives_generic,22,1879,1877,en,british,P2 1856–1880,53644,1870,"«туземцы», «инородцы» (обобщённо)"
+eden1879,pereselentsy,3,1879,1877,en,british,P2 1856–1880,53644,1870,переселенцы
+eden1879,political_exiles,1,1879,1877,en,british,P2 1856–1880,53644,1870,политические ссыльные
+eden1879,russian,41,1879,1877,en,british,P2 1856–1880,53644,1870,русские
+eden1879,sakha,37,1879,1877,en,british,P2 1856–1880,53644,1870,якуты (саха)
+eden1879,samoyedic,4,1879,1877,en,british,P2 1856–1880,53644,1870,самодийские народы (без уточнения)
+eden1879,siberian_tatar,14,1879,1877,en,british,P2 1856–1880,53644,1870,татары (в т.ч. сибирские)
+eden1879,sibiriak,3,1879,1877,en,british,P2 1856–1880,53644,1870,сибиряки / старожилы
+eden1879,tramps,1,1879,1877,en,british,P2 1856–1880,53644,1870,бродяги
+eden1879,volga_peoples,2,1879,1877,en,british,P2 1856–1880,53644,1870,народы Поволжья и Приуралья
+eden1879,yukaghir,4,1879,1877,en,british,P2 1856–1880,53644,1870,юкагиры
+erman1833,ainu,2,1833,1828,de,german,P1 до 1855,184339,1820,айны
+erman1833,altai_kalmyk,1,1833,1828,de,german,P1 до 1855,184339,1820,алтайцы / ойраты ('калмыки')
+erman1833,buryat,4,1833,1828,de,german,P1 до 1855,184339,1820,буряты
+erman1833,chinese,40,1833,1828,de,german,P1 до 1855,184339,1820,китайцы
+erman1833,chukchi,9,1833,1828,de,german,P1 до 1855,184339,1820,чукчи
+erman1833,cossack,39,1833,1828,de,german,P1 до 1855,184339,1820,казаки
+erman1833,evenki_even,100,1833,1828,de,german,P1 до 1855,184339,1820,эвенки / эвены
+erman1833,exiles,37,1833,1828,de,german,P1 до 1855,184339,1820,ссыльные и каторжные
+erman1833,finn_estonian,2,1833,1828,de,german,P1 до 1855,184339,1820,финны и эстонцы
+erman1833,german,6,1833,1828,de,german,P1 до 1855,184339,1820,немцы
+erman1833,itelmen_kamchadal,3,1833,1828,de,german,P1 до 1855,184339,1820,ительмены / камчадалы
+erman1833,jew,7,1833,1828,de,german,P1 до 1855,184339,1820,евреи
+erman1833,kazakh_kirghiz,42,1833,1828,de,german,P1 до 1855,184339,1820,казахи ('киргизы' XIX в.)
+erman1833,khanty,170,1833,1828,de,german,P1 до 1855,184339,1820,ханты
+erman1833,koryak,2,1833,1828,de,german,P1 до 1855,184339,1820,коряки
+erman1833,mongol,24,1833,1828,de,german,P1 до 1855,184339,1820,монголы
+erman1833,old_believer,2,1833,1828,de,german,P1 до 1855,184339,1820,старообрядцы
+erman1833,pereselentsy,10,1833,1828,de,german,P1 до 1855,184339,1820,переселенцы
+erman1833,pole,2,1833,1828,de,german,P1 до 1855,184339,1820,поляки
+erman1833,russian,199,1833,1828,de,german,P1 до 1855,184339,1820,русские
+erman1833,sakha,110,1833,1828,de,german,P1 до 1855,184339,1820,якуты (саха)
+erman1833,samoyedic,27,1833,1828,de,german,P1 до 1855,184339,1820,самодийские народы (без уточнения)
+erman1833,siberian_tatar,29,1833,1828,de,german,P1 до 1855,184339,1820,татары (в т.ч. сибирские)
+erman1833,sibiriak,23,1833,1828,de,german,P1 до 1855,184339,1820,сибиряки / старожилы
+erman1833,tramps,3,1833,1828,de,german,P1 до 1855,184339,1820,бродяги
+erman1833,volga_peoples,21,1833,1828,de,german,P1 до 1855,184339,1820,народы Поволжья и Приуралья
+erman1833,yukaghir,2,1833,1828,de,german,P1 до 1855,184339,1820,юкагиры
+etherton1911,altai_kalmyk,1,1911,1909,en,british,P4 1905–1917,19584,1900,алтайцы / ойраты ('калмыки')
+etherton1911,chinese,13,1911,1909,en,british,P4 1905–1917,19584,1900,китайцы
+etherton1911,cossack,7,1911,1909,en,british,P4 1905–1917,19584,1900,казаки
+etherton1911,exiles,1,1911,1909,en,british,P4 1905–1917,19584,1900,ссыльные и каторжные
+etherton1911,kazakh_kirghiz,5,1911,1909,en,british,P4 1905–1917,19584,1900,казахи ('киргизы' XIX в.)
+etherton1911,manchu,1,1911,1909,en,british,P4 1905–1917,19584,1900,маньчжуры
+etherton1911,mongol,18,1911,1909,en,british,P4 1905–1917,19584,1900,монголы
+etherton1911,natives_generic,2,1911,1909,en,british,P4 1905–1917,19584,1900,"«туземцы», «инородцы» (обобщённо)"
+etherton1911,russian,8,1911,1909,en,british,P4 1905–1917,19584,1900,русские
+etherton1911,sibiriak,2,1911,1909,en,british,P4 1905–1917,19584,1900,сибиряки / старожилы
+felinska1854,altai_kalmyk,5,1854,1839,en,polish,P1 до 1855,106798,1830,алтайцы / ойраты ('калмыки')
+felinska1854,cossack,35,1854,1839,en,polish,P1 до 1855,106798,1830,казаки
+felinska1854,exiles,13,1854,1839,en,polish,P1 до 1855,106798,1830,ссыльные и каторжные
+felinska1854,itelmen_kamchadal,1,1854,1839,en,polish,P1 до 1855,106798,1830,ительмены / камчадалы
+felinska1854,jew,2,1854,1839,en,polish,P1 до 1855,106798,1830,евреи
+felinska1854,khanty,148,1854,1839,en,polish,P1 до 1855,106798,1830,ханты
+felinska1854,natives_generic,23,1854,1839,en,polish,P1 до 1855,106798,1830,"«туземцы», «инородцы» (обобщённо)"
+felinska1854,pereselentsy,2,1854,1839,en,polish,P1 до 1855,106798,1830,переселенцы
+felinska1854,pole,4,1854,1839,en,polish,P1 до 1855,106798,1830,поляки
+felinska1854,russian,4,1854,1839,en,polish,P1 до 1855,106798,1830,русские
+felinska1854,samoyedic,29,1854,1839,en,polish,P1 до 1855,106798,1830,самодийские народы (без уточнения)
+felinska1854,siberian_tatar,9,1854,1839,en,polish,P1 до 1855,106798,1830,татары (в т.ч. сибирские)
+felinska1854,sibiriak,8,1854,1839,en,polish,P1 до 1855,106798,1830,сибиряки / старожилы
+fell1916,altai_kalmyk,2,1916,1900,en,british,P3 1881–1904,32191,1900,алтайцы / ойраты ('калмыки')
+fell1916,cossack,13,1916,1900,en,british,P3 1881–1904,32191,1900,казаки
+fell1916,german,1,1916,1900,en,british,P3 1881–1904,32191,1900,немцы
+fell1916,jew,1,1916,1900,en,british,P3 1881–1904,32191,1900,евреи
+fell1916,kazakh_kirghiz,81,1916,1900,en,british,P3 1881–1904,32191,1900,казахи ('киргизы' XIX в.)
+fell1916,pole,1,1916,1900,en,british,P3 1881–1904,32191,1900,поляки
+fell1916,russian,8,1916,1900,en,british,P3 1881–1904,32191,1900,русские
+fell1916,siberian_tatar,2,1916,1900,en,british,P3 1881–1904,32191,1900,татары (в т.ч. сибирские)
+fell1916,ukrainian,1,1916,1900,en,british,P3 1881–1904,32191,1900,украинцы ('малороссы')
+finsch1879,altai_kalmyk,23,1879,1876,de,german,P2 1856–1880,143686,1870,алтайцы / ойраты ('калмыки')
+finsch1879,chinese,11,1879,1876,de,german,P2 1856–1880,143686,1870,китайцы
+finsch1879,chukchi,1,1879,1876,de,german,P2 1856–1880,143686,1870,чукчи
+finsch1879,cossack,112,1879,1876,de,german,P2 1856–1880,143686,1870,казаки
+finsch1879,exiles,11,1879,1876,de,german,P2 1856–1880,143686,1870,ссыльные и каторжные
+finsch1879,finn_estonian,1,1879,1876,de,german,P2 1856–1880,143686,1870,финны и эстонцы
+finsch1879,japanese,1,1879,1876,de,german,P2 1856–1880,143686,1870,японцы
+finsch1879,jew,2,1879,1876,de,german,P2 1856–1880,143686,1870,евреи
+finsch1879,kazakh_kirghiz,145,1879,1876,de,german,P2 1856–1880,143686,1870,казахи ('киргизы' XIX в.)
+finsch1879,khanty,232,1879,1876,de,german,P2 1856–1880,143686,1870,ханты
+finsch1879,manchu,2,1879,1876,de,german,P2 1856–1880,143686,1870,маньчжуры
+finsch1879,mongol,3,1879,1876,de,german,P2 1856–1880,143686,1870,монголы
+finsch1879,natives_generic,6,1879,1876,de,german,P2 1856–1880,143686,1870,"«туземцы», «инородцы» (обобщённо)"
+finsch1879,nenets,5,1879,1876,de,german,P2 1856–1880,143686,1870,ненцы
+finsch1879,old_believer,5,1879,1876,de,german,P2 1856–1880,143686,1870,старообрядцы
+finsch1879,pereselentsy,1,1879,1876,de,german,P2 1856–1880,143686,1870,переселенцы
+finsch1879,pole,4,1879,1876,de,german,P2 1856–1880,143686,1870,поляки
+finsch1879,political_exiles,1,1879,1876,de,german,P2 1856–1880,143686,1870,политические ссыльные
+finsch1879,russian,66,1879,1876,de,german,P2 1856–1880,143686,1870,русские
+finsch1879,sakha,1,1879,1876,de,german,P2 1856–1880,143686,1870,якуты (саха)
+finsch1879,samoyedic,128,1879,1876,de,german,P2 1856–1880,143686,1870,самодийские народы (без уточнения)
+finsch1879,siberian_tatar,13,1879,1876,de,german,P2 1856–1880,143686,1870,татары (в т.ч. сибирские)
+finsch1879,sibiriak,8,1879,1876,de,german,P2 1856–1880,143686,1870,сибиряки / старожилы
+finsch1879,ukrainian,1,1879,1876,de,german,P2 1856–1880,143686,1870,украинцы ('малороссы')
+finsch1879,volga_peoples,17,1879,1876,de,german,P2 1856–1880,143686,1870,народы Поволжья и Приуралья
+fraser1902,buryat,1,1902,1901,en,british,P3 1881–1904,37777,1900,буряты
+fraser1902,chinese,33,1902,1901,en,british,P3 1881–1904,37777,1900,китайцы
+fraser1902,cossack,16,1902,1901,en,british,P3 1881–1904,37777,1900,казаки
+fraser1902,exiles,41,1902,1901,en,british,P3 1881–1904,37777,1900,ссыльные и каторжные
+fraser1902,german,1,1902,1901,en,british,P3 1881–1904,37777,1900,немцы
+fraser1902,jew,6,1902,1901,en,british,P3 1881–1904,37777,1900,евреи
+fraser1902,kazakh_kirghiz,4,1902,1901,en,british,P3 1881–1904,37777,1900,казахи ('киргизы' XIX в.)
+fraser1902,korean,5,1902,1901,en,british,P3 1881–1904,37777,1900,корейцы
+fraser1902,manchu,1,1902,1901,en,british,P3 1881–1904,37777,1900,маньчжуры
+fraser1902,natives_generic,2,1902,1901,en,british,P3 1881–1904,37777,1900,"«туземцы», «инородцы» (обобщённо)"
+fraser1902,pereselentsy,7,1902,1901,en,british,P3 1881–1904,37777,1900,переселенцы
+fraser1902,political_exiles,13,1902,1901,en,british,P3 1881–1904,37777,1900,политические ссыльные
+fraser1902,russian,33,1902,1901,en,british,P3 1881–1904,37777,1900,русские
+fraser1902,siberian_tatar,9,1902,1901,en,british,P3 1881–1904,37777,1900,татары (в т.ч. сибирские)
+fraser1902,sibiriak,5,1902,1901,en,british,P3 1881–1904,37777,1900,сибиряки / старожилы
+fuchs1925,cossack,1,1925,1915,de,german,P4 1905–1917,4155,1910,казаки
+fuchs1925,exiles,2,1925,1915,de,german,P4 1905–1917,4155,1910,ссыльные и каторжные
+fuchs1925,german,1,1925,1915,de,german,P4 1905–1917,4155,1910,немцы
+fuchs1925,japanese,2,1925,1915,de,german,P4 1905–1917,4155,1910,японцы
+fuchs1925,mongol,1,1925,1915,de,german,P4 1905–1917,4155,1910,монголы
+fuchs1925,pereselentsy,1,1925,1915,de,german,P4 1905–1917,4155,1910,переселенцы
+fuchs1925,russian,1,1925,1915,de,german,P4 1905–1917,4155,1910,русские
+gaunt1919,chinese,22,1919,1913,en,british,P4 1905–1917,27972,1910,китайцы
+gaunt1919,cossack,13,1919,1913,en,british,P4 1905–1917,27972,1910,казаки
+gaunt1919,czech_slovak,1,1919,1913,en,british,P4 1905–1917,27972,1910,чехи и словаки
+gaunt1919,exiles,18,1919,1913,en,british,P4 1905–1917,27972,1910,ссыльные и каторжные
+gaunt1919,german,2,1919,1913,en,british,P4 1905–1917,27972,1910,немцы
+gaunt1919,japanese,2,1919,1913,en,british,P4 1905–1917,27972,1910,японцы
+gaunt1919,jew,1,1919,1913,en,british,P4 1905–1917,27972,1910,евреи
+gaunt1919,korean,2,1919,1913,en,british,P4 1905–1917,27972,1910,корейцы
+gaunt1919,manchu,1,1919,1913,en,british,P4 1905–1917,27972,1910,маньчжуры
+gaunt1919,mongol,1,1919,1913,en,british,P4 1905–1917,27972,1910,монголы
+gaunt1919,nanai_amur,1,1919,1913,en,british,P4 1905–1917,27972,1910,нанайцы и др. народы Амура
+gaunt1919,natives_generic,3,1919,1913,en,british,P4 1905–1917,27972,1910,"«туземцы», «инородцы» (обобщённо)"
+gaunt1919,nivkh,5,1919,1913,en,british,P4 1905–1917,27972,1910,нивхи
+gaunt1919,pereselentsy,2,1919,1913,en,british,P4 1905–1917,27972,1910,переселенцы
+gaunt1919,pole,2,1919,1913,en,british,P4 1905–1917,27972,1910,поляки
+gaunt1919,political_exiles,3,1919,1913,en,british,P4 1905–1917,27972,1910,политические ссыльные
+gaunt1919,russian,21,1919,1913,en,british,P4 1905–1917,27972,1910,русские
+gaunt1919,siberian_tatar,1,1919,1913,en,british,P4 1905–1917,27972,1910,татары (в т.ч. сибирские)
+gerrare1903,ainu,1,1903,1902,en,british,P3 1881–1904,46567,1900,айны
+gerrare1903,altai_kalmyk,2,1903,1902,en,british,P3 1881–1904,46567,1900,алтайцы / ойраты ('калмыки')
+gerrare1903,buryat,6,1903,1902,en,british,P3 1881–1904,46567,1900,буряты
+gerrare1903,chinese,36,1903,1902,en,british,P3 1881–1904,46567,1900,китайцы
+gerrare1903,chukchi,1,1903,1902,en,british,P3 1881–1904,46567,1900,чукчи
+gerrare1903,cossack,50,1903,1902,en,british,P3 1881–1904,46567,1900,казаки
+gerrare1903,evenki_even,3,1903,1902,en,british,P3 1881–1904,46567,1900,эвенки / эвены
+gerrare1903,exiles,21,1903,1902,en,british,P3 1881–1904,46567,1900,ссыльные и каторжные
+gerrare1903,german,1,1903,1902,en,british,P3 1881–1904,46567,1900,немцы
+gerrare1903,itelmen_kamchadal,1,1903,1902,en,british,P3 1881–1904,46567,1900,ительмены / камчадалы
+gerrare1903,japanese,5,1903,1902,en,british,P3 1881–1904,46567,1900,японцы
+gerrare1903,jew,2,1903,1902,en,british,P3 1881–1904,46567,1900,евреи
+gerrare1903,kazakh_kirghiz,4,1903,1902,en,british,P3 1881–1904,46567,1900,казахи ('киргизы' XIX в.)
+gerrare1903,khanty,1,1903,1902,en,british,P3 1881–1904,46567,1900,ханты
+gerrare1903,korean,9,1903,1902,en,british,P3 1881–1904,46567,1900,корейцы
+gerrare1903,manchu,6,1903,1902,en,british,P3 1881–1904,46567,1900,маньчжуры
+gerrare1903,mongol,13,1903,1902,en,british,P3 1881–1904,46567,1900,монголы
+gerrare1903,nanai_amur,3,1903,1902,en,british,P3 1881–1904,46567,1900,нанайцы и др. народы Амура
+gerrare1903,natives_generic,19,1903,1902,en,british,P3 1881–1904,46567,1900,"«туземцы», «инородцы» (обобщённо)"
+gerrare1903,nivkh,3,1903,1902,en,british,P3 1881–1904,46567,1900,нивхи
+gerrare1903,old_believer,2,1903,1902,en,british,P3 1881–1904,46567,1900,старообрядцы
+gerrare1903,pereselentsy,81,1903,1902,en,british,P3 1881–1904,46567,1900,переселенцы
+gerrare1903,pole,1,1903,1902,en,british,P3 1881–1904,46567,1900,поляки
+gerrare1903,political_exiles,5,1903,1902,en,british,P3 1881–1904,46567,1900,политические ссыльные
+gerrare1903,russian,74,1903,1902,en,british,P3 1881–1904,46567,1900,русские
+gerrare1903,sakha,1,1903,1902,en,british,P3 1881–1904,46567,1900,якуты (саха)
+gerrare1903,samoyedic,1,1903,1902,en,british,P3 1881–1904,46567,1900,самодийские народы (без уточнения)
+gerrare1903,siberian_tatar,3,1903,1902,en,british,P3 1881–1904,46567,1900,татары (в т.ч. сибирские)
+gerrare1903,sibiriak,4,1903,1902,en,british,P3 1881–1904,46567,1900,сибиряки / старожилы
+gerrare1903,tramps,2,1903,1902,en,british,P3 1881–1904,46567,1900,бродяги
+gerrare1903,ukrainian,2,1903,1902,en,british,P3 1881–1904,46567,1900,украинцы ('малороссы')
+gerrare1903,volga_peoples,1,1903,1902,en,british,P3 1881–1904,46567,1900,народы Поволжья и Приуралья
+giller1866,exiles,3,1866,1854,pl,polish,P1 до 1855,2924,1850,ссыльные и каторжные
+giller1866,pole,3,1866,1854,pl,polish,P1 до 1855,2924,1850,поляки
+giller1866,russian,4,1866,1854,pl,polish,P1 до 1855,2924,1850,русские
+giller1866,siberian_tatar,1,1866,1854,pl,polish,P1 до 1855,2924,1850,татары (в т.ч. сибирские)
+gowing1889,buryat,14,1889,1886,en,british,P3 1881–1904,50195,1880,буряты
+gowing1889,chinese,9,1889,1886,en,british,P3 1881–1904,50195,1880,китайцы
+gowing1889,cossack,14,1889,1886,en,british,P3 1881–1904,50195,1880,казаки
+gowing1889,evenki_even,3,1889,1886,en,british,P3 1881–1904,50195,1880,эвенки / эвены
+gowing1889,exiles,15,1889,1886,en,british,P3 1881–1904,50195,1880,ссыльные и каторжные
+gowing1889,jew,1,1889,1886,en,british,P3 1881–1904,50195,1880,евреи
+gowing1889,korean,5,1889,1886,en,british,P3 1881–1904,50195,1880,корейцы
+gowing1889,mongol,3,1889,1886,en,british,P3 1881–1904,50195,1880,монголы
+gowing1889,natives_generic,2,1889,1886,en,british,P3 1881–1904,50195,1880,"«туземцы», «инородцы» (обобщённо)"
+gowing1889,pereselentsy,7,1889,1886,en,british,P3 1881–1904,50195,1880,переселенцы
+gowing1889,pole,1,1889,1886,en,british,P3 1881–1904,50195,1880,поляки
+gowing1889,political_exiles,1,1889,1886,en,british,P3 1881–1904,50195,1880,политические ссыльные
+gowing1889,russian,1,1889,1886,en,british,P3 1881–1904,50195,1880,русские
+gowing1889,samoyedic,3,1889,1886,en,british,P3 1881–1904,50195,1880,самодийские народы (без уточнения)
+gowing1889,siberian_tatar,1,1889,1886,en,british,P3 1881–1904,50195,1880,татары (в т.ч. сибирские)
+gowing1889,sibiriak,2,1889,1886,en,british,P3 1881–1904,50195,1880,сибиряки / старожилы
+grano1893,altai_kalmyk,8,1893,1885,fi,finnish,P3 1881–1904,42111,1880,алтайцы / ойраты ('калмыки')
+grano1893,chinese,3,1893,1885,fi,finnish,P3 1881–1904,42111,1880,китайцы
+grano1893,cossack,6,1893,1885,fi,finnish,P3 1881–1904,42111,1880,казаки
+grano1893,exiles,49,1893,1885,fi,finnish,P3 1881–1904,42111,1880,ссыльные и каторжные
+grano1893,finn_estonian,237,1893,1885,fi,finnish,P3 1881–1904,42111,1880,финны и эстонцы
+grano1893,german,22,1893,1885,fi,finnish,P3 1881–1904,42111,1880,немцы
+grano1893,jew,9,1893,1885,fi,finnish,P3 1881–1904,42111,1880,евреи
+grano1893,kazakh_kirghiz,74,1893,1885,fi,finnish,P3 1881–1904,42111,1880,казахи ('киргизы' XIX в.)
+grano1893,khanty,6,1893,1885,fi,finnish,P3 1881–1904,42111,1880,ханты
+grano1893,natives_generic,1,1893,1885,fi,finnish,P3 1881–1904,42111,1880,"«туземцы», «инородцы» (обобщённо)"
+grano1893,pereselentsy,12,1893,1885,fi,finnish,P3 1881–1904,42111,1880,переселенцы
+grano1893,pole,2,1893,1885,fi,finnish,P3 1881–1904,42111,1880,поляки
+grano1893,russian,57,1893,1885,fi,finnish,P3 1881–1904,42111,1880,русские
+grano1893,siberian_tatar,34,1893,1885,fi,finnish,P3 1881–1904,42111,1880,татары (в т.ч. сибирские)
+grano1893,sibiriak,2,1893,1885,fi,finnish,P3 1881–1904,42111,1880,сибиряки / старожилы
+grondijs1922,altai_kalmyk,4,1922,1918,fr,dutch,P5 1918–1930,58283,1910,алтайцы / ойраты ('калмыки')
+grondijs1922,buryat,1,1922,1918,fr,dutch,P5 1918–1930,58283,1910,буряты
+grondijs1922,chinese,4,1922,1918,fr,dutch,P5 1918–1930,58283,1910,китайцы
+grondijs1922,cossack,93,1922,1918,fr,dutch,P5 1918–1930,58283,1910,казаки
+grondijs1922,czech_slovak,86,1922,1918,fr,dutch,P5 1918–1930,58283,1910,чехи и словаки
+grondijs1922,exiles,10,1922,1918,fr,dutch,P5 1918–1930,58283,1910,ссыльные и каторжные
+grondijs1922,german,1,1922,1918,fr,dutch,P5 1918–1930,58283,1910,немцы
+grondijs1922,japanese,41,1922,1918,fr,dutch,P5 1918–1930,58283,1910,японцы
+grondijs1922,jew,9,1922,1918,fr,dutch,P5 1918–1930,58283,1910,евреи
+grondijs1922,kazakh_kirghiz,4,1922,1918,fr,dutch,P5 1918–1930,58283,1910,казахи ('киргизы' XIX в.)
+grondijs1922,mongol,6,1922,1918,fr,dutch,P5 1918–1930,58283,1910,монголы
+grondijs1922,natives_generic,1,1922,1918,fr,dutch,P5 1918–1930,58283,1910,"«туземцы», «инородцы» (обобщённо)"
+grondijs1922,pereselentsy,1,1922,1918,fr,dutch,P5 1918–1930,58283,1910,переселенцы
+grondijs1922,pole,5,1922,1918,fr,dutch,P5 1918–1930,58283,1910,поляки
+grondijs1922,russian,19,1922,1918,fr,dutch,P5 1918–1930,58283,1910,русские
+grondijs1922,siberian_tatar,7,1922,1918,fr,dutch,P5 1918–1930,58283,1910,татары (в т.ч. сибирские)
+grondijs1922,volga_peoples,4,1922,1918,fr,dutch,P5 1918–1930,58283,1910,народы Поволжья и Приуралья
+gsimpson1847,buryat,11,1847,1842,en,british,P1 до 1855,53062,1840,буряты
+gsimpson1847,chinese,8,1847,1842,en,british,P1 до 1855,53062,1840,китайцы
+gsimpson1847,chukchi,9,1847,1842,en,british,P1 до 1855,53062,1840,чукчи
+gsimpson1847,cossack,48,1847,1842,en,british,P1 до 1855,53062,1840,казаки
+gsimpson1847,evenki_even,6,1847,1842,en,british,P1 до 1855,53062,1840,эвенки / эвены
+gsimpson1847,exiles,17,1847,1842,en,british,P1 до 1855,53062,1840,ссыльные и каторжные
+gsimpson1847,japanese,1,1847,1842,en,british,P1 до 1855,53062,1840,японцы
+gsimpson1847,jew,8,1847,1842,en,british,P1 до 1855,53062,1840,евреи
+gsimpson1847,kazakh_kirghiz,5,1847,1842,en,british,P1 до 1855,53062,1840,казахи ('киргизы' XIX в.)
+gsimpson1847,mongol,4,1847,1842,en,british,P1 до 1855,53062,1840,монголы
+gsimpson1847,natives_generic,20,1847,1842,en,british,P1 до 1855,53062,1840,"«туземцы», «инородцы» (обобщённо)"
+gsimpson1847,pereselentsy,7,1847,1842,en,british,P1 до 1855,53062,1840,переселенцы
+gsimpson1847,pole,2,1847,1842,en,british,P1 до 1855,53062,1840,поляки
+gsimpson1847,political_exiles,2,1847,1842,en,british,P1 до 1855,53062,1840,политические ссыльные
+gsimpson1847,russian,35,1847,1842,en,british,P1 до 1855,53062,1840,русские
+gsimpson1847,sakha,46,1847,1842,en,british,P1 до 1855,53062,1840,якуты (саха)
+gsimpson1847,siberian_tatar,10,1847,1842,en,british,P1 до 1855,53062,1840,татары (в т.ч. сибирские)
+gsimpson1847,sibiriak,1,1847,1842,en,british,P1 до 1855,53062,1840,сибиряки / старожилы
+guillemard1889,chinese,2,1889,1881,en,british,P3 1881–1904,61361,1880,китайцы
+guillemard1889,chukchi,2,1889,1881,en,british,P3 1881–1904,61361,1880,чукчи
+guillemard1889,cossack,4,1889,1881,en,british,P3 1881–1904,61361,1880,казаки
+guillemard1889,evenki_even,4,1889,1881,en,british,P3 1881–1904,61361,1880,эвенки / эвены
+guillemard1889,exiles,1,1889,1881,en,british,P3 1881–1904,61361,1880,ссыльные и каторжные
+guillemard1889,german,1,1889,1881,en,british,P3 1881–1904,61361,1880,немцы
+guillemard1889,japanese,1,1889,1881,en,british,P3 1881–1904,61361,1880,японцы
+guillemard1889,jew,1,1889,1881,en,british,P3 1881–1904,61361,1880,евреи
+guillemard1889,koryak,7,1889,1881,en,british,P3 1881–1904,61361,1880,коряки
+guillemard1889,natives_generic,64,1889,1881,en,british,P3 1881–1904,61361,1880,"«туземцы», «инородцы» (обобщённо)"
+guillemard1889,pereselentsy,1,1889,1881,en,british,P3 1881–1904,61361,1880,переселенцы
+guillemard1889,russian,12,1889,1881,en,british,P3 1881–1904,61361,1880,русские
+guillemard1889,sibiriak,1,1889,1881,en,british,P3 1881–1904,61361,1880,сибиряки / старожилы
+hansteen1857,altai_kalmyk,3,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,алтайцы / ойраты ('калмыки')
+hansteen1857,chinese,7,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,китайцы
+hansteen1857,cossack,21,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,казаки
+hansteen1857,evenki_even,9,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,эвенки / эвены
+hansteen1857,exiles,17,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,ссыльные и каторжные
+hansteen1857,finn_estonian,2,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,финны и эстонцы
+hansteen1857,german,1,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,немцы
+hansteen1857,jew,1,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,евреи
+hansteen1857,kazakh_kirghiz,9,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,казахи ('киргизы' XIX в.)
+hansteen1857,khanty,5,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,ханты
+hansteen1857,mongol,9,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,монголы
+hansteen1857,natives_generic,1,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,"«туземцы», «инородцы» (обобщённо)"
+hansteen1857,pole,2,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,поляки
+hansteen1857,political_exiles,1,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,политические ссыльные
+hansteen1857,russian,15,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,русские
+hansteen1857,sakha,2,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,якуты (саха)
+hansteen1857,siberian_tatar,3,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,татары (в т.ч. сибирские)
+hansteen1857,sibiriak,4,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,сибиряки / старожилы
+hansteen1857,volga_peoples,1,1857,1828,fr,scandinavian,P1 до 1855,39676,1820,народы Поволжья и Приуралья
+harrison1910,buryat,15,1910,1908,en,british,P4 1905–1917,40661,1900,буряты
+harrison1910,chinese,40,1910,1908,en,british,P4 1905–1917,40661,1900,китайцы
+harrison1910,chukchi,2,1910,1908,en,british,P4 1905–1917,40661,1900,чукчи
+harrison1910,cossack,50,1910,1908,en,british,P4 1905–1917,40661,1900,казаки
+harrison1910,evenki_even,8,1910,1908,en,british,P4 1905–1917,40661,1900,эвенки / эвены
+harrison1910,exiles,7,1910,1908,en,british,P4 1905–1917,40661,1900,ссыльные и каторжные
+harrison1910,german,3,1910,1908,en,british,P4 1905–1917,40661,1900,немцы
+harrison1910,itelmen_kamchadal,1,1910,1908,en,british,P4 1905–1917,40661,1900,ительмены / камчадалы
+harrison1910,japanese,23,1910,1908,en,british,P4 1905–1917,40661,1900,японцы
+harrison1910,jew,1,1910,1908,en,british,P4 1905–1917,40661,1900,евреи
+harrison1910,kazakh_kirghiz,1,1910,1908,en,british,P4 1905–1917,40661,1900,казахи ('киргизы' XIX в.)
+harrison1910,korean,17,1910,1908,en,british,P4 1905–1917,40661,1900,корейцы
+harrison1910,koryak,1,1910,1908,en,british,P4 1905–1917,40661,1900,коряки
+harrison1910,manchu,7,1910,1908,en,british,P4 1905–1917,40661,1900,маньчжуры
+harrison1910,mongol,3,1910,1908,en,british,P4 1905–1917,40661,1900,монголы
+harrison1910,nanai_amur,2,1910,1908,en,british,P4 1905–1917,40661,1900,нанайцы и др. народы Амура
+harrison1910,natives_generic,5,1910,1908,en,british,P4 1905–1917,40661,1900,"«туземцы», «инородцы» (обобщённо)"
+harrison1910,nivkh,2,1910,1908,en,british,P4 1905–1917,40661,1900,нивхи
+harrison1910,pereselentsy,11,1910,1908,en,british,P4 1905–1917,40661,1900,переселенцы
+harrison1910,pole,1,1910,1908,en,british,P4 1905–1917,40661,1900,поляки
+harrison1910,russian,34,1910,1908,en,british,P4 1905–1917,40661,1900,русские
+harrison1910,siberian_tatar,3,1910,1908,en,british,P4 1905–1917,40661,1900,татары (в т.ч. сибирские)
+harrison1910,sibiriak,2,1910,1908,en,british,P4 1905–1917,40661,1900,сибиряки / старожилы
+harrison1910,ukrainian,1,1910,1908,en,british,P4 1905–1917,40661,1900,украинцы ('малороссы')
+haviland1915,cossack,1,1915,1914,en,british,P4 1905–1917,87975,1910,казаки
+haviland1915,evenki_even,8,1915,1914,en,british,P4 1905–1917,87975,1910,эвенки / эвены
+haviland1915,exiles,9,1915,1914,en,british,P4 1905–1917,87975,1910,ссыльные и каторжные
+haviland1915,german,1,1915,1914,en,british,P4 1905–1917,87975,1910,немцы
+haviland1915,jew,2,1915,1914,en,british,P4 1905–1917,87975,1910,евреи
+haviland1915,khanty,8,1915,1914,en,british,P4 1905–1917,87975,1910,ханты
+haviland1915,natives_generic,77,1915,1914,en,british,P4 1905–1917,87975,1910,"«туземцы», «инородцы» (обобщённо)"
+haviland1915,nenets,31,1915,1914,en,british,P4 1905–1917,87975,1910,ненцы
+haviland1915,pereselentsy,6,1915,1914,en,british,P4 1905–1917,87975,1910,переселенцы
+haviland1915,pole,1,1915,1914,en,british,P4 1905–1917,87975,1910,поляки
+haviland1915,political_exiles,5,1915,1914,en,british,P4 1905–1917,87975,1910,политические ссыльные
+haviland1915,russian,7,1915,1914,en,british,P4 1905–1917,87975,1910,русские
+haviland1915,sakha,1,1915,1914,en,british,P4 1905–1917,87975,1910,якуты (саха)
+haviland1915,samoyedic,48,1915,1914,en,british,P4 1905–1917,87975,1910,самодийские народы (без уточнения)
+haviland1915,siberian_tatar,3,1915,1914,en,british,P4 1905–1917,87975,1910,татары (в т.ч. сибирские)
+haviland1915,sibiriak,5,1915,1914,en,british,P4 1905–1917,87975,1910,сибиряки / старожилы
+hawes1903,ainu,32,1903,1901,en,british,P3 1881–1904,116511,1900,айны
+hawes1903,buryat,8,1903,1901,en,british,P3 1881–1904,116511,1900,буряты
+hawes1903,chinese,21,1903,1901,en,british,P3 1881–1904,116511,1900,китайцы
+hawes1903,chukchi,1,1903,1901,en,british,P3 1881–1904,116511,1900,чукчи
+hawes1903,cossack,1,1903,1901,en,british,P3 1881–1904,116511,1900,казаки
+hawes1903,evenki_even,69,1903,1901,en,british,P3 1881–1904,116511,1900,эвенки / эвены
+hawes1903,exiles,186,1903,1901,en,british,P3 1881–1904,116511,1900,ссыльные и каторжные
+hawes1903,german,2,1903,1901,en,british,P3 1881–1904,116511,1900,немцы
+hawes1903,japanese,3,1903,1901,en,british,P3 1881–1904,116511,1900,японцы
+hawes1903,jew,4,1903,1901,en,british,P3 1881–1904,116511,1900,евреи
+hawes1903,kazakh_kirghiz,2,1903,1901,en,british,P3 1881–1904,116511,1900,казахи ('киргизы' XIX в.)
+hawes1903,korean,6,1903,1901,en,british,P3 1881–1904,116511,1900,корейцы
+hawes1903,koryak,1,1903,1901,en,british,P3 1881–1904,116511,1900,коряки
+hawes1903,manchu,24,1903,1901,en,british,P3 1881–1904,116511,1900,маньчжуры
+hawes1903,mongol,13,1903,1901,en,british,P3 1881–1904,116511,1900,монголы
+hawes1903,nanai_amur,18,1903,1901,en,british,P3 1881–1904,116511,1900,нанайцы и др. народы Амура
+hawes1903,natives_generic,83,1903,1901,en,british,P3 1881–1904,116511,1900,"«туземцы», «инородцы» (обобщённо)"
+hawes1903,nivkh,289,1903,1901,en,british,P3 1881–1904,116511,1900,нивхи
+hawes1903,pereselentsy,27,1903,1901,en,british,P3 1881–1904,116511,1900,переселенцы
+hawes1903,political_exiles,15,1903,1901,en,british,P3 1881–1904,116511,1900,политические ссыльные
+hawes1903,russian,64,1903,1901,en,british,P3 1881–1904,116511,1900,русские
+hawes1903,sakha,2,1903,1901,en,british,P3 1881–1904,116511,1900,якуты (саха)
+hawes1903,siberian_tatar,4,1903,1901,en,british,P3 1881–1904,116511,1900,татары (в т.ч. сибирские)
+hawes1903,sibiriak,2,1903,1901,en,british,P3 1881–1904,116511,1900,сибиряки / старожилы
+hawes1903,tramps,65,1903,1901,en,british,P3 1881–1904,116511,1900,бродяги
+hawes1903,ukrainian,4,1903,1901,en,british,P3 1881–1904,116511,1900,украинцы ('малороссы')
+heller1930,buryat,2,1930,1929,cs,central_european,P5 1918–1930,48578,1920,буряты
+heller1930,chinese,3,1930,1929,cs,central_european,P5 1918–1930,48578,1920,китайцы
+heller1930,chukchi,2,1930,1929,cs,central_european,P5 1918–1930,48578,1920,чукчи
+heller1930,cossack,29,1930,1929,cs,central_european,P5 1918–1930,48578,1920,казаки
+heller1930,evenki_even,43,1930,1929,cs,central_european,P5 1918–1930,48578,1920,эвенки / эвены
+heller1930,exiles,26,1930,1929,cs,central_european,P5 1918–1930,48578,1920,ссыльные и каторжные
+heller1930,jew,3,1930,1929,cs,central_european,P5 1918–1930,48578,1920,евреи
+heller1930,kazakh_kirghiz,5,1930,1929,cs,central_european,P5 1918–1930,48578,1920,казахи ('киргизы' XIX в.)
+heller1930,khanty,19,1930,1929,cs,central_european,P5 1918–1930,48578,1920,ханты
+heller1930,mongol,6,1930,1929,cs,central_european,P5 1918–1930,48578,1920,монголы
+heller1930,natives_generic,27,1930,1929,cs,central_european,P5 1918–1930,48578,1920,"«туземцы», «инородцы» (обобщённо)"
+heller1930,pereselentsy,5,1930,1929,cs,central_european,P5 1918–1930,48578,1920,переселенцы
+heller1930,russian,40,1930,1929,cs,central_european,P5 1918–1930,48578,1920,русские
+heller1930,sakha,43,1930,1929,cs,central_european,P5 1918–1930,48578,1920,якуты (саха)
+heller1930,samoyedic,83,1930,1929,cs,central_european,P5 1918–1930,48578,1920,самодийские народы (без уточнения)
+heller1930,siberian_tatar,11,1930,1929,cs,central_european,P5 1918–1930,48578,1920,татары (в т.ч. сибирские)
+hill1854,buryat,30,1854,1847,en,british,P1 до 1855,140995,1840,буряты
+hill1854,chinese,12,1854,1847,en,british,P1 до 1855,140995,1840,китайцы
+hill1854,chukchi,5,1854,1847,en,british,P1 до 1855,140995,1840,чукчи
+hill1854,cossack,4,1854,1847,en,british,P1 до 1855,140995,1840,казаки
+hill1854,evenki_even,9,1854,1847,en,british,P1 до 1855,140995,1840,эвенки / эвены
+hill1854,exiles,38,1854,1847,en,british,P1 до 1855,140995,1840,ссыльные и каторжные
+hill1854,german,1,1854,1847,en,british,P1 до 1855,140995,1840,немцы
+hill1854,itelmen_kamchadal,22,1854,1847,en,british,P1 до 1855,140995,1840,ительмены / камчадалы
+hill1854,japanese,1,1854,1847,en,british,P1 до 1855,140995,1840,японцы
+hill1854,manchu,1,1854,1847,en,british,P1 до 1855,140995,1840,маньчжуры
+hill1854,mongol,1,1854,1847,en,british,P1 до 1855,140995,1840,монголы
+hill1854,natives_generic,22,1854,1847,en,british,P1 до 1855,140995,1840,"«туземцы», «инородцы» (обобщённо)"
+hill1854,pereselentsy,7,1854,1847,en,british,P1 до 1855,140995,1840,переселенцы
+hill1854,pole,1,1854,1847,en,british,P1 до 1855,140995,1840,поляки
+hill1854,political_exiles,6,1854,1847,en,british,P1 до 1855,140995,1840,политические ссыльные
+hill1854,russian,81,1854,1847,en,british,P1 до 1855,140995,1840,русские
+hill1854,sakha,88,1854,1847,en,british,P1 до 1855,140995,1840,якуты (саха)
+hill1854,siberian_tatar,12,1854,1847,en,british,P1 до 1855,140995,1840,татары (в т.ч. сибирские)
+hill1854,sibiriak,27,1854,1847,en,british,P1 до 1855,140995,1840,сибиряки / старожилы
+hill1854,tramps,1,1854,1847,en,british,P1 до 1855,140995,1840,бродяги
+holman1825,buryat,2,1825,1823,en,british,P1 до 1855,27031,1820,буряты
+holman1825,cossack,10,1825,1823,en,british,P1 до 1855,27031,1820,казаки
+holman1825,evenki_even,2,1825,1823,en,british,P1 до 1855,27031,1820,эвенки / эвены
+holman1825,exiles,8,1825,1823,en,british,P1 до 1855,27031,1820,ссыльные и каторжные
+holman1825,kazakh_kirghiz,5,1825,1823,en,british,P1 до 1855,27031,1820,казахи ('киргизы' XIX в.)
+holman1825,pereselentsy,1,1825,1823,en,british,P1 до 1855,27031,1820,переселенцы
+holman1825,russian,6,1825,1823,en,british,P1 до 1855,27031,1820,русские
+holman1825,siberian_tatar,16,1825,1823,en,british,P1 до 1855,27031,1820,татары (в т.ч. сибирские)
+holman1825,volga_peoples,1,1825,1823,en,british,P1 до 1855,27031,1820,народы Поволжья и Приуралья
+hooper1853,chinese,2,1853,1848,en,british,P1 до 1855,31223,1840,китайцы
+hooper1853,chukchi,45,1853,1848,en,british,P1 до 1855,31223,1840,чукчи
+hooper1853,cossack,1,1853,1848,en,british,P1 до 1855,31223,1840,казаки
+hooper1853,itelmen_kamchadal,2,1853,1848,en,british,P1 до 1855,31223,1840,ительмены / камчадалы
+hooper1853,jew,1,1853,1848,en,british,P1 до 1855,31223,1840,евреи
+hooper1853,koryak,1,1853,1848,en,british,P1 до 1855,31223,1840,коряки
+hooper1853,natives_generic,36,1853,1848,en,british,P1 до 1855,31223,1840,"«туземцы», «инородцы» (обобщённо)"
+hooper1853,russian,3,1853,1848,en,british,P1 до 1855,31223,1840,русские
+hprice1919,buryat,3,1919,1915,en,british,P4 1905–1917,31057,1910,буряты
+hprice1919,chinese,3,1919,1915,en,british,P4 1905–1917,31057,1910,китайцы
+hprice1919,cossack,20,1919,1915,en,british,P4 1905–1917,31057,1910,казаки
+hprice1919,czech_slovak,1,1919,1915,en,british,P4 1905–1917,31057,1910,чехи и словаки
+hprice1919,exiles,2,1919,1915,en,british,P4 1905–1917,31057,1910,ссыльные и каторжные
+hprice1919,german,47,1919,1915,en,british,P4 1905–1917,31057,1910,немцы
+hprice1919,jew,14,1919,1915,en,british,P4 1905–1917,31057,1910,евреи
+hprice1919,natives_generic,1,1919,1915,en,british,P4 1905–1917,31057,1910,"«туземцы», «инородцы» (обобщённо)"
+hprice1919,pole,3,1919,1915,en,british,P4 1905–1917,31057,1910,поляки
+hprice1919,russian,67,1919,1915,en,british,P4 1905–1917,31057,1910,русские
+hprice1919,siberian_tatar,3,1919,1915,en,british,P4 1905–1917,31057,1910,татары (в т.ч. сибирские)
+jefferson1896,buryat,4,1896,1895,en,british,P3 1881–1904,17412,1890,буряты
+jefferson1896,cossack,5,1896,1895,en,british,P3 1881–1904,17412,1890,казаки
+jefferson1896,exiles,19,1896,1895,en,british,P3 1881–1904,17412,1890,ссыльные и каторжные
+jefferson1896,kazakh_kirghiz,15,1896,1895,en,british,P3 1881–1904,17412,1890,казахи ('киргизы' XIX в.)
+jefferson1896,pole,1,1896,1895,en,british,P3 1881–1904,17412,1890,поляки
+jefferson1896,political_exiles,1,1896,1895,en,british,P3 1881–1904,17412,1890,политические ссыльные
+jefferson1896,russian,18,1896,1895,en,british,P3 1881–1904,17412,1890,русские
+jefferson1896,siberian_tatar,5,1896,1895,en,british,P3 1881–1904,17412,1890,татары (в т.ч. сибирские)
+jefferson1896,sibiriak,4,1896,1895,en,british,P3 1881–1904,17412,1890,сибиряки / старожилы
+jefferson1896,tramps,1,1896,1895,en,british,P3 1881–1904,17412,1890,бродяги
+jefferson1897,buryat,3,1897,1896,en,british,P3 1881–1904,29339,1890,буряты
+jefferson1897,chinese,1,1897,1896,en,british,P3 1881–1904,29339,1890,китайцы
+jefferson1897,cossack,7,1897,1896,en,british,P3 1881–1904,29339,1890,казаки
+jefferson1897,exiles,10,1897,1896,en,british,P3 1881–1904,29339,1890,ссыльные и каторжные
+jefferson1897,jew,9,1897,1896,en,british,P3 1881–1904,29339,1890,евреи
+jefferson1897,kazakh_kirghiz,9,1897,1896,en,british,P3 1881–1904,29339,1890,казахи ('киргизы' XIX в.)
+jefferson1897,natives_generic,1,1897,1896,en,british,P3 1881–1904,29339,1890,"«туземцы», «инородцы» (обобщённо)"
+jefferson1897,pereselentsy,4,1897,1896,en,british,P3 1881–1904,29339,1890,переселенцы
+jefferson1897,russian,20,1897,1896,en,british,P3 1881–1904,29339,1890,русские
+jefferson1897,samoyedic,1,1897,1896,en,british,P3 1881–1904,29339,1890,самодийские народы (без уточнения)
+jefferson1897,siberian_tatar,2,1897,1896,en,british,P3 1881–1904,29339,1890,татары (в т.ч. сибирские)
+jefferson1897,sibiriak,6,1897,1896,en,british,P3 1881–1904,29339,1890,сибиряки / старожилы
+jefferson1897,volga_peoples,1,1897,1896,en,british,P3 1881–1904,29339,1890,народы Поволжья и Приуралья
+joest1883,ainu,1,1883,1881,de,german,P3 1881–1904,51933,1880,айны
+joest1883,altai_kalmyk,1,1883,1881,de,german,P3 1881–1904,51933,1880,алтайцы / ойраты ('калмыки')
+joest1883,chinese,17,1883,1881,de,german,P3 1881–1904,51933,1880,китайцы
+joest1883,cossack,54,1883,1881,de,german,P3 1881–1904,51933,1880,казаки
+joest1883,evenki_even,3,1883,1881,de,german,P3 1881–1904,51933,1880,эвенки / эвены
+joest1883,exiles,16,1883,1881,de,german,P3 1881–1904,51933,1880,ссыльные и каторжные
+joest1883,german,1,1883,1881,de,german,P3 1881–1904,51933,1880,немцы
+joest1883,japanese,4,1883,1881,de,german,P3 1881–1904,51933,1880,японцы
+joest1883,jew,34,1883,1881,de,german,P3 1881–1904,51933,1880,евреи
+joest1883,kazakh_kirghiz,3,1883,1881,de,german,P3 1881–1904,51933,1880,казахи ('киргизы' XIX в.)
+joest1883,khanty,1,1883,1881,de,german,P3 1881–1904,51933,1880,ханты
+joest1883,korean,6,1883,1881,de,german,P3 1881–1904,51933,1880,корейцы
+joest1883,manchu,2,1883,1881,de,german,P3 1881–1904,51933,1880,маньчжуры
+joest1883,mongol,15,1883,1881,de,german,P3 1881–1904,51933,1880,монголы
+joest1883,natives_generic,2,1883,1881,de,german,P3 1881–1904,51933,1880,"«туземцы», «инородцы» (обобщённо)"
+joest1883,nivkh,2,1883,1881,de,german,P3 1881–1904,51933,1880,нивхи
+joest1883,old_believer,9,1883,1881,de,german,P3 1881–1904,51933,1880,старообрядцы
+joest1883,pereselentsy,6,1883,1881,de,german,P3 1881–1904,51933,1880,переселенцы
+joest1883,pole,4,1883,1881,de,german,P3 1881–1904,51933,1880,поляки
+joest1883,political_exiles,2,1883,1881,de,german,P3 1881–1904,51933,1880,политические ссыльные
+joest1883,russian,40,1883,1881,de,german,P3 1881–1904,51933,1880,русские
+joest1883,samoyedic,1,1883,1881,de,german,P3 1881–1904,51933,1880,самодийские народы (без уточнения)
+joest1883,siberian_tatar,4,1883,1881,de,german,P3 1881–1904,51933,1880,татары (в т.ч. сибирские)
+joest1883,sibiriak,3,1883,1881,de,german,P3 1881–1904,51933,1880,сибиряки / старожилы
+johnson1907,exiles,2,1907,1874,en,british,P2 1856–1880,65157,1870,ссыльные и каторжные
+johnson1907,german,2,1907,1874,en,british,P2 1856–1880,65157,1870,немцы
+johnson1907,jew,2,1907,1874,en,british,P2 1856–1880,65157,1870,евреи
+johnson1907,khanty,4,1907,1874,en,british,P2 1856–1880,65157,1870,ханты
+johnson1907,natives_generic,28,1907,1874,en,british,P2 1856–1880,65157,1870,"«туземцы», «инородцы» (обобщённо)"
+johnson1907,pereselentsy,3,1907,1874,en,british,P2 1856–1880,65157,1870,переселенцы
+johnson1907,pole,1,1907,1874,en,british,P2 1856–1880,65157,1870,поляки
+johnson1907,russian,15,1907,1874,en,british,P2 1856–1880,65157,1870,русские
+johnson1907,samoyedic,25,1907,1874,en,british,P2 1856–1880,65157,1870,самодийские народы (без уточнения)
+johnson1907,siberian_tatar,3,1907,1874,en,british,P2 1856–1880,65157,1870,татары (в т.ч. сибирские)
+johnson1907,sibiriak,8,1907,1874,en,british,P2 1856–1880,65157,1870,сибиряки / старожилы
+kittlitz1858,chinese,2,1858,1827,de,german,P1 до 1855,85893,1820,китайцы
+kittlitz1858,cossack,6,1858,1827,de,german,P1 до 1855,85893,1820,казаки
+kittlitz1858,exiles,2,1858,1827,de,german,P1 до 1855,85893,1820,ссыльные и каторжные
+kittlitz1858,itelmen_kamchadal,8,1858,1827,de,german,P1 до 1855,85893,1820,ительмены / камчадалы
+kittlitz1858,japanese,1,1858,1827,de,german,P1 до 1855,85893,1820,японцы
+kittlitz1858,russian,6,1858,1827,de,german,P1 до 1855,85893,1820,русские
+kittlitz1858,sakha,2,1858,1827,de,german,P1 до 1855,85893,1820,якуты (саха)
+kotzebue1802,altai_kalmyk,1,1802,1800,en,german,P1 до 1855,31908,1800,алтайцы / ойраты ('калмыки')
+kotzebue1802,exiles,14,1802,1800,en,german,P1 до 1855,31908,1800,ссыльные и каторжные
+kotzebue1802,finn_estonian,1,1802,1800,en,german,P1 до 1855,31908,1800,финны и эстонцы
+kotzebue1802,german,2,1802,1800,en,german,P1 до 1855,31908,1800,немцы
+kotzebue1802,kazakh_kirghiz,4,1802,1800,en,german,P1 до 1855,31908,1800,казахи ('киргизы' XIX в.)
+kotzebue1802,natives_generic,1,1802,1800,en,german,P1 до 1855,31908,1800,"«туземцы», «инородцы» (обобщённо)"
+kotzebue1802,russian,9,1802,1800,en,german,P1 до 1855,31908,1800,русские
+kotzebue1802,siberian_tatar,13,1802,1800,en,german,P1 до 1855,31908,1800,татары (в т.ч. сибирские)
+kubalski1856,altai_kalmyk,3,1856,1854,fr,polish,P1 до 1855,22490,1850,алтайцы / ойраты ('калмыки')
+kubalski1856,chinese,9,1856,1854,fr,polish,P1 до 1855,22490,1850,китайцы
+kubalski1856,cossack,8,1856,1854,fr,polish,P1 до 1855,22490,1850,казаки
+kubalski1856,evenki_even,11,1856,1854,fr,polish,P1 до 1855,22490,1850,эвенки / эвены
+kubalski1856,exiles,5,1856,1854,fr,polish,P1 до 1855,22490,1850,ссыльные и каторжные
+kubalski1856,itelmen_kamchadal,6,1856,1854,fr,polish,P1 до 1855,22490,1850,ительмены / камчадалы
+kubalski1856,kazakh_kirghiz,1,1856,1854,fr,polish,P1 до 1855,22490,1850,казахи ('киргизы' XIX в.)
+kubalski1856,khanty,2,1856,1854,fr,polish,P1 до 1855,22490,1850,ханты
+kubalski1856,mongol,3,1856,1854,fr,polish,P1 до 1855,22490,1850,монголы
+kubalski1856,natives_generic,1,1856,1854,fr,polish,P1 до 1855,22490,1850,"«туземцы», «инородцы» (обобщённо)"
+kubalski1856,old_believer,1,1856,1854,fr,polish,P1 до 1855,22490,1850,старообрядцы
+kubalski1856,pole,4,1856,1854,fr,polish,P1 до 1855,22490,1850,поляки
+kubalski1856,russian,14,1856,1854,fr,polish,P1 до 1855,22490,1850,русские
+kubalski1856,sakha,5,1856,1854,fr,polish,P1 до 1855,22490,1850,якуты (саха)
+kubalski1856,siberian_tatar,47,1856,1854,fr,polish,P1 до 1855,22490,1850,татары (в т.ч. сибирские)
+kubalski1856,sibiriak,2,1856,1854,fr,polish,P1 до 1855,22490,1850,сибиряки / старожилы
+kubalski1856,volga_peoples,3,1856,1854,fr,polish,P1 до 1855,22490,1850,народы Поволжья и Приуралья
+lansdell1883,ainu,12,1883,1879,en,british,P2 1856–1880,165184,1870,айны
+lansdell1883,altai_kalmyk,4,1883,1879,en,british,P2 1856–1880,165184,1870,алтайцы / ойраты ('калмыки')
+lansdell1883,buryat,77,1883,1879,en,british,P2 1856–1880,165184,1870,буряты
+lansdell1883,chinese,33,1883,1879,en,british,P2 1856–1880,165184,1870,китайцы
+lansdell1883,chukchi,12,1883,1879,en,british,P2 1856–1880,165184,1870,чукчи
+lansdell1883,cossack,79,1883,1879,en,british,P2 1856–1880,165184,1870,казаки
+lansdell1883,evenki_even,40,1883,1879,en,british,P2 1856–1880,165184,1870,эвенки / эвены
+lansdell1883,exiles,184,1883,1879,en,british,P2 1856–1880,165184,1870,ссыльные и каторжные
+lansdell1883,finn_estonian,10,1883,1879,en,british,P2 1856–1880,165184,1870,финны и эстонцы
+lansdell1883,german,2,1883,1879,en,british,P2 1856–1880,165184,1870,немцы
+lansdell1883,japanese,1,1883,1879,en,british,P2 1856–1880,165184,1870,японцы
+lansdell1883,jew,11,1883,1879,en,british,P2 1856–1880,165184,1870,евреи
+lansdell1883,kazakh_kirghiz,9,1883,1879,en,british,P2 1856–1880,165184,1870,казахи ('киргизы' XIX в.)
+lansdell1883,khanty,27,1883,1879,en,british,P2 1856–1880,165184,1870,ханты
+lansdell1883,korean,4,1883,1879,en,british,P2 1856–1880,165184,1870,корейцы
+lansdell1883,koryak,22,1883,1879,en,british,P2 1856–1880,165184,1870,коряки
+lansdell1883,manchu,71,1883,1879,en,british,P2 1856–1880,165184,1870,маньчжуры
+lansdell1883,mongol,19,1883,1879,en,british,P2 1856–1880,165184,1870,монголы
+lansdell1883,nanai_amur,48,1883,1879,en,british,P2 1856–1880,165184,1870,нанайцы и др. народы Амура
+lansdell1883,natives_generic,82,1883,1879,en,british,P2 1856–1880,165184,1870,"«туземцы», «инородцы» (обобщённо)"
+lansdell1883,nenets,6,1883,1879,en,british,P2 1856–1880,165184,1870,ненцы
+lansdell1883,nivkh,83,1883,1879,en,british,P2 1856–1880,165184,1870,нивхи
+lansdell1883,old_believer,16,1883,1879,en,british,P2 1856–1880,165184,1870,старообрядцы
+lansdell1883,pereselentsy,24,1883,1879,en,british,P2 1856–1880,165184,1870,переселенцы
+lansdell1883,pole,21,1883,1879,en,british,P2 1856–1880,165184,1870,поляки
+lansdell1883,political_exiles,56,1883,1879,en,british,P2 1856–1880,165184,1870,политические ссыльные
+lansdell1883,russian,158,1883,1879,en,british,P2 1856–1880,165184,1870,русские
+lansdell1883,sakha,38,1883,1879,en,british,P2 1856–1880,165184,1870,якуты (саха)
+lansdell1883,samoyedic,28,1883,1879,en,british,P2 1856–1880,165184,1870,самодийские народы (без уточнения)
+lansdell1883,siberian_tatar,29,1883,1879,en,british,P2 1856–1880,165184,1870,татары (в т.ч. сибирские)
+lansdell1883,sibiriak,11,1883,1879,en,british,P2 1856–1880,165184,1870,сибиряки / старожилы
+lansdell1883,tramps,7,1883,1879,en,british,P2 1856–1880,165184,1870,бродяги
+lansdell1883,ukrainian,2,1883,1879,en,british,P2 1856–1880,165184,1870,украинцы ('малороссы')
+lansdell1883,yukaghir,6,1883,1879,en,british,P2 1856–1880,165184,1870,юкагиры
+lasies1920,cossack,2,1920,1918,fr,french,P5 1918–1930,16498,1910,казаки
+lasies1920,czech_slovak,26,1920,1918,fr,french,P5 1918–1930,16498,1910,чехи и словаки
+lasies1920,exiles,2,1920,1918,fr,french,P5 1918–1930,16498,1910,ссыльные и каторжные
+lasies1920,german,7,1920,1918,fr,french,P5 1918–1930,16498,1910,немцы
+lasies1920,japanese,6,1920,1918,fr,french,P5 1918–1930,16498,1910,японцы
+lasies1920,russian,4,1920,1918,fr,french,P5 1918–1930,16498,1910,русские
+lasies1920,sibiriak,1,1920,1918,fr,french,P5 1918–1930,16498,1910,сибиряки / старожилы
+latkinson1863,altai_kalmyk,10,1863,1848,en,british,P1 до 1855,62853,1840,алтайцы / ойраты ('калмыки')
+latkinson1863,buryat,11,1863,1848,en,british,P1 до 1855,62853,1840,буряты
+latkinson1863,chinese,4,1863,1848,en,british,P1 до 1855,62853,1840,китайцы
+latkinson1863,cossack,98,1863,1848,en,british,P1 до 1855,62853,1840,казаки
+latkinson1863,exiles,13,1863,1848,en,british,P1 до 1855,62853,1840,ссыльные и каторжные
+latkinson1863,german,1,1863,1848,en,british,P1 до 1855,62853,1840,немцы
+latkinson1863,kazakh_kirghiz,63,1863,1848,en,british,P1 до 1855,62853,1840,казахи ('киргизы' XIX в.)
+latkinson1863,pole,5,1863,1848,en,british,P1 до 1855,62853,1840,поляки
+latkinson1863,russian,10,1863,1848,en,british,P1 до 1855,62853,1840,русские
+latkinson1863,sakha,2,1863,1848,en,british,P1 до 1855,62853,1840,якуты (саха)
+latkinson1863,siberian_tatar,17,1863,1848,en,british,P1 до 1855,62853,1840,татары (в т.ч. сибирские)
+latkinson1863,sibiriak,4,1863,1848,en,british,P1 до 1855,62853,1840,сибиряки / старожилы
+latkinson1863,volga_peoples,2,1863,1848,en,british,P1 до 1855,62853,1840,народы Поволжья и Приуралья
+ledebour1829,altai_kalmyk,31,1829,1826,de,german,P1 до 1855,75813,1820,алтайцы / ойраты ('калмыки')
+ledebour1829,cossack,5,1829,1826,de,german,P1 до 1855,75813,1820,казаки
+ledebour1829,kazakh_kirghiz,3,1829,1826,de,german,P1 до 1855,75813,1820,казахи ('киргизы' XIX в.)
+ledebour1829,old_believer,4,1829,1826,de,german,P1 до 1855,75813,1820,старообрядцы
+ledebour1829,russian,1,1829,1826,de,german,P1 до 1855,75813,1820,русские
+ledebour1829,siberian_tatar,2,1829,1826,de,german,P1 до 1855,75813,1820,татары (в т.ч. сибирские)
+ledebour1829,sibiriak,1,1829,1826,de,german,P1 до 1855,75813,1820,сибиряки / старожилы
+legras1899,buryat,21,1899,1897,fr,french,P3 1881–1904,80269,1890,буряты
+legras1899,chinese,12,1899,1897,fr,french,P3 1881–1904,80269,1890,китайцы
+legras1899,cossack,16,1899,1897,fr,french,P3 1881–1904,80269,1890,казаки
+legras1899,evenki_even,7,1899,1897,fr,french,P3 1881–1904,80269,1890,эвенки / эвены
+legras1899,exiles,30,1899,1897,fr,french,P3 1881–1904,80269,1890,ссыльные и каторжные
+legras1899,german,4,1899,1897,fr,french,P3 1881–1904,80269,1890,немцы
+legras1899,japanese,3,1899,1897,fr,french,P3 1881–1904,80269,1890,японцы
+legras1899,jew,2,1899,1897,fr,french,P3 1881–1904,80269,1890,евреи
+legras1899,kazakh_kirghiz,4,1899,1897,fr,french,P3 1881–1904,80269,1890,казахи ('киргизы' XIX в.)
+legras1899,khanty,5,1899,1897,fr,french,P3 1881–1904,80269,1890,ханты
+legras1899,korean,4,1899,1897,fr,french,P3 1881–1904,80269,1890,корейцы
+legras1899,mongol,4,1899,1897,fr,french,P3 1881–1904,80269,1890,монголы
+legras1899,natives_generic,8,1899,1897,fr,french,P3 1881–1904,80269,1890,"«туземцы», «инородцы» (обобщённо)"
+legras1899,pereselentsy,24,1899,1897,fr,french,P3 1881–1904,80269,1890,переселенцы
+legras1899,pole,4,1899,1897,fr,french,P3 1881–1904,80269,1890,поляки
+legras1899,political_exiles,11,1899,1897,fr,french,P3 1881–1904,80269,1890,политические ссыльные
+legras1899,russian,37,1899,1897,fr,french,P3 1881–1904,80269,1890,русские
+legras1899,sakha,1,1899,1897,fr,french,P3 1881–1904,80269,1890,якуты (саха)
+legras1899,siberian_tatar,1,1899,1897,fr,french,P3 1881–1904,80269,1890,татары (в т.ч. сибирские)
+legras1899,sibiriak,17,1899,1897,fr,french,P3 1881–1904,80269,1890,сибиряки / старожилы
+legras1899,volga_peoples,2,1899,1897,fr,french,P3 1881–1904,80269,1890,народы Поволжья и Приуралья
+leroybeaulieu1900,buryat,4,1900,1896,fr,french,P3 1881–1904,32776,1890,буряты
+leroybeaulieu1900,chinese,16,1900,1896,fr,french,P3 1881–1904,32776,1890,китайцы
+leroybeaulieu1900,cossack,7,1900,1896,fr,french,P3 1881–1904,32776,1890,казаки
+leroybeaulieu1900,exiles,24,1900,1896,fr,french,P3 1881–1904,32776,1890,ссыльные и каторжные
+leroybeaulieu1900,german,3,1900,1896,fr,french,P3 1881–1904,32776,1890,немцы
+leroybeaulieu1900,japanese,9,1900,1896,fr,french,P3 1881–1904,32776,1890,японцы
+leroybeaulieu1900,jew,3,1900,1896,fr,french,P3 1881–1904,32776,1890,евреи
+leroybeaulieu1900,kazakh_kirghiz,7,1900,1896,fr,french,P3 1881–1904,32776,1890,казахи ('киргизы' XIX в.)
+leroybeaulieu1900,korean,8,1900,1896,fr,french,P3 1881–1904,32776,1890,корейцы
+leroybeaulieu1900,mongol,8,1900,1896,fr,french,P3 1881–1904,32776,1890,монголы
+leroybeaulieu1900,natives_generic,20,1900,1896,fr,french,P3 1881–1904,32776,1890,"«туземцы», «инородцы» (обобщённо)"
+leroybeaulieu1900,old_believer,1,1900,1896,fr,french,P3 1881–1904,32776,1890,старообрядцы
+leroybeaulieu1900,pereselentsy,16,1900,1896,fr,french,P3 1881–1904,32776,1890,переселенцы
+leroybeaulieu1900,pole,2,1900,1896,fr,french,P3 1881–1904,32776,1890,поляки
+leroybeaulieu1900,political_exiles,2,1900,1896,fr,french,P3 1881–1904,32776,1890,политические ссыльные
+leroybeaulieu1900,russian,31,1900,1896,fr,french,P3 1881–1904,32776,1890,русские
+leroybeaulieu1900,samoyedic,1,1900,1896,fr,french,P3 1881–1904,32776,1890,самодийские народы (без уточнения)
+leroybeaulieu1900,siberian_tatar,4,1900,1896,fr,french,P3 1881–1904,32776,1890,татары (в т.ч. сибирские)
+leroybeaulieu1900,sibiriak,3,1900,1896,fr,french,P3 1881–1904,32776,1890,сибиряки / старожилы
+lethbridge1915,chinese,1,1915,1913,en,british,P4 1905–1917,12422,1910,китайцы
+lethbridge1915,cossack,19,1915,1913,en,british,P4 1905–1917,12422,1910,казаки
+lethbridge1915,exiles,4,1915,1913,en,british,P4 1905–1917,12422,1910,ссыльные и каторжные
+lethbridge1915,german,7,1915,1913,en,british,P4 1905–1917,12422,1910,немцы
+lethbridge1915,jew,3,1915,1913,en,british,P4 1905–1917,12422,1910,евреи
+lethbridge1915,kazakh_kirghiz,7,1915,1913,en,british,P4 1905–1917,12422,1910,казахи ('киргизы' XIX в.)
+lethbridge1915,pereselentsy,2,1915,1913,en,british,P4 1905–1917,12422,1910,переселенцы
+lethbridge1915,political_exiles,2,1915,1913,en,british,P4 1905–1917,12422,1910,политические ссыльные
+lethbridge1915,russian,6,1915,1913,en,british,P4 1905–1917,12422,1910,русские
+lethbridge1915,siberian_tatar,4,1915,1913,en,british,P4 1905–1917,12422,1910,татары (в т.ч. сибирские)
+marsden1892,cossack,14,1892,1891,en,british,P3 1881–1904,51928,1890,казаки
+marsden1892,evenki_even,2,1892,1891,en,british,P3 1881–1904,51928,1890,эвенки / эвены
+marsden1892,exiles,12,1892,1891,en,british,P3 1881–1904,51928,1890,ссыльные и каторжные
+marsden1892,natives_generic,34,1892,1891,en,british,P3 1881–1904,51928,1890,"«туземцы», «инородцы» (обобщённо)"
+marsden1892,political_exiles,1,1892,1891,en,british,P3 1881–1904,51928,1890,политические ссыльные
+marsden1892,russian,2,1892,1891,en,british,P3 1881–1904,51928,1890,русские
+marsden1892,sakha,67,1892,1891,en,british,P3 1881–1904,51928,1890,якуты (саха)
+marsden1892,sibiriak,2,1892,1891,en,british,P3 1881–1904,51928,1890,сибиряки / старожилы
+marsden1892,yukaghir,1,1892,1891,en,british,P3 1881–1904,51928,1890,юкагиры
+maynard1859,chinese,7,1859,1840,fr,french,P1 до 1855,37129,1840,китайцы
+maynard1859,chukchi,6,1859,1840,fr,french,P1 до 1855,37129,1840,чукчи
+maynard1859,cossack,11,1859,1840,fr,french,P1 до 1855,37129,1840,казаки
+maynard1859,evenki_even,3,1859,1840,fr,french,P1 до 1855,37129,1840,эвенки / эвены
+maynard1859,exiles,12,1859,1840,fr,french,P1 до 1855,37129,1840,ссыльные и каторжные
+maynard1859,german,2,1859,1840,fr,french,P1 до 1855,37129,1840,немцы
+maynard1859,itelmen_kamchadal,1,1859,1840,fr,french,P1 до 1855,37129,1840,ительмены / камчадалы
+maynard1859,japanese,3,1859,1840,fr,french,P1 до 1855,37129,1840,японцы
+maynard1859,koryak,21,1859,1840,fr,french,P1 до 1855,37129,1840,коряки
+maynard1859,mongol,7,1859,1840,fr,french,P1 до 1855,37129,1840,монголы
+maynard1859,natives_generic,10,1859,1840,fr,french,P1 до 1855,37129,1840,"«туземцы», «инородцы» (обобщённо)"
+maynard1859,pereselentsy,2,1859,1840,fr,french,P1 до 1855,37129,1840,переселенцы
+maynard1859,political_exiles,3,1859,1840,fr,french,P1 до 1855,37129,1840,политические ссыльные
+maynard1859,russian,32,1859,1840,fr,french,P1 до 1855,37129,1840,русские
+maynard1859,sakha,2,1859,1840,fr,french,P1 до 1855,37129,1840,якуты (саха)
+maynard1859,samoyedic,1,1859,1840,fr,french,P1 до 1855,37129,1840,самодийские народы (без уточнения)
+maynard1859,sibiriak,1,1859,1840,fr,french,P1 до 1855,37129,1840,сибиряки / старожилы
+maynard1859,yukaghir,1,1859,1840,fr,french,P1 до 1855,37129,1840,юкагиры
+meakin1901,ainu,1,1901,1900,en,british,P3 1881–1904,39142,1900,айны
+meakin1901,buryat,3,1901,1900,en,british,P3 1881–1904,39142,1900,буряты
+meakin1901,chinese,14,1901,1900,en,british,P3 1881–1904,39142,1900,китайцы
+meakin1901,cossack,16,1901,1900,en,british,P3 1881–1904,39142,1900,казаки
+meakin1901,evenki_even,2,1901,1900,en,british,P3 1881–1904,39142,1900,эвенки / эвены
+meakin1901,exiles,19,1901,1900,en,british,P3 1881–1904,39142,1900,ссыльные и каторжные
+meakin1901,finn_estonian,1,1901,1900,en,british,P3 1881–1904,39142,1900,финны и эстонцы
+meakin1901,japanese,2,1901,1900,en,british,P3 1881–1904,39142,1900,японцы
+meakin1901,jew,7,1901,1900,en,british,P3 1881–1904,39142,1900,евреи
+meakin1901,kazakh_kirghiz,16,1901,1900,en,british,P3 1881–1904,39142,1900,казахи ('киргизы' XIX в.)
+meakin1901,khanty,2,1901,1900,en,british,P3 1881–1904,39142,1900,ханты
+meakin1901,korean,1,1901,1900,en,british,P3 1881–1904,39142,1900,корейцы
+meakin1901,manchu,8,1901,1900,en,british,P3 1881–1904,39142,1900,маньчжуры
+meakin1901,mongol,3,1901,1900,en,british,P3 1881–1904,39142,1900,монголы
+meakin1901,nanai_amur,1,1901,1900,en,british,P3 1881–1904,39142,1900,нанайцы и др. народы Амура
+meakin1901,natives_generic,7,1901,1900,en,british,P3 1881–1904,39142,1900,"«туземцы», «инородцы» (обобщённо)"
+meakin1901,pereselentsy,14,1901,1900,en,british,P3 1881–1904,39142,1900,переселенцы
+meakin1901,pole,1,1901,1900,en,british,P3 1881–1904,39142,1900,поляки
+meakin1901,political_exiles,2,1901,1900,en,british,P3 1881–1904,39142,1900,политические ссыльные
+meakin1901,russian,12,1901,1900,en,british,P3 1881–1904,39142,1900,русские
+meakin1901,siberian_tatar,3,1901,1900,en,british,P3 1881–1904,39142,1900,татары (в т.ч. сибирские)
+meakin1901,sibiriak,1,1901,1900,en,british,P3 1881–1904,39142,1900,сибиряки / старожилы
+meignan1877,buryat,4,1877,1873,fr,french,P2 1856–1880,30637,1870,буряты
+meignan1877,chinese,5,1877,1873,fr,french,P2 1856–1880,30637,1870,китайцы
+meignan1877,evenki_even,3,1877,1873,fr,french,P2 1856–1880,30637,1870,эвенки / эвены
+meignan1877,exiles,17,1877,1873,fr,french,P2 1856–1880,30637,1870,ссыльные и каторжные
+meignan1877,german,1,1877,1873,fr,french,P2 1856–1880,30637,1870,немцы
+meignan1877,itelmen_kamchadal,7,1877,1873,fr,french,P2 1856–1880,30637,1870,ительмены / камчадалы
+meignan1877,japanese,2,1877,1873,fr,french,P2 1856–1880,30637,1870,японцы
+meignan1877,kazakh_kirghiz,15,1877,1873,fr,french,P2 1856–1880,30637,1870,казахи ('киргизы' XIX в.)
+meignan1877,koryak,11,1877,1873,fr,french,P2 1856–1880,30637,1870,коряки
+meignan1877,manchu,1,1877,1873,fr,french,P2 1856–1880,30637,1870,маньчжуры
+meignan1877,mongol,19,1877,1873,fr,french,P2 1856–1880,30637,1870,монголы
+meignan1877,natives_generic,7,1877,1873,fr,french,P2 1856–1880,30637,1870,"«туземцы», «инородцы» (обобщённо)"
+meignan1877,pereselentsy,1,1877,1873,fr,french,P2 1856–1880,30637,1870,переселенцы
+meignan1877,pole,11,1877,1873,fr,french,P2 1856–1880,30637,1870,поляки
+meignan1877,russian,12,1877,1873,fr,french,P2 1856–1880,30637,1870,русские
+meignan1877,sakha,7,1877,1873,fr,french,P2 1856–1880,30637,1870,якуты (саха)
+meignan1877,samoyedic,3,1877,1873,fr,french,P2 1856–1880,30637,1870,самодийские народы (без уточнения)
+meignan1877,sibiriak,8,1877,1873,fr,french,P2 1856–1880,30637,1870,сибиряки / старожилы
+michie1864,altai_kalmyk,6,1864,1863,en,british,P2 1856–1880,46531,1860,алтайцы / ойраты ('калмыки')
+michie1864,buryat,12,1864,1863,en,british,P2 1856–1880,46531,1860,буряты
+michie1864,chinese,12,1864,1863,en,british,P2 1856–1880,46531,1860,китайцы
+michie1864,cossack,5,1864,1863,en,british,P2 1856–1880,46531,1860,казаки
+michie1864,evenki_even,4,1864,1863,en,british,P2 1856–1880,46531,1860,эвенки / эвены
+michie1864,exiles,18,1864,1863,en,british,P2 1856–1880,46531,1860,ссыльные и каторжные
+michie1864,german,2,1864,1863,en,british,P2 1856–1880,46531,1860,немцы
+michie1864,jew,1,1864,1863,en,british,P2 1856–1880,46531,1860,евреи
+michie1864,kazakh_kirghiz,6,1864,1863,en,british,P2 1856–1880,46531,1860,казахи ('киргизы' XIX в.)
+michie1864,khanty,3,1864,1863,en,british,P2 1856–1880,46531,1860,ханты
+michie1864,manchu,3,1864,1863,en,british,P2 1856–1880,46531,1860,маньчжуры
+michie1864,mongol,51,1864,1863,en,british,P2 1856–1880,46531,1860,монголы
+michie1864,natives_generic,2,1864,1863,en,british,P2 1856–1880,46531,1860,"«туземцы», «инородцы» (обобщённо)"
+michie1864,pereselentsy,4,1864,1863,en,british,P2 1856–1880,46531,1860,переселенцы
+michie1864,pole,15,1864,1863,en,british,P2 1856–1880,46531,1860,поляки
+michie1864,political_exiles,1,1864,1863,en,british,P2 1856–1880,46531,1860,политические ссыльные
+michie1864,russian,66,1864,1863,en,british,P2 1856–1880,46531,1860,русские
+michie1864,siberian_tatar,9,1864,1863,en,british,P2 1856–1880,46531,1860,татары (в т.ч. сибирские)
+michie1864,sibiriak,2,1864,1863,en,british,P2 1856–1880,46531,1860,сибиряки / старожилы
+michie1864,tramps,1,1864,1863,en,british,P2 1856–1880,46531,1860,бродяги
+mpprice1912,buryat,3,1912,1910,en,british,P4 1905–1917,47190,1910,буряты
+mpprice1912,chinese,16,1912,1910,en,british,P4 1905–1917,47190,1910,китайцы
+mpprice1912,cossack,30,1912,1910,en,british,P4 1905–1917,47190,1910,казаки
+mpprice1912,evenki_even,4,1912,1910,en,british,P4 1905–1917,47190,1910,эвенки / эвены
+mpprice1912,exiles,39,1912,1910,en,british,P4 1905–1917,47190,1910,ссыльные и каторжные
+mpprice1912,finn_estonian,19,1912,1910,en,british,P4 1905–1917,47190,1910,финны и эстонцы
+mpprice1912,german,3,1912,1910,en,british,P4 1905–1917,47190,1910,немцы
+mpprice1912,jew,3,1912,1910,en,british,P4 1905–1917,47190,1910,евреи
+mpprice1912,kazakh_kirghiz,9,1912,1910,en,british,P4 1905–1917,47190,1910,казахи ('киргизы' XIX в.)
+mpprice1912,khanty,5,1912,1910,en,british,P4 1905–1917,47190,1910,ханты
+mpprice1912,manchu,5,1912,1910,en,british,P4 1905–1917,47190,1910,маньчжуры
+mpprice1912,mongol,22,1912,1910,en,british,P4 1905–1917,47190,1910,монголы
+mpprice1912,natives_generic,22,1912,1910,en,british,P4 1905–1917,47190,1910,"«туземцы», «инородцы» (обобщённо)"
+mpprice1912,pereselentsy,34,1912,1910,en,british,P4 1905–1917,47190,1910,переселенцы
+mpprice1912,pole,2,1912,1910,en,british,P4 1905–1917,47190,1910,поляки
+mpprice1912,political_exiles,12,1912,1910,en,british,P4 1905–1917,47190,1910,политические ссыльные
+mpprice1912,russian,24,1912,1910,en,british,P4 1905–1917,47190,1910,русские
+mpprice1912,samoyedic,6,1912,1910,en,british,P4 1905–1917,47190,1910,самодийские народы (без уточнения)
+mpprice1912,siberian_tatar,94,1912,1910,en,british,P4 1905–1917,47190,1910,татары (в т.ч. сибирские)
+mpprice1912,sibiriak,24,1912,1910,en,british,P4 1905–1917,47190,1910,сибиряки / старожилы
+muller1882,buryat,1,1882,1874,de,german,P2 1856–1880,64162,1870,буряты
+muller1882,chinese,2,1882,1874,de,german,P2 1856–1880,64162,1870,китайцы
+muller1882,chukchi,3,1882,1874,de,german,P2 1856–1880,64162,1870,чукчи
+muller1882,cossack,11,1882,1874,de,german,P2 1856–1880,64162,1870,казаки
+muller1882,evenki_even,107,1882,1874,de,german,P2 1856–1880,64162,1870,эвенки / эвены
+muller1882,exiles,4,1882,1874,de,german,P2 1856–1880,64162,1870,ссыльные и каторжные
+muller1882,khanty,1,1882,1874,de,german,P2 1856–1880,64162,1870,ханты
+muller1882,natives_generic,15,1882,1874,de,german,P2 1856–1880,64162,1870,"«туземцы», «инородцы» (обобщённо)"
+muller1882,pereselentsy,1,1882,1874,de,german,P2 1856–1880,64162,1870,переселенцы
+muller1882,pole,1,1882,1874,de,german,P2 1856–1880,64162,1870,поляки
+muller1882,russian,14,1882,1874,de,german,P2 1856–1880,64162,1870,русские
+muller1882,sakha,73,1882,1874,de,german,P2 1856–1880,64162,1870,якуты (саха)
+muller1882,samoyedic,1,1882,1874,de,german,P2 1856–1880,64162,1870,самодийские народы (без уточнения)
+muller1882,siberian_tatar,1,1882,1874,de,german,P2 1856–1880,64162,1870,татары (в т.ч. сибирские)
+muller1882,sibiriak,5,1882,1874,de,german,P2 1856–1880,64162,1870,сибиряки / старожилы
+nansen1914,ainu,1,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,айны
+nansen1914,buryat,3,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,буряты
+nansen1914,chinese,20,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,китайцы
+nansen1914,chukchi,1,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,чукчи
+nansen1914,cossack,45,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,казаки
+nansen1914,czech_slovak,1,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,чехи и словаки
+nansen1914,evenki_even,36,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,эвенки / эвены
+nansen1914,exiles,31,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,ссыльные и каторжные
+nansen1914,finn_estonian,1,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,финны и эстонцы
+nansen1914,itelmen_kamchadal,1,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,ительмены / камчадалы
+nansen1914,japanese,5,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,японцы
+nansen1914,jew,3,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,евреи
+nansen1914,kamas,6,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,камасинцы
+nansen1914,kazakh_kirghiz,3,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,казахи ('киргизы' XIX в.)
+nansen1914,ket,40,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,кеты
+nansen1914,khanty,45,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,ханты
+nansen1914,korean,24,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,корейцы
+nansen1914,manchu,5,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,маньчжуры
+nansen1914,mongol,4,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,монголы
+nansen1914,nanai_amur,10,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,нанайцы и др. народы Амура
+nansen1914,natives_generic,75,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,"«туземцы», «инородцы» (обобщённо)"
+nansen1914,nenets,27,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,ненцы
+nansen1914,nivkh,3,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,нивхи
+nansen1914,pereselentsy,44,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,переселенцы
+nansen1914,political_exiles,22,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,политические ссыльные
+nansen1914,russian,78,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,русские
+nansen1914,sakha,6,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,якуты (саха)
+nansen1914,samoyedic,138,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,самодийские народы (без уточнения)
+nansen1914,selkup,3,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,селькупы
+nansen1914,siberian_tatar,12,1914,1913,en,scandinavian,P4 1905–1917,135793,1910,татары (в т.ч. сибирские)
+nansen1914_no,buryat,2,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,буряты
+nansen1914_no,chinese,48,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,китайцы
+nansen1914_no,chukchi,1,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,чукчи
+nansen1914_no,cossack,32,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,казаки
+nansen1914_no,evenki_even,21,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,эвенки / эвены
+nansen1914_no,exiles,37,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,ссыльные и каторжные
+nansen1914_no,kamas,5,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,камасинцы
+nansen1914_no,kazakh_kirghiz,3,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,казахи ('киргизы' XIX в.)
+nansen1914_no,khanty,83,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,ханты
+nansen1914_no,mongol,3,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,монголы
+nansen1914_no,nenets,25,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,ненцы
+nansen1914_no,pereselentsy,27,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,переселенцы
+nansen1914_no,russian,68,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,русские
+nansen1914_no,sakha,5,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,якуты (саха)
+nansen1914_no,samoyedic,136,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,самодийские народы (без уточнения)
+nansen1914_no,siberian_tatar,7,1914,1913,no,scandinavian,P4 1905–1917,109653,1910,татары (в т.ч. сибирские)
+niedieck1909,chukchi,21,1909,1905,en,german,P4 1905–1917,16943,1900,чукчи
+niedieck1909,cossack,3,1909,1905,en,german,P4 1905–1917,16943,1900,казаки
+niedieck1909,jew,1,1909,1905,en,german,P4 1905–1917,16943,1900,евреи
+niedieck1909,koryak,10,1909,1905,en,german,P4 1905–1917,16943,1900,коряки
+niedieck1909,natives_generic,10,1909,1905,en,german,P4 1905–1917,16943,1900,"«туземцы», «инородцы» (обобщённо)"
+niedieck1909,russian,12,1909,1905,en,german,P4 1905–1917,16943,1900,русские
+niemojowski1883,buryat,26,1883,1863,en,polish,P2 1856–1880,65951,1860,буряты
+niemojowski1883,chinese,4,1883,1863,en,polish,P2 1856–1880,65951,1860,китайцы
+niemojowski1883,chukchi,5,1883,1863,en,polish,P2 1856–1880,65951,1860,чукчи
+niemojowski1883,cossack,7,1883,1863,en,polish,P2 1856–1880,65951,1860,казаки
+niemojowski1883,evenki_even,28,1883,1863,en,polish,P2 1856–1880,65951,1860,эвенки / эвены
+niemojowski1883,exiles,22,1883,1863,en,polish,P2 1856–1880,65951,1860,ссыльные и каторжные
+niemojowski1883,finn_estonian,1,1883,1863,en,polish,P2 1856–1880,65951,1860,финны и эстонцы
+niemojowski1883,japanese,1,1883,1863,en,polish,P2 1856–1880,65951,1860,японцы
+niemojowski1883,jew,2,1883,1863,en,polish,P2 1856–1880,65951,1860,евреи
+niemojowski1883,kazakh_kirghiz,5,1883,1863,en,polish,P2 1856–1880,65951,1860,казахи ('киргизы' XIX в.)
+niemojowski1883,khanty,17,1883,1863,en,polish,P2 1856–1880,65951,1860,ханты
+niemojowski1883,mongol,13,1883,1863,en,polish,P2 1856–1880,65951,1860,монголы
+niemojowski1883,natives_generic,15,1883,1863,en,polish,P2 1856–1880,65951,1860,"«туземцы», «инородцы» (обобщённо)"
+niemojowski1883,pereselentsy,4,1883,1863,en,polish,P2 1856–1880,65951,1860,переселенцы
+niemojowski1883,pole,1,1883,1863,en,polish,P2 1856–1880,65951,1860,поляки
+niemojowski1883,political_exiles,1,1883,1863,en,polish,P2 1856–1880,65951,1860,политические ссыльные
+niemojowski1883,russian,6,1883,1863,en,polish,P2 1856–1880,65951,1860,русские
+niemojowski1883,sakha,27,1883,1863,en,polish,P2 1856–1880,65951,1860,якуты (саха)
+niemojowski1883,samoyedic,3,1883,1863,en,polish,P2 1856–1880,65951,1860,самодийские народы (без уточнения)
+niemojowski1883,siberian_tatar,61,1883,1863,en,polish,P2 1856–1880,65951,1860,татары (в т.ч. сибирские)
+niemojowski1883,sibiriak,10,1883,1863,en,polish,P2 1856–1880,65951,1860,сибиряки / старожилы
+norman1902,chinese,4,1902,1901,en,british,P3 1881–1904,12160,1900,китайцы
+norman1902,cossack,7,1902,1901,en,british,P3 1881–1904,12160,1900,казаки
+norman1902,exiles,18,1902,1901,en,british,P3 1881–1904,12160,1900,ссыльные и каторжные
+norman1902,german,1,1902,1901,en,british,P3 1881–1904,12160,1900,немцы
+norman1902,kazakh_kirghiz,1,1902,1901,en,british,P3 1881–1904,12160,1900,казахи ('киргизы' XIX в.)
+norman1902,mongol,1,1902,1901,en,british,P3 1881–1904,12160,1900,монголы
+norman1902,natives_generic,1,1902,1901,en,british,P3 1881–1904,12160,1900,"«туземцы», «инородцы» (обобщённо)"
+norman1902,pereselentsy,3,1902,1901,en,british,P3 1881–1904,12160,1900,переселенцы
+norman1902,political_exiles,4,1902,1901,en,british,P3 1881–1904,12160,1900,политические ссыльные
+norman1902,russian,3,1902,1901,en,british,P3 1881–1904,12160,1900,русские
+norman1902,siberian_tatar,3,1902,1901,en,british,P3 1881–1904,12160,1900,татары (в т.ч. сибирские)
+ossendowski1922,altai_kalmyk,2,1922,1920,en,polish,P5 1918–1930,24161,1920,алтайцы / ойраты ('калмыки')
+ossendowski1922,buryat,1,1922,1920,en,polish,P5 1918–1930,24161,1920,буряты
+ossendowski1922,chinese,7,1922,1920,en,polish,P5 1918–1930,24161,1920,китайцы
+ossendowski1922,cossack,22,1922,1920,en,polish,P5 1918–1930,24161,1920,казаки
+ossendowski1922,evenki_even,1,1922,1920,en,polish,P5 1918–1930,24161,1920,эвенки / эвены
+ossendowski1922,exiles,1,1922,1920,en,polish,P5 1918–1930,24161,1920,ссыльные и каторжные
+ossendowski1922,jew,1,1922,1920,en,polish,P5 1918–1930,24161,1920,евреи
+ossendowski1922,kazakh_kirghiz,1,1922,1920,en,polish,P5 1918–1930,24161,1920,казахи ('киргизы' XIX в.)
+ossendowski1922,mongol,56,1922,1920,en,polish,P5 1918–1930,24161,1920,монголы
+ossendowski1922,pereselentsy,14,1922,1920,en,polish,P5 1918–1930,24161,1920,переселенцы
+ossendowski1922,russian,3,1922,1920,en,polish,P5 1918–1930,24161,1920,русские
+ossendowski1922,siberian_tatar,15,1922,1920,en,polish,P5 1918–1930,24161,1920,татары (в т.ч. сибирские)
+ossendowski1922,tuvan,29,1922,1920,en,polish,P5 1918–1930,24161,1920,тувинцы
+patursson1901,buryat,7,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,буряты
+patursson1901,chinese,1,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,китайцы
+patursson1901,cossack,29,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,казаки
+patursson1901,evenki_even,16,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,эвенки / эвены
+patursson1901,exiles,26,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,ссыльные и каторжные
+patursson1901,jew,1,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,евреи
+patursson1901,kazakh_kirghiz,7,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,казахи ('киргизы' XIX в.)
+patursson1901,khanty,29,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,ханты
+patursson1901,natives_generic,137,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,"«туземцы», «инородцы» (обобщённо)"
+patursson1901,nenets,39,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,ненцы
+patursson1901,pereselentsy,6,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,переселенцы
+patursson1901,pole,3,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,поляки
+patursson1901,russian,71,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,русские
+patursson1901,sakha,3,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,якуты (саха)
+patursson1901,samoyedic,2,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,самодийские народы (без уточнения)
+patursson1901,siberian_tatar,16,1901,1895,da,scandinavian,P3 1881–1904,84596,1890,татары (в т.ч. сибирские)
+peel1894,exiles,1,1894,1893,en,british,P3 1881–1904,24379,1890,ссыльные и каторжные
+peel1894,mongol,1,1894,1893,en,british,P3 1881–1904,24379,1890,монголы
+peel1894,natives_generic,8,1894,1893,en,british,P3 1881–1904,24379,1890,"«туземцы», «инородцы» (обобщённо)"
+peel1894,pereselentsy,5,1894,1893,en,british,P3 1881–1904,24379,1890,переселенцы
+peel1894,political_exiles,1,1894,1893,en,british,P3 1881–1904,24379,1890,политические ссыльные
+peel1894,russian,2,1894,1893,en,british,P3 1881–1904,24379,1890,русские
+peel1894,samoyedic,35,1894,1893,en,british,P3 1881–1904,24379,1890,самодийские народы (без уточнения)
+perryayscough1914,altai_kalmyk,13,1914,1912,en,british,P4 1905–1917,22792,1910,алтайцы / ойраты ('калмыки')
+perryayscough1914,buryat,4,1914,1912,en,british,P4 1905–1917,22792,1910,буряты
+perryayscough1914,chinese,26,1914,1912,en,british,P4 1905–1917,22792,1910,китайцы
+perryayscough1914,cossack,8,1914,1912,en,british,P4 1905–1917,22792,1910,казаки
+perryayscough1914,japanese,2,1914,1912,en,british,P4 1905–1917,22792,1910,японцы
+perryayscough1914,kazakh_kirghiz,7,1914,1912,en,british,P4 1905–1917,22792,1910,казахи ('киргизы' XIX в.)
+perryayscough1914,manchu,1,1914,1912,en,british,P4 1905–1917,22792,1910,маньчжуры
+perryayscough1914,mongol,83,1914,1912,en,british,P4 1905–1917,22792,1910,монголы
+perryayscough1914,pereselentsy,8,1914,1912,en,british,P4 1905–1917,22792,1910,переселенцы
+perryayscough1914,political_exiles,1,1914,1912,en,british,P4 1905–1917,22792,1910,политические ссыльные
+perryayscough1914,russian,13,1914,1912,en,british,P4 1905–1917,22792,1910,русские
+perryayscough1914,tuvan,2,1914,1912,en,british,P4 1905–1917,22792,1910,тувинцы
+piotrowski1863,cossack,7,1863,1844,en,polish,P1 до 1855,14495,1840,казаки
+piotrowski1863,exiles,30,1863,1844,en,polish,P1 до 1855,14495,1840,ссыльные и каторжные
+piotrowski1863,jew,1,1863,1844,en,polish,P1 до 1855,14495,1840,евреи
+piotrowski1863,kazakh_kirghiz,6,1863,1844,en,polish,P1 до 1855,14495,1840,казахи ('киргизы' XIX в.)
+piotrowski1863,khanty,3,1863,1844,en,polish,P1 до 1855,14495,1840,ханты
+piotrowski1863,natives_generic,5,1863,1844,en,polish,P1 до 1855,14495,1840,"«туземцы», «инородцы» (обобщённо)"
+piotrowski1863,pole,10,1863,1844,en,polish,P1 до 1855,14495,1840,поляки
+piotrowski1863,political_exiles,6,1863,1844,en,polish,P1 до 1855,14495,1840,политические ссыльные
+piotrowski1863,russian,1,1863,1844,en,polish,P1 до 1855,14495,1840,русские
+piotrowski1863,sakha,1,1863,1844,en,polish,P1 до 1855,14495,1840,якуты (саха)
+piotrowski1863,siberian_tatar,3,1863,1844,en,polish,P1 до 1855,14495,1840,татары (в т.ч. сибирские)
+piotrowski1863,sibiriak,4,1863,1844,en,polish,P1 до 1855,14495,1840,сибиряки / старожилы
+pistor1905,buryat,1,1905,1902,de,german,P3 1881–1904,37132,1900,буряты
+pistor1905,chinese,23,1905,1902,de,german,P3 1881–1904,37132,1900,китайцы
+pistor1905,cossack,7,1905,1902,de,german,P3 1881–1904,37132,1900,казаки
+pistor1905,exiles,12,1905,1902,de,german,P3 1881–1904,37132,1900,ссыльные и каторжные
+pistor1905,jew,5,1905,1902,de,german,P3 1881–1904,37132,1900,евреи
+pistor1905,kazakh_kirghiz,1,1905,1902,de,german,P3 1881–1904,37132,1900,казахи ('киргизы' XIX в.)
+pistor1905,korean,2,1905,1902,de,german,P3 1881–1904,37132,1900,корейцы
+pistor1905,mongol,8,1905,1902,de,german,P3 1881–1904,37132,1900,монголы
+pistor1905,old_believer,2,1905,1902,de,german,P3 1881–1904,37132,1900,старообрядцы
+pistor1905,pereselentsy,9,1905,1902,de,german,P3 1881–1904,37132,1900,переселенцы
+pistor1905,pole,1,1905,1902,de,german,P3 1881–1904,37132,1900,поляки
+pistor1905,russian,6,1905,1902,de,german,P3 1881–1904,37132,1900,русские
+pistor1905,siberian_tatar,1,1905,1902,de,german,P3 1881–1904,37132,1900,татары (в т.ч. сибирские)
+price1892,chinese,1,1892,1890,en,british,P3 1881–1904,42619,1890,китайцы
+price1892,cossack,12,1892,1890,en,british,P3 1881–1904,42619,1890,казаки
+price1892,exiles,19,1892,1890,en,british,P3 1881–1904,42619,1890,ссыльные и каторжные
+price1892,jew,2,1892,1890,en,british,P3 1881–1904,42619,1890,евреи
+price1892,khanty,1,1892,1890,en,british,P3 1881–1904,42619,1890,ханты
+price1892,mongol,5,1892,1890,en,british,P3 1881–1904,42619,1890,монголы
+price1892,natives_generic,6,1892,1890,en,british,P3 1881–1904,42619,1890,"«туземцы», «инородцы» (обобщённо)"
+price1892,pole,1,1892,1890,en,british,P3 1881–1904,42619,1890,поляки
+price1892,political_exiles,6,1892,1890,en,british,P3 1881–1904,42619,1890,политические ссыльные
+price1892,russian,4,1892,1890,en,british,P3 1881–1904,42619,1890,русские
+price1892,samoyedic,12,1892,1890,en,british,P3 1881–1904,42619,1890,самодийские народы (без уточнения)
+price1892,siberian_tatar,2,1892,1890,en,british,P3 1881–1904,42619,1890,татары (в т.ч. сибирские)
+price1892,sibiriak,3,1892,1890,en,british,P3 1881–1904,42619,1890,сибиряки / старожилы
+rabot1894,cossack,1,1894,1890,fr,french,P3 1881–1904,20461,1890,казаки
+rabot1894,exiles,1,1894,1890,fr,french,P3 1881–1904,20461,1890,ссыльные и каторжные
+rabot1894,finn_estonian,9,1894,1890,fr,french,P3 1881–1904,20461,1890,финны и эстонцы
+rabot1894,khanty,109,1894,1890,fr,french,P3 1881–1904,20461,1890,ханты
+rabot1894,mansi,12,1894,1890,fr,french,P3 1881–1904,20461,1890,манси
+rabot1894,mongol,1,1894,1890,fr,french,P3 1881–1904,20461,1890,монголы
+rabot1894,natives_generic,59,1894,1890,fr,french,P3 1881–1904,20461,1890,"«туземцы», «инородцы» (обобщённо)"
+rabot1894,russian,9,1894,1890,fr,french,P3 1881–1904,20461,1890,русские
+rabot1894,samoyedic,4,1894,1890,fr,french,P3 1881–1904,20461,1890,самодийские народы (без уточнения)
+rabot1894,siberian_tatar,3,1894,1890,fr,french,P3 1881–1904,20461,1890,татары (в т.ч. сибирские)
+rabot1894,sibiriak,2,1894,1890,fr,french,P3 1881–1904,20461,1890,сибиряки / старожилы
+rabot1894,tramps,1,1894,1890,fr,french,P3 1881–1904,20461,1890,бродяги
+radloff1893,altai_kalmyk,51,1893,1860,de,german,P2 1856–1880,93470,1860,алтайцы / ойраты ('калмыки')
+radloff1893,buryat,6,1893,1860,de,german,P2 1856–1880,93470,1860,буряты
+radloff1893,chinese,64,1893,1860,de,german,P2 1856–1880,93470,1860,китайцы
+radloff1893,chukchi,1,1893,1860,de,german,P2 1856–1880,93470,1860,чукчи
+radloff1893,cossack,90,1893,1860,de,german,P2 1856–1880,93470,1860,казаки
+radloff1893,kamas,12,1893,1860,de,german,P2 1856–1880,93470,1860,камасинцы
+radloff1893,kazakh_kirghiz,372,1893,1860,de,german,P2 1856–1880,93470,1860,казахи ('киргизы' XIX в.)
+radloff1893,ket,6,1893,1860,de,german,P2 1856–1880,93470,1860,кеты
+radloff1893,khanty,8,1893,1860,de,german,P2 1856–1880,93470,1860,ханты
+radloff1893,mongol,36,1893,1860,de,german,P2 1856–1880,93470,1860,монголы
+radloff1893,natives_generic,32,1893,1860,de,german,P2 1856–1880,93470,1860,"«туземцы», «инородцы» (обобщённо)"
+radloff1893,pereselentsy,9,1893,1860,de,german,P2 1856–1880,93470,1860,переселенцы
+radloff1893,russian,49,1893,1860,de,german,P2 1856–1880,93470,1860,русские
+radloff1893,sakha,3,1893,1860,de,german,P2 1856–1880,93470,1860,якуты (саха)
+radloff1893,samoyedic,14,1893,1860,de,german,P2 1856–1880,93470,1860,самодийские народы (без уточнения)
+radloff1893,siberian_tatar,210,1893,1860,de,german,P2 1856–1880,93470,1860,татары (в т.ч. сибирские)
+radloff1893,sibiriak,1,1893,1860,de,german,P2 1856–1880,93470,1860,сибиряки / старожилы
+radloff1893,tuvan,2,1893,1860,de,german,P2 1856–1880,93470,1860,тувинцы
+ready1904,buryat,2,1904,1903,en,british,P3 1881–1904,2212,1900,буряты
+ready1904,chinese,2,1904,1903,en,british,P3 1881–1904,2212,1900,китайцы
+ready1904,cossack,1,1904,1903,en,british,P3 1881–1904,2212,1900,казаки
+ready1904,exiles,1,1904,1903,en,british,P3 1881–1904,2212,1900,ссыльные и каторжные
+ready1904,german,3,1904,1903,en,british,P3 1881–1904,2212,1900,немцы
+ready1904,mongol,3,1904,1903,en,british,P3 1881–1904,2212,1900,монголы
+ready1904,russian,5,1904,1903,en,british,P3 1881–1904,2212,1900,русские
+reid1899,chinese,7,1899,1898,en,british,P3 1881–1904,17678,1890,китайцы
+reid1899,exiles,7,1899,1898,en,british,P3 1881–1904,17678,1890,ссыльные и каторжные
+reid1899,jew,2,1899,1898,en,british,P3 1881–1904,17678,1890,евреи
+reid1899,manchu,2,1899,1898,en,british,P3 1881–1904,17678,1890,маньчжуры
+reid1899,mongol,22,1899,1898,en,british,P3 1881–1904,17678,1890,монголы
+reid1899,pereselentsy,3,1899,1898,en,british,P3 1881–1904,17678,1890,переселенцы
+reid1899,political_exiles,1,1899,1898,en,british,P3 1881–1904,17678,1890,политические ссыльные
+reid1899,russian,12,1899,1898,en,british,P3 1881–1904,17678,1890,русские
+reid1899,sibiriak,1,1899,1898,en,british,P3 1881–1904,17678,1890,сибиряки / старожилы
+ronaldshay1904,altai_kalmyk,10,1904,1903,en,british,P3 1881–1904,12902,1900,алтайцы / ойраты ('калмыки')
+ronaldshay1904,buryat,1,1904,1903,en,british,P3 1881–1904,12902,1900,буряты
+ronaldshay1904,chinese,3,1904,1903,en,british,P3 1881–1904,12902,1900,китайцы
+ronaldshay1904,cossack,3,1904,1903,en,british,P3 1881–1904,12902,1900,казаки
+ronaldshay1904,exiles,1,1904,1903,en,british,P3 1881–1904,12902,1900,ссыльные и каторжные
+ronaldshay1904,german,1,1904,1903,en,british,P3 1881–1904,12902,1900,немцы
+ronaldshay1904,mongol,2,1904,1903,en,british,P3 1881–1904,12902,1900,монголы
+ronaldshay1904,pereselentsy,7,1904,1903,en,british,P3 1881–1904,12902,1900,переселенцы
+ronaldshay1904,russian,1,1904,1903,en,british,P3 1881–1904,12902,1900,русские
+ronaldshay1904,siberian_tatar,1,1904,1903,en,british,P3 1881–1904,12902,1900,татары (в т.ч. сибирские)
+rose1837,altai_kalmyk,3,1837,1829,de,german,P1 до 1855,39838,1820,алтайцы / ойраты ('калмыки')
+rose1837,chinese,4,1837,1829,de,german,P1 до 1855,39838,1820,китайцы
+rose1837,cossack,12,1837,1829,de,german,P1 до 1855,39838,1820,казаки
+rose1837,exiles,1,1837,1829,de,german,P1 до 1855,39838,1820,ссыльные и каторжные
+rose1837,kazakh_kirghiz,8,1837,1829,de,german,P1 до 1855,39838,1820,казахи ('киргизы' XIX в.)
+rose1837,mongol,2,1837,1829,de,german,P1 до 1855,39838,1820,монголы
+rose1837,old_believer,1,1837,1829,de,german,P1 до 1855,39838,1820,старообрядцы
+rose1837,pole,1,1837,1829,de,german,P1 до 1855,39838,1820,поляки
+rose1837,russian,8,1837,1829,de,german,P1 до 1855,39838,1820,русские
+rose1837,siberian_tatar,1,1837,1829,de,german,P1 до 1855,39838,1820,татары (в т.ч. сибирские)
+rosenberg1904,altai_kalmyk,14,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,алтайцы / ойраты ('калмыки')
+rosenberg1904,chinese,33,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,китайцы
+rosenberg1904,cossack,26,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,казаки
+rosenberg1904,evenki_even,6,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,эвенки / эвены
+rosenberg1904,exiles,50,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,ссыльные и каторжные
+rosenberg1904,jew,2,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,евреи
+rosenberg1904,kazakh_kirghiz,40,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,казахи ('киргизы' XIX в.)
+rosenberg1904,khanty,26,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,ханты
+rosenberg1904,mongol,1,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,монголы
+rosenberg1904,natives_generic,14,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,"«туземцы», «инородцы» (обобщённо)"
+rosenberg1904,nenets,1,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,ненцы
+rosenberg1904,pereselentsy,22,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,переселенцы
+rosenberg1904,pole,2,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,поляки
+rosenberg1904,russian,61,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,русские
+rosenberg1904,samoyedic,3,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,самодийские народы (без уточнения)
+rosenberg1904,siberian_tatar,20,1904,1902,da,scandinavian,P3 1881–1904,68611,1900,татары (в т.ч. сибирские)
+scarfoglio1909,buryat,8,1909,1908,en,italian,P4 1905–1917,15541,1900,буряты
+scarfoglio1909,chinese,3,1909,1908,en,italian,P4 1905–1917,15541,1900,китайцы
+scarfoglio1909,cossack,9,1909,1908,en,italian,P4 1905–1917,15541,1900,казаки
+scarfoglio1909,jew,2,1909,1908,en,italian,P4 1905–1917,15541,1900,евреи
+scarfoglio1909,kazakh_kirghiz,2,1909,1908,en,italian,P4 1905–1917,15541,1900,казахи ('киргизы' XIX в.)
+scarfoglio1909,mongol,3,1909,1908,en,italian,P4 1905–1917,15541,1900,монголы
+scarfoglio1909,russian,14,1909,1908,en,italian,P4 1905–1917,15541,1900,русские
+scarfoglio1909,sibiriak,1,1909,1908,en,italian,P4 1905–1917,15541,1900,сибиряки / старожилы
+seebohm1882,cossack,2,1882,1877,en,british,P2 1856–1880,16605,1870,казаки
+seebohm1882,exiles,1,1882,1877,en,british,P2 1856–1880,16605,1870,ссыльные и каторжные
+seebohm1882,jew,2,1882,1877,en,british,P2 1856–1880,16605,1870,евреи
+seebohm1882,kazakh_kirghiz,2,1882,1877,en,british,P2 1856–1880,16605,1870,казахи ('киргизы' XIX в.)
+seebohm1882,khanty,3,1882,1877,en,british,P2 1856–1880,16605,1870,ханты
+seebohm1882,mongol,1,1882,1877,en,british,P2 1856–1880,16605,1870,монголы
+seebohm1882,natives_generic,1,1882,1877,en,british,P2 1856–1880,16605,1870,"«туземцы», «инородцы» (обобщённо)"
+seebohm1882,nenets,1,1882,1877,en,british,P2 1856–1880,16605,1870,ненцы
+seebohm1882,pereselentsy,1,1882,1877,en,british,P2 1856–1880,16605,1870,переселенцы
+seebohm1882,pole,2,1882,1877,en,british,P2 1856–1880,16605,1870,поляки
+seebohm1882,political_exiles,2,1882,1877,en,british,P2 1856–1880,16605,1870,политические ссыльные
+seebohm1882,russian,1,1882,1877,en,british,P2 1856–1880,16605,1870,русские
+seebohm1882,siberian_tatar,4,1882,1877,en,british,P2 1856–1880,16605,1870,татары (в т.ч. сибирские)
+sheepshanks1903,altai_kalmyk,1,1903,1856,en,british,P2 1856–1880,9848,1850,алтайцы / ойраты ('калмыки')
+sheepshanks1903,buryat,16,1903,1856,en,british,P2 1856–1880,9848,1850,буряты
+sheepshanks1903,chinese,1,1903,1856,en,british,P2 1856–1880,9848,1850,китайцы
+sheepshanks1903,cossack,5,1903,1856,en,british,P2 1856–1880,9848,1850,казаки
+sheepshanks1903,evenki_even,2,1903,1856,en,british,P2 1856–1880,9848,1850,эвенки / эвены
+sheepshanks1903,german,1,1903,1856,en,british,P2 1856–1880,9848,1850,немцы
+sheepshanks1903,jew,1,1903,1856,en,british,P2 1856–1880,9848,1850,евреи
+sheepshanks1903,khanty,3,1903,1856,en,british,P2 1856–1880,9848,1850,ханты
+sheepshanks1903,mongol,11,1903,1856,en,british,P2 1856–1880,9848,1850,монголы
+sheepshanks1903,russian,4,1903,1856,en,british,P2 1856–1880,9848,1850,русские
+sheepshanks1903,samoyedic,2,1903,1856,en,british,P2 1856–1880,9848,1850,самодийские народы (без уточнения)
+sheepshanks1903,siberian_tatar,1,1903,1856,en,british,P2 1856–1880,9848,1850,татары (в т.ч. сибирские)
+simpson1898,ainu,6,1898,1896,en,british,P3 1881–1904,75072,1890,айны
+simpson1898,buryat,8,1898,1896,en,british,P3 1881–1904,75072,1890,буряты
+simpson1898,chinese,4,1898,1896,en,british,P3 1881–1904,75072,1890,китайцы
+simpson1898,chukchi,2,1898,1896,en,british,P3 1881–1904,75072,1890,чукчи
+simpson1898,cossack,1,1898,1896,en,british,P3 1881–1904,75072,1890,казаки
+simpson1898,evenki_even,9,1898,1896,en,british,P3 1881–1904,75072,1890,эвенки / эвены
+simpson1898,exiles,160,1898,1896,en,british,P3 1881–1904,75072,1890,ссыльные и каторжные
+simpson1898,itelmen_kamchadal,1,1898,1896,en,british,P3 1881–1904,75072,1890,ительмены / камчадалы
+simpson1898,japanese,1,1898,1896,en,british,P3 1881–1904,75072,1890,японцы
+simpson1898,jew,4,1898,1896,en,british,P3 1881–1904,75072,1890,евреи
+simpson1898,kazakh_kirghiz,2,1898,1896,en,british,P3 1881–1904,75072,1890,казахи ('киргизы' XIX в.)
+simpson1898,khanty,2,1898,1896,en,british,P3 1881–1904,75072,1890,ханты
+simpson1898,korean,1,1898,1896,en,british,P3 1881–1904,75072,1890,корейцы
+simpson1898,koryak,1,1898,1896,en,british,P3 1881–1904,75072,1890,коряки
+simpson1898,manchu,1,1898,1896,en,british,P3 1881–1904,75072,1890,маньчжуры
+simpson1898,mongol,1,1898,1896,en,british,P3 1881–1904,75072,1890,монголы
+simpson1898,nanai_amur,2,1898,1896,en,british,P3 1881–1904,75072,1890,нанайцы и др. народы Амура
+simpson1898,natives_generic,2,1898,1896,en,british,P3 1881–1904,75072,1890,"«туземцы», «инородцы» (обобщённо)"
+simpson1898,nivkh,2,1898,1896,en,british,P3 1881–1904,75072,1890,нивхи
+simpson1898,pereselentsy,33,1898,1896,en,british,P3 1881–1904,75072,1890,переселенцы
+simpson1898,political_exiles,52,1898,1896,en,british,P3 1881–1904,75072,1890,политические ссыльные
+simpson1898,russian,3,1898,1896,en,british,P3 1881–1904,75072,1890,русские
+simpson1898,sakha,13,1898,1896,en,british,P3 1881–1904,75072,1890,якуты (саха)
+simpson1898,samoyedic,1,1898,1896,en,british,P3 1881–1904,75072,1890,самодийские народы (без уточнения)
+simpson1898,siberian_tatar,5,1898,1896,en,british,P3 1881–1904,75072,1890,татары (в т.ч. сибирские)
+simpson1898,sibiriak,3,1898,1896,en,british,P3 1881–1904,75072,1890,сибиряки / старожилы
+simpson1898,yukaghir,1,1898,1896,en,british,P3 1881–1904,75072,1890,юкагиры
+sommier1885,buryat,3,1885,1880,it,italian,P2 1856–1880,141860,1880,буряты
+sommier1885,chukchi,3,1885,1880,it,italian,P2 1856–1880,141860,1880,чукчи
+sommier1885,cossack,114,1885,1880,it,italian,P2 1856–1880,141860,1880,казаки
+sommier1885,evenki_even,2,1885,1880,it,italian,P2 1856–1880,141860,1880,эвенки / эвены
+sommier1885,exiles,42,1885,1880,it,italian,P2 1856–1880,141860,1880,ссыльные и каторжные
+sommier1885,kazakh_kirghiz,81,1885,1880,it,italian,P2 1856–1880,141860,1880,казахи ('киргизы' XIX в.)
+sommier1885,khanty,580,1885,1880,it,italian,P2 1856–1880,141860,1880,ханты
+sommier1885,mongol,10,1885,1880,it,italian,P2 1856–1880,141860,1880,монголы
+sommier1885,natives_generic,158,1885,1880,it,italian,P2 1856–1880,141860,1880,"«туземцы», «инородцы» (обобщённо)"
+sommier1885,russian,156,1885,1880,it,italian,P2 1856–1880,141860,1880,русские
+sommier1885,sakha,1,1885,1880,it,italian,P2 1856–1880,141860,1880,якуты (саха)
+sommier1885,samoyedic,285,1885,1880,it,italian,P2 1856–1880,141860,1880,самодийские народы (без уточнения)
+sommier1885,siberian_tatar,133,1885,1880,it,italian,P2 1856–1880,141860,1880,татары (в т.ч. сибирские)
+stadling1901,buryat,32,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,буряты
+stadling1901,chinese,1,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,китайцы
+stadling1901,cossack,23,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,казаки
+stadling1901,evenki_even,45,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,эвенки / эвены
+stadling1901,exiles,18,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,ссыльные и каторжные
+stadling1901,kazakh_kirghiz,9,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,казахи ('киргизы' XIX в.)
+stadling1901,khanty,11,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,ханты
+stadling1901,mongol,4,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,монголы
+stadling1901,natives_generic,154,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,"«туземцы», «инородцы» (обобщённо)"
+stadling1901,nenets,1,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,ненцы
+stadling1901,old_believer,1,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,старообрядцы
+stadling1901,pereselentsy,31,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,переселенцы
+stadling1901,pole,1,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,поляки
+stadling1901,political_exiles,15,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,политические ссыльные
+stadling1901,russian,21,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,русские
+stadling1901,sakha,75,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,якуты (саха)
+stadling1901,samoyedic,13,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,самодийские народы (без уточнения)
+stadling1901,siberian_tatar,3,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,татары (в т.ч. сибирские)
+stadling1901,sibiriak,16,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,сибиряки / старожилы
+stadling1901,tramps,2,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,бродяги
+stadling1901,volga_peoples,1,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,народы Поволжья и Приуралья
+stadling1901,yukaghir,2,1901,1891,en,scandinavian,P3 1881–1904,50663,1890,юкагиры
+svinhufvud1928,chinese,2,1928,1915,fi,finnish,P4 1905–1917,29245,1910,китайцы
+svinhufvud1928,cossack,2,1928,1915,fi,finnish,P4 1905–1917,29245,1910,казаки
+svinhufvud1928,evenki_even,1,1928,1915,fi,finnish,P4 1905–1917,29245,1910,эвенки / эвены
+svinhufvud1928,exiles,70,1928,1915,fi,finnish,P4 1905–1917,29245,1910,ссыльные и каторжные
+svinhufvud1928,finn_estonian,30,1928,1915,fi,finnish,P4 1905–1917,29245,1910,финны и эстонцы
+svinhufvud1928,german,48,1928,1915,fi,finnish,P4 1905–1917,29245,1910,немцы
+svinhufvud1928,jew,17,1928,1915,fi,finnish,P4 1905–1917,29245,1910,евреи
+svinhufvud1928,khanty,24,1928,1915,fi,finnish,P4 1905–1917,29245,1910,ханты
+svinhufvud1928,mansi,1,1928,1915,fi,finnish,P4 1905–1917,29245,1910,манси
+svinhufvud1928,natives_generic,5,1928,1915,fi,finnish,P4 1905–1917,29245,1910,"«туземцы», «инородцы» (обобщённо)"
+svinhufvud1928,pereselentsy,2,1928,1915,fi,finnish,P4 1905–1917,29245,1910,переселенцы
+svinhufvud1928,pole,16,1928,1915,fi,finnish,P4 1905–1917,29245,1910,поляки
+svinhufvud1928,russian,58,1928,1915,fi,finnish,P4 1905–1917,29245,1910,русские
+svinhufvud1928,samoyedic,5,1928,1915,fi,finnish,P4 1905–1917,29245,1910,самодийские народы (без уточнения)
+svinhufvud1928,siberian_tatar,5,1928,1915,fi,finnish,P4 1905–1917,29245,1910,татары (в т.ч. сибирские)
+svinhufvud1928,ukrainian,3,1928,1915,fi,finnish,P4 1905–1917,29245,1910,украинцы ('малороссы')
+svinhufvud1928,volga_peoples,5,1928,1915,fi,finnish,P4 1905–1917,29245,1910,народы Поволжья и Приуралья
+swayne1904,altai_kalmyk,3,1904,1903,en,british,P3 1881–1904,4825,1900,алтайцы / ойраты ('калмыки')
+swayne1904,chinese,1,1904,1903,en,british,P3 1881–1904,4825,1900,китайцы
+swayne1904,natives_generic,1,1904,1903,en,british,P3 1881–1904,4825,1900,"«туземцы», «инородцы» (обобщённо)"
+swayne1904,pereselentsy,1,1904,1903,en,british,P3 1881–1904,4825,1900,переселенцы
+swayne1904,russian,9,1904,1903,en,british,P3 1881–1904,4825,1900,русские
+tilley1861,ainu,2,1861,1858,en,british,P2 1856–1880,7606,1850,айны
+tilley1861,chinese,1,1861,1858,en,british,P2 1856–1880,7606,1850,китайцы
+tilley1861,cossack,5,1861,1858,en,british,P2 1856–1880,7606,1850,казаки
+tilley1861,evenki_even,1,1861,1858,en,british,P2 1856–1880,7606,1850,эвенки / эвены
+tilley1861,german,1,1861,1858,en,british,P2 1856–1880,7606,1850,немцы
+tilley1861,japanese,1,1861,1858,en,british,P2 1856–1880,7606,1850,японцы
+tilley1861,mongol,1,1861,1858,en,british,P2 1856–1880,7606,1850,монголы
+tilley1861,natives_generic,3,1861,1858,en,british,P2 1856–1880,7606,1850,"«туземцы», «инородцы» (обобщённо)"
+tilley1861,pereselentsy,4,1861,1858,en,british,P2 1856–1880,7606,1850,переселенцы
+tilley1861,russian,5,1861,1858,en,british,P2 1856–1880,7606,1850,русские
+tronson1859,ainu,2,1859,1854,en,british,P1 до 1855,21231,1850,айны
+tronson1859,chinese,3,1859,1854,en,british,P1 до 1855,21231,1850,китайцы
+tronson1859,cossack,5,1859,1854,en,british,P1 до 1855,21231,1850,казаки
+tronson1859,evenki_even,2,1859,1854,en,british,P1 до 1855,21231,1850,эвенки / эвены
+tronson1859,finn_estonian,4,1859,1854,en,british,P1 до 1855,21231,1850,финны и эстонцы
+tronson1859,japanese,3,1859,1854,en,british,P1 до 1855,21231,1850,японцы
+tronson1859,koryak,5,1859,1854,en,british,P1 до 1855,21231,1850,коряки
+tronson1859,manchu,1,1859,1854,en,british,P1 до 1855,21231,1850,маньчжуры
+tronson1859,mongol,2,1859,1854,en,british,P1 до 1855,21231,1850,монголы
+tronson1859,natives_generic,16,1859,1854,en,british,P1 до 1855,21231,1850,"«туземцы», «инородцы» (обобщённо)"
+tronson1859,nivkh,2,1859,1854,en,british,P1 до 1855,21231,1850,нивхи
+tronson1859,pole,1,1859,1854,en,british,P1 до 1855,21231,1850,поляки
+tronson1859,russian,30,1859,1854,en,british,P1 до 1855,21231,1850,русские
+tronson1859,sakha,1,1859,1854,en,british,P1 до 1855,21231,1850,якуты (саха)
+turner1905,altai_kalmyk,30,1911,1903,en,british,P3 1881–1904,47558,1900,алтайцы / ойраты ('калмыки')
+turner1905,chinese,2,1911,1903,en,british,P3 1881–1904,47558,1900,китайцы
+turner1905,cossack,16,1911,1903,en,british,P3 1881–1904,47558,1900,казаки
+turner1905,exiles,27,1911,1903,en,british,P3 1881–1904,47558,1900,ссыльные и каторжные
+turner1905,finn_estonian,1,1911,1903,en,british,P3 1881–1904,47558,1900,финны и эстонцы
+turner1905,japanese,1,1911,1903,en,british,P3 1881–1904,47558,1900,японцы
+turner1905,jew,7,1911,1903,en,british,P3 1881–1904,47558,1900,евреи
+turner1905,kazakh_kirghiz,11,1911,1903,en,british,P3 1881–1904,47558,1900,казахи ('киргизы' XIX в.)
+turner1905,mongol,2,1911,1903,en,british,P3 1881–1904,47558,1900,монголы
+turner1905,natives_generic,5,1911,1903,en,british,P3 1881–1904,47558,1900,"«туземцы», «инородцы» (обобщённо)"
+turner1905,pereselentsy,19,1911,1903,en,british,P3 1881–1904,47558,1900,переселенцы
+turner1905,political_exiles,2,1911,1903,en,british,P3 1881–1904,47558,1900,политические ссыльные
+turner1905,russian,26,1911,1903,en,british,P3 1881–1904,47558,1900,русские
+turner1905,samoyedic,1,1911,1903,en,british,P3 1881–1904,47558,1900,самодийские народы (без уточнения)
+turner1905,siberian_tatar,3,1911,1903,en,british,P3 1881–1904,47558,1900,татары (в т.ч. сибирские)
+turner1905,sibiriak,7,1911,1903,en,british,P3 1881–1904,47558,1900,сибиряки / старожилы
+tytgat1901,chinese,29,1901,1900,fr,french,P3 1881–1904,11092,1900,китайцы
+tytgat1901,cossack,25,1901,1900,fr,french,P3 1881–1904,11092,1900,казаки
+tytgat1901,exiles,2,1901,1900,fr,french,P3 1881–1904,11092,1900,ссыльные и каторжные
+tytgat1901,japanese,1,1901,1900,fr,french,P3 1881–1904,11092,1900,японцы
+tytgat1901,pereselentsy,1,1901,1900,fr,french,P3 1881–1904,11092,1900,переселенцы
+tytgat1901,russian,6,1901,1900,fr,french,P3 1881–1904,11092,1900,русские
+ujfalvy1879,altai_kalmyk,3,1879,1876,fr,central_european,P2 1856–1880,4838,1870,алтайцы / ойраты ('калмыки')
+ujfalvy1879,chinese,1,1879,1876,fr,central_european,P2 1856–1880,4838,1870,китайцы
+ujfalvy1879,cossack,1,1879,1876,fr,central_european,P2 1856–1880,4838,1870,казаки
+ujfalvy1879,kazakh_kirghiz,20,1879,1876,fr,central_european,P2 1856–1880,4838,1870,казахи ('киргизы' XIX в.)
+ujfalvy1879,mansi,2,1879,1876,fr,central_european,P2 1856–1880,4838,1870,манси
+ujfalvy1879,samoyedic,1,1879,1876,fr,central_european,P2 1856–1880,4838,1870,самодийские народы (без уточнения)
+ujfalvy1879,siberian_tatar,2,1879,1876,fr,central_european,P2 1856–1880,4838,1870,татары (в т.ч. сибирские)
+vaydevaya1906,altai_kalmyk,1,1906,1902,en,central_european,P3 1881–1904,6866,1900,алтайцы / ойраты ('калмыки')
+vaydevaya1906,buryat,3,1906,1902,en,central_european,P3 1881–1904,6866,1900,буряты
+vaydevaya1906,chinese,2,1906,1902,en,central_european,P3 1881–1904,6866,1900,китайцы
+vaydevaya1906,cossack,2,1906,1902,en,central_european,P3 1881–1904,6866,1900,казаки
+vaydevaya1906,evenki_even,1,1906,1902,en,central_european,P3 1881–1904,6866,1900,эвенки / эвены
+vaydevaya1906,exiles,2,1906,1902,en,central_european,P3 1881–1904,6866,1900,ссыльные и каторжные
+vaydevaya1906,kazakh_kirghiz,2,1906,1902,en,central_european,P3 1881–1904,6866,1900,казахи ('киргизы' XIX в.)
+vaydevaya1906,khanty,1,1906,1902,en,central_european,P3 1881–1904,6866,1900,ханты
+vaydevaya1906,manchu,4,1906,1902,en,central_european,P3 1881–1904,6866,1900,маньчжуры
+vaydevaya1906,natives_generic,2,1906,1902,en,central_european,P3 1881–1904,6866,1900,"«туземцы», «инородцы» (обобщённо)"
+vaydevaya1906,pereselentsy,2,1906,1902,en,central_european,P3 1881–1904,6866,1900,переселенцы
+vaydevaya1906,pole,1,1906,1902,en,central_european,P3 1881–1904,6866,1900,поляки
+vaydevaya1906,russian,1,1906,1902,en,central_european,P3 1881–1904,6866,1900,русские
+vaydevaya1906,siberian_tatar,2,1906,1902,en,central_european,P3 1881–1904,6866,1900,татары (в т.ч. сибирские)
+vaydevaya1906,volga_peoples,2,1906,1902,en,central_european,P3 1881–1904,6866,1900,народы Поволжья и Приуралья
+ward1920,chinese,3,1920,1918,en,british,P5 1918–1930,38652,1910,китайцы
+ward1920,cossack,35,1920,1918,en,british,P5 1918–1930,38652,1910,казаки
+ward1920,czech_slovak,52,1920,1918,en,british,P5 1918–1930,38652,1910,чехи и словаки
+ward1920,exiles,3,1920,1918,en,british,P5 1918–1930,38652,1910,ссыльные и каторжные
+ward1920,german,4,1920,1918,en,british,P5 1918–1930,38652,1910,немцы
+ward1920,japanese,39,1920,1918,en,british,P5 1918–1930,38652,1910,японцы
+ward1920,jew,3,1920,1918,en,british,P5 1918–1930,38652,1910,евреи
+ward1920,kazakh_kirghiz,4,1920,1918,en,british,P5 1918–1930,38652,1910,казахи ('киргизы' XIX в.)
+ward1920,mongol,2,1920,1918,en,british,P5 1918–1930,38652,1910,монголы
+ward1920,pole,1,1920,1918,en,british,P5 1918–1930,38652,1910,поляки
+ward1920,political_exiles,3,1920,1918,en,british,P5 1918–1930,38652,1910,политические ссыльные
+ward1920,russian,13,1920,1918,en,british,P5 1918–1930,38652,1910,русские
+ward1920,siberian_tatar,11,1920,1918,en,british,P5 1918–1930,38652,1910,татары (в т.ч. сибирские)
+wenyon1896,buryat,17,1896,1893,en,british,P3 1881–1904,37338,1890,буряты
+wenyon1896,chinese,5,1896,1893,en,british,P3 1881–1904,37338,1890,китайцы
+wenyon1896,cossack,3,1896,1893,en,british,P3 1881–1904,37338,1890,казаки
+wenyon1896,evenki_even,5,1896,1893,en,british,P3 1881–1904,37338,1890,эвенки / эвены
+wenyon1896,exiles,30,1896,1893,en,british,P3 1881–1904,37338,1890,ссыльные и каторжные
+wenyon1896,jew,5,1896,1893,en,british,P3 1881–1904,37338,1890,евреи
+wenyon1896,khanty,7,1896,1893,en,british,P3 1881–1904,37338,1890,ханты
+wenyon1896,korean,1,1896,1893,en,british,P3 1881–1904,37338,1890,корейцы
+wenyon1896,mongol,8,1896,1893,en,british,P3 1881–1904,37338,1890,монголы
+wenyon1896,nanai_amur,10,1896,1893,en,british,P3 1881–1904,37338,1890,нанайцы и др. народы Амура
+wenyon1896,natives_generic,6,1896,1893,en,british,P3 1881–1904,37338,1890,"«туземцы», «инородцы» (обобщённо)"
+wenyon1896,pereselentsy,24,1896,1893,en,british,P3 1881–1904,37338,1890,переселенцы
+wenyon1896,political_exiles,1,1896,1893,en,british,P3 1881–1904,37338,1890,политические ссыльные
+wenyon1896,russian,1,1896,1893,en,british,P3 1881–1904,37338,1890,русские
+wenyon1896,samoyedic,3,1896,1893,en,british,P3 1881–1904,37338,1890,самодийские народы (без уточнения)
+wenyon1896,siberian_tatar,22,1896,1893,en,british,P3 1881–1904,37338,1890,татары (в т.ч. сибирские)
+whittingham1856,ainu,7,1856,1854,en,british,P1 до 1855,16544,1850,айны
+whittingham1856,german,2,1856,1854,en,british,P1 до 1855,16544,1850,немцы
+whittingham1856,japanese,6,1856,1854,en,british,P1 до 1855,16544,1850,японцы
+whittingham1856,manchu,3,1856,1854,en,british,P1 до 1855,16544,1850,маньчжуры
+whittingham1856,natives_generic,17,1856,1854,en,british,P1 до 1855,16544,1850,"«туземцы», «инородцы» (обобщённо)"
+whittingham1856,pereselentsy,3,1856,1854,en,british,P1 до 1855,16544,1850,переселенцы
+whittingham1856,russian,12,1856,1854,en,british,P1 до 1855,16544,1850,русские
+whittingham1856,sakha,1,1856,1854,en,british,P1 до 1855,16544,1850,якуты (саха)
+whittingham1856,siberian_tatar,9,1856,1854,en,british,P1 до 1855,16544,1850,татары (в т.ч. сибирские)
+whyte1871,buryat,2,1871,1868,en,british,P2 1856–1880,39888,1860,буряты
+whyte1871,chinese,6,1871,1868,en,british,P2 1856–1880,39888,1860,китайцы
+whyte1871,cossack,5,1871,1868,en,british,P2 1856–1880,39888,1860,казаки
+whyte1871,evenki_even,1,1871,1868,en,british,P2 1856–1880,39888,1860,эвенки / эвены
+whyte1871,exiles,3,1871,1868,en,british,P2 1856–1880,39888,1860,ссыльные и каторжные
+whyte1871,itelmen_kamchadal,1,1871,1868,en,british,P2 1856–1880,39888,1860,ительмены / камчадалы
+whyte1871,khanty,1,1871,1868,en,british,P2 1856–1880,39888,1860,ханты
+whyte1871,mongol,50,1871,1868,en,british,P2 1856–1880,39888,1860,монголы
+whyte1871,natives_generic,15,1871,1868,en,british,P2 1856–1880,39888,1860,"«туземцы», «инородцы» (обобщённо)"
+whyte1871,pole,7,1871,1868,en,british,P2 1856–1880,39888,1860,поляки
+whyte1871,political_exiles,2,1871,1868,en,british,P2 1856–1880,39888,1860,политические ссыльные
+whyte1871,russian,6,1871,1868,en,british,P2 1856–1880,39888,1860,русские
+whyte1871,siberian_tatar,9,1871,1868,en,british,P2 1856–1880,39888,1860,татары (в т.ч. сибирские)
+whyte1871,sibiriak,1,1871,1868,en,british,P2 1856–1880,39888,1860,сибиряки / старожилы
+wlad1918,chinese,14,1918,1915,de,german,P4 1905–1917,20720,1910,китайцы
+wlad1918,cossack,2,1918,1915,de,german,P4 1905–1917,20720,1910,казаки
+wlad1918,german,1,1918,1915,de,german,P4 1905–1917,20720,1910,немцы
+wlad1918,japanese,1,1918,1915,de,german,P4 1905–1917,20720,1910,японцы
+wlad1918,mongol,11,1918,1915,de,german,P4 1905–1917,20720,1910,монголы
+wlad1918,russian,11,1918,1915,de,german,P4 1905–1917,20720,1910,русские
