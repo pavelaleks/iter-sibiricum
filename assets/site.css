@@ -2,7 +2,7 @@
    Цвет: снег и прусская лазурь старых гравированных карт; кармин — только для маршрутов и того, что к ним ведёт.
    Шрифт: Literata — голос источников (название, заголовки, тексты, цитаты); Onest — инструмент (интерфейс, данные).
    Одно движение: на главной маршруты прочерчиваются по карте при загрузке. */
-@import url(fonts.css);
+@import url(fonts.css?v=10);
 :root{color-scheme:light dark;
   --bg:light-dark(#f4f7f9,#0e1a26);--paper:light-dark(#ffffff,#132233);--bg2:light-dark(#e9eef2,#172a3d);
   --ink:light-dark(#13263a,#e4ecf2);--mute:light-dark(#5a6b7c,#93a7b8);--line:light-dark(#d7e0e7,#24394d);
