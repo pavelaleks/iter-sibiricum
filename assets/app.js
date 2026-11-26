@@ -722,6 +722,7 @@ async function method() {
     <li>Ареалы народов на карте схематичны и служат только для ориентира.</li></ul>
     <h2 style="margin-top:48px">Данные</h2>
     <p>Каталог изданий и атлас народов и мест опубликованы на Zenodo с DOI${(P.datasets || []).length ? ': ' + P.datasets.map((d) => `<a href="https://doi.org/${esc(d.doi)}">${esc(d.title)}</a> (${esc(d.license)})`).join('; ') : ''}. Наборы данных сайта лежат в папке <code>data/</code>, тексты — в <code>texts/</code>, код обработки — в <a href="${REPO}">репозитории на GitHub</a>.</p>
+    <p>Места и маршруты выгружены в открытых форматах исторической географии: <a href="data/export/iter-sibiricum-places.lpf.jsonld" download>газеттир в Linked Places Format</a> (для World Historical Gazetteer: формы названий из книг со ссылками на абзацы, годы, точность координат, ссылки на GeoNames и Wikidata) и <a href="data/export/iter-sibiricum-routes.geojson" download>маршруты в GeoJSON</a> (по поездкам, со статусом проверки). Лицензия CC BY 4.0.</p>
     <div class="cite">${esc(citation(P))}</div>
   </div></section>`;
 }

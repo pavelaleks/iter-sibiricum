@@ -28,6 +28,11 @@
 ## Обновление данных
 Все файлы в `data/` и `texts/` генерирует `analysis/10_build_site.py` из репозитория конвейера (`siberia-travelogues`). После изменения разметки: `bash run_all.sh`, затем скопировать `site/` сюда.
 
+## Открытые выгрузки
+- `data/export/iter-sibiricum-places.lpf.jsonld` — газеттир (699 мест) в [Linked Places Format v1.1](https://github.com/LinkedPasts/linked-places-format) для [World Historical Gazetteer](https://whgazetteer.org): формы названий из книг со ссылками на абзацы, годы поездок, точность координат (`certainty`), ссылки на GeoNames и Wikidata.
+- `data/export/iter-sibiricum-routes.geojson` — маршруты по поездкам (LineString) со статусом проверки и ссылками на абзацы.
+- `data/pages/{книга}.json` — соответствие абзацев страницам сканов Internet Archive.
+
 ## Локальный просмотр
 `python3 -m http.server` в этой папке → http://localhost:8000
 

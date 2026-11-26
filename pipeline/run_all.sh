@@ -29,3 +29,4 @@ python3 analysis/06_dashboard_data.py && python3 analysis/06b_dashboard_research
 python3 analysis/08d_page_index.py          # абзацы библиотеки ↔ страницы сканов IA
 python3 analysis/08c_illustrations_gutenberg.py   # иллюстрации из HTML-изданий Gutenberg
 python3 analysis/10_build_site.py && python3 analysis/08b_illustrations_site.py   # данные сайта, иллюстрации с учётом проверки
+python3 analysis/11_export_lpf.py           # газеттир в Linked Places Format (WHG) и маршруты в GeoJSON
