@@ -257,7 +257,7 @@ async function team() {
       <p><button type="button" id="addm">Добавить участника</button></p>
       <button class="on" type="submit">Сохранить</button>
     </form></div></section>`;
-  function member(t = {}) { return `<fieldset class="grid2 mem"><label>ФИО<input data-k="name" value="${esc(t.name || '')}"></label><label>Роль<input data-k="role" value="${esc(t.role || 'исполнитель')}"></label><label>Степень, должность<input data-k="degree" value="${esc(t.degree || '')}"></label><label>Организация<input data-k="org" value="${esc(t.org || '')}"></label><p class="wide"><a href="#" class="rm">убрать участника</a></p></fieldset>`; }
+  function member(t = {}) { return `<fieldset class="grid2 mem"><label>ФИО<input data-k="name" value="${esc(t.name || '')}"></label><label>Роль<input data-k="role" value="${esc(t.role || 'исполнитель')}"></label><label>Степень, должность<input data-k="degree" value="${esc(t.degree || '')}"></label><label>Организация<input data-k="org" value="${esc(t.org || '')}"></label><label>Сайт организации<input data-k="org_url" value="${esc(t.org_url || '')}"></label><label>ORCID<input data-k="orcid" value="${esc(t.orcid || '')}" placeholder="0000-0000-0000-0000"></label><p class="wide"><a href="#" class="rm">убрать участника</a></p></fieldset>`; }
   document.getElementById('addm').addEventListener('click', () => document.getElementById('tm').insertAdjacentHTML('beforeend', member()));
   document.getElementById('tm').addEventListener('click', (e) => { if (e.target.classList.contains('rm')) { e.preventDefault(); e.target.closest('fieldset').remove(); } });
   document.getElementById('tf').addEventListener('submit', async (e) => { e.preventDefault(); const f = e.target;
