@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "Если вы используете ресурс, ссылайтесь на него так. If you use this resource, please cite it as below."
+title: "Iter Sibiricum: European travelogues about Siberia and its peoples, 1800–1930"
+abstract: >-
+  A digital research resource on how European travellers of 1800–1930 described the peoples of Siberia
+  and the relations between them: a corpus of 109 travelogues in 9 languages with full texts, routes
+  reconstructed from the texts, cards of peoples, illustrations from the books, analytics and the
+  reproducible processing pipeline. Prepared with the support of Russian Science Foundation grant
+  No. 25-28-20397 and the Government of the Altai Republic.
+type: dataset
+authors:
+  - family-names: Alekseev
+    given-names: Pavel V.
+    orcid: "https://orcid.org/0000-0003-3680-1785"
+    affiliation: "Gorno-Altaisk State University"
+  - family-names: Zhdanov
+    given-names: Sergey S.
+    orcid: "https://orcid.org/0000-0002-8898-6497"
+    affiliation: "Siberian State University of Geosystems and Technologies"
+  - family-names: Sharypova
+    given-names: V. S.
+    orcid: "https://orcid.org/0000-0001-8743-6584"
+    affiliation: "National Research Tomsk State University"
+  - family-names: Alekseeva
+    given-names: S. P.
+    orcid: "https://orcid.org/0009-0006-6296-8895"
+    affiliation: "Gorno-Altaisk State University"
+  - family-names: Dyusekenev
+    given-names: D. N.
+    orcid: "https://orcid.org/0009-0000-4821-3636"
+    affiliation: "Alikhan Bokeikhan University"
+version: "1.0"
+date-released: "2026-11-26"
+url: "https://iter-sibiricum.ru/"
+repository-code: "https://github.com/pavelaleks/iter-sibiricum"
+license: CC-BY-4.0
+keywords: [Siberia, travelogues, travel writing, digital humanities, corpus linguistics, historical GIS, indigenous peoples, imagology]
+references:
+  - type: dataset
+    title: "Каталог европейских травелогов о Сибири (XIX — начало XX в.)"
+    doi: "10.5281/zenodo.24531924"
+    authors: [{name: "Iter Sibiricum project team"}]
+  - type: dataset
+    title: "Атлас народов и мест в европейских травелогах о Сибири"
+    doi: "10.5281/zenodo.24532195"
+    authors: [{name: "Iter Sibiricum project team"}]
