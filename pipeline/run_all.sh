@@ -20,7 +20,9 @@ python3 07f_topics_keyness.py         # NMF-темы и ключевые сло�
 python3 07g_journeys.py               # путешествия: восстановленные маршруты + черновики с доказательствами, проверка
 python3 07h_review_import.py          # импорт проверки маршрутов по тексту с контролем цитат и абзацев
 python3 07i_geocode_new_places.py     # координаты новых мест маршрутов: сверка с GeoNames
+python3 08a_illustrations.py          # иллюстрации и карты по сканам Internet Archive (долго; кэш томов в $ILL_CACHE)
 # python3 08_expert_sample.py         # ВНИМАНИЕ: пересоздаёт выборку — запускать только для новой разметки
 python3 09_expert_models.py           # оценки по ручной выборке, модели, точность правил
 cd ..
 python3 analysis/06_dashboard_data.py && python3 analysis/06b_dashboard_research.py
+python3 analysis/10_build_site.py && python3 analysis/08b_illustrations_site.py   # данные сайта, иллюстрации с учётом проверки

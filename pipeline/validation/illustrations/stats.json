@@ -1,0 +1,806 @@
+[
+ {
+  "ia": "mostremarkableye00kotz",
+  "pages": 792,
+  "candidates": 28,
+  "figures": 4,
+  "work": "kotzebue1802"
+ },
+ {
+  "ia": "pedestrianjourne01cochuoft",
+  "pages": 370,
+  "candidates": 42,
+  "figures": 7,
+  "work": "cochrane1829"
+ },
+ {
+  "ia": "pedestrianjourne02cochuoft",
+  "pages": 280,
+  "candidates": 32,
+  "figures": 2,
+  "work": "cochrane1829"
+ },
+ {
+  "ia": "india.history.resource.36205",
+  "pages": 438,
+  "candidates": 54,
+  "figures": 6,
+  "work": "holman1825"
+ },
+ {
+  "ia": "india.history.resource.36206",
+  "pages": 400,
+  "candidates": 43,
+  "figures": 4,
+  "work": "holman1825"
+ },
+ {
+  "ia": "travelsinkamtch00dobegoog",
+  "pages": 351,
+  "candidates": 20,
+  "figures": 1,
+  "work": "dobell1830"
+ },
+ {
+  "ia": "travelsinkamtch01dobegoog",
+  "pages": 356,
+  "candidates": 34,
+  "figures": 1,
+  "work": "dobell1830"
+ },
+ {
+  "ia": "bub_gb_XlM6AQAAIAAJ",
+  "pages": 778,
+  "candidates": 37,
+  "figures": 1,
+  "work": "erman1833"
+ },
+ {
+  "ia": "bub_gb_uFM6AQAAIAAJ",
+  "pages": 467,
+  "candidates": 38,
+  "figures": 5,
+  "work": "erman1833"
+ },
+ {
+  "ia": "india.history.resource.41555",
+  "pages": 435,
+  "candidates": 23,
+  "figures": 2,
+  "work": "cottrell1842"
+ },
+ {
+  "ia": "revelationsofsib01feliuoft",
+  "pages": 360,
+  "candidates": 46,
+  "figures": 0,
+  "work": "felinska1854"
+ },
+ {
+  "ia": "revelationsofsib02feliuoft",
+  "pages": 360,
+  "candidates": 42,
+  "figures": 0,
+  "work": "felinska1854"
+ },
+ {
+  "ia": "india.history.resource.70730",
+  "pages": 480,
+  "candidates": 45,
+  "figures": 3,
+  "work": "hill1854"
+ },
+ {
+  "ia": "india.history.resource.70731",
+  "pages": 458,
+  "candidates": 34,
+  "figures": 0,
+  "work": "hill1854"
+ },
+ {
+  "ia": "souvenirsdunvoy00hansgoog",
+  "pages": 459,
+  "candidates": 47,
+  "figures": 2,
+  "work": "hansteen1857"
+ },
+ {
+  "ia": "reiseberichteun00castgoog",
+  "pages": 558,
+  "candidates": 136,
+  "figures": 3,
+  "work": "castren1856"
+ },
+ {
+  "ia": "orientalwesterns00atki",
+  "pages": 686,
+  "candidates": 142,
+  "figures": 32,
+  "work": "atkinson1858"
+ },
+ {
+  "ia": "travelsinregions00atkiuoft",
+  "pages": 604,
+  "candidates": 132,
+  "figures": 83,
+  "work": "atkinson1860"
+ },
+ {
+  "ia": "dli.ministry.05617",
+  "pages": 381,
+  "candidates": 45,
+  "figures": 4,
+  "work": "latkinson1863"
+ },
+ {
+  "ia": "personalnarrativ00tron",
+  "pages": 493,
+  "candidates": 100,
+  "figures": 10,
+  "work": "tronson1859"
+ },
+ {
+  "ia": "notesoflateexped00whit",
+  "pages": 336,
+  "candidates": 37,
+  "figures": 1,
+  "work": "whittingham1856"
+ },
+ {
+  "ia": "undramedanslesme00mayn",
+  "pages": 328,
+  "candidates": 24,
+  "figures": 1,
+  "work": "maynard1859"
+ },
+ {
+  "ia": "cu31924023061504",
+  "pages": 380,
+  "candidates": 44,
+  "figures": 4,
+  "work": "whyte1871"
+ },
+ {
+  "ia": "deparispkinp00meiguoft",
+  "pages": 478,
+  "candidates": 101,
+  "figures": 18,
+  "work": "meignan1877"
+ },
+ {
+  "ia": "cihm_37557",
+  "pages": 490,
+  "candidates": 38,
+  "figures": 32,
+  "work": "kittlitz1858"
+ },
+ {
+  "ia": "11828551bsb",
+  "pages": 369,
+  "candidates": 56,
+  "figures": 5,
+  "work": "joest1883"
+ },
+ {
+  "ia": "throughsiberia00lans",
+  "pages": 882,
+  "candidates": 160,
+  "figures": 36,
+  "work": "lansdell1883"
+ },
+ {
+  "ia": "siberiainasiavis00seeb",
+  "pages": 364,
+  "candidates": 77,
+  "figures": 53,
+  "work": "seebohm1882"
+ },
+ {
+  "ia": "ldpd_11894503_000",
+  "pages": 460,
+  "candidates": 95,
+  "figures": 30,
+  "work": "cotteau1885"
+ },
+ {
+  "ia": "fivethousandmil00gowigoog",
+  "pages": 321,
+  "candidates": 55,
+  "figures": 1,
+  "work": "gowing1889"
+ },
+ {
+  "ia": "cruisemarchesat00guilgoog",
+  "pages": 563,
+  "candidates": 236,
+  "figures": 16,
+  "work": "guillemard1889"
+ },
+ {
+  "ia": "aussibirienlose00radlgoog",
+  "pages": 584,
+  "candidates": 69,
+  "figures": 4,
+  "work": "radloff1893"
+ },
+ {
+  "ia": "notesdevoyageen00boulgoog",
+  "pages": 428,
+  "candidates": 155,
+  "figures": 76,
+  "work": "boulangier1891"
+ },
+ {
+  "ia": "siberiaasitis00dewi",
+  "pages": 538,
+  "candidates": 80,
+  "figures": 30,
+  "work": "dewindt1892"
+ },
+ {
+  "ia": "newsiberiabeinga00dewiiala",
+  "pages": 348,
+  "candidates": 83,
+  "figures": 24,
+  "work": "dewindt1896"
+ },
+ {
+  "ia": "polargleamsaccou00peelrich",
+  "pages": 306,
+  "candidates": 95,
+  "figures": 22,
+  "work": "peel1894"
+ },
+ {
+  "ia": "acrosssiberiaonb00jeff",
+  "pages": 90,
+  "candidates": 56,
+  "figures": 45,
+  "work": "jefferson1896"
+ },
+ {
+  "ia": "roughingitinsibe00jeff",
+  "pages": 302,
+  "candidates": 83,
+  "figures": 16,
+  "work": "jefferson1897"
+ },
+ {
+  "ia": "reisenachwestsi00finsgoog",
+  "pages": 758,
+  "candidates": 145,
+  "figures": 56,
+  "work": "finsch1879"
+ },
+ {
+  "ia": "rcin.org.pl.WA51_104156_PAN59031-r1897_Moscou-Krasnoiarsk_82324",
+  "pages": 59,
+  "candidates": 40,
+  "figures": 35,
+  "work": "debaye1897"
+ },
+ {
+  "ia": "dePenzaaMinoussinsk",
+  "pages": 58,
+  "candidates": 40,
+  "figures": 34,
+  "work": "debaye1898"
+ },
+ {
+  "ia": "acrosssiberiaong00weny",
+  "pages": 266,
+  "candidates": 75,
+  "figures": 28,
+  "work": "wenyon1896"
+ },
+ {
+  "ia": "ensibrie00legrgoog",
+  "pages": 444,
+  "candidates": 75,
+  "figures": 2,
+  "work": "legras1899"
+ },
+ {
+  "ia": "b21952450",
+  "pages": 350,
+  "candidates": 107,
+  "figures": 33,
+  "work": "marsden1892"
+ },
+ {
+  "ia": "overlandtochina00colquoft",
+  "pages": 490,
+  "candidates": 109,
+  "figures": 35,
+  "work": "colquhoun1900"
+ },
+ {
+  "ia": "sidelightsonsib00simp",
+  "pages": 452,
+  "candidates": 112,
+  "figures": 47,
+  "work": "simpson1898"
+ },
+ {
+  "ia": "india.history.resource.111125",
+  "pages": 522,
+  "candidates": 44,
+  "figures": 2,
+  "work": "leroybeaulieu1900"
+ },
+ {
+  "ia": "ribbonofiron00meak",
+  "pages": 376,
+  "candidates": 96,
+  "figures": 26,
+  "work": "meakin1901"
+ },
+ {
+  "ia": "dli.ministry.05111",
+  "pages": 339,
+  "candidates": 41,
+  "figures": 3,
+  "work": "reid1899"
+ },
+ {
+  "ia": "unreportageench00tytggoog",
+  "pages": 287,
+  "candidates": 155,
+  "figures": 105,
+  "work": "tytgat1901"
+ },
+ {
+  "ia": "throughsiberia00staduoft",
+  "pages": 342,
+  "candidates": 144,
+  "figures": 50,
+  "work": "stadling1901"
+ },
+ {
+  "ia": "cu31924023035912",
+  "pages": 420,
+  "candidates": 138,
+  "figures": 49,
+  "work": "fraser1902"
+ },
+ {
+  "ia": "allrussiastravel00normuoft",
+  "pages": 526,
+  "candidates": 182,
+  "figures": 112,
+  "work": "norman1902"
+ },
+ {
+  "ia": "cu31924023499498",
+  "pages": 200,
+  "candidates": 40,
+  "figures": 9,
+  "work": "sheepshanks1903"
+ },
+ {
+  "ia": "bub_gb_kf8pAAAAYAAJ",
+  "pages": 572,
+  "candidates": 35,
+  "figures": 4,
+  "work": "pistor1905"
+ },
+ {
+  "ia": "throughhighlands00sway",
+  "pages": 300,
+  "candidates": 129,
+  "figures": 60,
+  "work": "swayne1904"
+ },
+ {
+  "ia": "siberia_00pricuoft",
+  "pages": 400,
+  "candidates": 66,
+  "figures": 19,
+  "work": "mpprice1912"
+ },
+ {
+  "ia": "roundworldinmoto00scar",
+  "pages": 474,
+  "candidates": 138,
+  "figures": 50,
+  "work": "scarfoglio1909"
+ },
+ {
+  "ia": "inuttermosteastb00hawe",
+  "pages": 652,
+  "candidates": 205,
+  "figures": 70,
+  "work": "hawes1903"
+ },
+ {
+  "ia": "sibrienotesdevo00bordgoog",
+  "pages": 310,
+  "candidates": 67,
+  "figures": 2,
+  "work": "bordeaux1904"
+ },
+ {
+  "ia": "paul-fuchs-kreuz-und-quer-durch-asien.-erinnerungen-an-meine-flucht-aus-russisch",
+  "pages": 77,
+  "candidates": 5,
+  "figures": 0,
+  "work": "fuchs1925"
+ },
+ {
+  "ia": "throughsiberiala00nans",
+  "pages": 608,
+  "candidates": 156,
+  "figures": 104,
+  "work": "nansen1914"
+ },
+ {
+  "ia": "paysagesdasiesib00asse",
+  "pages": 268,
+  "candidates": 43,
+  "figures": 0,
+  "work": "asselin1911"
+ },
+ {
+  "ia": "summeronyenesei00havi",
+  "pages": 396,
+  "candidates": 75,
+  "figures": 16,
+  "work": "haviland1915"
+ },
+ {
+  "ia": "throughkamchatka0000unse",
+  "pages": 336,
+  "candidates": 73,
+  "figures": 22,
+  "work": "bergman1927"
+ },
+ {
+  "ia": "laguerreenrussie00gronuoft",
+  "pages": 674,
+  "candidates": 132,
+  "figures": 47,
+  "work": "grondijs1922"
+ },
+ {
+  "ia": "rcin.org.pl.WA51_146105_PTG2740-r1925_Drei-Jahre-in-Sibiri_120967",
+  "pages": 288,
+  "candidates": 65,
+  "figures": 40,
+  "work": "drei1925"
+ },
+ {
+  "ia": "cu31924023061470",
+  "pages": 544,
+  "candidates": 234,
+  "figures": 135,
+  "work": "price1892"
+ },
+ {
+  "ia": "k.u.-k-hauptmann-franz-wlad-meine-flucht-durchs-mongolische-sandmeer-1918",
+  "pages": 129,
+  "candidates": 9,
+  "figures": 4,
+  "work": "wlad1918"
+ },
+ {
+  "work": "michie1864",
+  "ia": "",
+  "note": "нет скана IA (Gutenberg)"
+ },
+ {
+  "work": "dewindt1889",
+  "ia": "",
+  "note": "нет скана IA (Gutenberg)"
+ },
+ {
+  "work": "dewindt1903",
+  "ia": "",
+  "note": "нет скана IA (Gutenberg)"
+ },
+ {
+  "work": "ready1904",
+  "ia": "",
+  "note": "нет скана IA (Gutenberg)"
+ },
+ {
+  "work": "kubalski1856",
+  "ia": "",
+  "note": "нет скана IA (Gutenberg)"
+ },
+ {
+  "work": "barzini1908",
+  "ia": "",
+  "note": "нет скана IA (Gutenberg)"
+ },
+ {
+  "work": "gaunt1919",
+  "ia": "",
+  "note": "нет скана IA (Gutenberg)"
+ },
+ {
+  "work": "ward1920",
+  "ia": "",
+  "note": "нет скана IA (Gutenberg)"
+ },
+ {
+  "work": "grano1893",
+  "ia": "",
+  "note": "нет скана IA (Gutenberg)"
+ },
+ {
+  "work": "donner1915",
+  "ia": "",
+  "note": "нет скана IA (Gutenberg)"
+ },
+ {
+  "work": "svinhufvud1928",
+  "ia": "",
+  "note": "нет скана IA (Gutenberg)"
+ },
+ {
+  "ia": "cu31924028397887",
+  "pages": 464,
+  "candidates": 158,
+  "figures": 61,
+  "work": "lethbridge1915"
+ },
+ {
+  "ia": "cu31924028467474",
+  "pages": 392,
+  "candidates": 93,
+  "figures": 32,
+  "work": "turner1905"
+ },
+ {
+  "ia": "cu31924028425621",
+  "pages": 318,
+  "candidates": 103,
+  "figures": 31,
+  "work": "fell1916"
+ },
+ {
+  "ia": "cu31924023038437",
+  "pages": 701,
+  "candidates": 175,
+  "figures": 53,
+  "work": "harrison1910"
+ },
+ {
+  "ia": "acrossroofofworl00etherich",
+  "pages": 466,
+  "candidates": 185,
+  "figures": 123,
+  "work": "etherton1911"
+ },
+ {
+  "ia": "dli.pahar.1651",
+  "pages": 538,
+  "candidates": 199,
+  "figures": 51,
+  "work": "ronaldshay1904"
+ },
+ {
+  "ia": "cu31924023523669",
+  "pages": 524,
+  "candidates": 116,
+  "figures": 40,
+  "work": "vaydevaya1906"
+ },
+ {
+  "ia": "cruisesinberings00nieduoft",
+  "pages": 426,
+  "candidates": 258,
+  "figures": 125,
+  "work": "niedieck1909"
+ },
+ {
+  "ia": "greaterrussiacon00gerruoft",
+  "pages": 392,
+  "candidates": 169,
+  "figures": 84,
+  "work": "gerrare1903"
+ },
+ {
+  "ia": "tenmonthsamongte00hoop",
+  "pages": 460,
+  "candidates": 76,
+  "figures": 10,
+  "work": "hooper1853"
+ },
+ {
+  "ia": "narrativeofjourn02simp",
+  "pages": 486,
+  "candidates": 22,
+  "figures": 1,
+  "work": "gsimpson1847"
+ },
+ {
+  "ia": "lifevoyagesofjo00john",
+  "pages": 494,
+  "candidates": 115,
+  "figures": 33,
+  "work": "johnson1907"
+ },
+ {
+  "ia": "storyasiberiane00piotgoog",
+  "pages": 344,
+  "candidates": 30,
+  "figures": 2,
+  "work": "piotrowski1863"
+ },
+ {
+  "ia": "siberianpictures01niem",
+  "pages": 350,
+  "candidates": 48,
+  "figures": 1,
+  "work": "niemojowski1883"
+ },
+ {
+  "ia": "siberianpictures02niem",
+  "pages": 346,
+  "candidates": 40,
+  "figures": 0,
+  "work": "niemojowski1883"
+ },
+ {
+  "ia": "bochebolshevikex00pricrich",
+  "pages": 266,
+  "candidates": 27,
+  "figures": 1,
+  "work": "hprice1919"
+ },
+ {
+  "ia": "bwb_T3-BGL-717",
+  "pages": 478,
+  "candidates": 145,
+  "figures": 51,
+  "work": "perryayscough1914"
+ },
+ {
+  "ia": "india.history.resource.89169",
+  "pages": 440,
+  "candidates": 45,
+  "figures": 5,
+  "work": "tilley1861"
+ },
+ {
+  "ia": "in.ernet.dli.2015.76016",
+  "pages": 366,
+  "candidates": 40,
+  "figures": 15,
+  "work": "digby1928"
+ },
+ {
+  "ia": "unknownmongoliar01carr",
+  "pages": 478,
+  "candidates": 170,
+  "figures": 66,
+  "work": "carruthers1914"
+ },
+ {
+  "ia": "unknownmongoliar02carr",
+  "pages": 488,
+  "candidates": 163,
+  "figures": 69,
+  "work": "carruthers1914"
+ },
+ {
+  "ia": "atraverslarussi00rabogoog",
+  "pages": 340,
+  "candidates": 102,
+  "figures": 50,
+  "work": "rabot1894"
+ },
+ {
+  "ia": "latragdiesib00lasi",
+  "pages": 274,
+  "candidates": 72,
+  "figures": 12,
+  "work": "lasies1920"
+ },
+ {
+  "ia": "unestateinsiber00sommgoog",
+  "pages": 656,
+  "candidates": 195,
+  "figures": 13,
+  "work": "sommier1885"
+ },
+ {
+  "ia": "per-la-siberia-in-cina-e-giappone",
+  "pages": 413,
+  "candidates": 184,
+  "figures": 167,
+  "work": "cipolla1919"
+ },
+ {
+  "ia": "untertungusenun00mlgoog",
+  "pages": 356,
+  "candidates": 58,
+  "figures": 8,
+  "work": "muller1882"
+ },
+ {
+  "ia": "sibirienivoredag00patu",
+  "pages": 414,
+  "candidates": 97,
+  "figures": 14,
+  "work": "patursson1901"
+ },
+ {
+  "ia": "detnysibirienafh00rose",
+  "pages": 430,
+  "candidates": 204,
+  "figures": 145,
+  "work": "rosenberg1904"
+ },
+ {
+  "ia": "arkivkopia.se-runeberg-gjennemsib",
+  "pages": 195,
+  "candidates": 1,
+  "figures": 0,
+  "work": "nansen1914_no"
+ },
+ {
+  "ia": "podrwiniaetapa01gill",
+  "pages": 266,
+  "candidates": 69,
+  "figures": 0,
+  "work": "giller1866"
+ },
+ {
+  "ia": "podrwiniaetapa02gill",
+  "pages": 254,
+  "candidates": 52,
+  "figures": 0,
+  "work": "giller1866"
+ },
+ {
+  "ia": "sibir-druha_amerika",
+  "pages": 239,
+  "candidates": 31,
+  "figures": 10,
+  "work": "heller1930"
+ },
+ {
+  "ia": "frozenasiasketch00eden",
+  "pages": 346,
+  "candidates": 29,
+  "figures": 14,
+  "work": "eden1879"
+ },
+ {
+  "ia": "beastsmengods00osseuoft",
+  "pages": 350,
+  "candidates": 74,
+  "figures": 0,
+  "work": "ossendowski1922"
+ },
+ {
+  "ia": "prisonerwarsiberiandiary",
+  "pages": 325,
+  "candidates": 39,
+  "figures": 1,
+  "work": "dwinger1930"
+ },
+ {
+  "ia": "expditionscient00ujfagoog",
+  "pages": 292,
+  "candidates": 100,
+  "figures": 28,
+  "work": "ujfalvy1879"
+ },
+ {
+  "ia": "10430650bsb",
+  "pages": 699,
+  "candidates": 139,
+  "figures": 30,
+  "work": "rose1837"
+ },
+ {
+  "ia": "reisedurchdasalt01lede",
+  "pages": 498,
+  "candidates": 59,
+  "figures": 3,
+  "work": "ledebour1829"
+ }
+]

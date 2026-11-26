@@ -225,3 +225,54 @@ footer p{margin:0 0 .5em;max-width:80ch}
 @media(max-width:1100px){.crew ul{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:640px){.crew ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:400px){.crew ul{grid-template-columns:minmax(0,1fr)}}
+/* Главная: иллюстрации из книг справа от названия */
+.intro-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.8fr);gap:clamp(28px,4.5vw,72px);align-items:start}
+.plates{margin:0;display:grid;gap:10px}
+.pl-frame{display:block;position:relative;aspect-ratio:5/6;border-radius:2px;overflow:hidden}
+.pl-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity 1.3s ease}
+.pl-frame img.on{opacity:1}
+.plates figcaption{display:grid;gap:2px;min-height:3.4em}
+.plates figcaption a{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.35;color:var(--ink);text-decoration:none}
+.plates figcaption a:hover{text-decoration:underline}
+.plates figcaption span{font-size:13.5px}
+.pl-nav{display:flex;gap:8px;align-items:center;font-size:14px}
+.pl-nav button{min-width:40px;min-height:36px;padding:0 10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;cursor:pointer}
+.pl-nav button:hover{border-color:var(--ink)}
+.pl-nav a{margin-left:auto}
+@media(prefers-reduced-motion:reduce){.pl-frame img{transition:none}}
+@media(max-width:900px){.intro-grid{grid-template-columns:minmax(0,1fr)}.pl-frame{aspect-ratio:4/3}}
+/* Страница «Иллюстрации» */
+.ill-note{max-width:78ch}
+.ill-filters{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:end;margin-top:22px}
+.ill-filters label{display:grid;gap:4px;font-size:13.5px;color:var(--mute)}
+.ill-filters select,.ill-filters input{min-height:40px;font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:6px 10px;max-width:260px}
+.ill-filters .q input{width:240px}
+.seg{display:flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--paper)}
+.seg button{border:0;background:none;font:inherit;font-size:15px;color:var(--ink);padding:9px 16px;cursor:pointer;min-height:40px}
+.seg button span{color:var(--mute);font-size:13px;font-variant-numeric:tabular-nums}
+.seg button.on{background:var(--ink);color:var(--paper)}.seg button.on span{color:inherit;opacity:.75}
+.ill-grid{columns:4 230px;column-gap:24px}
+.ill{break-inside:avoid;margin:0 0 28px;display:grid;gap:8px}
+.ill a{display:block;background:var(--bg2)}
+.ill img{display:block;width:100%;height:auto}
+.ill a:hover img{outline:2px solid var(--acc2);outline-offset:2px}
+.ill figcaption{display:grid;gap:2px}
+.ill .c{font-family:var(--serif);font-style:italic;font-size:15.5px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ill .s{font-size:13px;color:var(--mute)}
+.more{text-align:center}.more button{font:inherit;padding:10px 22px;border:1px solid var(--ink);background:none;color:var(--ink);border-radius:999px;cursor:pointer}
+.ill-dlg{border:0;padding:0;max-width:min(1120px,96vw);width:100%;max-height:94vh;background:var(--paper);color:var(--ink);border-radius:4px}
+.ill-dlg::backdrop{background:rgba(8,16,26,.72)}
+.dlg-in{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);grid-template-rows:1fr auto;max-height:94vh}
+.dlg-img{background:var(--bg2);display:grid;place-items:center;padding:18px;min-height:0;overflow:auto}
+.dlg-img img{max-width:100%;max-height:calc(94vh - 110px);width:auto;height:auto}
+.dlg-meta{padding:26px 26px 10px;overflow:auto}
+.dlg-cap{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.35;margin:0 0 18px}
+.dlg-meta dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:0 0 18px;font-size:15px}.dlg-meta dt{color:var(--mute)}.dlg-meta dd{margin:0}
+.dlg-links{display:grid;gap:8px;font-size:15px}
+.dlg-nav{grid-column:1/-1;display:flex;gap:10px;align-items:center;padding:10px 16px;border-top:1px solid var(--line)}
+.dlg-nav button{min-height:38px;min-width:42px;font:inherit;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;cursor:pointer}
+.dlg-nav button:disabled{opacity:.35;cursor:default}
+.dlg-nav .x{margin-left:auto;padding:0 16px}
+@media(max-width:760px){.dlg-in{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto;overflow:auto}.dlg-img img{max-height:60vh}}
+.rot{display:block;position:relative;overflow:hidden}.rot img{position:absolute;left:50%;top:50%;max-width:none}
+.ill .ru,.dlg-ru{font-size:14px;line-height:1.4}.dlg-ru{font-size:16px;margin:-10px 0 18px}

@@ -25,3 +25,11 @@ fieldset.mem{border:1px solid var(--line);border-radius:var(--r);padding:16px;ma
 @media(max-width:900px){.editor,.grid2{grid-template-columns:minmax(0,1fr)}#newf.row,.aform.row{grid-auto-flow:row;grid-template-columns:minmax(0,1fr)}}
 [hidden]{display:none!important}
 .stops .crd{width:5.5em;min-height:30px;padding:2px 6px;font:14px var(--sans);border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink)}
+.ilist{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:16px;margin:18px 0}
+.icard{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;padding:12px;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+.icard.rej{opacity:.45}
+.iimg{display:grid;place-items:center;height:170px;background:var(--bg2);overflow:hidden}.iimg img{max-width:150px;max-height:150px;transition:transform .2s}
+.ifields{display:grid;gap:6px;align-content:start}.ifields label{display:grid;gap:2px;font-size:13px}.ifields input:not([type=checkbox]){width:100%}
+.ifields .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.ifields .ck{display:flex;gap:4px;align-items:center}
+.savebar{position:sticky;bottom:0;background:var(--bg);padding:12px 0;border-top:1px solid var(--line)}
+#ipg{display:flex;flex-wrap:wrap;gap:6px}#ipg button.on{background:var(--ink);color:var(--paper)}

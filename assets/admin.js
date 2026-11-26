@@ -6,6 +6,7 @@
    Файлы решений:
      data/review/journeys_review.json — проверка маршрутов (статус, остановки, кто и когда)
      data/review/books_queue.json     — предложенные новые книги (обрабатывает конвейер при сборке)
+     data/review/illustrations_review.json — проверка иллюстраций (подпись, перевод, тип, поворот, отбор)
      data/publications.json, data/project.json — публикации и сведения о проекте */
 const REPO = 'pavelaleks/iter-sibiricum', BRANCH = 'main';
 const A = document.getElementById('A');
@@ -84,7 +85,7 @@ async function start() {
 function route() {
   const t = (location.hash.slice(1) || 'routes').split('/');
   document.querySelectorAll('#atabs a').forEach((a) => a.classList.toggle('on', a.dataset.t === t[0]));
-  ({routes, books, pubs, team, log}[t[0]] || routes)(t[1]);
+  ({routes, books, ills, pubs, team, log}[t[0]] || routes)(t[1]);
 }
 
 // ---------- маршруты ----------
@@ -204,6 +205,55 @@ function books() {
     try { D.queue = await commitJSON('data/review/books_queue.json', (Q) => { Q.push({...f, year: +f.year, by: WHO, date: today(), status: 'proposed'}); return Q; }, `Новая книга в очередь: ${f.author}, ${f.year}`, []); toast('Книга добавлена в очередь.'); books(); }
     catch (err) { toast('Не сохранено: ' + err.message, true); btn.disabled = false; }
   });
+}
+
+// ---------- иллюстрации ----------
+const KINDS = {people: 'люди', portrait: 'портрет', view: 'вид', map: 'карта', nature: 'природа', object: 'предмет', other: 'прочее'};
+async function ills(arg) {
+  A.innerHTML = '<div class="wrap loading">Загрузка иллюстраций…</div>';
+  const [I, rev] = await Promise.all([D.ill ||= site('data/illustrations.json'), readJSON('data/review/illustrations_review.json', {})]);
+  const R = rev.data, items = I.items, heroSet = new Set(I.hero);
+  const books = [...new Set(items.map((x) => x.w))].sort((a, b) => (D.W[a]?.year || 0) - (D.W[b]?.year || 0));
+  const st = {w: '', f: 'todo', page: 0}; const PER = 40; const ch = {};
+  A.innerHTML = `<section class="wrap band"><h1>Иллюстрации</h1>
+    <p class="lede">Проверьте подпись (исправьте ошибки распознавания), добавьте перевод, уточните тип, поверните картинку, если она лежит боком, и уберите то, что иллюстрацией не является. Отметка «на главную» включает картинку в смену на главной странице. Изменения сохраняются одной кнопкой внизу.</p>
+    <div class="row"><label>Книга <select id="iw"><option value="">все (${items.length})</option>${books.map((w) => `<option value="${w}">${esc(D.W[w] ? D.W[w].label : w)} (${items.filter((x) => x.w === w).length})</option>`).join('')}</select></label>
+    <label>Показать <select id="if"><option value="todo">непроверенные</option><option value="nocap">без подписи</option><option value="hero">на главной</option><option value="done">проверенные</option><option value="">все</option></select></label></div>
+    <div id="ilist" class="ilist"></div><div class="row" id="ipg"></div>
+    <p class="savebar"><button id="isave" class="primary" disabled>Сохранить изменения</button> <span id="icnt" class="mute"></span></p></section>`;
+  const val = (x, k, d) => (ch[x.id] && k in ch[x.id]) ? ch[x.id][k] : (R[x.id] && k in R[x.id]) ? R[x.id][k] : d;
+  const draw = () => {
+    let L = items.filter((x) => !st.w || x.w === st.w);
+    if (st.f === 'todo') L = L.filter((x) => !R[x.id]); else if (st.f === 'done') L = L.filter((x) => R[x.id]);
+    else if (st.f === 'nocap') L = L.filter((x) => !val(x, 'caption', x.c)); else if (st.f === 'hero') L = L.filter((x) => val(x, 'hero', heroSet.has(x.id)));
+    const pages = Math.ceil(L.length / PER); st.page = Math.min(st.page, Math.max(0, pages - 1));
+    document.getElementById('ilist').innerHTML = L.slice(st.page * PER, st.page * PER + PER).map((x) => { const rot = val(x, 'rot', 0), rej = val(x, 'status', '') === 'rejected';
+      return `<div class="icard${rej ? ' rej' : ''}" data-id="${x.id}"><div class="iimg"><img src="${x.t}" style="transform:rotate(${rot}deg)" loading="lazy" alt=""></div>
+      <div class="ifields"><div class="small mute">${esc(D.W[x.w]?.label || x.w)} · <a href="https://archive.org/details/${x.ia}/page/n${x.n}/mode/1up" target="_blank" rel="noopener">скан</a>${x.p ? ` · <a href="./#book-${x.w.replace(/_/g, '-')}-p${x.p}" target="_blank">текст рядом</a>` : ''}</div>
+      <label>Подпись<input data-k="caption" value="${esc(val(x, 'caption', x.c))}"></label>
+      <label>Перевод<input data-k="ru" value="${esc(val(x, 'ru', x.ru || ''))}" placeholder="по-русски"></label>
+      <div class="row"><select data-k="kind">${Object.entries(KINDS).map(([k, t]) => `<option value="${k}" ${val(x, 'kind', x.k) === k ? 'selected' : ''}>${t}</option>`).join('')}</select>
+      <button type="button" data-rot="-90" title="Повернуть против часовой">↺</button><button type="button" data-rot="90" title="Повернуть по часовой">↻</button>
+      <label class="ck"><input type="checkbox" data-k="hero" ${val(x, 'hero', heroSet.has(x.id)) ? 'checked' : ''}> на главную</label>
+      <label class="ck"><input type="checkbox" data-k="rejected" ${rej ? 'checked' : ''}> не иллюстрация</label></div></div></div>`; }).join('') || '<p class="mute">Здесь пусто.</p>';
+    document.getElementById('ipg').innerHTML = pages > 1 ? Array.from({length: pages}, (_, i) => `<button type="button" data-p="${i}" ${i === st.page ? 'class="on"' : ''}>${i + 1}</button>`).join('') : '';
+    const n = Object.keys(ch).length; document.getElementById('isave').disabled = !n; document.getElementById('icnt').textContent = n ? `изменено: ${n}` : '';
+  };
+  const set = (id, k, v) => { (ch[id] ||= {})[k] = v; const n = Object.keys(ch).length; document.getElementById('isave').disabled = !n; document.getElementById('icnt').textContent = `изменено: ${n}`; };
+  const list = document.getElementById('ilist');
+  list.addEventListener('input', (e) => { const c = e.target.closest('.icard'), k = e.target.dataset.k; if (!c || !k) return;
+    if (k === 'rejected') { set(c.dataset.id, 'status', e.target.checked ? 'rejected' : 'checked'); c.classList.toggle('rej', e.target.checked); }
+    else set(c.dataset.id, k, e.target.type === 'checkbox' ? e.target.checked : e.target.value); });
+  list.addEventListener('click', (e) => { const b = e.target.closest('[data-rot]'); if (!b) return; const c = b.closest('.icard'), x = items.find((y) => y.id === c.dataset.id);
+    const r = ((val(x, 'rot', 0) + +b.dataset.rot) % 360 + 360) % 360; set(x.id, 'rot', r); c.querySelector('img').style.transform = `rotate(${r}deg)`; });
+  document.getElementById('ipg').addEventListener('click', (e) => { const b = e.target.closest('[data-p]'); if (b) { st.page = +b.dataset.p; draw(); scrollTo(0, 0); } });
+  document.getElementById('iw').onchange = (e) => { st.w = e.target.value; st.page = 0; draw(); };
+  document.getElementById('if').onchange = (e) => { st.f = e.target.value; st.page = 0; draw(); };
+  document.getElementById('isave').onclick = async (e) => { e.target.disabled = true;
+    try { const n = Object.keys(ch).length;
+      await commitJSON('data/review/illustrations_review.json', (Q) => { for (const [id, v] of Object.entries(ch)) { const prev = Q[id] || {}; Q[id] = {...prev, ...v, status: v.status || (prev.status === 'rejected' ? 'rejected' : 'checked'), by: WHO, date: today()}; } return Q; }, `Иллюстрации: проверено ${n}`);
+      toast(`Сохранено: ${n}. На сайте — через 1–2 минуты.`); ills(); } catch (err) { toast(err.message, true); e.target.disabled = false; } };
+  draw();
 }
 
 // ---------- публикации ----------

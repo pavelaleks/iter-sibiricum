@@ -19,6 +19,20 @@ const getRoutes = () => (C['routes+review'] ||= Promise.all([get('routes.json'),
   }
   return out;
 }));
+// Правки иллюстраций из рабочего места (подпись, перевод, тип, поворот, отбор) накладываются на результат конвейера.
+const getIll = () => (C['ill+review'] ||= Promise.all([get('illustrations.json'), fetch('data/review/illustrations_review.json', {cache: 'no-cache'}).then((r) => r.ok ? r.json() : {}).catch(() => ({}))]).then(([D, REV]) => {
+  const items = D.items.filter((x) => !(REV[x.id] && REV[x.id].status === 'rejected')).map((x) => { const v = REV[x.id]; return v ? {...x, c: v.caption ?? x.c, ru: v.ru || x.ru || '', k: v.kind || x.k, rx: v.rot || 0, ok: v.status === 'checked'} : x; });
+  const ids = new Set(items.map((x) => x.id));
+  const hero = [...new Set([...D.hero.filter((id) => !(REV[id] && REV[id].hero === false)), ...Object.keys(REV).filter((id) => REV[id].hero)])].filter((id) => ids.has(id));
+  return {...D, items, hero};
+}));
+// Изображение с учётом поворота, заданного при проверке (обрезка на диске пересоздаётся при следующей сборке).
+const illImg = (x, lazy = true) => {
+  const alt = esc(x.c || 'Иллюстрация без подписи'), L = lazy ? ' loading="lazy"' : '';
+  if (!x.rx) return `<img src="${esc(x.t)}" width="${x.tw}" height="${x.th}"${L} decoding="async" alt="${alt}">`;
+  if (x.rx === 180) return `<img src="${esc(x.t)}" width="${x.tw}" height="${x.th}"${L} decoding="async" alt="${alt}" style="transform:rotate(180deg)">`;
+  return `<span class="rot" style="aspect-ratio:${x.th}/${x.tw}"><img src="${esc(x.t)}"${L} decoding="async" alt="${alt}" style="width:${(x.tw / x.th * 100).toFixed(2)}%;transform:translate(-50%,-50%) rotate(${x.rx}deg)"></span>`;
+};
 const toH = (id) => String(id).replace(/_/g, '-'); const fromH = (h) => h.replace(/-/g, '_');
 const NAT = {british: 'Великобритания', french: 'Франция/Бельгия', german: 'Германия/Австрия', scandinavian: 'Скандинавия', finnish: 'Финляндия', polish: 'Польша', italian: 'Италия', central_european: 'Центральная Европа', dutch: 'Нидерланды'};
 const PER = {'P1 до 1855': 'до 1855', 'P2 1856–1880': '1856–1880', 'P3 1881–1904': '1881–1904', 'P4 1905–1917': '1905–1917', 'P5 1918–1930': '1918–1930'};
@@ -38,6 +52,7 @@ async function route() {
     else if (h.startsWith('people-')) await people(fromH(h.slice(7)));
     else if (h === 'library') await library();
     else if (h.startsWith('book-')) { const m = h.slice(5).match(/^(.*?)(?:-p(\d+))?$/); await book(fromH(m[1]), m[2]); }
+    else if (h === 'illustrations' || h.startsWith('illustrations?')) await illustrations();
     else if (h === 'links') await links();
     else if (h.startsWith('analytics')) await analytics();
     else if (h === 'publications') await publications();
@@ -48,7 +63,7 @@ async function route() {
   } catch (e) { V.innerHTML = `<div class="wrap band"><h2>Не удалось загрузить данные</h2><p class="mute">${esc(e.message)}. Сайт читает файлы из папки data/; откройте его через веб-сервер (GitHub Pages или python -m http.server).</p></div>`; }
 }
 window.addEventListener('hashchange', route);
-const TITLES = {atlas: 'Атлас', peoples: 'Народы', people: 'Народы', library: 'Библиотека', book: 'Библиотека', links: 'Связи', analytics: 'Аналитика', publications: 'Публикации', method: 'Метод и данные'};
+const TITLES = {atlas: 'Атлас', peoples: 'Народы', people: 'Народы', library: 'Библиотека', book: 'Библиотека', illustrations: 'Иллюстрации', links: 'Связи', analytics: 'Аналитика', publications: 'Публикации', method: 'Метод и данные'};
 
 function mapIn(el, opts) {
   const draw = () => SibMap.draw(el, opts());
@@ -87,6 +102,7 @@ async function home() {
   V.innerHTML = `
   <section class="wrap intro">
     ${P.grant ? `<p class="ack">Ресурс подготовлен при поддержке гранта Российского научного фонда № ${esc(P.grant)}, <a href="${esc(P.grant_url)}">${esc(P.grant_url)}</a>, и Правительства Республики Алтай.</p>` : ''}
+    <div class="intro-grid"><div class="intro-text">
     <h1 class="name">Iter Sibiricum</h1>
     <p class="purpose">Цифровой ресурс о том, как европейские путешественники 1800–1930 годов описывали народы Сибири и отношения между ними: ${pl(works.length, ['книга', 'книги', 'книг'])} на ${langs} языках с полными текстами, маршруты на карте, карточки народов и проверяемые данные для исследований.</p>
     <div class="finder">
@@ -101,6 +117,8 @@ async function home() {
       <div><dt>упоминаний народов</dt><dd>${fmt(S.mentions_siberia)}</dd></div>
       <div><dt>групп и народов</dt><dd>${groups.length}</dd></div>
     </dl>
+    </div>
+    <figure class="plates" id="plates" hidden></figure></div>
   </section>
   <section class="wrap">
     <div class="doors">
@@ -161,8 +179,110 @@ async function home() {
   qi.addEventListener('keydown', (e) => { if (e.key === 'Enter') { const a = qr.querySelector('a'); if (a) location.hash = a.getAttribute('href'); } });
   document.getElementById('copyCite').addEventListener('click', async (e) => { try { await navigator.clipboard.writeText(document.getElementById('citeBox').textContent); e.target.textContent = 'Ссылка скопирована'; } catch (err) { e.target.textContent = 'Выделите текст и скопируйте вручную'; } });
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  heroPlates(works, reduce);
   let first = !reduce;
   mapIn(document.getElementById('homeMap'), () => { const o = {geo, routes, places, works, areas: ind, showPlaces: false, labels: false, zoom: false, showAuto: false, animate: first, routeWidth: 2, onWork: (w) => location.hash = 'book-' + toH(w), onGroup: (g) => location.hash = 'people-' + toH(g)}; first = false; return o; });
+}
+
+// ---------------- иллюстрации ----------------
+const KIND = {people: 'Люди', portrait: 'Портреты', view: 'Виды', map: 'Карты', nature: 'Природа', object: 'Предметы', other: 'Прочее'};
+const iaPage = (x) => `https://archive.org/details/${encodeURIComponent(x.ia)}/page/n${x.n}/mode/1up`;
+const illBy = (w, W) => W[w] ? `${W[w].author}, ${W[w].year}` : w;
+
+// Главная: сменяющиеся иллюстрации из книг корпуса справа от названия.
+async function heroPlates(works, reduce) {
+  const box = document.getElementById('plates'); if (!box) return;
+  let D; try { D = await getIll(); } catch (e) { return; }
+  const by = Object.fromEntries(D.items.map((x) => [x.id, x])), W = Object.fromEntries(works.map((w) => [w.id, w]));
+  const L = (D.hero || []).map((id) => by[id]).filter(Boolean); if (!L.length) return;
+  let i = Math.floor(Math.random() * L.length), timer = null;
+  box.hidden = false;
+  box.innerHTML = `<a class="pl-frame" id="plA" href="#illustrations" aria-live="polite"></a>
+    <figcaption><a id="plCap" href="#illustrations"></a><span id="plBy" class="mute"></span></figcaption>
+    <div class="pl-nav"><button type="button" data-d="-1" aria-label="Предыдущая иллюстрация">←</button><button type="button" data-d="1" aria-label="Следующая иллюстрация">→</button><a href="#illustrations">Все ${fmt(D.items.length)} иллюстраций</a></div>`;
+  const fr = box.querySelector('#plA'), cap = box.querySelector('#plCap'), byl = box.querySelector('#plBy');
+  const show = (k) => {
+    i = (k + L.length) % L.length; const x = L[i], h = '#illustrations?i=' + encodeURIComponent(x.id);
+    const im = new Image(); im.alt = x.c || 'Иллюстрация из книги ' + illBy(x.w, W); im.width = x.tw; im.height = x.th; im.decoding = 'async';
+    if (x.rx) im.style.transform = `rotate(${x.rx}deg)`;
+    im.onload = () => { fr.appendChild(im); requestAnimationFrame(() => im.classList.add('on')); [...fr.querySelectorAll('img')].slice(0, -1).forEach((o) => { o.classList.remove('on'); setTimeout(() => o.remove(), 1400); }); };
+    im.src = x.t; fr.href = h; cap.href = h; cap.textContent = x.c || 'Без подписи'; byl.textContent = (x.ru ? x.ru + ' · ' : '') + illBy(x.w, W);
+  };
+  const play = () => { if (reduce) return; clearInterval(timer); timer = setInterval(() => { if (!document.body.contains(box)) return clearInterval(timer); if (!document.hidden) show(i + 1); }, 7000); };
+  box.querySelectorAll('.pl-nav button').forEach((b) => b.addEventListener('click', () => { show(i + +b.dataset.d); play(); }));
+  box.addEventListener('mouseenter', () => clearInterval(timer)); box.addEventListener('mouseleave', play);
+  box.addEventListener('focusin', () => clearInterval(timer));
+  show(i); play();
+}
+
+async function illustrations() {
+  const [D, works, groups] = await Promise.all([getIll(), get('works.json'), get('groups.json')]);
+  const W = Object.fromEntries(works.map((w) => [w.id, w])), G = Object.fromEntries(groups.map((g) => [g.id, g]));
+  // сначала изображения с подписью (по году издания), затем без подписи
+  const I = [...D.items].sort((a, b) => (!a.c) - (!b.c)), nb = new Set(I.map((x) => x.w)).size;
+  const st = {k: '', w: '', g: '', per: '', q: ''}; let lim = 96, cur = [];
+  const cnt = (f) => I.filter(f).length;
+  const books = [...new Set(I.map((x) => x.w))].sort((a, b) => (W[a]?.year || 0) - (W[b]?.year || 0));
+  const gids = [...new Set(I.flatMap((x) => x.g))].filter((g) => G[g]).sort((a, b) => G[a].name.localeCompare(G[b].name, 'ru'));
+  const pers = [...new Set(books.map((w) => W[w]?.period).filter(Boolean))].sort();
+  V.innerHTML = `<section class="band"><div class="wrap ill-head">
+    <h1>Иллюстрации</h1>
+    <p class="lede">${pl(I.length, ['изображение', 'изображения', 'изображений'])} из ${pl(nb, ['книги', 'книг', 'книг'])} корпуса: гравюры, фотографии и карты, которыми путешественники сопровождали свои описания Сибири.</p>
+    <p class="small mute ill-note">Изображения найдены по сканам Internet Archive: программа отбирает страницы с графикой, вырезает её и поворачивает альбомные вклейки. Подписи — распознанный текст оригинала, в нём возможны ошибки; тип и народы определены по подписи. Каждое изображение ведёт на страницу скана и на абзац рядом с ним в библиотеке. Метод — в разделе <a href="#method">«Метод и данные»</a>.</p>
+    <div class="ill-filters" role="group" aria-label="Фильтры">
+      <div class="seg" id="fK"><button type="button" data-k="" class="on">Все <span>${fmt(I.length)}</span></button>${Object.entries(KIND).filter(([k]) => cnt((x) => x.k === k)).map(([k, t]) => `<button type="button" data-k="${k}">${t} <span>${fmt(cnt((x) => x.k === k))}</span></button>`).join('')}</div>
+      <label>Книга<select id="fW"><option value="">все книги</option>${books.map((w) => `<option value="${esc(w)}">${esc(W[w] ? W[w].author + ', ' + W[w].year : w)} (${cnt((x) => x.w === w)})</option>`).join('')}</select></label>
+      <label>Народ<select id="fG"><option value="">все</option>${gids.map((g) => `<option value="${esc(g)}">${esc(G[g].name)} (${cnt((x) => x.g.includes(g))})</option>`).join('')}</select></label>
+      <label>Период<select id="fP"><option value="">все</option>${pers.map((p) => `<option value="${esc(p)}">${esc(PER[p] || p)}</option>`).join('')}</select></label>
+      <label class="q">Подпись<input id="fQ" type="search" placeholder="Например, Yakut, tent, Irkutsk"></label>
+    </div>
+    <p class="small mute" id="fN" aria-live="polite"></p>
+  </div></section>
+  <section><div class="wrap"><div class="ill-grid" id="grid"></div><p class="more"><button type="button" id="more" hidden>Показать ещё</button></p></div></section>
+  <dialog class="ill-dlg" id="dlg" aria-label="Иллюстрация"></dialog>`;
+  const grid = document.getElementById('grid'), more = document.getElementById('more'), dlg = document.getElementById('dlg');
+  const card = (x) => `<figure class="ill"><a href="#illustrations?i=${encodeURIComponent(x.id)}" data-i="${esc(x.id)}">${illImg(x)}</a><figcaption><span class="c">${x.c ? esc(x.c) : '<span class="mute">без подписи</span>'}</span>${x.ru ? `<span class="ru">${esc(x.ru)}</span>` : ''}<span class="s">${esc(illBy(x.w, W))}</span></figcaption></figure>`;
+  const draw = () => {
+    const q = st.q.toLowerCase();
+    cur = I.filter((x) => (!st.k || x.k === st.k) && (!st.w || x.w === st.w) && (!st.g || x.g.includes(st.g)) && (!st.per || W[x.w]?.period === st.per) && (!q || ((x.c || '') + ' ' + (x.ru || '')).toLowerCase().includes(q)));
+    grid.innerHTML = cur.slice(0, lim).map(card).join('') || '<p class="mute">Под эти условия иллюстраций нет. Сбросьте один из фильтров.</p>';
+    more.hidden = cur.length <= lim;
+    document.getElementById('fN').textContent = cur.length === I.length ? '' : `Показано: ${pl(cur.length, ['изображение', 'изображения', 'изображений'])}`;
+  };
+  document.querySelectorAll('#fK button').forEach((b) => b.addEventListener('click', () => { st.k = b.dataset.k; document.querySelectorAll('#fK button').forEach((o) => o.classList.toggle('on', o === b)); lim = 96; draw(); }));
+  [['fW', 'w'], ['fG', 'g'], ['fP', 'per']].forEach(([id, k]) => document.getElementById(id).addEventListener('change', (e) => { st[k] = e.target.value; lim = 96; draw(); }));
+  let qt; document.getElementById('fQ').addEventListener('input', (e) => { clearTimeout(qt); qt = setTimeout(() => { st.q = e.target.value.trim(); lim = 96; draw(); }, 200); });
+  more.addEventListener('click', () => { lim += 96; draw(); });
+  const open = (id) => {
+    const k = cur.findIndex((x) => x.id === id), x = k >= 0 ? cur[k] : I.find((y) => y.id === id); if (!x) return;
+    const w = W[x.w];
+    dlg.innerHTML = `<div class="dlg-in">
+      <div class="dlg-img">${illImg(x, false)}</div>
+      <div class="dlg-meta">
+        <p class="dlg-cap">${x.c ? esc(x.c) : '<span class="mute">Подпись не распознана</span>'}</p>${x.ru ? `<p class="dlg-ru">${esc(x.ru)}</p>` : ''}
+        <dl>
+          <dt>Книга</dt><dd><a href="#book-${toH(x.w)}">${esc(w ? w.author : x.w)}</a>${w ? `, ${w.year}` : ''}</dd>
+          <dt>Тип</dt><dd>${KIND[x.k] || x.k}${x.r || x.rx ? ', альбомная вклейка (повёрнута)' : ''}</dd>
+          <dt>Проверка</dt><dd>${x.ok ? 'подпись и тип проверены экспертом' : 'автоматически, не проверено'}</dd>
+          ${x.g.length ? `<dt>Народы</dt><dd>${x.g.filter((g) => G[g]).map((g) => `<a href="#people-${toH(g)}">${esc(G[g].name)}</a>`).join(', ')}</dd>` : ''}
+          ${x.f ? `<dt>В книге</dt><dd>к странице ${esc(x.f)}</dd>` : ''}
+        </dl>
+        <p class="dlg-links">${x.p ? `<a href="#book-${toH(x.w)}-p${esc(x.p)}">Текст рядом с иллюстрацией</a>` : ''}<a href="${iaPage(x)}" target="_blank" rel="noopener">Страница скана в Internet Archive</a></p>
+        <p class="small mute">Изображение из книги, перешедшей в общественное достояние; скан — Internet Archive.</p>
+      </div>
+      <div class="dlg-nav">${k >= 0 ? `<button type="button" data-d="-1" aria-label="Предыдущая" ${k ? '' : 'disabled'}>←</button><span class="small mute">${fmt(k + 1)} из ${fmt(cur.length)}</span><button type="button" data-d="1" aria-label="Следующая" ${k < cur.length - 1 ? '' : 'disabled'}>→</button>` : ''}<button type="button" class="x" aria-label="Закрыть">Закрыть</button></div>
+    </div>`;
+    dlg.querySelectorAll('[data-d]').forEach((b) => b.addEventListener('click', () => open(cur[k + +b.dataset.d].id)));
+    dlg.querySelector('.x').addEventListener('click', () => dlg.close());
+    history.replaceState(null, '', '#illustrations?i=' + encodeURIComponent(x.id));
+    if (!dlg.open) dlg.showModal();
+  };
+  dlg.addEventListener('close', () => history.replaceState(null, '', '#illustrations'));
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const b = dlg.querySelector(`[data-d="${e.key === 'ArrowRight' ? 1 : -1}"]`); if (b && !b.disabled) b.click(); } });
+  grid.addEventListener('click', (e) => { const a = e.target.closest('a[data-i]'); if (!a || e.metaKey || e.ctrlKey) return; e.preventDefault(); open(a.dataset.i); });
+  draw();
+  const m = location.hash.match(/[?&]i=([^&]+)/); if (m) open(decodeURIComponent(m[1]));
 }
 
 // ---------------- атлас ----------------
@@ -531,6 +651,7 @@ async function method() {
     ['Подготовка текстов', 'цифровая обработка с выборочным контролем', 'Очистка распознанного текста от колонтитулов, номеров страниц, переносов, подписей к иллюстрациям и служебных страниц; деление на главы и абзацы. Каждый абзац получил постоянный номер, по которому на него можно сослаться.'],
     ['Названия народов и мест', 'экспертная работа и цифровая обработка', 'Словарь этнонимов на 10 языках составлен и выверен вручную: исторические и иноязычные формы (Ostiaken, Tongouses, Bratski) сведены к современным названиям народов, неоднозначные случаи разобраны по контексту. Справочник из 101 места с координатами. Поиск по всем текстам выполнялся программно.'],
     ['Маршруты', 'экспертная работа и цифровая обработка', 'Программа готовит черновик маршрута: места, о которых автор пишет как о посещённых, с абзацами-доказательствами. Затем каждая книга прочитывается: остаются только места, где автор действительно был, в порядке поездки, с дословной цитатой; цитаты и номера абзацев сверяются с текстом автоматически. Эксперты проекта подтверждают маршруты в рабочем месте команды; на карте видно, какие маршруты уже подтверждены.'],
+    ['Иллюстрации', 'цифровая обработка с проверкой', 'По сканам Internet Archive программа отбирает страницы с графикой: по разметке распознанного текста ищет вклейки и просветы в наборе, по изображению страницы — связную графическую область. Альбомные вклейки поворачиваются: выбирается ориентация, при которой подпись читается увереннее. Подпись — строки под изображением; иллюстрация привязывается к абзацу библиотеки по совпадению текста соседних страниц. Подписи проверяются и переводятся, тип и названные народы уточняются; правки вносятся в рабочем месте. Скрипты 08a_illustrations.py и 08b_illustrations_site.py.'],
     ['Экспертная разметка', 'экспертная работа', 'Стратифицированная выборка по стране автора и эпохе: 250 описаний коренных народов и 100 фрагментов об отношениях между группами. Для каждого фрагмента определены оценка, рамка описания (иерархия «цивилизованности», хозяйство, контакт и т. д.), источник знания (личное наблюдение или пересказ) и тип отношения. Все выводы об оценках и отношениях на сайте построены на этой разметке.'],
     ['Корпусный анализ', 'цифровая обработка', 'Частоты по десятилетиям, коллокации, дискурсы, тематическое моделирование, сети совместных упоминаний и цитирования, поиск текстовых заимствований, статистические модели с учётом того, что фрагменты одной книги не независимы.'],
     ['Интерпретация', 'экспертная работа', 'Каждая закономерность проверялась чтением исходных фрагментов; любая цифра на сайте ведёт к абзацам, на которых она основана.']];

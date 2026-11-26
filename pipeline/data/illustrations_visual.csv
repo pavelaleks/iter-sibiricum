@@ -1,0 +1,3133 @@
+ill_id,verdict,kind,hero,note
+kotzebue1802-0005,ok,portrait,,
+kotzebue1802-0239,ok,people,,
+kotzebue1802-0789,reject,,,форзац
+kotzebue1802-0790,reject,,,форзац со штампом
+cochrane1829-v1-0005,ok,portrait,,
+cochrane1829-v1-0006,ok,view,,
+cochrane1829-v1-0085,reject,,,текст размыт
+cochrane1829-v1-0235,ok,object,,схема
+cochrane1829-v1-0338,ok,object,,схема
+cochrane1829-v1-0340,ok,object,,схема
+cochrane1829-v1-0367,reject,,,пустая
+cochrane1829-v2-0007,ok,portrait,,
+cochrane1829-v2-0008,ok,view,,
+holman1825-v1-0005,ok,portrait,,
+holman1825-v1-0064,rot_cw,people,,
+holman1825-v1-0143,ok,people,,
+holman1825-v1-0215,reject,,,текст
+holman1825-v1-0217,rot_cw,people,,
+holman1825-v1-0354,rot_cw,people,,
+holman1825-v2-0000,reject,,,корешок
+holman1825-v2-0160,reject,,,текст
+holman1825-v2-0379,reject,,,таблица
+holman1825-v2-0380,reject,,,таблица
+dobell1830-v1-0082,ok,object,,нотная запись
+dobell1830-v2-0002,ok,people,1,
+erman1833-v1-0775,reject,,,библиотечный листок
+erman1833-v2-0000,reject,,,заглушка image
+erman1833-v2-0229,reject,,,руки/калибровка
+erman1833-v2-0244,ok,view,,"плохой скан, перфорированный штамп"
+erman1833-v2-0249,reject,,,руки/калибровка
+erman1833-v2-0396,rot_cw,view,,
+cottrell1842-0003,ok,map,,бледная
+cottrell1842-0017,reject,,,чёрное
+hill1854-v1-0358,reject,,,таблица погоды
+hill1854-v1-0466,ok,map,,серый скан
+hill1854-v1-0467,ok,map,,серый скан
+hansteen1857-0449,ok,map,,фрагмент маршрута
+hansteen1857-0457,reject,,,рамка
+castren1856-0010,reject,,,титул
+castren1856-0544,ok,portrait,,
+castren1856-0555,reject,,,библиотечный листок
+atkinson1858-0034,ok,view,,
+atkinson1858-0037,ok,view,,
+atkinson1858-0042,ok,view,,
+atkinson1858-0053,ok,view,,
+atkinson1858-0055,ok,view,,
+atkinson1858-0061,ok,view,,
+atkinson1858-0085,ok,people,,
+atkinson1858-0097,ok,view,,
+atkinson1858-0112,ok,view,,
+atkinson1858-0211,ok,view,,
+atkinson1858-0247,ok,view,,
+atkinson1858-0269,ok,people,,
+atkinson1858-0302,ok,people,,
+atkinson1858-0319,rot_cw,people,,"поворот по сюжету, не вполне уверен"
+atkinson1858-0329,ok,people,,
+atkinson1858-0335,ok,people,1,
+atkinson1858-0389,rot_cw,view,,
+atkinson1858-0400,ok,people,,
+atkinson1858-0411,ok,portrait,,
+atkinson1858-0437,ok,people,,
+atkinson1858-0477,rot_cw,view,,
+atkinson1858-0503,ok,view,,
+atkinson1858-0558,ok,view,,
+atkinson1858-0575,ok,view,,
+atkinson1858-0594,rot_cw,view,,
+atkinson1858-0604,rot_cw,view,,
+atkinson1858-0606,ok,portrait,,
+atkinson1858-0608,ok,people,,
+atkinson1858-0612,rot_cw,view,,
+atkinson1858-0627,ok,view,,
+atkinson1858-0630,ok,view,,
+atkinson1858-0652,rot_cw,view,,
+atkinson1860-0008,rot_ccw,view,,
+atkinson1860-0024,ok,view,,
+atkinson1860-0028,ok,view,,
+atkinson1860-0034,ok,view,,
+atkinson1860-0038,ok,view,,
+atkinson1860-0043,ok,view,,
+atkinson1860-0048,ok,people,1,
+atkinson1860-0051,ok,view,,
+atkinson1860-0060,ok,view,,
+atkinson1860-0066,ok,people,,
+atkinson1860-0074,ok,view,,почти одно небо
+atkinson1860-0082,ok,people,,
+atkinson1860-0085,ok,people,,
+atkinson1860-0092,ok,people,,
+atkinson1860-0096,ok,view,,
+atkinson1860-0102,ok,view,,
+atkinson1860-0108,ok,view,,
+atkinson1860-0112,ok,view,,
+atkinson1860-0117,ok,view,,
+atkinson1860-0122,ok,nature,1,
+atkinson1860-0130,ok,view,,
+atkinson1860-0133,ok,view,,
+atkinson1860-0135,ok,nature,,
+atkinson1860-0141,ok,view,,
+atkinson1860-0148,ok,view,,
+atkinson1860-0153,ok,view,,
+atkinson1860-0162,ok,view,,
+atkinson1860-0168,ok,nature,,
+atkinson1860-0172,ok,view,,
+atkinson1860-0178,ok,view,,
+atkinson1860-0186,ok,people,,
+atkinson1860-0194,ok,people,1,
+atkinson1860-0200,ok,view,,
+atkinson1860-0207,ok,view,,
+atkinson1860-0214,ok,view,,
+atkinson1860-0220,ok,view,,
+atkinson1860-0227,ok,view,,
+atkinson1860-0235,ok,view,,
+atkinson1860-0240,ok,view,,
+atkinson1860-0247,ok,view,,
+atkinson1860-0251,ok,view,,
+atkinson1860-0257,ok,view,,
+atkinson1860-0268,ok,view,,
+atkinson1860-0272,ok,view,,
+atkinson1860-0279,ok,view,,
+atkinson1860-0287,ok,view,,
+atkinson1860-0299,ok,view,,
+atkinson1860-0305,ok,view,,
+atkinson1860-0316,ok,view,,
+atkinson1860-0325,ok,view,,
+atkinson1860-0331,ok,people,,
+atkinson1860-0335,ok,people,,
+atkinson1860-0344,ok,view,,
+atkinson1860-0355,ok,view,,
+atkinson1860-0362,ok,view,,
+atkinson1860-0365,ok,people,1,
+atkinson1860-0368,ok,nature,,
+atkinson1860-0373,ok,people,,
+atkinson1860-0378,ok,view,,
+atkinson1860-0384,ok,people,,
+atkinson1860-0391,ok,view,,
+atkinson1860-0394,ok,view,,
+atkinson1860-0399,ok,view,,
+atkinson1860-0403,ok,view,,
+atkinson1860-0407,ok,view,,
+atkinson1860-0411,ok,view,,
+atkinson1860-0418,ok,view,,
+atkinson1860-0426,ok,view,,
+atkinson1860-0433,ok,portrait,1,
+atkinson1860-0444,ok,people,,
+atkinson1860-0451,ok,portrait,,
+atkinson1860-0454,ok,portrait,,
+atkinson1860-0459,ok,view,,
+atkinson1860-0469,ok,people,,
+atkinson1860-0475,ok,portrait,,
+atkinson1860-0483,ok,portrait,,
+atkinson1860-0492,ok,portrait,,
+atkinson1860-0496,ok,view,,
+atkinson1860-0502,ok,people,,
+atkinson1860-0505,ok,people,,
+atkinson1860-0511,ok,people,,
+atkinson1860-0513,ok,people,,
+atkinson1860-0520,ok,nature,,
+latkinson1863-0215,ok,view,,
+latkinson1863-0222,ok,people,,
+latkinson1863-0231,ok,people,1,
+latkinson1863-0371,ok,view,,
+tronson1859-0005,rot_cw,view,,
+tronson1859-0148,ok,map,,узкий обрезок карты (заголовок)
+tronson1859-0176,ok,view,,
+tronson1859-0302,ok,map,,
+tronson1859-0319,rot_cw,view,,"узкая панорама; поворот по сюжету, не вполне уверен"
+tronson1859-0382,ok,object,,монеты
+tronson1859-0403,ok,map,,
+tronson1859-0407,ok,view,,
+tronson1859-0425,rot_cw,view,,
+tronson1859-0434,rot_cw,view,,"узкий профиль берега; поворот по сюжету, не вполне уверен"
+whittingham1856-0011,ok,map,,
+maynard1859-0326,reject,,,библиотечная наклейка
+whyte1871-0007,ok,people,,
+whyte1871-0021,ok,map,,
+whyte1871-0240,ok,map,,
+whyte1871-0241,ok,map,,
+meignan1877-0002,reject,,,мраморный форзац
+meignan1877-0006,ok,object,,факсимиле подписи
+meignan1877-0054,ok,people,,
+meignan1877-0065,ok,view,,
+meignan1877-0066,ok,view,,
+meignan1877-0085,rot_ccw,people,,"поворот по сюжету, не вполне уверен"
+meignan1877-0102,ok,portrait,,
+meignan1877-0115,ok,people,,
+meignan1877-0165,ok,view,,
+meignan1877-0194,ok,view,,
+meignan1877-0238,ok,people,1,
+meignan1877-0280,ok,people,1,
+meignan1877-0297,ok,view,,
+meignan1877-0344,ok,view,,
+meignan1877-0358,ok,portrait,,
+meignan1877-0368,ok,people,,
+meignan1877-0386,ok,view,,верблюд с повозкой
+meignan1877-0419,ok,view,,
+kittlitz1858-0002,reject,,,пустая со штампом
+kittlitz1858-0004,reject,,,пятна
+kittlitz1858-0028,reject,,,страница текста с рисунком рыб
+kittlitz1858-0040,reject,,,текст
+kittlitz1858-0092,reject,,,стрелка
+kittlitz1858-0098,reject,,,страница текста с рисунком лодки
+kittlitz1858-0106,ok,view,,очень тёмная бинаризация
+kittlitz1858-0114,reject,,,текст
+kittlitz1858-0157,reject,,,текст
+kittlitz1858-0189,reject,,,стрелка
+kittlitz1858-0190,reject,,,тест-таблица
+kittlitz1858-0204,reject,,,текст
+kittlitz1858-0244,reject,,,текст
+kittlitz1858-0282,reject,,,текст
+kittlitz1858-0286,reject,,,стрелка
+kittlitz1858-0287,reject,,,тест-таблица
+kittlitz1858-0317,reject,,,текст
+kittlitz1858-0365,reject,,,текст
+kittlitz1858-0373,reject,,,текст с маленькой иллюстрацией
+kittlitz1858-0381,reject,,,пустая
+kittlitz1858-0383,reject,,,стрелка
+kittlitz1858-0384,reject,,,тест-таблица
+kittlitz1858-0385,reject,,,обрезок
+kittlitz1858-0426,reject,,,текст
+kittlitz1858-0428,ok,view,,"бинаризация, обрезана строка текста"
+kittlitz1858-0454,reject,,,текст
+kittlitz1858-0480,reject,,,стрелка
+kittlitz1858-0481,reject,,,тест-таблица
+kittlitz1858-0482,reject,,,пустая
+kittlitz1858-0483,reject,,,текст
+kittlitz1858-0487,reject,,,пустая
+kittlitz1858-0489,reject,,,уголок/стрелка
+joest1883-0008,ok,view,,
+joest1883-0049,ok,people,,
+joest1883-0133,ok,portrait,,
+joest1883-0297,ok,portrait,,
+joest1883-0349,ok,people,,
+lansdell1883-0005,ok,view,,
+lansdell1883-0030,ok,map,,
+lansdell1883-0044,ok,view,,
+lansdell1883-0089,ok,people,1,
+lansdell1883-0119,ok,portrait,,
+lansdell1883-0133,ok,portrait,,
+lansdell1883-0134,ok,people,1,
+lansdell1883-0137,ok,portrait,,
+lansdell1883-0154,ok,view,,судно
+lansdell1883-0161,ok,people,,
+lansdell1883-0162,ok,people,1,
+lansdell1883-0171,ok,people,,
+lansdell1883-0192,ok,portrait,,
+lansdell1883-0215,ok,portrait,,
+lansdell1883-0243,ok,people,,
+lansdell1883-0245,ok,portrait,,
+lansdell1883-0283,ok,view,,
+lansdell1883-0302,ok,view,,
+lansdell1883-0345,ok,people,,
+lansdell1883-0377,ok,view,,
+lansdell1883-0410,ok,portrait,,
+lansdell1883-0417,ok,people,1,
+lansdell1883-0504,ok,portrait,,
+lansdell1883-0506,ok,view,,
+lansdell1883-0557,ok,people,1,
+lansdell1883-0577,ok,view,,
+lansdell1883-0586,ok,portrait,,
+lansdell1883-0618,ok,nature,,
+lansdell1883-0622,ok,portrait,,
+lansdell1883-0639,ok,portrait,,
+lansdell1883-0651,ok,portrait,,
+lansdell1883-0670,rot_cw,view,,
+lansdell1883-0678,ok,portrait,,
+lansdell1883-0707,ok,view,,
+lansdell1883-0730,ok,people,,
+lansdell1883-0753,ok,people,,
+seebohm1882-0022,ok,portrait,,
+seebohm1882-0027,ok,people,,
+seebohm1882-0032,ok,view,,
+seebohm1882-0043,ok,object,,
+seebohm1882-0044,ok,view,,
+seebohm1882-0052,ok,view,,
+seebohm1882-0060,ok,object,,
+seebohm1882-0061,ok,view,,
+seebohm1882-0073,ok,object,,
+seebohm1882-0074,ok,people,1,
+seebohm1882-0077,ok,object,,
+seebohm1882-0081,ok,object,,
+seebohm1882-0082,ok,view,,
+seebohm1882-0087,ok,object,,
+seebohm1882-0088,ok,view,,
+seebohm1882-0096,ok,view,,
+seebohm1882-0106,ok,object,,
+seebohm1882-0107,ok,view,,
+seebohm1882-0122,ok,object,,
+seebohm1882-0123,ok,nature,,
+seebohm1882-0130,ok,object,,
+seebohm1882-0132,ok,object,,
+seebohm1882-0133,ok,portrait,,
+seebohm1882-0144,ok,object,,
+seebohm1882-0145,ok,view,,
+seebohm1882-0162,ok,object,,икона
+seebohm1882-0163,ok,people,,
+seebohm1882-0171,ok,view,,
+seebohm1882-0179,ok,people,,
+seebohm1882-0188,ok,object,,зуб мамонта
+seebohm1882-0189,ok,people,1,
+seebohm1882-0201,ok,view,,
+seebohm1882-0202,ok,view,,
+seebohm1882-0208,ok,object,,раковины
+seebohm1882-0211,ok,object,,
+seebohm1882-0212,ok,view,,
+seebohm1882-0228,ok,view,,
+seebohm1882-0234,ok,object,,
+seebohm1882-0242,ok,object,,
+seebohm1882-0243,ok,view,,
+seebohm1882-0261,ok,object,,шаманский идол
+seebohm1882-0262,ok,view,,
+seebohm1882-0267,ok,object,,
+seebohm1882-0275,ok,object,,
+seebohm1882-0276,ok,view,,
+seebohm1882-0288,ok,object,,
+seebohm1882-0289,ok,view,,
+seebohm1882-0297,ok,object,,
+seebohm1882-0298,ok,portrait,,
+seebohm1882-0308,ok,object,,
+seebohm1882-0309,ok,nature,,с началом главы
+seebohm1882-0319,ok,object,,икона
+seebohm1882-0320,ok,map,,
+cotteau1885-0018,ok,view,,
+cotteau1885-0030,ok,view,,
+cotteau1885-0042,ok,view,,
+cotteau1885-0046,ok,view,,
+cotteau1885-0056,rot_cw,people,,
+cotteau1885-0060,rot_cw,view,,
+cotteau1885-0070,ok,view,,
+cotteau1885-0096,rot_cw,view,,
+cotteau1885-0134,rot_cw,view,,
+cotteau1885-0158,rot_cw,people,,
+cotteau1885-0190,ok,view,,
+cotteau1885-0197,ok,object,,
+cotteau1885-0208,ok,view,,
+cotteau1885-0212,ok,view,,
+cotteau1885-0220,ok,view,,
+cotteau1885-0225,ok,people,,
+cotteau1885-0234,ok,view,,
+cotteau1885-0258,rot_cw,view,,
+cotteau1885-0264,ok,view,,
+cotteau1885-0280,ok,people,1,
+cotteau1885-0312,rot_cw,view,,
+cotteau1885-0343,ok,map,,
+cotteau1885-0346,rot_cw,view,,
+cotteau1885-0352,ok,people,,
+cotteau1885-0358,ok,nature,,
+cotteau1885-0362,ok,view,,
+cotteau1885-0382,ok,people,,
+cotteau1885-0400,ok,map,,
+cotteau1885-0430,ok,people,,Корея
+cotteau1885-0438,ok,view,,
+gowing1889-0286,reject,,,реклама издателя
+guillemard1889-0008,ok,map,,
+guillemard1889-0028,ok,map,,"Формоза, не Сибирь"
+guillemard1889-0086,ok,map,,
+guillemard1889-0193,ok,map,,
+guillemard1889-0215,reject,,,таблица
+guillemard1889-0223,ok,people,,белое пятно в центре
+guillemard1889-0229,ok,map,,не Сибирь
+guillemard1889-0236,ok,map,,"почти пустая карта, не Сибирь"
+guillemard1889-0337,ok,object,,
+guillemard1889-0344,ok,map,,"Сумбава, не Сибирь"
+guillemard1889-0351,ok,object,,"крис, не Сибирь"
+guillemard1889-0374,ok,map,,не Сибирь
+guillemard1889-0417,ok,map,,не Сибирь
+guillemard1889-0447,ok,map,,не Сибирь
+guillemard1889-0451,ok,map,,"обрезок карты, не Сибирь"
+guillemard1889-0458,ok,object,,
+radloff1893-0293,ok,object,,план юрты алтайцев
+radloff1893-0317,ok,object,,
+radloff1893-0503,ok,map,,план оросительной системы
+radloff1893-0505,ok,object,,профиль местности
+boulangier1891-0003,reject,,,обложка
+boulangier1891-0005,reject,,,обрезок края страницы
+boulangier1891-0013,rot_cw,map,,
+boulangier1891-0028,rot_cw,view,,
+boulangier1891-0030,rot_cw,view,,"узкий вид; поворот по сюжету, не вполне уверен"
+boulangier1891-0044,ok,view,,
+boulangier1891-0046,ok,view,,
+boulangier1891-0049,ok,view,,
+boulangier1891-0050,rot_cw,view,,
+boulangier1891-0052,ok,view,,
+boulangier1891-0058,rot_cw,view,,
+boulangier1891-0060,ok,view,,
+boulangier1891-0063,ok,view,,
+boulangier1891-0064,ok,view,,
+boulangier1891-0066,rot_cw,people,,
+boulangier1891-0071,ok,view,,
+boulangier1891-0078,ok,view,,
+boulangier1891-0080,ok,portrait,,
+boulangier1891-0081,ok,portrait,,
+boulangier1891-0083,ok,people,,
+boulangier1891-0084,reject,,,таблица
+boulangier1891-0086,ok,people,,
+boulangier1891-0090,ok,view,,
+boulangier1891-0104,ok,people,,
+boulangier1891-0107,ok,view,,
+boulangier1891-0108,ok,view,,
+boulangier1891-0110,ok,view,,
+boulangier1891-0113,ok,view,,
+boulangier1891-0116,ok,people,,
+boulangier1891-0128,ok,view,,
+boulangier1891-0142,ok,view,,
+boulangier1891-0148,ok,nature,,
+boulangier1891-0151,ok,people,,
+boulangier1891-0152,ok,view,,
+boulangier1891-0156,ok,view,,
+boulangier1891-0168,ok,people,,
+boulangier1891-0172,ok,view,,
+boulangier1891-0174,ok,view,,
+boulangier1891-0178,ok,view,,
+boulangier1891-0183,ok,portrait,1,
+boulangier1891-0184,ok,view,,
+boulangier1891-0187,ok,view,,
+boulangier1891-0188,ok,view,,
+boulangier1891-0189,ok,view,,
+boulangier1891-0190,rot_cw,view,,
+boulangier1891-0198,ok,view,,
+boulangier1891-0200,ok,view,,
+boulangier1891-0208,ok,portrait,,
+boulangier1891-0216,ok,people,1,
+boulangier1891-0219,ok,view,,
+boulangier1891-0222,ok,people,1,
+boulangier1891-0224,ok,people,,
+boulangier1891-0234,ok,people,,
+boulangier1891-0254,ok,view,,
+boulangier1891-0256,ok,view,,
+boulangier1891-0257,ok,object,,схемы
+boulangier1891-0264,rot_cw,people,,
+boulangier1891-0298,ok,view,,
+boulangier1891-0302,ok,view,,
+boulangier1891-0304,ok,people,,
+boulangier1891-0308,ok,view,,
+boulangier1891-0312,ok,view,,
+boulangier1891-0342,ok,view,,
+boulangier1891-0348,reject,,,таблица
+boulangier1891-0350,ok,view,,
+boulangier1891-0352,ok,view,,
+boulangier1891-0359,ok,portrait,,
+boulangier1891-0360,ok,portrait,,
+boulangier1891-0384,ok,view,,
+boulangier1891-0386,rot_cw,view,,два вида на одном листе
+boulangier1891-0400,rot_cw,people,,"поворот по сюжету, не вполне уверен"
+boulangier1891-0402,ok,portrait,,
+boulangier1891-0403,ok,people,,
+boulangier1891-0406,ok,portrait,,
+boulangier1891-0408,ok,people,,
+boulangier1891-0418,ok,map,,
+dewindt1892-0005,ok,people,,
+dewindt1892-0045,ok,portrait,,
+dewindt1892-0072,ok,view,,
+dewindt1892-0119,rot_cw,view,,"harbour with ships, sideways"
+dewindt1892-0146,rot_cw,view,,"Ekaterinburg panorama, sideways"
+dewindt1892-0166,ok,portrait,1,woman with beads
+dewindt1892-0167,ok,view,,
+dewindt1892-0172,ok,view,,carriage with horses
+dewindt1892-0192,rot_cw,view,,"town on river bank, sideways"
+dewindt1892-0214,ok,portrait,,officer
+dewindt1892-0220,ok,people,,exile barge
+dewindt1892-0225,ok,portrait,,
+dewindt1892-0229,ok,portrait,,
+dewindt1892-0233,ok,portrait,,
+dewindt1892-0236,ok,people,,
+dewindt1892-0259,ok,view,,
+dewindt1892-0266,ok,portrait,,
+dewindt1892-0269,ok,portrait,,
+dewindt1892-0277,ok,portrait,,
+dewindt1892-0278,ok,view,,sailing boat
+dewindt1892-0281,ok,view,,steamer with barge
+dewindt1892-0334,ok,portrait,,soldier full figure
+dewindt1892-0342,ok,people,1,exile party on the road
+dewindt1892-0377,ok,people,,"political prisoner's cell, Tomsk"
+dewindt1892-0380,ok,view,,
+dewindt1892-0406,ok,view,,Tomsk lower town
+dewindt1892-0416,ok,people,,
+dewindt1892-0431,ok,view,,
+dewindt1892-0438,ok,people,1,prison interior scene
+dewindt1892-0449,ok,view,,
+dewindt1896-0004,reject,,,library stamp and shelfmark
+dewindt1896-0007,ok,portrait,,"author portrait with signature, library stamp"
+dewindt1896-0008,reject,,,bookplate Customs Club Library
+dewindt1896-0019,ok,map,,route map Far East / Sea of Japan
+dewindt1896-0030,ok,view,,town square with horses
+dewindt1896-0036,ok,people,,convicts behind bars
+dewindt1896-0040,ok,portrait,,convict photo
+dewindt1896-0042,ok,portrait,,convict photo
+dewindt1896-0044,ok,portrait,,convict photo
+dewindt1896-0046,ok,portrait,,convict photo
+dewindt1896-0070,ok,view,,dog sledge on snow
+dewindt1896-0108,ok,view,,village street
+dewindt1896-0112,ok,object,,fetters and whip
+dewindt1896-0118,ok,portrait,,chained convict with wheelbarrow
+dewindt1896-0134,ok,people,,native group photo
+dewindt1896-0150,ok,portrait,,woman seated by log house
+dewindt1896-0188,ok,view,,
+dewindt1896-0224,rot_cw,view,,"street with church, sideways"
+dewindt1896-0274,ok,view,,
+dewindt1896-0296,ok,portrait,,officer reading
+dewindt1896-0308,ok,people,1,group of natives seated
+dewindt1896-0316,ok,view,,
+dewindt1896-0324,ok,map,,plan of prison cells on SS Yaroslav
+dewindt1896-0326,ok,map,,plan of prison yard
+peel1894-0007,ok,portrait,,author portrait Nellie Peel with signature
+peel1894-0025,ok,map,,sea route to Siberia
+peel1894-0034,ok,view,,steamer/ship
+peel1894-0044,ok,people,,street with natives
+peel1894-0050,ok,people,1,natives at turf hut
+peel1894-0058,ok,people,,two natives in fur clothes
+peel1894-0064,ok,nature,,whale carcass on shore
+peel1894-0082,ok,people,1,tents (chums) and people with reindeer
+peel1894-0090,rot_cw,view,,ice blocks; orientation uncertain
+peel1894-0112,ok,view,1,reindeer sledge on snow
+peel1894-0134,ok,portrait,,
+peel1894-0156,ok,view,,town across river
+peel1894-0170,ok,view,,"coast/iceberg silhouette, low contrast"
+peel1894-0182,ok,people,,man and dog on ship deck
+peel1894-0197,ok,portrait,,
+peel1894-0204,ok,view,,town with cathedral
+peel1894-0220,ok,map,,route of Great Siberian Railway
+peel1894-0241,ok,portrait,,
+peel1894-0270,ok,object,,decorative emblem with motto
+peel1894-0274,ok,object,,decorative headpiece with figures
+peel1894-0297,ok,object,,tailpiece 'The End' with figures
+peel1894-0303,reject,,,library circulation slip
+jefferson1896-0001,reject,,,book spine/binding
+jefferson1896-0005,reject,,,advertisement Elliman's
+jefferson1896-0006,reject,,,advertisement cartoon (cyclists)
+jefferson1896-0008,reject,,,advertisement bicycle patent
+jefferson1896-0013,reject,,,advertisement Brooks saddle
+jefferson1896-0015,ok,object,,facsimile handwritten letter (Jefferson)
+jefferson1896-0016,reject,,,title page
+jefferson1896-0017,reject,,,advertisement Crescent cycles
+jefferson1896-0019,ok,portrait,,
+jefferson1896-0026,ok,people,,cyclists group
+jefferson1896-0027,ok,view,,European city boulevard
+jefferson1896-0028,ok,people,,group photo
+jefferson1896-0030,ok,people,,cyclists at border post
+jefferson1896-0031,ok,people,,two cyclists
+jefferson1896-0032,ok,view,,city street
+jefferson1896-0035,ok,view,,road with trees
+jefferson1896-0039,ok,view,,monument obelisk
+jefferson1896-0041,reject,,,text page
+jefferson1896-0044,reject,,,text page
+jefferson1896-0046,ok,view,,"river crossing, faded"
+jefferson1896-0048,ok,view,,village by pond
+jefferson1896-0049,ok,view,,large building
+jefferson1896-0050,ok,portrait,,man in fur hat
+jefferson1896-0054,ok,view,,yurt
+jefferson1896-0055,ok,people,,men with cart wheels
+jefferson1896-0057,ok,object,,yurt interior
+jefferson1896-0059,ok,people,,group seated before carpets
+jefferson1896-0060,ok,view,,town street with crowd
+jefferson1896-0061,ok,view,,
+jefferson1896-0062,reject,,,text page
+jefferson1896-0064,ok,people,,cyclists
+jefferson1896-0066,ok,people,,cyclists group
+jefferson1896-0067,reject,,,text page
+jefferson1896-0069,ok,view,,river valley on road
+jefferson1896-0070,ok,people,,crowd before house
+jefferson1896-0071,ok,view,,town with bridge
+jefferson1896-0073,ok,view,,town street
+jefferson1896-0074,ok,people,,crowd at palisade (prison?)
+jefferson1896-0075,ok,view,,church
+jefferson1896-0076,ok,view,,shop front N. Yakovleva
+jefferson1896-0078,ok,view,,Irkutsk riverside
+jefferson1896-0081,reject,,,advertisement Venus de Milo bicycle
+jefferson1896-0083,reject,,,advertisement
+jefferson1896-0084,reject,,,advertisement
+jefferson1896-0087,reject,,,library pocket
+jefferson1897-0007,ok,portrait,,person in fur coat
+jefferson1897-0017,ok,map,,route map across Siberia
+jefferson1897-0026,ok,view,,locomotive and train
+jefferson1897-0036,ok,people,,peasants/emigrants at station
+jefferson1897-0062,ok,view,,church in town
+jefferson1897-0088,ok,people,,street scene with cart
+jefferson1897-0106,ok,view,,
+jefferson1897-0140,ok,view,,town over river
+jefferson1897-0166,ok,view,,river gorge with boat
+jefferson1897-0192,rot_cw,view,,"lake/river with boat, sideways"
+jefferson1897-0202,ok,view,,town main street
+jefferson1897-0212,ok,view,,village in valley
+jefferson1897-0230,ok,view,,mine works
+jefferson1897-0248,ok,people,,gold washing
+jefferson1897-0266,ok,view,,log houses
+jefferson1897-0284,ok,view,,mountain landscape
+finsch1879-0010,ok,people,,post station yard with horses and sledge
+finsch1879-0083,ok,view,,tarantass from behind
+finsch1879-0093,rot_cw,people,,"rider at gallop, sideways"
+finsch1879-0109,rot_cw,people,,"nomads with cattle, sideways"
+finsch1879-0117,ok,people,,camel cart
+finsch1879-0131,rot_cw,people,,"caravan of riders, sideways"
+finsch1879-0137,rot_cw,people,,"nomad camp with camels, sideways"
+finsch1879-0143,rot_cw,nature,,"wild sheep in mountains, sideways"
+finsch1879-0156,ok,view,,adobe buildings
+finsch1879-0187,ok,portrait,1,"Asian man, engraving"
+finsch1879-0201,ok,people,,two Kirghiz women in headdress
+finsch1879-0211,rot_cw,view,,"mountain village, sideways"
+finsch1879-0227,ok,view,,mausoleum in steppe
+finsch1879-0237,ok,people,,catching a horse
+finsch1879-0284,rot_cw,nature,,"horses, sideways"
+finsch1879-0316,rot_cw,view,,"mountain landscape, sideways"
+finsch1879-0338,rot_cw,view,,"mountain landscape, sideways"
+finsch1879-0343,ok,view,,river gorge
+finsch1879-0390,rot_cw,people,,"camp with drying racks, sideways"
+finsch1879-0415,ok,view,,wooden church
+finsch1879-0418,ok,view,,log house with cow
+finsch1879-0420,ok,people,,interior of chum with fish drying
+finsch1879-0421,ok,view,,chums (conical tents)
+finsch1879-0428,rot_cw,view,,"riverside dwellings, sideways"
+finsch1879-0442,rot_cw,view,,"Ostyak yurts on the Ob, sideways"
+finsch1879-0453,ok,object,,clothing/fur items
+finsch1879-0456,rot_cw,people,,"people in dwelling, sideways"
+finsch1879-0460,ok,object,,grave/idol in bushes
+finsch1879-0463,ok,object,,sledge with chum covers
+finsch1879-0473,ok,view,,tundra/forest landscape
+finsch1879-0478,ok,people,1,camp on the tundra (Lager auf der Tundra)
+finsch1879-0484,rot_cw,people,,"natives with reindeer, sideways"
+finsch1879-0490,rot_cw,people,,"reindeer camp, sideways; page fold overlaps corner"
+finsch1879-0508,rot_cw,view,,"northernmost point/coast, sideways"
+finsch1879-0514,rot_cw,people,,"reindeer sledges, sideways"
+finsch1879-0538,rot_cw,people,,"sledge caravan, sideways"
+finsch1879-0544,ok,people,1,Samoyed in reindeer sledge
+finsch1879-0550,reject,,,only title fragment of a fold-out map (no map content)
+finsch1879-0554,rot_cw,view,,"Ostyak sacrificial place, sideways"
+finsch1879-0560,rot_cw,object,,"carved grave posts/idols, sideways"
+finsch1879-0565,reject,,,text page chapter start
+finsch1879-0574,ok,portrait,,native man
+finsch1879-0604,ok,people,,two natives with bow and drum
+finsch1879-0610,ok,people,,three natives in costume
+finsch1879-0626,rot_cw,people,,"people in dark interior, sideways"
+finsch1879-0644,rot_cw,view,,"village with church, sideways"
+finsch1879-0650,ok,view,,village street with church
+finsch1879-0670,rot_cw,people,,"dog sledge with people, sideways"
+finsch1879-0676,ok,view,,hut and well sweep
+finsch1879-0680,rot_cw,people,,"people by house with fish, sideways"
+finsch1879-0684,ok,view,,village on river with boat
+finsch1879-0697,ok,people,,dancing peasants (caricature-like)
+finsch1879-0710,ok,view,,well sweep and fence
+finsch1879-0726,rot_cw,people,,"family interior, sideways"
+finsch1879-0749,reject,,,book edge/page block
+finsch1879-0751,reject,,,book edge/page block
+debaye1897-0002,reject,,,blank strip
+debaye1897-0003,reject,,,blank strip
+debaye1897-0004,reject,,,title page De Moscou a Krasnoiarsk
+debaye1897-0005,reject,,,blank strip
+debaye1897-0008,ok,view,,saltworks
+debaye1897-0009,ok,map,,route map Voyage du Baron de Baye 1896
+debaye1897-0011,ok,portrait,,Votyak woman in costume
+debaye1897-0012,ok,object,,musical instrument (gusli)
+debaye1897-0013,ok,people,,group of villagers by log house
+debaye1897-0014,ok,portrait,1,woman with coin ornaments
+debaye1897-0015,ok,people,,Votyak family at door
+debaye1897-0017,ok,people,,couple in costume
+debaye1897-0019,ok,portrait,,woman in tall headdress
+debaye1897-0020,ok,view,,churches of Solikamsk
+debaye1897-0021,ok,view,,river bank
+debaye1897-0023,ok,view,,river landscape
+debaye1897-0025,ok,view,,village street with church
+debaye1897-0027,ok,view,,boat on river
+debaye1897-0029,ok,view,,forest
+debaye1897-0030,ok,object,,harp-like instrument
+debaye1897-0033,ok,nature,,birch trunks with bark cuts
+debaye1897-0035,ok,people,,people at dwelling entrance
+debaye1897-0037,ok,view,,cliff over river
+debaye1897-0039,ok,people,,group seated on river bank
+debaye1897-0041,ok,view,,river at sunset
+debaye1897-0042,ok,view,,town by river
+debaye1897-0043,ok,view,,old wooden house
+debaye1897-0044,ok,people,,cart with travellers
+debaye1897-0045,ok,view,,sandy bank
+debaye1897-0047,rot_cw,view,,"lake and mountains, caption on side"
+debaye1897-0049,ok,view,,bridge and forest
+debaye1897-0051,ok,view,,river ferry/pier
+debaye1897-0053,ok,view,,winter river bank
+debaye1897-0054,ok,view,,market square with carts
+debaye1897-0055,reject,,,text fragment
+debaye1898-0002,reject,,,blank strip
+debaye1898-0010,ok,people,,group in costumes and top hats
+debaye1898-0012,ok,portrait,1,woman with bead necklaces and headdress
+debaye1898-0014,ok,portrait,,young man playing bagpipe
+debaye1898-0016,ok,people,,women in headdresses
+debaye1898-0018,ok,people,,emigrants at railway station
+debaye1898-0019,ok,view,,nomad camp in steppe
+debaye1898-0020,ok,people,,settlement with people
+debaye1898-0022,ok,view,,conical huts
+debaye1898-0023,ok,people,,men with samovar
+debaye1898-0024,ok,people,,couple seated (Tatar?)
+debaye1898-0025,ok,view,,wooden tower
+debaye1898-0026,ok,view,,steppe with cart
+debaye1898-0027,ok,people,,prisoner at barred wagon window
+debaye1898-0028,ok,people,,prisoner wagon
+debaye1898-0029,ok,people,,people at station buildings
+debaye1898-0031,ok,view,,railway wagons
+debaye1898-0032,ok,people,,emigrant camp on river bank
+debaye1898-0033,ok,view,,railway wagons and poles
+debaye1898-0034,ok,people,,emigrant camp in forest
+debaye1898-0035,ok,view,,settlement with houses
+debaye1898-0038,ok,nature,,bear cub in yard
+debaye1898-0039,ok,view,,wooden house with fence
+debaye1898-0040,ok,people,,emigrant camp in forest
+debaye1898-0041,ok,view,,steamer on river
+debaye1898-0042,ok,view,,"cathedral and carriage, flooded street"
+debaye1898-0044,ok,view,,rocks on hill
+debaye1898-0046,ok,view,,rock in river
+debaye1898-0047,ok,view,,monastery/town over steppe
+debaye1898-0048,ok,object,,Tatar shaman idol drawing
+debaye1898-0049,ok,object,,stone with runic inscription
+debaye1898-0051,ok,people,,shaman with drum
+debaye1898-0052,ok,object,,carved stone disc
+debaye1898-0053,ok,object,,carved stone/relief
+wenyon1896-0001,reject,,,bookplate Boston Medical Library
+wenyon1896-0005,ok,portrait,,author portrait
+wenyon1896-0017,ok,map,,route map of Siberia
+wenyon1896-0019,ok,people,,crowded deck/scene with people
+wenyon1896-0026,rot_ccw,view,,"village/town, caption on left side"
+wenyon1896-0039,ok,nature,,"horse head under duga, sketch"
+wenyon1896-0046,ok,view,,log post station
+wenyon1896-0056,ok,view,,road with tarantass
+wenyon1896-0060,ok,people,,troika rushing through forest
+wenyon1896-0069,ok,view,,log house
+wenyon1896-0112,ok,view,,river bank with boats and steamer
+wenyon1896-0133,ok,view,,Shilka river and town of Stretensk
+wenyon1896-0134,ok,people,,peasant cart
+wenyon1896-0140,rot_ccw,view,,"riverside town, sideways"
+wenyon1896-0146,rot_ccw,view,,"town on river, caption on side"
+wenyon1896-0150,ok,portrait,,native man in fur
+wenyon1896-0168,ok,view,,Selenga river valley
+wenyon1896-0178,ok,view,,lakeside village
+wenyon1896-0181,ok,view,,museum building with sledge
+wenyon1896-0182,ok,view,,cathedral
+wenyon1896-0188,ok,people,1,party of exiles crossing the Yenisei
+wenyon1896-0213,ok,portrait,,Tatar man
+wenyon1896-0214,ok,people,1,camp with reindeer and chum
+wenyon1896-0217,ok,people,,marching column of soldiers/convicts
+wenyon1896-0220,ok,view,,"market square, Tomsk"
+wenyon1896-0224,ok,view,,steamer on river
+wenyon1896-0232,rot_ccw,view,,"town with churches, sideways"
+wenyon1896-0244,rot_ccw,view,,"town street with church, sideways"
+legras1899-0166,reject,,,"binarized fragment of photo, unusable"
+legras1899-0435,reject,,,thin sliver of map edge
+marsden1892-0006,ok,object,,facsimile handwritten letter
+marsden1892-0007,ok,object,,facsimile handwritten letter
+marsden1892-0008,ok,object,,facsimile handwritten letter
+marsden1892-0011,ok,portrait,,elderly lady at desk
+marsden1892-0015,ok,object,,old woodcut of printing press
+marsden1892-0031,ok,map,,sketch map Russia-Siberia
+marsden1892-0047,ok,portrait,,woman in fur travel dress
+marsden1892-0067,ok,portrait,,lady portrait with signature
+marsden1892-0071,ok,view,,winter forest hut with horse
+marsden1892-0097,ok,object,,tools/weapons; orientation uncertain
+marsden1892-0103,ok,view,,ice on river
+marsden1892-0114,ok,portrait,,"seated man (leper?), sketch"
+marsden1892-0129,ok,view,,raft/barge on river
+marsden1892-0131,ok,people,,horses and people at house gate
+marsden1892-0143,ok,people,,riders on hillside
+marsden1892-0166,ok,view,,hut of lepers in forest
+marsden1892-0173,ok,people,,people in dark hut (lepers)
+marsden1892-0179,ok,people,,camp in forest
+marsden1892-0189,ok,people,,night scene by fire
+marsden1892-0195,ok,view,,tent camp in forest
+marsden1892-0198,ok,nature,,bear and dog in snow
+marsden1892-0202,ok,view,,hut in forest
+marsden1892-0206,ok,people,,man dragging sledge through snow
+marsden1892-0211,ok,people,,riders crossing marsh
+marsden1892-0219,ok,object,,decorative emblem with icons and weapons
+marsden1892-0222,ok,portrait,,bishop/archpriest
+marsden1892-0233,ok,view,,troika in winter forest
+marsden1892-0247,ok,view,,leper colony settlement plan view
+marsden1892-0266,ok,people,,group of nuns/sisters of mercy
+marsden1892-0273,ok,object,,facsimile Russian certificate (Svidetelstvo)
+marsden1892-0326,reject,,,advertisement Mattei's medicines
+marsden1892-0332,reject,,,advertisement Ross optical
+marsden1892-0344,reject,,,advertisement travel equipment
+colquhoun1900-0009,ok,portrait,,
+colquhoun1900-0030,rot_cw,people,,"camel caravan, caption on side"
+colquhoun1900-0036,ok,view,,Cossack sentinel watchtower
+colquhoun1900-0040,ok,people,1,two natives in fur clothes
+colquhoun1900-0052,rot_cw,people,,"riders on horseback, caption on side"
+colquhoun1900-0074,ok,view,,cathedral
+colquhoun1900-0078,ok,view,,bridge at Irkutsk
+colquhoun1900-0082,rot_cw,view,,"rocky landscape, caption on side"
+colquhoun1900-0086,rot_cw,view,,"building, sideways"
+colquhoun1900-0088,ok,map,,physical map of Asia (deserts)
+colquhoun1900-0091,ok,portrait,,hunter on skis with spear
+colquhoun1900-0096,ok,view,,dog/horse sledge crossing frozen river
+colquhoun1900-0098,ok,portrait,1,native in fur hood
+colquhoun1900-0106,ok,people,,market/fair interior
+colquhoun1900-0110,ok,view,,travel with tarantass on the steppe
+colquhoun1900-0114,ok,people,,camel pulling sledge
+colquhoun1900-0138,ok,view,,forest road with carriages
+colquhoun1900-0152,ok,view,,ferry pier with people
+colquhoun1900-0220,ok,people,,people before chum/tent
+colquhoun1900-0223,ok,portrait,,"woman smoking pipe, profile"
+colquhoun1900-0224,ok,portrait,1,Buryat woman in festive costume
+colquhoun1900-0226,ok,people,,group of women in costumes
+colquhoun1900-0234,ok,portrait,,Chinese/Manchu woman
+colquhoun1900-0282,rot_cw,people,,"camel caravan in steppe, sideways"
+colquhoun1900-0288,rot_cw,view,,"Mongolian shrine and caravan, caption on side"
+colquhoun1900-0292,ok,map,,map of Asia with Mongol empire area
+colquhoun1900-0314,ok,portrait,1,Buryat girl in fur hat
+colquhoun1900-0316,ok,portrait,,veiled woman seated
+colquhoun1900-0324,ok,people,,three Buryat/Mongol men (lamas?)
+colquhoun1900-0330,rot_cw,view,,"mountain valley with prayer poles, sideways"
+colquhoun1900-0398,rot_cw,view,,"rocky mountains, sideways"
+colquhoun1900-0412,rot_cw,view,,"arched bridge over river, sideways"
+colquhoun1900-0415,ok,portrait,,man on horse
+colquhoun1900-0417,ok,people,,women with child
+colquhoun1900-0475,ok,map,,map of Asia
+simpson1898-0007,ok,people,,prisoners in barracks room
+simpson1898-0052,ok,people,,emigrants at railway train
+simpson1898-0071,ok,view,,"landscape, oval vignette"
+simpson1898-0073,ok,view,,river and hills
+simpson1898-0089,ok,people,,peasants with horse by log house
+simpson1898-0094,ok,view,,log house with carriages
+simpson1898-0101,ok,view,,village with horses
+simpson1898-0112,ok,view,,village in valley
+simpson1898-0116,ok,view,,river bend
+simpson1898-0125,ok,view,,river with ferry/raft
+simpson1898-0128,ok,view,,wooded island in river
+simpson1898-0131,ok,view,,"river at sunset, oval vignette"
+simpson1898-0135,ok,people,,convicts working on hillside
+simpson1898-0138,ok,view,,town panorama
+simpson1898-0144,ok,view,,log house with veranda
+simpson1898-0161,ok,portrait,,convict in chains full figure
+simpson1898-0176,ok,view,,village/settlement by hills
+simpson1898-0179,ok,view,,river with steamer
+simpson1898-0182,ok,people,,convicts in cage on barge
+simpson1898-0204,ok,portrait,1,bearded old convict
+simpson1898-0213,ok,view,,"etape (stage house), Eastern Siberia"
+simpson1898-0220,ok,view,,small house and timber
+simpson1898-0222,ok,view,,"sunset over water, oval vignette"
+simpson1898-0230,ok,people,,convicts seated by barracks
+simpson1898-0234,ok,view,,"settlement, oval vignette"
+simpson1898-0238,ok,view,,church
+simpson1898-0241,ok,view,,prison building
+simpson1898-0244,ok,people,,prisoners at table
+simpson1898-0251,ok,portrait,,man in fur hat with whip
+simpson1898-0254,ok,people,,man chained to wheelbarrow on plank bed
+simpson1898-0256,ok,portrait,,old bearded man
+simpson1898-0274,ok,people,,line of prisoners/people
+simpson1898-0286,ok,view,,landscape with hut
+simpson1898-0288,ok,people,,children/girls in white before house
+simpson1898-0290,ok,people,,women at wattle hut
+simpson1898-0292,ok,view,,steppe with buildings
+simpson1898-0296,ok,view,,barracks buildings
+simpson1898-0302,rot_cw,view,,"village in valley, sideways"
+simpson1898-0308,ok,people,,people resting in mountain valley
+simpson1898-0312,rot_cw,people,,"three seated women, oval, sideways"
+simpson1898-0316,ok,people,1,"three old men seated, oval"
+simpson1898-0328,ok,view,,camp in valley
+simpson1898-0336,ok,view,,wooden watchtower/building with horses
+simpson1898-0350,ok,people,,prisoners lined up before log building
+simpson1898-0400,ok,people,,people in valley
+simpson1898-0412,ok,people,,women with water cart by river
+simpson1898-0438,ok,map,,"fragment of fold-out map (Simpson, Side-lights on Siberia), East part only"
+leroybeaulieu1900-0262,reject,,,library stamp Bombay Branch RAS
+leroybeaulieu1900-0442,reject,,,library stamp Bombay Branch RAS
+meakin1901-0011,ok,object,,statue of Yermak (armoured figure)
+meakin1901-0018,ok,view,,"a street in Siberia, line drawing"
+meakin1901-0026,ok,view,,"palisade (ostrog), line drawing"
+meakin1901-0028,ok,map,,fragment of route map (western part)
+meakin1901-0030,ok,map,,map of the Siberian railway system
+meakin1901-0044,ok,people,1,group of natives and settlers in winter
+meakin1901-0054,ok,view,,church; stain at right edge
+meakin1901-0062,ok,people,1,rider on ox in snow
+meakin1901-0065,ok,people,,"cart with horses, line drawing"
+meakin1901-0084,ok,view,,large university/public building
+meakin1901-0108,ok,view,,railway bridge
+meakin1901-0112,ok,portrait,,official in uniform with orders
+meakin1901-0126,ok,view,,market square
+meakin1901-0128,ok,object,,collection of face masks/casts
+meakin1901-0140,ok,people,,crowd at railway church car
+meakin1901-0160,rot_cw,view,,"village/town with houses, sideways"
+meakin1901-0168,ok,view,,house with carriage
+meakin1901-0192,ok,view,,icebreaker ferry Baikal
+meakin1901-0260,ok,view,,"log house with cart, drawing"
+meakin1901-0264,ok,people,,boats and people on river bank
+meakin1901-0274,ok,view,,mine/gold works in valley
+meakin1901-0298,ok,view,,ruins/burnt buildings with chimneys
+meakin1901-0348,ok,portrait,,Japanese woman in kimono
+meakin1901-0354,ok,people,,group photo with author
+meakin1901-0373,reject,,,patterned endpaper
+meakin1901-0374,reject,,,bindery label and endpaper
+reid1899-0002,ok,portrait,,author portrait with signature (Arnot Reid)
+reid1899-0003,reject,,,library stamp Imperial Library
+reid1899-0302,ok,map,,"map of Siberia, torn and poorly scanned"
+tytgat1901-0003,reject,,,blank page with library stamp
+tytgat1901-0004,reject,,,blank page
+tytgat1901-0005,reject,,,blank page
+tytgat1901-0006,reject,,,blank page
+tytgat1901-0007,reject,,,blank page
+tytgat1901-0008,reject,,,title page Un Reportage en Chine
+tytgat1901-0010,reject,,,blank page
+tytgat1901-0018,reject,,,text page
+tytgat1901-0024,reject,,,text page
+tytgat1901-0026,reject,,,text page
+tytgat1901-0027,reject,,,text page
+tytgat1901-0028,reject,,,text page
+tytgat1901-0036,reject,,,text page
+tytgat1901-0037,reject,,,text page
+tytgat1901-0040,reject,,,text page
+tytgat1901-0041,reject,,,text page
+tytgat1901-0044,reject,,,text page
+tytgat1901-0045,reject,,,text page
+tytgat1901-0048,reject,,,text page
+tytgat1901-0053,reject,,,text page
+tytgat1901-0056,reject,,,text page
+tytgat1901-0060,reject,,,text page
+tytgat1901-0062,reject,,,text page
+tytgat1901-0075,reject,,,text page
+tytgat1901-0079,reject,,,text page
+tytgat1901-0086,reject,,,text page
+tytgat1901-0088,reject,,,text page
+tytgat1901-0089,reject,,,text page
+tytgat1901-0090,reject,,,text page
+tytgat1901-0091,ok,people,,
+tytgat1901-0097,ok,people,,
+tytgat1901-0100,reject,,,text page
+tytgat1901-0102,reject,,,text page
+tytgat1901-0103,ok,people,,rickshaw
+tytgat1901-0106,reject,,,text page
+tytgat1901-0113,rot_cw,people,,
+tytgat1901-0115,reject,,,text page
+tytgat1901-0116,reject,,,text page
+tytgat1901-0117,reject,,,text page
+tytgat1901-0118,reject,,,text page
+tytgat1901-0119,rot_cw,people,,
+tytgat1901-0125,rot_cw,people,,
+tytgat1901-0127,reject,,,text page
+tytgat1901-0129,reject,,,text page
+tytgat1901-0131,rot_cw,view,,
+tytgat1901-0133,reject,,,text page
+tytgat1901-0135,reject,,,text page
+tytgat1901-0136,reject,,,text page
+tytgat1901-0137,rot_cw,view,,
+tytgat1901-0141,reject,,,text page
+tytgat1901-0142,reject,,,text page
+tytgat1901-0143,reject,,,text page
+tytgat1901-0144,reject,,,text page
+tytgat1901-0145,rot_cw,view,,
+tytgat1901-0149,reject,,,text page
+tytgat1901-0150,reject,,,text page
+tytgat1901-0151,rot_cw,people,,
+tytgat1901-0155,reject,,,text page
+tytgat1901-0156,reject,,,text page
+tytgat1901-0157,rot_cw,view,,
+tytgat1901-0159,reject,,,text page
+tytgat1901-0160,reject,,,text page
+tytgat1901-0161,rot_cw,view,,Great Wall
+tytgat1901-0169,rot_cw,view,,
+tytgat1901-0171,reject,,,text page
+tytgat1901-0172,reject,,,text page
+tytgat1901-0173,reject,,,text page
+tytgat1901-0177,rot_cw,view,,
+tytgat1901-0179,reject,,,text page
+tytgat1901-0183,rot_cw,view,,
+tytgat1901-0189,rot_cw,view,,
+tytgat1901-0194,reject,,,text page
+tytgat1901-0196,reject,,,text page
+tytgat1901-0198,reject,,,text page
+tytgat1901-0199,rot_cw,view,,
+tytgat1901-0203,rot_cw,view,,
+tytgat1901-0208,reject,,,text page
+tytgat1901-0211,ok,people,,
+tytgat1901-0213,reject,,,text page
+tytgat1901-0216,reject,,,text page
+tytgat1901-0217,reject,,,text page
+tytgat1901-0220,reject,,,text page
+tytgat1901-0222,reject,,,text page
+tytgat1901-0223,reject,,,text page
+tytgat1901-0225,ok,view,,rock island
+tytgat1901-0229,reject,,,text page
+tytgat1901-0230,reject,,,text page
+tytgat1901-0232,reject,,,text page
+tytgat1901-0233,rot_cw,view,,
+tytgat1901-0235,reject,,,text page
+tytgat1901-0238,reject,,,text page
+tytgat1901-0239,reject,,,text page
+tytgat1901-0241,rot_cw,view,,
+tytgat1901-0247,rot_cw,people,,
+tytgat1901-0254,reject,,,text page
+tytgat1901-0257,rot_cw,view,,
+tytgat1901-0263,rot_cw,view,,
+tytgat1901-0268,reject,,,text page
+tytgat1901-0275,ok,map,,"folded world map, partially covered"
+tytgat1901-0277,ok,map,,itinerary world map
+tytgat1901-0279,ok,map,,"folded map, partially covered"
+tytgat1901-0281,reject,,,text page
+tytgat1901-0282,reject,,,text page
+tytgat1901-0283,reject,,,text page
+tytgat1901-0284,reject,,,text page
+stadling1901-0007,ok,people,,travellers on snow
+stadling1901-0026,ok,people,1,tarantass/cart with passengers
+stadling1901-0032,ok,view,,railway bridge
+stadling1901-0038,ok,view,,train
+stadling1901-0049,ok,view,,
+stadling1901-0054,rot_cw,view,,
+stadling1901-0068,ok,view,,horse caravan on steppe
+stadling1901-0079,ok,view,,cliffs over river
+stadling1901-0088,ok,view,,wooden tower church
+stadling1901-0094,ok,view,,
+stadling1901-0102,ok,view,,ostrog towers
+stadling1901-0110,ok,people,1,fishermen with fish
+stadling1901-0113,ok,people,,photo with text lines above on page
+stadling1901-0120,ok,view,,carved house with man
+stadling1901-0128,ok,view,,ice on river bank
+stadling1901-0134,ok,people,,group at dwelling
+stadling1901-0142,ok,people,,crowded barges
+stadling1901-0148,ok,view,,river waves
+stadling1901-0152,ok,view,,
+stadling1901-0154,ok,portrait,,woman in fur coat
+stadling1901-0158,ok,people,,group at church
+stadling1901-0168,ok,view,,
+stadling1901-0172,ok,object,,wooden structure in tundra
+stadling1901-0174,rot_cw,view,,log hut; orientation uncertain
+stadling1901-0178,ok,view,,earth dwelling
+stadling1901-0184,ok,people,,chum with people and dogs
+stadling1901-0187,ok,view,,cross on hill
+stadling1901-0190,ok,view,,boat on river
+stadling1901-0195,ok,portrait,,
+stadling1901-0198,ok,people,1,natives at camp
+stadling1901-0206,ok,people,,natives with sledge
+stadling1901-0210,ok,people,,sledges on snow
+stadling1901-0214,ok,view,,sledges in tundra
+stadling1901-0226,ok,view,,caravan on snow
+stadling1901-0230,ok,people,1,native with reindeer team
+stadling1901-0233,reject,,,narrow strip of text page
+stadling1901-0240,ok,view,,camp on snow
+stadling1901-0241,reject,,,narrow blank strip
+stadling1901-0243,ok,view,,small photo inside text page
+stadling1901-0250,rot_cw,view,,grave/wooden structure among trees
+stadling1901-0260,ok,view,,
+stadling1901-0264,ok,people,,people with reindeer sledge
+stadling1901-0270,rot_ccw,view,,orientation uncertain (sky seems on right)
+stadling1901-0276,rot_cw,view,,churches over river
+stadling1901-0286,ok,people,,group of men (exiles?)
+stadling1901-0294,ok,map,,Trans-Siberian railway map
+stadling1901-0305,ok,view,,
+stadling1901-0314,ok,people,,
+stadling1901-0320,ok,people,1,children in chum
+stadling1901-0336,ok,map,,
+fraser1902-0007,ok,portrait,,author portrait
+fraser1902-0025,ok,map,,route map
+fraser1902-0032,ok,people,,ploughing
+fraser1902-0044,ok,view,,train on steppe
+fraser1902-0048,ok,view,,railway bridge
+fraser1902-0055,ok,view,,railway cutting
+fraser1902-0060,ok,people,,"railway carriage, people"
+fraser1902-0067,ok,people,,soldiers marching
+fraser1902-0074,ok,people,,people by stream
+fraser1902-0085,ok,people,,group sitting on grass
+fraser1902-0090,ok,people,,peasants at chapel
+fraser1902-0098,ok,people,,peasants at table
+fraser1902-0105,ok,people,,"composite: conductor, samovar at station"
+fraser1902-0113,ok,view,,station building
+fraser1902-0120,ok,people,,station with men
+fraser1902-0127,ok,people,,station platform
+fraser1902-0136,ok,view,,town panorama
+fraser1902-0142,ok,view,,town street
+fraser1902-0149,ok,people,,palisade with guards
+fraser1902-0155,ok,people,,prisoners/men in line
+fraser1902-0159,ok,people,,peasant women
+fraser1902-0176,ok,view,,log house
+fraser1902-0185,rot_cw,view,,town view
+fraser1902-0190,ok,view,1,icebreaker Baikal
+fraser1902-0201,ok,view,,
+fraser1902-0207,ok,view,,steamer
+fraser1902-0212,ok,people,1,Buryats(?) group
+fraser1902-0218,ok,view,,overexposed/faded image of ferry/barge
+fraser1902-0223,ok,people,,crowd
+fraser1902-0231,ok,view,,
+fraser1902-0236,ok,view,,forest
+fraser1902-0244,ok,view,,
+fraser1902-0252,ok,view,,"view from steamer deck, round"
+fraser1902-0259,ok,view,,"station building, vignetted"
+fraser1902-0271,ok,people,,log house porch
+fraser1902-0280,ok,view,,
+fraser1902-0289,ok,view,,forest
+fraser1902-0292,ok,people,,"crowd at station, round"
+fraser1902-0304,ok,view,,
+fraser1902-0309,ok,people,,people at station
+fraser1902-0326,ok,people,,composite of several small photos
+fraser1902-0331,ok,view,,steppe with watchtower
+fraser1902-0344,ok,people,,"composite, top cropped"
+fraser1902-0354,ok,people,,tarantass/cart at post station
+fraser1902-0361,ok,people,,"Mongols; composite, top cropped"
+fraser1902-0372,ok,view,,monastery/church with walkers
+fraser1902-0383,ok,people,,"men at brick wall, round"
+fraser1902-0391,ok,people,,workshop interior
+fraser1902-0396,ok,view,,sledges on snowy road
+norman1902-0009,ok,people,,imperial couple walking
+norman1902-0027,ok,view,,"St Petersburg, Peter-Paul fortress"
+norman1902-0030,ok,view,,troika
+norman1902-0034,ok,view,,St Isaac cathedral
+norman1902-0038,ok,view,,Nevsky prospect
+norman1902-0048,ok,view,,General Staff arch
+norman1902-0054,ok,view,,Moscow gate
+norman1902-0056,ok,people,,"peasant women, Moscow"
+norman1902-0058,ok,view,,St Basil cathedral
+norman1902-0060,ok,view,,Kremlin
+norman1902-0062,ok,view,,Kremlin from river
+norman1902-0066,ok,people,,soldiers
+norman1902-0068,ok,view,,Red Square
+norman1902-0074,ok,people,,crowd
+norman1902-0084,ok,view,,Yasnaya Polyana gates
+norman1902-0086,ok,portrait,,Tolstoy with dog
+norman1902-0089,ok,view,,Yasnaya Polyana house
+norman1902-0090,ok,view,,Yasnaya Polyana house
+norman1902-0099,ok,view,,"country house interior, Finland"
+norman1902-0101,ok,view,,city panorama
+norman1902-0102,ok,view,,harbour panorama
+norman1902-0106,ok,view,,"Helsinki cathedral, monument with wreaths"
+norman1902-0108,ok,view,,Finland pines
+norman1902-0110,ok,view,,rapids
+norman1902-0112,ok,view,,road on causeway
+norman1902-0116,ok,people,,peasants burning/working field
+norman1902-0121,ok,people,,"two men shaking hands, interior"
+norman1902-0123,ok,people,,two peasant girls
+norman1902-0125,ok,people,,riders crossing bridge in Finland
+norman1902-0127,ok,people,,worship interior
+norman1902-0128,ok,people,,interior meeting
+norman1902-0138,ok,view,,Siberian locomotive
+norman1902-0140,ok,people,,emigrants in forest
+norman1902-0142,ok,map,,Siberia map
+norman1902-0146,ok,view,,Urals rocks with people
+norman1902-0149,ok,view,,"river gorge, Urals"
+norman1902-0156,ok,view,1,icebreaker Baikal
+norman1902-0163,ok,view,,railway station
+norman1902-0164,ok,view,,Europe-Asia boundary post
+norman1902-0166,ok,view,,Ural town by lake
+norman1902-0168,ok,people,1,group of Siberian peasants/convicts
+norman1902-0169,ok,view,,railway line
+norman1902-0170,ok,view,,station with water tower
+norman1902-0172,ok,people,,station platform
+norman1902-0174,ok,people,,group at station
+norman1902-0175,ok,view,,hut in birch forest
+norman1902-0178,ok,view,,town by river
+norman1902-0182,ok,view,,
+norman1902-0184,ok,view,,museum/building
+norman1902-0186,ok,view,,cathedral
+norman1902-0195,ok,people,,prisoners at prison stockade
+norman1902-0202,ok,view,,floating bath/house on water
+norman1902-0210,ok,people,,camel and people; top cropped
+norman1902-0214,ok,view,,Batum
+norman1902-0218,ok,view,,Vladikavkaz street
+norman1902-0220,ok,view,,Caucasus gorge
+norman1902-0223,ok,view,,mountain road with sheep
+norman1902-0226,ok,view,,snowy mountains
+norman1902-0229,ok,view,,Darial gorge
+norman1902-0231,ok,view,,Georgian road
+norman1902-0234,ok,view,,snowy pass
+norman1902-0236,ok,view,,mountain valley
+norman1902-0238,ok,view,,Mtskheta road
+norman1902-0240,ok,people,,men at brick building
+norman1902-0242,ok,view,,Tiflis
+norman1902-0244,ok,view,,Tiflis
+norman1902-0249,ok,view,,wine shop with oxcart
+norman1902-0250,ok,portrait,,old man in cloak
+norman1902-0252,ok,people,,bath scene
+norman1902-0254,ok,people,,men in doorway
+norman1902-0256,ok,map,,Caucasus map
+norman1902-0266,ok,view,,palace
+norman1902-0270,ok,people,,landing stage Krasnovodsk
+norman1902-0271,ok,view,,Krasnovodsk station
+norman1902-0276,ok,view,,ruined fort
+norman1902-0282,ok,people,,market/station
+norman1902-0285,ok,people,,Turkomans examining train
+norman1902-0291,ok,people,,people under trees
+norman1902-0292,ok,map,,Trans-Caspian railway map
+norman1902-0317,ok,view,,avenue
+norman1902-0319,ok,people,,Cossack patrol Tashkent
+norman1902-0321,ok,view,,"government building, Tashkent"
+norman1902-0325,ok,people,,"water cart, vignetted"
+norman1902-0327,ok,people,,"rider, vignetted"
+norman1902-0341,ok,view,,citadel Bokhara
+norman1902-0343,ok,view,,emir palace gate Bokhara
+norman1902-0346,ok,people,,Central Asian women group
+norman1902-0350,ok,people,,crowd
+norman1902-0354,ok,view,,donkeys at walls
+norman1902-0357,ok,people,,mosque door with guards
+norman1902-0359,ok,people,,prison Bokhara
+norman1902-0364,ok,view,,Registan Samarkand
+norman1902-0366,ok,portrait,,man in robe
+norman1902-0367,ok,view,,Shir-Dor madrasa
+norman1902-0368,ok,view,,madrasa with crowd
+norman1902-0370,ok,view,,madrasa courtyard
+norman1902-0372,ok,view,,
+norman1902-0373,ok,view,,Gur-Emir dome
+norman1902-0374,ok,view,,tombs
+norman1902-0375,ok,view,,tomb of Tamerlane crypt
+norman1902-0377,ok,view,,
+norman1902-0378,ok,view,,tomb interior
+norman1902-0379,ok,view,,Shah-i-Zinda
+norman1902-0380,ok,view,,lane
+norman1902-0381,ok,people,,people under trees
+norman1902-0382,ok,view,,poplar avenue
+norman1902-0383,ok,portrait,,man in uniform/coat
+norman1902-0385,ok,people,,packing cotton
+norman1902-0387,ok,view,,road
+norman1902-0388,ok,people,,horses at bazaar
+norman1902-0389,ok,people,,mother and daughter at hut
+norman1902-0396,ok,portrait,,statesman portrait (Witte?)
+sheepshanks1903-0002,reject,,,library date-due slip
+sheepshanks1903-0021,ok,people,1,"Buddhist ceremony with temple, drawing"
+sheepshanks1903-0072,ok,object,,stupa/suburgan drawing
+sheepshanks1903-0087,ok,view,,"temple with people, drawing"
+sheepshanks1903-0094,ok,view,,Buddhist temple drawing
+sheepshanks1903-0105,ok,object,,costume (Buryat/Mongol woman) drawing
+sheepshanks1903-0108,ok,object,,costume back view drawing
+sheepshanks1903-0115,ok,view,,temple/palace building drawing
+sheepshanks1903-0143,ok,object,,Buddha statue drawing
+pistor1905-0005,ok,view,,harbour with steamer
+pistor1905-0116,ok,view,,town panorama
+pistor1905-0248,ok,view,,harbour with ships
+pistor1905-0480,ok,people,,"nude figure (art photo), off-topic"
+swayne1904-0009,ok,view,,Spassky tower Moscow
+swayne1904-0034,ok,view,,sailing boats
+swayne1904-0036,ok,view,,cathedral
+swayne1904-0040,ok,portrait,,coachman/driver
+swayne1904-0042,ok,view,,loaded cart
+swayne1904-0044,ok,view,,cart train on hill road
+swayne1904-0050,ok,view,,Kremlin
+swayne1904-0052,ok,people,,priest with child
+swayne1904-0054,ok,view,,Ivan the Great bell tower
+swayne1904-0056,ok,view,,Kremlin cathedrals
+swayne1904-0062,ok,people,1,Siberian peasant family
+swayne1904-0070,ok,view,,log house
+swayne1904-0074,ok,portrait,,old peasant
+swayne1904-0076,ok,people,,children in window/doorway
+swayne1904-0080,ok,nature,,horses
+swayne1904-0092,ok,people,,crowd with carts
+swayne1904-0096,ok,view,,village on river bank with timber
+swayne1904-0103,ok,view,,river
+swayne1904-0104,ok,people,,carts on forest road
+swayne1904-0106,ok,view,,ferry in mountain valley
+swayne1904-0110,ok,view,,lake with larches
+swayne1904-0114,ok,view,,village with geese
+swayne1904-0116,ok,view,,yurt in forest (Altai)
+swayne1904-0117,ok,view,,octagonal log yurt
+swayne1904-0118,ok,people,,rider on horse
+swayne1904-0120,ok,people,,two men by fence
+swayne1904-0122,ok,view,,hut with horses in mountains
+swayne1904-0130,ok,people,1,Altai rider
+swayne1904-0134,ok,map,,stalking diagrams Figs II-VI
+swayne1904-0135,ok,map,,"stalking diagram, cropped edge"
+swayne1904-0140,ok,people,,man with pack horse
+swayne1904-0150,ok,people,,Altai man at camp
+swayne1904-0154,ok,nature,,argali head trophy
+swayne1904-0158,ok,portrait,1,Altai man with pipe
+swayne1904-0160,ok,view,,mountain ridge
+swayne1904-0166,ok,view,,snowy mountains
+swayne1904-0170,ok,people,,two hunters sitting with horse
+swayne1904-0184,ok,view,,camp tents with horns
+swayne1904-0194,ok,people,,hunter with argali horns
+swayne1904-0198,ok,nature,,wapiti/maral head trophy
+swayne1904-0206,ok,nature,,argali skull
+swayne1904-0207,ok,view,,valley with horse
+swayne1904-0208,ok,nature,,skull with horns in grass
+swayne1904-0210,ok,view,,mountain river
+swayne1904-0212,ok,nature,,Bactrian camel
+swayne1904-0214,ok,view,,flowered meadow
+swayne1904-0216,rot_cw,view,,river with conifers
+swayne1904-0220,ok,nature,,cattle
+swayne1904-0222,ok,view,,forest by river
+swayne1904-0226,ok,view,,mountain valley with boulders
+swayne1904-0230,ok,view,,fallen timber forest
+swayne1904-0234,ok,view,,river valley
+swayne1904-0238,ok,view,,mountain river
+swayne1904-0242,ok,view,,river gorge
+swayne1904-0246,ok,view,,river with forest
+swayne1904-0250,ok,nature,,roe deer head trophy
+swayne1904-0254,ok,view,,river port/bridge panorama
+swayne1904-0282,ok,map,,route map Siberia-Mongolia
+swayne1904-0283,ok,map,,rough sketch of authors route
+swayne1904-0297,reject,,,library due-date slip on endpaper
+mpprice1912-0007,ok,portrait,,man in fur hat (author?)
+mpprice1912-0008,reject,,,library stamp DISCARDED
+mpprice1912-0032,ok,people,,emigrants arriving at station
+mpprice1912-0042,ok,view,,town street
+mpprice1912-0054,ok,people,,men at building
+mpprice1912-0080,ok,people,,cart crossing ford
+mpprice1912-0094,ok,people,,crowd in town street
+mpprice1912-0132,ok,people,1,old peasant family at log house
+mpprice1912-0138,rot_cw,people,,group of women
+mpprice1912-0148,ok,view,,village street
+mpprice1912-0156,ok,view,,birch forest
+mpprice1912-0160,ok,view,,forest undergrowth
+mpprice1912-0174,ok,view,,house
+mpprice1912-0190,ok,people,1,"Mongols, Tatars and Siberians at table"
+mpprice1912-0208,ok,people,,boats on lake
+mpprice1912-0314,ok,people,,people by lake
+mpprice1912-0324,ok,people,1,Mongols/natives at market or camp
+mpprice1912-0358,ok,map,,"ethnographic map of Siberia (Finns, Tartars, Mongols, Slavs), colour"
+mpprice1912-0360,ok,map,,key map
+scarfoglio1909-0001,reject,,,library bookplate/seal (Boston Public Library)
+scarfoglio1909-0002,reject,,,spine/strip with library stamps
+scarfoglio1909-0009,ok,portrait,,author portrait (Scarfoglio)
+scarfoglio1909-0038,ok,people,,men at car in desert
+scarfoglio1909-0046,ok,people,,two motorists
+scarfoglio1909-0056,ok,people,,riders on horses
+scarfoglio1909-0064,ok,people,,man holding dog/animal
+scarfoglio1909-0072,ok,people,,car with crowd at building
+scarfoglio1909-0078,ok,view,,car in rocky desert
+scarfoglio1909-0086,rot_cw,people,,people on bridge; dark
+scarfoglio1909-0094,ok,view,,railway bridge
+scarfoglio1909-0104,ok,people,,hunter with game
+scarfoglio1909-0110,ok,people,,car at blacksmith wagon shop
+scarfoglio1909-0116,ok,people,,men at car
+scarfoglio1909-0120,ok,people,,man repairing car; dark
+scarfoglio1909-0126,rot_cw,people,,car with people
+scarfoglio1909-0130,ok,view,,scrub landscape
+scarfoglio1909-0136,ok,people,,car in crowd; dark
+scarfoglio1909-0142,ok,view,,car on rocky ground
+scarfoglio1909-0148,ok,view,,canyon road
+scarfoglio1909-0152,ok,object,,car close-up
+scarfoglio1909-0158,rot_cw,people,,car with people
+scarfoglio1909-0162,ok,people,,car on track with men
+scarfoglio1909-0168,ok,people,,"car stuck, men pushing"
+scarfoglio1909-0174,ok,people,,car on railway sleepers
+scarfoglio1909-0178,ok,view,,scrub gully
+scarfoglio1909-0182,ok,view,,"animal skeleton in desert, car"
+scarfoglio1909-0186,ok,view,,farmstead on steppe
+scarfoglio1909-0190,ok,people,,family at stone house
+scarfoglio1909-0194,ok,people,,well with barrels and car
+scarfoglio1909-0198,ok,view,,tent camp in hills
+scarfoglio1909-0202,ok,view,,car on hillside
+scarfoglio1909-0206,ok,view,,mountain road
+scarfoglio1909-0212,ok,people,,car with motorists
+scarfoglio1909-0216,ok,view,,"car on hillside, small"
+scarfoglio1909-0222,ok,object,,car close-up; dark
+scarfoglio1909-0228,ok,people,,men at car by building
+scarfoglio1909-0236,ok,people,,car on ferry/boat
+scarfoglio1909-0242,ok,view,,town street
+scarfoglio1909-0260,ok,people,,"men on path, flag"
+scarfoglio1909-0266,rot_cw,people,,car on railway bridge
+scarfoglio1909-0278,ok,view,,Mountain road in Japan
+scarfoglio1909-0336,ok,view,,bridge over river
+scarfoglio1909-0356,ok,people,,car on forest road
+scarfoglio1909-0366,rot_cw,people,,crowd around car; dark
+scarfoglio1909-0374,ok,people,,men at car
+scarfoglio1909-0384,ok,people,,car stuck in mud
+scarfoglio1909-0392,ok,view,,car on ferry raft
+scarfoglio1909-0400,ok,view,,"Russian church, town (Siberia/Manchuria)"
+scarfoglio1909-0426,ok,object,,carts by house
+hawes1903-0001,reject,,,bookplate Parliamentary Library Western Australia
+hawes1903-0009,ok,portrait,1,native woman with necklace (Ainu/Gilyak?)
+hawes1903-0046,ok,people,,Korean market
+hawes1903-0050,ok,view,,Korean house with people
+hawes1903-0054,ok,object,,embroidered hat/cap
+hawes1903-0078,ok,people,,Chinese children group
+hawes1903-0084,ok,people,,soldiers in trench
+hawes1903-0092,ok,view,,
+hawes1903-0118,ok,people,,
+hawes1903-0136,ok,portrait,,
+hawes1903-0144,ok,view,,
+hawes1903-0146,ok,view,,
+hawes1903-0158,ok,map,,
+hawes1903-0170,ok,view,,
+hawes1903-0174,ok,view,,
+hawes1903-0180,ok,people,,
+hawes1903-0188,ok,map,,
+hawes1903-0198,ok,portrait,,
+hawes1903-0204,ok,people,,
+hawes1903-0214,ok,portrait,,
+hawes1903-0230,ok,portrait,1,
+hawes1903-0236,ok,people,,
+hawes1903-0254,ok,people,,
+hawes1903-0274,ok,view,,
+hawes1903-0278,ok,object,,
+hawes1903-0280,rot_ccw,people,,
+hawes1903-0284,rot_ccw,view,,
+hawes1903-0290,ok,object,,
+hawes1903-0302,ok,object,,
+hawes1903-0307,ok,object,,
+hawes1903-0320,ok,people,,
+hawes1903-0324,ok,object,,
+hawes1903-0338,ok,object,,
+hawes1903-0344,ok,people,,
+hawes1903-0350,rot_ccw,people,,
+hawes1903-0354,ok,portrait,1,
+hawes1903-0370,ok,people,,
+hawes1903-0380,ok,view,,
+hawes1903-0386,ok,view,,
+hawes1903-0390,ok,portrait,,
+hawes1903-0400,ok,people,,
+hawes1903-0420,ok,view,,
+hawes1903-0426,rot_ccw,people,,
+hawes1903-0432,ok,people,,
+hawes1903-0438,ok,view,,
+hawes1903-0452,ok,people,,
+hawes1903-0456,ok,view,,
+hawes1903-0458,ok,people,,
+hawes1903-0462,ok,people,,
+hawes1903-0464,ok,view,,
+hawes1903-0468,ok,portrait,,
+hawes1903-0472,ok,people,,
+hawes1903-0478,ok,people,,
+hawes1903-0490,ok,portrait,,
+hawes1903-0496,ok,portrait,,
+hawes1903-0500,ok,view,,
+hawes1903-0524,ok,view,,
+hawes1903-0540,ok,view,,
+hawes1903-0554,ok,people,1,
+hawes1903-0572,ok,portrait,,
+hawes1903-0582,ok,people,,
+hawes1903-0588,ok,people,1,
+hawes1903-0596,ok,view,,
+hawes1903-0600,ok,people,,
+hawes1903-0602,ok,portrait,,
+hawes1903-0606,ok,portrait,,
+hawes1903-0610,ok,people,,
+hawes1903-0612,ok,people,,
+hawes1903-0618,ok,view,,
+hawes1903-0624,rot_ccw,view,,
+bordeaux1904-0005,reject,,,title page
+bordeaux1904-0299,ok,map,,"map fragment, cropped"
+nansen1914-0002,reject,,,library date due slip
+nansen1914-0007,ok,people,,
+nansen1914-0030,ok,people,,
+nansen1914-0031,ok,view,,
+nansen1914-0040,ok,map,,
+nansen1914-0041,ok,map,,
+nansen1914-0052,ok,people,,
+nansen1914-0053,ok,people,1,
+nansen1914-0064,ok,people,,
+nansen1914-0065,ok,people,,
+nansen1914-0070,ok,view,,
+nansen1914-0071,ok,view,,
+nansen1914-0078,rot_ccw,nature,,
+nansen1914-0079,ok,people,,
+nansen1914-0094,ok,view,,
+nansen1914-0095,ok,view,,camel on ship deck
+nansen1914-0124,ok,people,1,
+nansen1914-0125,ok,people,,
+nansen1914-0132,ok,portrait,,
+nansen1914-0133,ok,people,,
+nansen1914-0140,ok,portrait,,
+nansen1914-0141,ok,view,,
+nansen1914-0158,ok,portrait,1,
+nansen1914-0159,ok,people,,
+nansen1914-0164,ok,people,,
+nansen1914-0165,rot_cw,people,,
+nansen1914-0172,ok,people,,
+nansen1914-0173,ok,view,,
+nansen1914-0180,ok,portrait,1,
+nansen1914-0181,ok,view,,
+nansen1914-0194,ok,view,,
+nansen1914-0195,ok,view,,
+nansen1914-0200,ok,people,,
+nansen1914-0201,ok,people,,
+nansen1914-0204,ok,view,,
+nansen1914-0205,ok,view,,
+nansen1914-0212,ok,view,,
+nansen1914-0213,ok,view,,
+nansen1914-0236,ok,portrait,,
+nansen1914-0237,ok,people,,
+nansen1914-0244,ok,people,,
+nansen1914-0245,ok,view,,
+nansen1914-0252,rot_cw,people,,
+nansen1914-0253,ok,people,,
+nansen1914-0260,rot_cw,people,,
+nansen1914-0261,ok,view,,
+nansen1914-0270,ok,people,1,
+nansen1914-0271,ok,people,,
+nansen1914-0288,rot_cw,people,,
+nansen1914-0289,ok,people,,
+nansen1914-0294,ok,people,,
+nansen1914-0295,ok,people,,
+nansen1914-0300,ok,view,,
+nansen1914-0301,ok,view,,
+nansen1914-0310,ok,view,,
+nansen1914-0311,ok,portrait,,
+nansen1914-0324,ok,view,,
+nansen1914-0325,rot_cw,view,,
+nansen1914-0330,ok,view,,
+nansen1914-0331,ok,view,,
+nansen1914-0338,rot_cw,view,,
+nansen1914-0339,ok,view,,
+nansen1914-0344,ok,view,,
+nansen1914-0345,rot_cw,people,,
+nansen1914-0350,ok,people,,
+nansen1914-0351,ok,view,,
+nansen1914-0398,ok,map,,
+nansen1914-0399,ok,map,,
+nansen1914-0402,ok,view,,
+nansen1914-0403,ok,portrait,,
+nansen1914-0414,ok,people,,
+nansen1914-0415,rot_cw,view,,
+nansen1914-0426,ok,view,,
+nansen1914-0427,ok,people,,
+nansen1914-0444,rot_cw,people,,orientation uncertain
+nansen1914-0445,ok,view,,
+nansen1914-0472,ok,view,,
+nansen1914-0473,ok,people,1,
+nansen1914-0478,ok,people,,
+nansen1914-0479,ok,nature,,
+nansen1914-0488,ok,view,,
+nansen1914-0489,ok,view,,
+nansen1914-0494,ok,view,,
+nansen1914-0495,ok,view,,
+nansen1914-0504,ok,view,,
+nansen1914-0505,ok,people,,
+nansen1914-0510,ok,view,,
+nansen1914-0511,ok,view,,
+nansen1914-0516,ok,view,,
+nansen1914-0517,ok,view,,
+nansen1914-0522,rot_cw,view,,tunnel interior
+nansen1914-0523,rot_cw,view,,railway bridge/wreck
+nansen1914-0530,ok,view,,
+nansen1914-0531,ok,view,,
+nansen1914-0536,ok,view,,
+nansen1914-0537,ok,people,,
+nansen1914-0544,ok,view,,
+nansen1914-0545,ok,view,,
+nansen1914-0548,ok,people,,
+nansen1914-0549,ok,people,,
+nansen1914-0554,ok,view,,
+nansen1914-0580,ok,object,,temperature chart (diagram)
+nansen1914-0586,ok,map,,"fragment of map, orientation uncertain"
+nansen1914-0587,ok,map,,
+haviland1915-0007,ok,view,,
+haviland1915-0032,rot_cw,view,,
+haviland1915-0060,ok,view,,
+haviland1915-0124,ok,people,1,
+haviland1915-0166,ok,nature,,
+haviland1915-0182,ok,nature,,"unclear, animal in grass"
+haviland1915-0192,ok,object,,
+haviland1915-0212,ok,portrait,,
+haviland1915-0226,ok,nature,,
+haviland1915-0248,ok,nature,,reindeer
+haviland1915-0258,ok,nature,,"unclear, nest/bird in grass"
+haviland1915-0272,ok,nature,,
+haviland1915-0290,ok,people,,
+haviland1915-0300,ok,people,,
+haviland1915-0322,ok,object,,sledge/shrine with antlers
+haviland1915-0344,ok,view,,
+bergman1927-0009,ok,portrait,,
+bergman1927-0019,ok,map,,
+bergman1927-0020,ok,map,,
+bergman1927-0070,ok,people,,
+bergman1927-0086,ok,object,,
+bergman1927-0096,ok,portrait,,
+bergman1927-0122,ok,view,,
+bergman1927-0133,rot_cw,people,,dog sledge in snow
+bergman1927-0158,rot_cw,view,,dog team; orientation fairly sure
+bergman1927-0176,ok,view,,
+bergman1927-0186,rot_cw,people,,
+bergman1927-0196,rot_cw,view,,
+bergman1927-0214,ok,portrait,,
+bergman1927-0224,ok,people,,
+bergman1927-0234,rot_cw,people,,shaman drum
+bergman1927-0244,ok,people,,
+bergman1927-0254,rot_cw,people,,
+bergman1927-0288,ok,people,,
+bergman1927-0323,ok,people,,
+bergman1927-0325,ok,people,,not Siberia (tropical dance)
+bergman1927-0326,ok,people,,not Siberia (tropics)
+bergman1927-0328,ok,people,,not Siberia (magazine photo)
+grondijs1922-0005,ok,portrait,,
+grondijs1922-0018,ok,portrait,,
+grondijs1922-0027,ok,map,,
+grondijs1922-0028,ok,map,,
+grondijs1922-0036,ok,people,,
+grondijs1922-0038,ok,map,,"WWI front map (Volhynia), not Siberia"
+grondijs1922-0046,rot_cw,people,,
+grondijs1922-0056,ok,people,,
+grondijs1922-0066,ok,people,,
+grondijs1922-0076,ok,people,,
+grondijs1922-0094,ok,view,,battlefield with bodies
+grondijs1922-0120,ok,people,,
+grondijs1922-0130,ok,portrait,,"pencil sketch, tilted; orientation uncertain"
+grondijs1922-0132,ok,map,,
+grondijs1922-0148,ok,view,,
+grondijs1922-0166,rot_cw,people,,soldiers in trench
+grondijs1922-0176,ok,people,,
+grondijs1922-0196,ok,people,,
+grondijs1922-0206,ok,map,,Black Sea region map
+grondijs1922-0214,ok,portrait,,
+grondijs1922-0224,ok,people,,
+grondijs1922-0242,ok,people,,
+grondijs1922-0260,ok,people,,
+grondijs1922-0278,ok,people,,
+grondijs1922-0296,ok,people,,"dark, unclear subject, may be rotated"
+grondijs1922-0306,ok,people,,
+grondijs1922-0316,ok,portrait,,
+grondijs1922-0326,ok,people,,
+grondijs1922-0336,ok,portrait,,
+grondijs1922-0354,ok,people,,
+grondijs1922-0372,ok,people,,
+grondijs1922-0390,ok,people,,
+grondijs1922-0408,ok,people,,
+grondijs1922-0442,ok,view,,
+grondijs1922-0460,ok,portrait,,
+grondijs1922-0478,ok,people,,
+grondijs1922-0496,ok,map,,
+grondijs1922-0504,ok,view,,
+grondijs1922-0514,ok,view,,
+grondijs1922-0532,ok,people,,
+grondijs1922-0550,ok,people,,
+grondijs1922-0568,ok,people,,grim scene
+grondijs1922-0585,ok,map,,
+grondijs1922-0586,ok,map,,
+grondijs1922-0594,ok,people,,
+grondijs1922-0604,ok,portrait,,
+grondijs1922-0622,ok,portrait,,
+drei1925-0000,ok,people,1,"drawing, reindeer sledge"
+drei1925-0010,ok,nature,,animal swimming
+drei1925-0014,ok,nature,,"bear in grass, blurry"
+drei1925-0024,ok,view,,
+drei1925-0032,ok,people,,
+drei1925-0038,ok,view,,
+drei1925-0042,ok,view,,hut in forest
+drei1925-0050,ok,view,,
+drei1925-0056,ok,nature,,trophy head
+drei1925-0062,ok,nature,,trophy head
+drei1925-0070,ok,people,,
+drei1925-0078,ok,nature,,elk
+drei1925-0090,ok,people,,
+drei1925-0092,ok,nature,,"trophy antlers, text edge"
+drei1925-0094,ok,nature,,"trophy antlers, text edge"
+drei1925-0102,ok,people,,
+drei1925-0106,ok,object,,
+drei1925-0112,ok,portrait,,
+drei1925-0118,ok,people,,
+drei1925-0126,ok,view,,
+drei1925-0132,ok,people,,
+drei1925-0138,ok,object,,"elongated object drawing, may belong horizontal"
+drei1925-0140,ok,view,,
+drei1925-0154,ok,view,,
+drei1925-0160,ok,view,,
+drei1925-0164,ok,view,,
+drei1925-0168,ok,people,,
+drei1925-0176,ok,people,,
+drei1925-0182,ok,view,,
+drei1925-0190,ok,view,,
+drei1925-0198,ok,people,,
+drei1925-0206,ok,view,,
+drei1925-0212,ok,object,,cart with game
+drei1925-0220,ok,people,,
+drei1925-0224,ok,nature,,elk in pond
+drei1925-0234,rot_cw,people,,
+drei1925-0244,ok,view,,
+drei1925-0256,ok,view,,
+drei1925-0262,ok,people,,
+drei1925-0268,ok,view,,
+price1892-0007,ok,portrait,,
+price1892-0010,ok,view,,
+price1892-0032,ok,view,,
+price1892-0040,ok,people,,
+price1892-0043,ok,people,,
+price1892-0046,ok,portrait,,
+price1892-0049,ok,people,,
+price1892-0058,ok,view,,
+price1892-0060,ok,people,,
+price1892-0062,ok,view,,
+price1892-0068,ok,portrait,,
+price1892-0070,ok,people,,
+price1892-0073,ok,view,,
+price1892-0076,ok,view,,
+price1892-0077,ok,portrait,,
+price1892-0085,ok,portrait,,
+price1892-0087,ok,view,,
+price1892-0088,ok,portrait,,
+price1892-0092,ok,people,,
+price1892-0094,ok,portrait,,
+price1892-0097,ok,people,,
+price1892-0099,ok,people,,
+price1892-0103,ok,view,,
+price1892-0110,ok,people,,
+price1892-0124,rot_cw,view,,
+price1892-0127,ok,view,,
+price1892-0131,ok,people,,
+price1892-0133,rot_cw,view,,
+price1892-0134,ok,people,,
+price1892-0136,ok,portrait,,
+price1892-0138,ok,portrait,,
+price1892-0141,ok,people,,
+price1892-0142,ok,portrait,,
+price1892-0144,ok,people,1,
+price1892-0152,ok,people,,
+price1892-0154,ok,view,,
+price1892-0159,ok,people,,
+price1892-0166,ok,portrait,,
+price1892-0169,ok,people,,
+price1892-0172,ok,people,,
+price1892-0174,ok,people,,
+price1892-0177,ok,people,,
+price1892-0182,ok,view,,
+price1892-0183,ok,people,,
+price1892-0184,ok,people,,
+price1892-0190,ok,view,,
+price1892-0193,ok,people,,
+price1892-0196,ok,people,,
+price1892-0199,ok,people,,
+price1892-0204,ok,people,,
+price1892-0205,ok,view,,interior
+price1892-0207,ok,people,,
+price1892-0214,ok,people,,convict column on snow
+price1892-0218,ok,people,,
+price1892-0221,ok,people,,
+price1892-0223,ok,portrait,,
+price1892-0225,ok,people,,
+price1892-0229,ok,people,,
+price1892-0230,ok,people,,
+price1892-0237,ok,portrait,,
+price1892-0247,ok,people,,
+price1892-0250,ok,people,,
+price1892-0259,ok,people,1,troika
+price1892-0267,ok,view,,
+price1892-0268,ok,view,,
+price1892-0274,ok,portrait,,
+price1892-0275,ok,view,,interior
+price1892-0277,ok,view,,
+price1892-0280,ok,people,,
+price1892-0283,ok,portrait,,
+price1892-0284,ok,view,,
+price1892-0285,ok,people,,
+price1892-0287,ok,people,,
+price1892-0292,ok,people,,
+price1892-0295,rot_cw,object,,banknote facsimile
+price1892-0298,rot_cw,object,,banknote reverse; direction uncertain
+price1892-0301,ok,nature,,horse head with duga
+price1892-0309,ok,portrait,,
+price1892-0312,ok,people,,
+price1892-0314,ok,object,,handwritten letter facsimile
+price1892-0315,ok,object,,handwritten letter facsimile
+price1892-0316,ok,object,,handwritten letter facsimile
+price1892-0317,ok,object,,handwritten letter facsimile
+price1892-0319,ok,people,,includes text column
+price1892-0326,ok,people,,
+price1892-0329,ok,view,,
+price1892-0331,ok,view,,
+price1892-0332,ok,view,,
+price1892-0336,ok,view,,
+price1892-0340,ok,view,,
+price1892-0342,ok,view,,
+price1892-0344,ok,people,,
+price1892-0346,ok,view,,
+price1892-0349,ok,view,,
+price1892-0351,ok,object,,ox cart
+price1892-0354,ok,portrait,,
+price1892-0359,ok,view,,
+price1892-0362,ok,people,,
+price1892-0366,ok,portrait,,sketch with autograph
+price1892-0368,ok,people,,
+price1892-0372,ok,view,,
+price1892-0373,ok,portrait,,
+price1892-0379,ok,people,,
+price1892-0391,ok,portrait,1,musician with morin khuur
+price1892-0393,ok,view,,
+price1892-0404,ok,people,,
+price1892-0405,ok,people,,
+price1892-0408,ok,people,,
+price1892-0417,ok,people,,
+price1892-0420,ok,people,,
+price1892-0423,rot_cw,people,,prisoners in cangues
+price1892-0429,ok,portrait,1,Mongol woman in headdress
+price1892-0432,ok,view,,
+price1892-0435,ok,people,,
+price1892-0440,ok,people,,
+price1892-0444,ok,view,,
+price1892-0448,ok,view,,
+price1892-0449,ok,people,,
+price1892-0452,ok,people,,
+price1892-0455,ok,view,,
+price1892-0457,ok,view,,"caravan on steppe, nearly empty"
+price1892-0461,ok,people,,
+price1892-0464,ok,people,,
+price1892-0474,ok,view,,
+price1892-0482,ok,people,,
+price1892-0486,ok,view,,
+price1892-0488,ok,people,,
+price1892-0492,ok,people,,
+price1892-0496,ok,view,,Great Wall
+price1892-0505,ok,view,,
+price1892-0513,ok,view,,
+price1892-0518,ok,people,,
+price1892-0528,ok,view,,
+price1892-0533,ok,view,,
+price1892-0534,ok,map,,
+wlad1918-0002,reject,,,text page
+wlad1918-0063,reject,,,text page (Fraktur)
+wlad1918-0089,reject,,,text page (Fraktur)
+wlad1918-0124,reject,,,endpaper with publisher advertisement
+lethbridge1915-0007,ok,view,,
+lethbridge1915-0032,ok,people,,
+lethbridge1915-0042,ok,portrait,,
+lethbridge1915-0050,ok,people,,
+lethbridge1915-0062,ok,view,,
+lethbridge1915-0066,ok,people,,
+lethbridge1915-0070,ok,view,,
+lethbridge1915-0078,ok,people,,
+lethbridge1915-0084,ok,people,,
+lethbridge1915-0092,ok,view,,
+lethbridge1915-0096,ok,view,,
+lethbridge1915-0100,ok,view,,
+lethbridge1915-0104,ok,nature,,gulls by fence
+lethbridge1915-0108,ok,people,,
+lethbridge1915-0114,ok,view,,cemetery crosses
+lethbridge1915-0118,ok,view,,
+lethbridge1915-0122,ok,portrait,,
+lethbridge1915-0126,ok,view,,
+lethbridge1915-0130,ok,people,,
+lethbridge1915-0146,ok,view,,
+lethbridge1915-0152,ok,view,,
+lethbridge1915-0158,ok,view,,
+lethbridge1915-0162,ok,people,,
+lethbridge1915-0166,ok,view,,
+lethbridge1915-0176,ok,people,,
+lethbridge1915-0184,ok,view,,
+lethbridge1915-0190,ok,view,,
+lethbridge1915-0198,ok,view,,
+lethbridge1915-0210,ok,view,,
+lethbridge1915-0224,ok,view,,
+lethbridge1915-0230,ok,view,,two photos on one crop
+lethbridge1915-0236,ok,people,,
+lethbridge1915-0242,ok,people,1,
+lethbridge1915-0246,ok,people,,
+lethbridge1915-0252,ok,view,,
+lethbridge1915-0262,ok,view,,
+lethbridge1915-0266,ok,view,,
+lethbridge1915-0270,ok,view,,
+lethbridge1915-0274,ok,view,,
+lethbridge1915-0280,ok,view,,
+lethbridge1915-0284,ok,view,,
+lethbridge1915-0288,ok,view,,
+lethbridge1915-0292,ok,view,,
+lethbridge1915-0308,ok,view,,
+lethbridge1915-0314,ok,view,,
+lethbridge1915-0324,ok,people,,
+lethbridge1915-0330,ok,people,,
+lethbridge1915-0342,ok,view,,
+lethbridge1915-0352,ok,people,,second photo partly cut below
+lethbridge1915-0362,ok,people,1,
+lethbridge1915-0372,ok,view,,
+lethbridge1915-0382,ok,view,,
+lethbridge1915-0390,ok,people,,
+lethbridge1915-0394,ok,people,,
+lethbridge1915-0398,ok,view,,
+lethbridge1915-0402,ok,people,,
+lethbridge1915-0406,ok,view,,
+lethbridge1915-0412,ok,view,,
+lethbridge1915-0418,ok,people,,
+lethbridge1915-0426,ok,view,,
+lethbridge1915-0436,ok,view,,
+turner1905-0007,ok,portrait,,
+turner1905-0041,ok,people,,
+turner1905-0050,ok,view,,
+turner1905-0059,ok,view,,
+turner1905-0095,ok,people,,
+turner1905-0115,ok,view,,
+turner1905-0131,ok,view,,
+turner1905-0158,ok,view,,
+turner1905-0169,ok,view,,
+turner1905-0185,ok,view,,dark print
+turner1905-0189,ok,view,,
+turner1905-0193,ok,people,,
+turner1905-0201,ok,view,,
+turner1905-0209,ok,people,1,
+turner1905-0213,ok,object,,"unclear: hide-covered tent close-up, dark"
+turner1905-0216,ok,view,,
+turner1905-0220,ok,view,,
+turner1905-0224,ok,view,,
+turner1905-0228,ok,view,,
+turner1905-0232,ok,view,,
+turner1905-0236,ok,portrait,,
+turner1905-0240,ok,view,,
+turner1905-0249,ok,view,,
+turner1905-0253,ok,view,,
+turner1905-0257,ok,view,,
+turner1905-0266,ok,people,,
+turner1905-0270,ok,view,,
+turner1905-0287,ok,view,,
+turner1905-0317,rot_cw,people,,
+turner1905-0323,ok,view,,
+turner1905-0339,ok,people,,
+turner1905-0343,ok,view,,
+fell1916-0007,ok,portrait,,
+fell1916-0038,ok,view,1,
+fell1916-0044,ok,view,,
+fell1916-0048,ok,view,,
+fell1916-0052,rot_cw,view,,
+fell1916-0058,ok,people,,
+fell1916-0062,ok,view,,
+fell1916-0068,ok,portrait,,
+fell1916-0076,ok,view,,
+fell1916-0082,rot_cw,view,,
+fell1916-0098,ok,people,,
+fell1916-0102,ok,people,,
+fell1916-0126,rot_cw,view,,
+fell1916-0140,ok,people,1,
+fell1916-0162,rot_cw,people,,
+fell1916-0184,ok,view,,
+fell1916-0190,ok,people,,
+fell1916-0194,ok,view,,
+fell1916-0206,rot_cw,view,,
+fell1916-0212,rot_cw,view,,
+fell1916-0218,ok,people,1,
+fell1916-0224,ok,view,,
+fell1916-0228,ok,people,,
+fell1916-0232,ok,people,1,
+fell1916-0242,ok,view,,
+fell1916-0246,rot_cw,people,,
+fell1916-0252,rot_cw,people,,
+fell1916-0268,ok,view,,
+fell1916-0280,ok,people,,
+fell1916-0286,rot_cw,view,,
+fell1916-0290,ok,people,,
+harrison1910-0025,ok,portrait,,
+harrison1910-0033,ok,portrait,,
+harrison1910-0042,ok,portrait,,
+harrison1910-0048,ok,portrait,,
+harrison1910-0058,ok,portrait,,
+harrison1910-0063,ok,portrait,,
+harrison1910-0070,ok,portrait,,
+harrison1910-0076,ok,portrait,,
+harrison1910-0096,ok,view,,
+harrison1910-0103,ok,view,,
+harrison1910-0112,ok,view,,
+harrison1910-0125,ok,people,,
+harrison1910-0136,ok,view,,
+harrison1910-0143,ok,view,,
+harrison1910-0150,ok,view,,
+harrison1910-0158,ok,people,,
+harrison1910-0167,ok,view,,
+harrison1910-0171,ok,view,,
+harrison1910-0175,ok,people,,
+harrison1910-0182,ok,view,,
+harrison1910-0206,ok,view,,
+harrison1910-0222,ok,portrait,,
+harrison1910-0228,ok,view,,
+harrison1910-0257,ok,view,,
+harrison1910-0266,ok,view,,
+harrison1910-0289,ok,portrait,,
+harrison1910-0294,ok,portrait,,
+harrison1910-0302,ok,portrait,,
+harrison1910-0348,ok,view,,
+harrison1910-0356,ok,view,,
+harrison1910-0362,ok,view,,
+harrison1910-0368,ok,object,,
+harrison1910-0381,ok,view,,
+harrison1910-0428,ok,portrait,,
+harrison1910-0448,ok,view,,
+harrison1910-0454,ok,view,,
+harrison1910-0458,ok,people,,
+harrison1910-0468,ok,portrait,,
+harrison1910-0480,ok,view,,
+harrison1910-0498,ok,view,,
+harrison1910-0532,ok,portrait,,
+harrison1910-0538,ok,portrait,,
+harrison1910-0542,ok,portrait,,crop cuts off upper face
+harrison1910-0550,ok,portrait,,
+harrison1910-0554,ok,portrait,,
+harrison1910-0558,ok,portrait,,
+harrison1910-0566,ok,portrait,,
+harrison1910-0572,ok,portrait,,
+harrison1910-0590,ok,view,,
+harrison1910-0602,ok,view,,
+harrison1910-0670,ok,map,,
+harrison1910-0672,ok,map,,
+harrison1910-0674,ok,map,,
+etherton1911-0007,ok,portrait,,
+etherton1911-0029,ok,view,,
+etherton1911-0032,ok,portrait,,
+etherton1911-0036,ok,view,,
+etherton1911-0038,ok,view,,
+etherton1911-0041,ok,view,,
+etherton1911-0043,ok,view,,
+etherton1911-0046,ok,view,,
+etherton1911-0048,ok,view,,
+etherton1911-0056,ok,nature,,caged animal
+etherton1911-0057,ok,view,,
+etherton1911-0058,ok,view,,
+etherton1911-0060,ok,view,,
+etherton1911-0062,ok,view,,
+etherton1911-0063,ok,view,,
+etherton1911-0065,ok,people,,
+etherton1911-0067,ok,view,,
+etherton1911-0070,ok,view,,
+etherton1911-0071,ok,people,,
+etherton1911-0075,ok,view,,
+etherton1911-0076,ok,view,,
+etherton1911-0078,ok,people,1,
+etherton1911-0079,ok,people,,
+etherton1911-0080,ok,people,,
+etherton1911-0084,ok,view,,
+etherton1911-0086,ok,view,,
+etherton1911-0094,ok,view,,
+etherton1911-0098,ok,view,,
+etherton1911-0100,ok,view,,
+etherton1911-0110,ok,view,,
+etherton1911-0113,ok,view,,
+etherton1911-0130,ok,view,,
+etherton1911-0136,ok,people,,
+etherton1911-0141,ok,view,,
+etherton1911-0146,ok,people,,
+etherton1911-0154,ok,people,,
+etherton1911-0157,ok,view,,
+etherton1911-0164,ok,people,,
+etherton1911-0167,ok,people,,
+etherton1911-0168,ok,view,,
+etherton1911-0173,ok,view,,
+etherton1911-0176,ok,view,,
+etherton1911-0177,ok,view,,
+etherton1911-0180,ok,view,,
+etherton1911-0182,ok,people,,
+etherton1911-0187,ok,people,,снято с главной при проверке подборки
+etherton1911-0192,ok,view,,
+etherton1911-0194,ok,view,,
+etherton1911-0199,ok,people,,
+etherton1911-0204,ok,view,,
+etherton1911-0206,ok,people,,
+etherton1911-0214,ok,people,1,
+etherton1911-0216,ok,people,,
+etherton1911-0224,ok,view,,
+etherton1911-0225,ok,view,,
+etherton1911-0234,ok,portrait,,
+etherton1911-0236,ok,portrait,,
+etherton1911-0238,rot_cw,nature,,four antlered heads; antlers point left
+etherton1911-0241,ok,view,,
+etherton1911-0243,ok,view,,
+etherton1911-0245,ok,view,,
+etherton1911-0248,ok,nature,,
+etherton1911-0252,ok,view,,
+etherton1911-0258,ok,view,,
+etherton1911-0259,ok,view,,
+etherton1911-0261,ok,view,,
+etherton1911-0263,ok,view,,
+etherton1911-0265,ok,nature,,
+etherton1911-0268,ok,view,,
+etherton1911-0270,ok,view,,
+etherton1911-0272,ok,people,,
+etherton1911-0276,ok,nature,,
+etherton1911-0279,ok,view,,
+etherton1911-0284,ok,nature,,
+etherton1911-0287,ok,view,,
+etherton1911-0290,ok,view,,
+etherton1911-0294,ok,people,,
+etherton1911-0296,ok,view,,
+etherton1911-0299,ok,view,,
+etherton1911-0301,ok,view,,
+etherton1911-0304,ok,nature,,
+etherton1911-0308,ok,people,,
+etherton1911-0310,ok,view,,
+etherton1911-0311,ok,view,,
+etherton1911-0318,ok,view,,
+etherton1911-0322,ok,portrait,1,
+etherton1911-0323,ok,view,,
+etherton1911-0329,ok,people,,
+etherton1911-0334,ok,view,,
+etherton1911-0336,ok,view,,
+etherton1911-0342,ok,people,,
+etherton1911-0344,ok,view,,
+etherton1911-0348,ok,view,,
+etherton1911-0352,ok,view,,
+etherton1911-0356,ok,view,,
+etherton1911-0358,ok,people,,
+etherton1911-0364,ok,people,,
+etherton1911-0368,ok,view,,
+etherton1911-0370,ok,view,,
+etherton1911-0376,ok,view,,
+etherton1911-0384,ok,people,,
+etherton1911-0388,ok,view,,
+etherton1911-0390,ok,view,,
+etherton1911-0392,ok,people,,
+etherton1911-0394,ok,portrait,,
+etherton1911-0396,ok,people,,
+etherton1911-0410,ok,view,,
+etherton1911-0412,ok,people,,
+etherton1911-0418,ok,people,,
+etherton1911-0419,ok,people,,
+etherton1911-0424,ok,portrait,,
+etherton1911-0426,ok,people,,
+etherton1911-0430,ok,people,,
+etherton1911-0432,ok,view,,
+etherton1911-0435,ok,people,,
+etherton1911-0436,ok,view,,
+etherton1911-0440,ok,people,,
+etherton1911-0441,ok,people,,
+etherton1911-0442,ok,view,,
+etherton1911-0444,ok,people,,
+etherton1911-0446,ok,people,,
+etherton1911-0450,ok,map,,
+etherton1911-0452,ok,map,,fragment of fold-out map with blank paper
+ronaldshay1904-0026,rot_cw,view,,
+ronaldshay1904-0042,rot_cw,people,,
+ronaldshay1904-0060,ok,view,,
+ronaldshay1904-0064,ok,view,,
+ronaldshay1904-0074,ok,view,,
+ronaldshay1904-0082,ok,view,,
+ronaldshay1904-0106,ok,view,,
+ronaldshay1904-0110,ok,view,,
+ronaldshay1904-0118,ok,people,,
+ronaldshay1904-0150,rot_cw,view,,
+ronaldshay1904-0158,rot_cw,view,,
+ronaldshay1904-0174,ok,people,,
+ronaldshay1904-0186,reject,,,statistical table of imports/exports
+ronaldshay1904-0202,rot_cw,view,,
+ronaldshay1904-0220,ok,view,,
+ronaldshay1904-0232,rot_cw,view,,
+ronaldshay1904-0236,ok,view,,
+ronaldshay1904-0240,ok,view,,
+ronaldshay1904-0254,rot_cw,people,,
+ronaldshay1904-0260,ok,view,,
+ronaldshay1904-0264,ok,view,,
+ronaldshay1904-0270,ok,view,,
+ronaldshay1904-0280,rot_cw,view,,
+ronaldshay1904-0286,rot_cw,people,,
+ronaldshay1904-0300,ok,view,,
+ronaldshay1904-0304,rot_cw,view,,
+ronaldshay1904-0310,rot_cw,view,,
+ronaldshay1904-0316,ok,people,,
+ronaldshay1904-0320,ok,view,,
+ronaldshay1904-0326,ok,view,,
+ronaldshay1904-0332,rot_cw,people,,
+ronaldshay1904-0342,rot_cw,people,,
+ronaldshay1904-0352,ok,people,1,
+ronaldshay1904-0360,ok,view,,
+ronaldshay1904-0364,ok,view,,
+ronaldshay1904-0372,rot_cw,view,,
+ronaldshay1904-0384,ok,view,,
+ronaldshay1904-0396,rot_cw,view,,
+ronaldshay1904-0404,ok,view,,
+ronaldshay1904-0408,ok,view,,
+ronaldshay1904-0414,ok,people,,
+ronaldshay1904-0422,rot_cw,view,,
+ronaldshay1904-0430,ok,people,,
+ronaldshay1904-0436,ok,view,,
+ronaldshay1904-0460,ok,people,,
+ronaldshay1904-0484,ok,view,,
+ronaldshay1904-0492,ok,view,,
+ronaldshay1904-0500,ok,view,,
+ronaldshay1904-0506,ok,view,,
+ronaldshay1904-0512,ok,view,,
+ronaldshay1904-0518,rot_cw,view,,
+vaydevaya1906-0007,ok,portrait,,
+vaydevaya1906-0044,ok,view,,
+vaydevaya1906-0048,ok,portrait,,
+vaydevaya1906-0056,ok,portrait,,
+vaydevaya1906-0074,ok,view,,
+vaydevaya1906-0078,ok,view,,
+vaydevaya1906-0082,ok,view,,
+vaydevaya1906-0086,ok,view,1,
+vaydevaya1906-0090,ok,view,1,
+vaydevaya1906-0094,ok,people,,
+vaydevaya1906-0098,ok,portrait,,
+vaydevaya1906-0108,ok,view,,
+vaydevaya1906-0114,ok,view,,
+vaydevaya1906-0124,ok,view,,
+vaydevaya1906-0134,ok,view,,
+vaydevaya1906-0138,ok,view,,
+vaydevaya1906-0146,ok,view,,
+vaydevaya1906-0152,rot_cw,view,,
+vaydevaya1906-0178,ok,view,,
+vaydevaya1906-0200,ok,object,,fragment of a portrait (chest with medals) - likely partial crop
+vaydevaya1906-0230,rot_cw,view,,
+vaydevaya1906-0238,rot_cw,view,,
+vaydevaya1906-0244,ok,view,,
+vaydevaya1906-0256,ok,view,,
+vaydevaya1906-0270,ok,portrait,,
+vaydevaya1906-0276,ok,view,,
+vaydevaya1906-0330,ok,view,,
+vaydevaya1906-0340,ok,view,,
+vaydevaya1906-0346,ok,view,,
+vaydevaya1906-0364,rot_cw,view,,
+vaydevaya1906-0368,ok,object,,fragment of a portrait (lower part of oval: uniform and belt) - likely partial crop
+vaydevaya1906-0392,rot_cw,view,,
+vaydevaya1906-0398,ok,view,,
+vaydevaya1906-0406,ok,view,,
+vaydevaya1906-0412,ok,view,,
+vaydevaya1906-0422,ok,view,,
+vaydevaya1906-0434,ok,portrait,,
+vaydevaya1906-0454,ok,view,,
+vaydevaya1906-0460,ok,people,,
+vaydevaya1906-0502,ok,portrait,,
+niedieck1909-0007,ok,portrait,,
+niedieck1909-0024,ok,view,,
+niedieck1909-0029,ok,view,,
+niedieck1909-0033,ok,people,,
+niedieck1909-0034,ok,view,,
+niedieck1909-0036,ok,people,,
+niedieck1909-0037,ok,people,,
+niedieck1909-0038,ok,people,,
+niedieck1909-0041,ok,object,,
+niedieck1909-0042,ok,view,,
+niedieck1909-0044,ok,people,,
+niedieck1909-0045,ok,view,,
+niedieck1909-0046,ok,view,,
+niedieck1909-0048,ok,view,,
+niedieck1909-0050,ok,people,1,
+niedieck1909-0052,ok,people,,
+niedieck1909-0055,ok,people,1,
+niedieck1909-0057,ok,people,,
+niedieck1909-0061,ok,view,,
+niedieck1909-0065,ok,people,1,
+niedieck1909-0069,ok,view,,
+niedieck1909-0070,ok,view,,
+niedieck1909-0078,ok,view,,
+niedieck1909-0081,ok,view,,
+niedieck1909-0083,ok,view,,
+niedieck1909-0089,ok,view,,
+niedieck1909-0093,ok,view,,
+niedieck1909-0098,ok,view,,
+niedieck1909-0100,ok,view,,
+niedieck1909-0101,ok,view,,
+niedieck1909-0102,ok,people,,
+niedieck1909-0107,ok,view,,
+niedieck1909-0110,ok,nature,,
+niedieck1909-0113,ok,people,,
+niedieck1909-0114,ok,view,,
+niedieck1909-0116,ok,people,,
+niedieck1909-0119,ok,view,,
+niedieck1909-0121,ok,people,,
+niedieck1909-0122,ok,people,,
+niedieck1909-0123,ok,people,,
+niedieck1909-0124,ok,people,,
+niedieck1909-0126,ok,view,,
+niedieck1909-0128,ok,view,,
+niedieck1909-0129,ok,people,,
+niedieck1909-0131,ok,people,,
+niedieck1909-0132,ok,people,,
+niedieck1909-0136,ok,people,,
+niedieck1909-0139,ok,people,,
+niedieck1909-0141,ok,people,,
+niedieck1909-0142,ok,people,,
+niedieck1909-0145,ok,view,,
+niedieck1909-0147,ok,view,,
+niedieck1909-0148,ok,view,,
+niedieck1909-0151,ok,view,,
+niedieck1909-0153,ok,people,,
+niedieck1909-0158,ok,view,,
+niedieck1909-0161,ok,view,,
+niedieck1909-0162,ok,people,,
+niedieck1909-0168,ok,people,,
+niedieck1909-0173,ok,people,1,
+niedieck1909-0176,ok,view,,
+niedieck1909-0181,ok,people,,
+niedieck1909-0183,ok,people,,
+niedieck1909-0185,ok,people,,
+niedieck1909-0186,ok,view,,
+niedieck1909-0188,ok,view,,
+niedieck1909-0190,ok,view,,
+niedieck1909-0193,ok,people,,
+niedieck1909-0202,ok,view,,
+niedieck1909-0205,ok,view,,
+niedieck1909-0208,ok,people,1,
+niedieck1909-0210,ok,object,,whale bones/jaws erected on tundra
+niedieck1909-0212,ok,view,,
+niedieck1909-0215,rot_cw,view,,
+niedieck1909-0222,ok,view,,
+niedieck1909-0226,ok,view,,
+niedieck1909-0227,ok,people,,Аляска (Niedieck)
+niedieck1909-0230,ok,view,,
+niedieck1909-0234,ok,view,,
+niedieck1909-0240,ok,view,,
+niedieck1909-0268,ok,view,,
+niedieck1909-0270,ok,view,,
+niedieck1909-0272,ok,view,,
+niedieck1909-0275,ok,view,,
+niedieck1909-0278,ok,view,,
+niedieck1909-0282,ok,view,,
+niedieck1909-0289,ok,view,,
+niedieck1909-0294,ok,view,,
+niedieck1909-0296,ok,view,,
+niedieck1909-0299,ok,portrait,,"Аляска, эскимоска"
+niedieck1909-0302,ok,people,,
+niedieck1909-0305,ok,view,,
+niedieck1909-0309,ok,view,,
+niedieck1909-0311,ok,view,,
+niedieck1909-0312,ok,view,,
+niedieck1909-0315,ok,view,,
+niedieck1909-0316,ok,view,,
+niedieck1909-0317,ok,view,,
+niedieck1909-0319,ok,view,,
+niedieck1909-0321,ok,nature,,
+niedieck1909-0323,ok,nature,,
+niedieck1909-0324,ok,nature,,
+niedieck1909-0325,ok,view,,
+niedieck1909-0326,ok,view,,
+niedieck1909-0328,ok,view,,
+niedieck1909-0330,ok,people,,
+niedieck1909-0334,ok,view,,
+niedieck1909-0336,ok,view,,
+niedieck1909-0337,ok,view,,
+niedieck1909-0341,ok,people,,
+niedieck1909-0346,ok,people,,
+niedieck1909-0351,ok,nature,,
+niedieck1909-0353,ok,view,,
+niedieck1909-0356,ok,people,,
+niedieck1909-0359,ok,people,,
+niedieck1909-0361,ok,nature,,
+niedieck1909-0363,ok,view,,
+niedieck1909-0367,ok,view,,
+niedieck1909-0369,ok,view,,
+niedieck1909-0372,ok,view,,
+niedieck1909-0374,ok,view,,
+niedieck1909-0377,ok,view,,
+niedieck1909-0380,ok,view,,
+niedieck1909-0384,ok,view,,
+niedieck1909-0424,reject,,,фрагмент переплёта/обложки (полосатый узор)
+gerrare1903-0009,ok,view,,
+gerrare1903-0030,ok,people,,
+gerrare1903-0032,ok,object,,
+gerrare1903-0038,ok,people,,
+gerrare1903-0043,ok,people,,
+gerrare1903-0046,ok,view,,
+gerrare1903-0052,ok,view,,
+gerrare1903-0060,ok,view,,
+gerrare1903-0066,rot_cw,people,,
+gerrare1903-0072,ok,view,,
+gerrare1903-0080,ok,view,,
+gerrare1903-0083,ok,view,,
+gerrare1903-0085,ok,view,,
+gerrare1903-0090,rot_ccw,view,,
+gerrare1903-0092,ok,view,,
+gerrare1903-0094,ok,view,,
+gerrare1903-0098,ok,view,,
+gerrare1903-0100,rot_cw,view,,
+gerrare1903-0103,ok,view,,
+gerrare1903-0104,ok,view,,
+gerrare1903-0105,ok,people,,
+gerrare1903-0106,ok,view,,
+gerrare1903-0110,ok,people,,
+gerrare1903-0112,rot_cw,view,,
+gerrare1903-0114,ok,view,,
+gerrare1903-0116,ok,view,,
+gerrare1903-0120,ok,view,,
+gerrare1903-0124,rot_cw,view,,
+gerrare1903-0127,ok,view,,
+gerrare1903-0130,ok,view,,
+gerrare1903-0134,ok,people,,
+gerrare1903-0138,rot_cw,view,,
+gerrare1903-0142,ok,view,,
+gerrare1903-0144,ok,people,1,
+gerrare1903-0146,ok,view,,
+gerrare1903-0150,ok,view,,
+gerrare1903-0160,ok,people,,
+gerrare1903-0164,ok,view,,
+gerrare1903-0166,ok,view,,
+gerrare1903-0170,rot_cw,people,,"поворот определён по фигурам, без подписи"
+gerrare1903-0174,ok,view,,
+gerrare1903-0178,ok,view,,
+gerrare1903-0182,ok,view,,
+gerrare1903-0186,ok,view,,
+gerrare1903-0190,ok,view,,
+gerrare1903-0192,ok,view,,
+gerrare1903-0194,rot_cw,view,,
+gerrare1903-0198,ok,view,,
+gerrare1903-0201,ok,view,,
+gerrare1903-0204,ok,view,,
+gerrare1903-0206,ok,people,,
+gerrare1903-0207,ok,people,,
+gerrare1903-0212,rot_cw,view,,
+gerrare1903-0215,ok,view,,
+gerrare1903-0220,ok,people,,
+gerrare1903-0229,ok,people,1,
+gerrare1903-0232,ok,people,,
+gerrare1903-0238,rot_cw,view,,
+gerrare1903-0242,ok,view,,
+gerrare1903-0244,ok,view,,
+gerrare1903-0245,ok,people,,
+gerrare1903-0250,ok,view,,
+gerrare1903-0253,ok,view,,
+gerrare1903-0256,ok,view,,
+gerrare1903-0260,rot_cw,people,,
+gerrare1903-0266,ok,people,,
+gerrare1903-0274,ok,view,,
+gerrare1903-0282,ok,view,,
+gerrare1903-0284,ok,view,,
+gerrare1903-0292,ok,people,,
+gerrare1903-0298,ok,view,,
+gerrare1903-0304,rot_cw,people,,
+gerrare1903-0310,ok,view,,
+gerrare1903-0316,ok,view,,
+gerrare1903-0322,ok,view,,
+gerrare1903-0328,rot_cw,view,,
+gerrare1903-0332,ok,people,,
+gerrare1903-0338,rot_cw,people,,
+gerrare1903-0342,ok,people,,
+gerrare1903-0346,ok,people,,
+gerrare1903-0350,ok,people,,
+gerrare1903-0368,ok,view,,
+gerrare1903-0372,ok,view,,
+gerrare1903-0374,ok,view,,
+hooper1853-0007,ok,people,,
+hooper1853-0093,ok,people,1,
+hooper1853-0124,rot_cw,people,,
+hooper1853-0185,ok,portrait,,
+hooper1853-0198,ok,people,,
+hooper1853-0216,ok,object,,
+hooper1853-0335,ok,view,,
+hooper1853-0378,rot_cw,view,,
+hooper1853-0450,ok,map,,карта Русской Америки (часть разворота)
+hooper1853-0452,ok,map,,
+gsimpson1847-0001,reject,,,экслибрис библиотеки
+johnson1907-0007,ok,portrait,,
+johnson1907-0008,ok,object,,
+johnson1907-0045,ok,view,,
+johnson1907-0076,ok,portrait,,
+johnson1907-0102,ok,view,,
+johnson1907-0117,ok,portrait,,
+johnson1907-0124,ok,view,,
+johnson1907-0142,ok,view,,
+johnson1907-0160,rot_cw,view,,
+johnson1907-0179,ok,view,,
+johnson1907-0184,ok,view,,
+johnson1907-0202,rot_cw,view,,
+johnson1907-0221,ok,people,,
+johnson1907-0229,ok,people,,
+johnson1907-0245,ok,view,,
+johnson1907-0260,ok,portrait,,
+johnson1907-0269,rot_cw,people,,
+johnson1907-0277,ok,portrait,,
+johnson1907-0295,ok,people,,
+johnson1907-0302,ok,portrait,1,
+johnson1907-0330,ok,people,,
+johnson1907-0342,ok,view,,
+johnson1907-0348,ok,object,,
+johnson1907-0358,ok,view,,
+johnson1907-0375,ok,people,,
+johnson1907-0384,ok,people,1,
+johnson1907-0394,ok,portrait,,
+johnson1907-0405,ok,view,,
+johnson1907-0422,ok,object,,
+johnson1907-0434,ok,view,,
+johnson1907-0446,ok,nature,,
+johnson1907-0459,ok,view,,
+johnson1907-0466,ok,map,,
+piotrowski1863-0002,reject,,,обложка
+piotrowski1863-0003,reject,,,пустая тёмная страница
+niemojowski1883-v1-0347,reject,,,листок Date due
+hprice1919-0001,reject,,,экслибрис
+perryayscough1914-0001,reject,,,экслибрис
+perryayscough1914-0007,ok,portrait,,
+perryayscough1914-0044,rot_cw,people,,
+perryayscough1914-0054,ok,people,,
+perryayscough1914-0062,ok,portrait,,
+perryayscough1914-0074,ok,portrait,,
+perryayscough1914-0100,ok,portrait,,
+perryayscough1914-0106,ok,people,,
+perryayscough1914-0110,ok,people,,
+perryayscough1914-0116,ok,view,,
+perryayscough1914-0122,ok,people,,
+perryayscough1914-0128,ok,people,,
+perryayscough1914-0132,ok,portrait,,
+perryayscough1914-0136,ok,people,,
+perryayscough1914-0140,ok,nature,,
+perryayscough1914-0144,ok,people,,
+perryayscough1914-0148,ok,view,,
+perryayscough1914-0154,ok,people,,
+perryayscough1914-0158,ok,view,,неясный сюжет (камни/дерн)
+perryayscough1914-0164,ok,view,,
+perryayscough1914-0168,ok,view,,
+perryayscough1914-0174,ok,people,,
+perryayscough1914-0178,ok,view,,
+perryayscough1914-0182,ok,portrait,1,
+perryayscough1914-0186,ok,people,,
+perryayscough1914-0190,ok,people,,
+perryayscough1914-0196,rot_cw,people,,
+perryayscough1914-0212,ok,view,,
+perryayscough1914-0216,ok,people,,
+perryayscough1914-0224,ok,view,,
+perryayscough1914-0230,ok,people,,
+perryayscough1914-0234,ok,object,,
+perryayscough1914-0238,ok,people,,
+perryayscough1914-0244,ok,people,,
+perryayscough1914-0248,ok,portrait,,
+perryayscough1914-0254,ok,view,,
+perryayscough1914-0258,ok,view,,
+perryayscough1914-0262,ok,people,,
+perryayscough1914-0266,ok,people,,
+perryayscough1914-0272,ok,people,,
+perryayscough1914-0278,ok,people,,
+perryayscough1914-0294,ok,portrait,,
+perryayscough1914-0308,ok,people,,
+perryayscough1914-0332,ok,people,,
+perryayscough1914-0354,ok,people,1,
+perryayscough1914-0362,ok,view,,
+perryayscough1914-0368,ok,view,,
+perryayscough1914-0378,ok,view,,
+perryayscough1914-0384,ok,view,,
+perryayscough1914-0388,ok,people,1,
+perryayscough1914-0398,ok,view,,
+tilley1861-0154,ok,view,,Япония (Tilley)
+tilley1861-0159,rot_cw,view,,Япония (Tilley)
+tilley1861-0165,rot_cw,view,,Япония (Tilley)
+tilley1861-0202,ok,view,,Япония (Tilley)
+tilley1861-0206,rot_cw,view,,Япония (Tilley)
+digby1928-0008,ok,people,,"бинаризованный коллаж, низкое качество"
+digby1928-0103,ok,view,,"бинаризованный коллаж, низкое качество"
+digby1928-0104,ok,view,,"бинаризованный коллаж, низкое качество"
+digby1928-0121,ok,people,,"бинаризованный коллаж, низкое качество"
+digby1928-0122,ok,view,,"бинаризованный коллаж, низкое качество"
+digby1928-0171,ok,people,,"бинаризованный коллаж, низкое качество"
+digby1928-0172,ok,people,,"бинаризованный коллаж, низкое качество"
+digby1928-0189,ok,view,,"бинаризованный коллаж, низкое качество"
+digby1928-0190,ok,view,,"бинаризованный коллаж, низкое качество"
+digby1928-0255,ok,people,,"бинаризованный коллаж, низкое качество"
+digby1928-0256,ok,people,,"бинаризованный коллаж; часть фрагментов, возможно, на боку"
+digby1928-0321,ok,view,,"бинаризованный коллаж, низкое качество"
+digby1928-0322,ok,people,,"бинаризованный коллаж, низкое качество"
+digby1928-0339,ok,view,,"бинаризованный коллаж, низкое качество"
+digby1928-0340,ok,object,,"бинаризованный коллаж, низкое качество"
+carruthers1914-v1-0007,ok,portrait,1,
+carruthers1914-v1-0025,ok,map,,карта со сгибом
+carruthers1914-v1-0056,ok,people,,
+carruthers1914-v1-0064,rot_cw,view,,
+carruthers1914-v1-0072,ok,people,,
+carruthers1914-v1-0086,ok,view,,
+carruthers1914-v1-0094,ok,object,1,
+carruthers1914-v1-0102,ok,view,,
+carruthers1914-v1-0114,ok,view,,
+carruthers1914-v1-0120,ok,people,,
+carruthers1914-v1-0128,ok,view,,
+carruthers1914-v1-0132,ok,view,,
+carruthers1914-v1-0138,ok,people,,
+carruthers1914-v1-0142,ok,view,,
+carruthers1914-v1-0148,rot_cw,view,,
+carruthers1914-v1-0154,rot_cw,view,,
+carruthers1914-v1-0162,ok,people,,
+carruthers1914-v1-0168,ok,view,,
+carruthers1914-v1-0176,ok,people,,
+carruthers1914-v1-0184,ok,view,,
+carruthers1914-v1-0186,ok,view,,
+carruthers1914-v1-0192,ok,people,1,
+carruthers1914-v1-0200,rot_cw,view,,
+carruthers1914-v1-0206,ok,view,,
+carruthers1914-v1-0212,ok,view,,
+carruthers1914-v1-0216,ok,people,,
+carruthers1914-v1-0222,ok,view,,
+carruthers1914-v1-0234,ok,view,,
+carruthers1914-v1-0240,ok,view,,
+carruthers1914-v1-0246,ok,view,,
+carruthers1914-v1-0248,ok,view,,
+carruthers1914-v1-0256,ok,people,,
+carruthers1914-v1-0262,ok,people,,
+carruthers1914-v1-0268,ok,view,,
+carruthers1914-v1-0274,rot_cw,view,,
+carruthers1914-v1-0280,ok,people,,
+carruthers1914-v1-0288,ok,people,,
+carruthers1914-v1-0296,ok,people,,
+carruthers1914-v1-0304,ok,people,1,
+carruthers1914-v1-0310,ok,view,,
+carruthers1914-v1-0318,ok,portrait,,
+carruthers1914-v1-0324,ok,people,,
+carruthers1914-v1-0332,ok,portrait,,
+carruthers1914-v1-0338,ok,people,,
+carruthers1914-v1-0342,ok,nature,,
+carruthers1914-v1-0348,ok,object,,
+carruthers1914-v1-0356,ok,portrait,1,
+carruthers1914-v1-0362,ok,portrait,,
+carruthers1914-v1-0366,ok,view,,
+carruthers1914-v1-0370,ok,people,,
+carruthers1914-v1-0376,ok,view,,
+carruthers1914-v1-0384,ok,view,,
+carruthers1914-v1-0390,ok,people,,
+carruthers1914-v1-0398,ok,view,,
+carruthers1914-v1-0400,ok,view,,
+carruthers1914-v1-0408,ok,view,,
+carruthers1914-v1-0414,ok,people,,
+carruthers1914-v1-0420,ok,view,,
+carruthers1914-v1-0428,ok,view,,
+carruthers1914-v1-0438,ok,view,,
+carruthers1914-v1-0444,ok,people,,
+carruthers1914-v1-0448,ok,portrait,,
+carruthers1914-v1-0454,ok,portrait,,
+carruthers1914-v1-0460,ok,people,,
+carruthers1914-v1-0466,ok,people,,
+carruthers1914-v1-0472,ok,map,,
+carruthers1914-v2-0007,rot_cw,nature,,
+carruthers1914-v2-0020,ok,view,,
+carruthers1914-v2-0026,ok,portrait,1,
+carruthers1914-v2-0032,ok,view,,
+carruthers1914-v2-0038,ok,people,,
+carruthers1914-v2-0044,ok,people,,
+carruthers1914-v2-0050,rot_cw,nature,,
+carruthers1914-v2-0056,ok,people,,
+carruthers1914-v2-0062,ok,map,,
+carruthers1914-v2-0066,ok,people,1,
+carruthers1914-v2-0072,ok,portrait,,
+carruthers1914-v2-0076,ok,view,,
+carruthers1914-v2-0082,ok,view,,
+carruthers1914-v2-0088,ok,people,,
+carruthers1914-v2-0104,ok,people,,
+carruthers1914-v2-0112,ok,portrait,1,
+carruthers1914-v2-0118,rot_cw,people,,
+carruthers1914-v2-0124,ok,people,,
+carruthers1914-v2-0134,ok,view,,
+carruthers1914-v2-0136,ok,view,,
+carruthers1914-v2-0142,ok,people,,
+carruthers1914-v2-0148,rot_cw,view,,
+carruthers1914-v2-0156,ok,view,,
+carruthers1914-v2-0164,ok,people,,
+carruthers1914-v2-0174,ok,people,,
+carruthers1914-v2-0180,ok,view,,
+carruthers1914-v2-0188,ok,view,,
+carruthers1914-v2-0194,ok,people,,
+carruthers1914-v2-0200,ok,nature,,
+carruthers1914-v2-0206,ok,people,,
+carruthers1914-v2-0212,ok,people,,
+carruthers1914-v2-0218,ok,portrait,,
+carruthers1914-v2-0226,ok,view,,
+carruthers1914-v2-0232,ok,view,,
+carruthers1914-v2-0240,ok,view,,
+carruthers1914-v2-0246,ok,people,,
+carruthers1914-v2-0252,ok,portrait,,
+carruthers1914-v2-0258,ok,portrait,,
+carruthers1914-v2-0262,ok,people,,
+carruthers1914-v2-0272,ok,view,,
+carruthers1914-v2-0278,ok,view,,
+carruthers1914-v2-0282,ok,view,,
+carruthers1914-v2-0288,ok,view,,
+carruthers1914-v2-0290,ok,view,,
+carruthers1914-v2-0294,rot_cw,people,,
+carruthers1914-v2-0302,ok,portrait,1,
+carruthers1914-v2-0310,ok,map,,профиль хребта (схема)
+carruthers1914-v2-0312,ok,people,,
+carruthers1914-v2-0318,ok,view,,
+carruthers1914-v2-0326,ok,view,,
+carruthers1914-v2-0334,ok,view,,
+carruthers1914-v2-0342,ok,view,,
+carruthers1914-v2-0350,ok,people,,
+carruthers1914-v2-0358,ok,people,,
+carruthers1914-v2-0366,ok,nature,,
+carruthers1914-v2-0374,ok,people,,
+carruthers1914-v2-0380,ok,view,,
+carruthers1914-v2-0386,ok,view,,
+carruthers1914-v2-0390,ok,people,,
+carruthers1914-v2-0396,ok,people,,
+carruthers1914-v2-0402,ok,nature,,
+carruthers1914-v2-0414,ok,nature,,
+carruthers1914-v2-0422,ok,people,,
+carruthers1914-v2-0428,ok,people,,
+carruthers1914-v2-0442,ok,map,,
+carruthers1914-v2-0444,ok,map,,схема хребта
+carruthers1914-v2-0446,ok,map,,
+carruthers1914-v2-0448,ok,map,,
+carruthers1914-v2-0484,ok,map,,
+rabot1894-0003,reject,,,мраморный форзац
+rabot1894-0005,reject,,,край переплёта/цветовая шкала
+rabot1894-0010,ok,portrait,,
+rabot1894-0011,ok,people,,
+rabot1894-0039,ok,people,,
+rabot1894-0043,ok,people,1,
+rabot1894-0053,rot_cw,view,,
+rabot1894-0061,ok,people,,дубликат 88:0
+rabot1894-0063,ok,view,,
+rabot1894-0067,ok,object,,
+rabot1894-0069,ok,people,,
+rabot1894-0083,ok,people,,
+rabot1894-0099,ok,people,,
+rabot1894-0109,ok,people,,
+rabot1894-0111,ok,object,,
+rabot1894-0117,ok,view,,
+rabot1894-0119,ok,view,,
+rabot1894-0123,ok,people,,
+rabot1894-0133,rot_cw,people,,
+rabot1894-0135,ok,people,,
+rabot1894-0151,ok,people,,
+rabot1894-0153,rot_cw,people,,
+rabot1894-0157,ok,view,,
+rabot1894-0159,ok,portrait,,
+rabot1894-0161,ok,view,,
+rabot1894-0189,ok,view,,
+rabot1894-0190,ok,view,,
+rabot1894-0193,rot_cw,view,,
+rabot1894-0195,ok,map,,
+rabot1894-0199,rot_cw,view,,
+rabot1894-0203,ok,people,,
+rabot1894-0205,rot_cw,view,,
+rabot1894-0209,rot_cw,people,,
+rabot1894-0215,rot_cw,view,,
+rabot1894-0217,ok,view,,
+rabot1894-0229,ok,people,,
+rabot1894-0231,rot_cw,people,,
+rabot1894-0233,ok,people,1,
+rabot1894-0235,ok,object,,
+rabot1894-0245,ok,view,,
+rabot1894-0259,ok,people,,снято с главной при проверке подборки
+rabot1894-0263,ok,map,,
+rabot1894-0270,ok,people,,
+rabot1894-0271,ok,people,,
+rabot1894-0279,rot_cw,view,,поворот неочевиден
+rabot1894-0289,ok,view,,
+rabot1894-0293,ok,view,,
+rabot1894-0301,ok,object,,
+rabot1894-0336,reject,,,мраморный форзац
+rabot1894-0337,reject,,,форзац
+lasies1920-0018,ok,portrait,,
+lasies1920-0019,ok,people,,
+lasies1920-0036,ok,portrait,,
+lasies1920-0037,ok,people,,
+lasies1920-0118,ok,people,,
+lasies1920-0119,ok,people,,
+lasies1920-0136,ok,people,,тела убитых
+lasies1920-0137,ok,people,,
+lasies1920-0186,ok,people,,
+lasies1920-0187,ok,people,,
+lasies1920-0204,ok,people,,
+lasies1920-0205,ok,people,,
+sommier1885-0002,reject,,,экслибрис Harvard
+sommier1885-0097,ok,map,,
+sommier1885-0105,ok,object,,
+sommier1885-0257,ok,object,,
+sommier1885-0285,ok,object,,cropped long object fragment
+sommier1885-0307,reject,,,table
+sommier1885-0309,reject,,,table
+sommier1885-0367,ok,object,,
+sommier1885-0399,ok,object,,
+sommier1885-0532,reject,,,colour noise artefact
+sommier1885-0649,ok,map,,cropped
+sommier1885-0651,ok,map,,narrow fragment of map
+sommier1885-0655,reject,,,library slip
+cipolla1919-0004,reject,,,blank page
+cipolla1919-0005,reject,,,text
+cipolla1919-0007,ok,map,,
+cipolla1919-0008,ok,map,,
+cipolla1919-0009,reject,,,blank
+cipolla1919-0010,reject,,,title page
+cipolla1919-0012,reject,,,text
+cipolla1919-0014,reject,,,half-title
+cipolla1919-0016,reject,,,text
+cipolla1919-0017,ok,view,,
+cipolla1919-0020,reject,,,text
+cipolla1919-0024,ok,view,,
+cipolla1919-0027,ok,people,,
+cipolla1919-0028,ok,view,,
+cipolla1919-0038,ok,people,,
+cipolla1919-0041,ok,people,,
+cipolla1919-0042,ok,people,,
+cipolla1919-0048,ok,people,,
+cipolla1919-0056,ok,view,,
+cipolla1919-0066,reject,,,
+cipolla1919-0068,reject,,,
+cipolla1919-0071,ok,view,1,
+cipolla1919-0074,reject,,,
+cipolla1919-0075,ok,view,,
+cipolla1919-0080,ok,view,,
+cipolla1919-0082,ok,view,,
+cipolla1919-0084,ok,people,,
+cipolla1919-0086,reject,,,
+cipolla1919-0088,reject,,,
+cipolla1919-0090,reject,,,
+cipolla1919-0093,ok,people,,
+cipolla1919-0097,ok,view,,
+cipolla1919-0098,reject,,,
+cipolla1919-0099,reject,,,blank
+cipolla1919-0100,ok,view,,
+cipolla1919-0102,ok,view,,text page with inline photo
+cipolla1919-0104,reject,,,
+cipolla1919-0106,reject,,,
+cipolla1919-0109,ok,view,,
+cipolla1919-0112,reject,,,
+cipolla1919-0113,reject,,,blank
+cipolla1919-0114,reject,,,
+cipolla1919-0116,ok,view,,
+cipolla1919-0123,ok,view,,
+cipolla1919-0126,ok,view,,
+cipolla1919-0127,reject,,,
+cipolla1919-0128,reject,,,
+cipolla1919-0129,reject,,,blank
+cipolla1919-0130,reject,,,
+cipolla1919-0135,ok,view,,
+cipolla1919-0137,reject,,,
+cipolla1919-0138,reject,,,
+cipolla1919-0139,ok,people,,
+cipolla1919-0140,ok,view,,
+cipolla1919-0148,reject,,,text with small inline photo
+cipolla1919-0154,reject,,,
+cipolla1919-0155,ok,portrait,,
+cipolla1919-0156,reject,,,
+cipolla1919-0157,reject,,,blank
+cipolla1919-0158,reject,,,
+cipolla1919-0161,ok,view,,
+cipolla1919-0162,reject,,,text with small inline photo
+cipolla1919-0165,ok,view,,
+cipolla1919-0166,reject,,,
+cipolla1919-0167,reject,,,blank
+cipolla1919-0168,reject,,,
+cipolla1919-0171,ok,people,,
+cipolla1919-0175,reject,,,
+cipolla1919-0176,reject,,,text with small portrait
+cipolla1919-0182,reject,,,
+cipolla1919-0183,reject,,,blank
+cipolla1919-0184,reject,,,
+cipolla1919-0186,ok,portrait,,
+cipolla1919-0190,ok,people,,
+cipolla1919-0191,reject,,,text with small inline photo
+cipolla1919-0193,reject,,,
+cipolla1919-0194,reject,,,
+cipolla1919-0197,ok,view,,
+cipolla1919-0199,ok,view,,
+cipolla1919-0200,ok,view,,text page with inline photo
+cipolla1919-0201,reject,,,
+cipolla1919-0202,reject,,,
+cipolla1919-0205,reject,,,text with small inline photo
+cipolla1919-0208,reject,,,
+cipolla1919-0209,reject,,,blank
+cipolla1919-0210,reject,,,
+cipolla1919-0212,ok,people,,
+cipolla1919-0216,reject,,,
+cipolla1919-0217,reject,,,blank
+cipolla1919-0218,reject,,,
+cipolla1919-0219,reject,,,blank
+cipolla1919-0220,reject,,,
+cipolla1919-0222,ok,people,,text page with two inline photos
+cipolla1919-0226,reject,,,
+cipolla1919-0227,reject,,,blank
+cipolla1919-0228,reject,,,
+cipolla1919-0230,ok,people,,
+cipolla1919-0232,ok,people,,
+cipolla1919-0235,reject,,,
+cipolla1919-0236,reject,,,
+cipolla1919-0242,reject,,,
+cipolla1919-0243,reject,,,blank
+cipolla1919-0244,reject,,,
+cipolla1919-0245,reject,,,blank
+cipolla1919-0246,reject,,,
+cipolla1919-0247,ok,people,,
+cipolla1919-0254,reject,,,
+cipolla1919-0255,reject,,,blank
+cipolla1919-0256,reject,,,
+cipolla1919-0262,ok,view,,
+cipolla1919-0263,ok,view,,
+cipolla1919-0265,ok,people,,
+cipolla1919-0267,ok,people,,
+cipolla1919-0268,reject,,,
+cipolla1919-0269,reject,,,blank
+cipolla1919-0270,reject,,,
+cipolla1919-0276,reject,,,
+cipolla1919-0277,reject,,,blank
+cipolla1919-0278,reject,,,
+cipolla1919-0283,reject,,,
+cipolla1919-0284,reject,,,
+cipolla1919-0297,ok,people,,
+cipolla1919-0298,reject,,,
+cipolla1919-0299,reject,,,blank
+cipolla1919-0300,reject,,,
+cipolla1919-0304,reject,,,
+cipolla1919-0305,reject,,,
+cipolla1919-0306,reject,,,
+cipolla1919-0311,reject,,,
+cipolla1919-0312,reject,,,
+cipolla1919-0314,ok,view,,
+cipolla1919-0315,ok,view,,
+cipolla1919-0317,ok,people,,text page with inline photo
+cipolla1919-0319,reject,,,
+cipolla1919-0320,reject,,,
+cipolla1919-0322,reject,,,
+cipolla1919-0325,ok,portrait,,text page with two inline portraits
+cipolla1919-0327,reject,,,
+cipolla1919-0328,reject,,,
+cipolla1919-0334,reject,,,
+cipolla1919-0335,reject,,,blank
+cipolla1919-0336,reject,,,
+cipolla1919-0340,ok,view,,text page with inline photo
+cipolla1919-0343,ok,people,,
+cipolla1919-0347,reject,,,
+cipolla1919-0348,reject,,,
+cipolla1919-0349,reject,,,blank
+cipolla1919-0350,reject,,,
+cipolla1919-0353,ok,view,,
+cipolla1919-0362,reject,,,
+cipolla1919-0363,reject,,,blank
+cipolla1919-0364,reject,,,
+cipolla1919-0369,ok,people,,
+cipolla1919-0375,ok,view,,
+cipolla1919-0378,ok,view,,
+cipolla1919-0382,reject,,,
+cipolla1919-0383,reject,,,blank
+cipolla1919-0384,reject,,,
+cipolla1919-0390,ok,view,,
+cipolla1919-0395,reject,,,
+cipolla1919-0396,reject,,,
+cipolla1919-0401,ok,view,,
+cipolla1919-0404,reject,,,
+cipolla1919-0405,reject,,,blank
+cipolla1919-0406,reject,,,index
+cipolla1919-0408,reject,,,index
+cipolla1919-0409,reject,,,blank
+muller1882-0005,reject,,,library stamp
+muller1882-0008,ok,object,,signature facsimile
+muller1882-0011,ok,people,1,
+muller1882-0056,rot_cw,view,,
+muller1882-0136,reject,,,text
+muller1882-0282,ok,view,,
+muller1882-0326,ok,view,,
+muller1882-0343,reject,,,rotated table
+patursson1901-0012,ok,portrait,,
+patursson1901-0015,ok,map,,
+patursson1901-0040,rot_cw,people,,
+patursson1901-0056,ok,view,,
+patursson1901-0070,ok,people,1,
+patursson1901-0094,rot_cw,view,,
+patursson1901-0118,rot_cw,people,,
+patursson1901-0142,rot_cw,view,,
+patursson1901-0152,rot_cw,people,,
+patursson1901-0176,rot_cw,people,,uncertain rotation
+patursson1901-0178,rot_cw,people,,
+patursson1901-0268,rot_cw,view,,
+patursson1901-0288,rot_cw,people,,
+patursson1901-0352,rot_cw,portrait,,
+rosenberg1904-0013,ok,object,,
+rosenberg1904-0014,ok,people,,
+rosenberg1904-0015,ok,people,,
+rosenberg1904-0018,ok,people,,
+rosenberg1904-0021,ok,view,,
+rosenberg1904-0022,ok,view,,
+rosenberg1904-0027,ok,view,,
+rosenberg1904-0030,ok,view,,
+rosenberg1904-0032,ok,view,1,
+rosenberg1904-0039,ok,view,,
+rosenberg1904-0040,ok,view,,
+rosenberg1904-0046,ok,view,,
+rosenberg1904-0047,ok,view,,
+rosenberg1904-0051,ok,people,1,
+rosenberg1904-0052,ok,map,,
+rosenberg1904-0054,ok,view,,
+rosenberg1904-0058,ok,view,,
+rosenberg1904-0059,ok,view,,
+rosenberg1904-0060,ok,view,,
+rosenberg1904-0062,ok,view,,
+rosenberg1904-0064,ok,view,,
+rosenberg1904-0066,ok,view,,
+rosenberg1904-0067,ok,view,,
+rosenberg1904-0069,ok,view,,
+rosenberg1904-0073,ok,people,,
+rosenberg1904-0076,ok,people,,
+rosenberg1904-0077,ok,view,,
+rosenberg1904-0083,ok,view,,
+rosenberg1904-0085,ok,people,,
+rosenberg1904-0086,ok,people,,
+rosenberg1904-0090,ok,view,,
+rosenberg1904-0092,ok,view,,
+rosenberg1904-0101,ok,view,,
+rosenberg1904-0109,ok,view,,
+rosenberg1904-0114,ok,view,,
+rosenberg1904-0116,ok,view,,
+rosenberg1904-0119,ok,view,,
+rosenberg1904-0120,ok,people,1,
+rosenberg1904-0121,ok,view,,
+rosenberg1904-0123,ok,people,,
+rosenberg1904-0125,ok,view,,
+rosenberg1904-0126,ok,people,1,
+rosenberg1904-0130,ok,view,,
+rosenberg1904-0132,ok,people,,
+rosenberg1904-0136,ok,view,,
+rosenberg1904-0139,ok,view,,
+rosenberg1904-0142,ok,view,,
+rosenberg1904-0144,ok,people,,
+rosenberg1904-0147,ok,people,,
+rosenberg1904-0151,ok,portrait,,
+rosenberg1904-0157,ok,people,,
+rosenberg1904-0159,ok,view,,
+rosenberg1904-0161,ok,people,,
+rosenberg1904-0162,ok,people,,
+rosenberg1904-0163,ok,people,,
+rosenberg1904-0164,ok,people,,
+rosenberg1904-0165,ok,people,,
+rosenberg1904-0168,ok,people,,
+rosenberg1904-0170,ok,people,,
+rosenberg1904-0173,ok,people,1,
+rosenberg1904-0175,ok,people,,
+rosenberg1904-0176,ok,view,,
+rosenberg1904-0180,ok,view,,
+rosenberg1904-0192,ok,view,,
+rosenberg1904-0195,ok,portrait,,
+rosenberg1904-0198,ok,people,1,
+rosenberg1904-0199,ok,people,,
+rosenberg1904-0200,ok,people,,
+rosenberg1904-0202,ok,people,,
+rosenberg1904-0206,ok,people,1,
+rosenberg1904-0212,ok,view,,
+rosenberg1904-0216,ok,people,,
+rosenberg1904-0217,ok,people,,
+rosenberg1904-0218,ok,view,,
+rosenberg1904-0219,ok,view,,
+rosenberg1904-0246,ok,view,,
+rosenberg1904-0249,ok,view,,
+rosenberg1904-0250,ok,view,,
+rosenberg1904-0261,ok,view,,
+rosenberg1904-0263,ok,view,,
+rosenberg1904-0266,ok,view,,
+rosenberg1904-0270,ok,view,,
+rosenberg1904-0272,ok,view,,
+rosenberg1904-0273,ok,people,,
+rosenberg1904-0274,ok,people,,
+rosenberg1904-0276,ok,view,,
+rosenberg1904-0278,ok,view,,
+rosenberg1904-0279,ok,view,,
+rosenberg1904-0280,ok,view,,
+rosenberg1904-0282,ok,view,,
+rosenberg1904-0293,ok,view,,
+rosenberg1904-0295,ok,people,,
+rosenberg1904-0300,ok,view,,
+rosenberg1904-0302,ok,view,,
+rosenberg1904-0303,ok,view,,
+rosenberg1904-0304,ok,view,,
+rosenberg1904-0306,ok,view,,
+rosenberg1904-0309,ok,view,,
+rosenberg1904-0314,ok,people,1,
+rosenberg1904-0316,ok,view,,
+rosenberg1904-0319,ok,people,1,
+rosenberg1904-0320,ok,people,,
+rosenberg1904-0321,ok,view,,
+rosenberg1904-0324,ok,view,,
+rosenberg1904-0326,ok,view,,
+rosenberg1904-0328,ok,view,,
+rosenberg1904-0332,ok,view,,
+rosenberg1904-0336,ok,view,,
+rosenberg1904-0339,ok,people,,
+rosenberg1904-0340,ok,view,,
+rosenberg1904-0342,ok,people,,
+rosenberg1904-0345,rot_ccw,view,,
+rosenberg1904-0346,ok,view,,
+rosenberg1904-0347,ok,view,,
+rosenberg1904-0348,ok,people,,
+rosenberg1904-0350,ok,view,,
+rosenberg1904-0351,ok,view,,
+rosenberg1904-0352,ok,view,,
+rosenberg1904-0354,ok,view,,
+rosenberg1904-0356,ok,people,1,
+rosenberg1904-0357,ok,people,,
+rosenberg1904-0358,ok,people,,
+rosenberg1904-0359,ok,view,,
+rosenberg1904-0360,ok,people,,
+rosenberg1904-0365,ok,view,,
+rosenberg1904-0368,ok,view,,
+rosenberg1904-0371,ok,view,,
+rosenberg1904-0372,ok,view,,
+rosenberg1904-0378,ok,view,,
+rosenberg1904-0380,ok,view,,
+rosenberg1904-0384,ok,view,,
+rosenberg1904-0388,ok,people,,
+rosenberg1904-0390,ok,view,,
+rosenberg1904-0392,ok,view,,
+rosenberg1904-0393,ok,view,,
+rosenberg1904-0395,ok,view,,
+rosenberg1904-0396,ok,view,,
+rosenberg1904-0397,ok,people,,
+rosenberg1904-0399,ok,people,,
+rosenberg1904-0403,ok,people,,
+rosenberg1904-0405,ok,view,,
+rosenberg1904-0407,ok,view,,
+rosenberg1904-0408,ok,view,,
+rosenberg1904-0412,ok,people,,
+rosenberg1904-0413,ok,people,,
+heller1930-0013,ok,view,,
+heller1930-0014,ok,people,,
+heller1930-0047,ok,people,,
+heller1930-0048,ok,view,,
+heller1930-0081,ok,people,,
+heller1930-0082,ok,view,,
+heller1930-0099,ok,people,,
+heller1930-0100,ok,people,1,
+heller1930-0133,ok,view,,
+heller1930-0134,ok,people,,
+eden1879-0002,reject,,,binding/spine
+eden1879-0005,ok,map,,
+eden1879-0010,ok,object,,decorative headpiece
+eden1879-0035,ok,object,,decorative headpiece
+eden1879-0046,ok,object,,decorative headpiece
+eden1879-0059,ok,object,,decorative headpiece
+eden1879-0064,ok,object,,decorative headpiece
+eden1879-0115,ok,object,,decorative headpiece
+eden1879-0123,ok,object,,decorative headpiece
+eden1879-0140,ok,object,,decorative headpiece
+eden1879-0222,ok,object,,decorative headpiece
+eden1879-0246,ok,object,,decorative headpiece
+eden1879-0249,ok,object,,decorative headpiece
+eden1879-0255,ok,object,,decorative headpiece
+dwinger1930-0323,reject,,,bindery label
+ujfalvy1879-0012,ok,view,,
+ujfalvy1879-0014,ok,object,,"pure ornament strip, uncertain"
+ujfalvy1879-0030,ok,view,,
+ujfalvy1879-0032,ok,people,,
+ujfalvy1879-0036,ok,object,,
+ujfalvy1879-0040,ok,object,,
+ujfalvy1879-0042,ok,object,,
+ujfalvy1879-0047,ok,view,,
+ujfalvy1879-0064,ok,view,,
+ujfalvy1879-0130,ok,view,,
+ujfalvy1879-0138,reject,,,vignette with crop artefact
+ujfalvy1879-0150,reject,,,table
+ujfalvy1879-0151,ok,map,,partial town plan
+ujfalvy1879-0152,reject,,,crop artefact
+ujfalvy1879-0168,ok,object,,petroglyph drawings
+ujfalvy1879-0176,reject,,,rotated table
+ujfalvy1879-0195,reject,,,table
+ujfalvy1879-0200,ok,object,,rock inscription
+ujfalvy1879-0204,ok,object,,
+ujfalvy1879-0216,ok,object,,
+ujfalvy1879-0218,ok,object,,
+ujfalvy1879-0220,ok,object,,
+ujfalvy1879-0239,ok,map,,folded partial map
+ujfalvy1879-0284,reject,,,fragment of text page
+ujfalvy1879-0285,reject,,,text page with fingers
+ujfalvy1879-0287,reject,,,table
+ujfalvy1879-0288,reject,,,table
+ujfalvy1879-0290,reject,,,table
+rose1837-0004,reject,,,blank fragment
+rose1837-0010,reject,,,blank
+rose1837-0031,reject,,,text
+rose1837-0040,reject,,,blank
+rose1837-0048,reject,,,blank
+rose1837-0058,reject,,,blank
+rose1837-0094,reject,,,blank
+rose1837-0233,reject,,,text with finger
+rose1837-0459,ok,view,,
+rose1837-0503,reject,,,text
+rose1837-0617,ok,view,,
+rose1837-0644,ok,view,,
+rose1837-0653,reject,,,
+rose1837-0657,reject,,,
+rose1837-0661,reject,,,
+rose1837-0665,reject,,,
+rose1837-0667,reject,,,text with table
+rose1837-0675,reject,,,
+rose1837-0678,ok,object,,crystal drawing
+rose1837-0680,ok,object,,crystal drawing
+rose1837-0681,reject,,,blank
+rose1837-0682,reject,,,narrow cropped strip of crystal drawings
+rose1837-0684,ok,object,,crystal drawing
+rose1837-0686,ok,object,,crystal drawing
+rose1837-0687,reject,,,blank strip
+rose1837-0689,reject,,,blank
+rose1837-0691,reject,,,blank
+rose1837-0692,ok,map,,"fragment of folded map, mostly blank"
+rose1837-0693,reject,,,blank
+rose1837-0695,reject,,,blank
+ledebour1829-0002,reject,,,blank
+ledebour1829-0467,reject,,,table
+ledebour1829-0468,reject,,,table
