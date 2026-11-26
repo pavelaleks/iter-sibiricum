@@ -60,8 +60,8 @@ const REPO = 'https://github.com/pavelaleks/iter-sibiricum';
 async function project() { try { return await get('project.json'); } catch (e) { return {}; } }
 function citation(P, extra = '') {
   const d = new Date(), dd = String(d.getDate()).padStart(2, '0') + '.' + String(d.getMonth() + 1).padStart(2, '0') + '.' + d.getFullYear();
-  const team = (P.team || []).length ? ' / ' + P.team.join(', ') : '';
-  const grant = P.grant ? `. Проект РНФ № ${P.grant}` : '';
+  const team = (P.team || []).length ? ' / ' + P.team.map((t) => typeof t === 'string' ? t : t.name.replace(/^(\S+) (.+)$/, '$2 $1')).join(', ') : '';
+  const grant = P.grant ? `. Грант РНФ № ${P.grant}` : '';
   const url = P.url || location.href.split('#')[0];
   return `Iter Sibiricum: европейские травелоги о Сибири и её народах, 1800–1930 : цифровой ресурс${team}${grant}. Версия ${P.version || '1.0'}. ${P.year || d.getFullYear()}. URL: ${url}${extra} (дата обращения: ${dd}).`;
 }
@@ -74,6 +74,7 @@ async function home() {
   const ind = groups.filter((g) => g.category === 'indigenous');
   V.innerHTML = `
   <section class="wrap masthead">
+    ${P.grant ? `<p class="ack">Ресурс подготовлен при поддержке гранта Российского научного фонда № ${esc(P.grant)}, <a href="${esc(P.grant_url)}">${esc(P.grant_url)}</a>, и Правительства Республики Алтай.</p>` : ''}
     <h1 class="title">Iter<span>Sibiricum</span></h1>
     <div class="sub">
       <p>Как европейские путешественники 1800–1930 годов видели народы Сибири и отношения между ними.</p>
@@ -88,14 +89,18 @@ async function home() {
     <div class="mapbox heromap" id="homeMap"></div>
     <div class="mapnote"><span><i></i>${manual} маршрутов, восстановленных по тексту книг; ещё ${routes.length - manual} — в атласе</span><span><i class="a"></i>ареалы коренных народов около 1900 года, схематично</span></div>
   </section>
-  <section class="band"><div class="wrap etym">
+  ${(P.team || []).length ? `<section class="band"><div class="wrap team">
+    <h2>Коллектив проекта</h2>
+    <ul>${P.team.map((t) => `<li><span class="nm">${esc(t.name)}</span><span class="rl">${esc(t.role)}</span><span class="af">${esc(t.degree)}, ${esc(t.org)}</span></li>`).join('')}</ul>
+  </div></section>` : ''}
+  <section class="band alt"><div class="wrap etym">
     <div class="word"><i>iter, itineris</i> <span class="mute">(лат.)</span><small>путь, дорога; путешествие; маршрут</small></div>
     <div>
       <p><i>Iter Sibiricum</i> — «сибирский путь». Латинским словом <i>iter</i> учёные XVIII века называли и само путешествие, и его отчёт: так Карл Линней озаглавил дневник своей поездки в Лапландию 1732 года — <i>Iter Lapponicum</i>. По-латыни писали и первые академические исследователи Сибири: достаточно вспомнить <i>Flora Sibirica</i> Иоганна Георга Гмелина.</p>
       <p>Европейцы XIX — начала XX века ехали по их следам и постоянно на них ссылались: Паллас — самый цитируемый авторитет в корпусе. Название напоминает об этой традиции и о трёх вещах, из которых собран ресурс: маршрутах, текстах и встречах в пути.</p>
     </div>
   </div></section>
-  <section class="band alt"><div class="wrap">
+  <section class="band"><div class="wrap">
     <h2>Содержание</h2>
     <ul class="toc">
       <li><a href="#atlas"><span class="t">Атлас</span><span class="d">Маршруты путешественников, места, о которых они писали, и ареалы народов. Фильтры по эпохе, стране автора, типу поездки.</span><span class="n">${pl(routes.length, ['маршрут', 'маршрута', 'маршрутов'])}</span></a></li>
@@ -107,7 +112,7 @@ async function home() {
       <li><a href="#method"><span class="t">Метод и данные</span><span class="d">Как собран и размечен корпус, насколько можно доверять каждой цифре, что скачать.</span><span class="n">${pl(A.quality.length, ['проверка', 'проверки', 'проверок'])}</span></a></li>
     </ul>
   </div></section>
-  <section class="band"><div class="wrap">
+  <section class="band alt"><div class="wrap">
     <h2>Что показывает корпус</h2>
     <div class="findings">
       <div><div class="k">×${fmt(mod.OR, 1)}</div><h3>Оценка зависит от встречи</h3><p>Автор, писавший по личному наблюдению, в ${fmt(mod.OR, 1)} раза чаще оценивает народ положительно (95% ДИ ${fmt(mod.lo, 1)}–${fmt(mod.hi, 1)}).</p><a href="#analytics">Модели и рамки описания</a></div>
@@ -115,7 +120,7 @@ async function home() {
       <div><div class="k">${fmt(reuse.length)}</div><h3>Тексты переписывают друг друга</h3><p>Столько пар абзацев с общими фрагментами нашлось в корпусе: компиляции, самоповторы, заимствования без ссылки.</p><a href="#links">Сеть цитирований</a></div>
     </div>
   </div></section>
-  <section class="band alt"><div class="wrap research">
+  <section class="band"><div class="wrap research">
     <div>
       <h2>Как цитировать</h2>
       <div class="cite" id="citeBox">${esc(citation(P))}</div>
@@ -125,11 +130,12 @@ async function home() {
     <div>
       <h2>Данные и код</h2>
       <dl>
+        ${(P.datasets || []).map((d, i) => `<dt>${i ? '' : 'Zenodo'}</dt><dd><a href="https://doi.org/${esc(d.doi)}">${esc(d.title)}</a><br><span class="small mute">DOI ${esc(d.doi)}, ${esc(d.license)}</span></dd>`).join('')}
         <dt>Тексты</dt><dd><a href="${REPO}/tree/main/texts">${fmt(works.length)} файлов JSON</a> с абзацами и разметкой</dd>
         <dt>Таблицы</dt><dd><a href="${REPO}/tree/main/pipeline/data">упоминания, места, маршруты, ручная разметка</a> в CSV</dd>
         <dt>Конвейер</dt><dd><a href="${REPO}/tree/main/pipeline/analysis">скрипты на Python</a> от очистки OCR до сайта</dd>
         <dt>Проверки</dt><dd><a href="${REPO}/tree/main/pipeline/validation">выборки и протоколы</a> оценки качества</dd>
-        <dt>Лицензии</dt><dd>данные CC BY 4.0, код MIT</dd>
+        <dt>Лицензии</dt><dd>каталог и разметка CC BY 4.0, атлас CC BY-NC 4.0, код MIT</dd>
       </dl>
     </div>
   </div></section>`;

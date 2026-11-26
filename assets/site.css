@@ -2,7 +2,7 @@
    Цвет: снег и прусская лазурь старых гравированных карт; кармин — только для маршрутов и того, что к ним ведёт.
    Шрифт: Literata — голос источников (название, заголовки, тексты, цитаты); Onest — инструмент (интерфейс, данные).
    Одно движение: на главной маршруты прочерчиваются по карте при загрузке. */
-@import url(fonts.css?v=10);
+@import url(fonts.css?v=12);
 :root{color-scheme:light dark;
   --bg:light-dark(#f4f7f9,#0e1a26);--paper:light-dark(#ffffff,#132233);--bg2:light-dark(#e9eef2,#172a3d);
   --ink:light-dark(#13263a,#e4ecf2);--mute:light-dark(#5a6b7c,#93a7b8);--line:light-dark(#d7e0e7,#24394d);
@@ -68,6 +68,17 @@ nav.menu a.on::after{content:"";position:absolute;left:10px;right:10px;bottom:2p
 .cite{font-family:var(--serif);font-size:15.5px;line-height:1.6;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;margin:12px 0}
 .research dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 20px;margin:0}
 .research dt{color:var(--mute)}.research dd{margin:0}
+
+
+.ack{font-size:16px;line-height:1.55;color:var(--ink);max-width:72ch;margin:0 0 clamp(24px,4vw,48px);padding-left:14px;border-left:2px solid var(--acc2)}
+.ack a{color:inherit}
+.team{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(24px,5vw,80px);align-items:start}
+.team ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.team li{display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr);gap:2px 24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.team .nm{font-family:var(--serif);font-size:21px;font-variation-settings:"opsz" 36;grid-row:span 2}
+.team .rl{font-weight:560}.team .af{color:var(--mute)}
+@media(max-width:960px){.team{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.team li{grid-template-columns:minmax(0,1fr)}.team .nm{grid-row:auto}}
 
 /* общие элементы */
 .hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(20px,3vw,40px);align-items:center}
