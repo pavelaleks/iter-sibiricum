@@ -40,6 +40,9 @@ OBS = lambda origin: 'europe_finland' if 'Finland' in origin else 'europe_poland
 def main():
     plan = [r for r in csv.DictReader(open(ROOT/'data/corpus_plan.csv', encoding='utf-8')) if r['status'] in ('include', 'check')]
     old = {r['work_id']: r for r in csv.DictReader(open(ROOT/'data/works_v01.csv', encoding='utf-8'))} if (ROOT/'data/works_v01.csv').exists() else {}
+    # исправления каталога, внесённые в текущий works.csv (даты поездки, переводчик, роль…), важнее старой версии v0.1
+    if (ROOT/'data/works.csv').exists():
+        for r in csv.DictReader(open(ROOT/'data/works.csv', encoding='utf-8')): old[r['work_id']] = {**old.get(r['work_id'], {}), **{k: v for k, v in r.items() if v}}
     qrows, works, missing = [], [], []
     for r in plan:
         wid, lang = r['work_id'], r['text_lang'] or 'en'

@@ -184,7 +184,7 @@ async function editRoute(w) {
 function books() {
   A.innerHTML = `<section class="band"><div class="wrap">
     <h1>Новые книги</h1>
-    <p>Предложите издание для корпуса. Конвейер при следующей сборке скачает текст по ссылке, очистит, разметит и добавит книгу в библиотеку; до этого она видна здесь в очереди.</p>
+    <p>Предложите издание для корпуса — ссылкой на Internet Archive, Project Gutenberg или Gallica. При следующей сборке конвейер (tools/ingest_queue.py, затем run_all.sh) скачает текст, очистит, разметит и добавит книгу в библиотеку; статус обработки виден здесь в очереди.</p>
     <form id="bf" class="aform grid2">
       <label>Автор<input name="author" required placeholder="Lansdell, Henry"></label>
       <label>Заглавие<input name="title" required></label>
@@ -198,7 +198,7 @@ function books() {
       <div class="wide"><button class="on" type="submit">Добавить в очередь</button></div>
     </form>
     <h2 style="margin-top:40px">Очередь</h2>
-    <div class="scroll"><table><thead><tr><th>Автор</th><th>Заглавие</th><th class="n">Год</th><th>Источник</th><th>Предложил</th><th>Статус</th></tr></thead><tbody>${D.queue.slice().reverse().map((b) => `<tr><td>${esc(b.author)}</td><td>${esc(b.title)}</td><td class="n">${esc(b.year)}</td><td><a href="${esc(b.source)}">ссылка</a></td><td class="small">${esc(b.by)}, ${esc(b.date)}</td><td><span class="status ${b.status === 'added' ? 'rec' : 'draft'}">${b.status === 'added' ? 'в корпусе' : 'в очереди'}</span></td></tr>`).join('') || '<tr><td colspan="6" class="mute">Очередь пуста.</td></tr>'}</tbody></table></div>
+    <div class="scroll"><table><thead><tr><th>Автор</th><th>Заглавие</th><th class="n">Год</th><th>Источник</th><th>Предложил</th><th>Статус</th></tr></thead><tbody>${D.queue.slice().reverse().map((b) => `<tr><td>${esc(b.author)}</td><td>${esc(b.title)}</td><td class="n">${esc(b.year)}</td><td><a href="${esc(b.source)}">ссылка</a></td><td class="small">${esc(b.by)}, ${esc(b.date)}</td><td><span class="status ${b.status === 'added' ? 'rec' : 'draft'}">${({added: 'в корпусе', queued: 'текст скачан, ждёт сборки', error: 'ошибка', needs_manual: 'нужна ссылка на IA, Gutenberg или Gallica', duplicate: 'уже в корпусе'})[b.status] || 'в очереди'}</span>${b.message ? `<div class="small mute">${esc(b.message)}</div>` : ''}</td></tr>`).join('') || '<tr><td colspan="6" class="mute">Очередь пуста.</td></tr>'}</tbody></table></div>
   </div></section>`;
   document.getElementById('bf').addEventListener('submit', async (e) => {
     e.preventDefault(); const f = Object.fromEntries(new FormData(e.target)); const btn = e.target.querySelector('button'); btn.disabled = true;
