@@ -229,7 +229,7 @@ async function ills(arg) {
     const pages = Math.ceil(L.length / PER); st.page = Math.min(st.page, Math.max(0, pages - 1));
     document.getElementById('ilist').innerHTML = L.slice(st.page * PER, st.page * PER + PER).map((x) => { const rot = val(x, 'rot', 0), rej = val(x, 'status', '') === 'rejected';
       return `<div class="icard${rej ? ' rej' : ''}" data-id="${x.id}"><div class="iimg"><img src="${x.t}" style="transform:rotate(${rot}deg)" loading="lazy" alt=""></div>
-      <div class="ifields"><div class="small mute">${esc(D.W[x.w]?.label || x.w)} · <a href="https://archive.org/details/${x.ia}/page/n${x.n}/mode/1up" target="_blank" rel="noopener">скан</a>${x.p ? ` · <a href="./#book-${x.w.replace(/_/g, '-')}-p${x.p}" target="_blank">текст рядом</a>` : ''}</div>
+      <div class="ifields"><div class="small mute">${esc(D.W[x.w]?.label || x.w)} · <a href="${x.src === 'pg' ? x.u : `https://archive.org/details/${x.ia}/page/n${x.n}/mode/1up`}" target="_blank" rel="noopener">${x.src === 'pg' ? 'Gutenberg' : 'скан'}</a>${x.p ? ` · <a href="./#book-${x.w.replace(/_/g, '-')}-p${x.p}" target="_blank">текст рядом</a>` : ''}</div>
       <label>Подпись<input data-k="caption" value="${esc(val(x, 'caption', x.c))}"></label>
       <label>Перевод<input data-k="ru" value="${esc(val(x, 'ru', x.ru || ''))}" placeholder="по-русски"></label>
       <div class="row"><select data-k="kind">${Object.entries(KINDS).map(([k, t]) => `<option value="${k}" ${val(x, 'kind', x.k) === k ? 'selected' : ''}>${t}</option>`).join('')}</select>

@@ -18,6 +18,9 @@ def good_caption(c):
 
 def main():
     rows = list(csv.DictReader(open(ROOT / 'data' / 'illustrations.csv', encoding='utf-8')))
+    # HTML-издания Gutenberg (08c): изображения и подписи из набранного текста
+    pgx = ROOT / 'data' / 'illustrations_gutenberg.csv'
+    if pgx.exists(): rows += list(csv.DictReader(open(pgx, encoding='utf-8')))
     works = {w['id']: w for w in json.load(open(SITE / 'data' / 'works.json', encoding='utf-8'))}
     # проверка подписей (агенты по инструкции validation/illustrations/INSTRUCTIONS.md):
     # исправленная подпись, перевод, тип, народы, места, «не иллюстрация»
@@ -25,6 +28,13 @@ def main():
     pth = ROOT / 'data' / 'illustrations_captions.csv'
     if pth.exists():
         chk = {r['ill_id']: r for r in csv.DictReader(open(pth, encoding='utf-8'))}
+    # проверка подписей Gutenberg: validation/illustrations/gutenberg_review_*.tsv (пустая исправленная подпись = оригинал)
+    orig = {r['ill_id']: r['caption'] for r in rows}
+    for f in sorted((ROOT / 'validation' / 'illustrations').glob('gutenberg_review_*.tsv')):
+        for line in open(f, encoding='utf-8').read().splitlines()[1:]:
+            q = (line.split('\t') + [''] * 7)[:7]
+            if not q[0]: continue
+            chk[q[0]] = dict(caption_fixed=q[1] or orig.get(q[0], ''), ru=q[2], kind=q[3], groups=q[4], places=q[5], not_illustration=q[6])
     # визуальная проверка (validation/illustrations/VISUAL.md): брак, поворот, тип, отбор для главной
     vis = {}
     pv = ROOT / 'data' / 'illustrations_visual.csv'
@@ -63,6 +73,7 @@ def main():
                           g=[x for x in r['groups'].split(';') if x], pl=[x.strip() for x in (r.get('places_ru') or '').split(';') if x.strip()], ru=r.get('ru', ''),
                           t=r['thumb'], tw=int(r['thumb_w']), th=int(r['thumb_h']), r=int(r['rotated'] or 0),
                           a=float(r['area']), vrot=r['vrot'], hero=r['vhero']))
+        if r.get('source') == 'gutenberg': items[-1]['src'] = 'pg'; items[-1]['u'] = r['src_url']
         it = items[-1]
         it['rg'], it['rb'] = macro(it['pl'], r['pid'])
         unmapped.update(x for x in it['pl'] if x not in MAC)

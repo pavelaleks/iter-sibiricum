@@ -25,4 +25,5 @@ python3 08a_illustrations.py          # иллюстрации и карты п�
 python3 09_expert_models.py           # оценки по ручной выборке, модели, точность правил
 cd ..
 python3 analysis/06_dashboard_data.py && python3 analysis/06b_dashboard_research.py
+python3 analysis/08c_illustrations_gutenberg.py   # иллюстрации из HTML-изданий Gutenberg
 python3 analysis/10_build_site.py && python3 analysis/08b_illustrations_site.py   # данные сайта, иллюстрации с учётом проверки
