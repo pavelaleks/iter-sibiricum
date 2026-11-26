@@ -479,7 +479,14 @@ async function book(id, par) {
     io = new IntersectionObserver((es) => { const e = es.filter((x) => x.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0]; if (e) { const pg = pageOf(e.target.id.slice(1)); if (pg) showScan(pg[1], pg[2]); } }, {rootMargin: '-20% 0px -60% 0px'});
     document.querySelectorAll('#txt p[id]').forEach((el) => io.observe(el));
   };
-  const toggleScan = (on) => { scanOn = on; shown = ''; btn.classList.toggle('on', on); btn.setAttribute('aria-pressed', on); scanEl.hidden = !on; document.querySelector('.reader').classList.toggle('with-scan', on); if (on) { const pg = pageOf(par || (PG.s[0] || [0])[0]); if (pg) showScan(pg[1], pg[2]); } watch(); };
+  const anchorP = () => { const ps = [...document.querySelectorAll('#txt p[id]')]; const y = innerHeight * 0.3; return ps.find((el) => el.getBoundingClientRect().bottom > y) || ps[0]; };
+  const toggleScan = (on) => {
+    // абзац, который читатель видит сейчас, остаётся на месте после перестройки колонок
+    const a = anchorP(); scanOn = on; shown = ''; btn.classList.toggle('on', on); btn.setAttribute('aria-pressed', on); scanEl.hidden = !on;
+    document.querySelector('.reader').classList.toggle('with-scan', on);
+    if (a) a.scrollIntoView({block: 'center'});
+    if (on) { const pg = pageOf(a ? a.id.slice(1) : (PG.s[0] || [0])[0]); if (pg) showScan(pg[1], pg[2]); setTimeout(watch, 400); } else watch();
+  };
   if (PG) { btn.hidden = false; btn.addEventListener('click', () => toggleScan(!scanOn)); }
   const render = () => {
     const re = q.length > 2 ? new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi') : null; let hits = 0;
