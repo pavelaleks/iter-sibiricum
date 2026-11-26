@@ -18,11 +18,11 @@ let mapRO = null;
 function setMenu(r) { document.querySelectorAll('#menu a').forEach((a) => a.classList.toggle('on', r.startsWith(a.dataset.r) || (a.dataset.r === 'peoples' && r.startsWith('people')) || (a.dataset.r === 'library' && r.startsWith('book')))); }
 async function route() {
   const h = (location.hash || '#home').slice(1) || 'home';
-  setMenu(h.startsWith('analytics') ? 'analytics' : h); if (mapRO) { mapRO.disconnect(); mapRO = null; }
+  setMenu(h.startsWith('analytics') ? 'analytics' : h.split('?')[0]); if (mapRO) { mapRO.disconnect(); mapRO = null; }
   V.innerHTML = '<div class="wrap loading">Загрузка…</div>';
   try {
     if (h === 'home') await home();
-    else if (h === 'atlas') await atlas();
+    else if (h === 'atlas' || h.startsWith('atlas?')) await atlas();
     else if (h === 'peoples') await peoples();
     else if (h.startsWith('people-')) await people(fromH(h.slice(7)));
     else if (h === 'library') await library();
@@ -87,7 +87,7 @@ async function home() {
   </section>
   <section class="wrap">
     <div class="mapbox heromap" id="homeMap"></div>
-    <div class="mapnote"><span><i></i>${manual} маршрутов, восстановленных по тексту книг; ещё ${routes.length - manual} — в атласе</span><span><i class="a"></i>ареалы коренных народов около 1900 года, схематично</span></div>
+    <div class="mapnote"><span><i></i>${pl(manual, ['маршрут восстановлен', 'маршрута восстановлены', 'маршрутов восстановлено'])} по тексту книг; ещё ${routes.length - manual} — черновики на проверке</span><span><i class="a"></i>ареалы коренных народов около 1900 года, схематично</span></div>
   </section>
   ${(P.team || []).length ? `<section class="band"><div class="wrap team">
     <h2>Коллектив проекта</h2>
@@ -103,7 +103,7 @@ async function home() {
   <section class="band"><div class="wrap">
     <h2>Содержание</h2>
     <ul class="toc">
-      <li><a href="#atlas"><span class="t">Атлас</span><span class="d">Маршруты путешественников, места, о которых они писали, и ареалы народов. Фильтры по эпохе, стране автора, типу поездки.</span><span class="n">${pl(routes.length, ['маршрут', 'маршрута', 'маршрутов'])}</span></a></li>
+      <li><a href="#atlas"><span class="t">Атлас</span><span class="d">Маршруты, восстановленные по тексту, черновики маршрутов на проверке, места, о которых писали путешественники, и ареалы народов.</span><span class="n">${pl(manual, ['маршрут', 'маршрута', 'маршрутов'])}</span></a></li>
       <li><a href="#peoples"><span class="t">Народы</span><span class="d">Кто, когда и какими словами описывал каждый народ: авторы, коллокации на трёх языках, дискурсы, цитаты.</span><span class="n">${pl(groups.length, ['карточка', 'карточки', 'карточек'])}</span></a></li>
       <li><a href="#library"><span class="t">Библиотека</span><span class="d">Полные очищенные тексты с подсветкой этнонимов и постоянными номерами абзацев для ссылок.</span><span class="n">${pl(works.length, ['книга', 'книги', 'книг'])}</span></a></li>
       <li><a href="#links"><span class="t">Связи</span><span class="d">Какие народы упоминаются вместе в разные эпохи и кто из авторов на кого ссылается и у кого заимствует.</span><span class="n">5 периодов</span></a></li>
@@ -147,54 +147,62 @@ async function home() {
 
 // ---------------- атлас ----------------
 async function atlas() {
-  const [works, routes, places, geo, groups] = await Promise.all([get('works.json'), get('routes.json'), get('places.json'), get('geo.json'), get('groups.json')]);
-  const W = Object.fromEntries(works.map((w) => [w.id, w]));
+  const [works, routes, places, geo, groups, bookgeo] = await Promise.all([get('works.json'), get('routes.json'), get('places.json'), get('geo.json'), get('groups.json'), get('bookgeo.json')]);
+  const W = Object.fromEntries(works.map((w) => [w.id, w])), RT = Object.fromEntries(routes.map((r) => [r.work, r]));
   const ind = groups.filter((g) => g.category === 'indigenous');
-  const st = {period: '', nat: '', stay: '', manual: true, auto: false, places: true, areas: true, work: '', group: ''};
-  const opt = (arr, lab) => arr.map(([v, t]) => `<option value="${esc(v)}">${esc(t)}</option>`).join('');
+  const nMan = routes.filter((r) => r.method === 'manual').length, nDraft = routes.filter((r) => r.method === 'draft').length;
+  const st = {period: '', nat: '', stay: '', year: 1930, manual: true, places: true, areas: true, work: '', group: ''};
+  const opt = (arr) => arr.map(([v, t]) => `<option value="${esc(v)}">${esc(t)}</option>`).join('');
+  const P = window.SibMap.PERC;
   V.innerHTML = `<section class="band"><div class="wrap">
-    <h1>Атлас маршрутов и ареалов</h1>
-    <p>Маршруты ${routes.filter((r) => r.method === 'manual').length} книг восстановлены вручную по паспорту источника, у каждой остановки — абзац-доказательство. Для остальных ${routes.filter((r) => r.method === 'auto').length} — автоматически по порядку упоминаний мест (совпадение с ручными маршрутами: 84% остановок). Колёсиком или щипком карту можно приблизить.</p>
+    <h1>Атлас путешествий</h1>
+    <p class="lede">Линией показаны только маршруты, восстановленные по тексту: у каждой остановки есть абзац, где автор говорит, что был в этом месте. Сейчас таких маршрутов ${nMan}; ещё ${nDraft} — черновики, которые проверяют эксперты проекта. Выберите книгу, чтобы увидеть её маршрут или черновик и все места, о которых она пишет.</p>
     <div class="ctl">
-      <label>Период <select id="fPer"><option value="">все</option>${opt(Object.entries(PER), '')}</select></label>
+      <label>Книга <select id="fWork"><option value="">все</option>${opt(works.slice().sort((a, b) => a.year - b.year).map((w) => [w.id, w.label + (RT[w.id] ? (RT[w.id].method === 'manual' ? ' — маршрут' : ' — черновик') : '')]))}</select></label>
+      <label>Эпоха <select id="fPer"><option value="">все</option>${opt(Object.entries(PER))}</select></label>
       <label>Страна автора <select id="fNat"><option value="">все</option>${opt([...new Set(works.map((w) => w.nat))].map((n) => [n, NAT[n] || n]))}</select></label>
-      <label>Тип поездки <select id="fStay"><option value="">все</option>${opt([...new Set(works.map((w) => w.stay))].map((s) => [s, works.find((w) => w.stay === s).stay_ru]))}</select></label>
-      <label>Книга <select id="fWork"><option value="">—</option>${opt(works.slice().sort((a, b) => a.year - b.year).map((w) => [w.id, w.label]))}</select></label>
+      <label>Тип поездки <select id="fStay"><option value="">все</option>${opt([...new Set(works.map((w) => w.stay))].map((x) => [x, works.find((w) => w.stay === x).stay_ru]))}</select></label>
       <label>Народ <select id="fGr"><option value="">—</option>${opt(ind.map((g) => [g.id, g.name]))}</select></label>
     </div>
-    <div class="ctl">
-      <button id="tMan" class="on">ручные маршруты</button><button id="tAuto">автомаршруты</button><button id="tPl" class="on">места</button><button id="tAr" class="on">ареалы</button>
-    </div>
+    <div class="ctl"><div class="yr"><label for="fYr">Поездки до</label><input type="range" id="fYr" min="1800" max="1930" step="1" value="1930"><output id="oYr">1930</output></div>
+      <button id="tMan" class="on">маршруты</button><button id="tPl" class="on">места</button><button id="tAr" class="on">ареалы</button></div>
     <div class="mapbox big" id="atlasMap"></div>
-    <div class="side" style="margin-top:22px"><div id="aInfo"></div><div id="aPlace"><p class="mute">Нажмите на место, маршрут или ареал.</p></div></div>
+    <div class="legend2">${Object.entries(PER).map(([k, v]) => `<span><i class="sw" style="background:${P[k]}"></i>${v}</span>`).join('')}<span><i class="dc"></i>остановка черновика</span><span><i class="bc"></i>место, упомянутое в книге</span></div>
+    <div class="side" style="margin-top:26px"><div id="aInfo"><p class="mute">Нажмите на маршрут или выберите книгу.</p></div><div id="aPlace"><p class="mute">Нажмите на место или ареал.</p></div></div>
   </div></section>`;
   const el = document.getElementById('atlasMap');
-  const filt = (w) => (!st.period || w.period === st.period) && (!st.nat || w.nat === st.nat) && (!st.stay || w.stay === st.stay);
+  const filt = (w) => (!st.period || w.period === st.period) && (!st.nat || w.nat === st.nat) && (!st.stay || w.stay === st.stay) && (st.year >= 1930 || (w.j0 || w.year) <= st.year);
   const gr = () => ind.find((g) => g.id === st.group);
-  const draw = mapIn(el, () => ({geo, routes, places, works, areas: st.areas ? ind : null, showAreas: st.areas, showManual: st.manual, showAuto: st.auto, showPlaces: st.places, filter: filt,
+  const draw = mapIn(el, () => ({geo, routes, places, works, bookgeo, areas: st.areas ? ind : null, showAreas: st.areas, showManual: st.manual, showPlaces: st.places && !st.work, filter: filt,
     focusWork: st.work, focusGroup: st.group,
     placeValue: st.group ? ((p) => (p.groups.find((x) => x[0] === gr().name) || [0, 0])[1]) : null,
     onWork: (w) => { st.work = w; document.getElementById('fWork').value = w; draw(); info(); },
     onGroup: (g) => { st.group = g; document.getElementById('fGr').value = g; draw(); info(); },
     onPlace: (p) => placeInfo(p)}));
+  const para = (w, pid) => pid ? ` <a href="#book-${toH(w)}-p${esc(pid.split('_p')[1])}">абзац ${esc(String(+pid.split('_p')[1]))}</a>` : '';
   function info() {
     const box = document.getElementById('aInfo'); let h = '';
     if (st.work) {
-      const w = W[st.work], r = routes.find((x) => x.work === st.work);
-      h += `<h3><a href="#book-${toH(w.id)}">${esc(w.label)}</a> · ${esc(w.author)}</h3><p class="small mute">${esc(w.nat_ru)} · ${esc(w.stay_ru)} · поездка ${w.j0 ? yr(w.j0) : '?'}${w.j1 && w.j1 !== w.j0 ? '–' + yr(w.j1) : ''} · ${r ? (r.method === 'auto' ? 'автомаршрут' : 'ручной маршрут') : ''}</p>`;
-      if (r) h += `<ol class="small">${r.stops.filter(inBox).map((s) => `<li>${esc(s[1])}${s[4] ? ` — <a href="#book-${toH(w.id)}-p${esc(s[4].split('_p')[1])}">абзац</a>` : ' — <span class="mute">в тексте не найдено</span>'}</li>`).join('')}</ol>`;
+      const w = W[st.work], r = RT[st.work];
+      const badge = !r ? '<span class="status">маршрут не определён</span>' : r.status === 'verified' ? '<span class="status rec">проверен экспертом</span>' : r.status === 'reconstructed' ? '<span class="status rec">восстановлен по тексту</span>' : '<span class="status draft">черновик, на проверке</span>';
+      h += `<h3><a href="#book-${toH(w.id)}">${esc(w.label)}</a></h3><p class="small mute">${esc(w.author)} · ${esc(w.nat_ru)} · ${esc(w.stay_ru)} · поездка ${w.j0 ? yr(w.j0) : '?'}${w.j1 && w.j1 !== w.j0 ? '–' + yr(w.j1) : ''}</p><p>${badge}</p>`;
+      if (r && r.method === 'manual') h += `<ol class="small">${r.stops.map((s) => `<li>${esc(s[1])}${s[5] === 'not_found_in_text' ? ' <span class="mute">— в тексте не найдено</span>' : para(w.id, s[4])}</li>`).join('')}</ol>`;
+      else if (r) h += `<p class="small">Черновик составлен программой: в него попали места, о которых автор пишет как о посещённых («мы прибыли в…», «we left…»). Порядок предварительный. Номера на карте совпадают с номерами в списке; пунктирный кружок — одно свидетельство в тексте.</p><ol class="small">${r.stops.map((s) => `<li>${esc(s[1])}${para(w.id, s[4])}${s[5] === 'higher' ? '' : ' <span class="mute">· одно свидетельство</span>'}</li>`).join('')}</ol>`;
+      else h += `<p class="small">Программа не нашла в книге мест, о которых автор пишет как о посещённых: это может быть обзор, компиляция или текст с плохим распознаванием. На карте показана география книги — все упомянутые места.</p>`;
     }
-    if (st.group) { const g = gr(); h += `<h3><a href="#people-${toH(g.id)}">${esc(g.name)}</a></h3><p class="small mute">Круги показывают, где упоминания этого народа стоят в одном абзаце с названием места.</p>`; }
-    box.innerHTML = h;
+    if (st.group) { const g = gr(); h += `<h3 style="margin-top:18px"><a href="#people-${toH(g.id)}">${esc(g.name)}</a></h3><p class="small mute">Круги показывают, где этот народ упомянут в одном абзаце с названием места.</p>`; }
+    box.innerHTML = h || '<p class="mute">Нажмите на маршрут или выберите книгу.</p>';
   }
   function placeInfo(p) {
     document.getElementById('aPlace').innerHTML = `<h3>${esc(p.name)}</h3><p class="small mute">${p.mentions} упоминаний в ${p.works} книгах · координаты: ${esc(p.coord)}</p>
       <h3 style="font-size:16px">Чаще всего упоминают</h3>${bars(p.top_works.map(([w, n]) => [W[w] ? W[w].label : w, n, '#book-' + toH(w)]))}
       ${p.groups.length ? `<h3 style="font-size:16px;margin-top:14px">Народы в тех же абзацах</h3>${bars(p.groups)}` : ''}`;
   }
-  const bind = (id, k, num) => document.getElementById(id).addEventListener('change', (e) => { st[k] = e.target.value; draw(); info(); });
+  const bind = (id, k) => document.getElementById(id).addEventListener('change', (e) => { st[k] = e.target.value; draw(); info(); });
   bind('fPer', 'period'); bind('fNat', 'nat'); bind('fStay', 'stay'); bind('fWork', 'work'); bind('fGr', 'group');
-  [['tMan', 'manual'], ['tAuto', 'auto'], ['tPl', 'places'], ['tAr', 'areas']].forEach(([id, k]) => document.getElementById(id).addEventListener('click', (e) => { st[k] = !st[k]; e.target.classList.toggle('on', st[k]); draw(); }));
+  const yrI = document.getElementById('fYr'); yrI.addEventListener('input', () => { st.year = +yrI.value; document.getElementById('oYr').textContent = yrI.value; draw(); });
+  [['tMan', 'manual'], ['tPl', 'places'], ['tAr', 'areas']].forEach(([id, k]) => document.getElementById(id).addEventListener('click', (e) => { st[k] = !st[k]; e.target.classList.toggle('on', st[k]); draw(); }));
+  const q = new URLSearchParams(location.hash.split('?')[1] || ''); if (q.get('work') && W[q.get('work')]) { st.work = q.get('work'); document.getElementById('fWork').value = st.work; draw(); info(); }
 }
 
 // ---------------- народы ----------------
@@ -286,7 +294,7 @@ async function book(id, par) {
       <p class="small">${fmt(w.words)} слов, из них о Сибири ${fmt(w.words_sib)}; ${fmt(w.mentions)} упоминаний народов (${fmt(w.per10k, 1)} на 10 тыс.)</p>
       <div class="chips">${w.top_groups.map((g) => `<span class="chip">${esc(g[0])} · ${g[1]}</span>`).join('')}</div>
       <p class="small">${w.sources.map((s) => `<a href="${esc(s)}" rel="noopener">${esc(s.replace('https://', ''))}</a>`).join('<br>')}</p>
-      ${r ? `<p class="small"><a href="#atlas" id="toAtlas">маршрут на карте</a> · ${r.method === 'auto' ? 'автомаршрут' : 'ручной'}: ${r.stops.map((s) => esc(s[1])).join(' → ')}</p>` : ''}
+      ${r ? `<p class="small"><a href="#atlas?work=${esc(id)}">${r.method === 'draft' ? 'черновик маршрута на карте' : 'маршрут на карте'}</a> · ${r.method === 'draft' ? 'черновик, на проверке' : 'восстановлен по тексту'}: ${r.stops.map((s) => esc(s[1])).join(r.method === 'draft' ? ', ' : ' → ')}</p>` : `<p class="small"><a href="#atlas?work=${esc(id)}">география книги на карте</a></p>`}
       <div class="ctl"><button id="onlySib">только о Сибири</button></div>
       <label class="small mute">Найти в тексте <input type="search" id="tq" aria-label="Поиск в тексте"></label>
       <p class="small mute" id="tqn"></p>
@@ -495,13 +503,13 @@ async function publications() {
 // ---------------- метод ----------------
 async function method() {
   const [A, P, works] = await Promise.all([get('analytics.json'), project(), get('works.json')]);
-  const Q = A.quality, ok = (i) => Math.round(Q[i].value * Q[i].n), pct = (v) => fmt(100 * v, 0) + '%';
+  const JE = A.journeys_eval || {n: 12, precision: 0.69, recall: 0.71}; const Q = A.quality, ok = (i) => Math.round(Q[i].value * Q[i].n), pct = (v) => fmt(100 * v, 0) + '%';
   const steps = [
     ['Формирование корпуса', 'экспертная работа и цифровой поиск', `Корпус формировался с опорой на библиографические справочники (прежде всего A. G. Cross, «In the Lands of the Romanovs»), национальные библиографии и каталоги, фонды электронных библиотек и репозиториев (Internet Archive, Project Gutenberg и др.) и исследовательскую литературу о травелогах. Каждый кандидат проверялся по критериям отбора: европейский автор, собственная поездка или пребывание в Сибири, 1800–1930 годы. Из 168 рассмотренных изданий отобрано ${works.length}; сверка с библиографией Cross показывает охват 76% её европейских позиций.`],
     ['Паспорт издания', 'экспертная работа', 'Для каждой книги вручную установлены автор, его страна и род занятий, тип пребывания в Сибири, годы поездки (отдельно от года издания) и надёжность датировки. На этих сведениях держатся все сравнения по эпохам и по странам.'],
     ['Подготовка текстов', 'цифровая обработка с выборочным контролем', 'Очистка распознанного текста от колонтитулов, номеров страниц, переносов, подписей к иллюстрациям и служебных страниц; деление на главы и абзацы. Каждый абзац получил постоянный номер, по которому на него можно сослаться.'],
     ['Названия народов и мест', 'экспертная работа и цифровая обработка', 'Словарь этнонимов на 10 языках составлен и выверен вручную: исторические и иноязычные формы (Ostiaken, Tongouses, Bratski) сведены к современным названиям народов, неоднозначные случаи разобраны по контексту. Справочник из 101 места с координатами. Поиск по всем текстам выполнялся программно.'],
-    ['Маршруты', 'экспертная работа и цифровая обработка', 'Для части книг маршруты восстановлены вручную по тексту, с указанием абзацев, подтверждающих каждую остановку. Для остальных книг маршрут построен автоматически по порядку упоминания мест и проверен на ручных маршрутах.'],
+    ['Маршруты', 'экспертная работа и цифровая обработка', 'Для части книг маршруты восстановлены вручную по тексту, с указанием абзацев, подтверждающих каждую остановку. Для остальных программа готовит черновик — места, о которых автор пишет как о посещённых, с абзацами-доказательствами; черновик становится маршрутом на карте только после проверки экспертом.'],
     ['Экспертная разметка', 'экспертная работа', 'Стратифицированная выборка по стране автора и эпохе: 250 описаний коренных народов и 100 фрагментов об отношениях между группами. Для каждого фрагмента определены оценка, рамка описания (иерархия «цивилизованности», хозяйство, контакт и т. д.), источник знания (личное наблюдение или пересказ) и тип отношения. Все выводы об оценках и отношениях на сайте построены на этой разметке.'],
     ['Корпусный анализ', 'цифровая обработка', 'Частоты по десятилетиям, коллокации, дискурсы, тематическое моделирование, сети совместных упоминаний и цитирования, поиск текстовых заимствований, статистические модели с учётом того, что фрагменты одной книги не независимы.'],
     ['Интерпретация', 'экспертная работа', 'Каждая закономерность проверялась чтением исходных фрагментов; любая цифра на сайте ведёт к абзацам, на которых она основана.']];
@@ -512,7 +520,7 @@ async function method() {
     ['ok', 'Абзац верно отнесён к Сибири', `${Q[9].n} абзацев`, `верно ${ok(9)} из ${Q[9].n}`, 'Анализ ведётся только по абзацам о Сибири.'],
     ['ok', 'Фрагмент экспертной выборки действительно описывает народ Сибири', `${Q[4].n} фрагментов`, `подходят ${ok(4)} из ${Q[4].n}`, 'Неподходящие фрагменты исключены из расчётов.'],
     ['mid', 'Отнесение к Сибири абзацев без собственных топонимов в книгах без деления на главы', `${Q[5].n} абзацев`, `верно ${ok(5)} из ${Q[5].n}`, 'Около пятой части таких абзацев на деле о других краях; доли по этим книгам приблизительны.'],
-    ['mid', 'Автоматические маршруты', `сравнение с ${Q[8].n} маршрутами, восстановленными вручную`, `найдено в среднем ${pct(Q[8].value)} остановок, порядок в основном верен`, 'На карте показаны отдельно от ручных и по умолчанию скрыты.'],
+    ['mid', 'Черновики маршрутов: места, о которых автор пишет как о посещённых', `сравнение с ${JE.n} маршрутами, восстановленными по тексту`, `верных остановок ${pct(JE.precision)}, найдено ${pct(JE.recall)} остановок, порядок почти совпадает`, 'Черновики не рисуются линией: на карте это пронумерованные точки, пока маршрут не проверит эксперт.'],
     ['mid', 'Автоматический поиск дискурсов (вымирание, ссылка, обрусение и др.)', `${Q[7].n} абзацев`, `верно ${ok(7)} из ${Q[7].n}`, 'Надёжнее сравнивать изменения во времени, чем абсолютные доли; часть случаев поиск пропускает.'],
     ['low', 'Автоматическое выделение тем', `${Q[12].n} абзацев, сравнение с ручным определением`, 'совпадение примерно в половине случаев', 'Темы служат только для навигации, выводов по ним не делается.'],
     ['no', 'Автоматическое определение типа отношений между народами', `${Q[6].n} фрагментов, сравнение с экспертной разметкой`, `совпало ${ok(6)} из ${Q[6].n}`, 'Не используется: отношения описаны по экспертной разметке.'],

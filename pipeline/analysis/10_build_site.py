@@ -5,7 +5,8 @@
   groups.json     карточки народов: ареал (схематично), упоминания по десятилетиям, кто описывал, коллокации,
                   дискурсы, цитаты из экспертной выборки, места;
   places.json     места газеттира: координаты, упоминания, какие книги и какие группы рядом;
-  routes.json     ручные маршруты (с абзацами-доказательствами) и автомаршруты;
+  routes.json     путешествия: восстановленные/проверенные маршруты и черновики для проверки (07g);
+  bookgeo.json    география книги: места и число упоминаний по каждой книге;
   networks.json   сети групп по периодам и интертекстуальная сеть;
   analytics.json  дискурсы, маркеры, рамки, модели, темы, экспертные оценки, отношения, проверки качества;
   ngram_en.json   n-граммы по годам (английские абзацы о Сибири);
@@ -72,18 +73,23 @@ for r in PL.itertuples():
                       groups=[[G.loc[g, 'name_ru'], int(n)] for g, n in pg_count[r.place_id].most_common(6)]))
 dump('places.json', prows)
 
-# ---------- routes ----------
-IT = pd.read_csv(ROOT / 'data/itineraries.csv'); IA = pd.read_csv(ROOT / 'data/itineraries_auto.csv')
+# ---------- routes: путешествия по data/journeys.csv (07g) ----------
+# Линией на карте рисуются только маршруты, восстановленные по тексту или проверенные экспертом (method='manual').
+# Черновики (method='draft') показываются как список остановок для проверки, но не как путь.
+J = pd.read_csv(ROOT / 'data/journeys.csv'); PLi = PL.set_index('place_id')
 routes = []
-for w, d in IT.groupby('work_id'):
-    d = d.sort_values('seq')
-    routes.append(dict(work=w, method='manual', stops=[[s.place_id, s.label_ru, round(float(s.lon), 3), round(float(s.lat), 3), s.evidence_pid if isinstance(s.evidence_pid, str) else None, s.evidence_status] for s in d.itertuples()]))
-manual = set(IT.work_id)
-for w, d in IA.groupby('work_id'):
-    if w in manual: continue
-    d = d.sort_values('seq')
-    routes.append(dict(work=w, method='auto', stops=[[s.place_id, s.label_ru, round(float(s.lon), 3), round(float(s.lat), 3), s.evidence_pid, 'auto'] for s in d.itertuples()]))
+for w, d in J.groupby('work_id', sort=False):
+    d = d.sort_values('seq'); st = d.status.iloc[0]
+    routes.append(dict(work=w, method='draft' if st == 'draft' else 'manual', status=st,
+                       stops=[[s.place_id, PLi.at[s.place_id, 'label_ru'], round(float(PLi.at[s.place_id, 'lon']), 3), round(float(PLi.at[s.place_id, 'lat']), 3),
+                               s.evidence_pid if isinstance(s.evidence_pid, str) and s.evidence_pid else None,
+                               s.confidence if isinstance(s.confidence, str) else ('not_found_in_text' if s.note == 'not_found_in_text' else 'text')] for s in d.itertuples()]))
 dump('routes.json', routes)
+
+# ---------- география книги: какие места и сколько раз упомянуты (не путь!) ----------
+PMb = pd.read_csv(ROOT / 'data/place_mentions.csv')
+bookgeo = {w: [[p, int(n)] for p, n in d.place_id.value_counts().items()] for w, d in PMb.groupby('work_id')}
+dump('bookgeo.json', bookgeo)
 
 # ---------- groups ----------
 AREAS = {  # схематичные ареалы около 1900 г.: [долгота, широта, rx°, ry°]; по этнографическим картам, только для ориентира
@@ -139,6 +145,8 @@ T = json.load(open(SD / 'research/topics.json')); A['topics'] = dict(words=T['to
 A['keyness'] = pd.read_csv(R / 'keyness.csv').groupby('contrast').head(25).to_dict(orient='records')
 A['quality'] = json.load(open(ROOT / 'dash_data/quality.json'))['rows']
 A['routes_validation'] = pd.read_csv(R / 'routes_auto_validation.csv').to_dict(orient='records')
+JEv = pd.read_csv(ROOT / 'validation/journeys_eval.csv'); JEv = JEv[JEv.method == 'travel_evidence_v1']
+A['journeys_eval'] = dict(n=int(len(JEv)), precision=round(float(JEv.hit.sum() / JEv.pred.sum()), 3), recall=round(float(JEv.hit.sum() / JEv.gold.sum()), 3), tau=round(float(JEv.tau.median()), 2))
 A['summary'] = {k: v for k, v in json.load(open(SD / 'summary.json')).items() if not isinstance(v, (dict, list))}
 A['citations'] = pd.read_csv(R / 'intertext_nodes.csv').head(25)[['label', 'kind', 'cited_by']].to_dict(orient='records')
 dump('analytics.json', A)

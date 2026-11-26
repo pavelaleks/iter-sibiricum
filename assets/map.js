@@ -1,5 +1,6 @@
 /* Карта Сибири на d3-geo без внешних тайлов: суша, реки, озёра (Natural Earth), маршруты, места, ареалы.
-   window.SibMap.draw(el, {geo, routes, places, works, areas, focusWork, focusGroup, showAuto, showManual, showPlaces, showAreas, filter, onWork, onPlace}) */
+   window.SibMap.draw(el, {geo, routes, places, works, bookgeo, areas, focusWork, focusGroup, showManual, showPlaces, showAreas, filter, onWork, onPlace})
+   Линией рисуются только маршруты, восстановленные по тексту или проверенные (method 'manual'); черновики — пронумерованными точками. */
 window.SibMap = (() => {
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   function ellipse(lon, lat, rx, ry) {
@@ -33,24 +34,45 @@ window.SibMap = (() => {
         .on('mouseleave', hide).on('click', (ev, d) => o.onGroup && o.onGroup(d.gr.id));
     }
     const workById = Object.fromEntries((o.works || []).map((w) => [w.id, w]));
+    const placeById = Object.fromEntries((o.places || []).map((p) => [p.id, p]));
+    // Цвет маршрута — эпоха поездки (светлее — раньше, темнее — позже); один тон, чтобы маршруты читались как один слой.
+    const PERC = {'P1 до 1855': 'var(--p1)', 'P2 1856–1880': 'var(--p2)', 'P3 1881–1904': 'var(--p3)', 'P4 1905–1917': 'var(--p4)', 'P5 1918–1930': 'var(--p5)'};
+    const col = (w) => PERC[(workById[w] || {}).period] || 'var(--acc)';
+    const line = (r) => path({type: 'LineString', coordinates: r.stops.map((s) => [s[2], s[3]])});
     if (o.routes) {
-      const R = o.routes.filter((r) => (r.method === 'manual' ? o.showManual !== false : o.showAuto !== false) && (!o.filter || o.filter(workById[r.work] || {})))
+      // Линией рисуются только маршруты, восстановленные по тексту или проверенные; черновики — никогда.
+      const R = o.routes.filter((r) => r.method === 'manual' && o.showManual !== false && (!o.filter || o.filter(workById[r.work] || {})))
         .map((r) => ({...r, stops: r.stops.filter(inBox)})).filter((r) => r.stops.length > 1);
-      const line = (r) => path({type: 'LineString', coordinates: r.stops.map((s) => [s[2], s[3]])});
       g.append('g').selectAll('path').data(R.filter((r) => r.work !== o.focusWork)).join('path')
-        .attr('class', (r) => 'route' + (r.method === 'auto' ? ' auto' : '') + (o.animate ? ' draw' : '')).attr('stroke-width', o.routeWidth || 1.6).attr('d', line)
-        .attr('pathLength', o.animate ? 1 : null).style('animation-delay', (r, i) => o.animate ? (300 + i * 140) + 'ms' : null).style('stroke-opacity', (r) => o.autoOpacity && r.method === 'auto' ? o.autoOpacity : null)
-        .on('mousemove', (ev, r) => { const w = workById[r.work] || {}; show(ev, `<b>${esc(w.label || r.work)}</b>${esc(w.author || '')}<br>${esc(w.nat_ru || '')} · ${esc(w.stay_ru || '')}<br>${r.method === 'auto' ? 'автомаршрут (по порядку упоминаний), требует проверки' : 'маршрут с абзацами-доказательствами'}`); })
+        .attr('class', 'route' + (o.animate ? ' draw' : '')).attr('stroke', (r) => col(r.work)).attr('stroke-width', o.routeWidth || 1.8).attr('d', line)
+        .attr('pathLength', o.animate ? 1 : null).style('animation-delay', (r, i) => o.animate ? (300 + i * 140) + 'ms' : null)
+        .style('stroke-opacity', o.focusWork ? .25 : null)
+        .on('mousemove', (ev, r) => { const w = workById[r.work] || {}; show(ev, `<b>${esc(w.label || r.work)}</b>${esc(w.author || '')}<br>поездка ${w.j0 || '?'}${w.j1 && w.j1 !== w.j0 ? '–' + w.j1 : ''} · ${esc(w.stay_ru || '')}<br>${r.status === 'verified' ? 'маршрут проверен экспертом' : 'маршрут восстановлен по тексту'}`); })
         .on('mouseleave', hide).on('click', (ev, r) => o.onWork && o.onWork(r.work));
-      const F0 = R.find((r) => r.work === o.focusWork) || o.routes.find((r) => r.work === o.focusWork);
-      const F = F0 && {...F0, stops: F0.stops.filter(inBox)};
-      if (F) {
-        g.append('path').attr('class', 'route hi').attr('d', line(F));
-        g.append('g').selectAll('circle').data(F.stops).join('circle').attr('r', 3.6).attr('fill', 'var(--acc)').attr('stroke', 'var(--bg)')
+      const F0 = o.routes.find((r) => r.work === o.focusWork);
+      // География выбранной книги: все упомянутые места, круг — число упоминаний. Это не путь.
+      if (o.focusWork && o.bookgeo && o.bookgeo[o.focusWork]) {
+        const BG = o.bookgeo[o.focusWork].map(([id, n]) => ({p: placeById[id], n})).filter((d) => d.p && inBox([0, 0, d.p.lon, d.p.lat]));
+        const r = d3.scaleSqrt().domain([0, d3.max(BG, (d) => d.n) || 1]).range([2, 16]);
+        g.append('g').selectAll('circle').data(BG).join('circle').attr('class', 'bgeo').attr('r', (d) => r(d.n))
+          .attr('transform', (d) => `translate(${proj([d.p.lon, d.p.lat])})`)
+          .on('mousemove', (ev, d) => show(ev, `<b>${esc(d.p.name)}</b>${d.n} упоминаний в этой книге`)).on('mouseleave', hide).on('click', (ev, d) => o.onPlace && o.onPlace(d.p));
+      }
+      if (F0 && F0.method === 'manual') {
+        const F = {...F0, stops: F0.stops.filter(inBox)};
+        g.append('path').attr('class', 'route hi').attr('stroke', col(F.work)).attr('d', line(F));
+        g.append('g').selectAll('circle').data(F.stops).join('circle').attr('r', 3.6).attr('fill', col(F.work)).attr('stroke', 'var(--bg)')
           .attr('transform', (s) => `translate(${proj([s[2], s[3]])})`)
-          .on('mousemove', (ev, s) => show(ev, `<b>${esc(s[1])}</b>${s[5] === 'not_found_in_text' ? 'в тексте не найдено' : 'абзац ' + esc(s[4] || '')}`)).on('mouseleave', hide);
+          .on('mousemove', (ev, s) => show(ev, `<b>${esc(s[1])}</b>${s[5] === 'not_found_in_text' ? 'в тексте не найдено' : 'абзац ' + esc((s[4] || '').split('_p')[1] || '')}`)).on('mouseleave', hide);
         g.append('g').selectAll('text').data(F.stops.filter((s, i) => i % Math.max(1, Math.round(F.stops.length / 14)) === 0)).join('text').attr('class', 'mlabel')
           .attr('transform', (s) => { const p = proj([s[2], s[3]]); return `translate(${p[0] + 6},${p[1] - 5})`; }).text((s) => s[1]);
+      } else if (F0 && F0.method === 'draft') {
+        // Черновик: пронумерованные остановки без соединяющей линии — порядок предполагаемый.
+        const F = F0.stops.filter(inBox);
+        const gg = g.append('g').selectAll('g').data(F).join('g').attr('class', 'dstop').attr('transform', (s) => `translate(${proj([s[2], s[3]])})`)
+          .on('mousemove', (ev, s) => show(ev, `<b>${esc(s[1])}</b>черновик: посещение по тексту ${s[5] === 'higher' ? '(несколько свидетельств)' : '(одно свидетельство)'}`)).on('mouseleave', hide);
+        gg.append('circle').attr('r', 7).attr('class', (s) => s[5] === 'higher' ? 'hi' : '');
+        gg.append('text').attr('dy', 3.2).attr('text-anchor', 'middle').text((s, i) => i + 1);
       }
     }
     if (o.showPlaces !== false && o.places) {
@@ -66,9 +88,9 @@ window.SibMap = (() => {
         g.append('g').selectAll('text').data(top).join('text').attr('class', 'mlabel').attr('transform', (p) => { const q = proj([p.lon, p.lat]); return `translate(${q[0] + 5},${q[1] + 3})`; }).text((p) => p.name);
       }
     }
-    const zoom = d3.zoom().scaleExtent([1, 8]).on('zoom', (ev) => { g.attr('transform', ev.transform); g.selectAll('.mlabel').attr('font-size', 11 / ev.transform.k); g.selectAll('.route').attr('stroke-width', function () { return (this.classList.contains('hi') ? 3 : (o.routeWidth || 1.6)) / ev.transform.k; }); });
+    const zoom = d3.zoom().scaleExtent([1, 8]).on('zoom', (ev) => { g.attr('transform', ev.transform); g.selectAll('.mlabel').attr('font-size', 11 / ev.transform.k); g.selectAll('.route').attr('stroke-width', function () { return (this.classList.contains('hi') ? 3 : (o.routeWidth || 1.8)) / ev.transform.k; }); g.selectAll('.dstop').attr('transform', function (s) { const p = proj([s[2], s[3]]); return `translate(${p})scale(${1 / ev.transform.k})`; }); });
     if (o.zoom !== false) svg.call(zoom);
     return {svg, proj};
   }
-  return {draw, ellipse};
+  return {draw, ellipse, PERC: {'P1 до 1855': 'var(--p1)', 'P2 1856–1880': 'var(--p2)', 'P3 1881–1904': 'var(--p3)', 'P4 1905–1917': 'var(--p4)', 'P5 1918–1930': 'var(--p5)'}};
 })();
