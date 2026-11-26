@@ -30,6 +30,21 @@ def main():
     pv = ROOT / 'data' / 'illustrations_visual.csv'
     if pv.exists():
         vis = {r['ill_id']: r for r in csv.DictReader(open(pv, encoding='utf-8'))}
+    # макрорегион иллюстрации: по местам из проверенной подписи, иначе по абзацу рядом
+    GZ = {'west_siberia': 'sib', 'east_siberia': 'sib', 'arctic_siberia': 'sib', 'far_east': 'sib', 'kamchatka_chukotka': 'sib',
+          'yakutia_ne': 'sib', 'kazakh_steppe': 'sib', 'urals': 'eur', 'european_russia': 'eur', 'china': 'china',
+          'manchuria': 'china', 'mongolia': 'china', 'america': 'other', 'europe': 'other', 'japan_korea': 'other'}
+    MAC = {r['label_ru'].strip(): GZ.get(r['region'], '') for r in csv.DictReader(open(ROOT / 'data' / 'places.csv', encoding='utf-8'))}
+    MAC.update({r['place'].strip(): r['macro'] for r in csv.DictReader(open(ROOT / 'data' / 'illustration_place_regions.csv', encoding='utf-8'))})
+    PREG = {}
+    for line in open(ROOT / 'corpus' / 'paragraphs.jsonl', encoding='utf-8'):
+        q = json.loads(line); PREG[q['pid']] = GZ.get(q['region'], '')
+    def macro(places, pid):
+        m = [MAC.get(x, '') for x in places]; m = [x for x in m if x]
+        if m:  # если среди мест есть сибирское — иллюстрация сибирская
+            return ('sib' if 'sib' in m else collections.Counter(m).most_common(1)[0][0]), 'cap'
+        return PREG.get(pid, ''), 'par' if PREG.get(pid) else ''
+    unmapped = collections.Counter()
     ROT = {'rot_cw': 90, 'rot_ccw': 270, 'rot_180': 180}
     items = []
     for r in rows:
@@ -45,15 +60,17 @@ def main():
         if r['work_id'] not in works or r['status'] == 'rejected': continue
         items.append(dict(id=r['ill_id'], w=r['work_id'], ia=r['ia'], n=int(r['leaf']), k=r['kind'], c=r['caption'],
                           f=r['facing_page'], p=r['pid'].split('_p')[-1] if r['pid'] else '',
-                          g=[x for x in r['groups'].split(';') if x], pl=[x for x in (r.get('places_ru') or '').split(';') if x], ru=r.get('ru', ''),
+                          g=[x for x in r['groups'].split(';') if x], pl=[x.strip() for x in (r.get('places_ru') or '').split(';') if x.strip()], ru=r.get('ru', ''),
                           t=r['thumb'], tw=int(r['thumb_w']), th=int(r['thumb_h']), r=int(r['rotated'] or 0),
                           a=float(r['area']), vrot=r['vrot'], hero=r['vhero']))
         it = items[-1]
+        it['rg'], it['rb'] = macro(it['pl'], r['pid'])
+        unmapped.update(x for x in it['pl'] if x not in MAC)
         if r['vkind'] and (it['k'] in ('other', 'unknown', '') or not it['c']): it['k'] = r['vkind']
         if it['k'] == 'unknown': it['k'] = 'other'
     items.sort(key=lambda x: (works[x['w']]['year'], x['w'], x['id']))
     # подборка для главной
-    pool = [x for x in items if x['hero'] and good_caption(x['c'])]
+    pool = [x for x in items if x['hero'] and good_caption(x['c']) and x['rg'] in ('sib', '')]  # на главной — только Сибирь
     if len(pool) < 20:
         pool += [x for x in items if not x['hero'] and x['k'] in ('people', 'portrait', 'view', 'map') and good_caption(x['c'])
                  and 0.55 <= x['tw'] / max(1, x['th']) <= 1.6 and x['a'] >= 0.12]
@@ -81,6 +98,8 @@ def main():
     for x in items: x.pop('vrot', None); x.pop('hero', None); x['a'] = round(x['a'], 2)
     out = dict(method='ia_djvu_layout_v1', items=items, hero=hero)
     json.dump(out, open(SITE / 'data' / 'illustrations.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    print('регионы:', dict(collections.Counter(x['rg'] or '?' for x in items)), 'по подписи:', sum(x['rb'] == 'cap' for x in items),
+          '| мест без региона:', len(unmapped), list(unmapped)[:10])
     print(len(items), 'иллюстраций,', len({x['w'] for x in items}), 'книг; на главной', len(hero))
 
 if __name__ == '__main__':

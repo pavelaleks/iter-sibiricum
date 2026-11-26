@@ -228,7 +228,9 @@ async function illustrations() {
   const W = Object.fromEntries(works.map((w) => [w.id, w])), G = Object.fromEntries(groups.map((g) => [g.id, g]));
   // сначала изображения с подписью (по году издания), затем без подписи
   const I = [...D.items].sort((a, b) => (!a.c) - (!b.c)), nb = new Set(I.map((x) => x.w)).size;
-  const st = {k: '', w: '', g: '', per: '', q: ''}; let lim = 96, cur = [];
+  const st = {k: '', w: '', g: '', per: '', rg: '', q: ''}; let lim = 96, cur = [];
+  const RG = {sib: 'Сибирь и Дальний Восток', eur: 'Урал и Европейская Россия', casia: 'Средняя Азия и Туркестан', china: 'Монголия, Маньчжурия, Китай', other: 'Другие страны', '?': 'не определён'};
+  const rgOf = (x) => x.rg || '?';
   const cnt = (f) => I.filter(f).length;
   const books = [...new Set(I.map((x) => x.w))].sort((a, b) => (W[a]?.year || 0) - (W[b]?.year || 0));
   const gids = [...new Set(I.flatMap((x) => x.g))].filter((g) => G[g]).sort((a, b) => G[a].name.localeCompare(G[b].name, 'ru'));
@@ -236,11 +238,12 @@ async function illustrations() {
   V.innerHTML = `<section class="band"><div class="wrap ill-head">
     <h1>Иллюстрации</h1>
     <p class="lede">${pl(I.length, ['изображение', 'изображения', 'изображений'])} из ${pl(nb, ['книги', 'книг', 'книг'])} корпуса: гравюры, фотографии и карты, которыми путешественники сопровождали свои описания Сибири.</p>
-    <p class="small mute ill-note">Изображения найдены по сканам Internet Archive: программа отбирает страницы с графикой, вырезает её и поворачивает альбомные вклейки. Подписи — распознанный текст оригинала, в нём возможны ошибки; тип и народы определены по подписи. Каждое изображение ведёт на страницу скана и на абзац рядом с ним в библиотеке. Метод — в разделе <a href="#method">«Метод и данные»</a>.</p>
+    <p class="small mute ill-note">Изображения найдены по сканам Internet Archive: программа отбирает страницы с графикой, вырезает её и поворачивает альбомные вклейки. Подписи — распознанный текст оригинала, в нём возможны ошибки; тип, народы и места определены по подписи; регион там, где в подписи нет места, — по абзацу рядом, предварительно. Каждое изображение ведёт на страницу скана и на абзац рядом с ним в библиотеке. Метод — в разделе <a href="#method">«Метод и данные»</a>.</p>
     <div class="ill-filters" role="group" aria-label="Фильтры">
       <div class="seg" id="fK"><button type="button" data-k="" class="on">Все <span>${fmt(I.length)}</span></button>${Object.entries(KIND).filter(([k]) => cnt((x) => x.k === k)).map(([k, t]) => `<button type="button" data-k="${k}">${t} <span>${fmt(cnt((x) => x.k === k))}</span></button>`).join('')}</div>
       <label>Книга<select id="fW"><option value="">все книги</option>${books.map((w) => `<option value="${esc(w)}">${esc(W[w] ? W[w].author + ', ' + W[w].year : w)} (${cnt((x) => x.w === w)})</option>`).join('')}</select></label>
       <label>Народ<select id="fG"><option value="">все</option>${gids.map((g) => `<option value="${esc(g)}">${esc(G[g].name)} (${cnt((x) => x.g.includes(g))})</option>`).join('')}</select></label>
+      <label>Регион<select id="fR"><option value="">все</option>${Object.entries(RG).filter(([r]) => cnt((x) => rgOf(x) === r)).map(([r, t]) => `<option value="${r}">${t} (${fmt(cnt((x) => rgOf(x) === r))})</option>`).join('')}</select></label>
       <label>Период<select id="fP"><option value="">все</option>${pers.map((p) => `<option value="${esc(p)}">${esc(PER[p] || p)}</option>`).join('')}</select></label>
       <label class="q">Подпись<input id="fQ" type="search" placeholder="Например, Yakut, tent, Irkutsk"></label>
     </div>
@@ -252,13 +255,13 @@ async function illustrations() {
   const card = (x) => `<figure class="ill"><a href="#illustrations?i=${encodeURIComponent(x.id)}" data-i="${esc(x.id)}">${illImg(x)}</a><figcaption><span class="c">${x.c ? esc(x.c) : '<span class="mute">без подписи</span>'}</span>${x.ru ? `<span class="ru">${esc(x.ru)}</span>` : ''}<span class="s">${esc(illBy(x.w, W))}</span></figcaption></figure>`;
   const draw = () => {
     const q = st.q.toLowerCase();
-    cur = I.filter((x) => (!st.k || x.k === st.k) && (!st.w || x.w === st.w) && (!st.g || x.g.includes(st.g)) && (!st.per || W[x.w]?.period === st.per) && (!q || ((x.c || '') + ' ' + (x.ru || '')).toLowerCase().includes(q)));
+    cur = I.filter((x) => (!st.k || x.k === st.k) && (!st.w || x.w === st.w) && (!st.g || x.g.includes(st.g)) && (!st.per || W[x.w]?.period === st.per) && (!st.rg || rgOf(x) === st.rg) && (!q || ((x.c || '') + ' ' + (x.ru || '')).toLowerCase().includes(q)));
     grid.innerHTML = cur.slice(0, lim).map(card).join('') || '<p class="mute">Под эти условия иллюстраций нет. Сбросьте один из фильтров.</p>';
     more.hidden = cur.length <= lim;
     document.getElementById('fN').textContent = cur.length === I.length ? '' : `Показано: ${pl(cur.length, ['изображение', 'изображения', 'изображений'])}`;
   };
   document.querySelectorAll('#fK button').forEach((b) => b.addEventListener('click', () => { st.k = b.dataset.k; document.querySelectorAll('#fK button').forEach((o) => o.classList.toggle('on', o === b)); lim = 96; draw(); }));
-  [['fW', 'w'], ['fG', 'g'], ['fP', 'per']].forEach(([id, k]) => document.getElementById(id).addEventListener('change', (e) => { st[k] = e.target.value; lim = 96; draw(); }));
+  [['fW', 'w'], ['fG', 'g'], ['fP', 'per'], ['fR', 'rg']].forEach(([id, k]) => document.getElementById(id).addEventListener('change', (e) => { st[k] = e.target.value; lim = 96; draw(); }));
   let qt; document.getElementById('fQ').addEventListener('input', (e) => { clearTimeout(qt); qt = setTimeout(() => { st.q = e.target.value.trim(); lim = 96; draw(); }, 200); });
   more.addEventListener('click', () => { lim += 96; draw(); });
   const open = (id) => {
@@ -273,6 +276,7 @@ async function illustrations() {
           <dt>Тип</dt><dd>${KIND[x.k] || x.k}${x.r || x.rx ? ', альбомная вклейка (повёрнута)' : ''}</dd>
           <dt>Проверка</dt><dd>${x.ok ? 'подпись и тип проверены экспертом' : 'автоматически, не проверено'}</dd>
           ${x.g.length ? `<dt>Народы</dt><dd>${x.g.filter((g) => G[g]).map((g) => `<a href="#people-${toH(g)}">${esc(G[g].name)}</a>`).join(', ')}</dd>` : ''}
+          <dt>Регион</dt><dd>${RG[rgOf(x)]}${x.rb === 'cap' ? ` — по подписи${x.pl.length ? ': ' + esc(x.pl.join(', ')) : ''}` : x.rb === 'par' ? ' — по тексту рядом (предварительно)' : ''}</dd>
           ${x.f ? `<dt>В книге</dt><dd>к странице ${esc(x.f)}</dd>` : ''}
         </dl>
         <p class="dlg-links">${x.p ? `<a href="#book-${toH(x.w)}-p${esc(x.p)}">Текст рядом с иллюстрацией</a>` : ''}<a href="${iaPage(x)}" target="_blank" rel="noopener">Страница скана в Internet Archive</a></p>
