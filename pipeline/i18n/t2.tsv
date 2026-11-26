@@ -1,0 +1,497 @@
+0	Adjectives («tatarski», «kirgizský») are excluded from the search
+1	Example paragraphs
+2	Nature
+3	Check
+4	Checking the automatic processing
+5	Checks
+6	A program prepares a draft route: places the author writes about as visited, with supporting paragraphs. Then each book is read: only the places where the author actually was remain, in the order of the journey, with a verbatim quotation; quotations and paragraph numbers are checked against the text automatically. The project's experts confirm routes in the team workspace; the map shows which routes have already been confirmed
+7	Follow the routes
+8	Other
+9	Publications
+10	Project publications
+11	Travellers' paths by period, the places they wrote about, and the areas of peoples
+12	Shaded area: schematic range around #; circles: places next to which this people is mentioned in the same paragraphs
+13	Team workspace
+14	Sections
+15	Frame
+16	Frame of description
+17	Region
+18	Repository on GitHub
+19	The resource was prepared with the support of Russian Science Foundation grant No. #-#-#
+20	The resource combines expert philological work with the sources and digital processing of the corpus. The selection of books, their description, the dictionary of names of peoples, the reconstruction of routes, the annotation of evaluations and relations and the interpretation of results were done by researchers; programs were used where all # million words had to be gone through, and each of their results was checked by hand
+21	The resource grew out of a study of how inter-ethnic relations in Siberia were perceived in European travelogues of the 19th and early 20th centuries. The corpus was compiled from bibliographic reference works and the holdings of digital libraries, annotated by experts and processed with the methods of corpus linguistics; for details, see
+22	Networks
+23	Holy Trinity Monastery
+24	Citation network
+25	Siberian State University of Geosystems and Technologies
+26	Siberia and the Far East
+27	Scandinavia
+28	Scandinavia and Finland
+29	Copy link
+30	Left: the network of groups; an edge connects groups named in one sentence of a paragraph about Siberia (thickness: the number of such sentences). Right, via the switch: the intertextual network — who cites whom and who borrows from whom. The graph is three-dimensional: you can rotate it, zoom in and drag nodes; clicking a node opens its card
+31	Next
+32	Next illustration
+33	Words separated by commas
+34	The dictionary of ethnonyms in # languages was compiled and checked by hand: historical and foreign-language forms (Ostiaken, Tongouses, Bratski) are mapped to the modern names of peoples, and ambiguous cases were resolved from context. A gazetteer of # places with coordinates. The search across all texts was done by program
+35	The source word («Ostiak», «Tartar», «Kirghiz») is stored separately from the modern name of the people; each mapping has a confidence level. The bars on the card show the frequency of mentions by decade of the journey per million words about Siberia
+36	Sort
+37	Central Asia and Turkestan
+38	Old Ostrog on the Avacha
+39	Steppe region
+40	This many pairs of paragraphs with shared fragments were found in the corpus: compilations, self-repetitions, borrowings without attribution
+41	Country
+42	Author's country
+43	Scan page in the Internet Archive
+44	A sample stratified by the author's country and period: # descriptions of indigenous peoples and # passages on relations between groups. For each passage the annotators recorded the evaluation, the frame of description (hierarchy of «civilisation», economy, contact, etc.), the source of knowledge (personal observation or hearsay) and the type of relation. All conclusions about evaluations and relations on the site are based on this annotation
+45	Tables
+46	Taz Bay
+47	Such is its share in paragraphs on indigenous peoples before # and in #–#. In the same decades attention to penal servitude gives way to attention to settlers
+48	Text next to the illustration
+49	The source texts are in the public domain. Catalogue and annotation: CC BY #; atlas: CC BY-NC #; code: MIT
+50	Texts copy one another
+51	Lake Teletskoye
+52	Telma factory
+53	Topic model (NMF, # topics) of English paragraphs. Cell colour: the share of the topic in the period
+54	the «Thames»
+55	Topics of paragraphs on indigenous peoples
+56	Topics serve only for navigation; no conclusions are drawn from them
+57	Tes on the Tuba
+58	Type
+59	Type of relation
+60	Type of journey
+61	The same for texts in Italian, Danish, Norwegian, Polish and Czech
+62	Tomsk works
+63	Trans-Siberian
+64	Trinity Monastery
+65	Every paragraph in the library has a permanent number: a link of the form
+66	Ubinsk fortress
+67	Learn more
+68	Uymon valley
+69	Uymon steppe
+70	Mentions per # thousand words about Siberia in the book (books with more than # thousand words about Siberia
+71	Mentions over time
+72	Mentions by decade
+73	Urals and European Russia
+74	Uriankhai country beyond the Sayans
+75	Factor
+76	Filters
+77	Building the corpus
+78	The passage in the expert sample really describes a Siberian people
+79	France/Belgium
+80	Central Europe
+81	A digital resource on how European travellers of #–# described the peoples of Siberia and the relations between them: # books in # languages with full texts, routes on the map, cards of peoples and verifiable research data
+82	Chaa-Khol on the Ulug-Khem
+83	Frequencies by decade, collocations, discourses, topic modelling, networks of co-mentions and citation, detection of text reuse, statistical models that take into account that passages from one book are not independent
+84	Word frequencies by year
+85	Draft routes: places the author writes about as visited
+86	Drafts are not drawn as lines: on the map they are numbered points until an expert checks the route
+87	Read the sources
+88	What the corpus shows
+89	What was checked
+90	Sharypova V. S
+91	Expert sample: # descriptions of indigenous peoples from # books, strata «author's country × period», weighted shares, intervals bootstrapped over books. The results are preliminary: an independent re-annotation of part of the sample is planned
+92	Expert annotation
+93	The expert annotation is to be complemented by an independent re-annotation of part of the sample, to measure agreement between experts
+94	Period
+95	Stages of work
+96	Language
+97	Yakshinskaya landing
+98	paragraph #
+99	Altaians
+100	ambivalent
+101	areas of indigenous peoples around #
+102	areas of indigenous peoples around #, schematic
+103	PhD student
+104	aul
+105	aul of Sultan Ishonak Khan
+106	of the poor Kirghiz
+107	poor Tungus
+108	without society and almost without houses
+109	unspecified
+110	Aral shore
+111	near Minusinsk
+112	disease
+113	marriage and intermixing
+114	British author
+115	the Buryats have remained children
+116	the Buryats kill runaways for a reward
+117	Barracouta Bay
+118	Bullock Bay
+119	Varnek Bay
+120	Sybille Bay
+121	Suffren Bay
+122	as CSV
+123	compared with
+124	compared with the Circassians
+125	incl. Siberian
+126	in a trader's mouth
+127	correct # of #
+128	correct stops #%, #% of stops found, the order almost coincides
+129	upper Pechora
+130	upper Olenyok
+131	power
+132	appearance and clothing
+133	war/intervention
+134	reconstructed from the text
+135	hostility
+136	temporary end of the line
+137	all books
+138	all periods
+139	all countries
+140	all languages
+141	samples and protocols
+142	extinction or Tatarisation of the Kamas
+143	extinction on contact with civilisation; traders' vodka
+144	dying out
+145	beg for vodka
+146	reaching the river
+147	Mount Belukha
+148	harbour
+149	gazetteer in Linked Places Format
+150	the book's geography on the map
+151	geography of settlement
+152	Gilyak settlement
+153	stupidity of the natives
+154	mountains
+155	hospitality
+156	hospitality and usury of a rich man
+157	border
+158	border of Tobolsk province
+159	border beyond the Sayans
+160	border with China
+161	groups and peoples
+162	dirty
+163	data on Zenodo
+164	Lena delta
+165	money
+166	village
+167	savages of the lowest order»; thievish, treacherous, cowardly
+168	wild hordes of Kirghiz
+169	wild tribes
+170	for the World Historical Gazetteer: name forms from the books with links to paragraphs, years, coordinate precision, links to GeoNames and Wikidata) and
+171	before # (Nicholas I and earlier): #% (#–#), # books
+172	Doctor of Philology
+173	Dolgans
+174	long residence
+175	Akkem valley
+176	Oka valley
+177	Chuya valley
+178	Amyl valley
+179	Kora valley
+180	road and weather
+181	friendly relations with a trader
+182	to Europeans
+183	food and tea
+184	woman author
+185	beyond the village of Markova
+186	Aniva Bay
+187	Deception Bay
+188	replaced by expert annotation
+189	replaced by the Yakuts
+190	wintering place
+191	knowledge of weather and route
+192	goldmine
+193	and the Government of the Altai Republic
+194	inorodtsy (‘aliens’)
+195	foreigners
+196	source of the Angara
+197	Itelmens
+198	to #
+199	Kazakhs
+200	how the people was described
+201	as a guide
+202	Kamchadals
+203	candidate for text reuse
+204	catalogue and annotation CC BY #, atlas CC BY-NC #, code MIT
+205	Chinese
+206	Chinese picket Suok
+207	Chinese picket Chingistai on the Bukhtarma
+208	Chinese border post
+209	Chinese #
+210	processing code
+211	colonisation of land
+212	colonisation as
+213	leper colony
+214	compilation
+215	horses
+216	conflict
+217	mines
+218	indigenous peoples
+219	a sturdy and refractory people
+220	baptism and mission
+221	baptised, but afraid of losing their nationhood; sympathy
+222	except for vodka
+223	shops in the Chuya steppe
+224	Borokhudzir camp
+225	prisoner-of-war camp
+226	Peschanka prisoner-of-war camp
+227	Lamut camps in the mountains west of Kozyrevsk
+228	landscape
+229	with a Latin word
+230	glacier
+231	Mansi
+232	route on the map
+233	routes in GeoJSON
+234	bear
+235	melancholy of the race
+236	place of the shipwreck
+237	dream of independence
+238	mission
+239	mission on the Angodai
+240	junior researcher
+241	Mongolian
+242	sea voyage
+243	bridge over the Volga
+244	bridge over the Zeya
+245	Cape Lazarev
+246	Cape Monument
+247	Cape Pronge
+248	on the Amur
+249	on the Lena
+250	on the Selenga
+251	on the Charysh
+252	to the home page
+253	for checking
+254	at the pastoral stage
+255	name
+256	the population has died out
+257	hired labour
+258	not determined
+259	does not recognise authority
+260	not checked
+261	neutral
+262	ugly «by our notions», but some are pretty
+263	lower Yenisei
+264	the lowest stage of culture
+265	no religion at all
+266	not at all congenial
+267	poverty makes the Ostyaks virtuous
+268	but a rich epic poetry
+269	but will perish from the traders' vodka
+270	but with a taste for ornament
+271	Bering Island
+272	Nasonovsky Island
+273	paying tribute to three powers
+274	generically
+275	generic
+276	return journey
+277	Russification above Beryozov
+278	Russification/assimilation
+279	shared quotation
+280	Lake Khövsgöl
+281	Lake Uvs
+282	Lake Khanka
+283	Oirats
+284	reindeer herding and tundra
+285	have remained savages
+286	draft stop
+287	from OCR cleaning to the website
+288	return gift
+289	disgusting food
+290	frank but vindictive; the Russians treat them like slaves
+291	opens exactly that paragraph
+292	odds ratio
+293	neg
+294	negative
+295	negative
+296	have fallen behind
+297	going native
+298	hunting
+299	quality assessment
+300	primitive character
+301	pass
+302	Chagan-Burgazy Pass
+303	pass across the Sayan
+304	translated from de
+305	translated from it
+306	translated from no
+307	translated from pl
+308	translated from sv
+309	crossing of the Aldan
+310	crossing of the Ob
+311	crossing of the Chulym
+312	resettlement
+313	a transitional epoch
+314	voyage
+315	spitting after someone
+316	by volume about Siberia
+317	by journey, with review status). Licence CC BY #
+318	from the adjacent text
+319	by frequency of ethnonyms
+320	coast of the Tatar Strait
+321	coast and sea expeditions
+322	exactions of Chinese mandarins
+323	narrative
+324	everyday contact
+325	near Yekaterinburg
+326	near Tara
+327	near Chita
+328	taxes
+329	# of # fit
+330	journey #–#
+331	positive
+332	positive
+333	rapids on the Angara
+334	after #
+335	after #
+336	after #
+337	the last Tatar settlement at the foot of the Sayans
+338	honourable reception by the village elder
+339	nomads' law is incomprehensible to peasants
+340	goldfields in the Sayans
+341	landing on the Oka
+342	landing on the Tobol
+343	checked against the text
+344	guides
+345	leprosy and hospitals
+346	Nevelskoy Strait
+347	professor
+348	other
+349	drunkenness as a religious rite
+350	Algiak River
+351	Amyl/Armeul River
+352	Karkara River near Issyk-Kul
+353	Kopal River
+354	Narym River
+355	Seyba River
+356	Shchuchya River
+357	rivers and crossings
+358	religion
+359	repository on GitHub
+360	reforms
+361	role…
+362	principal investigator
+363	Russians #
+364	Russians and newcomers
+365	the Russians do not know the Yakut language
+366	Russians
+367	fishing
+368	fishing
+369	with paragraphs and annotation
+370	with reservations
+371	Krasnoyarskoye on the Irtysh
+372	Seliksa
+373	Samoyedic peoples
+374	self-abasement
+375	Sakha
+376	seasonal dwellings
+377	settlement
+378	village in the steppe
+379	family
+380	the Siberian journey
+381	Siberians
+382	scan next to the text
+383	Python scripts
+384	confluence of the Shilka and Argun
+385	service
+386	mixed population
+387	intermixing
+388	mixing of races
+389	dogs and sledges
+390	agreement in about half of the cases
+391	# of # matched
+392	weak agreement
+393	neighbours
+394	neighbourhood
+395	have preserved
+396	social groups
+397	rafting from Chita
+398	exile debates
+399	compared with # routes reconstructed from the texts
+400	comparison with colonies and Indians
+401	compared with manual identification
+402	compared with expert annotation
+403	comparison/contrast
+404	exiles and convicts #
+405	exiles among the indigenous
+406	Klyuchi station
+407	Chasovinskaya station
+408	residence of the Soyot prince
+409	residence of the khan of the Bukey Horde
+410	station
+411	Trans-Siberian station
+412	Ussuri Railway station
+413	Ussuri Railway station
+414	station on the Sungacha
+415	station at the mouth of the Pur
+416	old settlers (starozhily)
+417	old
+418	steppe
+419	anchorage at an island
+420	construction of the Amur Railway
+421	superstition
+422	schematic
+423	scene of encounter
+424	taiga
+425	taiga on the Yenisei
+426	of the Tatars
+427	Tatars
+428	telegraph station
+429	the poorer they are
+430	Siberia only
+431	trading post
+432	trade
+433	traders and debts
+434	transit
+435	an example of industry is good for the natives
+436	natives
+437	Yamal tundra
+438	near Blagoveshchensk
+439	near Dikson
+440	near Khövsgöl
+441	near Sysert
+442	near Vaygach Island
+443	near Nasonovsky Island
+444	at the northern entrance to the Amur
+445	Shemini hunting grounds on the Konda
+446	Ukrainians
+447	ulus of the rich man Kar-ki
+448	temperate
+449	decline
+450	mentions
+451	mentioned in the book
+452	mouth of the Angara
+453	mouth of the Yenisei
+454	mouth of the Podkamennaya Tunguska
+455	mouth of the Taz
+456	18th-century scholars used the word for both the journey and its account (
+457	Shadat outpost
+458	economy and trade
+459	Greater Khingan Range
+460	church
+461	civilising mission
+462	quotation with attribution
+463	citations and text reuse
+464	digital processing
+465	digital processing with spot checks
+466	digital processing with checking
+467	word frequencies by year
+468	the less Russified they are
+469	honest in everything
+470	the «clean»
+471	the Chukchi are more honest than the Russians at the fair
+472	shamanism and spirits
+473	lapidary works
+474	Pepelyaev's headquarters
+475	generous gifts unasked
+476	Evenki
+477	Even
+478	Even #
+479	expedition
+480	expert sample
+481	expert work
+482	expert work and digital processing
+483	expert work and digital search
+484	expert annotation
+485	exploitation/deception
+486	ethnographic description
+487	ethnonyms per # thousand
+488	south coast of Kamchatka
+489	language of the text
+490	languages
+491	anchorage
+492	Yakuts
+493	yasak (fur tribute)
+494	← library
+495	← all peoples
+496	≈ — approximate coordinates: the place could not be identified unambiguously in GeoNames or Wikidata

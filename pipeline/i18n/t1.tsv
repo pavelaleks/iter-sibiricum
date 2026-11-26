@@ -1,0 +1,280 @@
+0	# paragraphs
+1	# groups
+2	# of #
+3	# editions. The texts have been cleaned of running heads
+4	# editions. The texts have been cleaned of running heads, page numbers and hyphenation; in the reader the names of peoples are highlighted and paragraphs about Siberia are marked with a blue rule
+5	# images from # books of the corpus
+6	# images from # books of the corpus: engravings, photographs and maps with which travellers illustrated their accounts of Siberia
+7	# books
+8	# books in # languages with full texts
+9	# routes reconstructed from the texts
+10	# routes reconstructed from the texts, each stop backed by a paragraph; colour shows the period of the journey
+11	# mln
+12	# per # thousand
+13	# per million words
+14	# descriptions of indigenous peoples and # passages on relations between groups. For each passage the annotators recorded the evaluation
+15	# descriptions of indigenous peoples from # books
+16	# confirmed by the project's experts
+17	# sentences
+18	# sentences in which an indigenous group is named together with Russians, Cossacks, settlers or exiles and a relationship is described. A small sample: a direction for further checking
+19	# words
+20	# words, of which # about Siberia; # mentions of peoples (# per # thousand
+21	# false hits after the lexicon was refined
+22	# topics
+23	# mentions
+24	# mentions in Siberia
+25	# mentions of peoples
+26	# JSON files
+27	# passages
+28	#% CI
+29	#% CI #–#
+30	#% interval across books
+31	#-gram
+32	#s
+33	#c_illustrations_gutenberg.py and #b_illustrations_site.py
+34	#° N
+35	#° N
+36	#–# (Amur, reforms): #% (#–#), # books
+37	#–# (war, captivity, Civil War): #% (#–#), # books
+38	#–# (after #, resettlement): #% (#–#), # books
+39	#–# (exile debates, Trans-Siberian): #% (#–#), # books
+40	#–#. Of # editions examined, # were selected
+41	'Kalmyks'
+42	'Kirghiz' of the 19th c.
+43	'Kirghiz' of the 19th c.
+44	'Little Russians'
+45	. The site's datasets are in the folder
+46	Iter Sibiricum — European travelogues about Siberia, #–#
+47	Iter Sibiricum: European travelogues about Siberia and its peoples, #–# : a digital resource / P. V. Alekseev, S. S. Zhdanov, V. S. Sharypova, S. P. Alekseeva, D. N. Dyusekenev. Russian Science Foundation grant No. #-#-#. Version #. #. URL: https://iter-sibiricum.ru/ (accessed #
+48	Ngram and discourses
+49	ORCID Alekseev P. V
+50	ORCID Alekseeva S. P
+51	ORCID Dyusekenev D. N
+52	ORCID Zhdanov S. S
+53	ORCID Sharypova V. S
+54	Project Gutenberg, etc
+55	±# years
+56	Paragraph correctly assigned to Siberia
+57	Automatic discourse search
+58	Automatic discourse search (extinction, exile, Russification, etc
+59	Automatic topic extraction
+60	Automatic detection of evaluation and source of knowledge
+61	Automatic detection of the type of relations between peoples
+62	Author
+63	Author, book, people or place — e.g. Lansdell, Buryats, Irkutsk
+64	Authors writing from personal observation evaluate a people positively # times more often (#% CI #–#
+65	Aleksandrovsky Post
+66	Aleksandrovsky Central Prison
+67	Alekseev P. V
+68	Alekseeva S. P
+69	Altaiskaya stanitsa
+70	Amginskaya sloboda
+71	Amginskaya station
+72	The analysis covers only paragraphs about Siberia
+73	Analytics
+74	Analytics and networks
+75	English paragraphs about Siberia
+76	English paragraphs about Siberia, frequency per million words by year of publication (smoothed with a moving window). Enter a word or a phrase of up to three words; ethnonyms, marker words and ethnonym collocations are available
+77	The areas of peoples on the map are schematic and serve only as a guide
+78	Atlas
+79	Atlas of peoples and places in European travelogues about Siberia
+80	Atlas of journeys
+81	Achinsk-Minusinsk mining district
+82	Library
+83	In OCR'd books without chapter divisions, the assignment of individual paragraphs to Siberia is approximate
+84	In OCR'd books without chapter divisions, the assignment of individual paragraphs to Siberia is approximate (see the table
+85	V. S. Sharypova
+86	Enter a word or a phrase of up to three words
+87	United Kingdom
+88	Hungary
+89	Hungary/Central Europe
+90	Views
+91	All
+92	All # illustrations
+93	GASU
+94	Germany/Austria
+95	Main intermediaries
+96	Gorno-Altaisk State University
+97	Civil War
+98	Gusinoozersk datsan
+99	D. N. Dyusekenev
+100	D. N. Dyusekenev. Russian Science Foundation grant No. #-#-#. Version #. #. URL
+101	Data
+102	Data and code
+103	Discourses
+104	Discourses by period
+105	Discourses around this people
+106	Too few mentions for significant collocations
+107	For each book the following were established by hand: author
+108	For each book the following were established by hand: the author, his or her country and occupation, the type of stay in Siberia, the years of the journey (separately from the year of publication) and the reliability of the dating. All comparisons by period and by country rest on this information
+109	Shares of discourses by period
+110	Share of paragraphs on indigenous peoples
+111	Share of paragraphs on indigenous peoples in which the discourse occurs (rules in # languages, precision ≈# — the shares are underestimated). Line: #% interval across books
+112	Share of paragraphs about the people
+113	Share of paragraphs about the people in which the discourse occurs (search precision ≈#
+114	Additional historical name forms
+115	Additional historical name forms (Buriats, cosaques, Ostiaken
+116	Other countries
+117	Dyusekenev D. N
+118	Yekaterininsky distillery
+119	Zhdanov S. S
+120	Loading…
+121	Text reuse
+122	Text reuse and shared quotations
+123	Zaisan Post
+124	Close
+125	Edition
+126	Image from a book
+127	Image from a book in the public domain; scan: Internet Archive
+128	The images were found in Internet Archive scans
+129	The images were found in Internet Archive scans (a program selects pages with graphics, crops them and rotates landscape plates) and taken from Project Gutenberg HTML editions, where the captions are typeset. Captions of scans are OCR text of the original and may contain errors; type, peoples and places are derived from the caption; where the caption names no place, the region is taken provisionally from the adjacent paragraph. Each image links to its source and to the paragraph next to it in the library. Method: see
+130	Explore the patterns
+131	Illustrations
+132	Illustration
+133	Interpretation
+134	Irtysh/Ob
+135	Used for all frequencies and networks
+136	Used on a par with the main forms
+137	Source
+138	Outcome
+139	Italy
+140	Result
+141	Every pattern was checked by reading the underlying passages
+142	Every pattern was checked by reading the underlying passages; every figure on the site leads to the paragraphs it is based on
+143	Each pair needs to be checked
+144	Every automatic step was checked by hand on a random sample
+145	Every automatic step was checked by hand on a random sample: a researcher looked at whether the program worked correctly. The table shows what was checked, on how many examples, what the result was and how it is taken into account on the site. Where the program erred too often, its output was replaced by expert annotation
+146	Kazakhstan
+147	How they were written about
+148	How it is handled
+149	How to cite
+150	Words around the name
+151	Kamensky works
+152	Karaginsky Gulf
+153	Kara goldfields
+154	Kara Sea
+155	Map of Siberia
+156	Maps
+157	Catalogue of European travelogues about Siberia
+158	Catalogue of European travelogues about Siberia (19th — early 20th c
+159	The catalogue of editions and the atlas of peoples and places are published on Zenodo with DOIs
+160	Kerbi depot
+161	Kirghiz Steppe
+162	Keywords
+163	Book
+164	Team
+165	Team: P. V. Alekseev (principal investigator, GASU), S. S. Zhdanov (SSUGT), V. S. Sharypova (TSU), S. P. Alekseeva (GASU); invited foreign researcher: D. N. Dyusekenev (Alikhan Bokeikhan University
+166	Kolyvan lapidary works
+167	Pipeline
+168	Coordinates estimated from historical maps and the course of the route
+169	Coordinates estimated from historical maps and the course of the route; to be checked
+170	The corpus includes editions
+171	The corpus includes editions available in digital libraries and repositories; some known travelogues (e.g. M. A. Czaplicka, J. Noble, P. Labbé) have not yet been digitised in usable form. The corpus will be extended
+172	The corpus was built on bibliographic reference works
+173	The corpus was built on bibliographic reference works (above all A. G. Cross, «In the Lands of the Romanovs»), national bibliographies and catalogues, the holdings of digital libraries and repositories (Internet Archive, Project Gutenberg, etc.) and research literature on travelogues. Each candidate was checked against the selection criteria: a European author, the author's own journey or stay in Siberia, #–#. Of # editions examined, # were selected; a comparison with Cross's bibliography shows coverage of #% of its European entries
+174	Corpus analysis
+175	Korsakovsky Post
+176	Who wrote about the people, and when
+177	Who wrote about the people and when, in what words and in what episodes; quotations from the sources
+178	Who described them most often
+179	The merchant Dobell arrived in Petropavlovsk in the autumn of # and went up the Kamchatka River to Nizhnekamchatsk
+180	The merchant Dobell arrived in Petropavlovsk in the autumn of # and went up the Kamchatka River to Nizhnekamchatsk; in the winter of # he travelled by dog sledge through Klyuchi and the Koryak settlements to Kamenskoye and Gizhiga, then by reindeer and raft through the taiga to Okhotsk, in summer on horseback along the Yakutsk road to Yakutsk, up the Lena to Kachug and Irkutsk and on along the highway through Krasnoyarsk, Tomsk, Tobolsk, Tyumen and Yekaterinburg to Russia
+181	The lines show routes
+182	The lines show routes in which every stop has a paragraph where the author says he or she was in that place. There are # of them at present: # confirmed by the project's experts, the rest checked against the text and awaiting confirmation. Colour shows the period of the journey. Choose a book to see its route, the stops with links to paragraphs and all the places it writes about
+183	Line
+184	Linnaeus
+185	Licences
+186	Licence CC BY #
+187	Loktevsky works
+188	Lukovaya channel
+189	People
+190	Too little data
+191	Marsden
+192	Routes
+193	Travellers' routes
+194	Places and routes are exported in open historical-geography formats
+195	Method and data
+196	Minusinsk steppes
+197	Models and frames of description
+198	Model
+199	Monastyrskoye/Turukhansk
+200	The extinction motif grows
+201	TSU
+202	Per million words about Siberia by decade of the journey
+203	Per million words about Siberia by decade of the journey; label: number of mentions
+204	Based on
+205	Datasets
+206	The site's datasets are in the folder
+207	Changes over time are more reliable to compare
+208	Changes over time are more reliable to compare than absolute shares; the search misses some cases
+209	Click a route or choose a book
+210	Click a place or an area
+211	Names of peoples and places
+212	The word found really names a people
+213	Find in the text
+214	For example
+215	People
+216	Peoples
+217	Peoples and groups
+218	National Research Tomsk State University
+219	Not used
+220	Not used: all evaluations on the site come from expert annotation
+221	Not used: relations are described from expert annotation
+222	Unsuitable passages were excluded from the calculations
+223	Not in the n-gram dictionary
+224	Not in the n-gram dictionary: savages (it contains n-grams with frequency ≥ #
+225	Netherlands
+226	Nicholas I and earlier
+227	Nyisky Gulf
+228	About the project
+229	OR
+230	OR above #
+231	OR above #: the factor raises the probability; an interval that does not include # is a robust result
+232	Gulf of Ob
+233	Ob–Yenisei Canal
+234	Limitations
+235	Window ±# words
+236	Window ±# words, logDice measure, significant only (p < #); link: an example paragraph
+237	About a fifth of such paragraphs are in fact about other regions
+238	About a fifth of such paragraphs are in fact about other regions; shares for these books are approximate
+239	Orenburg Line
+240	Open the atlas
+241	Assignment to Siberia of paragraphs without their own place names in books without chapter divisions
+242	Relations
+243	What the evaluation of a people depends on
+244	Sea of Okhotsk
+245	The evaluation depends on the encounter
+246	Evaluations
+247	Evaluations and frames of description
+248	Evaluations and frames of description, frequencies by decade, discourses, networks of co-mentions and text reuse
+249	Cleaning OCR text of running heads
+250	Cleaning OCR text of running heads, page numbers, hyphenation, illustration captions and front/back matter; division into chapters and paragraphs. Each paragraph received a permanent number by which it can be cited
+251	P. V. Alekseev
+252	Pairs of paragraphs from different books sharing four or more #-word fragments
+253	Pairs of paragraphs from different books sharing four or more #-word fragments (English texts). Each pair needs to be checked: it may be a quotation, a common source or a retelling
+254	Edition record
+255	Period
+256	Period of the journey
+257	Petrovsky Zavod
+258	Petropavlovsk goldmine
+259	From Internet Archive scans the program selects pages with graphics
+260	From Internet Archive scans the program selects pages with graphics: in the layout of the OCR text it looks for plates and gaps in the type, in the page image for a connected graphic area. Landscape plates are rotated to the orientation in which the caption reads most confidently. The caption is the lines below the image; the illustration is linked to a library paragraph by matching the text of neighbouring pages. For Project Gutenberg books the images and typeset captions are taken directly from the HTML edition, and scans of whole plates are split into separate pictures. Captions are checked and translated, and type, peoples and places are refined; the region is derived from the places in the caption or, if there are none, provisionally from the adjacent paragraph. Corrections are made in the team workspace. Scripts #a_illustrations.py, #c_illustrations_gutenberg.py and #b_illustrations_site.py
+261	Text preparation
+262	Caption
+263	Highlight a people
+264	Journey
+265	Journeys up to
+266	Late book
+267	Search
+268	Search in the text
+269	Search the resource
+270	Showing # of #
+271	Show more
+272	Full texts of # books with the names of peoples highlighted
+273	Full texts of # books with the names of peoples highlighted, search and a permanent link to every paragraph
+274	Poland
+275	Portraits
+276	Posolsky Monastery
+277	Objects
+278	Previous
+279	Previous illustration

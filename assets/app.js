@@ -4,7 +4,8 @@ const V = document.getElementById('view');
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
 const yr = (n) => n == null || isNaN(n) ? '—' : String(Math.round(n));
 const inBox = (s) => s[2] >= 40 && s[2] <= 195 && s[3] >= 34 && s[3] <= 79;
-const fmt = (n, d = 0) => n == null || isNaN(n) ? '—' : Number(n).toLocaleString('ru-RU', {maximumFractionDigits: d, minimumFractionDigits: d});
+const EN = !!(window.I18N && I18N.en);
+const fmt = (n, d = 0) => n == null || isNaN(n) ? '—' : Number(n).toLocaleString(window.I18N ? I18N.locale : 'ru-RU', {maximumFractionDigits: d, minimumFractionDigits: d});
 const pl = (n, f) => { const a = Math.abs(n) % 100, b = a % 10; return fmt(n) + ' ' + (a > 10 && a < 20 ? f[2] : b === 1 ? f[0] : b > 1 && b < 5 ? f[1] : f[2]); };
 const C = {};
 const get = (n) => (C[n] ||= fetch('data/' + n, {cache: 'no-cache'}).then((r) => { if (!r.ok) throw new Error(n); return r.json(); }));
@@ -214,7 +215,7 @@ async function heroPlates(works, reduce) {
     const im = new Image(); im.alt = x.c || 'Иллюстрация из книги ' + illBy(x.w, W); im.width = x.tw; im.height = x.th; im.decoding = 'async';
     if (x.rx) im.style.transform = `rotate(${x.rx}deg)`;
     im.onload = () => { fr.appendChild(im); requestAnimationFrame(() => im.classList.add('on')); [...fr.querySelectorAll('img')].slice(0, -1).forEach((o) => { o.classList.remove('on'); setTimeout(() => o.remove(), 1400); }); };
-    im.src = x.t; fr.href = h; cap.href = h; cap.textContent = x.c || 'Без подписи'; byl.textContent = (x.ru ? x.ru + ' · ' : '') + illBy(x.w, W);
+    im.src = x.t; fr.href = h; cap.href = h; cap.textContent = x.c || 'Без подписи'; byl.textContent = (x.ru && !EN ? x.ru + ' · ' : '') + illBy(x.w, W);
   };
   const play = () => { if (reduce) return; clearInterval(timer); timer = setInterval(() => { if (!document.body.contains(box)) return clearInterval(timer); if (!document.hidden) show(i + 1); }, 7000); };
   box.querySelectorAll('.pl-nav button').forEach((b) => b.addEventListener('click', () => { show(i + +b.dataset.d); play(); }));
@@ -252,7 +253,7 @@ async function illustrations() {
   <section><div class="wrap"><div class="ill-grid" id="grid"></div><p class="more"><button type="button" id="more" hidden>Показать ещё</button></p></div></section>
   <dialog class="ill-dlg" id="dlg" aria-label="Иллюстрация"></dialog>`;
   const grid = document.getElementById('grid'), more = document.getElementById('more'), dlg = document.getElementById('dlg');
-  const card = (x) => `<figure class="ill"><a href="#illustrations?i=${encodeURIComponent(x.id)}" data-i="${esc(x.id)}">${illImg(x)}</a><figcaption><span class="c">${x.c ? esc(x.c) : '<span class="mute">без подписи</span>'}</span>${x.ru ? `<span class="ru">${esc(x.ru)}</span>` : ''}<span class="s">${esc(illBy(x.w, W))}</span></figcaption></figure>`;
+  const card = (x) => `<figure class="ill"><a href="#illustrations?i=${encodeURIComponent(x.id)}" data-i="${esc(x.id)}">${illImg(x)}</a><figcaption><span class="c">${x.c ? esc(x.c) : '<span class="mute">без подписи</span>'}</span>${x.ru && !EN ? `<span class="ru">${esc(x.ru)}</span>` : ''}<span class="s">${esc(illBy(x.w, W))}</span></figcaption></figure>`;
   const draw = () => {
     const q = st.q.toLowerCase();
     cur = I.filter((x) => (!st.k || x.k === st.k) && (!st.w || x.w === st.w) && (!st.g || x.g.includes(st.g)) && (!st.per || W[x.w]?.period === st.per) && (!st.rg || rgOf(x) === st.rg) && (!q || ((x.c || '') + ' ' + (x.ru || '')).toLowerCase().includes(q)));
@@ -270,7 +271,7 @@ async function illustrations() {
     dlg.innerHTML = `<div class="dlg-in">
       <div class="dlg-img">${illImg(x, false)}</div>
       <div class="dlg-meta">
-        <p class="dlg-cap">${x.c ? esc(x.c) : '<span class="mute">Подпись не распознана</span>'}</p>${x.ru ? `<p class="dlg-ru">${esc(x.ru)}</p>` : ''}
+        <p class="dlg-cap">${x.c ? esc(x.c) : '<span class="mute">Подпись не распознана</span>'}</p>${x.ru && !EN ? `<p class="dlg-ru">${esc(x.ru)}</p>` : ''}
         <dl>
           <dt>Книга</dt><dd><a href="#book-${toH(x.w)}">${esc(w ? w.author : x.w)}</a>${w ? `, ${w.year}` : ''}</dd>
           <dt>Тип</dt><dd>${KIND[x.k] || x.k}${x.r || x.rx ? ', альбомная вклейка (повёрнута)' : ''}</dd>
@@ -613,9 +614,10 @@ async function analytics() {
   // ngram
   const NG = await get('ngram_en.json');
   document.getElementById('ngl').innerHTML = Object.keys(NG.ngrams).slice(0, 2500).map((k) => `<option value="${esc(k)}">`).join('');
-  const ngDraw = () => ngramChart(document.getElementById('ngc'), NG, document.getElementById('ngq').value, +document.getElementById('ngs').value);
+  let ngro = null;
+  const ngDraw = () => { const q = document.getElementById('ngq'); if (!q) { ngro?.disconnect(); return; } ngramChart(document.getElementById('ngc'), NG, q.value, +document.getElementById('ngs').value); };
   ngDraw(); document.getElementById('ngq').addEventListener('change', ngDraw); document.getElementById('ngs').addEventListener('change', ngDraw);
-  const ngro = new ResizeObserver(() => ngDraw()); ngro.observe(document.getElementById('ngc'));
+  ngro = new ResizeObserver(() => ngDraw()); ngro.observe(document.getElementById('ngc'));
   if (location.hash.length > 11) { const t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
 }
 function ngramChart(el, NG, q, sm) {
@@ -673,7 +675,7 @@ async function publications() {
   const pub = rest.filter((p) => !['in_press', 'submitted'].includes(p.status)), inp = rest.filter((p) => ['in_press', 'submitted'].includes(p.status));
   const link = (t) => esc(t).replace(/(https?:\/\/[^\s<]+[^\s<.,;)])/g, '<a href="$1">$1</a>');
   const item = (p) => `<li>${p.cite ? `<span class="ref">${link(p.cite)}</span>` : `<span class="ref"><b>${esc(p.authors)}</b> ${esc(p.title)} // ${esc(p.venue)}. ${esc(p.year || '')}${p.pages ? '. ' + esc(p.pages) : ''}${p.doi ? `. <a href="https://doi.org/${esc(p.doi)}">https://doi.org/${esc(p.doi)}</a>` : ''}</span>`}${p.url ? ` <a href="${esc(p.url)}">текст</a>` : ''}${p.pdf ? ` <a href="${esc(p.pdf)}">PDF</a>` : ''}${p.abstract ? `<p class="small">${esc(p.abstract)}</p>` : ''}${(p.groups || []).length || (p.works || []).length ? `<p class="small">${(p.groups || []).map((g) => `<a href="#people-${toH(g)}">${esc(g)}</a>`).concat((p.works || []).map((w) => `<a href="#book-${toH(w)}">${esc(w)}</a>`)).join(', ')}</p>` : ''}${p.note ? `<p class="small mute">${esc(p.note)}</p>` : ''}</li>`;
-  const sec = (h, L) => L.length ? `<h2>${h}</h2><ol class="refs">${L.map(item).join('')}</ol>` : '';
+  const sec = (h, L) => L.length ? `<h2>${h}</h2><ol class="refs" data-noi18n lang="ru">${L.map(item).join('')}</ol>` : '';
   V.innerHTML = `<section class="band"><div class="wrap"><h1>Публикации проекта</h1>
     ${P.length ? sec('Статьи и монографии', pub) + sec('В печати', inp) + sec('Наборы данных', ds) :
     `<div class="empty"><p>Список публикаций ещё не заполнен.</p></div>`}
