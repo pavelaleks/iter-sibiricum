@@ -17,6 +17,7 @@ python3 07c_discourse.py              # дискурсы (вымирание, ц
 python3 07d_colloc_ngram.py           # коллокации по этносам, Ngram-датасеты
 python3 07e_intertext.py              # сеть цитирований и заимствований
 python3 07f_topics_keyness.py         # NMF-темы и ключевые слова
+python3 07g_journeys.py               # путешествия: восстановленные маршруты + черновики с доказательствами, проверка
 # python3 08_expert_sample.py         # ВНИМАНИЕ: пересоздаёт выборку — запускать только для новой разметки
 python3 09_expert_models.py           # оценки по ручной выборке, модели, точность правил
 cd ..
