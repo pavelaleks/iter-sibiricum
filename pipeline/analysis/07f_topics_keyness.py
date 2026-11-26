@@ -7,7 +7,7 @@
 Ключевые слова: log-likelihood (G²) слов в окнах упоминаний коренных групп у британцев (против всех остальных
 английских текстов — переводов) и по периодам (период против остальных).
 """
-import re, math, collections
+import re, math, collections, json
 import numpy as np, pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import NMF
@@ -79,6 +79,8 @@ for per in sorted(U.period.unique()):
     kw.append(ll_table(window_counts(U[U.period == per]), window_counts(U[U.period != per]), PERIOD_RU[per]))
 KW = pd.concat(kw); KW.to_csv(RES / 'keyness.csv', index=False)
 for name, d in KW.groupby('contrast', sort=False): print(name, '|', ', '.join(d.word.head(20)))
-jdump('topics.json', dict(k=K, top_words=top, shares=T.to_dict(orient='records'), examples=ex,
+_lab = json.load(open(ROOT / 'data/topic_labels_ru.json', encoding='utf-8'))['labels']  # ручные подписи тем
+assert len(_lab) == K, 'число подписей тем не совпадает с K — обновите data/topic_labels_ru.json'
+jdump('topics.json', dict(k=K, top_words=top, shares=T.to_dict(orient='records'), examples=ex, label_ru=_lab,
                           note='NMF по англ. абзацам о Сибири с упоминанием коренных народов; подписи тем — ручные, требуют проверки'))
 jdump('keyness.json', KW.to_dict(orient='records'))

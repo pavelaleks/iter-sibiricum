@@ -1,19 +1,19 @@
-topic,top_words,label_ru
-0,race language years missionaries having life children church family known knowledge information religion priest present,"миссия, церковь, семья"
-1,river bank stream banks versts mouth miles lena amoor valley crossed canoe left right amur,реки и переправы
-2,horses horse steppe ride rode aoul cattle valley versts hour having road riding mounted reached,"степь, кони, аул"
-3,reindeer herds tundra animals jurta wild fishing live herd sledges existence deer flesh nomads skins,оленеводство и тундра
-4,tea milk meat food butter bread boiled sugar eat tobacco large drink salt sour flesh,еда и чай (гостеприимство)
-5,fish salmon fishing dried species rivers sturgeon caught nets catch food net season live skin,рыболовство
-6,hair skin dress black skins head round eyes feet fur boots beads wear face short,внешность и одежда
-7,coast sea island miles north cape east bay ice straits west expedition mouth south village,побережье и морские экспедиции
-8,thousand roubles government town yakutsk trade pay furs money district year half price gold pounds,"деньги, торговля, подати"
-9,winter summer snow huts ice months dwellings spring cold tents covered earth bark year cattle,сезонные жилища
-10,dogs sledges sledge dog village jurta team big got used snow driver tracks number tied,собаки и нарты
-11,lake water baikal feet miles shore rocks mountains mountain mass high sea deep surface rock,"Байкал, горы, ландшафт"
-12,came boat went house saw looked round soon away gave told took half began stood,сцена встречи (повествование)
-13,lepers disease viluisk leprosy hospital leper oulousse versts governor condition sredni village circuit patients food,проказа и больницы (Марсден)
-14,day night journey morning days cold snow passed weather evening wind reached hours following miles,дорога и погода
-15,bear animal bears animals killed shot hunting hunters forest hunter fur game beast wild sable,"охота, медведь"
-16,shaman spirits god evil shamans drum power religion shamanism believe gods spirit faith worship priest,шаманизм и духи
-17,south north east region altai upper amur province steppes mountains russia west northern century basin,география расселения
+topic,top_words
+0,race language years missionaries having life children church family known knowledge information religion priest present
+1,river bank stream banks versts mouth miles lena amoor valley crossed canoe left right amur
+2,horses horse steppe ride rode aoul cattle valley versts hour having road riding mounted reached
+3,reindeer herds tundra animals jurta wild fishing live herd sledges existence deer flesh nomads skins
+4,tea milk meat food butter bread boiled sugar eat tobacco large drink salt sour flesh
+5,fish salmon fishing dried species rivers sturgeon caught nets catch food net season live skin
+6,hair skin dress black skins head round eyes feet fur boots beads wear face short
+7,coast sea island miles north cape east bay ice straits west expedition mouth south village
+8,thousand roubles government town yakutsk trade pay furs money district year half price gold pounds
+9,winter summer snow huts ice months dwellings spring cold tents covered earth bark year cattle
+10,dogs sledges sledge dog village jurta team big got used snow driver tracks number tied
+11,lake water baikal feet miles shore rocks mountains mountain mass high sea deep surface rock
+12,came boat went house saw looked round soon away gave told took half began stood
+13,lepers disease viluisk leprosy hospital leper oulousse versts governor condition sredni village circuit patients food
+14,day night journey morning days cold snow passed weather evening wind reached hours following miles
+15,bear animal bears animals killed shot hunting hunters forest hunter fur game beast wild sable
+16,shaman spirits god evil shamans drum power religion shamanism believe gods spirit faith worship priest
+17,south north east region altai upper amur province steppes mountains russia west northern century basin

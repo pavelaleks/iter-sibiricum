@@ -39,7 +39,7 @@ legras1899,Jules Legras,,europe_west,fr,False,1899,–,1890,core,101468,80269,0.
 marsden1892,Kate Marsden,,europe_west,en,False,1892,–,1890,core,67467,51928,0.77,135,9,26.0,travelogue,
 colquhoun1900,Archibald R. Colquhoun,,europe_west,en,False,1900,–,1900,flagged:travel+analysis,103451,26291,0.254,154,24,58.6,travel+analysis,
 simpson1898,James Young Simpson,,europe_west,en,False,1898,–,1890,core,112857,75072,0.665,321,27,42.8,travelogue,
-leroybeaulieu1900,Pierre Leroy-Beaulieu,,europe_west,fr,False,1900,1896.0–1898.0,1890,flagged:travel+analysis,140670,32776,0.233,169,19,51.6,travel+analysis,Trans-Siberian railway regions; Siberia section of a Siberia–Japan–China study
+leroybeaulieu1900,Pierre Leroy-Beaulieu,,europe_west,fr,False,1900,1896–1898,1890,flagged:travel+analysis,140670,32776,0.233,169,19,51.6,travel+analysis,Trans-Siberian railway regions; Siberia section of a Siberia–Japan–China study
 meakin1901,Annette M. B. Meakin,,europe_west,en,False,1901,–,1900,core,57803,39142,0.677,136,22,34.7,travelogue,
 reid1899,Arnot Reid,,europe_west,en,False,1899,–,1890,core,76917,17678,0.23,57,9,32.2,travelogue,
 tytgat1901,Charles Tytgat,,europe_west,fr,False,1901,–,1900,core,59215,11092,0.187,64,6,57.7,travelogue,
@@ -59,20 +59,20 @@ asselin1911,Henry Asselin,,europe_west,fr,False,1911,–,1910,core,56909,2110,0.
 haviland1915,Maud D. Haviland,,europe_west,en,False,1915,–,1910,core,97478,87975,0.903,213,16,24.2,travelogue (naturalist),
 bergman1927,Sten Bergman,,europe_west,en,True,1927,–,1920,core,75513,69602,0.922,482,15,69.3,travelogue,
 grondijs1922,Lodewijk H. Grondijs,,europe_west,fr,False,1922,–,1920,core,179292,58283,0.325,296,17,50.8,war memoir/analysis,
-drei1925,unknown,,europe_west,de,False,1925,–,1920,flagged:travel/hunting memoir,79784,23562,0.295,124,21,52.6,travel/hunting memoir,
-price1892,Julius M. Price,,europe_west,en,False,1892,1890.0–1891.0,1890,core,87093,42619,0.489,74,13,17.4,travelogue,Kara Sea – Yenisei – Yeniseisk – Krasnoyarsk – Irkutsk – Kiakhta – Mongolia – Gobi – Peking
+drei1925,Egon von Kapherr,,europe_west,de,False,1925,1910–1913,1910,flagged:travel/hunting memoir,79784,23562,0.295,124,21,52.6,travel/hunting memoir,
+price1892,Julius M. Price,,europe_west,en,False,1892,1890–1891,1890,core,87093,42619,0.489,74,13,17.4,travelogue,Kara Sea – Yenisei – Yeniseisk – Krasnoyarsk – Irkutsk – Kiakhta – Mongolia – Gobi – Peking
 wlad1918,Franz Wlad,,europe_west,de,False,1918,–,1910,core,51689,20720,0.401,40,6,19.3,POW escape memoir,
-michie1864,Alexander Michie,45167.0,europe_west,en,False,1864,1863.0–1863.0,1860,core,130820,46591,0.356,224,20,48.1,travelogue,Peking – Kiakhta – Irkutsk – Krasnoyarsk – Tomsk – Omsk – Tyumen – European Russia
-dewindt1889,Harry de Windt,48992.0,europe_west,en,False,1889,1887.0–1887.0,1880,core,133788,55012,0.411,253,22,46.0,travelogue,Peking – Mongolia – Kiakhta – Irkutsk – Tomsk – Tobolsk – Tyumen – European Russia
-dewindt1903,Harry de Windt,26007.0,europe_west,en,False,1903,1901.0–1902.0,1900,core,96676,58505,0.605,345,16,59.0,travelogue,Irkutsk – Lena – Yakutsk – Verkhoyansk – Sredne-Kolymsk – Chukotka – Bering Strait
-ready1904,Oliver George Ready,27733.0,europe_west,en,False,1904,1903.0–1903.0,1900,core,6235,2212,0.355,17,7,76.9,travelogue,London – Moscow – Trans-Siberian Railway – Irkutsk – Baikal – Manchuria – Shanghai
+michie1864,Alexander Michie,45167.0,europe_west,en,False,1864,1863–1863,1860,core,130820,46591,0.356,224,20,48.1,travelogue,Peking – Kiakhta – Irkutsk – Krasnoyarsk – Tomsk – Omsk – Tyumen – European Russia
+dewindt1889,Harry de Windt,48992.0,europe_west,en,False,1889,1887–1887,1880,core,133788,55012,0.411,253,22,46.0,travelogue,Peking – Mongolia – Kiakhta – Irkutsk – Tomsk – Tobolsk – Tyumen – European Russia
+dewindt1903,Harry de Windt,26007.0,europe_west,en,False,1903,1901–1902,1900,core,96676,58505,0.605,345,16,59.0,travelogue,Irkutsk – Lena – Yakutsk – Verkhoyansk – Sredne-Kolymsk – Chukotka – Bering Strait
+ready1904,Oliver George Ready,27733.0,europe_west,en,False,1904,1903–1903,1900,core,6235,2212,0.355,17,7,76.9,travelogue,London – Moscow – Trans-Siberian Railway – Irkutsk – Baikal – Manchuria – Shanghai
 kubalski1856,N.-A. Kubalski,52431.0,europe_poland,fr,False,1856,–,1850,flagged:compilation,27667,22490,0.813,125,17,55.6,compilation,various (Gmelin and other 18th–early 19th c. travellers)
-barzini1908,Luigi Barzini,47798.0,europe_west,de,True,1908,1907.0–1907.0,1900,core,141235,47694,0.338,71,13,14.9,travelogue,Peking – Urga – Kiakhta – Transbaikalia – Irkutsk – Krasnoyarsk – Tomsk – Omsk – Perm – European Russia
-gaunt1919,Mary Gaunt,54402.0,europe_west,en,False,1919,1913.0–1914.0,1910,core,94428,27972,0.296,101,18,36.1,travelogue,Manchuria – Vladivostok – Sakhalin – Amur – Blagoveshchensk – Trans-Siberian to Europe
-ward1920,John Ward,10972.0,europe_west,en,False,1920,1918.0–1919.0,1910,core,69496,38652,0.556,173,13,44.8,travelogue,Vladivostok – Trans-Siberian – Omsk – Ekaterinburg (Civil War)
-grano1893,Johannes Granö,37620.0,europe_finland,fi,False,1893,1885.0–1891.0,1880,core,52731,42111,0.799,522,15,124.0,travelogue,Omsk region – Finnish colonies – Irtysh – Tobolsk – East Siberia – Kirghiz steppe
-donner1915,Kai Donner,49142.0,europe_finland,fi,False,1915,1911.0–1914.0,1910,core,49785,46944,0.943,697,19,148.5,travelogue,Tomsk – Narym – Ob – Ket – Tym (Selkup) – Sayan (Kamassians)
-svinhufvud1928,P. E. Svinhufvud,75772.0,europe_finland,fi,False,1928,1915.0–1917.0,1910,core,51275,29245,0.57,294,17,100.5,travelogue,Viipuri – St Petersburg – Tomsk – Tymskoye (Narym region) – Kolyvan
+barzini1908,Luigi Barzini,47798.0,europe_west,de,True,1908,1907–1907,1900,core,141235,47694,0.338,71,13,14.9,travelogue,Peking – Urga – Kiakhta – Transbaikalia – Irkutsk – Krasnoyarsk – Tomsk – Omsk – Perm – European Russia
+gaunt1919,Mary Gaunt,54402.0,europe_west,en,False,1919,1913–1914,1910,core,94428,27972,0.296,101,18,36.1,travelogue,Manchuria – Vladivostok – Sakhalin – Amur – Blagoveshchensk – Trans-Siberian to Europe
+ward1920,John Ward,10972.0,europe_west,en,False,1920,1918–1919,1910,core,69496,38652,0.556,173,13,44.8,travelogue,Vladivostok – Trans-Siberian – Omsk – Ekaterinburg (Civil War)
+grano1893,Johannes Granö,37620.0,europe_finland,fi,False,1893,1885–1891,1880,core,52731,42111,0.799,522,15,124.0,travelogue,Omsk region – Finnish colonies – Irtysh – Tobolsk – East Siberia – Kirghiz steppe
+donner1915,Kai Donner,49142.0,europe_finland,fi,False,1915,1911–1914,1910,core,49785,46944,0.943,697,19,148.5,travelogue,Tomsk – Narym – Ob – Ket – Tym (Selkup) – Sayan (Kamassians)
+svinhufvud1928,P. E. Svinhufvud,75772.0,europe_finland,fi,False,1928,1915–1917,1910,core,51275,29245,0.57,294,17,100.5,travelogue,Viipuri – St Petersburg – Tomsk – Tymskoye (Narym region) – Kolyvan
 lethbridge1915,Alan Bourchier Lethbridge,,europe_west,en,False,1915,–,1910,core,89117,12422,0.139,55,10,44.3,travelogue,
 turner1905,Samuel Turner,,europe_west,en,False,1911,–,1910,core,96283,47558,0.494,160,16,33.6,travelogue,
 fell1916,Edward Nelson Fell,,europe_west,en,False,1916,–,1910,core,52300,32191,0.616,110,9,34.2,travelogue,

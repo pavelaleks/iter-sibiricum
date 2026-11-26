@@ -31,7 +31,7 @@ corpus = []
 for _, w in W.iterrows():
     wid = w.work_id; sw = int(sib_words.get(wid, 0)); aw = int(all_words.get(wid, 0))
     corpus.append(dict(work_id=wid, author=w.author, title_pg=w.pg_id, observer_group=w.observer_group, language=w.text_language,
-                       translation=bool(w.is_translation), edition_year=int(w.edition_year), journey=f"{w.journey_start if pd.notna(w.journey_start) else ''}–{w.journey_end if pd.notna(w.journey_end) else ''}",
+                       translation=bool(w.is_translation), edition_year=int(w.edition_year), journey=f"{int(w.journey_start) if pd.notna(w.journey_start) else ''}–{int(w.journey_end) if pd.notna(w.journey_end) else ''}",
                        decade=int(w.decade), corpus_role=w.corpus_role, words_total=aw, words_siberia=sw, siberia_share=round(sw/aw, 3) if aw else 0,
                        mentions_siberia=int((Ms.work_id == wid).sum()), groups_described=int(Ms[Ms.work_id == wid].group_id.nunique()),
                        mentions_per_10k=round((Ms.work_id == wid).sum()/sw*1e4, 1) if sw else None, genre=w.genre, route=w.route_summary))
