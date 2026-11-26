@@ -129,7 +129,8 @@ async function home() {
       <p>Ресурс создан по итогам исследования восприятия межнациональных отношений в Сибири в европейских травелогах XIX — начала XX века. Корпус сформирован по библиографическим справочникам и фондам электронных библиотек, размечен экспертами и обработан методами корпусной лингвистики; как именно — в разделе <a href="#method">«Метод и данные»</a>.</p>
       <p class="small mute"><i>Iter Sibiricum</i> — «сибирский путь»: латинским словом <i>iter</i> учёные XVIII века называли и путешествие, и его отчёт (<i>Iter Lapponicum</i> Линнея, 1732).</p>
     </div>
-    ${(P.team || []).length ? `<div class="team"><h3>Коллектив</h3><ul>${P.team.map((t) => `<li><span class="nm">${esc(t.name)}${t.orcid ? ` <a class="orcid" href="https://orcid.org/${esc(t.orcid)}" title="ORCID ${esc(t.orcid)}" aria-label="ORCID ${esc(t.name)}">iD</a>` : ''}</span><span class="af">${t.role && t.role !== 'исполнитель' ? esc(t.role) + ', ' : ''}${esc(t.degree)}, ${t.org_url ? `<a href="${esc(t.org_url)}">${esc(t.org)}</a>` : esc(t.org)}</span>${t.orcid ? `<span class="oid small mute">ORCID ${esc(t.orcid)}</span>` : ''}</li>`).join('')}</ul></div>` : ''}
+  </div>
+  <div class="wrap">${(P.team || []).length ? `<div class="crew"><h3>Коллектив</h3><ul>${P.team.map((t) => `<li><span class="nm">${esc(t.name)}</span>${t.role && t.role !== 'исполнитель' ? `<span class="rl">${esc(t.role)}</span>` : ''}<span class="af">${esc(t.degree)}<br>${esc(t.org)}</span>${t.orcid ? `<a class="oid" href="https://orcid.org/${esc(t.orcid)}" aria-label="ORCID ${esc(t.name)}"><span class="orcid">iD</span>${esc(t.orcid)}</a>` : ''}</li>`).join('')}</ul></div>` : ''}
   </div></section>
   <section class="band"><div class="wrap research">
     <div>
