@@ -38,15 +38,18 @@ window.SibMap = (() => {
     // Цвет маршрута — эпоха поездки (светлее — раньше, темнее — позже); один тон, чтобы маршруты читались как один слой.
     const PERC = {'P1 до 1855': 'var(--p1)', 'P2 1856–1880': 'var(--p2)', 'P3 1881–1904': 'var(--p3)', 'P4 1905–1917': 'var(--p4)', 'P5 1918–1930': 'var(--p5)'};
     const col = (w) => PERC[(workById[w] || {}).period] || 'var(--acc)';
-    const line = (r) => path({type: 'LineString', coordinates: r.stops.map((s) => [s[2], s[3]])});
+    // Разные поездки одной книги (s[6]) — отдельные линии: между концом одной и началом другой автор не ехал.
+    // Линия рвётся при смене поездки (s[6]), на остановке без координат и за пределами карты: прямой отрезок через неизвестное — ложный путь.
+    const line = (r) => { const segs = []; let cur = [], jj = null; (r.all || r.stops).forEach((s) => { const ok = s[2] != null && s[3] != null && inBox(s); if (!ok || (s[6] || 1) !== jj) { if (cur.length > 1) segs.push(cur); cur = []; } jj = s[6] || 1; if (ok) cur.push([s[2], s[3]]); }); if (cur.length > 1) segs.push(cur); return path({type: 'MultiLineString', coordinates: segs}); };
     if (o.routes) {
       // Линией рисуются только маршруты, восстановленные по тексту или проверенные; черновики — никогда.
       const R = o.routes.filter((r) => r.method === 'manual' && o.showManual !== false && (!o.filter || o.filter(workById[r.work] || {})))
-        .map((r) => ({...r, stops: r.stops.filter(inBox)})).filter((r) => r.stops.length > 1);
+        .map((r) => ({...r, all: r.stops, stops: r.stops.filter((s) => s[2] != null && inBox(s))})).filter((r) => r.stops.length > 1);
+      const many = R.length > 30;
       g.append('g').selectAll('path').data(R.filter((r) => r.work !== o.focusWork)).join('path')
         .attr('class', 'route' + (o.animate ? ' draw' : '')).attr('stroke', (r) => col(r.work)).attr('stroke-width', o.routeWidth || 1.8).attr('d', line)
-        .attr('pathLength', o.animate ? 1 : null).style('animation-delay', (r, i) => o.animate ? (300 + i * 140) + 'ms' : null)
-        .style('stroke-opacity', o.focusWork ? .25 : null)
+        .attr('pathLength', o.animate ? 1 : null).style('animation-delay', (r, i, a) => o.animate ? (300 + i * Math.min(140, 2400 / Math.max(1, a.length))) + 'ms' : null)
+        .style('stroke-opacity', o.focusWork ? .14 : many ? .38 : null).attr('stroke-width', many ? 1.25 : (o.routeWidth || 1.8))
         .on('mousemove', (ev, r) => { const w = workById[r.work] || {}; show(ev, `<b>${esc(w.label || r.work)}</b>${esc(w.author || '')}<br>поездка ${w.j0 || '?'}${w.j1 && w.j1 !== w.j0 ? '–' + w.j1 : ''} · ${esc(w.stay_ru || '')}<br>${r.status === 'verified' ? 'маршрут подтверждён экспертом' : r.status === 'checked' ? 'маршрут проверен по тексту' : 'маршрут восстановлен по тексту'}`); })
         .on('mouseleave', hide).on('click', (ev, r) => o.onWork && o.onWork(r.work));
       const F0 = o.routes.find((r) => r.work === o.focusWork);
@@ -59,7 +62,7 @@ window.SibMap = (() => {
           .on('mousemove', (ev, d) => show(ev, `<b>${esc(d.p.name)}</b>${d.n} упоминаний в этой книге`)).on('mouseleave', hide).on('click', (ev, d) => o.onPlace && o.onPlace(d.p));
       }
       if (F0 && F0.method === 'manual') {
-        const F = {...F0, stops: F0.stops.filter(inBox)};
+        const F = {...F0, all: F0.stops, stops: F0.stops.filter((s) => s[2] != null && inBox(s))};
         g.append('path').attr('class', 'route hi').attr('stroke', col(F.work)).attr('d', line(F));
         g.append('g').selectAll('circle').data(F.stops).join('circle').attr('r', 3.6).attr('fill', col(F.work)).attr('stroke', 'var(--bg)')
           .attr('transform', (s) => `translate(${proj([s[2], s[3]])})`)
@@ -68,7 +71,7 @@ window.SibMap = (() => {
           .attr('transform', (s) => { const p = proj([s[2], s[3]]); return `translate(${p[0] + 6},${p[1] - 5})`; }).text((s) => s[1]);
       } else if (F0 && F0.method === 'draft') {
         // Черновик: пронумерованные остановки без соединяющей линии — порядок предполагаемый.
-        const F = F0.stops.filter(inBox);
+        const F = F0.stops.filter((s) => s[2] != null && inBox(s));
         const gg = g.append('g').selectAll('g').data(F).join('g').attr('class', 'dstop').attr('transform', (s) => `translate(${proj([s[2], s[3]])})`)
           .on('mousemove', (ev, s) => show(ev, `<b>${esc(s[1])}</b>черновик: посещение по тексту ${s[5] === 'higher' ? '(несколько свидетельств)' : '(одно свидетельство)'}`)).on('mouseleave', hide);
         gg.append('circle').attr('r', 7).attr('class', (s) => s[5] === 'higher' ? 'hi' : '');

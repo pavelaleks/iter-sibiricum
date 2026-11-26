@@ -1,0 +1,107 @@
+# Импорт проверки маршрутов по тексту (2026-11-26)
+
+Книг: 97; статусы: {'checked': 94, 'no_journey': 3}; остановок: 2078; не прошли контроль: 63.
+
+| work_id           | status     |   stops |   failed_checks |
+|:------------------|:-----------|--------:|----------------:|
+| debaye1897        | checked    |      22 |               0 |
+| asselin1911       | checked    |      13 |               0 |
+| ujfalvy1879       | checked    |      23 |               1 |
+| kubalski1856      | no_journey |       0 |               0 |
+| kittlitz1858      | checked    |      26 |               0 |
+| drei1925          | checked    |      18 |               0 |
+| tytgat1901        | checked    |      18 |               0 |
+| wenyon1896        | checked    |      26 |               0 |
+| bergman1927       | checked    |      29 |               0 |
+| ledebour1829      | checked    |      30 |               0 |
+| lethbridge1915    | checked    |      22 |               0 |
+| ronaldshay1904    | checked    |      32 |               1 |
+| fraser1902        | checked    |      21 |               0 |
+| dobell1830        | checked    |      30 |               0 |
+| carruthers1914    | checked    |      14 |               1 |
+| lansdell1883      | checked    |      41 |               0 |
+| colquhoun1900     | checked    |      11 |               2 |
+| hansteen1857      | checked    |      39 |               1 |
+| hill1854          | checked    |      29 |               1 |
+| gerrare1903       | checked    |      11 |               2 |
+| radloff1893       | checked    |      66 |               0 |
+| felinska1854      | checked    |      13 |               0 |
+| perryayscough1914 | checked    |      25 |               0 |
+| grondijs1922      | checked    |      26 |               0 |
+| harrison1910      | checked    |      13 |               1 |
+| gsimpson1847      | checked    |      24 |               0 |
+| cotteau1885       | checked    |      37 |               0 |
+| reid1899          | checked    |      14 |               0 |
+| finsch1879        | checked    |      37 |               1 |
+| bordeaux1904      | checked    |      35 |               1 |
+| turner1905        | checked    |      23 |               0 |
+| joest1883         | checked    |      28 |               0 |
+| atkinson1858      | checked    |      28 |               0 |
+| atkinson1860      | checked    |      17 |               2 |
+| meakin1901        | checked    |      24 |               1 |
+| stadling1901      | checked    |      27 |               0 |
+| guillemard1889    | checked    |      13 |               0 |
+| heller1930        | checked    |      12 |               1 |
+| whyte1871         | checked    |      22 |               2 |
+| niedieck1909      | checked    |      12 |               0 |
+| scarfoglio1909    | checked    |      30 |               1 |
+| jefferson1897     | checked    |      17 |               0 |
+| maynard1859       | checked    |       4 |               0 |
+| ossendowski1922   | checked    |      18 |               1 |
+| lasies1920        | checked    |      12 |               0 |
+| swayne1904        | checked    |      19 |               1 |
+| fell1916          | checked    |       5 |               0 |
+| fuchs1925         | checked    |      27 |               0 |
+| gowing1889        | checked    |      34 |               0 |
+| cochrane1829      | checked    |      71 |               0 |
+| simpson1898       | checked    |      19 |               2 |
+| eden1879          | no_journey |       0 |               0 |
+| rose1837          | checked    |      27 |               1 |
+| johnson1907       | no_journey |       0 |               0 |
+| dewindt1892       | checked    |      20 |               0 |
+| vaydevaya1906     | checked    |      16 |               2 |
+| nansen1914_no     | checked    |      34 |               1 |
+| pistor1905        | checked    |      17 |               0 |
+| boulangier1891    | checked    |      20 |               1 |
+| legras1899        | checked    |      28 |               2 |
+| digby1928         | checked    |      12 |               3 |
+| kotzebue1802      | checked    |      24 |               2 |
+| latkinson1863     | checked    |      31 |               4 |
+| rabot1894         | checked    |      20 |               0 |
+| tronson1859       | checked    |      27 |               3 |
+| marsden1892       | checked    |      27 |               1 |
+| seebohm1882       | checked    |      28 |               2 |
+| piotrowski1863    | checked    |      19 |               1 |
+| peel1894          | checked    |      14 |               0 |
+| etherton1911      | checked    |      15 |               0 |
+| wlad1918          | checked    |      18 |               4 |
+| hooper1853        | checked    |      14 |               1 |
+| mpprice1912       | checked    |      11 |               0 |
+| cottrell1842      | checked    |      23 |               3 |
+| leroybeaulieu1900 | checked    |      10 |               0 |
+| norman1902        | checked    |       8 |               1 |
+| hawes1903         | checked    |      27 |               0 |
+| erman1833         | checked    |      38 |               0 |
+| castren1856       | checked    |      31 |               0 |
+| nansen1914        | checked    |      30 |               0 |
+| holman1825        | checked    |      31 |               0 |
+| sommier1885       | checked    |      24 |               2 |
+| muller1882        | checked    |      14 |               0 |
+| rosenberg1904     | checked    |      31 |               2 |
+| patursson1901     | checked    |      38 |               1 |
+| haviland1915      | checked    |      16 |               0 |
+| dewindt1896       | checked    |      21 |               0 |
+| cipolla1919       | checked    |      20 |               0 |
+| niemojowski1883   | checked    |       5 |               0 |
+| tilley1861        | checked    |       5 |               0 |
+| jefferson1896     | checked    |      19 |               1 |
+| whittingham1856   | checked    |       4 |               0 |
+| hprice1919        | checked    |       4 |               1 |
+| giller1866        | checked    |      18 |               0 |
+| sheepshanks1903   | checked    |      10 |               0 |
+| dwinger1930       | checked    |      10 |               1 |
+| debaye1898        | checked    |      12 |               0 |
+
+## Черновик 07g против проверки по тексту
+
+Книг: 68. Точность черновика (доля его остановок, подтверждённых чтением): 0.77; полнота (доля проверенных остановок из справочника, которые черновик нашёл): 0.66.

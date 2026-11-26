@@ -1,0 +1,536 @@
+work_id,journey,seq,place_id,place_name,lat,lon,decision,evidence_pid,quote,note
+gowing1889,1,1,shanghai,Шанхай,31.222,121.458,visited,00161,"some forty- four hours after leaving Shanghai, we entered the lovely harbour of Nagasaki","отправная точка, 30.10.1886"
+gowing1889,1,2,new:nagasaki,Нагасаки,32.74,129.87,visited,00161,we entered the lovely harbour of Nagasaki,
+gowing1889,1,3,new:fusan,Пусан,35.10,129.04,visited,00164,A sixteen hours' run brought us to the town of Fusan,
+gowing1889,1,4,new:gensan,Вонсан (Гензан),39.15,127.44,visited,00165,"we anchored in the pretty harbour of Gensan, the most northerly of the Corean open ports.",
+gowing1889,1,5,new:chemulpo,Чемульпо (Инчхон),37.47,126.62,visited,00179,the morning after our arrival at Chemulpo our little party of three were astride three sorry ponies,
+gowing1889,1,6,new:seoul,Сеул,37.57,126.98,visited,00195,we saw in the distance the solid walls and well-built gate of the city of Seoul.,затем возврат в Чемульпо и Гензан
+gowing1889,1,7,vladivostok,Владивосток,43.1056,131.8735,visited,00257,We soon ascertained that we had arrived in Vladivostok much earher than was necessary for our purpose.,начало санного пути
+gowing1889,1,8,new:razdolnoe,Раздольное (Kasdolnoi),43.55,131.92,visited,00383,we rattled down a steep hill and entered the little village of Kasdolnoi,
+gowing1889,1,9,new:kamenrybolov,Камень-Рыболов,44.76,132.05,visited,00388,On entering the travellers' room in the post-house of Kamen Euiboloflf we found it crowded,
+gowing1889,1,10,new:kazakevichevo,Казакевичево,48.27,134.97,visited,00426,Soon after nightfall on Christmas Eve we arrived at the little village of Kazakevitch,
+gowing1889,1,11,khabarovsk,Хабаровск,48.4827,135.0838,visited,00431,we dashed up the steep bank and drew up in the courtyard of the Khabarovka Hotel.,Рождество 1886
+gowing1889,1,12,blagoveshchensk,Благовещенск,50.2796,127.5405,visited,00614,During our five days' stay at Blagovestchensk they had caught and passed us,
+gowing1889,1,13,sretensk,Сретенск,52.2478,117.7083,visited,00667,"Stretensk naturally boasts an hotel, where we were able to obtain a room for our brief stay.",
+gowing1889,1,14,nerchinsk,Нерчинск,51.9833,116.5833,visited,00693,Staying at Nerchinsk only long enough to change our tired horses,
+gowing1889,1,15,chita,Чита,52.0317,113.5009,visited,00695,It was long past midnight on the third day of our journey from Stretensk when we arrived at the capital of the Trans-Baikal Province.,
+gowing1889,1,16,verkhneudinsk,Верхнеудинск (Улан-Удэ),51.8272,107.6063,visited,00730,On our arrival at the Verkhne Udinsk station its only occupants were four or five little birds,
+gowing1889,1,17,baikal,оз. Байкал,53.5,108.0,visited,00751,We had been sledging for a good four hours across the sea,переезд по льду
+gowing1889,1,18,listvyanka,Листвянка,51.856,104.866,visited,00751,at length the little port of Listvinichnaya came in sight,
+gowing1889,1,19,irkutsk,Иркутск,52.2978,104.2964,visited,00762,early in the afternoon of the 25th of January we entered the ' Paris of Siberia.',
+gowing1889,1,20,new:tulun,Тулун,54.56,100.58,visited,00799,Two days out from Irkutsk we reached the little town of Tulunovsk,
+gowing1889,1,21,nizhneudinsk,Нижнеудинск,54.9076,99.0276,visited,00803,In the second stage from Nizhni Udinsk our middle horse was harnessed so close in,
+gowing1889,1,22,kansk,Канск,56.2017,95.7175,visited,00809,"Soon after midnight on February 2, we passed through the little town of Kansk",
+gowing1889,1,23,krasnoyarsk,Красноярск,56.0184,92.8672,visited,00813,Two days we rested in Krasnoyarsk,
+gowing1889,1,24,achinsk,Ачинск,56.2694,90.4993,visited,00818,we were breakfasting at the little town of Achinsk,
+gowing1889,1,25,tomsk,Томск,56.4977,84.9744,visited,00830,"at nine o'clock in the evening we arrived, wearied out, at the door of the",
+gowing1889,1,26,new:tyukalinsk,Тюкалинск,55.87,72.20,visited,00852,we passed through the little town of Tiukalinsk,Омск объехали стороной
+gowing1889,1,27,tyumen,Тюмень,57.1522,65.5272,visited,00857,we drew up at the post-station of Tiumen,
+gowing1889,1,28,new:irbit,Ирбит,57.67,63.07,visited,00869,we had soon concluded a bargain by which we were to be conveyed to Irbit,поездка на ярмарку из Тюмени и обратно
+gowing1889,1,29,ekaterinburg,Екатеринбург,56.8519,60.6122,visited,00890,"Ekaterinburg, at which we arrived at the end of some sixteen hours, and at which we made a halt of a day",
+gowing1889,1,30,perm,Пермь,58.0105,56.2502,visited,00894,"At the city of Perm, a Bussian provincial capital, offering no particular attractions to the sightseer, we stayed but a single day.",
+gowing1889,1,31,kazan,Казань,55.7887,49.1221,visited,00899,"We remained, however, but a day and a half",
+gowing1889,1,32,new:vasilsursk,Васильсурск,56.13,46.01,visited,00902,we reached the little town of Vasil-Sursk,
+gowing1889,1,33,nizhny,Нижний Новгород,56.3287,44.002,visited,00902,the spires and domes of Nizhni Novgorod loomed into sight.,
+gowing1889,1,34,moscow,Москва,55.7522,37.6156,visited,00906,Within two days we were inspecting the glories of Moscow,далее поездом в Лондон
+cochrane1829,1,1,london,Лондон,51.5085,-0.1257,visited,00165,"I quitted London, and landed at Dieppe","начало пешего путешествия, 1820"
+cochrane1829,1,2,paris,Париж,48.8534,2.3488,visited,00183,I remained at Paris several days waiting for my passports,
+cochrane1829,1,3,berlin,Берлин,52.5244,13.4105,visited,00235,"During my stay in Berlin, I had the honour of an invitation to a grand dinner",
+cochrane1829,1,4,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,00313,"on the 30th of April, I reached St Petersburg, having been eighty- three days from London",
+cochrane1829,1,5,new:tver,Тверь,56.86,35.90,visited,00378,I quitted Tver for Moscow,
+cochrane1829,1,6,moscow,Москва,55.7522,37.6156,visited,00379,I entered Moscow at eight in the morning,
+cochrane1829,1,7,kazan,Казань,55.7887,49.1221,visited,00431,"Siviatski, with its remnant of an old stone castle, was the last interesting spot I observed before I reached Kazan.",по Волге на барке
+cochrane1829,1,8,perm,Пермь,58.0105,56.2502,visited,00439,On the fourth day I entered Perm,
+cochrane1829,1,9,ekaterinburg,Екатеринбург,56.8519,60.6122,visited,00466,Early the ensuing morning I reached Ekatherinebourg,
+cochrane1829,1,10,tyumen,Тюмень,57.1522,65.5272,visited,00486,"On the third day I reached Tumen, after near forty miles' walking.",
+cochrane1829,1,11,tobolsk,Тобольск,58.198,68.254,visited,00492,"and thence to Tobolsk, where I arrived, half drowned and famished",
+cochrane1829,1,12,ishim,Ишим,56.1128,69.4901,visited,00532,"thence to Ishim, which I reached, at four in the evening, in a torrent of rain",
+cochrane1829,1,13,omsk,Омск,54.9924,73.3686,visited,00538,"in a ferry over the Om, I entered the city by a neat bridge",
+cochrane1829,1,14,semipalatinsk,Семипалатинск,50.411,80.227,visited,00567,"Next day, started for Seinipalatinsk, which I reached at noon",
+cochrane1829,1,15,new:ubinsk,Убинская крепость,50.37,82.30,visited,00577,"Next day I reached Ubinsk, a vile dirty place, called here a town.",координаты приблизительны
+cochrane1829,1,16,new:ustkamenogorsk,Усть-Каменогорск,49.95,82.61,visited,00580,I reached Ustkamenogorsk in the early part of the second evening,
+cochrane1829,1,17,new:bukhtarma,Бухтарминская крепость,49.63,83.52,visited,00594,"Having procured a guide, I left Boukhtarminsk for the line of demarcation",
+cochrane1829,1,18,new:narym_border,р. Нарым (граница с Китаем),49.20,84.20,visited,00600,At peep of dawn I re-crossed the Narym,не путать с Нарымом на Оби; координаты приблизительны
+cochrane1829,1,19,barnaul,Барнаул,53.3606,83.7636,visited,00625,"reached Barnaoule in the afternoon, eighteen miles;",после возврата по Иртышу в Убинск
+cochrane1829,1,20,tomsk,Томск,56.4977,84.9744,visited,00642,"From thence to Tomsk are thirty miles, where I arrived early the following morning.",
+cochrane1829,1,21,achinsk,Ачинск,56.2694,90.4993,visited,00654,"Next day I reached Atchinsk, pleasantly situated on the banks of the Tchulym",
+cochrane1829,1,22,krasnoyarsk,Красноярск,56.0184,92.8672,visited,00659,It was five in the evening when I entered Krasnojarsk,
+cochrane1829,1,23,kansk,Канск,56.2017,95.7175,visited,00666,At Kanskoy I dined with the commissary,
+cochrane1829,1,24,irkutsk,Иркутск,52.2978,104.2964,visited,00687,During the short period of my stay in Irkutsk,
+cochrane1829,1,25,new:verkholensk,Верхоленск,54.10,105.67,visited,00699,"I soon reached Vercholensk, a large and populous town on its right bank",
+cochrane1829,1,26,kirensk,Киренск,57.7853,108.1119,visited,00702,"Proceeding day and night in my open canoe, I soon reached Kirenga.",
+cochrane1829,1,27,vitim,Витим,59.4433,112.5699,visited,00709,"Pursuing my voyage I reached Vittim, which is half way to Yakutsk",
+cochrane1829,1,28,olekminsk,Олёкминск,60.374,120.426,visited,00723,In three days I reached Olekminsk,
+cochrane1829,1,29,yakutsk,Якутск,62.0339,129.7331,visited,00729,I remained in Yakutsk three weeks,
+cochrane1829,1,30,new:zashiversk,Зашиверск,67.43,142.60,visited,00782,not long after which I entered the town of Zashiversk.,
+cochrane1829,1,31,srednekolymsk,Среднеколымск,67.4566,153.7025,visited,00807,On the 19th December I reached Sredne Kolymsk,
+cochrane1829,1,32,nizhnekolymsk,Нижнеколымск,68.533,160.917,visited,00823,"reached Nishney Kolymsk at noon, amid 42° of frost",встреча с Врангелем; оттуда поездка на ярмарку с чукчами
+cochrane1829,1,33,srednekolymsk,Среднеколымск,67.4566,153.7025,visited,00918,"From Lapteff I continued my route to Sredne Kolymsk, where I arrived on the fifth day at noon",обратный путь весной 1821
+cochrane1829,1,34,new:verkhnekolymsk,Верхнеколымск,65.87,150.90,visited,00934,On the fourth day I reached Verchne Kolymsk late in the evening,
+cochrane1829,1,35,new:oymyakon,Оймякон,63.46,142.79,visited,00970,"the hospitable yourte of Peter Gotossop, the Yakut prince of the Omekon.",
+cochrane1829,1,36,okhotsk,Охотск,59.362,143.2147,visited,01017,I paddled along the stream to the old vol. i. 2 c town of Okotsk,
+cochrane1829,1,37,petropavlovsk,Петропавловск-Камчатский,53.0444,158.6508,visited,01060,on the tenth made the Avatcha Peak.,"морем на бриге «Михаил»; зимовка, женитьба"
+cochrane1829,1,38,new:bolsheretsk,Большерецк,52.82,156.28,visited,01140,"we reached the ancient capital of Kamtchatka, Bolcheretzk",зимняя поездка по Камчатке
+cochrane1829,1,39,new:klyuchi,Ключи,56.32,160.85,visited,01182,I reached Cliutchie at midnight,
+cochrane1829,2,1,okhotsk,Охотск,59.362,143.2147,visited,01281,On the thirty-third day we made the port of Okotsk,"обратный путь с женой, 1822"
+cochrane1829,2,2,yakutsk,Якутск,62.0339,129.7331,visited,01321,"Upon the 1st of October, we reache<l the city of Yakutsk",
+cochrane1829,2,3,olekminsk,Олёкминск,60.374,120.426,visited,01353,"Upon the fourth day I reached Olekma, four hundred miles",
+cochrane1829,2,4,vitim,Витим,59.4433,112.5699,visited,01356,"Upon the 22d November, O.S., I reached Vittim",
+cochrane1829,2,5,kirensk,Киренск,57.7853,108.1119,visited,01360,I reached Kirenga on the twelfth day of our departure ;,
+cochrane1829,2,6,kachug,Качуг,53.9606,105.8817,visited,01370,"Upon the third day after leaving Kirenga, I reached Katchouga",
+cochrane1829,2,7,irkutsk,Иркутск,52.2978,104.2964,visited,01371,"Upon the morning of the seventeenth day, we reached Irkutsk",
+cochrane1829,2,8,baikal,оз. Байкал,53.5,108.0,visited,01389,"We crossed the lake, and reached the opposite village",
+cochrane1829,2,9,verkhneudinsk,Верхнеудинск (Улан-Удэ),51.8272,107.6063,visited,01390,"We reached Verchney Udinsk, a large, populous, and flourishmg city, on the right bank of the Selenga",
+cochrane1829,2,10,chita,Чита,52.0317,113.5009,visited,01421,The country thence continued low and sandy till I reached the village of Tchitta,
+cochrane1829,2,11,nerchinsk,Нерчинск,51.9833,116.5833,visited,01425,We reached the city late in the evening ;,
+cochrane1829,2,12,new:nerchinskzavod,Нерчинский Завод,51.31,119.61,visited,01432,"reached safely the Zavod, or Chief Fabric, late in the evening.",затем по пограничной линии обратно
+cochrane1829,2,13,verkhneudinsk,Верхнеудинск (Улан-Удэ),51.8272,107.6063,visited,01476,I reached Vercliney Udinsk late in the evening,
+cochrane1829,2,14,kiakhta,Кяхта,50.3574,106.4503,visited,01511,"Haviiis: seen all that I thought interesting in and about Kiakhta, I quitted it upon the third day.",
+cochrane1829,2,15,selenginsk,Селенгинск,51.3,106.88,visited,01517,upon my arrival at the town of Selenginsk,
+cochrane1829,2,16,irkutsk,Иркутск,52.2978,104.2964,visited,01519,I reached Irkutsk safely on the morning of the 7th of February,после повторного переезда Байкала
+cochrane1829,2,17,krasnoyarsk,Красноярск,56.0184,92.8672,visited,01533,"I ""reached this new capital of a new province at midnight in very cold weather","Енисейск собирался посетить, но подтверждения нет"
+cochrane1829,2,18,achinsk,Ачинск,56.2694,90.4993,visited,01548,In such a state I reached Atchinsk,
+cochrane1829,2,19,tomsk,Томск,56.4977,84.9744,visited,01552,"I reached the city late in the evening, quite knocked up from fatigue",
+cochrane1829,2,20,kainsk,Каинск (Куйбышев),55.4475,78.3218,visited,01561,I reached the town of Kainsk in good time to breakfast.,
+cochrane1829,2,21,omsk,Омск,54.9924,73.3686,visited,01579,"After two days' stay, I departed from Omsk ;",
+cochrane1829,2,22,tobolsk,Тобольск,58.198,68.254,visited,01587,Two more gangs of convicts were passed before I entered Tobolsk,
+cochrane1829,2,23,tyumen,Тюмень,57.1522,65.5272,visited,01592,"reached Tumenthe next day, one hundred and seventy miles.",
+cochrane1829,2,24,ekaterinburg,Екатеринбург,56.8519,60.6122,visited,01604,"proceeded on to the city of Ekatherinebourg, which I reached in the morning",
+cochrane1829,2,25,perm,Пермь,58.0105,56.2502,visited,01621,I had little inducement to remain longer in Perm than was necessary,
+cochrane1829,2,26,kazan,Казань,55.7887,49.1221,visited,01622,reached Kazan the next morning at seven o'clock.,
+cochrane1829,2,27,new:cheboksary,Чебоксары,56.13,47.25,visited,01692,"Next evening I reached Tcheboksari, on the right bank of the Volga",
+cochrane1829,2,28,nizhny,Нижний Новгород,56.3287,44.002,visited,01693,"thence on to Nishney Novgorod, where I arrived at sun-set.",
+cochrane1829,2,29,new:vladimir,Владимир,56.13,40.40,visited,01695,"all the way to Vladimir, where I arrived at noon",
+cochrane1829,2,30,moscow,Москва,55.7522,37.6156,visited,01701,My stay in Moscow occupied me three weeks,
+cochrane1829,2,31,new:tver,Тверь,56.86,35.90,visited,01742,We reached Tver the next day,
+cochrane1829,2,32,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,01745,We reached the environs of the capital about sun-set,затем морем в Англию
+simpson1898,1,1,new:samara,Самара,53.20,50.15,visited,00224,in process of time we leave Samara behind us.,"по железной дороге на восток, июнь 1896"
+simpson1898,1,2,chelyabinsk,Челябинск,55.154,61.4291,visited,00228,It was early morning when we steamed into Tchelyabinsk.,
+simpson1898,1,3,new:krivoshchekovo,Кривощёково (Обь),55.00,82.90,visited,00241,"In time we come to Krivoschekovo, having just crossed the Barabinsky steppe.",переправа через Обь на пароме
+simpson1898,1,4,mariinsk,Мариинск,56.2139,87.7472,visited,00259,At Mariinsk we pass a military train,
+simpson1898,1,5,krasnoyarsk,Красноярск,56.0184,92.8672,visited,00268,we enter the hill-encircled plain where lies the town of Krasnoyarsk.,далее почтовым трактом
+simpson1898,1,6,kansk,Канск,56.2017,95.7175,unclear,00700,Thus in the case of a specimen which I visited near Kansk,"посещение этапа под Канском; в пути по тракту, точное время неясно"
+simpson1898,1,7,nizhneudinsk,Нижнеудинск,54.9076,99.0276,visited,00534,as I was visiting the little local prison at Nijni-Udinsk,"возможно, на обратном пути"
+simpson1898,1,8,new:alexandrovsky_central,Александровский централ,52.80,104.10,visited,00720,We were rejoining the main road after having paid a visit to Alexandrovsky Central,под Иркутском; координаты приблизительны
+simpson1898,1,9,baikal,оз. Байкал,53.5,108.0,visited,00365,beyond which expands the peaceful surface of Baikal.,исток Ангары; переезд Иркутск не описан отдельной фразой
+simpson1898,1,10,new:selenga_valley,долина Селенги,51.80,107.10,visited,00375,When we next awoke of a morning we had entered the valley of the Selenga.,
+simpson1898,1,11,nerchinsk,Нерчинск,51.9833,116.5833,visited,00909,"In leaving the town of Nertchinsk, we pass under a large white - painted wooden arch",
+simpson1898,1,12,new:gornyzerentui,Горный Зерентуй,51.17,117.33,visited,00919,It was late at night when we drove up to the prison of Gorni- Zerentui,"Нерчинская каторга, август"
+simpson1898,1,13,new:algachi,Алгачи,51.08,118.03,visited,00949,After a continuous stretch of eighteen hours we reach Algatchi.,
+simpson1898,1,14,new:akatui,Акатуй,51.08,117.38,visited,01001,"From Akatui we drove to Alexandrovsky, which we reached in two hours.",
+simpson1898,1,15,new:alexandrovskyzavod,Александровский Завод,50.92,117.93,visited,01001,"From Akatui we drove to Alexandrovsky, which we reached in two hours.",
+simpson1898,1,16,tomsk,Томск,56.4977,84.9744,visited,00573,during the tedious eight days' sail from Tomsk to Tiumen.,возвращение рекой
+simpson1898,1,17,tobolsk,Тобольск,58.198,68.254,visited,00589,"after leaving Tobolsk behind us, and ascending the Tobol",
+simpson1898,1,18,tyumen,Тюмень,57.1522,65.5272,unclear,00592,The point at which our voyage had come to this abrupt termination was about 75 versts (50 miles) below Tiumen.,пароход сел на мель ниже Тюмени; прибытие в город прямо не описано
+simpson1898,1,19,perm,Пермь,58.0105,56.2502,visited,00595,The convicts had just disembarked at Perm on the morning that we got there,
+rose1837,1,1,berlin,Берлин,52.5244,13.4105,visited,00169,Wir verliessen Berlin den 12ten April 1829,экспедиция Гумбольдта
+rose1837,1,2,new:koenigsberg,Кёнигсберг,54.71,20.51,visited,00174,Wir erreichten Königsberg am 15ten Morgens,
+rose1837,1,3,new:dorpat,Дерпт (Тарту),58.38,26.72,visited,00333,Den 28sten April früh Morgens verliessen wir Dorpat,
+rose1837,1,4,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,00340,"Wir bogen rechts ein und fuhren einem breiten Kanale, der Fontanka, entlang",
+rose1837,1,5,new:novgorod,Новгород,58.52,31.27,visited,00416,Um 7 Uhr des folgenden Morgens erreichten wir Nowgorod,
+rose1837,1,6,new:tver,Тверь,56.86,35.90,visited,00424,"Am Morgen des 23sten waren wir in Torschok, den Mittag in Twer",
+rose1837,1,7,moscow,Москва,55.7522,37.6156,visited,00424,von wo wir nun schnell auf der wiedererlangten Chaussee nach Moskau fuhren,
+rose1837,1,8,nizhny,Нижний Новгород,56.3287,44.002,visited,00485,So eingerichtet verliessen wir Nischni-Nowgorod den 1sten Juni Vormittags um 11 Uhr,
+rose1837,1,9,kazan,Казань,55.7887,49.1221,visited,00492,"waren wir die Kasanka, an welcher Kasan liegt, hinaufgeschifft und bei der Stadt angekommen.",по Волге
+rose1837,1,10,perm,Пермь,58.0105,56.2502,visited,00561,kamen bei der Nähe von Perm sehr bald in dieser Stadt an,
+rose1837,1,11,ekaterinburg,Екатеринбург,56.8519,60.6122,visited,00587,hier wohnten wir die ganze Zeit während wir in Katharinenburg blieben,база для уральских экскурсий
+rose1837,1,12,new:nizhnytagil,Нижний Тагил,57.91,59.97,visited,01300,Wir hatten unsere Exkursionen in Nischne-Tagilsk gleich am Nachmittage nach unserer Ankunft angefangen,
+rose1837,1,13,new:kushva,Кушва,58.29,59.76,visited,01384,Wir stiegen in Kuschwinsk in einem sogenannten Kronsquar- _ tiere ab,
+rose1837,1,14,new:bogoslovsk,Богословск (Карпинск),59.77,60.00,visited,01603,Um 11 Uhr Abends kamen wir in Bogoslowsk an.,самая северная точка уральской части
+rose1837,1,15,ekaterinburg,Екатеринбург,56.8519,60.6122,unclear,01863,setzten wir nun unverweilt unsere Reise nach Katharinenburg fort,возвращение в Екатеринбург; само прибытие в отобранных абзацах не процитировано
+rose1837,1,16,tyumen,Тюмень,57.1522,65.5272,visited,01917,Die Reparatur eines unserer Wagen nöthigte uns mehrere Stunden in Tjumen zu bleiben.,
+rose1837,1,17,tobolsk,Тобольск,58.198,68.254,visited,01920,"Wir fuhren noch einige Werste auf der Ebene entlang, bis wir Tobolsk erreichten",
+rose1837,1,18,tara,Тара,56.8944,74.371,visited,01941,"Nach Tara, 309 Werste von Tobolsk, kamen wir in der Nacht zum 27.",
+rose1837,1,19,kainsk,Каинск (Куйбышев),55.4475,78.3218,visited,01942,Juli kamen wir nach der Stadt Kainsk,
+rose1837,1,20,barnaul,Барнаул,53.3606,83.7636,visited,02064,So verliessen wir denn Barnaul Abends am 4.,
+rose1837,1,21,new:zmeinogorsk,Змеиногорск (Schlangenberg),51.16,82.19,visited,02083,Wir blieben in Schlangenberg,оттуда экскурсия на Колыванскую шлифовальную фабрику
+rose1837,1,22,new:kolyvan_altai,Колыванская шлифовальная фабрика,51.36,82.55,visited,02255,Wir ‘erreichten die Schleiferei Mittags um 12 Uhr,не путать с Колыванью под Новосибирском (kolyvan)
+rose1837,1,23,new:ridder,Риддерск,50.35,83.51,visited,02313,Wir verliessen sont Riddersk- am Mörgen des 11.,
+rose1837,1,24,new:ustkamenogorsk,Усть-Каменогорск,49.95,82.61,visited,02318,erreichten ‚aber doch erst in der Nacht um 4 Uhr Ustkamenogorsk,
+rose1837,1,25,new:syryanovsk,Зыряновск,49.73,84.27,visited,02364,kamen aber doch erst in der Nacht um 1 Uhr BEIN Rfroren in Syränowsk an.,
+rose1837,1,26,new:baty,Баты (китайский пограничный пост),48.70,85.30,visited,02441,Wir verliessen daher Baty kurz nach 4 Uhr,координаты приблизительны
+rose1837,1,27,new:bukhtarma,Бухтарминская крепость,49.63,83.52,visited,02443,gelangten dann um 4 Uhr nach Buchtarminsk,текст тома обрывается здесь
+dewindt1892,1,1,paris,Париж,48.8534,2.3488,visited,00161,"a stifling sweltering day in Paris, and I embark, the same evening, on the night mail",
+dewindt1892,1,2,berlin,Берлин,52.5244,13.4105,visited,00165,At dusk we reach Berlin.,
+dewindt1892,1,3,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,00236,days passed for the most part in my room at the Hotel de France,ожидание разрешения в Петербурге
+dewindt1892,1,4,viipuri,Выборг,60.7076,28.7528,visited,00266,"Day is breaking as we near the towering citadel, white houses, and shipping of Wiborg",поездка к другу в Финляндию и обратно
+dewindt1892,1,5,moscow,Москва,55.7522,37.6156,visited,00273,"I remained but three days in the """,осмотр Пересыльной тюрьмы
+dewindt1892,1,6,nizhny,Нижний Новгород,56.3287,44.002,visited,00377,"On the 15th of August, N.S., I left for Perm via Nijni- Novgorod.",далее пароходом по Волге и Каме
+dewindt1892,1,7,kazan,Казань,55.7887,49.1221,visited,00403,Shortly after leaving Kazan we head to the north and enter the Kama river,
+dewindt1892,1,8,new:pianybor,Пьяный Бор,55.95,53.30,visited,00410,"He left us next day at Pianybor, a station on the Bielaya river",
+dewindt1892,1,9,perm,Пермь,58.0105,56.2502,visited,00413,On the morning of the 19th of August we arrived at Perm,
+dewindt1892,1,10,ekaterinburg,Екатеринбург,56.8519,60.6122,visited,00457,"Leaving Ekaterinburg, the train was crowded",
+dewindt1892,1,11,tyumen,Тюмень,57.1522,65.5272,visited,00457,"When, at 6 a.m., we arrived at Tiumen",пароход ушёл; погоня на тарантасе
+dewindt1892,1,12,new:yevlevo,Евлево (пристань на Тоболе),57.60,67.10,visited,00511,At the first break of dawn we sight Yevlevoi.,посадка на пароход «Козаговский»; координаты приблизительны
+dewindt1892,1,13,tobolsk,Тобольск,58.198,68.254,visited,00519,"The evening of the next lazy, uneventful day sees us at Tobolsk",
+dewindt1892,1,14,new:samarovo,Самарово (Ханты-Мансийск),61.00,69.02,visited,00601,Towards evening on the 25th of August we reached Samarof,
+dewindt1892,1,15,surgut,Сургут,61.25,73.4167,visited,00694,I visited an Ostiak settlement the evening of the day we left Sourgout.,
+dewindt1892,1,16,narym,Нарым,58.96,81.64,visited,00741,"who was leaving us at Narym, which we were now nearine.",
+dewindt1892,1,17,new:kolpashevo,Колпашево,58.31,82.90,visited,00756,Two days more and we have passed Kolpatchef,
+dewindt1892,1,18,tomsk,Томск,56.4977,84.9744,visited,01097,The second day of my stay at Tomsk was devoted to an inspection of the Goubernski prison,
+dewindt1892,1,19,tomsk,Томск,56.4977,84.9744,visited,01219,We leave Tomsk towards evening.,обратно пароходом
+dewindt1892,1,20,tyumen,Тюмень,57.1522,65.5272,visited,01225,"I arrived in Tiumen at daybreak, having posted all through the night in a rough telega from Yevlevoi",осмотр тюменской тюрьмы
+vaydevaya1906,1,1,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,00218,I reach Peterhof at half-past ten by the special train,аудиенция у царя в Петергофе
+vaydevaya1906,1,2,moscow,Москва,55.7522,37.6156,unclear,00282,I hope to reach the ancient capital of the Tsars.,прибытие в Москву только планируется в тексте
+vaydevaya1906,1,3,new:penza,Пенза,53.20,45.00,visited,00288,It is night as we arrive at Pienza,по железной дороге
+vaydevaya1906,1,4,new:samara,Самара,53.20,50.15,unclear,00297,I shall make a short stay at Samara,"остановка запланирована, подтверждения посещения нет"
+vaydevaya1906,1,5,irkutsk,Иркутск,52.2978,104.2964,visited,00334,"At last i had arrived at the largest town, what people here call the "" Paris "" of Siberia.",
+vaydevaya1906,1,6,baikal,оз. Байкал,53.5,108.0,visited,00360,We are crossing Lake Baikal.,паром
+vaydevaya1906,1,7,new:mysovaya,Мысовая,51.70,106.32,visited,00372,"We arrived about sunset on the eastern shore, at a place called Myssowa",
+vaydevaya1906,1,8,new:manchuria_st,станция Маньчжурия,49.60,117.43,visited,00382,"At midnight we reach our destination, a settlement called Manchury",
+vaydevaya1906,1,9,harbin,Харбин,45.75,126.65,visited,00424,At last I reached Kharbin,
+vaydevaya1906,1,10,mukden,Мукден,41.79,123.43,visited,00490,It was daybreak when we arrived before the principal gate of Mukden,
+vaydevaya1906,1,11,portarthur,Порт-Артур,38.81,121.26,visited,00596,"at last I arrived safe and sound at Port Arthur, where I remained two days",
+vaydevaya1906,1,12,new:niuchwang,Инкоу (Ньючжуан),40.67,122.23,visited,00640,On the day of my departure from Niu-chwang,
+vaydevaya1906,1,13,tientsin,Тяньцзинь,39.142,117.177,visited,00654,The last stopping-place on my journey was Tien-tsin.,
+vaydevaya1906,1,14,peking,Пекин,39.9075,116.3972,visited,00676,IT is evening when I arrive in Pekin.,конечная точка пути
+vaydevaya1906,2,1,new:seoul,Сеул,37.57,126.98,visited,01079,I HAVE arrived safely in Seoul.,отдельные поездки по Дальнему Востоку; порядок относительно Японии неясен
+vaydevaya1906,2,2,new:tokyo,Токио,35.68,139.69,visited,01257,I can scarcely reahze that I have reached the capital of beautiful Japan.,
+nansen1914_no,1,1,new:kristiania,Кристиания (Осло),59.91,10.75,visited,00190,toget skulde gå 3.25 fra Ostbanestationen i Kristiania,"отправление поездом, август 1913"
+nansen1914_no,1,2,new:tromso,Тромсё,69.65,18.96,visited,00223,august at vi i grått ruskevser nådde Tromsp.,посадка на пароход «Correct»
+nansen1914_no,1,3,new:honningsvag,Хоннингсвог,70.98,25.97,visited,00252,For å senne den siste post gikk vi inom Honnings-våg,
+nansen1914_no,1,4,new:karagates,пролив Карские Ворота,70.40,58.10,visited,00314,"Og så gie vi da ut av Kara-porten i tåke, som vi kom in i den;",
+nansen1914_no,1,5,karasea,Карское море,72.0,70.0,visited,00316,omtrent 20 kvartmil fra Kara-porten var vi inne mellem isstykkene,
+nansen1914_no,1,6,new:dikson,о. Диксон,73.51,80.55,visited,00571,Ved midnatt ankret vi i sydennen av sunnet mellem Dickson-0en og fastlannet,
+nansen1914_no,1,7,new:yenisei_estuary,устье Енисея (стоянка у острова),71.80,83.00,visited,00665,og vi var altså kommet om eftermiddagen;,"перегрузка на лихтеры; точное место — остров в Енисейском заливе, координаты приблизительны"
+nansen1914_no,1,8,new:karaulnoe,Караульное,70.08,83.18,visited,00888,Vs9 kom vi til Karaulnoje (d.,вверх по Енисею на катере «Омуль»
+nansen1914_no,1,9,new:dudinka,Дудинка,69.40,86.18,visited,00962,"snart var vi ut for Dudinka, Nordens Moskva",
+nansen1914_no,1,10,new:kureika,Курейка,66.50,87.20,visited,01061,ankret vi i munningen av elven Kureika,
+nansen1914_no,1,11,new:monastyrskoe,"Туруханск (Троицкий монастырь, Монастырское)",65.80,87.95,visited,01088,Men neste morgen ved halv-ti-tiden nådde vi frem.,цель — Svjato Troitskij Monastir (абз. 01087)
+nansen1914_no,1,12,yeniseisk,Енисейск,58.4494,92.1797,visited,01373,Om eftermiddagen efter lunchen var vi en tur på byens museum,
+nansen1914_no,1,13,krasnoyarsk,Красноярск,56.0184,92.8672,visited,01417,da var det inpå 35 verst til Krasnojarsk,из Енисейска на тарантасе
+nansen1914_no,1,14,irkutsk,Иркутск,52.2978,104.2964,visited,01513,"Om morgen ved ti-tiden, dagen efter Krasnojarsk, kom vi til Irkutsk.",дальше поездом
+nansen1914_no,1,15,baikal,оз. Байкал,53.5,108.0,visited,01535,Og som vi fra vore vinduer hadde et siste glimt av dem mens de dro nedover mot bryggen,у переправы через Байкал
+nansen1914_no,1,16,chita,Чита,52.0317,113.5009,visited,01544,Så kom vi da til byen Tsjitå,
+nansen1914_no,1,17,harbin,Харбин,45.75,126.65,visited,01572,"2 om morgenen kom vi endelig, tre timer forsinket, til Kharbin.",по КВЖД
+nansen1914_no,1,18,new:pogranichny,Пограничная,44.40,131.38,visited,01599,Så nådde vi grense-stationen i Mandsjuriet Progranitsjnoje (d.,
+nansen1914_no,1,19,vladivostok,Владивосток,43.1056,131.8735,visited,01600,"Bortimot midnatt, tre timer forsinket, kom vi endelig til Vladivostök.xv.",
+nansen1914_no,1,20,khabarovsk,Хабаровск,48.4827,135.0838,visited,01629,10 kom vi endelig til Khabarövsk,поездом через Никольск
+nansen1914_no,1,21,new:bureya,р. Бурея (строительство Амурской дороги),49.80,129.80,visited,01785,Så ut på eftermiddagen nådde vi frem til Buréja,поездка по строящейся Амурской железной дороге
+nansen1914_no,1,22,new:zeya_bridge,мост через Зею (у Благовещенска),50.40,127.60,visited,01795,"Så nådde vi den brede, vakre Séja.",в сам Благовещенск не заезжали
+nansen1914_no,1,23,new:taldan,ст. Талдан,53.68,124.80,visited,01826,Om kveilen kom vi til stationen Taldån,
+nansen1914_no,1,24,new:oldoy,ст. Ольдой,53.60,122.80,visited,01845,"til vi nådde stationen Oldöi, hvor vi overnattet.",
+nansen1914_no,1,25,new:ksenyevskaya,ст. Ксеньевская,53.55,118.70,visited,01854,Vi stanset ved den vakre station Ksénjevski,
+nansen1914_no,1,26,new:karymskaya,Карымская,51.62,114.35,visited,01866,Vi nådde den store station Karimskaja,
+nansen1914_no,1,27,chita,Чита,52.0317,113.5009,visited,01868,1 Tsjitå skiltes vi fra overingeniprene Seest og Podrutskij,обратный путь в Россию
+nansen1914_no,1,28,irkutsk,Иркутск,52.2978,104.2964,visited,01873,Om natten kom vi til Irkutsk,
+nansen1914_no,1,29,krasnoyarsk,Красноярск,56.0184,92.8672,visited,01880,Ved elve-tiden kom vi til Krasnojarsk,
+nansen1914_no,1,30,chelyabinsk,Челябинск,55.154,61.4291,visited,01894,Om natten kom vi til Tsjeljåbinsk,
+nansen1914_no,1,31,ekaterinburg,Екатеринбург,56.8519,60.6122,visited,01895,Til Jekaterinenburg kom vi om formiddagen,
+nansen1914_no,1,32,perm,Пермь,58.0105,56.2502,visited,01899,"Om morgenen kom vi til Perm, og gikk over Kama",
+nansen1914_no,1,33,new:vyatka,Вятка,58.60,49.66,visited,01900,Bortimot midnatt kom vi til Vjatka,
+nansen1914_no,1,34,stpetersburg,Санкт-Петербург,59.9386,30.3141,unclear,01905,"Bare en dag igjen, så er vi i Petersburg",прибытие только ожидается в конце текста
+pistor1905,1,1,new:warsaw,Варшава,52.23,21.01,visited,00151,Wie wir sie von Warschau nach Moskau zurückzulegen hatten,"начало поездки, 1902"
+pistor1905,1,2,moscow,Москва,55.7522,37.6156,visited,00177,"Über Petersburg nach Moskau zurückgekehrt, trat ich sofort die Fahrt nach Sibirien an.",
+pistor1905,1,3,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,00169,Obwohl ich Petersburg nur wenige Tage widmen konnte,поездка из Москвы и обратно
+pistor1905,1,4,new:taiga,ст. Тайга,56.06,85.62,visited,00370,"Der Morgen graute, #iis wir in Taicra einlangten",по Транссибу
+pistor1905,1,5,tomsk,Томск,56.4977,84.9744,visited,00386,Von Tomsk aus unternahm ich per Wagen einen Ausflug nach einer landwirtschaftlichen Schule.,
+pistor1905,1,6,irkutsk,Иркутск,52.2978,104.2964,visited,00394,Anfangs August traf ich in Irkutsk ein.,
+pistor1905,1,7,new:alexandrovsky_central,Александровский централ,52.80,104.10,visited,00409,machte ich mich eines Tages von Irkutsk aus nach dem in der Umgebung gelegenen Zentralgefängnis,экскурсия из Иркутска
+pistor1905,1,8,baikal,оз. Байкал,53.5,108.0,visited,00454,"desto mehr versteifte sich die flotte Brise, und auch unser Eisbrecher begann munter zu schaukeln.",на ледоколе-пароме
+pistor1905,1,9,new:mysovaya,Мысовая,51.70,106.32,visited,00467,Was aber konnten wir in dem trostlosen Myssowaja so viele Stunden hindurch anfangen!,далее на тарантасе по Кяхтинскому тракту
+pistor1905,1,10,kiakhta,Кяхта,50.3574,106.4503,visited,00509,"Endlich erreichten wir unser Ziel, die Station von Tkoiidrosawsk.",Троицкосавск/Кяхта
+pistor1905,1,11,maimachin,Маймачен,50.32,106.46,visited,00542,Auf dem Rückwege schlüpften wir in Maimatschin gerade noch durch die beiden Stadttore durch,
+pistor1905,1,12,verkhneudinsk,Верхнеудинск (Улан-Удэ),51.8272,107.6063,visited,00588,"Der Zug, den ich in Werchni-Udinsk bestieg, bestand aas",по пути — бурятский монастырь
+pistor1905,1,13,sretensk,Сретенск,52.2478,117.7083,visited,00617,langten wir gegen 9 Uhr abends in Stretensk an.,далее пароходом по Шилке и Амуру
+pistor1905,1,14,new:pokrovka,Покровка (на Амуре),53.33,121.53,visited,00638,Ziemlich gemäß dem Fahrplan erreichten wir Pokrowsk,
+pistor1905,1,15,blagoveshchensk,Благовещенск,50.2796,127.5405,visited,00639,Schließlich und endlich langten wir in Blagowescht* schenskan.,
+pistor1905,1,16,vladivostok,Владивосток,43.1056,131.8735,visited,00674,bereits (ha Stadtteile von W 1 a d i w o s t o k herüberreichten.,отрезок Благовещенск–Владивосток (Хабаровск?) в выборке не подтверждён
+pistor1905,1,17,new:niigata,Ниигата,37.92,139.04,visited,00804,auf der Heede Ton Nijgata an.,"далее кругосветная поездка (Япония, Китай, Австралия, Океания, Цейлон, Египет) — не размечена"
+boulangier1891,1,1,ekaterinburg,Екатеринбург,56.8519,60.6122,visited,00386,"Nous sommes aux confins de cette terre, à Ekatérinebourg",до Екатеринбурга по железной дороге через Урал
+boulangier1891,1,2,new:berezovsk,Берёзовский (золотые прииски),56.91,60.80,unclear,01964,Mais nous sommes arrivés au village minier de Bérésovsk,экскурсия описана в главе о рудниках; время поездки неясно
+boulangier1891,1,3,tyumen,Тюмень,57.1522,65.5272,visited,00540,"Après quinze petites heures, nous arrivons à Tiumen.",далее пароходом
+boulangier1891,1,4,new:demyanskoe,Демьянское,59.60,69.30,visited,00683,Demiansk où nous passons de nuit,
+boulangier1891,1,5,surgut,Сургут,61.25,73.4167,visited,00689,Nous arrivons le lendemain 17 juin en vue de ce village de Sourgout,
+boulangier1891,1,6,tymskoye,Тымское,59.47,80.29,visited,00767,A Timsk nous avons pris un pope,
+boulangier1891,1,7,tomsk,Томск,56.4977,84.9744,visited,00790,"Nous emploierons plus utilement les loisirs d'une villégiature de deux jours, au bord du Tom",далее на тарантасе по тракту
+boulangier1891,1,8,mariinsk,Мариинск,56.2139,87.7472,visited,01255,Il est trois heures du malin quand nous faisons notre entrée dans la ville de Mariinsk,
+boulangier1891,1,9,achinsk,Ачинск,56.2694,90.4993,visited,01292,le second centre un peu important que nous rencontrons depuis Tomsk,
+boulangier1891,1,10,krasnoyarsk,Красноярск,56.0184,92.8672,visited,01327,"La ville de Krasnoiarsk, où nous arrivons vers midi",
+boulangier1891,1,11,kansk,Канск,56.2017,95.7175,visited,01339,nous ont conseillé d'arriver de jour dans la petite ville de Kansk,
+boulangier1891,1,12,new:tulun,Тулун,54.56,100.58,visited,01365,"A Toulinsk, où nous arrivons dead-liead vers trois heures deTaprès-midi",
+boulangier1891,1,13,irkutsk,Иркутск,52.2978,104.2964,visited,01381,se découvre l'incomparable panorama d'Irkoutsk,
+boulangier1891,1,14,new:bratsk,Братский острог,56.15,101.63,visited,02360,l'approche de Bratski-Ostrog où nous arrivâmes ce soir-là,поездка по Ангаре от Иркутска
+boulangier1891,1,15,new:padun,Падун (порог на Ангаре),56.30,101.70,visited,02371,"nous arrivions au village de Padoun, situé à 2 verstes du rapide.",
+boulangier1891,1,16,new:dolonovo,Долоново (пристань на Оке),56.00,101.20,visited,02546,nous arrivions au petit port de Dolonova,координаты приблизительны
+boulangier1891,1,17,new:zima,Зима,53.92,102.05,visited,02633,"notre astucieux cocher, qui savait tout en quittant Zima",поиски угольных выходов
+boulangier1891,1,18,new:usolye,Усолье,52.75,103.65,visited,02662,nous faisons notre entrée dans le bourg d'Oussolié,
+boulangier1891,1,19,new:alexandrovsky_central,Александровский централ,52.80,104.10,visited,02734,"nous gagnons à pied, vers neuf heures, les bureaux de l'établissement pénitentiaire.",
+boulangier1891,1,20,irkutsk,Иркутск,52.2978,104.2964,visited,02833,Il est onze heures quand nous rentrons dans la grande ville d'Irkoutsk.,
+legras1899,1,1,moscow,Москва,55.7522,37.6156,visited,00065,"Après six jours de lent voyage depuis Moscou, je suis arrivé ce matin à Tcbéliabinsk","отправная точка, 1897"
+legras1899,1,2,chelyabinsk,Челябинск,55.154,61.4291,visited,00065,je suis arrivé ce matin à Tcbéliabinsk,
+legras1899,1,3,omsk,Омск,54.9924,73.3686,visited,00119,"Je suis à Omsk, la capil.",экскурсия к переселенцам в Киргизскую степь
+legras1899,1,4,new:krivoshchekovo,Кривощёково (Обь),55.00,82.90,visited,00163,"me voici, au lever du soleil, pî venu à la rive gauche de l'Obi",
+legras1899,1,5,barnaul,Барнаул,53.3606,83.7636,unclear,00163,oii je vais prend des chevaux pour gagner Barnaoul.,поездка по льду Оби; прибытие в Барнаул в абз. 00173 нечитаемо (OCR)
+legras1899,1,6,tomsk,Томск,56.4977,84.9744,visited,00218,"J'ai fait, dès mon arrivée, une visite au personnage le plus important de Tomsk",долгое пребывание
+legras1899,1,7,new:sudzhenka,Судженка (копи),56.33,85.33,visited,00279,"vers minuit, nous débarquons à la station de Soudjenka",
+legras1899,1,8,new:taiga,ст. Тайга,56.06,85.62,visited,00320,A peine arrivés dans le fameux village de Taïga,охота
+legras1899,1,9,new:kolpashevo,Колпашево,58.31,82.90,visited,00392,Nous atteignîmes en quelques heures le grand bourg de Kolpachévo,"на пароходе «Николай» по Оби, Кети и Обь-Енисейскому каналу"
+legras1899,1,10,new:obyenisei_canal,Обь-Енисейский канал,58.70,88.30,visited,00484,"Vers le soir, nous atteignons enfin la dernière écluse",координаты приблизительны
+legras1899,1,11,yeniseisk,Енисейск,58.4494,92.1797,visited,00580,"Hier matin, nous sommes arrivés à Yénisséisk",
+legras1899,1,12,krasnoyarsk,Красноярск,56.0184,92.8672,visited,00622,Je ne suis pas resté longtemps à Krasnoiarsk,
+legras1899,1,13,kansk,Канск,56.2017,95.7175,visited,00652,lorsque nous atteignons la petite ville de Kansk.,по строящейся дороге
+legras1899,1,14,new:klyuchi_rail,ст. Ключи (временный конец линии),55.80,97.50,visited,00661,"Nous voici enfin à Klioutchi, la dernière' station, le terminus provisoire de la ligne",координаты приблизительны; далее тарантас со свитой министра
+legras1899,1,15,new:alexandrovsky_central,Александровский централ,52.80,104.10,visited,00716,nous ferions un crochet pour visiter la prison d'Alexandrovsk.,
+legras1899,1,16,irkutsk,Иркутск,52.2978,104.2964,visited,00724,Il y a un mois et demi que j'ai quitté Tomsk,
+legras1899,1,17,listvyanka,Листвянка,51.856,104.866,visited,00854,"Le village de Listvinnitchnaya, où je venais d'arriver",
+legras1899,1,18,new:mysovaya,Мысовая,51.70,106.32,visited,00875,nous arrivons à la station de Mouisovaya.,
+legras1899,1,19,kiakhta,Кяхта,50.3574,106.4503,visited,00893,"Je suis arrivé vers midi, par une chaleur abominable, dans la bourgade de Kiakhta",
+legras1899,1,20,new:ustkiran,Усть-Киран,50.43,106.95,visited,00955,Nous sommes à Oust-Kérane,
+legras1899,1,21,new:tsekir,"Цакир (Джида, золотой прииск)",50.54,103.25,visited,00964,Nous sommes enfin arrivés au village de Tsékir,координаты приблизительны
+legras1899,1,22,new:gusinoe,Гусиное озеро,51.20,106.30,visited,00979,Me voici de nouveau sur le bord du lac des Oies,
+legras1899,1,23,verkhneudinsk,Верхнеудинск (Улан-Удэ),51.8272,107.6063,visited,00982,Lorsque nous sommes arrivés en face de Verkhné-Oudinsk,
+legras1899,1,24,new:ingoda,р. Ингода (сплав от Читы),51.80,114.00,visited,01018,nous partons emportés. par un courant qui fait de huit à dix kilomètres à l'heure.,сплав с губернатором Читы; сама Чита явно не описана
+legras1899,1,25,blagoveshchensk,Благовещенск,50.2796,127.5405,unclear,01079,"Reparti sur l'^ïamane, je me suis levé au point du jour pour voir",у устья Зеи (Благовещенск); стоянка в городе подразумевается
+legras1899,1,26,khabarovsk,Хабаровск,48.4827,135.0838,visited,01096,Nous avons quitté Khabarovsk en drézina.,далее по Уссурийской дороге
+legras1899,1,27,vladivostok,Владивосток,43.1056,131.8735,visited,01123,qui protègent la rade de Vladivostok,далее пароходом в Японию
+legras1899,1,28,japan,Япония,35.68,139.69,visited,01137,"Dès la première journée, je suis moins frappé du Japon joujou",
+digby1928,1,1,new:tataurovo,Татаурово,52.13,107.00,visited,00093,to meet me in the village of Tataurovo.,поездка на Баргузинский полуостров (Святой Нос); дата не указана
+digby1928,1,2,new:karimskaya_brg,Каримская (Баргузинская долина),52.30,108.20,unclear,00104,"Shortly after leaving Karimskaya, the trail swerved sharply to the westward",положение села неясно; координаты приблизительны
+digby1928,1,3,baikal,оз. Байкал,53.5,108.0,visited,00151,Down south the Baikal ice had disappeared several weeks previously.,восточный берег Байкала у Баргузина; двухдневная задержка из-за лошадей (абз. 00149)
+digby1928,2,1,irkutsk,Иркутск,52.2978,104.2964,visited,00352,"The spring evening before I ""went peasant” and left Irkutsk for Mongolia",отдельная поездка к монгольской границе
+digby1928,2,2,verkhneudinsk,Верхнеудинск (Улан-Удэ),51.8272,107.6063,unclear,00369,f<^tmg ev^ung we reached Verknie,"OCR повреждён; вероятно, Верхнеудинск"
+digby1928,2,3,new:mukhino,Мухино,51.80,107.40,visited,00381,In the afternoon I reached the village of Mukhina,координаты приблизительны
+digby1928,2,4,new:klyuchevskaya,Ключевская,51.60,107.30,visited,00391,"Just before we reached Klewtchevskaya, at dusk",координаты приблизительны
+digby1928,2,5,new:ubukanskaya,Убукун (Убуканская),51.40,106.90,visited,00401,I walked on to Ubukanskaya that day,координаты приблизительны
+digby1928,2,6,new:arbuzovskaya,Арбузовская,51.25,106.70,unclear,00422,"I drove on in a crude, springless two-wheeled cart, to Arbuzovskaya","координаты неизвестны, приблизительны"
+digby1928,2,7,selenginsk,Селенгинск,51.3,106.88,visited,00445,I trandered about Selenginsk fcr a while,
+digby1928,2,8,new:povorotnaya,Поворотная,50.90,106.70,visited,00449,"At the Village of Povorotnaya I was provided with a big, rpQmy iarantm",координаты приблизительны
+digby1928,2,9,kiakhta,Кяхта,50.3574,106.4503,visited,00529,"Now I am in Kiakhta, where the Siberian merchants hoard their imports and transact their business.",Троицкосавск и Кяхта
+kotzebue1802,1,1,new:weimar,Веймар,50.98,11.33,visited,00063,left Weimar on the 10th of April 1800.,выезд с семьёй
+kotzebue1802,1,2,berlin,Берлин,52.5244,13.4105,visited,00063,We arrived at Berlin,
+kotzebue1802,1,3,new:memel,Мемель (Клайпеда),55.71,21.13,visited,00074,When we left Memel I took the precaution to leave my books there,
+kotzebue1802,1,4,new:polangen,"Поланген (Паланга), граница",55.92,21.07,visited,00080,We arrived in a few minutes at Polan-,арест на границе
+kotzebue1802,1,5,new:mitau,Митава (Елгава),56.65,23.72,visited,00168,"hastened with my guard to pay my respects to 3VL de Drieser, the Governor of Mittau.",далее под конвоем
+kotzebue1802,1,6,new:riga,Рига,56.95,24.11,visited,00235,"Riga is not more than seven short German miles from Mittau, yet we did not arrive there till midnight.",
+kotzebue1802,1,7,new:stockmannshof,Стокмансгоф (Плявиняс),56.62,25.72,visited,00326,"I at last arrived at Stockmannshof, at eleven o'clock at night.",после попытки побега
+kotzebue1802,1,8,new:polotsk,Полоцк,55.49,28.79,visited,00437,"We now arrived at Polosk, the only considerable town we had met with since we had passed Riga.",
+kotzebue1802,1,9,new:smolensk,Смоленск,54.78,32.05,unclear,00444,"On the road between Polosk and Smolensk, I was again attacked by violent fits of the colic ;",проезд через город подразумевается
+kotzebue1802,1,10,moscow,Москва,55.7522,37.6156,visited,00458,We arrived at Moscow the 7th of May old style,
+kotzebue1802,1,11,kazan,Казань,55.7887,49.1221,visited,00505,We remained two days at Casan,
+kotzebue1802,1,12,perm,Пермь,58.0105,56.2502,visited,00516,We arrived at Perm without any accident ;,
+kotzebue1802,1,13,tyumen,Тюмень,57.1522,65.5272,visited,00536,Tiumen was the first town we came to on the frontiers of Siberia.,
+kotzebue1802,1,14,tobolsk,Тобольск,58.198,68.254,visited,00670,During my stay at Tobolsk,место назначения ссылки определено губернатором
+kotzebue1802,1,15,tyumen,Тюмень,57.1522,65.5272,visited,00748,"At Tiumen I passed the night, at the house of a notary",по пути в Курган
+kotzebue1802,1,16,kurgan,Курган,55.45,65.3333,visited,00881,Thus my days passed on at Kurgan,ссылка лето 1800
+kotzebue1802,2,1,tobolsk,Тобольск,58.198,68.254,visited,00967,At ten o'clock I arrived at Tobolsk.,"освобождение, июль 1800"
+kotzebue1802,2,2,perm,Пермь,58.0105,56.2502,visited,01017,On the 1 8th we arrived at Perm,
+kotzebue1802,2,3,moscow,Москва,55.7522,37.6156,visited,01064,I passed this and the following day at Moscow,
+kotzebue1802,2,4,new:novgorod,Новгород,58.52,31.27,visited,01071,We passed through the city of Novogorod,
+kotzebue1802,2,5,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,01166,On our arrival at Petersburg he lodged in the same room with me.,
+kotzebue1802,3,1,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,01597,"On the 29th of April, I left Petersburg with my family",отъезд 1801
+kotzebue1802,3,2,new:wolmarshof,Вольмарсгоф,57.54,25.43,visited,01603,"After having spent a few days very agreeably at Wolmarshof, we set off for Riga",координаты приблизительны (Валмиера)
+kotzebue1802,3,3,new:riga,Рига,56.95,24.11,unclear,01603,"we set off for Riga, where we were expected by our faithful friends.",прибытие подразумевается
+latkinson1863,1,1,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,00077,I actordingly betook myself to St.,жила в Петербурге до 1847
+latkinson1863,1,2,moscow,Москва,55.7522,37.6156,visited,00246,During my short stay in Moscow,"венчание и выезд, 1848"
+latkinson1863,1,3,nizhny,Нижний Новгород,56.3287,44.002,visited,00267,On arriving at the ancient town of Nijni Novogorod,
+latkinson1863,1,4,kazan,Казань,55.7887,49.1221,visited,00278,on arriving at Kasan I found my face and lips in a fearful state.,
+latkinson1863,1,5,ekaterinburg,Екатеринбург,56.8519,60.6122,visited,00296,We arrived in Ekaterinburg on March 6th.,
+latkinson1863,1,6,new:kamensky_zavod,Каменский завод,56.42,61.92,visited,00331,we reached Kaminskoi Zavod,
+latkinson1863,1,7,new:yalutorovsk,Ялуторовск,56.65,66.31,visited,00357,At Jaloutroffsky they had not received the news of the revolution in France,
+latkinson1863,1,8,kainsk,Каинск (Куйбышев),55.4475,78.3218,unclear,00376,At Kaiansk my husband hoped to find his dog,проезд подразумевается
+latkinson1863,1,9,tomsk,Томск,56.4977,84.9744,visited,00414,Tam not sorry we have quitted Tomsk,
+latkinson1863,1,10,barnaul,Барнаул,53.3606,83.7636,visited,00425,"preferring to reach Barnaoul, which was not far distant;",
+latkinson1863,1,11,biysk,Бийск,52.5364,85.2072,visited,00461,"Arrived, in Bisk, we drove to the Ispravonik’s",
+latkinson1863,1,12,new:altynkul,Телецкое озеро (Алтын-Куль),51.50,87.70,visited,00501,We reached Altin Kool or the Golden Lake in the evening,
+latkinson1863,1,13,new:zmeinogorsk,Змеиногорск,51.16,82.19,visited,00592,"started in the pavoska for Zmeinogorsk, where we stayed four days",
+latkinson1863,1,14,new:kolyvan_lake,Колыванское озеро,51.36,82.20,visited,00593,We arrived at Kolyvan Lake Just as ¢he sun was rising’;,не путать с Колыванью (kolyvan)
+latkinson1863,1,15,new:ayaguz,Аягуз,47.97,80.43,visited,00614,To Aiagooz we had travelled in the pavoska,
+latkinson1863,1,16,new:kopal,Копал (Капал),45.12,79.08,visited,00697,"We reached this place, Kopal, September 20th",зимовка 1848–49 в Семиречье
+latkinson1863,1,17,new:lepsy,р. Лепсы,45.80,80.60,visited,00964,"arrived at the Lepsou, a most fertile and lovely spot.",координаты приблизительны
+latkinson1863,1,18,new:zmeinogorsk,Змеиногорск,51.16,82.19,visited,01163,"On arriving at Zmeinogorsk, a little more than a year from the date of our leaving it",
+latkinson1863,1,19,barnaul,Барнаул,53.3606,83.7636,visited,01181,the first night of our arrival in Barnaoul this time,
+latkinson1863,1,20,tomsk,Томск,56.4977,84.9744,visited,01234,"Thence we started: for Tomsk, where we spent three days",
+latkinson1863,1,21,krasnoyarsk,Красноярск,56.0184,92.8672,visited,01234,On reaching Krasnoiarsk we fortunately found there the Governor-General of Eastern Siberia.,оставили экипаж и вернулись в Ачинск
+latkinson1863,1,22,achinsk,Ачинск,56.2694,90.4993,visited,01240,"On reaching Atchinsk, we sent our Cossack with our compliments to the pollce-master",
+latkinson1863,1,23,minusinsk,Минусинск,53.7103,91.6875,visited,01260,In Minousinsk we purchased a large boat,оттуда на лодке по Енисею в Красноярск
+latkinson1863,1,24,irkutsk,Иркутск,52.2978,104.2964,visited,01291,"we then started direct for Irkoutsk, where we now are",прибытие 1850
+latkinson1863,2,1,new:kultuk,Култук,51.72,103.70,visited,01373,"We slept at Koultook, as we wished to see the officer of that place","поездка к минеральным источникам, май"
+latkinson1863,2,2,new:nizhneudinsk_trip,соляной завод по пути в Нижнеудинск,53.00,102.00,unclear,01447,"Going to Nijni Oudinsk, we stopped at asalt zavod.",отдельная поездка; достигли ли Нижнеудинска — неясно; координаты приблизительны
+latkinson1863,3,1,baikal,оз. Байкал,53.5,108.0,visited,01499,T& was a bitter mérning when we started on the Baikal,"зимняя поездка в Кяхту, февраль"
+latkinson1863,3,2,kiakhta,Кяхта,50.3574,106.4503,visited,01500,"On our arrival at Troitska, four versts from Kiachta",
+latkinson1863,4,1,barnaul,Барнаул,53.3606,83.7636,visited,01619,on our arrival in Barnaoul,возвращение 1852–53
+latkinson1863,4,2,ekaterinburg,Екатеринбург,56.8519,60.6122,unclear,01625,but I fancy we shall make some stay in Ekaterinburg;,по таблице маршрута 00181 — поездка на Урал и возврат в Екатеринбург
+latkinson1863,4,3,stpetersburg,Санкт-Петербург,59.9386,30.3141,unclear,01723,we only await good winter roads to start for Petersburg,по таблице 00178 прибытие в Петербург 24 дек.
+rabot1894,1,1,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,00034,"le 19 juin 1890 je quittai Saint-Pétersbourg, à destination de Rybinsk",
+rabot1894,1,2,new:rybinsk,Рыбинск,58.05,38.83,visited,00035,"Après vingt-trois heures de route, nous arrivons à destination.",
+rabot1894,1,3,new:yaroslavl,Ярославль,57.63,39.87,visited,00037,je débarquai à laroslav pour me rendre le lendemain à Vologda.,поездка в Вологду и обратно
+rabot1894,1,4,nizhny,Нижний Новгород,56.3287,44.002,visited,00046,"Le 25 juin au matin, voici Nijni-Novgorod, cette",по Волге
+rabot1894,1,5,kazan,Казань,55.7887,49.1221,visited,00144,et nous voici à Kazan,экскурсии к черемисам и чувашам
+rabot1894,1,6,perm,Пермь,58.0105,56.2502,visited,00443,Après une navigation de soixante heures nous sommes à Perm,
+rabot1894,1,7,new:cherdyn,Чердынь,60.40,56.48,visited,00492,le lendemain matin voici enfin Tcherdine,
+rabot1894,1,8,new:pechora_upper,Якшинская пристань (верхняя Печора),61.80,56.80,visited,00582,Le soir de notre arrivée à Iaktchinskaya Pristane,волок с Камы на Печору; координаты приблизительны
+rabot1894,1,9,new:ustilych,Усть-Илыч,62.53,56.70,visited,00828,Dans la soirée nous arrivons à Oust-Ilytch,
+rabot1894,1,10,new:ustshchugor,Усть-Щугор,64.25,57.60,visited,00874,nous débarquons à la factorerie Sibiriakov d'Oust-Chtchougor.,
+rabot1894,1,11,ural,Уральские горы,59.0,59.5,visited,00924,Nous poussons un joyeux hourra en l'honneur de la vieille Europe que nous quittons,переход через Северный Урал по Волоковке
+rabot1894,1,12,new:lyapin,Ляпин (Саранпауль),64.26,60.90,visited,00944,nous atteignons la factorerie de Liapine,
+rabot1894,1,13,new:sartynya,Сартынья,63.40,62.10,visited,01114,"à la nuit tombante, nous arrivons à Sartynia",по Сосьве
+rabot1894,1,14,berezov,Берёзово,63.934,65.045,visited,01143,dans le lointain apparaissent des lumières : voici Bériosov.,
+rabot1894,1,15,new:kondinskoe,Кондинское (Октябрьское),62.65,66.05,visited,01238,Nous arrivons au village russe de Kondinsk,по Оби
+rabot1894,1,16,new:samarovo,Самарово (Ханты-Мансийск),61.00,69.02,visited,01260,nous nous acheminons prestement vers Samarovo,
+rabot1894,1,17,tobolsk,Тобольск,58.198,68.254,visited,01270,"Le 8 septembre, à dix heures trente du matin, nous quittons Tobolsk;",
+rabot1894,1,18,tyumen,Тюмень,57.1522,65.5272,visited,01272,nous faisons notre entrée à Tioumen,
+rabot1894,1,19,ekaterinburg,Екатеринбург,56.8519,60.6122,visited,01274,le lendemain à midi nous arrivons à lékaterinebourg.,
+rabot1894,1,20,perm,Пермь,58.0105,56.2502,visited,01276,"Le 12 au matin, nous arrivons à Perm, et aussitôt nous poursuivons notre route vers Pétersbourg.",
+tronson1859,1,1,new:woosung,Усун (Шанхай),31.38,121.50,visited,00131,The ships had been at anchor for some time previous off Woosung,"эскадра у устья Янцзы, 1854"
+tronson1859,1,2,new:nagasaki,Нагасаки,32.74,129.87,visited,00135,As we entered the Bay of Pappenberg (the outer anchorage of Nagasaki),
+tronson1859,1,3,new:hongkong,Гонконг,22.28,114.16,visited,00351,The wind continued in our favour till we reached the harbour of Hong Kong on the 25th,"зима 1854–55, рейды против пиратов"
+tronson1859,1,4,new:woosung,Усун (Шанхай),31.38,121.50,visited,00433,We reached Woosung on the 19th,весна 1855
+tronson1859,2,1,petropavlovsk,Петропавловск-Камчатский,53.0444,158.6508,visited,00452,we steamed into the harbour of Petropolovski.,"июнь 1855, порт оставлен русскими"
+tronson1859,2,2,new:cape_elizabeth,мыс Елизаветы (север Сахалина),54.42,142.72,unclear,00532,"We sailed from Petropolovski for Cape Elizabeth, north of Seghalien",выход к мысу описан как цель плавания
+tronson1859,2,3,ayan,Аян,56.453,138.168,visited,00558,"As we entered the port, we could not but admire the beautiful scenery of this calm retreat",
+tronson1859,2,4,amur,р. Амур,52.0,130.0,visited,00592,"We sailed down the Gulf of Amoor, and anchored within five miles of Obman's Bay on the 23rd July",Амурский лиман
+tronson1859,2,5,new:hakodate,Хакодате,41.77,140.73,visited,00644,"we weighed anchor, and soon reached the Bay of Hakodadi ;",
+tronson1859,2,6,new:nagasaki,Нагасаки,32.74,129.87,visited,00648,on the 28th of August we entered the Port ;,
+tronson1859,2,7,shanghai,Шанхай,31.222,121.458,visited,00693,"We sailed for Shanghai on the 1st of October, and arrived on the 3rd;","далее рейды у Чжоушаня, Нинбо и Гонконга (не размечены подробно)"
+tronson1859,3,1,shanghai,Шанхай,31.222,121.458,visited,00918,We steamed from Shanghai on the morning of the 17 th April ;,1856
+tronson1859,3,2,new:hakodate,Хакодате,41.77,140.73,visited,00942,We anchored between the Ramida Creek and Custom House ;,
+tronson1859,3,3,new:suffren_bay,бухта Суффрен (побережье Татарского пролива),,,visited,00973,We anchored in Suffrein Bay ;,точное положение неизвестно
+tronson1859,3,4,new:barracouta_bay,бухта Барракута (Императорская Гавань),49.00,140.30,visited,00977,"entered a deeply indented and sheltered bay, and anchored in nine fathoms",
+tronson1859,3,5,new:decastries,залив Де-Кастри,51.47,140.78,visited,01015,Under steam we entered Castries Bay,
+tronson1859,3,6,new:barracouta_bay,бухта Барракута (Императорская Гавань),49.00,140.30,visited,01057,"On the 28th of May we arrived at Barracouta Bay, and anchored in Pallas Harbour",
+tronson1859,3,7,new:hakodate,Хакодате,41.77,140.73,visited,01071,entered the bay of Hakodadi before sunset,
+tronson1859,3,8,new:barracouta_bay,бухта Барракута (Императорская Гавань),49.00,140.30,visited,01123,"We arrived at 4 o'clock p.m., and anchored in Pallas Harbour.",экскурсии к гилякам
+tronson1859,3,9,new:bullock_bay,"бухта Буллок (45° с.ш., Приморье)",,,visited,01237,We arrived in Bullock Bay on the 4th of July,положение — по широте 45°2'; долгота неизвестна
+tronson1859,3,10,new:sybille_bay,бухта Сибилл (Приморье),,,visited,01244,till we reached Sybille Bay,положение неизвестно
+tronson1859,3,11,new:hakodate,Хакодате,41.77,140.73,visited,01264,on the 13th arrived at Hakodadi,
+tronson1859,3,12,new:barracouta_bay,бухта Барракута (Императорская Гавань),49.00,140.30,visited,01343,The Pique joined us at Barracouta Bay on the 26th,
+tronson1859,3,13,new:port_dundas,порт Дандас (зал. Петра Великого?),,,unclear,01391,anchored off the entrance to Port Dundas.,британские названия бухт южного Приморья; отождествление неясно
+tronson1859,3,14,new:port_louis,"Порт-Луи, рейд Наполеона",,,unclear,01437,We arrived on the 23rd and anchored.,отождествление неясно
+tronson1859,3,15,new:korea_chousan,Чосан (Корея),,,visited,01443,We arrived in Chousan harbour on the 30th,
+tronson1859,3,16,new:nagasaki,Нагасаки,32.74,129.87,visited,01463,We sailed for Nagasaki on the afternoon of the 1st of September,
+marsden1892,1,1,moscow,Москва,55.7522,37.6156,visited,00133,I arrived at Moscow in J^ovember 1890.,прибыла через Константинополь и Кавказ
+marsden1892,1,2,zlatoust,Златоуст,55.1711,59.6508,visited,00164,"We went by train to Zlatoust (a few hundred miles from Moscow), whence we were to start in the sledge",начало санного пути 1 февраля 1891
+marsden1892,1,3,ekaterinburg,Екатеринбург,56.8519,60.6122,visited,00201,"On arriving at Ekaterinberg, we found accommodation at the excellent American hotel",
+marsden1892,1,4,new:irbit,Ирбит,57.67,63.07,visited,00213,"The ride from Irbit to Tjumen was, I think, the worst bit of sledging I ever experienced.",
+marsden1892,1,5,tyumen,Тюмень,57.1522,65.5272,visited,00238,"We hurried back to Tjumen, to start for Tobolsk",после поездки в имение под Тюменью
+marsden1892,1,6,tobolsk,Тобольск,58.198,68.254,visited,00272,We arrived at Tobolsk about midnight the following day.,
+marsden1892,1,7,new:tyukalinsk,Тюкалинск,55.87,72.20,visited,00287,"We were obliged to stop at Tukalinsk, where we arrived thoroughly exhausted.",
+marsden1892,1,8,omsk,Омск,54.9924,73.3686,visited,00321,On leaving Omsk I had the misfortune,
+marsden1892,1,9,kainsk,Каинск (Куйбышев),55.4475,78.3218,visited,00328,On reaching Kainsk we heard that a party ot prisoners were in the neighbourhood,
+marsden1892,1,10,tomsk,Томск,56.4977,84.9744,visited,00345,"On arriving at Tomsk, in April, I was too ill to visit the prisons immediately",
+marsden1892,1,11,krasnoyarsk,Красноярск,56.0184,92.8672,unclear,00357,"Krasnoyaesk, about five hundred miles from Tomsk, is a pretty place.",описание тюрьмы подразумевает посещение
+marsden1892,1,12,kansk,Канск,56.2017,95.7175,visited,00375,"On reaching Kansk, I visited the prison, Avhich is a large one.",
+marsden1892,1,13,irkutsk,Иркутск,52.2978,104.2964,visited,00378,I arrived at Irkutsk in a pitiable condition,
+marsden1892,1,14,lena,р. Лена,60.0,120.0,visited,00428,"The stage of 235 versts brought us to the Eiver Lena, where we were to resume the journey by water up to Yakutsk.",верховья Лены (пристань не названа)
+marsden1892,1,15,yakutsk,Якутск,62.0339,129.7331,visited,00450,Soon after my arrival in the town of Yakutsk I went to see the Bishop.,
+marsden1892,1,16,new:vilyuisk,Вилюйск,63.75,121.63,visited,00527,Viluisk is one of the quietest places I ever visited.,"верхом, июнь–июль 1891"
+marsden1892,1,17,new:mastakh,Мастах (колония прокажённых),64.00,122.80,visited,00550,One of my journeys from Viluisk was to Mastach,координаты приблизительны
+marsden1892,1,18,new:srednevilyuisk,Средневилюйск,63.62,123.10,visited,00607,We halted at Sredni Viluisk,координаты приблизительны
+marsden1892,1,19,yakutsk,Якутск,62.0339,129.7331,visited,00685,On reaching Yakutsk I went straight to bed and slept for twenty-four hours without waking.,
+marsden1892,1,20,irkutsk,Иркутск,52.2978,104.2964,visited,00703,"On arriving at Irkutsk, I went to a quiet, clean hotel",вверх по Лене
+marsden1892,1,21,tomsk,Томск,56.4977,84.9744,visited,00738,"I arrived in November, 1891, and, after much deliberation and prayer, visited the convent.",
+marsden1892,1,22,tyumen,Тюмень,57.1522,65.5272,visited,00751,At last I arrived at Tjumen in a rather lamentable condition.,
+marsden1892,1,23,zlatoust,Златоуст,55.1711,59.6508,visited,00764,"When we approached Zlatoust, and I saw the steam",далее поездом
+marsden1892,1,24,new:ufa,Уфа,54.73,55.97,visited,00768,At Ufa we saw Bishop Dionysius again,
+marsden1892,1,25,new:samara,Самара,53.20,50.15,visited,00768,At Samara Governor Sverbeff received us with every kindness,
+marsden1892,1,26,moscow,Москва,55.7522,37.6156,visited,00781,I arrived once more in Moscow in December,
+marsden1892,1,27,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,00788,Her Imperial Majesty the Empress was indisposed on my arrival in St.,
+seebohm1882,1,1,london,Лондон,51.5085,-0.1257,visited,00201,"We left London on Thursday the 1st of March, at 8.25 p.m.",1877
+seebohm1882,1,2,moscow,Москва,55.7522,37.6156,visited,00209,we reached Moscow in a complete thaw.,через Петербург
+seebohm1882,1,3,nizhny,Нижний Новгород,56.3287,44.002,visited,00212,We reached Nishni Novgorod on Saturday the 10th of March,
+seebohm1882,1,4,kazan,Казань,55.7887,49.1221,visited,00215,We did not make any stay in Kazan,
+seebohm1882,1,5,perm,Пермь,58.0105,56.2502,visited,00220,We passed through Perm late in the evening of Thursday the 15th of March,
+seebohm1882,1,6,new:kungur,Кунгур,57.43,56.94,visited,00220,were glad of an excuse to rest a few hours on Friday at Kongoor.,
+seebohm1882,1,7,ekaterinburg,Екатеринбург,56.8519,60.6122,unclear,00224,A few stages before reaching Ekatereenburg we left the last hill of the Urals behind us,проезд через город подразумевается
+seebohm1882,1,8,tyumen,Тюмень,57.1522,65.5272,visited,00227,We spent a couple of days at Tyu-maiii',
+seebohm1882,1,9,omsk,Омск,54.9924,73.3686,visited,00244,"From Omsk to Tomsk is 877 versts, or 585 miles, which we accomplished in eighty-",
+seebohm1882,1,10,tomsk,Томск,56.4977,84.9744,unclear,00247,until we came within 150 miles of Tomsk,проезд через Томск подразумевается
+seebohm1882,1,11,krasnoyarsk,Красноярск,56.0184,92.8672,visited,00249,We reached Kras-no-yarsk' on IMonday the 2nd of April,
+seebohm1882,1,12,yeniseisk,Енисейск,58.4494,92.1797,visited,00260,Arrived at Yen-e-saisk' we took rooms at the house of a M.,
+seebohm1882,1,13,new:turukhansk,Туруханск (старый),65.80,87.95,visited,00332,We left Toor-o-kansk' at five o'clock on the afternoon of Sunday the 22 ud of April.,санями вниз по Енисею
+seebohm1882,1,14,new:kureika,Курейка (зимовка «Темзы»),66.50,87.20,visited,00352,We reached the winter quarters of the Thames on Monday the 23rd of April,"весна–лето, наблюдения за птицами"
+seebohm1882,1,15,new:brekhov,Бреховские острова,70.50,82.80,visited,00811,On Sunday I spent twenty hours out of the twenty-four in exploring the island.,координаты приблизительны; отождествление острова по контексту
+seebohm1882,1,16,new:golchikha,Гольчиха,71.73,83.55,visited,00922,We left Gol-cheek'-a on Tuesday the 24th of July.,обратно вверх на барже
+seebohm1882,1,17,new:dudinka,Дудинка,69.40,86.18,visited,00956,About filty versts before we reached Doo-dink'-a,
+seebohm1882,1,18,new:silovanovo,Сиданово/Силованово,,,visited,00975,the barge ■nas anchored at Sil-o-Tah'-noff to take in more wood,положение неизвестно
+seebohm1882,1,19,yeniseisk,Енисейск,58.4494,92.1797,visited,01034,"we reached Yen-e-saisk', having been twenty-two days on the road",
+seebohm1882,1,20,krasnoyarsk,Красноярск,56.0184,92.8672,visited,01084,We left Kras-no-yarsk' on Saturday evening at eight o'clock,
+seebohm1882,1,21,tomsk,Томск,56.4977,84.9744,visited,01088,"At Tomsk we found a capital hotel, the ""European,""",далее пароходом
+seebohm1882,1,22,tobolsk,Тобольск,58.198,68.254,visited,01097,At noon on Wednesday we spent a couple of hours at Tobolsk,
+seebohm1882,1,23,tyumen,Тюмень,57.1522,65.5272,visited,01101,We were nine days and nights steaming from Tomsk to Tyu-main' ;,
+seebohm1882,1,24,perm,Пермь,58.0105,56.2502,visited,01137,It was quite dark wbeu we reached Perm,
+seebohm1882,1,25,kazan,Казань,55.7887,49.1221,visited,01145,We ought to have reached Kazan at eleven o'clock the ncKt morning,пароходом по Каме и Волге
+seebohm1882,1,26,nizhny,Нижний Новгород,56.3287,44.002,visited,01158,"We reached Nishni about five o'clock in the afternoon of Thursday, the 20th of September",
+seebohm1882,1,27,moscow,Москва,55.7522,37.6156,visited,01161,"We reached Moscow in good time on Friday morning, September the 21st",
+seebohm1882,1,28,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,01163,"I left Moscow on Saturday at half-past eight in the evening, and arrived at St.",
+piotrowski1863,1,1,paris,Париж,48.8534,2.3488,visited,00098,"I left Paris on January 9, 1843.",тайное возвращение эмигранта в Польшу
+piotrowski1863,1,2,new:pest,Пешт,47.50,19.05,visited,00100,"On February 28th, I quitted Pesth",
+piotrowski1863,1,3,new:kamieniec,Каменец-Подольский,48.68,26.58,visited,00108,"On March 22nd, I reached Kaminiep, at midday.",арест в конце 1843
+piotrowski1863,1,4,new:kiev,Киев,50.45,30.52,visited,00169,The following day I arrived before the fortress of Kiow.,заключение в крепости
+piotrowski1863,1,5,new:tula,Тула,54.19,37.62,unclear,00280,"At one of these stations, not far from Toula","этапирование в Сибирь, 1844"
+piotrowski1863,1,6,omsk,Омск,54.9924,73.3686,visited,00294,"mediately the gates swung wide, and we were in Omsk.",20 августа 1844
+piotrowski1863,1,7,new:ekaterinsky_zavod,Екатерининский винокуренный завод (под Тарой),56.85,74.55,visited,00382,I arrived at Ekaterinski-Zavod some years after that bloody tragedy had been played out ;,каторга 1844–1846; координаты приблизительны
+piotrowski1863,2,1,tara,Тара,56.8944,74.371,visited,00421,At the end of half an hour we were at Tara,"побег, февраль 1846"
+piotrowski1863,2,2,new:irbit,Ирбит,57.67,63.07,visited,00450,"On the morning, however, of the day on which I left Irbite",
+piotrowski1863,2,3,new:verkhoturye,Верхотурье,58.86,60.81,visited,00471,After leaving behind me Verkhouterie,
+piotrowski1863,2,4,new:pavda,Павда,59.27,59.50,visited,00474,"I only know that at Paouda, far set in the heart of the mountains",
+piotrowski1863,2,5,new:solikamsk,Соликамск,59.63,56.77,visited,00491,I reached Solikamsk in the beginning of March.,"далее через Чердынь, Кай, Лальск (города обходил)"
+piotrowski1863,2,6,new:velikyustyug,Великий Устюг,60.76,46.30,visited,00515,I reached Veliki-Oustiong on some day in the first fortnight in the month of April 1846,под видом богомольца
+piotrowski1863,2,7,new:arkhangelsk,Архангельск,64.54,40.54,visited,00544,"when, at last, we reached the landing-place",на барже по Двине
+piotrowski1863,2,8,new:kargopol,Каргополь,61.50,38.95,visited,00581,"Now Kargopol, which I soon reached",после попытки уйти морем через Онегу
+piotrowski1863,2,9,new:vytegra,Вытегра,61.01,36.45,visited,00594,Scarcely had I reached Vytiegra than I was accosted on the quays by a peasant,
+piotrowski1863,2,10,stpetersburg,Санкт-Петербург,59.9386,30.3141,visited,00606,"We had to go through an endless number of streets, bridges, and lanes before we reached the place where the laundress lived ;",по Ладоге через Новую Ладогу и Шлиссельбург
+piotrowski1863,2,11,new:riga,Рига,56.95,24.11,visited,00648,I shall pass rapidly over the rest of my journey from Riga,далее через Курляндию и Литву в Пруссию
+piotrowski1863,2,12,paris,Париж,48.8534,2.3488,visited,00675,"on September 22nd, 1846, I found myself again in Paris",
+peel1894,1,1,london,Лондон,51.5085,-0.1257,visited,00104,"as I left London on the 1 8th of July 1893, bound for Siberia",
+peel1894,1,2,new:instow,Инстоу/Эпплдор (Девон),51.06,-4.18,visited,00136,"A few minutes' rail conveyed us to Instow, from which a boat landed us on board the Blencathra.",посадка на яхту «Blencathra»
+peel1894,1,3,new:hammerfest,Хаммерфест,70.66,23.68,visited,00181,as we sailed from Hammerfest out of reach of civilised life,
+peel1894,1,4,new:vardo,Вардё,70.37,31.11,visited,00220,as the Blencathra and Orestes weighed anchor and steamed out of the harbour at 4.30 A.M.,стоянка в Вардё в августе
+peel1894,1,5,new:yugorstrait,Югорский Шар (у о. Вайгач),69.75,60.50,visited,00231,"we dropped anchor in a sheltered nook, formed by the island of Waigatz",
+peel1894,1,6,new:khabarova,Хабарово (Югорский Шар),69.65,60.42,visited,00252,after breakfast we landed at Khabarova,не путать с Хабаровском — черновик ошибся
+peel1894,1,7,karasea,Карское море,72.0,70.0,visited,00262,"In the afternoon we entered the Kara Sea, which was to me full of interest.",
+peel1894,1,8,new:yenisei_estuary,устье Енисея (у Диксона),73.51,80.55,visited,00283,On the 2nd of September we sighted Port Dickson and entered the mouth of the mighty Yenesei River,
+peel1894,1,9,new:golchikha,Гольчиха,71.73,83.55,visited,00337,"Lying at anchor, opposite Golchika, we enjoyed considerable shelter",три недели на Енисее
+peel1894,1,10,new:solombala,Соломбала (Архангельск),64.58,40.51,visited,00447,"we finally reached Solombola, and dropped anchor off this island",
+peel1894,1,11,new:arkhangelsk,Архангельск,64.54,40.54,visited,00461,we resolved to drive over to Archangel,
+peel1894,1,12,new:vardo,Вардё,70.37,31.11,visited,00498,we steamed into the familiar harbour of Vardoe,
+peel1894,1,13,new:tromso,Тромсё,69.65,18.96,visited,00514,"Finally, we anchored off Tromsoe at 1.30 P.M.",далее вдоль норвежского побережья
+peel1894,1,14,new:dundee,Данди,56.46,-2.97,visited,00552,on the 7th of November we dropped anchor at Dundee,конец плавания
+etherton1911,1,1,new:srinagar,Сринагар,34.08,74.80,visited,00265,Thus relieved I drove on into Srinagar to the Chenar Bagh,"старт из Индии, март 1909"
+etherton1911,1,2,new:gilgit,Гилгит,35.92,74.31,visited,00345,Prior to my arrival in Gilgit a fine specimen of the snow leopard had been brought in,
+etherton1911,1,3,new:hunza,Хунза,36.32,74.65,visited,00368,"On the afternoon of my arrival, the Mir of Hunza",
+etherton1911,1,4,new:misgar,Мисгар,36.79,74.76,visited,00407,I arrived at Misgar at half-past three in the afternoon,через Памир
+etherton1911,1,5,new:yarkand,Яркенд,38.42,77.24,visited,00700,"I left the caravan after crossing the Yarkand River, and pushed ahead through shady lanes",
+etherton1911,1,6,new:kashgar,Кашгар,39.47,75.99,visited,00803,Two days after my arrival in Kashgar,
+etherton1911,1,7,new:aksu,Аксу,41.17,80.26,visited,00870,I left Aksu on July 15th,
+etherton1911,1,8,new:kuchar,Куча,41.72,82.96,visited,00884,"I reached Kuchar on the afternoon of July 20tli, and camped in a pleasant orchard.",далее через Тянь-Шань и Джунгарию (не размечено подробно)
+etherton1911,1,9,new:chuguchak,Чугучак (Тачэн),46.75,82.98,visited,01704,arrived outside the walls of Chuguchak at mid-day.,
+etherton1911,1,10,new:sharasume,"Шара-Сумэ (Алтай, Китай)",47.87,88.12,visited,01888,At the time of my arrival he had been resident in Shara Sumbe five years,попытка пройти в Кобдо не удалась
+etherton1911,1,11,new:zaisan,Зайсан,47.47,84.87,visited,02007,On arrival in Zaisan I drove to tlic post-house,январь 1910
+etherton1911,1,12,new:kokpekty,Кокпекты,48.75,82.37,visited,02074,"reaching the little town of Kokbekti, 240 versts from Zaisan.",
+etherton1911,1,13,new:ustkamenogorsk,Усть-Каменогорск,49.95,82.61,visited,02088,I crossed the Irtish River and ran into Ustkhamenogorsk,
+etherton1911,1,14,barnaul,Барнаул,53.3606,83.7636,visited,02140,"at dawn reacliing Barnaul, a large town of 40,000 inliabitants on tlie left bank of the Ob River",
+etherton1911,1,15,novonikolaevsk,Ново-Николаевск,55.0415,82.9346,visited,02174,"I drove on into the town and up to the post-house, which was full of other travellers",город у железнодорожного моста через Обь (Ново-Николаевск); далее экспрессом в Москву и Англию
+wlad1918,1,1,new:samara,Самара,53.20,50.15,visited,00221,"Über Samars, die große Wolgabrüde, Tscheljabinst, Jetatetinburg und Perm führte uns die Bahn.",этап военнопленных из госпиталя у Азовского моря; порядок городов в тексте (OCR) нарушен
+wlad1918,1,2,chelyabinsk,Челябинск,55.154,61.4291,visited,00221,"Über Samars, die große Wolgabrüde, Tscheljabinst, Jetatetinburg und Perm führte uns die Bahn.",
+wlad1918,1,3,ekaterinburg,Екатеринбург,56.8519,60.6122,unclear,00221,"Über Samars, die große Wolgabrüde, Tscheljabinst, Jetatetinburg und Perm führte uns die Bahn.",Екатеринбург и Пермь названы после Челябинска — маршрут поезда неясен
+wlad1918,1,4,ural,Уральские горы,59.0,59.5,visited,00286,"Hinter Urschumla, der Grenze zweier Kontinente, waren wit in Asien.",
+wlad1918,1,5,omsk,Омск,54.9924,73.3686,visited,00287,"als der Ruf „Omsk, Omst“ erscholl.",
+wlad1918,1,6,ob,р. Обь,61.0,76.0,visited,00291,Die Brüden des Ob und Jenissei lagen hinter uns.,
+wlad1918,1,7,yenisei,р. Енисей,62.0,90.0,visited,00291,Die Brüden des Ob und Jenissei lagen hinter uns.,
+wlad1918,1,8,baikal,оз. Байкал,53.5,108.0,visited,00291,schimmerten bie füneegefrönten Gipfel der den Baikal begrenjenden Berge,
+wlad1918,1,9,new:peschanka,лагерь военнопленных Песчанка (под Читой),52.00,113.35,visited,00333,Gleich) nach unferer Ankunft brachten wir ihm unfere Geldnot zur Kenntnis.,лагерь 1915–1916; название по абз. 00335; координаты приблизительны
+wlad1918,1,10,chita,Чита,52.0317,113.5009,unclear,00337,Deswegen waren mir eine Reife nach Tschita und Stteifungen in der Um⸗ gebung hoͤchst erwuͤnscht.,поездка в Читу желательна; состоялась ли — по выборке неясно
+wlad1918,2,1,gobi,пустыня Гоби,43.0,106.0,unclear,00571,Zormittags noch langten wir bei den Mongolen am.,"первая попытка побега через Монголию к Калгану; маршрут неясен, OCR плохой"
+wlad1918,3,1,harbin,Харбин,45.75,126.65,visited,00655,Sie fanden vor dem Bahnhof von Charbin.,второй побег поездом в Маньчжурию
+wlad1918,3,2,new:falumon,Фалумынь (Маньчжурия),,,visited,00742,Eines Abends kamen wir in Falumon an.,отождествление неясно
+wlad1918,3,3,shanghai,Шанхай,31.222,121.458,visited,00776,Der Bufungfluß von Schanghai abwärts schien ein Bald son Maflen.,через Тяньцзинь (не подтверждено отдельно)
+wlad1918,3,4,japan,Япония,35.68,139.69,visited,00794,Wir kamen in die japanische Binnensee.,
+wlad1918,3,5,sanfrancisco,Сан-Франциско,37.77,-122.42,visited,00820,Juli lagen wir vor San Francisco,
+wlad1918,3,6,newyork,Нью-Йорк,40.71,-74.01,visited,00832,New York!,
+wlad1918,3,7,london,Лондон,51.5085,-0.1257,unclear,01001,"in Tragbahren, unter streuger Ber wahung im Yuto Bis London",задержан англичанами при пересечении Атлантики; Лондон в плену
+hooper1853,1,1,new:honolulu,Гонолулу,21.31,-157.86,visited,00123,"we arrived at Honolulu, the capital of Woahu","после Мадейры, Фолклендов и Кальяо; HMS «Plover», 1848"
+hooper1853,1,2,new:emma_harbour,"бухта Эммы (бухта Провидения), зимовка «Plover»",64.43,-173.25,visited,00178,in the entrance to which we anchored under the lee of a spit projecting in a curve nearly half a mile from the shore.,зимовка 1848–49 среди чукчей
+hooper1853,1,3,new:kaygwan,Кайгван (чукотское селение),,,visited,00269,"we arrived at Kaygwan, where our conductor resided",положение неизвестно
+hooper1853,1,4,new:noowook,Нувук (чукотское селение),,,visited,00517,"Speedily reaching Noowook, which was a miserable fishing station",положение неизвестно
+hooper1853,1,5,new:oongwysac,Унгвисак (чукотское селение),,,visited,00574,Oongwysac was reached after a laborious travel of ten hours.,положение неизвестно
+hooper1853,1,6,new:maytchooemin,Мечигмен? (May-tchoo-emin),65.50,-171.50,unclear,00613,"until reaching May-tchoo-emin, a village situated",отождествление с Мечигменской губой предположительно
+hooper1853,1,7,new:emma_harbour,"бухта Эммы (бухта Провидения), зимовка «Plover»",64.43,-173.25,visited,00825,We sailed from Emma’s Harbour at the end of June,
+hooper1853,1,8,beringstrait,Берингов пролив,65.8,-169.0,visited,00825,and proceeded up Behring’s Straits,лето 1849
+hooper1853,1,9,new:pointbarrow,мыс Барроу (район),71.30,-156.70,visited,00875,"on reaching the southern part of a long narrow promontory, whose northern extreme is Point Barrow",далее на шлюпках вдоль побережья Аляски
+hooper1853,1,10,new:fortgoodhope,Форт-Гуд-Хоуп,66.26,-128.63,visited,01085,We reached Fort Good Hope in the evening of,по р. Маккензи
+hooper1853,1,11,new:fortfranklin,Форт-Франклин,65.20,-123.43,visited,01201,On arrival at New Fort Franklin,зимовка 1849–50
+hooper1853,1,12,new:fortsimpson,Форт-Симпсон,61.86,-121.35,visited,01263,On the 11th we quitted Fort Simpson,
+hooper1853,1,13,new:fortchipewyan,Форт-Чипевайан,58.71,-111.15,visited,01476,in the evening landed at Fort Chipewyan,обратный путь через Канаду
+hooper1853,1,14,new:methyportage,волок Мети,56.40,-109.40,visited,01492,On the 26th we arrived at Methy Portage,далее к Йорк-Фактори
