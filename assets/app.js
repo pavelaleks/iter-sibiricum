@@ -91,6 +91,14 @@ function citation(P, extra = '') {
   const url = P.url || location.href.split('#')[0];
   return `Iter Sibiricum: европейские травелоги о Сибири и её народах, 1800–1930 : цифровой ресурс${team}${grant}. Версия ${P.version || '1.0'}. ${P.year || d.getFullYear()}. URL: ${url}${extra} (дата обращения: ${dd}).`;
 }
+// Профили участника в наукометрических базах (ID хранятся в data/project.json, правятся в рабочем месте → «Проект»).
+const profiles = (t) => {
+  const L = [t.scholar && ['Google Scholar', 'https://scholar.google.com/citations?user=' + encodeURIComponent(t.scholar)],
+    t.academia && ['Academia.edu', t.academia],
+    t.scopus && ['Scopus', 'https://www.scopus.com/authid/detail.uri?authorId=' + encodeURIComponent(t.scopus), 'Scopus Author ID ' + t.scopus],
+    t.wos && ['Web of Science', 'https://www.webofscience.com/wos/author/record/' + encodeURIComponent(t.wos), 'Web of Science ResearcherID ' + t.wos]].filter(Boolean);
+  return L.length ? `<span class="prof">${L.map(([n, u, title]) => `<a href="${esc(u)}"${title ? ` title="${esc(title)}"` : ''}>${n}</a>`).join('')}</span>` : '';
+};
 async function home() {
   const [A, works, routes, places, geo, groups, reuse, P] = await Promise.all([get('analytics.json'), get('works.json'), getRoutes(), get('places.json'), get('geo.json'), get('groups.json'), get('reuse.json'), project()]);
   const S = A.summary;
@@ -148,7 +156,7 @@ async function home() {
       <p class="small mute"><i>Iter Sibiricum</i> — «сибирский путь»: латинским словом <i>iter</i> учёные XVIII века называли и путешествие, и его отчёт (<i>Iter Lapponicum</i> Линнея, 1732).</p>
     </div>
   </div>
-  <div class="wrap">${(P.team || []).length ? `<div class="crew"><h3>Коллектив</h3><ul>${P.team.map((t) => `<li><span class="nm">${esc(t.name)}</span>${t.role && t.role !== 'исполнитель' ? `<span class="rl">${esc(t.role)}</span>` : ''}<span class="af">${esc(t.degree)}<br>${esc(t.org)}</span>${t.orcid ? `<a class="oid" href="https://orcid.org/${esc(t.orcid)}" aria-label="ORCID ${esc(t.name)}"><span class="orcid">iD</span>${esc(t.orcid)}</a>` : ''}</li>`).join('')}</ul></div>` : ''}
+  <div class="wrap">${(P.team || []).length ? `<div class="crew"><h3>Коллектив</h3><ul>${P.team.map((t) => `<li><span class="nm">${esc(t.name)}</span>${t.role && t.role !== 'исполнитель' ? `<span class="rl">${esc(t.role)}</span>` : ''}<span class="af">${esc(t.degree)}<br>${esc(t.org)}</span>${t.orcid ? `<a class="oid" href="https://orcid.org/${esc(t.orcid)}" aria-label="ORCID ${esc(t.name)}"><span class="orcid">iD</span>${esc(t.orcid)}</a>` : ''}${profiles(t)}</li>`).join('')}</ul></div>` : ''}
   </div></section>
   <section class="band"><div class="wrap research">
     <div>
