@@ -448,15 +448,38 @@ async function book(id, par) {
       <div class="chips">${w.top_groups.map((g) => `<span class="chip">${esc(g[0])} · ${g[1]}</span>`).join('')}</div>
       <p class="small">${w.sources.map((s) => `<a href="${esc(s)}" rel="noopener">${esc(s.replace('https://', ''))}</a>`).join('<br>')}</p>
       ${r ? `<p class="small"><a href="#atlas?work=${esc(id)}">${r.method === 'draft' ? 'черновик маршрута на карте' : 'маршрут на карте'}</a> · ${r.method === 'draft' ? 'черновик, на проверке' : 'восстановлен по тексту'}: ${r.stops.map((s) => esc(s[1])).join(r.method === 'draft' ? ', ' : ' → ')}</p>` : `<p class="small"><a href="#atlas?work=${esc(id)}">география книги на карте</a></p>`}
-      <div class="ctl"><button id="onlySib">только о Сибири</button></div>
+      <div class="ctl"><button id="onlySib">только о Сибири</button><button id="scanBtn" hidden aria-pressed="false">скан рядом с текстом</button></div>
       <label class="small mute">Найти в тексте <input type="search" id="tq" aria-label="Поиск в тексте"></label>
       <p class="small mute" id="tqn"></p>
       <label class="small mute">Подсветить народ <select id="tg"><option value="">все</option>${[...new Set(w.top_groups.map((g) => g[0]))].map((n) => `<option>${esc(n)}</option>`).join('')}</select></label>
       ${w.note ? `<p class="small mute">${esc(w.note)}</p>` : ''}
-    </aside><div class="text" id="txt"><p class="mute">Загрузка текста…</p></div></div></div></section>`;
+    </aside><div class="text" id="txt"><p class="mute">Загрузка текста…</p></div><figure class="scan" id="scan" hidden aria-live="polite"></figure></div></div></section>`;
   let T;
   try { T = await (C['t:' + id] ||= fetch('texts/' + id + '.json').then((x) => x.json())); } catch (e) { document.getElementById('txt').innerHTML = '<p class="mute">Текст не найден.</p>'; return; }
   let only = false, q = '', hg = '';
+  // страницы сканов Internet Archive: [номер абзаца, том, страница] — с каких абзацев начинается новая страница (08d)
+  let PG = null; try { const r = await fetch('data/pages/' + id + '.json', {cache: 'no-cache'}); if (r.ok) PG = await r.json(); } catch (e) { PG = null; }
+  const pageOf = (n) => { if (!PG) return null; const k = +n; let lo = 0, hi = PG.s.length - 1, a = null; while (lo <= hi) { const m = (lo + hi) >> 1; if (PG.s[m][0] <= k) { a = m; lo = m + 1; } else hi = m - 1; } return a == null ? PG.s[0] : PG.s[a]; };
+  const starts = new Set(PG ? PG.s.map((x) => x[0]) : []);
+  let scanOn = false, shown = '';
+  const scanEl = document.getElementById('scan'), btn = document.getElementById('scanBtn');
+  const showScan = (v, n) => {
+    if (!scanOn || !PG) return; const key = v + ':' + n; if (key === shown) return; shown = key;
+    const ia = PG.v[v], url = `https://archive.org/details/${encodeURIComponent(ia)}/page/n${n}/mode/1up`;
+    scanEl.innerHTML = `<div class="scan-bar"><button type="button" data-s="-1" aria-label="Предыдущая страница">←</button><span class="small">страница скана ${n + 1}${PG.v.length > 1 ? ', том ' + (v + 1) : ''}</span><button type="button" data-s="1" aria-label="Следующая страница">→</button><button type="button" class="x" aria-label="Закрыть скан">×</button></div>
+      <a href="${url}" target="_blank" rel="noopener" class="scan-img"><span class="small mute">Загрузка скана…</span><img alt="Скан страницы ${n + 1}" src="https://archive.org/download/${encodeURIComponent(ia)}/page/n${n}_w900.jpg" onload="this.previousElementSibling.remove()" onerror="this.previousElementSibling.textContent='Скан не загрузился — откройте страницу в Internet Archive'"></a>
+      <figcaption class="small mute"><a href="${url}" target="_blank" rel="noopener">Открыть в Internet Archive</a> · страница подобрана по тексту автоматически</figcaption>`;
+    scanEl.querySelectorAll('[data-s]').forEach((b) => b.addEventListener('click', () => showScan(v, Math.max(0, n + +b.dataset.s))));
+    scanEl.querySelector('.x').addEventListener('click', () => toggleScan(false));
+  };
+  let io = null;
+  const watch = () => {
+    if (io) io.disconnect(); if (!scanOn) return;
+    io = new IntersectionObserver((es) => { const e = es.filter((x) => x.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0]; if (e) { const pg = pageOf(e.target.id.slice(1)); if (pg) showScan(pg[1], pg[2]); } }, {rootMargin: '-20% 0px -60% 0px'});
+    document.querySelectorAll('#txt p[id]').forEach((el) => io.observe(el));
+  };
+  const toggleScan = (on) => { scanOn = on; shown = ''; btn.classList.toggle('on', on); btn.setAttribute('aria-pressed', on); scanEl.hidden = !on; document.querySelector('.reader').classList.toggle('with-scan', on); if (on) { const pg = pageOf(par || (PG.s[0] || [0])[0]); if (pg) showScan(pg[1], pg[2]); } watch(); };
+  if (PG) { btn.hidden = false; btn.addEventListener('click', () => toggleScan(!scanOn)); }
   const render = () => {
     const re = q.length > 2 ? new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi') : null; let hits = 0;
     const html = T.p.filter((p) => (p[4].match(/\p{L}/gu) || []).length >= 4 && (!only || p[3] || p[1] === 'h')).map((p) => {
@@ -464,11 +487,15 @@ async function book(id, par) {
       ms.slice().sort((a, b) => a[0] - b[0]).forEach(([a, b, g]) => { if (a < pos) return; out += esc(text.slice(pos, a)) + `<mark class="${hg && GN[g] === hg ? 'sel' : ''}" title="${esc(GN[g] || g)}">${esc(text.slice(a, b))}</mark>`; pos = b; });
       out += esc(text.slice(pos));
       if (re) { const c = (text.match(re) || []).length; if (!c) return ''; hits += c; }
-      return `<p id="p${n}" class="${type === 'h' ? 'h' : ''}${sib ? ' sib' : ''}"><a class="pid" href="#book-${toH(id)}-p${n}" title="Постоянная ссылка на абзац">${n}</a>${out}</p>`;
+      const pg = starts.has(+n) ? pageOf(n) : null;
+      const mk = pg ? `<a class="pgm" href="https://archive.org/details/${encodeURIComponent(PG.v[pg[1]])}/page/n${pg[2]}/mode/1up" target="_blank" rel="noopener" data-v="${pg[1]}" data-n="${pg[2]}" title="Страница скана в Internet Archive">скан ${pg[2] + 1}</a>` : '';
+      return `<p id="p${n}" class="${type === 'h' ? 'h' : ''}${sib ? ' sib' : ''}">${mk}<a class="pid" href="#book-${toH(id)}-p${n}" title="Постоянная ссылка на абзац">${n}</a>${out}</p>`;
     }).join('');
     document.getElementById('txt').innerHTML = html || '<p class="mute">Ничего не найдено.</p>';
     document.getElementById('tqn').textContent = re ? `Совпадений: ${hits}` : '';
+    watch();
   };
+  document.getElementById('txt').addEventListener('click', (e) => { const a = e.target.closest('a.pgm'); if (a && scanOn && !e.metaKey && !e.ctrlKey) { e.preventDefault(); showScan(+a.dataset.v, +a.dataset.n); } });
   render();
   if (par) { const el = document.getElementById('p' + par); if (el) { el.scrollIntoView({block: 'center'}); el.style.background = 'color-mix(in srgb, var(--acc) 12%, transparent)'; } }
   document.getElementById('onlySib').addEventListener('click', (e) => { only = !only; e.target.classList.toggle('on', only); render(); });
