@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "type": "dataset",
+    "status": "published",
+    "year": 2026,
+    "doi": "10.5281/zenodo.24531924",
+    "cite": "Alekseev, P. V. (2026). Iter Sibiricum: Catalogue of European Travel Accounts of Siberia (19th – early 20th c.) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24531924"
+  },
+  {
+    "type": "dataset",
+    "status": "published",
+    "year": 2026,
+    "doi": "10.5281/zenodo.24532195",
+    "cite": "Alekseev, P. V. (2026). Iter Sibiricum: Atlas of Peoples and Places in European Travel Accounts of Siberia [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24532195"
+  }
+]

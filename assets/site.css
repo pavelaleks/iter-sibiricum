@@ -2,7 +2,7 @@
    Цвет: снег и прусская лазурь старых гравированных карт; кармин — только для маршрутов и того, что к ним ведёт.
    Шрифт: Literata — голос источников (название, заголовки, тексты, цитаты); Onest — инструмент (интерфейс, данные).
    Одно движение: на главной маршруты прочерчиваются по карте при загрузке. */
-@import url(fonts.css?v=12);
+@import url(fonts.css?v=13);
 :root{color-scheme:light dark;
   --bg:light-dark(#f4f7f9,#0e1a26);--paper:light-dark(#ffffff,#132233);--bg2:light-dark(#e9eef2,#172a3d);
   --ink:light-dark(#13263a,#e4ecf2);--mute:light-dark(#5a6b7c,#93a7b8);--line:light-dark(#d7e0e7,#24394d);
@@ -156,3 +156,16 @@ footer p{margin:0 0 .5em;max-width:80ch}
 @media(max-width:700px){.toc a{grid-template-columns:minmax(0,1fr) auto}.toc .d{grid-column:1/-1;grid-row:2}footer .wrap{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:600px){table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--mute)}.stack td:empty{display:none}.bar{grid-template-columns:minmax(0,8em) minmax(0,1fr) 4em}nav.menu a{padding:9px 7px;font-size:14px}.title span{padding-left:.3em}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.route.draw{stroke-dasharray:none;stroke-dashoffset:0}}
+
+.steps{list-style:none;counter-reset:st;margin:0;padding:0;border-top:1px solid var(--ink);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,4vw,56px)}
+.steps li{counter-increment:st;position:relative;padding:20px 0 18px 44px;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(st);position:absolute;left:0;top:18px;font-family:var(--serif);font-size:24px;color:var(--mute);font-variant-numeric:lining-nums}
+.steps h3{margin:0 0 2px}.steps .kind{font-size:13.5px;color:var(--acc2);margin:0 0 8px}.steps p{margin:0}
+.qual td:first-child{font-weight:520;min-width:14em}
+.st{display:inline-block;padding:2px 10px;border-radius:999px;font-size:13px;white-space:nowrap;background:var(--bg2)}
+.st.ok{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.st.mid{background:color-mix(in srgb,#b07a12 18%,transparent);color:light-dark(#7a5408,#e0b45c)}
+.st.no{background:var(--bg2);color:var(--mute)}
+.lim li{margin-bottom:.5em;max-width:80ch}
+@media(max-width:860px){.steps{grid-template-columns:minmax(0,1fr)}}
+.refs{margin:0 0 40px;padding-left:1.6em;max-width:90ch}.refs li{padding:10px 0 12px;border-bottom:1px solid var(--line)}.refs .ref{font-family:var(--serif);font-size:17px;line-height:1.6;overflow-wrap:anywhere}.refs p{margin:6px 0 0}
