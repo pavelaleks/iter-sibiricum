@@ -47,7 +47,7 @@ window.SibMap = (() => {
         .attr('class', 'route' + (o.animate ? ' draw' : '')).attr('stroke', (r) => col(r.work)).attr('stroke-width', o.routeWidth || 1.8).attr('d', line)
         .attr('pathLength', o.animate ? 1 : null).style('animation-delay', (r, i) => o.animate ? (300 + i * 140) + 'ms' : null)
         .style('stroke-opacity', o.focusWork ? .25 : null)
-        .on('mousemove', (ev, r) => { const w = workById[r.work] || {}; show(ev, `<b>${esc(w.label || r.work)}</b>${esc(w.author || '')}<br>поездка ${w.j0 || '?'}${w.j1 && w.j1 !== w.j0 ? '–' + w.j1 : ''} · ${esc(w.stay_ru || '')}<br>${r.status === 'verified' ? 'маршрут проверен экспертом' : 'маршрут восстановлен по тексту'}`); })
+        .on('mousemove', (ev, r) => { const w = workById[r.work] || {}; show(ev, `<b>${esc(w.label || r.work)}</b>${esc(w.author || '')}<br>поездка ${w.j0 || '?'}${w.j1 && w.j1 !== w.j0 ? '–' + w.j1 : ''} · ${esc(w.stay_ru || '')}<br>${r.status === 'verified' ? 'маршрут подтверждён экспертом' : r.status === 'checked' ? 'маршрут проверен по тексту' : 'маршрут восстановлен по тексту'}`); })
         .on('mouseleave', hide).on('click', (ev, r) => o.onWork && o.onWork(r.work));
       const F0 = o.routes.find((r) => r.work === o.focusWork);
       // География выбранной книги: все упомянутые места, круг — число упоминаний. Это не путь.

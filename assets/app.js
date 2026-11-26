@@ -8,6 +8,16 @@ const fmt = (n, d = 0) => n == null || isNaN(n) ? '—' : Number(n).toLocaleStri
 const pl = (n, f) => { const a = Math.abs(n) % 100, b = a % 10; return fmt(n) + ' ' + (a > 10 && a < 20 ? f[2] : b === 1 ? f[0] : b > 1 && b < 5 ? f[1] : f[2]); };
 const C = {};
 const get = (n) => (C[n] ||= fetch('data/' + n).then((r) => { if (!r.ok) throw new Error(n); return r.json(); }));
+// Решения проверки маршрутов (админка) накладываются на маршруты конвейера: проверенное по тексту и подтверждённое экспертом рисуется линией.
+const getRoutes = () => (C['routes+review'] ||= Promise.all([get('routes.json'), fetch('data/review/journeys_review.json', {cache: 'no-cache'}).then((r) => r.ok ? r.json() : {}).catch(() => ({}))]).then(([R, REV]) => {
+  const out = R.filter((r) => !REV[r.work]);
+  for (const [w, v] of Object.entries(REV)) {
+    if (v.status === 'no_journey') continue;
+    const stops = (v.stops || []).filter((s) => s.lat != null && s.lon != null).map((s) => [s.place, s.name, +s.lon, +s.lat, s.pid ? w + '_p' + s.pid : null, 'text', s.journey || 1, s.quote || '']);
+    if (stops.length) out.push({work: w, method: v.status === 'draft' ? 'draft' : 'manual', status: v.status, reviewer: v.reviewer, date: v.date, summary: v.summary, stops});
+  }
+  return out;
+}));
 const toH = (id) => String(id).replace(/_/g, '-'); const fromH = (h) => h.replace(/-/g, '_');
 const NAT = {british: 'Великобритания', french: 'Франция/Бельгия', german: 'Германия/Австрия', scandinavian: 'Скандинавия', finnish: 'Финляндия', polish: 'Польша', italian: 'Италия', central_european: 'Центральная Европа', dutch: 'Нидерланды'};
 const PER = {'P1 до 1855': 'до 1855', 'P2 1856–1880': '1856–1880', 'P3 1881–1904': '1881–1904', 'P4 1905–1917': '1905–1917', 'P5 1918–1930': '1918–1930'};
@@ -66,51 +76,43 @@ function citation(P, extra = '') {
   return `Iter Sibiricum: европейские травелоги о Сибири и её народах, 1800–1930 : цифровой ресурс${team}${grant}. Версия ${P.version || '1.0'}. ${P.year || d.getFullYear()}. URL: ${url}${extra} (дата обращения: ${dd}).`;
 }
 async function home() {
-  const [A, works, routes, places, geo, groups, reuse, P] = await Promise.all([get('analytics.json'), get('works.json'), get('routes.json'), get('places.json'), get('geo.json'), get('groups.json'), get('reuse.json'), project()]);
+  const [A, works, routes, places, geo, groups, reuse, P] = await Promise.all([get('analytics.json'), get('works.json'), getRoutes(), get('places.json'), get('geo.json'), get('groups.json'), get('reuse.json'), project()]);
   const S = A.summary;
   const mod = A.models.find((m) => m.term === 'personal' && m.model.startsWith('pos'));
   const langs = new Set(works.map((w) => w.lang)).size;
   const manual = routes.filter((r) => r.method === 'manual').length;
   const ind = groups.filter((g) => g.category === 'indigenous');
+  const top = ['khanty', 'sakha', 'buryat', 'evenki_even', 'chukchi', 'kazakh_kirghiz'].map((id) => groups.find((g) => g.id === id)).filter(Boolean);
   V.innerHTML = `
-  <section class="wrap masthead">
+  <section class="wrap intro">
     ${P.grant ? `<p class="ack">Ресурс подготовлен при поддержке гранта Российского научного фонда № ${esc(P.grant)}, <a href="${esc(P.grant_url)}">${esc(P.grant_url)}</a>, и Правительства Республики Алтай.</p>` : ''}
-    <h1 class="title">Iter<span>Sibiricum</span></h1>
-    <div class="sub">
-      <p>Как европейские путешественники 1800–1930 годов видели народы Сибири и отношения между ними.</p>
-      <dl class="facts">
-        <div><dt>книг на ${langs} языках</dt><dd>${fmt(S.works)}</dd></div>
-        <div><dt>слов о Сибири</dt><dd>${fmt(S.words_siberia / 1e6, 1)} млн</dd></div>
-        <div><dt>упоминаний народов</dt><dd>${fmt(S.mentions_siberia)}</dd></div>
-      </dl>
+    <h1 class="name">Iter Sibiricum</h1>
+    <p class="purpose">Цифровой ресурс о том, как европейские путешественники 1800–1930 годов описывали народы Сибири и отношения между ними: ${pl(works.length, ['книга', 'книги', 'книг'])} на ${langs} языках с полными текстами, маршруты на карте, карточки народов и проверяемые данные для исследований.</p>
+    <div class="finder">
+      <label for="q" class="sr">Поиск по ресурсу</label>
+      <input id="q" type="search" placeholder="Автор, книга, народ или место — например, Lansdell, буряты, Иркутск" autocomplete="off">
+      <ul id="qres" class="qres" hidden></ul>
     </div>
+    <dl class="facts">
+      <div><dt>книг</dt><dd>${fmt(S.works)}</dd></div>
+      <div><dt>языков</dt><dd>${langs}</dd></div>
+      <div><dt>слов о Сибири</dt><dd>${fmt(S.words_siberia / 1e6, 1)} млн</dd></div>
+      <div><dt>упоминаний народов</dt><dd>${fmt(S.mentions_siberia)}</dd></div>
+      <div><dt>групп и народов</dt><dd>${groups.length}</dd></div>
+    </dl>
   </section>
   <section class="wrap">
-    <div class="mapbox heromap" id="homeMap"></div>
-    <div class="mapnote"><span><i></i>${pl(manual, ['маршрут восстановлен', 'маршрута восстановлены', 'маршрутов восстановлено'])} по тексту книг; ещё ${routes.length - manual} — черновики на проверке</span><span><i class="a"></i>ареалы коренных народов около 1900 года, схематично</span></div>
-  </section>
-  ${(P.team || []).length ? `<section class="band"><div class="wrap team">
-    <h2>Коллектив проекта</h2>
-    <ul>${P.team.map((t) => `<li><span class="nm">${esc(t.name)}</span><span class="rl">${esc(t.role)}</span><span class="af">${esc(t.degree)}, ${esc(t.org)}</span></li>`).join('')}</ul>
-  </div></section>` : ''}
-  <section class="band alt"><div class="wrap etym">
-    <div class="word"><i>iter, itineris</i> <span class="mute">(лат.)</span><small>путь, дорога; путешествие; маршрут</small></div>
-    <div>
-      <p><i>Iter Sibiricum</i> — «сибирский путь». Латинским словом <i>iter</i> учёные XVIII века называли и само путешествие, и его отчёт: так Карл Линней озаглавил дневник своей поездки в Лапландию 1732 года — <i>Iter Lapponicum</i>. По-латыни писали и первые академические исследователи Сибири: достаточно вспомнить <i>Flora Sibirica</i> Иоганна Георга Гмелина.</p>
-      <p>Европейцы XIX — начала XX века ехали по их следам и постоянно на них ссылались: Паллас — самый цитируемый авторитет в корпусе. Название напоминает об этой традиции и о трёх вещах, из которых собран ресурс: маршрутах, текстах и встречах в пути.</p>
+    <div class="doors">
+      <div class="door"><a class="dt" href="#library">Читать источники</a><span class="dd">Полные тексты ${pl(works.length, ['книги', 'книг', 'книг'])} с подсветкой названий народов, поиском и постоянной ссылкой на каждый абзац.</span><span class="dn">Библиотека</span></div>
+      <div class="door"><a class="dt" href="#atlas">Проследить маршруты</a><span class="dd">Пути путешественников по эпохам, места, о которых они писали, и ареалы народов.</span><span class="dn">Атлас</span></div>
+      <div class="door"><a class="dt" href="#peoples">Узнать, как описывали народ</a><span class="dd">Кто и когда писал о народе, какими словами, в каких сюжетах; цитаты из источников.</span><span class="chips">${top.map((g) => `<a class="chip" href="#people-${toH(g.id)}">${esc(g.name.split(' (')[0].split(' /')[0])}</a>`).join('')}</span><span class="dn">Народы</span></div>
+      <div class="door"><a class="dt" href="#analytics">Изучить закономерности</a><span class="dd">Оценки и рамки описания, частоты по десятилетиям, дискурсы, сети совместных упоминаний и заимствований.</span><span class="dn">Аналитика и связи</span></div>
     </div>
-  </div></section>
+  </section>
   <section class="band"><div class="wrap">
-    <h2>Содержание</h2>
-    <ul class="toc">
-      <li><a href="#atlas"><span class="t">Атлас</span><span class="d">Маршруты, восстановленные по тексту, черновики маршрутов на проверке, места, о которых писали путешественники, и ареалы народов.</span><span class="n">${pl(manual, ['маршрут', 'маршрута', 'маршрутов'])}</span></a></li>
-      <li><a href="#peoples"><span class="t">Народы</span><span class="d">Кто, когда и какими словами описывал каждый народ: авторы, коллокации на трёх языках, дискурсы, цитаты.</span><span class="n">${pl(groups.length, ['карточка', 'карточки', 'карточек'])}</span></a></li>
-      <li><a href="#library"><span class="t">Библиотека</span><span class="d">Полные очищенные тексты с подсветкой этнонимов и постоянными номерами абзацев для ссылок.</span><span class="n">${pl(works.length, ['книга', 'книги', 'книг'])}</span></a></li>
-      <li><a href="#links"><span class="t">Связи</span><span class="d">Какие народы упоминаются вместе в разные эпохи и кто из авторов на кого ссылается и у кого заимствует.</span><span class="n">5 периодов</span></a></li>
-      <li><a href="#analytics"><span class="t">Аналитика</span><span class="d">Оценки и рамки описания, Ngram по десятилетиям, дискурсы, отношения, темы, текстовые заимствования.</span><span class="n">6 разделов</span></a></li>
-      <li><a href="#publications"><span class="t">Публикации</span><span class="d">Статьи, монографии и наборы данных проекта: опубликованные и в печати.</span><span class="n"></span></a></li>
-      <li><a href="#method"><span class="t">Метод и данные</span><span class="d">Как собран и размечен корпус, насколько можно доверять каждой цифре, что скачать.</span><span class="n">${pl(A.quality.length, ['проверка', 'проверки', 'проверок'])}</span></a></li>
-    </ul>
+    <div class="sechead"><h2>Маршруты путешественников</h2><a href="#atlas">Открыть атлас</a></div>
+    <div class="mapbox heromap" id="homeMap"></div>
+    <div class="mapnote"><span><i></i>${pl(manual, ['маршрут восстановлен', 'маршрута восстановлены', 'маршрутов восстановлено'])} по тексту книг; цвет — эпоха поездки</span><span><i class="a"></i>ареалы коренных народов около 1900 года, схематично</span></div>
   </div></section>
   <section class="band alt"><div class="wrap">
     <h2>Что показывает корпус</h2>
@@ -119,6 +121,14 @@ async function home() {
       <div><div class="k">0,4 → 2,9%</div><h3>Мотив вымирания нарастает</h3><p>Такова его доля в абзацах о коренных народах до 1855 года и в 1905–1917 годах. В те же десятилетия внимание к каторге сменяется вниманием к переселенцам.</p><a href="#analytics-ngram">Ngram и дискурсы</a></div>
       <div><div class="k">${fmt(reuse.length)}</div><h3>Тексты переписывают друг друга</h3><p>Столько пар абзацев с общими фрагментами нашлось в корпусе: компиляции, самоповторы, заимствования без ссылки.</p><a href="#links">Сеть цитирований</a></div>
     </div>
+  </div></section>
+  <section class="band"><div class="wrap about">
+    <div>
+      <h2>О проекте</h2>
+      <p>Ресурс создан по итогам исследования восприятия межнациональных отношений в Сибири в европейских травелогах XIX — начала XX века. Корпус сформирован по библиографическим справочникам и фондам электронных библиотек, размечен экспертами и обработан методами корпусной лингвистики; как именно — в разделе <a href="#method">«Метод и данные»</a>.</p>
+      <p class="small mute"><i>Iter Sibiricum</i> — «сибирский путь»: латинским словом <i>iter</i> учёные XVIII века называли и путешествие, и его отчёт (<i>Iter Lapponicum</i> Линнея, 1732).</p>
+    </div>
+    ${(P.team || []).length ? `<div class="team"><h3>Коллектив</h3><ul>${P.team.map((t) => `<li><span class="nm">${esc(t.name)}</span><span class="af">${esc(t.role === 'руководитель проекта' ? 'руководитель проекта, ' : '')}${esc(t.degree)}, ${esc(t.org)}</span></li>`).join('')}</ul></div>` : ''}
   </div></section>
   <section class="band"><div class="wrap research">
     <div>
@@ -139,6 +149,14 @@ async function home() {
       </dl>
     </div>
   </div></section>`;
+  const IDX = [...works.map((w) => ({t: w.author + ' — ' + w.label, k: (w.author + ' ' + w.label + ' ' + (w.nat_ru || '')).toLowerCase(), h: '#book-' + toH(w.id), c: 'книга'})),
+    ...groups.map((g) => ({t: g.name, k: (g.name + ' ' + g.name_en + ' ' + (g.forms || []).map((f) => f[0] || f).join(' ')).toLowerCase(), h: '#people-' + toH(g.id), c: 'народ'})),
+    ...places.map((p) => ({t: p.name, k: p.name.toLowerCase(), h: '#atlas', c: 'место'}))];
+  const qi = document.getElementById('q'), qr = document.getElementById('qres');
+  qi.addEventListener('input', () => { const v = qi.value.trim().toLowerCase(); if (v.length < 2) { qr.hidden = true; return; }
+    const R = IDX.filter((x) => x.k.includes(v)).slice(0, 8);
+    qr.innerHTML = R.length ? R.map((x) => `<li><a href="${x.h}"><span>${esc(x.t)}</span><span class="mute small">${x.c}</span></a></li>`).join('') : '<li class="mute small" style="padding:10px 14px">Ничего не найдено. Полнотекстовый поиск по книгам — в библиотеке.</li>'; qr.hidden = false; });
+  qi.addEventListener('keydown', (e) => { if (e.key === 'Enter') { const a = qr.querySelector('a'); if (a) location.hash = a.getAttribute('href'); } });
   document.getElementById('copyCite').addEventListener('click', async (e) => { try { await navigator.clipboard.writeText(document.getElementById('citeBox').textContent); e.target.textContent = 'Ссылка скопирована'; } catch (err) { e.target.textContent = 'Выделите текст и скопируйте вручную'; } });
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let first = !reduce;
@@ -147,7 +165,7 @@ async function home() {
 
 // ---------------- атлас ----------------
 async function atlas() {
-  const [works, routes, places, geo, groups, bookgeo] = await Promise.all([get('works.json'), get('routes.json'), get('places.json'), get('geo.json'), get('groups.json'), get('bookgeo.json')]);
+  const [works, routes, places, geo, groups, bookgeo] = await Promise.all([get('works.json'), getRoutes(), get('places.json'), get('geo.json'), get('groups.json'), get('bookgeo.json')]);
   const W = Object.fromEntries(works.map((w) => [w.id, w])), RT = Object.fromEntries(routes.map((r) => [r.work, r]));
   const ind = groups.filter((g) => g.category === 'indigenous');
   const nMan = routes.filter((r) => r.method === 'manual').length, nDraft = routes.filter((r) => r.method === 'draft').length;
@@ -184,8 +202,9 @@ async function atlas() {
     const box = document.getElementById('aInfo'); let h = '';
     if (st.work) {
       const w = W[st.work], r = RT[st.work];
-      const badge = !r ? '<span class="status">маршрут не определён</span>' : r.status === 'verified' ? '<span class="status rec">проверен экспертом</span>' : r.status === 'reconstructed' ? '<span class="status rec">восстановлен по тексту</span>' : '<span class="status draft">черновик, на проверке</span>';
+      const badge = !r ? '<span class="status">маршрут не определён</span>' : r.status === 'verified' ? '<span class="status rec">подтверждён экспертом</span>' : r.status === 'checked' ? '<span class="status rec">проверен по тексту</span>' : r.status === 'reconstructed' ? '<span class="status rec">восстановлен по тексту</span>' : '<span class="status draft">черновик, на проверке</span>';
       h += `<h3><a href="#book-${toH(w.id)}">${esc(w.label)}</a></h3><p class="small mute">${esc(w.author)} · ${esc(w.nat_ru)} · ${esc(w.stay_ru)} · поездка ${w.j0 ? yr(w.j0) : '?'}${w.j1 && w.j1 !== w.j0 ? '–' + yr(w.j1) : ''}</p><p>${badge}</p>`;
+      if (r && r.summary) h += `<p class="small">${esc(r.summary)}</p>`;
       if (r && r.method === 'manual') h += `<ol class="small">${r.stops.map((s) => `<li>${esc(s[1])}${s[5] === 'not_found_in_text' ? ' <span class="mute">— в тексте не найдено</span>' : para(w.id, s[4])}</li>`).join('')}</ol>`;
       else if (r) h += `<p class="small">Черновик составлен программой: в него попали места, о которых автор пишет как о посещённых («мы прибыли в…», «we left…»). Порядок предварительный. Номера на карте совпадают с номерами в списке; пунктирный кружок — одно свидетельство в тексте.</p><ol class="small">${r.stops.map((s) => `<li>${esc(s[1])}${para(w.id, s[4])}${s[5] === 'higher' ? '' : ' <span class="mute">· одно свидетельство</span>'}</li>`).join('')}</ol>`;
       else h += `<p class="small">Программа не нашла в книге мест, о которых автор пишет как о посещённых: это может быть обзор, компиляция или текст с плохим распознаванием. На карте показана география книги — все упомянутые места.</p>`;
@@ -282,7 +301,7 @@ async function library() {
   render();
 }
 async function book(id, par) {
-  const [works, groups, routes] = await Promise.all([get('works.json'), get('groups.json'), get('routes.json')]);
+  const [works, groups, routes] = await Promise.all([get('works.json'), get('groups.json'), getRoutes()]);
   const w = works.find((x) => x.id === id); if (!w) return library();
   const GN = Object.fromEntries(groups.map((g) => [g.id, g.name]));
   const r0 = routes.find((x) => x.work === id); const r = r0 && {...r0, stops: r0.stops.filter(inBox)};
