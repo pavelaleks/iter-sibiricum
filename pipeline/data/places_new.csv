@@ -1,0 +1,591 @@
+place_id,name,works,lat,lon,coord_source,geonames_name,dist_km
+new:bolgary,Болгары,debaye1897,54.95,49.06667,geonames,Bolgar,3.4
+new:elabuga,Елабуга,debaye1897,55.76127,52.06493,geonames,Yelabuga,0.9
+new:solikamsk,Соликамск,debaye1897;piotrowski1863,59.6316,56.7685,geonames,Solikamsk,0.9
+new:sysert,Сысерть,debaye1897,56.50243,60.81917,geonames,Sysert',0.3
+new:demyanskoe,Демьянское,boulangier1891;debaye1897;felinska1854,59.6,69.3,estimate,,
+new:samarovo,Самарово,cotteau1885;debaye1897;dewindt1892;felinska1854;finsch1879;rabot1894,61.0,69.023,estimate,,
+new:ladeiki,Ладейки,debaye1897,56.02,93.05,estimate,,
+new:krivoshchekovo,Кривощёково,debaye1897;jefferson1897;legras1899;simpson1898,54.99,82.89,estimate,,
+new:orenburg,Оренбург,debaye1897;hansteen1857;ujfalvy1879,51.7727,55.0988,geonames,Orenburg,0.3
+new:hankou,Ханькоу,asselin1911,30.58,114.28,estimate,,
+new:yichang,Ичан,asselin1911,30.71444,111.28472,geonames,Yichang,1.7
+new:chongqing,Чунцин,asselin1911;colquhoun1900,29.56,106.55,estimate,,
+new:chengdu,Чэнду,asselin1911,30.66667,104.06667,geonames,Chengdu,0.8
+new:orsk,Орск,ujfalvy1879,51.20487,58.56685,geonames,Orsk,7.3
+new:akdzhulpas,Ак-Джулпас (берег Арала),ujfalvy1879,,,none,,
+new:kazalinsk,Казалинск,ujfalvy1879,45.76,62.1,estimate,,
+new:perovsk,Перовск (Ак-Мечеть),ujfalvy1879,44.85,65.51,estimate,,
+new:turkestan,Туркестан,ujfalvy1879,43.33333,68.25,geonames,Turkestan,4.0
+new:tashkent,Ташкент,radloff1893;ronaldshay1904;ujfalvy1879,41.26465,69.21627,geonames,Tashkent,7.3
+new:khujand,Ходжент,radloff1893;ujfalvy1879,40.28256,69.62216,geonames,Khujand,0.3
+new:samarkand,Самарканд,radloff1893;ronaldshay1904;ujfalvy1879,39.65417,66.95972,geonames,Samarqand,0.5
+new:panjakent,Пенджикент,ujfalvy1879,39.49524,67.60931,geonames,Panjakent,0.6
+new:vernyi,Верный (Алматы),radloff1893;ronaldshay1904;ujfalvy1879,43.25654,76.92848,geonames,Almaty,1.0
+new:kulja,Кульджа,carruthers1914;radloff1893;ronaldshay1904;ujfalvy1879,43.91,81.32,estimate,,
+new:altynemel,Алтын-Эмель,radloff1893;ujfalvy1879,,,none,,
+new:kopal,Копал,atkinson1858;atkinson1860;latkinson1863;radloff1893;ronaldshay1904;ujfalvy1879,45.113,79.087,estimate,,
+new:sergiopol,Сергиополь (Аягоз),finsch1879;radloff1893;ronaldshay1904;ujfalvy1879,47.96447,80.43437,geonames,Ayagoz,0.7
+new:troitsk,Троицк,ujfalvy1879,54.0979,61.5773,geonames,Troitsk,2.3
+new:avacha,Авача (селение),dobell1830;kittlitz1858,53.2,158.4,estimate,,
+new:starii_ostrog,Старый острог на р. Аваче,kittlitz1858,,,none,,
+new:nachiki,Начики,bergman1927;guillemard1889;kittlitz1858,53.082,157.757,estimate,,
+new:malka,Малка,dobell1830;kittlitz1858,53.33,157.53,estimate,,
+new:ganaly,Ганалы,guillemard1889;kittlitz1858,53.6,158.0,estimate,,
+new:pushchino,Пущино,guillemard1889;kittlitz1858,54.17,157.99,estimate,,
+new:sharomy,Шаромы,bergman1927;dobell1830;kittlitz1858,,,none,,
+new:verkhnekamchatsk,Верхнекамчатск,kittlitz1858,,,none,,
+new:milkovo,Мильково,guillemard1889;kittlitz1858,54.695,158.62,estimate,,
+new:mashura,Машура,kittlitz1858,,,none,,
+new:klyuchi,Ключи,bergman1927;cochrane1829;dobell1830;kittlitz1858,56.32035,160.84541,geonames,Klyuchi,0.3
+new:ushki,Ушки,bergman1927;guillemard1889;kittlitz1858,56.25,160.13,estimate,,
+new:kozyrevsk,Козыревск,bergman1927;guillemard1889;kittlitz1858,56.05,159.87,estimate,,
+new:apacha,Апача,bergman1927;kittlitz1858,52.83,157.17,estimate,,
+new:bolsheretsk,Большерецк,cochrane1829;kittlitz1858,52.625,156.305,estimate,,
+new:yavino,Явино,kittlitz1858,,,none,,
+new:golygino,Голыгино,kittlitz1858,,,none,,
+new:vologda,Вологда,drei1925;lethbridge1915,59.2239,39.88398,geonames,Vologda,0.6
+new:vyatka,Вятка,drei1925;lethbridge1915;nansen1914_no,58.6,49.66,estimate,,
+new:repolovo,Реполово,drei1925,,,none,,
+new:shemini,угодье Шемини на Конде,drei1925,,,none,,
+new:istok,Исток (под Екатеринбургом),drei1925,56.79086,60.77889,geonames,Istok,1.8
+new:kashino,Кашино (у Сысерти),drei1925,,,none,,
+new:vilnius,Вильна,drei1925;wenyon1896,54.68916,25.2798,geonames,Vilnius,0.1
+new:virbalis,Вержболово (Вирбалис),tytgat1901;wenyon1896,54.63,22.82,estimate,,
+new:samara,Самара,fraser1902;fuchs1925;marsden1892;simpson1898;swayne1904;turner1905;tytgat1901;wlad1918,53.20007,50.15,geonames,Samara,0.0
+new:pokrovka,Покровка (на Амуре),meakin1901;pistor1905;tytgat1901,53.34,121.515,estimate,,
+new:aigun,Айгунь,joest1883;lansdell1883;tytgat1901,49.957,127.48,estimate,,
+new:kamen_rybolov,Камень-Рыболов (оз. Ханка),wenyon1896,44.7452,132.0465,geonames,Kamen'-Rybolov,2.0
+new:hakodate,Хакодате,bergman1927;guillemard1889;niedieck1909;tronson1859,41.77583,140.73667,geonames,Hakodate,0.9
+new:kamchatka_south_coast,южный берег Камчатки (место крушения),bergman1927,,,none,,
+new:semlyachik,Семлячик (рыбалка),bergman1927,,,none,,
+new:ust_kamchatsk,Усть-Камчатск,bergman1927,56.22,162.48,estimate,,
+new:nizhnekamchatsk,Нижнекамчатск,bergman1927;dobell1830,,,none,,
+new:kamaki,Камаки,bergman1927;dobell1830,,,none,,
+new:chapino,Чапино,bergman1927,,,none,,
+new:kirganik,Кирганик,bergman1927,,,none,,
+new:koryaki,Коряки,bergman1927;dobell1830,53.28,158.25,estimate,,
+new:savoiko,Савойко,bergman1927,,,none,,
+new:tolbachik,Толбачик,bergman1927,,,none,,
+new:lamut_camps,ламутские стойбища в горах к западу от Козыревска,bergman1927,,,none,,
+new:kresti,Кресты,bergman1927,,,none,,
+new:elovka,Еловка,bergman1927,,,none,,
+new:sedanka,Седанка,bergman1927,,,none,,
+new:belogolovoe,Белоголовое,bergman1927,,,none,,
+new:monomakhovo,Мономахово,bergman1927,,,none,,
+new:dorpat,Дерпт (Тарту),ledebour1829;rose1837,58.38062,26.72509,geonames,Tartu,0.3
+new:irbit,Ирбит,gowing1889;ledebour1829;marsden1892;piotrowski1863,57.67052,63.071,geonames,Irbit,0.1
+new:zmeinogorsk,Змеиногорск (Шлангенберг),atkinson1858;finsch1879;hansteen1857;latkinson1863;ledebour1829;radloff1893;rose1837,51.15776,82.19534,geonames,Zmeinogorsk,0.4
+new:kolyvan_altai,"Колывань (шлифовальная фабрика, Алтай)",ledebour1829;rose1837,51.36,82.54,estimate,,
+new:riddersk,Риддерск,ledebour1829,50.34413,83.51287,geonames,Ridder,0.5
+new:ust_kamenogorsk,Усть-Каменогорск,ledebour1829;radloff1893,49.97143,82.60586,geonames,Ust-Kamenogorsk,2.4
+new:krasnoyarsk_irtysh,с. Красноярское на Иртыше,ledebour1829,,,none,,
+new:chechulikha,Чечулиха (на Чарыше),ledebour1829,,,none,,
+new:abai,Абай (деревня),ledebour1829,,,none,,
+new:uimon,Уймон,ledebour1829;radloff1893,50.24,85.98,estimate,,
+new:zyryanovsk,Зыряновский рудник,atkinson1858;finsch1879;ledebour1829;radloff1893,49.72654,84.27318,geonames,Zyryanovsk,0.4
+new:fykalka,Фыкалка,ledebour1829;radloff1893,,,none,,
+new:chingistai,китайский пикет Чингистай на Бухтарме,ledebour1829,,,none,,
+new:loktevsk,Локтевский завод,ledebour1829,50.99,81.47,estimate,,
+new:belaya,Белая (деревня),ledebour1829,,,none,,
+new:arkhangelsk,Архангельск,lethbridge1915;peel1894;piotrowski1863,64.5401,40.5433,geonames,Arkhangel'sk,0.2
+new:solovki,Соловецкий монастырь,lethbridge1915,65.02,35.71,estimate,,
+new:kem,Кемь,lethbridge1915,64.95546,34.57929,geonames,Kem',0.6
+new:kandalaksha,Кандалакша,lethbridge1915,67.162,32.41229,geonames,Kandalaksha,0.2
+new:umba,Умба,lethbridge1915,66.68706,34.34291,geonames,Umba,0.8
+new:veliky_ustyug,Великий Устюг,lethbridge1915,60.76186,46.31352,geonames,Velikiy Ustyug,0.8
+new:kotlas,Котлас,lethbridge1915,61.25745,46.64963,geonames,Kotlas,0.8
+new:cherdyn,Чердынь,lethbridge1915;rabot1894,60.40295,56.47868,geonames,Cherdyn',0.3
+new:berezniki,Березники,lethbridge1915,59.4091,56.8204,geonames,Berezniki,0.1
+new:chusovoy,Чусовая,lethbridge1915,58.3013,57.8131,geonames,Chusovoy,1.3
+new:goroblagodatskaya,Гороблагодатская (Кушва),lethbridge1915,58.29056,59.75917,geonames,Kushva,0.1
+new:verkhoturye,Верхотурье,hansteen1857;lethbridge1915;piotrowski1863,58.86271,60.80536,geonames,Verkhotur'ye,0.3
+new:pavlodar,Павлодар,fell1916;lethbridge1915;radloff1893,52.27401,77.00438,geonames,Pavlodar,2.9
+new:aleppo,Алеппо,ronaldshay1904,36.20124,37.16117,geonames,Aleppo,0.2
+new:mosul,Мосул,ronaldshay1904,36.335,43.11889,geonames,Mosul,1.1
+new:baghdad,Багдад,ronaldshay1904,33.34058,44.40088,geonames,Baghdad,4.4
+new:kermanshah,Керманшах,ronaldshay1904,34.31417,47.065,geonames,Kermanshah,0.7
+new:tehran,Тегеран,ronaldshay1904,35.69439,51.42151,geonames,Tehran,0.5
+new:enzeli,Энзели,ronaldshay1904,37.47,49.46,estimate,,
+new:baku,Баку,fuchs1925;ronaldshay1904,40.37767,49.89201,geonames,Baku,4.0
+new:krasnovodsk,Красноводск,ronaldshay1904,40.02,52.97,estimate,,
+new:merv,Мерв,ronaldshay1904,37.6,61.83,estimate,,
+new:bukhara,Бухара,ronaldshay1904,39.77472,64.42861,geonames,Bukhara,0.9
+new:onguday,Онгудай,perryayscough1914;ronaldshay1904,50.75,86.15,geonames,Onguday,0.7
+new:kosh_agach,Кош-Агач,perryayscough1914;radloff1893;ronaldshay1904;swayne1904,49.99273,88.67598,geonames,Kosh-Agach,0.9
+new:mysovaya,Мысовая,legras1899;meakin1901;pistor1905;ronaldshay1904;vaydevaya1906,51.694,106.332,estimate,,
+new:ufa,Уфа,fraser1902;grondijs1922;hansteen1857;marsden1892,54.74306,55.96779,geonames,Ufa,2.0
+new:grodekovo,Гродеково,fraser1902;gerrare1903,44.4,131.68,estimate,,
+new:hailar,Хайлар,fraser1902;scarfoglio1909,49.2,119.7,geonames,Hailar,3.5
+new:manchuria_station,ст. Маньчжурия (граница),bordeaux1904;fraser1902;perryayscough1914,49.6,117.43,estimate,,
+new:aleksandrovsky_central,Александровский централ,fraser1902,,,none,,
+new:kharchino,Харчино,dobell1830,,,none,,
+new:kamenskoe,Каменское (Kammina),dobell1830,62.47,166.21,estimate,,
+new:tauisk,Тауйск,dobell1830;maynard1859,59.73,149.335,estimate,,
+new:udskoy_krest,Удский Крест (Юдомский Крест),dobell1830,,,none,,
+new:aldan_crossing,переправа через Алдан,dobell1830;hill1854,,,none,,
+new:pokrovsk,Покровск (на Лене),dobell1830,61.47768,129.13699,geonames,Pokrovsk,0.7
+new:telma,Тельминская фабрика,dobell1830;hansteen1857;lansdell1883,52.6981,103.7138,geonames,Tel'ma,0.9
+new:kungur,Кунгур,atkinson1858;dobell1830;seebohm1882,57.4368,56.9593,geonames,Kungur,1.1
+new:amil_valley,долина р. Амыл (Саяны),carruthers1914,,,none,,
+new:bei_kem,р. Бий-Хем (Урянхай),carruthers1914,,,none,,
+new:cha_kul,Ча-Куль на Улуг-Хеме,carruthers1914,,,none,,
+new:tannu_ola,хребет Танну-Ола,carruthers1914;ossendowski1922,51.0,93.5,estimate,,
+new:achit_nur,оз. Ачит-Нур,carruthers1914,49.5,90.6,estimate,,
+new:sharasume,"Шара-Сумэ (Алтай, Китай)",carruthers1914;etherton1911,47.84864,88.13361,geonames,Altay,1.0
+new:chuguchak,Чугучак,carruthers1914;etherton1911,46.75,82.98,estimate,,
+new:dzungarian_gate,Джунгарские ворота,carruthers1914,45.3,82.4,estimate,,
+new:urumqi,Урумчи,carruthers1914,43.80096,87.60046,geonames,UEruemqi,3.6
+new:guchen,Гучен,carruthers1914,44.02,89.58,estimate,,
+new:nizhny_tagil,Нижний Тагил,hansteen1857;lansdell1883,57.91944,59.965,geonames,Nizhniy Tagil,1.1
+new:bogotol,Боготол,lansdell1883,56.20778,89.53417,geonames,Bogotol,0.4
+new:kurba,Курба (Koordinska),lansdell1883,,,none,,
+new:kara,Карийские промыслы,lansdell1883,51.8,118.0,estimate,,
+new:mikhailovskoe,Михайловское (Нижний Амур),lansdell1883,,,none,,
+new:markovo_sungacha,Марково (станция на Сунгаче),lansdell1883,,,none,,
+new:khanka,оз. Ханка (Лон-Майо),lansdell1883,45.0,132.4,estimate,,
+new:razdolnoe,Раздольное,cotteau1885;gowing1889;lansdell1883,43.53894,131.89691,geonames,Razdol'noye,2.2
+new:kunming,Юньнань-фу (Куньмин),colquhoun1900,25.04,102.71,estimate,,
+new:tonkin,Тонкин (Красная река),colquhoun1900,,,none,,
+new:balagansk,Балаганск,hansteen1857,54.0057,103.05234,geonames,Balagansk,0.7
+new:bratsk,Братский острог,boulangier1891;hansteen1857,56.1325,101.61417,geonames,Bratsk,2.2
+new:turukhansk,Туруханск,hansteen1857;heller1930;seebohm1882;stadling1901,65.79479,87.95006,geonames,Turukhansk,1.0
+new:bukey_horde,ставка хана Букеевской орды,hansteen1857,,,none,,
+new:cherny_yar,Чёрный Яр,hansteen1857,48.06242,46.10911,geonames,Chyorny Yar,0.3
+new:astrakhan,Астрахань,hansteen1857,46.34968,48.04076,geonames,Astrakhan',0.1
+new:saratov,Саратов,hansteen1857,51.54056,46.00861,geonames,Saratov,1.9
+new:tyukalinsk,Тюкалинск,gowing1889;hill1854;marsden1892;radloff1893;whyte1871,55.87321,72.19673,geonames,Tyukalinsk,0.4
+new:gusinoozersk_datsan,Гусиноозёрский дацан (Souggira),hill1854,51.2,106.3,estimate,,
+new:amginsk,Амгинская станция,gsimpson1847;hill1854,60.9,131.98,estimate,,
+new:paratunka,Паратунка,hill1854,52.96202,158.25723,geonames,Paratunka,1.0
+new:nikolsk_ussuriysky,Никольское-Уссурийское,gerrare1903,43.8,131.95,estimate,,
+new:khingan,хребет Большой Хинган (КВЖД),gerrare1903,,,none,,
+new:ongudai,Онгудай (миссия на Ангодае),radloff1893;swayne1904,50.75,86.15,geonames,Onguday,1.1
+new:suok,китайский пикет Суок,radloff1893,,,none,,
+new:ulala,Улала (миссия),radloff1893,51.96,85.96,estimate,,
+new:kuznetsk,Кузнецк,radloff1893,53.76,87.11,estimate,,
+new:teletskoe,Телецкое озеро,radloff1893,51.6,87.7,estimate,,
+new:urdzhar,Урджар,radloff1893,47.09302,81.62939,geonames,Urzhar,0.3
+new:issyk_kul,р. Каркара у Иссык-Куля,radloff1893,,,none,,
+new:kokpekty,Кокпекты,etherton1911;radloff1893,48.75,82.4,geonames,Kokpekty,1.1
+new:ust_ishim,Усть-Ишим,radloff1893,57.6935,71.1665,geonames,Ust'-Ishim,0.4
+new:yalutorovsk,Ялуторовск,atkinson1858;finsch1879;latkinson1863;radloff1893,56.65358,66.30057,geonames,Yalutorovsk,0.7
+new:tokmak,Токмак,radloff1893,42.84,75.29,estimate,,
+new:aulie_ata,Аулие-Ата,radloff1893,42.9,71.37,estimate,,
+new:chimkent,Чимкент,radloff1893,42.3,69.6,geonames,Shymkent,2.2
+new:kattakurgan,Каттакурган,radloff1893,39.9,66.26,estimate,,
+new:borokhudzir,лагерь Борохудзир,radloff1893,,,none,,
+new:karakol,Ак-Тюбе (Каракол),radloff1893,42.49068,78.39362,geonames,Karakol,0.3
+new:kobdo,Кобдо,perryayscough1914;radloff1893,48.01,91.64,estimate,,
+new:kiev,Киев,felinska1854;fuchs1925;piotrowski1863,50.45466,30.5238,geonames,Kiev,0.6
+new:tula,Тула,felinska1854,54.19609,37.61822,geonames,Tula,0.7
+new:bronnikovo,Бронниково,felinska1854,,,none,,
+new:kondinsk,Кондинское,felinska1854,59.64806,67.41,geonames_ctx,Kondinskoye,492.4
+new:bangkiang,Бангкиянг (телеграфная станция),perryayscough1914,,,none,,
+new:ude,"Удэ (телеграфная станция, Гоби)",perryayscough1914,,,none,,
+new:tuerin,Туэрин (телеграфная станция),perryayscough1914,,,none,,
+new:uliastai,Улясутай,ossendowski1922;perryayscough1914,47.74167,96.84444,geonames,Uliastay,0.7
+new:altaiskoe,Алтайское,perryayscough1914;swayne1904,51.95333,85.3325,geonames,Altayskoye,0.4
+new:kamenets_podolsk,Каменец-Подольский,grondijs1922,48.68,26.58,estimate,,
+new:kupiansk,Купянск,grondijs1922,49.71055,37.61517,geonames,Kupjansk,0.4
+new:sterlitamak,Стерлитамак,grondijs1922,53.62462,55.95015,geonames,Sterlitamak,0.6
+new:iglino,Иглино,grondijs1922,54.83244,56.41264,geonames,Iglino,1.1
+new:chishmy_chakcha,ст. Шакша,grondijs1922,,,none,,
+new:krasnoufimsk,Красноуфимск,grondijs1922,56.60585,57.76686,geonames,Krasnoufimsk,0.5
+new:bisert,Бисерть,grondijs1922,56.86174,59.05231,geonames,Bisert',0.5
+new:kalmanka,Калманка,grondijs1922,52.89917,83.54333,geonames,Kalmanka,0.9
+new:shilka_river,р. Шилка,grondijs1922,,,none,,
+new:zilovo,Зилово,grondijs1922,53.05,117.48,estimate,,
+new:sinuiju,"Синыйджу (New Wiju), Корея",harrison1910,40.10056,124.39806,geonames,Sinuiju,0.2
+new:andong,Аньдун (Antung),harrison1910,40.12917,124.39472,geonames,Dandong,1.6
+new:changchun,Чанчунь,harrison1910,43.88,125.32278,geonames,Changchun,0.2
+new:chasovinskaya,ст. Часовинская (Часовая) на Амуре,harrison1910,,,none,,
+new:bestyakh,Бестях (Bestach),gsimpson1847,,,none,,
+new:verkholensk,Верхоленск,cochrane1829;gsimpson1847,54.1,105.567,geonames,Verholensk,4.4
+new:daugavpils,Динабург (Даугавпилс),cotteau1885,55.88333,26.53333,geonames,Daugavpils,1.5
+new:rybinsk,Рыбинск,cotteau1885;rabot1894,58.0446,38.84259,geonames,Rybinsk,1.0
+new:nizhnytagil,Нижний Тагил,atkinson1858;cotteau1885;rose1837,57.91944,59.965,geonames,Nizhniy Tagil,0.4
+new:yevlevo,Евлево,cotteau1885;dewindt1892,57.6,67.1,estimate,,
+new:gorbitsa,Горбица,cotteau1885,53.1,119.2,estimate,,
+new:ekaterinonikolskaya,ст. Екатерино-Никольская,cotteau1885,47.73,130.97,estimate,,
+new:kazakevichevo,Казакевичево,cotteau1885;gowing1889,48.27,134.895,estimate,,
+new:busse,пост Буссе,cotteau1885;joest1883,,,none,,
+new:kamenrybolov,Камень-Рыболов,cotteau1885;gowing1889;joest1883,44.7452,132.0465,geonames,Kamen'-Rybolov,1.8
+new:nikolsk,Никольское (Уссурийск),cotteau1885;joest1883,43.80291,131.94578,geonames,Ussuriysk,0.5
+new:nagasaki,Нагасаки,cotteau1885;gowing1889;joest1883;tronson1859,32.744,129.87,estimate,,
+new:alakul,оз. Сасык-Алаколь,finsch1879,46.2,80.9,estimate,,
+new:lepsinsk,Лепсинск (Лепса),finsch1879,45.53,80.62,estimate,,
+new:bakty,Бахты,finsch1879,46.68,82.73,estimate,,
+new:zaysan,Зайсан (Зайсанский пост),finsch1879,47.46657,84.87144,geonames,Zaysan,0.4
+new:altaiskaya,Алтайская станица (Катон-Карагай),finsch1879,49.17,85.6,estimate,,
+new:ustbukhtarminsk,Усть-Бухтарминск,finsch1879,49.6,83.5,estimate,,
+new:ustkamenogorsk,Усть-Каменогорск,atkinson1858;atkinson1860;cochrane1829;etherton1911;finsch1879;rose1837,49.97143,82.60586,geonames,Ust-Kamenogorsk,2.4
+new:salair,Салаир,finsch1879,54.2312,85.7972,geonames,Salair,0.2
+new:shchuchya,р. Щучья (тундра Ямала),finsch1879,67.5,68.5,estimate,,
+new:kondinsky,Кондинский монастырь,finsch1879,62.15,65.6,estimate,,
+new:chebaki,Чебаки (Ачинско-Минусинский горный округ),bordeaux1904,54.6,89.4,estimate,,
+new:karymskaya,ст. Карымская,bordeaux1904;nansen1914_no,51.62,114.35,estimate,,
+new:dilmachik,прииск Дильмачик,bordeaux1904,,,none,,
+new:kerbinsky,"Керби (Керби́нский склад), Амгунь",bordeaux1904,52.2,137.0,estimate,,
+new:pogranichnaya,ст. Пограничная,bordeaux1904,44.4097,131.3778,geonames,Pogranichnyy,1.2
+new:olga,зал. Св. Ольги,bordeaux1904,43.74735,135.2909,geonames,Ol'ga,1.9
+new:tetyukhe,Тетюхе (Дальнегорск),bordeaux1904,44.56039,135.57009,geonames,Dal'negorsk,1.2
+new:chorny_anuy,Чёрный Ануй,turner1905,51.38,84.65,estimate,,
+new:ust_kan,Усть-Кан (Ouskam),turner1905,50.9276,84.761,geonames,Ust'-Kan,0.3
+new:koksa,Усть-Кокса (Koksa),turner1905,50.2696,85.6108,geonames,Ust'-Koksa,0.1
+new:uymon,Уймон,atkinson1858;turner1905,50.24,85.91,estimate,,
+new:katanda,Катанда (Katunda),turner1905,50.17,86.17,estimate,,
+new:belukha,"г. Белуха (ледник, долина Аккема)",turner1905,49.81,86.59,estimate,,
+new:shadrinsk,Шадринск,joest1883,56.0852,63.6335,geonames,Shadrinsk,0.6
+new:miass,Миасс,atkinson1858,55.045,60.10833,geonames,Miass,0.8
+new:kamensk,Каменский завод,atkinson1858,56.42,61.92,estimate,,
+new:kolyvan_lake,Колыванское озеро,atkinson1858;latkinson1863,51.36,82.195,estimate,,
+new:bolshenarymskoe,Большенарымское (Great Narym),atkinson1858,49.2,84.5,estimate,,
+new:tomsky_zavod,Томский завод (Салаир),atkinson1858,54.2312,85.7972,geonames,Salair,26.6
+new:petropavlovsk_mine,Петропавловский прииск (тайга),atkinson1858,,,none,,
+new:altyn_kol,Телецкое озеро (Altin-Kool),atkinson1858,51.6,87.7,estimate,,
+new:ubsa_nur,оз. Убсу-Нур (Монголия),atkinson1858,50.3,92.7,estimate,,
+new:aul_ishonac,аул султана Ишонак-хана (Киргизская степь),atkinson1858,,,none,,
+new:oka_sayan,долина Оки (Восточный Саян),atkinson1858,52.5,99.5,estimate,,
+new:khovsgol,оз. Косогол (Хубсугул),atkinson1858,51.0,100.5,estimate,,
+new:ayaguz,Аягуз (Сергиополь),atkinson1860;latkinson1863,47.97,80.435,estimate,,
+new:kora,долина р. Коры (Джунгарский Алатау),atkinson1860,45.0,79.6,estimate,,
+new:bascan,р. Баскан (Алатау),atkinson1860,45.4,80.6,estimate,,
+new:goloustnoe,Голоустное,atkinson1860,52.03,105.4,estimate,,
+new:posolsk,Посольск,atkinson1860,52.03,106.21,estimate,,
+new:ilinskoe,Ильинское (на Селенге),atkinson1860,52.05,107.13,estimate,,
+new:petrovsky_zavod,Петровский завод,atkinson1860,51.27,108.84,estimate,,
+new:turinskaya,Туринская (на пути в Нерчинск),atkinson1860,,,none,,
+new:alexandrovsk,Александровский централ,meakin1901,52.6,104.0,estimate,,
+new:otaru,Отару (Япония),meakin1901,43.18944,141.00222,geonames,Otaru,0.2
+new:yokohama,Иокогама,lasies1920;meakin1901;niedieck1909;scarfoglio1909,35.44778,139.6425,geonames,Yokohama,0.9
+new:stockholm,Стокгольм,stadling1901,59.33,18.07,estimate,,
+new:tulun,Тулун,boulangier1891;gowing1889;stadling1901,54.56358,100.58143,geonames,Tulun,0.4
+new:ustkut,Усть-Кут,stadling1901,56.7938,105.7672,geonames,Ust'-Kut,5.9
+new:zhigansk,Жиганск,stadling1901,66.76601,123.37418,geonames,Zhigansk,0.5
+new:bulun,Булун,stadling1901,70.75,127.4,estimate,,
+new:monument_cape,мыс Монумент (дельта Лены),stadling1901,72.4,126.5,estimate,,
+new:krestovsky,Крестовский мыс,stadling1901,,,none,,
+new:olenek,р. Оленёк,stadling1901,72.0,121.0,estimate,,
+new:anabar,р. Анабар,stadling1901,71.5,113.0,estimate,,
+new:khatanga,Хатангское (Katangskoie),stadling1901,71.98002,102.47111,geonames,Khatanga,0.0
+new:dudinka,Дудинка,heller1930;nansen1914_no;seebohm1882;stadling1901,69.40583,86.17778,geonames,Dudinka,0.7
+new:yasnaya,Ясная Поляна,stadling1901,54.07,37.52,estimate,,
+new:stariy_ostrog,Старый Острог,guillemard1889,53.15,158.4,estimate,,
+new:ustkamchatsk,Усть-Камчатск,guillemard1889,56.22,162.48,estimate,,
+new:bering_island,о. Беринга (Командорские о-ва),guillemard1889,55.2,166.0,estimate,,
+new:yedo,Токийский залив,guillemard1889,35.4,139.8,estimate,,
+new:magerøya,о. Магерёйа / Нордкап (Норвегия),heller1930,71.0,25.8,estimate,,
+new:vaygach,о. Вайгач (бухта Варнека),heller1930,70.0,59.5,estimate,,
+new:igarka,Игарка,heller1930,67.4655,86.6027,geonames,Igarka,1.1
+new:podkamennaya,устье Подкаменной Тунгуски,heller1930,61.6,90.1,estimate,,
+new:bechevinskaya,бухта Бечевинская,niedieck1909,53.4,159.0,estimate,,
+new:morzhovaya,бухта Моржовая (Marsovya),niedieck1909,54.0,159.7,estimate,,
+new:karaga,Карага (Карагинский залив),niedieck1909,59.12,163.0,estimate,,
+new:holycross,зал. Креста (Чукотка),niedieck1909,65.8,-178.5,estimate,,
+new:nome,Ном (Аляска),niedieck1909,64.5,-165.4,estimate,,
+new:tsuruga,Цуруга,scarfoglio1909,35.64547,136.0558,geonames,Tsuruga,0.6
+new:qiqihar,Цицикар,scarfoglio1909,47.34088,123.96045,geonames,Qiqihar,3.2
+new:okhansk,Оханск,scarfoglio1909,57.7203,55.3882,geonames,Okhansk,0.5
+new:taiga,ст. Тайга,jefferson1897;legras1899;pistor1905,56.06402,85.62238,geonames,Tayga,0.5
+new:karatuz,Каратуз,jefferson1897,53.6,92.87,estimate,,
+new:armeul,"р. Амыл/Армеул, прииски в Саянах",jefferson1897,,,none,,
+new:uryankhai,Урянхайский край за Саянами,jefferson1897,,,none,,
+new:tatar_strait,Татарский пролив,maynard1859,50.0,141.0,estimate,,
+new:sea_okhotsk,Охотское море,maynard1859,55.0,145.0,estimate,,
+new:sifkova,Сифкова (тайга на Енисее),ossendowski1922,,,none,,
+new:minusinsk_steppe,Минусинские степи,ossendowski1922,53.7,91.7,estimate,,
+new:tuba,устье р. Тубы,ossendowski1922,53.75,91.9,estimate,,
+new:sayan_algiak,"перевал через Саян, р. Алгияк",ossendowski1922,,,none,,
+new:seybi,р. Сейба (Урянхай),ossendowski1922,,,none,,
+new:soyot_prince,ставка сойотского князя,ossendowski1922,,,none,,
+new:teri_nor,оз. Тери-Нур,ossendowski1922,,,none,,
+new:khatgal,Хатгал (у Косогола),ossendowski1922,50.44,100.16,estimate,,
+new:muren,Мурэн,ossendowski1922,49.63,100.16,estimate,,
+new:narabanchi,монастырь Нарабанчи,ossendowski1922,,,none,,
+new:zain_shabi,Заин-Шаби,ossendowski1922,,,none,,
+new:vereshchagino,Верещагино (штаб Пепеляева),lasies1920,58.07894,54.6557,geonames,Vereshchagino,0.3
+new:shebalino,Шебалино,swayne1904,51.29167,85.67722,geonames,Shebalino,0.3
+new:chibit,Чибит,swayne1904,50.32,87.5,estimate,,
+new:chagan_burgaza,перевал Чаган-Бургазы / Монгольский Алтай,swayne1904,49.75,89.1,estimate,,
+new:kurai,Курай (обратный путь),swayne1904,50.23,87.93,estimate,,
+new:valdai,Валдай,fuchs1925,57.97472,33.2525,geonames,Valday,0.9
+new:rostov,Ростов-на-Дону,fuchs1925,47.23135,39.72328,geonames,Rostov-na-Donu,0.3
+new:tiflis,Тифлис,fuchs1925,41.72,44.79,estimate,,
+new:julfa,Джульфа,fuchs1925,38.95,45.63,estimate,,
+new:tabriz,Тебриз,fuchs1925,38.08,46.2919,geonames,Tabriz,0.2
+new:rewandus,Ревандуз,fuchs1925,36.61,44.52,estimate,,
+new:istanbul,Константинополь,fuchs1925,41.01384,28.94966,geonames,Istanbul,2.6
+new:dresden,Дрезден,fuchs1925,51.05,13.74,estimate,,
+new:fusan,Пусан,gowing1889,35.1,129.04,estimate,,
+new:gensan,Вонсан (Гензан),gowing1889,39.15278,127.44361,geonames,Wonsan,0.4
+new:chemulpo,Чемульпо (Инчхон),gowing1889,37.45646,126.70515,geonames,Incheon,7.7
+new:seoul,Сеул,gowing1889;vaydevaya1906,37.566,126.9784,geonames,Seoul,0.5
+new:vasilsursk,Васильсурск,gowing1889,56.13,46.01,estimate,,
+new:tver,Тверь,cochrane1829;rose1837,56.85836,35.90057,geonames,Tver,0.2
+new:ubinsk,Убинская крепость,cochrane1829,50.37,82.3,estimate,,
+new:bukhtarma,Бухтарминская крепость,cochrane1829;rose1837,49.63,83.52,estimate,,
+new:narym_border,р. Нарым (граница с Китаем),cochrane1829,49.2,84.2,estimate,,
+new:zashiversk,Зашиверск,cochrane1829,67.43,142.6,estimate,,
+new:verkhnekolymsk,Верхнеколымск,cochrane1829,65.87,150.9,estimate,,
+new:oymyakon,Оймякон,cochrane1829,63.46,142.79,estimate,,
+new:nerchinskzavod,Нерчинский Завод,cochrane1829,51.30829,119.61597,geonames,Nerchinskiy Zavod,0.5
+new:cheboksary,Чебоксары,cochrane1829,56.13222,47.25194,geonames,Cheboksary,0.3
+new:vladimir,Владимир,cochrane1829,56.13655,40.39658,geonames,Vladimir,0.8
+new:alexandrovsky_central,Александровский централ,boulangier1891;legras1899;pistor1905;simpson1898,52.8,104.1,estimate,,
+new:selenga_valley,долина Селенги,simpson1898,51.8,107.1,estimate,,
+new:gornyzerentui,Горный Зерентуй,simpson1898,51.17,117.33,estimate,,
+new:algachi,Алгачи,simpson1898,51.08,118.03,estimate,,
+new:akatui,Акатуй,simpson1898,51.08,117.38,estimate,,
+new:alexandrovskyzavod,Александровский Завод,simpson1898,50.92525,117.93773,geonames,Aleksandrovskiy Zavod,0.8
+new:koenigsberg,Кёнигсберг,rose1837,54.71,20.51,estimate,,
+new:novgorod,Новгород,kotzebue1802;rose1837,58.52,31.27,estimate,,
+new:kushva,Кушва,rose1837,58.29056,59.75917,geonames,Kushva,0.1
+new:bogoslovsk,Богословск (Карпинск),rose1837,59.7703,59.9964,geonames,Karpinsk,0.2
+new:ridder,Риддерск,rose1837,50.34413,83.51287,geonames,Ridder,0.7
+new:syryanovsk,Зыряновск,rose1837,49.72654,84.27318,geonames,Zyryanovsk,0.4
+new:baty,Баты (китайский пограничный пост),rose1837,48.7,85.3,estimate,,
+new:pianybor,Пьяный Бор,dewindt1892,55.95,53.3,estimate,,
+new:kolpashevo,Колпашево,dewindt1892;legras1899,58.31306,82.90889,geonames,Kolpashevo,0.6
+new:penza,Пенза,vaydevaya1906,53.20066,45.00464,geonames,Penza,0.3
+new:manchuria_st,станция Маньчжурия,vaydevaya1906,49.6,117.43,estimate,,
+new:niuchwang,Инкоу (Ньючжуан),vaydevaya1906,40.67,122.23,estimate,,
+new:tokyo,Токио,vaydevaya1906,35.6895,139.69171,geonames,Tokyo,1.1
+new:kristiania,Кристиания (Осло),nansen1914_no,59.91,10.75,estimate,,
+new:tromso,Тромсё,nansen1914_no;peel1894,69.65,18.96,estimate,,
+new:honningsvag,Хоннингсвог,nansen1914_no,70.98209,25.97037,geonames,Honningsvag,0.2
+new:karagates,пролив Карские Ворота,nansen1914_no,70.4,58.1,estimate,,
+new:dikson,о. Диксон,nansen1914_no,73.50819,80.52918,geonames,Dikson,0.7
+new:yenisei_estuary,устье Енисея (стоянка у острова),nansen1914_no;peel1894,72.655,81.775,estimate,,
+new:karaulnoe,Караульное,nansen1914_no,70.08,83.18,estimate,,
+new:kureika,Курейка,nansen1914_no;seebohm1882,66.5,87.2,estimate,,
+new:monastyrskoe,"Туруханск (Троицкий монастырь, Монастырское)",nansen1914_no,65.79479,87.95006,geonames,Turukhansk,0.6
+new:pogranichny,Пограничная,nansen1914_no,44.4097,131.3778,geonames,Pogranichnyy,1.1
+new:bureya,р. Бурея (строительство Амурской дороги),nansen1914_no,49.81212,129.81278,geonames,Bureya,1.6
+new:zeya_bridge,мост через Зею (у Благовещенска),nansen1914_no,50.27961,127.5405,geonames,Blagoveshchensk,14.0
+new:taldan,ст. Талдан,nansen1914_no,53.68981,124.8149,geonames,Taldan,1.5
+new:oldoy,ст. Ольдой,nansen1914_no,53.6,122.8,estimate,,
+new:ksenyevskaya,ст. Ксеньевская,nansen1914_no,53.55,118.7,estimate,,
+new:warsaw,Варшава,pistor1905,52.23,21.01,estimate,,
+new:niigata,Ниигата,pistor1905,37.92,139.04,estimate,,
+new:padun,Падун (порог на Ангаре),boulangier1891,56.3,101.7,estimate,,
+new:dolonovo,Долоново (пристань на Оке),boulangier1891,56.0,101.2,estimate,,
+new:zima,Зима,boulangier1891,53.9202,102.0442,geonames,Zima,0.4
+new:usolye,Усолье,boulangier1891,52.75,103.65,estimate,,
+new:sudzhenka,Судженка (копи),legras1899,56.33,85.33,estimate,,
+new:obyenisei_canal,Обь-Енисейский канал,legras1899,58.7,88.3,estimate,,
+new:klyuchi_rail,ст. Ключи (временный конец линии),legras1899,55.8,97.5,estimate,,
+new:ustkiran,Усть-Киран,legras1899,50.43,106.95,estimate,,
+new:tsekir,"Цакир (Джида, золотой прииск)",legras1899,50.54,103.25,estimate,,
+new:gusinoe,Гусиное озеро,legras1899,51.11444,106.26139,geonames,Gusinoye Ozero,9.9
+new:ingoda,р. Ингода (сплав от Читы),legras1899,51.8,114.0,estimate,,
+new:tataurovo,Татаурово,digby1928,52.14182,107.44054,geonames,Tataurovo,30.1
+new:mukhino,Мухино,digby1928,51.8,107.4,estimate,,
+new:klyuchevskaya,Ключевская,digby1928,51.6,107.3,estimate,,
+new:ubukanskaya,Убукун (Убуканская),digby1928,51.4,106.9,estimate,,
+new:povorotnaya,Поворотная,digby1928,50.9,106.7,estimate,,
+new:weimar,Веймар,kotzebue1802,50.98,11.33,estimate,,
+new:memel,Мемель (Клайпеда),kotzebue1802,55.71,21.13,estimate,,
+new:polangen,"Поланген (Паланга), граница",kotzebue1802,55.92,21.07,estimate,,
+new:mitau,Митава (Елгава),kotzebue1802,56.65,23.72,estimate,,
+new:riga,Рига,kotzebue1802;piotrowski1863,56.95,24.11,estimate,,
+new:stockmannshof,Стокмансгоф (Плявиняс),kotzebue1802,56.6178,25.72552,geonames,Plavinas,0.4
+new:polotsk,Полоцк,kotzebue1802,55.4879,28.7856,geonames,Polatsk,0.4
+new:wolmarshof,Вольмарсгоф,kotzebue1802,57.54,25.43,estimate,,
+new:kamensky_zavod,Каменский завод,latkinson1863,56.42,61.92,estimate,,
+new:altynkul,Телецкое озеро (Алтын-Куль),latkinson1863,51.5,87.7,estimate,,
+new:lepsy,р. Лепсы,latkinson1863,45.8,80.6,estimate,,
+new:kultuk,Култук,latkinson1863,51.72083,103.69556,geonames,Kultuk,0.3
+new:yaroslavl,Ярославль,rabot1894,57.62987,39.87368,geonames,Yaroslavl,0.2
+new:pechora_upper,Якшинская пристань (верхняя Печора),rabot1894,61.8,56.8,estimate,,
+new:ustilych,Усть-Илыч,rabot1894,62.53,56.7,estimate,,
+new:ustshchugor,Усть-Щугор,rabot1894,64.25,57.6,estimate,,
+new:lyapin,Ляпин (Саранпауль),rabot1894,64.26102,60.90233,geonames,Saranpaul',0.2
+new:sartynya,Сартынья,rabot1894,63.4,62.1,estimate,,
+new:kondinskoe,Кондинское (Октябрьское),rabot1894,62.65,66.05,estimate,,
+new:woosung,Усун (Шанхай),tronson1859,31.22222,121.45806,geonames,Shanghai,18.0
+new:hongkong,Гонконг,tronson1859,22.28,114.16,estimate,,
+new:suffren_bay,бухта Суффрен (побережье Татарского пролива),tronson1859,,,none,,
+new:barracouta_bay,бухта Барракута (Императорская Гавань),tronson1859,49.0,140.3,estimate,,
+new:decastries,залив Де-Кастри,tronson1859,51.47,140.78,estimate,,
+new:bullock_bay,"бухта Буллок (45° с.ш., Приморье)",tronson1859,,,none,,
+new:sybille_bay,бухта Сибилл (Приморье),tronson1859,,,none,,
+new:korea_chousan,Чосан (Корея),tronson1859,,,none,,
+new:vilyuisk,Вилюйск,marsden1892,63.74683,121.63339,geonames,Vilyuysk,0.4
+new:mastakh,Мастах (колония прокажённых),marsden1892,64.0,122.8,estimate,,
+new:srednevilyuisk,Средневилюйск,marsden1892,63.62,123.1,estimate,,
+new:brekhov,Бреховские острова,seebohm1882,70.5,82.8,estimate,,
+new:golchikha,Гольчиха,peel1894;seebohm1882,71.73,83.55,estimate,,
+new:silovanovo,Сиданово/Силованово,seebohm1882,,,none,,
+new:pest,Пешт,piotrowski1863,47.5,19.05,estimate,,
+new:kamieniec,Каменец-Подольский,piotrowski1863,48.68,26.58,estimate,,
+new:ekaterinsky_zavod,Екатерининский винокуренный завод (под Тарой),piotrowski1863,56.85,74.55,estimate,,
+new:pavda,Павда,piotrowski1863,59.27,59.5,estimate,,
+new:velikyustyug,Великий Устюг,piotrowski1863,60.76186,46.31352,geonames,Velikiy Ustyug,0.8
+new:kargopol,Каргополь,piotrowski1863,61.50359,38.9486,geonames,Kargopol',0.4
+new:vytegra,Вытегра,piotrowski1863,61.00636,36.44811,geonames,Vytegra,0.4
+new:instow,Инстоу/Эпплдор (Девон),peel1894,51.06,-4.18,estimate,,
+new:hammerfest,Хаммерфест,peel1894,70.66,23.68,estimate,,
+new:vardo,Вардё,peel1894,70.37,31.11,estimate,,
+new:yugorstrait,Югорский Шар (у о. Вайгач),peel1894,69.75,60.5,estimate,,
+new:khabarova,Хабарово (Югорский Шар),peel1894,69.65,60.42,estimate,,
+new:solombala,Соломбала (Архангельск),peel1894,64.5401,40.5433,geonames,Arkhangel'sk,4.7
+new:dundee,Данди,peel1894,56.46,-2.97,estimate,,
+new:srinagar,Сринагар,etherton1911,34.08842,74.80298,geonames,Srinagar,1.0
+new:gilgit,Гилгит,etherton1911,35.91869,74.31245,geonames,Gilgit,0.3
+new:hunza,Хунза,etherton1911,36.32,74.65,estimate,,
+new:misgar,Мисгар,etherton1911,36.79,74.76,estimate,,
+new:yarkand,Яркенд,etherton1911,38.42,77.24,estimate,,
+new:kashgar,Кашгар,etherton1911,39.47,75.99,estimate,,
+new:aksu,Аксу,etherton1911,41.17,80.26,estimate,,
+new:kuchar,Куча,etherton1911,41.72,82.96,estimate,,
+new:zaisan,Зайсан,etherton1911,47.46657,84.87144,geonames,Zaysan,0.4
+new:peschanka,лагерь военнопленных Песчанка (под Читой),wlad1918,52.0,113.35,estimate,,
+new:falumon,Фалумынь (Маньчжурия),wlad1918,,,none,,
+new:honolulu,Гонолулу,hooper1853,21.31,-157.86,estimate,,
+new:emma_harbour,"бухта Эммы (бухта Провидения), зимовка «Plover»",hooper1853,64.43,-173.25,estimate,,
+new:kaygwan,Кайгван (чукотское селение),hooper1853,,,none,,
+new:noowook,Нувук (чукотское селение),hooper1853,,,none,,
+new:oongwysac,Унгвисак (чукотское селение),hooper1853,,,none,,
+new:pointbarrow,мыс Барроу (район),hooper1853,71.3,-156.7,estimate,,
+new:fortgoodhope,Форт-Гуд-Хоуп,hooper1853,66.26,-128.63,estimate,,
+new:fortfranklin,Форт-Франклин,hooper1853,65.2,-123.43,estimate,,
+new:fortsimpson,Форт-Симпсон,hooper1853,61.86,-121.35,estimate,,
+new:fortchipewyan,Форт-Чипевайан,hooper1853,58.71,-111.15,estimate,,
+new:methyportage,волок Мети,hooper1853,56.4,-109.4,estimate,,
+new:Korelskaya,Корельская (переправа через Чулым),mpprice1912,,,none,,
+new:Borodino_Minusinsk,Бородино (село в степи),mpprice1912,55.9061,94.9079,geonames_ctx,Borodino,319.6
+new:Kemchik,"Кемчик (степь, торговая фактория, Урянхай)",mpprice1912,51.7,90.5,estimate,,
+new:Orenburg,Оренбург,cottrell1842;sommier1885,51.7727,55.0988,geonames,Orenburg,0.3
+new:Troitsk,Троицк,cottrell1842,54.0979,61.5773,geonames,Troitsk,2.3
+new:UstKamenogorsk,Усть-Каменогорск,cottrell1842,49.97143,82.60586,geonames,Ust-Kamenogorsk,2.4
+new:Zmeinogorsk,Змеиногорск,cottrell1842,51.15776,82.19534,geonames,Zmeinogorsk,0.4
+new:Kuznetsk,Кузнецк,cottrell1842,53.76,87.12,estimate,,
+new:Sokur,Сокур (станция Транссиба),leroybeaulieu1900,55.2093,83.319,geonames,Sokur,0.1
+new:KhamarDaban,Хамар-Дабан (перевал),leroybeaulieu1900,51.5,104.5,estimate,,
+new:Batraki,Батраки (мост через Волгу),norman1902,53.16,48.47,estimate,,
+new:Baranchiki,"Баранчики (Порт Байкал), исток Ангары",norman1902,51.88,104.82,estimate,,
+new:Bikin,Бикин (станция Уссурийской ж. д.),hawes1903,46.81293,134.25012,geonames,Bikin,0.8
+new:Sofiysk,Софийск (Амур),dewindt1896;hawes1903,51.53,139.0,estimate,,
+new:Mariinskoe_Amur,Мариинское (Амур),dewindt1896;hawes1903,51.71,140.32,estimate,,
+new:Aleksandrovsk_Sakh,Александровский пост (Сахалин),dewindt1896;hawes1903,50.9,142.16,estimate,,
+new:Derbinskoe,Дербинское (Сахалин),dewindt1896;hawes1903,50.85,142.66,estimate,,
+new:Slavo,Славо (Сахалин),hawes1903,,,none,,
+new:AdoTymovo,Адо-Тымово (Сахалин),hawes1903,,,none,,
+new:Kamavo_Nyisky,"Камово, Ныйский залив (Сахалин)",hawes1903,51.6,143.1,estimate,,
+new:Rykovskoe,Рыковское (Сахалин),dewindt1896;hawes1903,,,none,,
+new:Due,Дуэ (Сахалин),hawes1903,50.84,142.09,estimate,,
+new:Grodekovo,Гродеково,hawes1903,44.4,131.38,estimate,,
+new:Tsitsikar,Цицикар,hawes1903,47.35,123.92,estimate,,
+new:Manchuria_station,станция Маньчжурия,cipolla1919;hawes1903,49.6,117.43,estimate,,
+new:Karymskaya,Карымская,cipolla1919;hawes1903;nansen1914,51.62,114.35,estimate,,
+new:Syzran,Сызрань,hawes1903,53.1585,48.4681,geonames,Syzran',0.2
+new:Riga,Рига,cipolla1919;erman1833;jefferson1896,56.95,24.11,estimate,,
+new:Dorpat,Дерпт (Тарту),erman1833,58.38062,26.72509,geonames,Tartu,0.3
+new:Novgorod,Новгород,erman1833;holman1825,58.52,31.27,estimate,,
+new:Tver,Тверь,erman1833;holman1825,56.85836,35.90057,geonames,Tver,0.2
+new:Kushva,Кушва,erman1833,58.29056,59.75917,geonames,Kushva,0.5
+new:Verkhoturye,Верхотурье,erman1833,58.86271,60.80536,geonames,Verkhotur'ye,0.4
+new:Samarovo,Самарово (Ханты-Мансийск),erman1833;patursson1901;rosenberg1904;sommier1885,61.00417,69.00194,geonames,Khanty-Mansiysk,0.5
+new:Posolskoe,Посольское (Байкал),erman1833,52.02,106.21,estimate,,
+new:Aldan_crossing,переправа через Алдан,erman1833,,,none,,
+new:Toropkowa,Тропкова (Иртыш/Обь),castren1856,,,none,,
+new:Makovskoe,Маковское,castren1856,58.33,90.7,estimate,,
+new:Turukhansk,Туруханск (старый),castren1856,65.79479,87.95006,geonames,Turukhansk,0.7
+new:Dudinka,Дудинка,castren1856;haviland1915;nansen1914,69.40583,86.17778,geonames,Dudinka,0.7
+new:Shusha,Шуша (Шушенское),castren1856,53.325,91.93556,geonames,Shushenskoye,0.6
+new:Shadatsk,форпост Шадатский (Саяны),castren1856,,,none,,
+new:Tes_Tuba,Тесь на Тубе,castren1856,,,none,,
+new:Andaha,Андаха,castren1856,,,none,,
+new:NerchinskyZavod,Нерчинский завод,castren1856,51.30829,119.61597,geonames,Nerchinskiy Zavod,0.5
+new:Ufa,Уфа,castren1856,54.74306,55.96779,geonames,Ufa,0.4
+new:Tromso,Тромсё,haviland1915;nansen1914,69.65,18.96,estimate,,
+new:Dikson,о. Диксон (гавань),haviland1915;nansen1914,73.50819,80.52918,geonames,Dikson,0.7
+new:Yenisei_anchorage,якорная стоянка «Correct» у о. Насоновского (устье Енисея),nansen1914,,,none,,
+new:Karaulnoe,Караульное,nansen1914,70.1,83.2,estimate,,
+new:Kureika,устье Курейки,haviland1915;nansen1914,66.48,87.23,estimate,,
+new:Monastyrskoe,Свято-Троицкий монастырь (Монастырское/Туруханск),haviland1915;nansen1914,65.79479,87.95006,geonames,Turukhansk,0.7
+new:Sumarokovo,Сумароково,nansen1914,61.66,89.62,estimate,,
+new:Vorogovo,Ворогово,haviland1915;nansen1914,61.03,89.62,estimate,,
+new:Nazimovo,Назимово,haviland1915;nansen1914,59.53,90.88,estimate,,
+new:Pogranichnaya,Пограничная (станция),nansen1914,44.4097,131.3778,geonames,Pogranichnyy,1.1
+new:Bureya,переправа через Бурею,nansen1914,49.81212,129.81278,geonames,Bureya,21.8
+new:Vyatka,Вятка,cipolla1919;nansen1914,58.6,49.66,estimate,,
+new:Vladimir,Владимир,holman1825,56.13655,40.39658,geonames,Vladimir,0.8
+new:Murom,Муром,holman1825,55.575,42.0426,geonames,Murom,0.7
+new:Kamyshlov,Камышлов,giller1866;holman1825,56.84278,62.71111,geonames,Kamyshlov,0.8
+new:Brest,Брест-Литовск,giller1866;holman1825,52.1,23.69,estimate,,
+new:NizhnyTagil,Нижний Тагил,sommier1885,57.91944,59.965,geonames,Nizhniy Tagil,1.1
+new:Kondinsk,Кондинский монастырь,sommier1885,62.1,65.6,estimate,,
+new:Muzhi,Мужи,sommier1885,65.4003,64.70278,geonames,Muzhi,2.3
+new:Labytnangi,Лабытнанги,sommier1885,66.65722,66.41833,geonames,Labytnangi,1.3
+new:Nipte,Нипте (Обская губа),sommier1885,,,none,,
+new:YarSale,Яр-Сале,sommier1885,66.8654,70.83784,geonames,Yar-Sale,0.7
+new:Ozernaya,Озёрная (Оренбургская линия),sommier1885,,,none,,
+new:Verkhneuralsk,Верхнеуральск,sommier1885,53.87694,59.21056,geonames,Verkhneural'sk,0.7
+new:Banshchikova,Банщикова (Лена),muller1882,,,none,,
+new:Preobrazhenka,Преображенское (Нижняя Тунгуска),muller1882,60.05,108.0,estimate,,
+new:Erbogachen,Ербогачён,muller1882,61.28016,108.01535,geonames,Yerbogachen,1.2
+new:Olenek_upper,верховья Оленька (выход к реке),muller1882,,,none,,
+new:UstOlenek,Болькалах (Усть-Оленское),muller1882,72.9,119.8,estimate,,
+new:Siktyakh,Сиктях (Лена),muller1882,69.9,125.2,estimate,,
+new:Bulun,Булун,muller1882,70.75,127.33,estimate,,
+new:Chuya_valley,долина Чуи (Алтай),rosenberg1904,50.4,87.6,estimate,,
+new:Baikal_station,станция Байкал,rosenberg1904,51.87,104.82,estimate,,
+new:Nikolsk_Ussuriysky,Никольск-Уссурийский,rosenberg1904,43.8,131.95,estimate,,
+new:Dalny,Дальний (Далянь),rosenberg1904,38.91222,121.60222,geonames,Dalian,0.3
+new:Yingkou,Инкоу,rosenberg1904,40.66482,122.22833,geonames,Yingkou,0.6
+new:Yalutorovsk,Ялуторовск,patursson1901,56.65358,66.30057,geonames,Yalutorovsk,0.7
+new:Tas_mouth,устье Таза (Тазовская губа),patursson1901,67.4,79.0,estimate,,
+new:Neyvesoley,Нейвесолей (станция у устья Пура),patursson1901,,,none,,
+new:Khantayskoe,Хантайское (Енисей),patursson1901,,,none,,
+new:Avamskoe,Авамское (Таймыр),patursson1901,,,none,,
+new:Tundrino,Тундрино,patursson1901,61.2,74.2,estimate,,
+new:Irbit,Ирбит,patursson1901,57.67052,63.071,geonames,Irbit,1.2
+new:Strelka,Стрелка (устье Ангары),patursson1901,58.07278,93.03444,geonames,Strelka,0.4
+new:Lukovaya,Луковая протока (низовья Енисея),patursson1901,,,none,,
+new:Karaul,Караул,patursson1901,70.1,83.2,estimate,,
+new:Pustoe,Пустое (станция),patursson1901,,,none,,
+new:Golchikha,Гольчиха,haviland1915;patursson1901,71.73,83.53,estimate,,
+new:Newcastle,Ньюкасл,patursson1901,54.97,-1.61,estimate,,
+new:Warsaw,Варшава,giller1866;haviland1915,52.23,21.01,estimate,,
+new:Verkhneimbatsk,Верхнеимбатск,haviland1915,63.15,87.95,estimate,,
+new:Staroturukhansk,Старый Туруханск,haviland1915,65.9,87.6,estimate,,
+new:Igarka,Игарка,haviland1915,67.4655,86.6027,geonames,Igarka,1.1
+new:Nosonovsky,о. Насоновский (низовья Енисея),haviland1915,,,none,,
+new:Korsakovsk,Корсаковский пост (Сахалин),dewindt1896,46.6342,142.77722,geonames,Korsakov,0.7
+new:Spassk,Спасское,dewindt1896,44.61215,132.80007,geonames,Spasskoye,2.1
+new:Shmakovka,Шмаковка,dewindt1896,45.25,133.45,estimate,,
+new:Busse,Буссе (Уссури),dewindt1896,,,none,,
+new:Albazin,Албазин,dewindt1896,53.39,124.1,estimate,,
+new:GornyZerentui,Горный Зерентуй,dewindt1896,51.14,118.0,estimate,,
+new:Akatui,Акатуй,dewindt1896,51.08,117.4,estimate,,
+new:NizhneTambovsk,Нижнетамбовское,dewindt1896,50.95,138.15,estimate,,
+new:Taiga,Тайга (станция),cipolla1919;debaye1898,56.06402,85.62238,geonames,Tayga,0.5
+new:Changchun,Чанчунь,cipolla1919,43.88,125.32278,geonames,Changchun,0.2
+new:Balakhta,Балахта,niemojowski1883,55.38425,91.61872,geonames,Balakhta,0.5
+new:Karki_ulus,улус богача Кар-ки (близ Минусинска),niemojowski1883,,,none,,
+new:last_steppe_settlement,последнее татарское селение у подножия Саян,niemojowski1883,,,none,,
+new:Chinese_frontier_Sayan,китайская (монгольская) граница за Саянами,niemojowski1883,,,none,,
+new:DeKastri,залив Де-Кастри,tilley1861;whittingham1856,51.47543,140.76986,geonames,De-Kastri,0.9
+new:CapeLazarev,мыс Лазарева (пролив Невельского),tilley1861,52.22,141.51,estimate,,
+new:CapePronge,мыс Пронге (гиляцкое селение),tilley1861,52.98,141.2,estimate,,
+new:Hamburg,Гамбург,jefferson1896,53.55,9.99,estimate,,
+new:Kungur,Кунгур,jefferson1896,57.4368,56.9593,geonames,Kungur,0.9
+new:Aniva,залив Анива (Сахалин),whittingham1856,46.71492,142.52866,geonames,Aniva,31.1
+new:Obman_Bay,залив Обмана (у северного входа в Амур),whittingham1856,,,none,,
+new:Siedlce,Седльце,giller1866,52.17,22.29,estimate,,
+new:Krasny,Красный (Смоленская губ.),giller1866,54.56,31.43,estimate,,
+new:Smolensk,Смоленск,giller1866,54.7818,32.0401,geonames,Smolensk,0.7
+new:Dorogobuzh,Дорогобуж,giller1866,54.915,33.29722,geonames,Dorogobuzh,1.0
+new:Gorokhovets,Гороховец,giller1866,56.20152,42.69351,geonames,Gorokhovets,0.3
+new:Arsk,Арск,giller1866,56.09151,49.87783,geonames,Arsk,0.2
+new:Malmyzh,Малмыж,giller1866,56.5205,50.6818,geonames,Malmyzh,0.1
+new:Okhansk,Оханск,giller1866,57.7203,55.3882,geonames,Okhansk,0.1
+new:Bilimbay,Билимбай,giller1866,56.96889,59.8149,geonames,Bilimbay,0.3
+new:Tobolsk_gub_border,граница Тобольской губернии (за д. Марковой),giller1866,,,none,,
+new:Posolsky_monastery,Посольский монастырь (Байкал),sheepshanks1903,52.02,106.21,estimate,,
+new:Mitau,Митава (Елгава),dwinger1930,56.65,23.72,estimate,,
+new:Totskoye,Тоцкое (лагерь военнопленных),dwinger1930,52.52478,52.76228,geonames,Totskoye,0.6
+new:Samara,Самара,dwinger1930,53.20007,50.15,geonames,Samara,0.0
+new:Penza,Пенза (с. Селикса),debaye1898,53.20066,45.00464,geonames,Penza,0.3

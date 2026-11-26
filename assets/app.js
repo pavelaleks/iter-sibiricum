@@ -14,7 +14,7 @@ const getRoutes = () => (C['routes+review'] ||= Promise.all([get('routes.json'),
   for (const [w, v] of Object.entries(REV)) {
     if (v.status === 'no_journey') continue;
     // Остановки без координат остаются: на карте они разрывают линию, чтобы не рисовать прямой отрезок через неизвестное.
-    const stops = (v.stops || []).map((s) => [s.place, s.name, s.lon == null ? null : +s.lon, s.lat == null ? null : +s.lat, s.pid ? w + '_p' + s.pid : null, 'text', s.journey || 1, s.quote || '']);
+    const stops = (v.stops || []).map((s) => [s.place, s.name, s.lon == null ? null : +s.lon, s.lat == null ? null : +s.lat, s.pid ? w + '_p' + s.pid : null, 'text', s.journey || 1, s.quote || '', s.coord_source || '']);
     if (stops.filter((x) => x[2] != null).length > 1) out.push({work: w, method: v.status === 'draft' ? 'draft' : 'manual', status: v.status, reviewer: v.reviewer, date: v.date, summary: v.summary, stops});
   }
   return out;
@@ -206,7 +206,7 @@ async function atlas() {
       const badge = !r ? '<span class="status">маршрут не определён</span>' : r.status === 'verified' ? '<span class="status rec">подтверждён экспертом</span>' : r.status === 'checked' ? '<span class="status rec">проверен по тексту</span>' : r.status === 'reconstructed' ? '<span class="status rec">восстановлен по тексту</span>' : '<span class="status draft">черновик, на проверке</span>';
       h += `<h3><a href="#book-${toH(w.id)}">${esc(w.label)}</a></h3><p class="small mute">${esc(w.author)} · ${esc(w.nat_ru)} · ${esc(w.stay_ru)} · поездка ${w.j0 ? yr(w.j0) : '?'}${w.j1 && w.j1 !== w.j0 ? '–' + yr(w.j1) : ''}</p><p>${badge}</p>`;
       if (r && r.summary) h += `<p class="small">${esc(r.summary)}</p>`;
-      if (r && r.method === 'manual') h += `<ol class="small">${r.stops.map((s) => `<li>${esc(s[1])}${s[5] === 'not_found_in_text' ? ' <span class="mute">— в тексте не найдено</span>' : para(w.id, s[4])}</li>`).join('')}</ol>`;
+      if (r && r.method === 'manual') h += `<ol class="small">${r.stops.map((s) => `<li>${esc(s[1])}${s[8] === 'estimate' ? ' <span class="mute" title="Координаты приблизительные, не сверены с GeoNames">≈</span>' : s[2] == null ? ' <span class="mute">· нет на карте: координаты не установлены</span>' : ''}${s[5] === 'not_found_in_text' ? ' <span class="mute">— в тексте не найдено</span>' : para(w.id, s[4])}</li>`).join('')}</ol>${r.stops.some((s) => s[8] === 'estimate') ? '<p class="small mute">≈ — координаты места приблизительные: пункт не найден в GeoNames (исторический, переименованный или малый).</p>' : ''}`;
       else if (r) h += `<p class="small">Черновик составлен программой: в него попали места, о которых автор пишет как о посещённых («мы прибыли в…», «we left…»). Порядок предварительный. Номера на карте совпадают с номерами в списке; пунктирный кружок — одно свидетельство в тексте.</p><ol class="small">${r.stops.map((s) => `<li>${esc(s[1])}${para(w.id, s[4])}${s[5] === 'higher' ? '' : ' <span class="mute">· одно свидетельство</span>'}</li>`).join('')}</ol>`;
       else h += `<p class="small">Программа не нашла в книге мест, о которых автор пишет как о посещённых: это может быть обзор, компиляция или текст с плохим распознаванием. На карте показана география книги — все упомянутые места.</p>`;
     }

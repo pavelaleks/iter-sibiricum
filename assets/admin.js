@@ -149,7 +149,7 @@ async function editRoute(w) {
   const list = () => {
     document.getElementById('sl').innerHTML = stops.map((s, i) => `<li data-i="${i}"><div class="sh"><b>${esc(s.name)}</b>
       <span class="sb"><button type="button" data-a="up" title="Выше" aria-label="Выше">↑</button><button type="button" data-a="down" title="Ниже" aria-label="Ниже">↓</button><button type="button" data-a="del" title="Убрать" aria-label="Убрать">✕</button></span></div>
-      <div class="sp small">абзац <input class="pid" value="${esc(s.pid || '')}" size="6" aria-label="Номер абзаца"> <a href="#" data-a="show">показать</a>${s.quote ? ` · <span class="mute">«${esc(s.quote)}»</span>` : ''}</div></li>`).join('') || '<li class="mute">Остановок нет.</li>';
+      <div class="sp small">абзац <input class="pid" value="${esc(s.pid || '')}" size="6" aria-label="Номер абзаца"> <a href="#" data-a="show">показать</a>${String(s.place).startsWith('new:') ? ` · координаты <input class="crd" data-k="lat" value="${s.lat ?? ''}" size="6" aria-label="Широта" placeholder="шир."> <input class="crd" data-k="lon" value="${s.lon ?? ''}" size="6" aria-label="Долгота" placeholder="долг."> <span class="mute">${s.coord_source === 'geonames' ? 'GeoNames' : s.coord_source === 'estimate' ? 'приблизительно' : 'не установлены'}</span>` : ''}${s.quote ? ` · <span class="mute">«${esc(s.quote)}»</span>` : ''}</div></li>`).join('') || '<li class="mute">Остановок нет.</li>';
     redraw();
   };
   const showPara = (pid) => { const t = T[pid]; document.getElementById('para').innerHTML = t ? `<h3>Абзац ${esc(+pid)}</h3><p class="src">${esc(t)}</p>` : '<p class="mute">Абзаца с таким номером нет.</p>'; };
@@ -161,7 +161,7 @@ async function editRoute(w) {
     if (a === 'show') return showPara(stops[i].pid);
     list();
   });
-  document.getElementById('sl').addEventListener('change', (e) => { if (e.target.classList.contains('pid')) { const i = +e.target.closest('li').dataset.i; stops[i].pid = e.target.value.trim().padStart(5, '0'); showPara(stops[i].pid); } });
+  document.getElementById('sl').addEventListener('change', (e) => { if (e.target.classList.contains('crd')) { const i = +e.target.closest('li').dataset.i, v = parseFloat(e.target.value.replace(',', '.')); stops[i][e.target.dataset.k] = isNaN(v) ? null : v; stops[i].coord_source = 'expert'; return list(); } if (e.target.classList.contains('pid')) { const i = +e.target.closest('li').dataset.i; stops[i].pid = e.target.value.trim().padStart(5, '0'); showPara(stops[i].pid); } });
   document.getElementById('addf').addEventListener('submit', (e) => { e.preventDefault(); const nm = document.getElementById('ap').value.trim(); const p = D.places.find((x) => x.name === nm);
     if (!p) return toast('Такого места нет в справочнике. Добавьте его как новое.', true);
     stops.push({place: p.id, name: p.name, lat: p.lat, lon: p.lon, pid: '', quote: '', journey: 1}); document.getElementById('ap').value = ''; list(); });

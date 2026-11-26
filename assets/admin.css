@@ -24,3 +24,4 @@ fieldset.mem{border:1px solid var(--line);border-radius:var(--r);padding:16px;ma
 .toast.bad{background:var(--acc);color:#fff}
 @media(max-width:900px){.editor,.grid2{grid-template-columns:minmax(0,1fr)}#newf.row,.aform.row{grid-auto-flow:row;grid-template-columns:minmax(0,1fr)}}
 [hidden]{display:none!important}
+.stops .crd{width:5.5em;min-height:30px;padding:2px 6px;font:14px var(--sans);border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink)}

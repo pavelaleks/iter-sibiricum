@@ -66,7 +66,7 @@ window.SibMap = (() => {
         g.append('path').attr('class', 'route hi').attr('stroke', col(F.work)).attr('d', line(F));
         g.append('g').selectAll('circle').data(F.stops).join('circle').attr('r', 3.6).attr('fill', col(F.work)).attr('stroke', 'var(--bg)')
           .attr('transform', (s) => `translate(${proj([s[2], s[3]])})`)
-          .on('mousemove', (ev, s) => show(ev, `<b>${esc(s[1])}</b>${s[5] === 'not_found_in_text' ? 'в тексте не найдено' : 'абзац ' + esc((s[4] || '').split('_p')[1] || '')}`)).on('mouseleave', hide);
+          .on('mousemove', (ev, s) => show(ev, `<b>${esc(s[1])}</b>${s[5] === 'not_found_in_text' ? 'в тексте не найдено' : 'абзац ' + esc(String(+((s[4] || '').split('_p')[1] || 0)))}${s[8] === 'estimate' ? '<br>координаты приблизительные' : ''}${s[7] ? '<br>«' + esc(s[7]) + '»' : ''}`)).on('mouseleave', hide);
         g.append('g').selectAll('text').data(F.stops.filter((s, i) => i % Math.max(1, Math.round(F.stops.length / 14)) === 0)).join('text').attr('class', 'mlabel')
           .attr('transform', (s) => { const p = proj([s[2], s[3]]); return `translate(${p[0] + 6},${p[1] - 5})`; }).text((s) => s[1]);
       } else if (F0 && F0.method === 'draft') {
