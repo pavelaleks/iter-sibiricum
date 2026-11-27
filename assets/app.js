@@ -305,9 +305,9 @@ async function illustrations() {
     </div>
     <p class="small mute" id="fN" aria-live="polite"></p>
   </div></section>
-  <section><div class="wrap"><div class="ill-grid" id="grid"></div><p class="more"><button type="button" id="more" hidden>Показать ещё</button></p></div></section>
+  <section><div class="wrap"><div class="ill-grid" id="grid"></div><p class="more"><button type="button" id="illMore" hidden>Показать ещё</button></p></div></section>
   <dialog class="ill-dlg" id="dlg" aria-label="Иллюстрация"></dialog>`;
-  const grid = document.getElementById('grid'), more = document.getElementById('more'), dlg = document.getElementById('dlg');
+  const grid = document.getElementById('grid'), more = document.getElementById('illMore'), dlg = document.getElementById('dlg');
   const card = (x) => `<figure class="ill"><a href="#illustrations?i=${encodeURIComponent(x.id)}" data-i="${esc(x.id)}">${illImg(x)}</a><figcaption><span class="c">${x.c ? esc(x.c) : '<span class="mute">без подписи</span>'}</span>${x.ru && !EN ? `<span class="ru">${esc(x.ru)}</span>` : ''}<span class="s">${esc(illBy(x.w, W))}</span></figcaption></figure>`;
   const draw = () => {
     const q = st.q.toLowerCase();
@@ -320,6 +320,8 @@ async function illustrations() {
   [['fW', 'w'], ['fG', 'g'], ['fP', 'per'], ['fR', 'rg']].forEach(([id, k]) => document.getElementById(id).addEventListener('change', (e) => { st[k] = e.target.value; lim = 96; draw(); }));
   let qt; document.getElementById('fQ').addEventListener('input', (e) => { clearTimeout(qt); qt = setTimeout(() => { st.q = e.target.value.trim(); lim = 96; draw(); }, 200); });
   more.addEventListener('click', () => { lim += 96; draw(); });
+  // дальше подгружается само, когда кнопка показывается на экране
+  const ioM = new IntersectionObserver((es) => { if (es[0].isIntersecting && !more.hidden && grid.isConnected) { lim += 96; draw(); } }, {rootMargin: '600px'}); ioM.observe(more);
   const open = (id) => {
     const k = cur.findIndex((x) => x.id === id), x = k >= 0 ? cur[k] : I.find((y) => y.id === id); if (!x) return;
     const w = W[x.w];
