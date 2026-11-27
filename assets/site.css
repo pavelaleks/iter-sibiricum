@@ -368,3 +368,4 @@ html:not([lang=en]) .en-only,html[lang=en] .ru-only{display:none}
 #g3{position:relative}
 .g3lab{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2}
 .g3lab span{position:absolute;left:0;top:0;white-space:nowrap;font-size:12.5px;line-height:1.2;color:#e4ecf2;text-shadow:0 0 3px #0e1a26,0 0 6px #0e1a26;transition:opacity .2s}
+.refs .pst{display:inline-block;font-family:var(--sans);font-size:13px;color:var(--mute);border:1px solid var(--line);border-radius:3px;padding:0 6px;margin-left:4px;line-height:1.6}

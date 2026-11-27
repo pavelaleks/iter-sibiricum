@@ -309,7 +309,7 @@ async function ann() {
 // ---------- публикации ----------
 async function pubs() {
   const {data: P} = await readJSON('data/publications.json', []);
-  const STP = {published: 'опубликовано', in_press: 'в печати', submitted: 'подано'}, TY = {article: 'статья', monograph: 'монография', chapter: 'глава', conference: 'тезисы / доклад', dataset: 'набор данных'};
+  const STP = {published: 'опубликовано', accepted: 'принято к печати (есть справка)', submitted: 'на рецензировании'}, TY = {article: 'статья', monograph: 'монография', chapter: 'глава', conference: 'тезисы / доклад', dataset: 'набор данных'};
   A.innerHTML = `<section class="band"><div class="wrap">
     <h1>Публикации</h1>
     <p>Список выводится на странице «Публикации». Если заполнено поле «Готовая ссылка», она показывается как есть; иначе ссылка собирается из полей.</p>
@@ -325,6 +325,8 @@ async function pubs() {
       <label>Год<input name="year" type="number" min="2020" max="2035"></label>
       <label>Страницы, том, номер<input name="pages"></label>
       <label>DOI<input name="doi" placeholder="10.xxxx/…"></label>
+      <label>Справка о принятии: дата (для «принято к печати»)<input name="accepted" type="date"></label>
+      <label>Когда выйдет (например «№ 2, 2027»)<input name="issue"></label>
       <label>Ссылка на текст<input name="url" type="url"></label>
       <label>Народы (id через запятую)<input name="groups" placeholder="sakha, buryat"></label>
       <label class="wide">Готовая ссылка (необязательно)<textarea name="cite" rows="2"></textarea></label>
