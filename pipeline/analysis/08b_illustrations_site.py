@@ -55,6 +55,7 @@ def main():
             return ('sib' if 'sib' in m else collections.Counter(m).most_common(1)[0][0]), 'cap'
         return PREG.get(pid, ''), 'par' if PREG.get(pid) else ''
     unmapped = collections.Counter()
+    GLOSS = re.compile(r"\s*\((?:ненц|алта|казах|ханты|кет|эвенк|эвен|якут|саха|тувин|нивх|нанай|ительмен|чукч|бурят|киргиз|селькуп|манси|нганасан|энц|долган|ороч|удэг|ульч|тофалар|хакас|шор|телеут|коряк|юкагир)[а-яё]*(?:[ ,]+[а-яё]+)*\)", re.I)
     ROT = {'rot_cw': 90, 'rot_ccw': 270, 'rot_180': 180}
     items = []
     for r in rows:
@@ -76,6 +77,9 @@ def main():
         if r.get('source') == 'gutenberg': items[-1]['src'] = 'pg'; items[-1]['u'] = r['src_url']
         it = items[-1]
         it['rg'], it['rb'] = macro(it['pl'], r['pid'])
+        # в переводе подписи — слово источника («самоед», «калмык»), без вставленного в скобках современного этнонима:
+        # отнесение к народу — интерпретация проекта, оно показано отдельно в поле «Народы»
+        if it.get('ru'): it['ru'] = GLOSS.sub('', it['ru']).replace('  ', ' ')
         # киргизы Памира и Тянь-Шаня — отдельная группа (как в 03_extract), а не казахи
         if 'kazakh_kirghiz' in it['g'] and (r['work_id'] == 'etherton1911' or re.search(r'Kara[- ]?Kirgh|Kara[- ]?Kirgis', it['c'] or '', re.I)):
             it['g'] = ['kyrgyz' if x == 'kazakh_kirghiz' else x for x in it['g']]

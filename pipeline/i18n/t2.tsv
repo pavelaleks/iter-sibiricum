@@ -1,4 +1,4 @@
-0	Adjectives («tatarski», «kirgizský») are excluded from the search
+0	Adjectives (“tatarski”, “kirgizský”) are excluded from the search
 1	Example paragraphs
 2	Nature
 3	Check
@@ -33,7 +33,7 @@
 32	Next illustration
 33	Words separated by commas
 34	The dictionary of ethnonyms in # languages was compiled and checked by hand: historical and foreign-language forms (Ostiaken, Tongouses, Bratski) are mapped to the modern names of peoples, and ambiguous cases were resolved from context. A gazetteer of # places with coordinates. The search across all texts was done by program
-35	The source word («Ostiak», «Tartar», «Kirghiz») is stored separately from the modern name of the people; each mapping has a confidence level. The bars on the card show the frequency of mentions by decade of the journey per million words about Siberia
+35	The source word (“Ostiak”, “Tartar”, “Kirghiz”) is stored separately from the modern name of the people; each mapping has a confidence level. The bars on the card show the frequency of mentions by decade of the journey per million words about Siberia
 36	Sort
 37	Central Asia and Turkestan
 38	Old Ostrog on the Avacha
@@ -42,7 +42,7 @@
 41	Country
 42	Author's country
 43	Scan page in the Internet Archive
-44	A sample stratified by the author's country and period: # descriptions of indigenous peoples and # passages on relations between groups. For each passage the annotators recorded the evaluation, the frame of description (hierarchy of «civilisation», economy, contact, etc.), the source of knowledge (personal observation or hearsay) and the type of relation. All conclusions about evaluations and relations on the site are based on this annotation
+44	A sample stratified by the author's country and period: # descriptions of indigenous peoples and # passages on relations between groups. For each passage the annotators recorded the evaluation, the frame of description (hierarchy of “civilisation”, economy, contact, etc.), the source of knowledge (personal observation or hearsay) and the type of relation. All conclusions about evaluations and relations on the site are based on this annotation
 45	Tables
 46	Taz Bay
 47	Such is its share in paragraphs on indigenous peoples before # and in #–#. In the same decades attention to penal servitude gives way to attention to settlers
@@ -52,7 +52,7 @@
 51	Lake Teletskoye
 52	Telma factory
 53	Topic model (NMF, # topics) of English paragraphs. Cell colour: the share of the topic in the period
-54	the «Thames»
+54	the “Thames”
 55	Topics of paragraphs on indigenous peoples
 56	Topics serve only for navigation; no conclusions are drawn from them
 57	Tes on the Tuba
@@ -79,7 +79,7 @@
 78	The passage in the expert sample really describes a Siberian people
 79	France/Belgium
 80	Central Europe
-81	A digital resource on how European travellers of #–# described the peoples of Siberia and the relations between them: # books in # languages with full texts, routes on the map, cards of peoples and verifiable research data
+81	A digital resource on how European travellers of #–# described the peoples of Siberia and the relations between them: # books in # languages with full texts, routes on the map, profiles of peoples and verifiable research data
 82	Chaa-Khol on the Ulug-Khem
 83	Frequencies by decade, collocations, discourses, topic modelling, networks of co-mentions and citation, detection of text reuse, statistical models that take into account that passages from one book are not independent
 84	Word frequencies by year
@@ -89,7 +89,7 @@
 88	What the corpus shows
 89	What was checked
 90	Sharypova V. S
-91	Expert sample: # descriptions of indigenous peoples from # books, strata «author's country × period», weighted shares, intervals bootstrapped over books. The results are preliminary: an independent re-annotation of part of the sample is planned
+91	Expert sample: # descriptions of indigenous peoples from # books, strata “author's country × period”, weighted shares, intervals bootstrapped over books. The results are preliminary: an independent re-annotation of part of the sample is planned
 92	Expert annotation
 93	The expert annotation is to be complemented by an independent re-annotation of part of the sample, to measure agreement between experts
 94	Period
@@ -165,7 +165,7 @@
 164	Lena delta
 165	money
 166	village
-167	savages of the lowest order»; thievish, treacherous, cowardly
+167	savages of the lowest order”; thievish, treacherous, cowardly
 168	wild hordes of Kirghiz
 169	wild tribes
 170	for the World Historical Gazetteer: name forms from the books with links to paragraphs, years, coordinate precision, links to GeoNames and Wikidata) and
@@ -260,7 +260,7 @@
 259	does not recognise authority
 260	not checked
 261	neutral
-262	ugly «by our notions», but some are pretty
+262	ugly “by our notions”, but some are pretty
 263	lower Yenisei
 264	the lowest stage of culture
 265	no religion at all
@@ -468,7 +468,7 @@
 467	word frequencies by year
 468	the less Russified they are
 469	honest in everything
-470	the «clean»
+470	the “clean”
 471	the Chukchi are more honest than the Russians at the fair
 472	shamanism and spirits
 473	lapidary works

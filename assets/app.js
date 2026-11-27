@@ -5,6 +5,9 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&': '&amp;', '<
 const yr = (n) => n == null || isNaN(n) ? '—' : String(Math.round(n));
 const inBox = (s) => s[2] >= 40 && s[2] <= 195 && s[3] >= 34 && s[3] <= 79;
 const EN = !!(window.I18N && I18N.en);
+const ROLE_RU = {"HBC governor": "губернатор Компании Гудзонова залива", "POW": "военнопленный", "POW (German army)": "военнопленный (германская армия)", "anthropologist": "антрополог", "archaeologist": "археолог", "aristocrat/politician": "аристократ, политик", "army officer": "армейский офицер", "army officer/MP": "армейский офицер, член парламента", "army officer/hunter": "армейский офицер, охотник", "army officers": "армейские офицеры", "artist-correspondent": "художник-корреспондент", "artist/architect": "художник, архитектор", "biographer (Wiggins journals)": "биограф (дневники Уиггинса)", "botanist/anthropologist": "ботаник, антрополог", "clergyman": "священнослужитель", "clergyman (Catholic prelate)": "священнослужитель (католический прелат)", "clergyman (pastor)": "священнослужитель (пастор)", "clergyman/missionary": "священнослужитель, миссионер", "colonial administrator/journalist": "колониальный чиновник, журналист", "compiler": "компилятор", "cyclist/journalist": "велосипедист, журналист", "deputy/officer": "депутат, офицер", "economist/publicist": "экономист, публицист", "engineer": "инженер", "ethnographer/traveller": "этнограф, путешественник", "exile": "ссыльный", "explorer/naturalist": "исследователь, натуралист", "farmer/politician": "фермер, политик", "geographer": "географ", "hunter": "охотник", "hunter/explorer": "охотник, исследователь", "journalist": "журналист", "journalist (communist)": "журналист (коммунист)", "journalist/politician": "журналист, политик", "journalist/relief worker": "журналист, сотрудник помощи голодающим", "merchant/Russian official": "купец, чиновник русской службы", "merchant/journalist": "купец, журналист", "mining engineer": "горный инженер", "missionary (medical)": "миссионер (врач)", "mountaineer/businessman": "альпинист, предприниматель", "naturalist": "натуралист", "naturalist (ornithologist)": "натуралист (орнитолог)", "naval officer": "морской офицер", "naval officer (blind traveller)": "морской офицер (слепой путешественник)", "nurse/missionary": "сестра милосердия, миссионер", "politician (exile)": "политик (ссыльный)", "scholar (linguist)": "учёный (лингвист)", "scholar (linguist/ethnographer)": "учёный (лингвист, этнограф)", "scholar (orientalist)": "учёный (востоковед)", "scholar (slavist)": "учёный (славист)", "scholar (turkologist; Russian service)": "учёный (тюрколог; на русской службе)", "scientist": "учёный", "scientist (astronomer)": "учёный (астроном)", "scientist (botanist; Dorpat)": "учёный (ботаник; Дерпт)", "scientist (mineralogist)": "учёный (минералог)", "scientist (physicist)": "учёный (физик)", "scientist (zoologist)": "учёный (зоолог)", "scientist/adventurer": "учёный, искатель приключений", "scientist/explorer": "учёный, исследователь", "ship's surgeon/whaler": "судовой врач китобоя", "traveller": "путешественник", "traveller (wife of T. W. Atkinson)": "путешественница (жена Т. У. Аткинсона)", "traveller/later journalist": "путешественник, позднее журналист", "traveller/writer": "путешественник, писатель", "war correspondent/scholar": "военный корреспондент, учёный", "writer": "писатель", "writer/dramatist": "писатель, драматург", "zoologist": "зоолог"};
+const NAT_RU = {"British": "британец", "German": "немец", "French": "француз", "Polish": "поляк", "Finnish": "финн", "Italian": "итальянец", "Norwegian": "норвежец", "Austrian": "австриец", "Swedish": "швед", "Irish": "ирландец", "Belgian": "бельгиец", "Dutch": "голландец", "Australian-British": "австралиец британского происхождения", "Hungarian": "венгр", "Faroese": "фаререц", "Danish": "датчанин", "Hungarian-French": "венгр, французский автор"};
+const ruOf = (m, v) => (EN ? v : m[v] || v);
 const fmt = (n, d = 0) => n == null || isNaN(n) ? '—' : Number(n).toLocaleString(window.I18N ? I18N.locale : 'ru-RU', {maximumFractionDigits: d, minimumFractionDigits: d});
 const pl = (n, f) => { const a = Math.abs(n) % 100, b = a % 10; return fmt(n) + ' ' + (a > 10 && a < 20 ? f[2] : b === 1 ? f[0] : b > 1 && b < 5 ? f[1] : f[2]); };
 const C = {};
@@ -58,13 +61,14 @@ async function route() {
     else if (h.startsWith('analytics')) await analytics();
     else if (h === 'publications') await publications();
     else if (h === 'method') await method();
+    else if (h === 'scope') await scope();
     else await home();
     const tk = Object.keys(TITLES).find((k) => h === k || h.startsWith(k + '-')); document.title = tk ? TITLES[tk] + ' — Iter Sibiricum' : 'Iter Sibiricum — европейские травелоги о Сибири, 1800–1930';
     if (!/^book-.*-p\d+$/.test(h) && !h.startsWith('analytics-')) window.scrollTo(0, 0);
   } catch (e) { V.innerHTML = `<div class="wrap band"><h2>Не удалось загрузить данные</h2><p class="mute">${esc(e.message)}. Сайт читает файлы из папки data/; откройте его через веб-сервер (GitHub Pages или python -m http.server).</p></div>`; }
 }
 window.addEventListener('hashchange', route);
-const TITLES = {atlas: 'Атлас', peoples: 'Народы', people: 'Народы', library: 'Библиотека', book: 'Библиотека', illustrations: 'Иллюстрации', links: 'Связи', analytics: 'Аналитика', publications: 'Публикации', method: 'Метод и данные'};
+const TITLES = {atlas: 'Атлас', peoples: 'Народы', people: 'Народы', library: 'Библиотека', book: 'Библиотека', illustrations: 'Иллюстрации', links: 'Связи', analytics: 'Аналитика', publications: 'Публикации', scope: 'Границы и категории', method: 'Метод и данные'};
 
 function mapIn(el, opts) {
   const draw = () => SibMap.draw(el, opts());
@@ -197,7 +201,8 @@ async function home() {
 // ---------------- иллюстрации ----------------
 const KIND = {people: 'Люди', portrait: 'Портреты', view: 'Виды', map: 'Карты', nature: 'Природа', object: 'Предметы', other: 'Прочее'};
 const iaPage = (x) => x.src === 'pg' ? x.u : `https://archive.org/details/${encodeURIComponent(x.ia)}/page/n${x.n}/mode/1up`;
-const illBy = (w, W) => W[w] ? `${W[w].author}, ${W[w].year}` : w;
+// подпись по книге-источнику: рисовальщики и граверы, указанные на гравюрах, пока не внесены
+const illBy = (w, W) => W[w] ? `${EN ? 'from the book' : 'из книги'}: ${W[w].author}, ${W[w].year}` : w;
 
 // Главная: сменяющиеся иллюстрации из книг корпуса справа от названия.
 async function heroPlates(works, reduce) {
@@ -240,7 +245,7 @@ async function illustrations() {
   V.innerHTML = `<section class="band"><div class="wrap ill-head">
     <h1>Иллюстрации</h1>
     <p class="lede">${pl(I.length, ['изображение', 'изображения', 'изображений'])} из ${pl(nb, ['книги', 'книг', 'книг'])} корпуса: гравюры, фотографии и карты, которыми путешественники сопровождали свои описания Сибири.</p>
-    <p class="small mute ill-note">Изображения найдены по сканам Internet Archive (программа отбирает страницы с графикой, вырезает её и поворачивает альбомные вклейки) и взяты из HTML-изданий Project Gutenberg, где подписи набраны текстом. Подписи сканов — распознанный текст оригинала, в нём возможны ошибки; тип, народы и места определены по подписи; регион там, где в подписи нет места, — по абзацу рядом, предварительно. Каждое изображение ведёт на источник и на абзац рядом с ним в библиотеке. Метод — в разделе <a href="#method">«Метод и данные»</a>.</p>
+    <p class="small mute ill-note">Изображения найдены по сканам Internet Archive (программа отбирает страницы с графикой, вырезает её и поворачивает альбомные вклейки) и взяты из HTML-изданий Project Gutenberg, где подписи набраны текстом. Подписи сканов — распознанный текст оригинала, в нём возможны ошибки; тип, народы и места определены по подписи; регион там, где в подписи нет места, — по абзацу рядом, предварительно. Каждое изображение ведёт на источник и на абзац рядом с ним в библиотеке. Изображения подписаны книгой, из которой взяты: рисовальщики, граверы и фотографы, указанные на листах, пока не внесены. Как читать деление на «портреты» и «людей» и почему снимки каторжных и антропологические «типы» показаны как исторические документы — на странице <a href="#scope">«Границы и категории»</a>. Метод — в разделе <a href="#method">«Метод и данные»</a>.</p>
     <div class="ill-filters" role="group" aria-label="Фильтры">
       <div class="seg" id="fK"><button type="button" data-k="" class="on">Все <span>${fmt(I.length)}</span></button>${Object.entries(KIND).filter(([k]) => cnt((x) => x.k === k)).map(([k, t]) => `<button type="button" data-k="${k}">${t} <span>${fmt(cnt((x) => x.k === k))}</span></button>`).join('')}</div>
       <label>Книга<select id="fW"><option value="">все книги</option>${books.map((w) => `<option value="${esc(w)}">${esc(W[w] ? W[w].author + ', ' + W[w].year : w)} (${cnt((x) => x.w === w)})</option>`).join('')}</select></label>
@@ -366,7 +371,7 @@ async function peoples() {
   const sec = (cat) => groups.filter((g) => g.category === cat);
   const card = (g) => `<a class="card" href="#people-${toH(g.id)}"><div class="t">${esc(g.name)}</div><div class="s">${fmt(g.mentions)} упоминаний · ${g.works} книг</div>${spark(g.series)}</a>`;
   V.innerHTML = `<section class="band"><div class="wrap"><h1>Народы и группы</h1>
-    <p>Слово источника («Ostiak», «Tartar», «Kirghiz») хранится отдельно от современного названия народа; у сопоставления есть степень уверенности. Столбики на карточке — частота упоминаний по десятилетиям поездок на миллион слов о Сибири.</p>
+    <p>Слово источника («Ostiak», «Tartar», «Kirghiz») хранится отдельно от современного названия народа; у сопоставления есть степень уверенности. Столбики на карточке — частота упоминаний по десятилетиям поездок на миллион слов о Сибири. Рубрики ниже рабочие и повторяют взгляд источников из имперского центра; почему так и что считается Сибирью — на странице <a href="#scope">«Границы и категории»</a>.</p>
     ${['indigenous', 'generic', 'settler', 'social', 'neighbour', 'foreign'].filter((c) => sec(c).length).map((c) => `<h2 style="margin-top:28px">${CAT[c]}</h2><div class="cards">${sec(c).map(card).join('')}</div>`).join('')}
   </div></section>`;
 }
@@ -379,7 +384,7 @@ async function people(id) {
     <p class="small"><a href="#peoples">← все народы</a></p>
     <h1>${esc(g.name)}</h1>
     <p class="mute">${esc(g.name_en)}${g.family ? ' · ' + esc(g.family) : ''} · ${CAT[g.category] || ''} · ${fmt(g.mentions)} упоминаний в Сибири, ${g.works} книг</p>
-    ${g.note ? `<p class="small">${esc(g.note)}</p>` : ''}
+    ${g.note && EN ? `<p class="small">${esc(g.note)}</p>` : ''}
     <div class="chips">${g.forms.map((f) => `<span class="chip">${esc(f)}</span>`).join('')}</div>
     <div class="side" style="margin-top:20px">
       <div><div class="mapbox" id="pMap"></div><p class="small mute">Пятно — схематичный ареал около 1900 г.; круги — места, рядом с которыми этот народ упоминается в тех же абзацах.</p></div>
@@ -437,14 +442,14 @@ async function library() {
   render();
 }
 async function book(id, par) {
-  const [works, groups, routes] = await Promise.all([get('works.json'), get('groups.json'), getRoutes()]);
+  const [works, groups, routes, SN] = await Promise.all([get('works.json'), get('groups.json'), getRoutes(), get('source_notes.json').catch(() => ({}))]);
   const w = works.find((x) => x.id === id); if (!w) return library();
   const GN = Object.fromEntries(groups.map((g) => [g.id, g.name]));
   const r0 = routes.find((x) => x.work === id); const r = r0 && {...r0, stops: r0.stops.filter(inBox)};
   V.innerHTML = `<section class="band"><div class="wrap"><p class="small"><a href="#library">← библиотека</a></p>
     <div class="reader"><aside>
       <h2 style="font-size:24px">${esc(w.label)}</h2>
-      <p><b>${esc(w.author)}</b><br><span class="small mute">${esc(w.nationality || '')}${w.role ? ' · ' + esc(w.role) : ''}${w.gender === 'f' ? ' · женщина-автор' : ''}</span></p>
+      <p><b>${esc(w.author)}</b><br><span class="small mute">${esc(ruOf(NAT_RU, w.nationality || ''))}${w.role ? ' · ' + esc(ruOf(ROLE_RU, w.role)) : ''}${w.gender === 'f' ? ' · женщина-автор' : ''}</span></p>
       <p class="small">Издание: ${yr(w.year)}${w.place ? ', ' + esc(w.place) : ''} · язык текста: ${esc(w.lang)}${w.translation ? ' (перевод с ' + esc(w.orig_lang) + ')' : ''}<br>Поездка: ${w.j0 ? yr(w.j0) : '?'}${w.j1 && w.j1 !== w.j0 ? '–' + yr(w.j1) : ''} · ${esc(w.stay_ru)}<br>Период: ${esc(w.period_ru)}</p>
       <p class="small">${fmt(w.words)} слов, из них о Сибири ${fmt(w.words_sib)}; ${fmt(w.mentions)} упоминаний народов (${fmt(w.per10k, 1)} на 10 тыс.)</p>
       <div class="chips">${w.top_groups.map((g) => `<span class="chip">${esc(g[0])} · ${g[1]}</span>`).join('')}</div>
@@ -454,7 +459,7 @@ async function book(id, par) {
       <label class="small mute">Найти в тексте <input type="search" id="tq" aria-label="Поиск в тексте"></label>
       <p class="small mute" id="tqn"></p>
       <label class="small mute">Подсветить народ <select id="tg"><option value="">все</option>${[...new Set(w.top_groups.map((g) => g[0]))].map((n) => `<option>${esc(n)}</option>`).join('')}</select></label>
-      ${w.note ? `<p class="small mute">${esc(w.note)}</p>` : ''}
+      ${SN[w.id] ? `<p class="small src-note"><b>Критика источника.</b> ${esc(SN[w.id])}</p>` : ''}
     </aside><div class="text" id="txt"><p class="mute">Загрузка текста…</p></div><figure class="scan" id="scan" hidden aria-live="polite"></figure></div></div></section>`;
   let T;
   try { T = await (C['t:' + id] ||= fetch('texts/' + id + '.json').then((x) => x.json())); } catch (e) { document.getElementById('txt').innerHTML = '<p class="mute">Текст не найден.</p>'; return; }
@@ -549,7 +554,7 @@ async function links() {
     document.getElementById('g3l').innerHTML = legend;
     document.getElementById('perCtl').hidden = mode !== 'g';
     if (!FG) {
-      FG = ForceGraph3D()(el).backgroundColor('#0e1a26').width(el.clientWidth).height(el.clientHeight)
+      FG = ForceGraph3D()(el).showNavInfo(false).backgroundColor('#0e1a26').width(el.clientWidth).height(el.clientHeight)
         .nodeLabel((n) => esc(n.label || n.name || n.id)).nodeColor('color').nodeVal('val').nodeOpacity(.92).nodeRelSize(3)
         .linkWidth((l) => Math.min(4, Math.sqrt(l.weight || 1) / 2)).linkOpacity(.35).linkColor((l) => l.color || '#8597a8')
         .linkDirectionalArrowLength((l) => mode === 'i' ? 3 : 0).linkDirectionalArrowRelPos(1).cooldownTicks(150)
@@ -691,6 +696,53 @@ async function publications() {
   </div></section>`;
 }
 
+// ---------------- границы и категории ----------------
+async function scope() {
+  const [G, W] = await Promise.all([get('groups.json'), get('works.json')]);
+  const g = (id) => G.find((x) => x.id === id);
+  const nat = (n) => W.filter((w) => w.nat_ru === n).length;
+  const T = (t, d) => `<dt>${t}</dt><dd>${d}</dd>`;
+  V.innerHTML = `<section class="band"><div class="wrap scope">
+    <h1>Границы и категории</h1>
+    <p class="lede">Что ресурс называет Сибирью, кого считает европейскими авторами и какими словами называет народы. Эти решения задают все частоты на сайте, поэтому они вынесены сюда отдельно.</p>
+
+    <h2>Что считается Сибирью</h2>
+    <p>Абзац относится к Сибири, если в нём названо место из справочника, лежащее в одном из регионов: Западная и Восточная Сибирь, арктическое побережье, Якутия и Северо-Восток, Приамурье, Приморье и Сахалин, Камчатка и Чукотка, а также Степной край (Акмолинская и Семипалатинская области). Если мест в абзаце нет, он наследует регион предыдущего абзаца той же главы.</p>
+    <p>Степной край включён по административной логике XIX века: до 1882 года эти области входили в Западно-Сибирское генерал-губернаторство, затем — в Степное, с центром в Омске. Это граница имперской администрации, а не этнографическая или природная. Из абзацев о Степном крае приходится около 2% всех «сибирских» упоминаний народов, но 14% упоминаний казахов, так что для казахов граница существенна, для остальных — почти нет.</p>
+    <p>Не считаются Сибирью: Урал и Европейская Россия, Туркестан и Семиречье, Монголия, Маньчжурия и остальной Китай. Урянхайский край (Тува) до 1914 года был владением Цинской империи, точек в справочнике у него нет. Поэтому упоминания тувинцев попадают в «сибирские», когда описание Урянхая стоит в главе о Минусинске или Саянах (${fmt(g('tuvan')?.mentions || 0)} упоминаний); эти цифры следует читать как приблизительные.</p>
+
+    <h2>Кого ресурс называет европейскими авторами</h2>
+    <p>В корпус вошли книги авторов из стран Европы вне имперского центра России, написанные по собственной поездке или жизни в Сибири. Сюда отнесены и подданные империи с нерусской идентичностью: польские ссыльные (${nat('Польша')} книг) и финские учёные из Великого княжества Финляндского (${nat('Финляндия')}). Страна в фильтрах — культурная и языковая принадлежность автора, а не подданство: для 1800–1918 годов это разные вещи. Русские травелоги — предмет отдельного корпуса; голосов самих сибирских народов в корпусе нет, и это главное ограничение любых выводов о «восприятии».</p>
+    <p>Корпус неоднороден: ${nat('Великобритания')} книг из ${W.length} — британские. Поэтому Ngram, темы и поиск заимствований, которые считаются только по английским текстам, показывают прежде всего британский взгляд. Две книги требуют осторожности: «Сибирь» Кубальского (1856) — компиляция без собственной поездки автора, а достоверность ряда эпизодов книги Оссендовского «Звери, люди и боги» (1922) давно оспаривается.</p>
+
+    <h2>Как названы народы</h2>
+    <p>Для каждого упоминания хранится слово источника («Ostiak», «Tartar», «Kirghiz») и отдельно — современное название народа, к которому оно отнесено. Соответствие исторических имён современным не всегда однозначно; спорные случаи отмечены уровнем уверенности. Рубрики на странице «Народы» — «коренные», «русские и пришлые», «соседи», «иностранцы» — рабочие: они повторяют взгляд из имперского центра, который и исследуется, и будут пересмотрены. Узел «туземцы (обобщённо)» в сети — следствие самой категории: путешественники называли так любые коренные группы, поэтому он связан со всеми.</p>
+
+    <h2>Глоссарий исторических терминов</h2>
+    <dl class="gloss">
+      ${T('Инородцы', 'Правовой статус, а не этническое понятие: введён «Уставом об управлении инородцев» 1822 года (реформа М. М. Сперанского). Устав делил коренное население Сибири на оседлых, кочевых и бродячих, с разными податями и самоуправлением. В английском переводе ресурса — inorodtsy, без перевода словом «aliens».')}
+      ${T('Туземцы, natives, indigènes', 'Обобщающее название коренного населения у путешественников. Несёт оценку «нецивилизованности», в источниках часто противопоставлено «русским» и «европейцам».')}
+      ${T('Ясак', 'Натуральная подать пушниной, которую платили коренные народы Сибири; основа отношений «ясачных» людей с государством.')}
+      ${T('Киргизы, киргиз-кайсаки, Kirghiz', 'В русском и европейском употреблении XIX века — казахи. Киргизов Тянь-Шаня и Памира называли «кара-киргизами» или «дикокаменными киргизами»; в ресурсе они выделены в отдельную группу (' + fmt(135) + ' упоминаний, почти все вне Сибири).')}
+      ${T('Остяки', 'Общее имя для ханты, а также селькупов («остяко-самоеды») и кетов («енисейские остяки»). Отнесение к конкретному народу — по контексту и месту.')}
+      ${T('Самоеды', 'Ненцы, энцы, нганасаны и селькупы вместе; если текст не позволяет уточнить, упоминание отнесено к самодийским народам без уточнения.')}
+      ${T('Тунгусы, ламуты', 'Эвенки и эвены. «Ламутами» обычно называли эвенов Охотского побережья и Камчатки.')}
+      ${T('Калмыки (алтайские), «белые калмыки»', 'Алтайцы и телеуты; не путать с калмыками Поволжья.')}
+      ${T('Сойоты, урянхайцы', 'Тувинцы (на Саянах так называли и тофаларов).')}
+      ${T('Гиляки, гольды', 'Нивхи и нанайцы Амура и Сахалина.')}
+      ${T('Камчадалы', 'Ительмены и смешанное с ними русское население Камчатки.')}
+      ${T('Старожилы, переселенцы', 'Русское крестьянство Сибири, осевшее до XIX века, и крестьяне-переселенцы пореформенной эпохи, особенно после 1905 года.')}
+      ${T('Ссыльные, каторжные', 'Сосланные на поселение и осуждённые на каторжные работы; в травелогах — одна из главных тем, особенно после книг Дж. Кеннана.')}
+    </dl>
+
+    <h2>Почему периоды политические</h2>
+    <p>Периоды поездок (до 1855, 1856–1880, 1881–1904, 1905–1917, 1918–1930) следуют событиям, которые меняли условия путешествия и то, что видел путешественник: присоединение Приамурья и реформы, споры о ссылке и Транссибирская магистраль, массовое переселение после 1905 года, война и плен. Это рамка удобства, а не утверждение о смене «эпох восприятия».</p>
+
+    <h2>Иллюстрации</h2>
+    <p>Подпись к иллюстрации воспроизводит подпись источника; название народа в переводе — интерпретация проекта и может быть ошибочной. Деление на «портреты» и «людей» повторяет практику изданий: названные по имени (часто европейцы и чиновники) и безымянные «типы». Мы сохраняем это деление как свидетельство оптики источников, а не как свою классификацию. Снимки каторжных и антропологические «типы» показаны как исторические документы; изображённые на них люди не выбирали, как их представят.</p>
+  </div></section>`;
+}
+
 // ---------------- метод ----------------
 async function method() {
   const [A, P, works] = await Promise.all([get('analytics.json'), project(), get('works.json')]);
@@ -720,7 +772,8 @@ async function method() {
   const ST = {ok: 'надёжно', mid: 'с оговорками', low: 'как ориентир', no: 'заменено разметкой выборки'};
   V.innerHTML = `<section class="band"><div class="wrap">
     <h1>Метод и данные</h1>
-    <p class="lede">Ресурс построен на сочетании экспертной филологической работы с источниками и цифровой обработки корпуса. Отбор книг, их описание, словарь названий народов, восстановление маршрутов и интерпретация результатов выполнены исследователями; разметка оценок и отношений в выборке пока предварительная — её по протоколу проекта выполнила языковая модель, эксперты проекта её проверяют; программы применялись там, где нужно пройти по всем 11 миллионам слов, и каждый их результат проверялся вручную.</p>
+    <p class="lede">Ресурс построен на сочетании экспертной филологической работы с источниками и цифровой обработки корпуса. Отбор книг, их описание, словарь названий народов, восстановление маршрутов и интерпретация результатов выполнены исследователями; разметка оценок и отношений в выборке пока предварительная — её по протоколу проекта выполнила языковая модель, эксперты проекта её проверяют; программы применялись там, где нужно пройти по всем 11 миллионам слов, а их результаты проверялись на выборках (таблица ниже).</p>
+    <p>Что ресурс считает Сибирью, кого — европейскими авторами и как названы народы, объяснено на странице <a href="#scope">«Границы и категории»</a>; там же глоссарий исторических терминов.</p>
     <h2 style="margin-top:40px">Этапы работы</h2>
     <ol class="steps">${steps.map(([t, k, d]) => `<li><h3>${esc(t)}</h3><p class="kind">${esc(k)}</p><p>${esc(d)}</p></li>`).join('')}</ol>
     <h2 style="margin-top:48px">Проверка автоматической обработки</h2>
@@ -733,7 +786,7 @@ async function method() {
     <li>Ареалы народов на карте схематичны и служат только для ориентира.</li></ul>
     <h2 style="margin-top:48px">Данные</h2>
     <p>Каталог изданий и атлас народов и мест опубликованы на Zenodo с DOI${(P.datasets || []).length ? ': ' + P.datasets.map((d) => `<a href="https://doi.org/${esc(d.doi)}">${esc(d.title)}</a> (${esc(d.license)})`).join('; ') : ''}. Наборы данных сайта лежат в папке <code>data/</code>, тексты — в <code>texts/</code>, код обработки — в <a href="${REPO}">репозитории на GitHub</a>.</p>
-    <p>Места и маршруты выгружены в открытых форматах исторической географии: <a href="data/export/iter-sibiricum-places.lpf.jsonld" download>газеттир в Linked Places Format</a> (для World Historical Gazetteer: формы названий из книг со ссылками на абзацы, годы, точность координат, ссылки на GeoNames и Wikidata) и <a href="data/export/iter-sibiricum-routes.geojson" download>маршруты в GeoJSON</a> (по поездкам, со статусом проверки). Лицензия CC BY 4.0.</p>
+    <p>Места и маршруты выгружены в открытых форматах исторической географии: <a href="data/export/iter-sibiricum-places.lpf.jsonld" download>газеттир в Linked Places Format</a> (для World Historical Gazetteer: формы названий из книг со ссылками на абзацы, годы, точность координат, ссылки на GeoNames и Wikidata) и <a href="data/export/iter-sibiricum-routes.geojson" download>маршруты в GeoJSON</a> (по поездкам, со статусом проверки). Выгрузки входят в атлас и распространяются, как и он, по лицензии CC BY-NC 4.0.</p>
     <div class="cite">${esc(citation(P))}</div>
   </div></section>`;
 }

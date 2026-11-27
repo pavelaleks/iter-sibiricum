@@ -19,7 +19,9 @@ window.I18N = (() => {
     if (D) return; D = window.I18N_EN || {}; T = {};
     for (const [k, v] of Object.entries(D)) if (k.includes('#')) T[k] = v;
   };
-  const fill = (v, nums) => { let i = 0; return v.replace(/#|\{s\}/g, (m) => { if (m === '#') return nums[i++] ?? ''; const n = nums[i - 1]; return n && n.replace(/\D/g, '') === '1' ? '' : 's'; }); };
+  // «0,75» → «0.75»: десятичная запятая в литералах русского текста (числа из fmt уже в английском формате)
+  const dec = (n) => (n && /^0,\d+$/.test(n) ? n.replace(',', '.') : n);
+  const fill = (v, nums) => { let i = 0; return v.replace(/#|\{s\}/g, (m) => { if (m === '#') return dec(nums[i++]) ?? ''; const n = nums[i - 1]; return n && n.replace(/\D/g, '') === '1' ? '' : 's'; }); };
   const SPLIT = /( · | → | — | – |, |; |: | \/ | \| |\(|\)|«|»)/;
   function one(k) {
     if (D[k] !== undefined) return D[k];
@@ -84,4 +86,4 @@ window.I18N = (() => {
   document.addEventListener('DOMContentLoaded', () => { toggle(); start(); });
   return {lang, tr, walk, miss, en: lang === 'en', locale: lang === 'en' ? 'en-GB' : 'ru-RU'};
 })();
-if (window.I18N.en) document.write('<script src="assets/i18n-en.js?v=36"><\/script>');
+if (window.I18N.en) document.write('<script src="assets/i18n-en.js?v=37"><\/script>');

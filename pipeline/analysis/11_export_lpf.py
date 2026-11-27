@@ -79,7 +79,7 @@ for f in feats:
     if f.get('when') is None: f.pop('when', None)
 lpf = {'type': 'FeatureCollection', '@context': 'https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.1.jsonld',
        'metadata': dict(title='Iter Sibiricum: места европейских травелогов о Сибири, 1800–1930', creator='Коллектив проекта РНФ № 25-28-20397',
-                        license='CC BY 4.0', created=datetime.date.today().isoformat(), homepage=BASE,
+                        license='CC BY-NC 4.0', created=datetime.date.today().isoformat(), homepage=BASE,
                         description='Места, упомянутые в корпусе травелогов (газеттир) и остановки маршрутов, восстановленных по тексту. '
                                     'Формы названий даны так, как они встречаются в книгах, со ссылкой на абзац. '
                                     'certainty=less-certain — координаты приблизительные (≈ на сайте).'),
@@ -99,6 +99,6 @@ for w, v in REV.items():
                                        years=v.get('years', ''), status=v['status'], status_ru='подтверждён экспертом' if v['status'] == 'verified' else 'проверен по тексту',
                                        stops=[dict(name=s['name'], place=s['place'], paragraph=f"{BASE}#book-{w.replace('_', '-')}-p{s['pid']}" if s.get('pid') else None,
                                                    approx=str(s.get('coord_source', '')).startswith('estimate')) for s in S])))
-json.dump(dict(type='FeatureCollection', name='Iter Sibiricum: маршруты травелогов', license='CC BY 4.0', features=rf),
+json.dump(dict(type='FeatureCollection', name='Iter Sibiricum: маршруты травелогов', license='CC BY-NC 4.0', features=rf),
           open(OUT / 'iter-sibiricum-routes.geojson', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 print('мест:', len(feats), '| из них газеттир', len(PL), '| маршрутов (поездок):', len(rf))
