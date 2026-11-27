@@ -36,7 +36,7 @@ window.SibMap = (() => {
       const A = [];
       o.areas.forEach((gr) => (gr.areas || []).forEach((a) => A.push({gr, geom: ellipse(...a)})));
       g.append('g').selectAll('path').data(A).join('path').attr('class', (d) => 'area' + (o.focusGroup === d.gr.id ? ' hi' : '')).attr('d', (d) => path(d.geom))
-        .on('mousemove', (ev, d) => show(ev, `<b>${esc(EN ? d.gr.name_en : d.gr.name)}</b>${EN ? '' : esc(d.gr.name_en) + '<br>'}${T('ареал схематично, около 1900 г.', 'approximate area, c. 1900')}<br>${ment(d.gr.mentions)} ${T('в', 'in')} ${books(d.gr.works)}`))
+        .on('mousemove', (ev, d) => show(ev, `<b>${esc(EN ? d.gr.name_en : d.gr.name)}</b>${EN ? '' : esc(d.gr.name_en) + '<br>'}${T('схематичный ареал около 1900 г.', 'schematic area, c. 1900')}<br>${ment(d.gr.mentions)} ${T('в', 'in')} ${books(d.gr.works)}`))
         .on('mouseleave', hide).on('click', (ev, d) => o.onGroup && o.onGroup(d.gr.id));
     }
     const workById = Object.fromEntries((o.works || []).map((w) => [w.id, w]));
@@ -90,7 +90,7 @@ window.SibMap = (() => {
       const mx = d3.max(P, val) || 1; const r = d3.scaleSqrt().domain([0, mx]).range([1.5, o.placeMax || 14]);
       g.append('g').selectAll('circle').data(P.filter((p) => val(p) > 0)).join('circle').attr('class', 'pcirc').attr('r', (p) => r(val(p)))
         .attr('transform', (p) => `translate(${proj([p.lon, p.lat])})`)
-        .on('mousemove', (ev, p) => show(ev, `<b>${esc(nm(p.name))}</b>${ment(p.mentions)} ${T('в', 'in')} ${books(p.works)}` + (p.groups.length ? '<br>' + T('рядом описаны: ', 'peoples described nearby: ') + p.groups.slice(0, 4).map((x) => esc(nm(x[0])) + ' (' + x[1] + ')').join(', ') : '')))
+        .on('mousemove', (ev, p) => show(ev, `<b>${esc(nm(p.name))}</b>${ment(p.mentions)} ${T('в', 'in')} ${books(p.works)}` + (p.groups.length ? '<br>' + T('в тех же абзацах: ', 'in the same paragraphs: ') + p.groups.slice(0, 4).map((x) => esc(nm(x[0])) + ' (' + x[1] + ')').join(', ') : '')))
         .on('mouseleave', hide).on('click', (ev, p) => o.onPlace && o.onPlace(p));
       if (o.labels !== false) {
         const top = P.slice().sort((a, b) => b.mentions - a.mentions).slice(0, o.nLabels || 16);

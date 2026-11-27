@@ -358,3 +358,4 @@ h1.name .ast{font-size:.42em;vertical-align:super;margin-left:.06em;color:var(--
 @media(max-width:600px){.foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.foot-col:last-child{grid-column:1/-1}}
 html:not([lang=en]) .en-only,html[lang=en] .ru-only{display:none}
 .cap::first-letter{text-transform:uppercase}
+.text p{overflow-wrap:break-word}

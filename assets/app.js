@@ -466,9 +466,9 @@ async function book(id, par) {
       <p><b>${esc(w.author)}</b><br><span class="small mute">${esc(ruOf(NAT_RU, w.nationality || ''))}${w.role ? ' · ' + esc(ruOf(ROLE_RU, w.role)) : ''}${w.gender === 'f' ? ' · женщина-автор' : ''}</span></p>
       <p class="small">Издание: ${yr(w.year)}${w.place ? ', ' + esc(w.place) : ''} · язык текста: ${esc(w.lang)}${w.translation ? ' (перевод с ' + esc(w.orig_lang) + ')' : ''}<br>Поездка: ${w.j0 ? yr(w.j0) : '?'}${w.j1 && w.j1 !== w.j0 ? '–' + yr(w.j1) : ''} · ${esc(w.stay_ru)}<br>Период: ${esc(w.period_ru)}</p>
       <p class="small">${fmt(w.words)} слов, из них о Сибири ${fmt(w.words_sib)}; ${fmt(w.mentions)} упоминаний народов (${fmt(w.per10k, 1)} на 10 тыс.)</p>
-      <div class="chips">${w.top_groups.map((g) => `<span class="chip">${esc(g[0])} · ${g[1]}</span>`).join('')}</div>
+      <div class="chips">${w.top_groups.map((g) => `<span class="chip"><span>${esc(g[0])}</span> · ${g[1]}</span>`).join('')}</div>
       <p class="small">${w.sources.map((s) => `<a href="${esc(s)}" rel="noopener">${esc(s.replace('https://', ''))}</a>`).join('<br>')}</p>
-      ${r ? `<p class="small">${r.method === 'draft' ? 'Черновик маршрута, на проверке' : 'Маршрут, восстановленный по тексту'}: ${r.stops.map((s) => esc(s[1])).join(r.method === 'draft' ? ', ' : ' → ')}. <a href="#atlas?work=${esc(id)}">Показать на карте</a></p>` : `<p class="small"><a href="#atlas?work=${esc(id)}">география книги на карте</a></p>`}
+      ${r ? `<p class="small"><span>${r.method === 'draft' ? 'Черновик маршрута, на проверке' : 'Маршрут, восстановленный по тексту'}</span>: ${r.stops.map((s) => esc(s[1])).join(r.method === 'draft' ? ', ' : ' → ')}. <a href="#atlas?work=${esc(id)}">Показать на карте</a></p>` : `<p class="small"><a href="#atlas?work=${esc(id)}">география книги на карте</a></p>`}
       <div class="ctl"><button id="onlySib">только о Сибири</button><button id="scanBtn" hidden aria-pressed="false">скан рядом с текстом</button></div>
       <label class="small mute">Найти в тексте <input type="search" id="tq" aria-label="Поиск в тексте"></label>
       <p class="small mute" id="tqn"></p>
@@ -555,7 +555,7 @@ async function links() {
       data = {nodes: d.nodes.map((n) => ({...n, label: n.name, color: CATC[n.category] || '#999', val: Math.max(1, n.degree / 8)})), links: d.links.map((l) => ({...l}))};
       legend = Object.entries(CAT).map(([k, v]) => `<span><i style="background:${CATC[k]}"></i>${v}</span>`).join('') + `<span>${d.works} книг, ${d.nodes.length} групп</span>`;
       const top = d.nodes.slice().sort((a, b) => b.betweenness - a.betweenness).slice(0, 5);
-      document.getElementById('g3info').innerHTML = 'Главные посредники (betweenness): ' + top.map((n) => `${esc(n.name)} (${fmt(n.betweenness, 2)})`).join(', ');
+      document.getElementById('g3info').innerHTML = 'Главные посредники (betweenness): ' + top.map((n) => `<span>${esc(n.name)}</span> (${fmt(n.betweenness, 2)})`).join(', ');
     } else {
       const d = N.intertext;
       const deg = {}; d.links.forEach((l) => { deg[l.target] = (deg[l.target] || 0) + l.weight; });
@@ -731,7 +731,7 @@ async function scope() {
     <p>Корпус неоднороден: ${nat('Великобритания')} книг из ${W.length} — британские. Поэтому Ngram, темы и поиск заимствований, которые считаются только по английским текстам, показывают прежде всего британский взгляд. Две книги требуют осторожности: «Сибирь» Кубальского (1856) — компиляция без собственной поездки автора, а достоверность ряда эпизодов книги Оссендовского «Звери, люди и боги» (1922) давно оспаривается.</p>
 
     <h2>Как названы народы</h2>
-    <p>Для каждого упоминания хранится слово источника («Ostiak», «Tartar», «Kirghiz») и отдельно — современное название народа, к которому оно отнесено. Соответствие исторических имён современным не всегда однозначно; спорные случаи отмечены уровнем уверенности. Рубрики на странице «Народы» — «коренные», «русские и пришлые», «соседи», «иностранцы» — рабочие: они повторяют взгляд из имперского центра, который и исследуется, и будут пересмотрены. Узел «туземцы (обобщённо)» в сети — следствие самой категории: путешественники называли так любые коренные группы, поэтому он связан со всеми.</p>
+    <p>Для каждого упоминания хранится слово источника («Ostiak», «Tartar», «Kirghiz») и отдельно — современное название народа, к которому оно отнесено. Соответствие исторических имён современным не всегда однозначно; спорные случаи отмечены уровнем уверенности. Рубрики на странице «Народы» — «коренные», «русские и пришлые», «соседи», «иностранцы» — рабочие: они повторяют взгляд из имперского центра, который и исследуется, и будут пересмотрены. Узел «туземцы, инородцы (обобщённо)» в сети связей — следствие самой категории: путешественники называли так любые коренные группы, поэтому он связан со всеми.</p>
 
     <h2>Глоссарий исторических терминов</h2>
     <dl class="gloss">
