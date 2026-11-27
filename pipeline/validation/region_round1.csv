@@ -1,81 +1,81 @@
 n,pid,work_id,region,basis,in_siberia,in_siberia_correct,note,paratext_residue,annotator
-0,kennan1870_p00360,kennan1870,kamchatka_chukotka,carry_in_chapter,True,1,,0,Claude (model)
-1,dewindt1903_p00389,dewindt1903,kamchatka_chukotka,carry_in_chapter,True,1,,0,Claude (model)
-2,knox1870_p00642,knox1870,yakutia_ne,carry_in_chapter,True,1,,0,Claude (model)
-3,michie1864_p00521,michie1864,mongolia,carry_in_chapter,False,1,,0,Claude (model)
-4,dewindt1889_p00261,dewindt1889,europe,paragraph,False,1,,0,Claude (model)
-5,dewindt1889_p00468,dewindt1889,mongolia,paragraph,False,1,,0,Claude (model)
-6,svinhufvud1928_p00972,svinhufvud1928,west_siberia,carry_in_chapter,True,1,,0,Claude (model)
-7,leroybeaulieu1900_p00361,leroybeaulieu1900,japan_korea,paragraph,False,1,,0,Claude (model)
-8,dewindt1889_p00694,dewindt1889,east_siberia,paragraph,True,1,,0,Claude (model)
-9,kennan1870_p00801,kennan1870,far_east,carry_in_chapter,True,1,,0,Claude (model)
-10,meignan1885_p00478,meignan1885,east_siberia,paragraph,True,1,,0,Claude (model)
-11,dewindt1889_p00351,dewindt1889,mongolia,paragraph,False,1,,0,Claude (model)
-12,ward1920_p00556,ward1920,europe,carry_in_chapter,False,1,,0,Claude (model)
-13,kubalski1856_p00262,kubalski1856,europe,paragraph,False,0,Kamchatka episode assigned europe (carry from earlier mention),0,Claude (model)
-14,donner1915_p00365,donner1915,west_siberia,carry_in_chapter,True,1,,0,Claude (model)
-15,barzini1908_p02365,barzini1908,european_russia,carry_in_chapter,False,1,,0,Claude (model)
-16,dewindt1889_p00633,dewindt1889,east_siberia,paragraph,True,1,,0,Claude (model)
-17,knox1870_p01177,knox1870,east_siberia,carry_in_chapter,True,1,,0,Claude (model)
-18,knox1870_p00992,knox1870,far_east,paragraph,True,1,,0,Claude (model)
-19,dewindt1889_p00449,dewindt1889,mongolia,paragraph,False,1,,0,Claude (model)
-20,gaunt1919_p00592,gaunt1919,far_east,paragraph,True,1,,0,Claude (model)
-21,dewindt1889_p00673,dewindt1889,european_russia,paragraph,False,0,Yakutsk paragraph assigned european_russia,0,Claude (model)
-22,leroybeaulieu1900_p00502,leroybeaulieu1900,china,paragraph,False,1,,0,Claude (model)
-23,knox1870_p01045,knox1870,far_east,carry_in_chapter,True,1,,0,Claude (model)
-24,dewindt1889_p00363,dewindt1889,china,paragraph,False,1,,0,Claude (model)
-25,svinhufvud1928_p01098,svinhufvud1928,west_siberia,paragraph,True,1,,0,Claude (model)
-26,leroybeaulieu1900_p00711,leroybeaulieu1900,far_east,carry_in_chapter,True,1,index line not removed,1,Claude (model)
-27,dewindt1903_p00179,dewindt1903,yakutia_ne,paragraph,True,1,,0,Claude (model)
-28,gaunt1919_p00094,gaunt1919,europe,paragraph,False,1,,0,Claude (model)
-29,michie1864_p00367,michie1864,east_siberia,carry_in_chapter,True,0,Mongolian steppe assigned east_siberia,0,Claude (model)
-30,michie1864_p00339,michie1864,mongolia,carry_in_chapter,False,1,,0,Claude (model)
-31,dewindt1889_p00389,dewindt1889,mongolia,paragraph,False,1,,0,Claude (model)
-32,meignan1885_p00288,meignan1885,european_russia,carry_in_chapter,False,1,,0,Claude (model)
-33,meignan1885_p00535,meignan1885,east_siberia,carry_in_chapter,True,1,,0,Claude (model)
-34,knox1870_p00664,knox1870,far_east,carry_in_chapter,True,1,,0,Claude (model)
-35,dewindt1889_p00285,dewindt1889,china,carry_in_chapter,False,1,,0,Claude (model)
-36,gaunt1919_p00035,gaunt1919,china,carry_in_chapter,False,1,,0,Claude (model)
-37,dewindt1889_p00214,dewindt1889,china,paragraph,False,1,,0,Claude (model)
-38,leroybeaulieu1900_p00555,leroybeaulieu1900,japan_korea,paragraph,False,1,,0,Claude (model)
-39,vanderlip1903_p00421,vanderlip1903,far_east,carry_in_chapter,True,1,,0,Claude (model)
-40,dewindt1903_p00258,dewindt1903,yakutia_ne,paragraph,True,1,,0,Claude (model)
-41,grano1893_p00298,grano1893,europe,paragraph,False,0,Granö: Siberian colony villages named 'Helsinki'/'Narva' matched as cities,0,Claude (model)
-42,knox1870_p00999,knox1870,far_east,carry_in_chapter,True,1,,0,Claude (model)
-43,dewindt1903_p00350,dewindt1903,kamchatka_chukotka,carry_in_chapter,True,1,,0,Claude (model)
-44,leroybeaulieu1900_p00430,leroybeaulieu1900,japan_korea,paragraph,False,1,,0,Claude (model)
-45,dewindt1903_p00130,dewindt1903,europe,carry_in_chapter,False,0,Siberian prison assigned europe,0,Claude (model)
-46,meignan1885_p00029,meignan1885,east_siberia,paragraph,True,0,translator preface assigned east_siberia,0,Claude (model)
-47,grano1893_p00518,grano1893,west_siberia,carry_in_chapter,True,1,,0,Claude (model)
-48,leroybeaulieu1900_p00591,leroybeaulieu1900,china,paragraph,False,1,,0,Claude (model)
-49,svinhufvud1928_p00802,svinhufvud1928,west_siberia,paragraph,True,1,,0,Claude (model)
-50,michie1864_p00902,michie1864,europe,carry_in_chapter,False,1,,0,Claude (model)
-51,donner1915_p00142,donner1915,west_siberia,paragraph,True,1,,0,Claude (model)
-52,dewindt1889_p00869,dewindt1889,east_siberia,paragraph,True,1,,0,Claude (model)
-53,meignan1885_p00430,meignan1885,west_siberia,paragraph,True,1,,0,Claude (model)
-54,meignan1885_p00079,meignan1885,kamchatka_chukotka,paragraph,True,1,chapter synopsis not removed,1,Claude (model)
-55,michie1864_p00437,michie1864,mongolia,carry_in_chapter,False,1,,0,Claude (model)
-56,donner1915_p00189,donner1915,west_siberia,carry_in_chapter,True,1,,0,Claude (model)
-57,knox1870_p00250,knox1870,kamchatka_chukotka,carry_in_chapter,True,1,,0,Claude (model)
-58,dewindt1889_p00751,dewindt1889,west_siberia,carry_in_chapter,True,1,,0,Claude (model)
-59,leroybeaulieu1900_p00484,leroybeaulieu1900,china,carry_in_chapter,False,1,,0,Claude (model)
-60,moore1919_p00567,moore1919,manchuria,carry_in_chapter,False,1,,0,Claude (model)
-61,dewindt1889_p00396,dewindt1889,mongolia,paragraph,False,1,,0,Claude (model)
-62,leroybeaulieu1900_p00622,leroybeaulieu1900,china,carry_in_chapter,False,1,index line not removed,1,Claude (model)
-63,dewindt1889_p00372,dewindt1889,china,carry_in_chapter,False,1,,0,Claude (model)
-64,michie1864_p00271,michie1864,european_russia,carry_in_chapter,False,1,,0,Claude (model)
-65,donner1915_p00293,donner1915,east_siberia,paragraph,True,1,,0,Claude (model)
-66,knox1870_p02316,knox1870,european_russia,paragraph,False,1,,0,Claude (model)
-67,michie1864_p00870,michie1864,european_russia,carry_in_chapter,False,1,,0,Claude (model)
-68,leroybeaulieu1900_p00282,leroybeaulieu1900,japan_korea,paragraph,False,1,,0,Claude (model)
-69,knox1870_p01100,knox1870,east_siberia,carry_in_chapter,True,1,,0,Claude (model)
-70,ready1904_p00044,ready1904,european_russia,carry_in_chapter,False,1,,0,Claude (model)
-71,kennan1870_p00233,kennan1870,kamchatka_chukotka,carry_in_chapter,True,1,,0,Claude (model)
-72,knox1870_p01607,knox1870,european_russia,paragraph,False,0,Siberian exiles paragraph assigned european_russia,0,Claude (model)
-73,knox1870_p01429,knox1870,east_siberia,paragraph,True,1,,0,Claude (model)
-74,kennan1870_p00748,kennan1870,kamchatka_chukotka,paragraph,True,1,,0,Claude (model)
-75,grano1893_p00439,grano1893,west_siberia,carry_in_chapter,True,1,,0,Claude (model)
-76,gaunt1919_p00744,gaunt1919,far_east,paragraph,True,1,,0,Claude (model)
-77,svinhufvud1928_p00451,svinhufvud1928,west_siberia,paragraph,True,1,,0,Claude (model)
-78,donner1915_p00125,donner1915,west_siberia,paragraph,True,1,,0,Claude (model)
-79,moore1919_p00353,moore1919,european_russia,paragraph,False,0,'Moscow biscuits' on Trans-Siberian train -> european_russia,0,Claude (model)
+0,kennan1870_p00360,kennan1870,kamchatka_chukotka,carry_in_chapter,True,1,,0,model
+1,dewindt1903_p00389,dewindt1903,kamchatka_chukotka,carry_in_chapter,True,1,,0,model
+2,knox1870_p00642,knox1870,yakutia_ne,carry_in_chapter,True,1,,0,model
+3,michie1864_p00521,michie1864,mongolia,carry_in_chapter,False,1,,0,model
+4,dewindt1889_p00261,dewindt1889,europe,paragraph,False,1,,0,model
+5,dewindt1889_p00468,dewindt1889,mongolia,paragraph,False,1,,0,model
+6,svinhufvud1928_p00972,svinhufvud1928,west_siberia,carry_in_chapter,True,1,,0,model
+7,leroybeaulieu1900_p00361,leroybeaulieu1900,japan_korea,paragraph,False,1,,0,model
+8,dewindt1889_p00694,dewindt1889,east_siberia,paragraph,True,1,,0,model
+9,kennan1870_p00801,kennan1870,far_east,carry_in_chapter,True,1,,0,model
+10,meignan1885_p00478,meignan1885,east_siberia,paragraph,True,1,,0,model
+11,dewindt1889_p00351,dewindt1889,mongolia,paragraph,False,1,,0,model
+12,ward1920_p00556,ward1920,europe,carry_in_chapter,False,1,,0,model
+13,kubalski1856_p00262,kubalski1856,europe,paragraph,False,0,Kamchatka episode assigned europe (carry from earlier mention),0,model
+14,donner1915_p00365,donner1915,west_siberia,carry_in_chapter,True,1,,0,model
+15,barzini1908_p02365,barzini1908,european_russia,carry_in_chapter,False,1,,0,model
+16,dewindt1889_p00633,dewindt1889,east_siberia,paragraph,True,1,,0,model
+17,knox1870_p01177,knox1870,east_siberia,carry_in_chapter,True,1,,0,model
+18,knox1870_p00992,knox1870,far_east,paragraph,True,1,,0,model
+19,dewindt1889_p00449,dewindt1889,mongolia,paragraph,False,1,,0,model
+20,gaunt1919_p00592,gaunt1919,far_east,paragraph,True,1,,0,model
+21,dewindt1889_p00673,dewindt1889,european_russia,paragraph,False,0,Yakutsk paragraph assigned european_russia,0,model
+22,leroybeaulieu1900_p00502,leroybeaulieu1900,china,paragraph,False,1,,0,model
+23,knox1870_p01045,knox1870,far_east,carry_in_chapter,True,1,,0,model
+24,dewindt1889_p00363,dewindt1889,china,paragraph,False,1,,0,model
+25,svinhufvud1928_p01098,svinhufvud1928,west_siberia,paragraph,True,1,,0,model
+26,leroybeaulieu1900_p00711,leroybeaulieu1900,far_east,carry_in_chapter,True,1,index line not removed,1,model
+27,dewindt1903_p00179,dewindt1903,yakutia_ne,paragraph,True,1,,0,model
+28,gaunt1919_p00094,gaunt1919,europe,paragraph,False,1,,0,model
+29,michie1864_p00367,michie1864,east_siberia,carry_in_chapter,True,0,Mongolian steppe assigned east_siberia,0,model
+30,michie1864_p00339,michie1864,mongolia,carry_in_chapter,False,1,,0,model
+31,dewindt1889_p00389,dewindt1889,mongolia,paragraph,False,1,,0,model
+32,meignan1885_p00288,meignan1885,european_russia,carry_in_chapter,False,1,,0,model
+33,meignan1885_p00535,meignan1885,east_siberia,carry_in_chapter,True,1,,0,model
+34,knox1870_p00664,knox1870,far_east,carry_in_chapter,True,1,,0,model
+35,dewindt1889_p00285,dewindt1889,china,carry_in_chapter,False,1,,0,model
+36,gaunt1919_p00035,gaunt1919,china,carry_in_chapter,False,1,,0,model
+37,dewindt1889_p00214,dewindt1889,china,paragraph,False,1,,0,model
+38,leroybeaulieu1900_p00555,leroybeaulieu1900,japan_korea,paragraph,False,1,,0,model
+39,vanderlip1903_p00421,vanderlip1903,far_east,carry_in_chapter,True,1,,0,model
+40,dewindt1903_p00258,dewindt1903,yakutia_ne,paragraph,True,1,,0,model
+41,grano1893_p00298,grano1893,europe,paragraph,False,0,Granö: Siberian colony villages named 'Helsinki'/'Narva' matched as cities,0,model
+42,knox1870_p00999,knox1870,far_east,carry_in_chapter,True,1,,0,model
+43,dewindt1903_p00350,dewindt1903,kamchatka_chukotka,carry_in_chapter,True,1,,0,model
+44,leroybeaulieu1900_p00430,leroybeaulieu1900,japan_korea,paragraph,False,1,,0,model
+45,dewindt1903_p00130,dewindt1903,europe,carry_in_chapter,False,0,Siberian prison assigned europe,0,model
+46,meignan1885_p00029,meignan1885,east_siberia,paragraph,True,0,translator preface assigned east_siberia,0,model
+47,grano1893_p00518,grano1893,west_siberia,carry_in_chapter,True,1,,0,model
+48,leroybeaulieu1900_p00591,leroybeaulieu1900,china,paragraph,False,1,,0,model
+49,svinhufvud1928_p00802,svinhufvud1928,west_siberia,paragraph,True,1,,0,model
+50,michie1864_p00902,michie1864,europe,carry_in_chapter,False,1,,0,model
+51,donner1915_p00142,donner1915,west_siberia,paragraph,True,1,,0,model
+52,dewindt1889_p00869,dewindt1889,east_siberia,paragraph,True,1,,0,model
+53,meignan1885_p00430,meignan1885,west_siberia,paragraph,True,1,,0,model
+54,meignan1885_p00079,meignan1885,kamchatka_chukotka,paragraph,True,1,chapter synopsis not removed,1,model
+55,michie1864_p00437,michie1864,mongolia,carry_in_chapter,False,1,,0,model
+56,donner1915_p00189,donner1915,west_siberia,carry_in_chapter,True,1,,0,model
+57,knox1870_p00250,knox1870,kamchatka_chukotka,carry_in_chapter,True,1,,0,model
+58,dewindt1889_p00751,dewindt1889,west_siberia,carry_in_chapter,True,1,,0,model
+59,leroybeaulieu1900_p00484,leroybeaulieu1900,china,carry_in_chapter,False,1,,0,model
+60,moore1919_p00567,moore1919,manchuria,carry_in_chapter,False,1,,0,model
+61,dewindt1889_p00396,dewindt1889,mongolia,paragraph,False,1,,0,model
+62,leroybeaulieu1900_p00622,leroybeaulieu1900,china,carry_in_chapter,False,1,index line not removed,1,model
+63,dewindt1889_p00372,dewindt1889,china,carry_in_chapter,False,1,,0,model
+64,michie1864_p00271,michie1864,european_russia,carry_in_chapter,False,1,,0,model
+65,donner1915_p00293,donner1915,east_siberia,paragraph,True,1,,0,model
+66,knox1870_p02316,knox1870,european_russia,paragraph,False,1,,0,model
+67,michie1864_p00870,michie1864,european_russia,carry_in_chapter,False,1,,0,model
+68,leroybeaulieu1900_p00282,leroybeaulieu1900,japan_korea,paragraph,False,1,,0,model
+69,knox1870_p01100,knox1870,east_siberia,carry_in_chapter,True,1,,0,model
+70,ready1904_p00044,ready1904,european_russia,carry_in_chapter,False,1,,0,model
+71,kennan1870_p00233,kennan1870,kamchatka_chukotka,carry_in_chapter,True,1,,0,model
+72,knox1870_p01607,knox1870,european_russia,paragraph,False,0,Siberian exiles paragraph assigned european_russia,0,model
+73,knox1870_p01429,knox1870,east_siberia,paragraph,True,1,,0,model
+74,kennan1870_p00748,kennan1870,kamchatka_chukotka,paragraph,True,1,,0,model
+75,grano1893_p00439,grano1893,west_siberia,carry_in_chapter,True,1,,0,model
+76,gaunt1919_p00744,gaunt1919,far_east,paragraph,True,1,,0,model
+77,svinhufvud1928_p00451,svinhufvud1928,west_siberia,paragraph,True,1,,0,model
+78,donner1915_p00125,donner1915,west_siberia,paragraph,True,1,,0,model
+79,moore1919_p00353,moore1919,european_russia,paragraph,False,0,'Moscow biscuits' on Trans-Siberian train -> european_russia,0,model

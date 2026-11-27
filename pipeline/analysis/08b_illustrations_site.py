@@ -76,6 +76,9 @@ def main():
         if r.get('source') == 'gutenberg': items[-1]['src'] = 'pg'; items[-1]['u'] = r['src_url']
         it = items[-1]
         it['rg'], it['rb'] = macro(it['pl'], r['pid'])
+        # киргизы Памира и Тянь-Шаня — отдельная группа (как в 03_extract), а не казахи
+        if 'kazakh_kirghiz' in it['g'] and (r['work_id'] == 'etherton1911' or re.search(r'Kara[- ]?Kirgh|Kara[- ]?Kirgis', it['c'] or '', re.I)):
+            it['g'] = ['kyrgyz' if x == 'kazakh_kirghiz' else x for x in it['g']]
         unmapped.update(x for x in it['pl'] if x not in MAC)
         if r['vkind'] and (it['k'] in ('other', 'unknown', '') or not it['c']): it['k'] = r['vkind']
         if it['k'] == 'unknown': it['k'] = 'other'

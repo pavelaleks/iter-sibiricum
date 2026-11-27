@@ -19,7 +19,8 @@ atkinson1860,cossack,181,1860,1848,en,british,P1 до 1855,85132,1840,казак
 atkinson1860,evenki_even,33,1860,1848,en,british,P1 до 1855,85132,1840,эвенки / эвены
 atkinson1860,exiles,36,1860,1848,en,british,P1 до 1855,85132,1840,ссыльные и каторжные
 atkinson1860,japanese,2,1860,1848,en,british,P1 до 1855,85132,1840,японцы
-atkinson1860,kazakh_kirghiz,121,1860,1848,en,british,P1 до 1855,85132,1840,казахи ('киргизы' XIX в.)
+atkinson1860,kazakh_kirghiz,119,1860,1848,en,british,P1 до 1855,85132,1840,казахи ('киргизы' XIX в.)
+atkinson1860,kyrgyz,2,1860,1848,en,british,P1 до 1855,85132,1840,киргизы (тянь-шаньские и памирские)
 atkinson1860,mongol,2,1860,1848,en,british,P1 до 1855,85132,1840,монголы
 atkinson1860,nanai_amur,33,1860,1848,en,british,P1 до 1855,85132,1840,нанайцы и др. народы Амура
 atkinson1860,natives_generic,10,1860,1848,en,british,P1 до 1855,85132,1840,"«туземцы», «инородцы» (обобщённо)"
@@ -108,8 +109,9 @@ carruthers1914,evenki_even,8,1914,1910,en,british,P4 1905–1917,80102,1910,эв
 carruthers1914,exiles,1,1914,1910,en,british,P4 1905–1917,80102,1910,ссыльные и каторжные
 carruthers1914,finn_estonian,2,1914,1910,en,british,P4 1905–1917,80102,1910,финны и эстонцы
 carruthers1914,japanese,1,1914,1910,en,british,P4 1905–1917,80102,1910,японцы
-carruthers1914,kazakh_kirghiz,28,1914,1910,en,british,P4 1905–1917,80102,1910,казахи ('киргизы' XIX в.)
+carruthers1914,kazakh_kirghiz,27,1914,1910,en,british,P4 1905–1917,80102,1910,казахи ('киргизы' XIX в.)
 carruthers1914,khanty,2,1914,1910,en,british,P4 1905–1917,80102,1910,ханты
+carruthers1914,kyrgyz,1,1914,1910,en,british,P4 1905–1917,80102,1910,киргизы (тянь-шаньские и памирские)
 carruthers1914,mongol,124,1914,1910,en,british,P4 1905–1917,80102,1910,монголы
 carruthers1914,natives_generic,28,1914,1910,en,british,P4 1905–1917,80102,1910,"«туземцы», «инородцы» (обобщённо)"
 carruthers1914,pereselentsy,29,1914,1910,en,british,P4 1905–1917,80102,1910,переселенцы
@@ -1340,9 +1342,10 @@ radloff1893,chinese,64,1893,1860,de,german,P2 1856–1880,93470,1860,китай�
 radloff1893,chukchi,1,1893,1860,de,german,P2 1856–1880,93470,1860,чукчи
 radloff1893,cossack,90,1893,1860,de,german,P2 1856–1880,93470,1860,казаки
 radloff1893,kamas,12,1893,1860,de,german,P2 1856–1880,93470,1860,камасинцы
-radloff1893,kazakh_kirghiz,372,1893,1860,de,german,P2 1856–1880,93470,1860,казахи ('киргизы' XIX в.)
+radloff1893,kazakh_kirghiz,365,1893,1860,de,german,P2 1856–1880,93470,1860,казахи ('киргизы' XIX в.)
 radloff1893,ket,6,1893,1860,de,german,P2 1856–1880,93470,1860,кеты
 radloff1893,khanty,8,1893,1860,de,german,P2 1856–1880,93470,1860,ханты
+radloff1893,kyrgyz,7,1893,1860,de,german,P2 1856–1880,93470,1860,киргизы (тянь-шаньские и памирские)
 radloff1893,mongol,36,1893,1860,de,german,P2 1856–1880,93470,1860,монголы
 radloff1893,natives_generic,32,1893,1860,de,german,P2 1856–1880,93470,1860,"«туземцы», «инородцы» (обобщённо)"
 radloff1893,pereselentsy,9,1893,1860,de,german,P2 1856–1880,93470,1860,переселенцы
@@ -1469,8 +1472,9 @@ sommier1885,chukchi,3,1885,1880,it,italian,P2 1856–1880,141860,1880,чукчи
 sommier1885,cossack,114,1885,1880,it,italian,P2 1856–1880,141860,1880,казаки
 sommier1885,evenki_even,2,1885,1880,it,italian,P2 1856–1880,141860,1880,эвенки / эвены
 sommier1885,exiles,42,1885,1880,it,italian,P2 1856–1880,141860,1880,ссыльные и каторжные
-sommier1885,kazakh_kirghiz,81,1885,1880,it,italian,P2 1856–1880,141860,1880,казахи ('киргизы' XIX в.)
+sommier1885,kazakh_kirghiz,79,1885,1880,it,italian,P2 1856–1880,141860,1880,казахи ('киргизы' XIX в.)
 sommier1885,khanty,580,1885,1880,it,italian,P2 1856–1880,141860,1880,ханты
+sommier1885,kyrgyz,2,1885,1880,it,italian,P2 1856–1880,141860,1880,киргизы (тянь-шаньские и памирские)
 sommier1885,mongol,10,1885,1880,it,italian,P2 1856–1880,141860,1880,монголы
 sommier1885,natives_generic,158,1885,1880,it,italian,P2 1856–1880,141860,1880,"«туземцы», «инородцы» (обобщённо)"
 sommier1885,russian,156,1885,1880,it,italian,P2 1856–1880,141860,1880,русские
@@ -1570,7 +1574,8 @@ tytgat1901,russian,6,1901,1900,fr,french,P3 1881–1904,11092,1900,русски�
 ujfalvy1879,altai_kalmyk,3,1879,1876,fr,central_european,P2 1856–1880,4838,1870,алтайцы / ойраты ('калмыки')
 ujfalvy1879,chinese,1,1879,1876,fr,central_european,P2 1856–1880,4838,1870,китайцы
 ujfalvy1879,cossack,1,1879,1876,fr,central_european,P2 1856–1880,4838,1870,казаки
-ujfalvy1879,kazakh_kirghiz,20,1879,1876,fr,central_european,P2 1856–1880,4838,1870,казахи ('киргизы' XIX в.)
+ujfalvy1879,kazakh_kirghiz,17,1879,1876,fr,central_european,P2 1856–1880,4838,1870,казахи ('киргизы' XIX в.)
+ujfalvy1879,kyrgyz,3,1879,1876,fr,central_european,P2 1856–1880,4838,1870,киргизы (тянь-шаньские и памирские)
 ujfalvy1879,mansi,2,1879,1876,fr,central_european,P2 1856–1880,4838,1870,манси
 ujfalvy1879,samoyedic,1,1879,1876,fr,central_european,P2 1856–1880,4838,1870,самодийские народы (без уточнения)
 ujfalvy1879,siberian_tatar,2,1879,1876,fr,central_european,P2 1856–1880,4838,1870,татары (в т.ч. сибирские)

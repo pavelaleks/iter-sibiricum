@@ -100,6 +100,13 @@ for p in paras:
                                  ethnonym_id=d['ethnonym_id'], form=m.group(0), group_id=d['group_id'], map_conf=d['conf'],
                                  start=m.start(), end=m.end(), region=p['region'], in_siberia=p['in_siberia'],
                                  left=t[max(0, m.start()-220):m.start()], right=t[m.end():m.end()+220]))
+# «Kirghiz» XIX в. в Западной Сибири и Степном крае — казахи; киргизы Тянь-Шаня и Памира («Kara-Kirghiz», «дикокаменные»)
+# выделены в отдельную группу: по слову «Kara-» перед этнонимом и для книг, где речь о Памире и Кашгарии (вне Сибири)
+KYRGYZ_LEFT = re.compile(r"(?:\bKara[\s-]?|\bdikokamenn\w*\s+|\bBlack\s+)$", re.I)
+KYRGYZ_WORKS = {'etherton1911'}
+for m in mentions:
+    if m['group_id'] == 'kazakh_kirghiz' and (KYRGYZ_LEFT.search(m['left'][-20:]) or (m['work_id'] in KYRGYZ_WORKS and not m['in_siberia'])):
+        m['group_id'] = 'kyrgyz'; m['ethnonym_id'] = 'kara_kirghiz'
 mentions.sort(key=lambda x: (x['pid'], x['start']))
 
 # --- 4. маршруты: остановки из паспорта источника, доказательство = первый абзац с упоминанием после предыдущей остановки ---

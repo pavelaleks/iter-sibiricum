@@ -29,7 +29,7 @@
   "themes_P": 0.49,
   "themes_R": 0.53
  },
- "annotator": "Claude (model), single annotator; human second annotator required",
+ "annotator": "model (single annotator; expert check pending; second human annotator required)",
  "errors_found": [
   "adjective: Finnish ship (country, not people)",
   "adjective: Chinese frontier (en text matched by de pattern)",

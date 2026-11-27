@@ -5,7 +5,7 @@ exiles,2123,91,ссыльные и каторжные,social
 khanty,2043,49,ханты,indigenous
 natives_generic,1773,79,"«туземцы», «инородцы» (обобщённо)",generic
 samoyedic,1728,45,самодийские народы (без уточнения),indigenous
-kazakh_kirghiz,1611,67,казахи ('киргизы' XIX в.),indigenous
+kazakh_kirghiz,1596,67,казахи ('киргизы' XIX в.),indigenous
 siberian_tatar,1363,85,татары (в т.ч. сибирские),indigenous
 evenki_even,1054,58,эвенки / эвены,indigenous
 sakha,1024,45,якуты (саха),indigenous
@@ -41,3 +41,4 @@ yukaghir,36,12,юкагиры,indigenous
 selkup,25,3,селькупы,indigenous
 ukrainian,17,10,украинцы ('малороссы'),settler
 mansi,16,4,манси,indigenous
+kyrgyz,15,5,киргизы (тянь-шаньские и памирские),neighbour

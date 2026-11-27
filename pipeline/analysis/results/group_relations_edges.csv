@@ -45,13 +45,14 @@ altai_kalmyk,finn_estonian,co_mention,1,['grano1893'],grano1893_p00441
 altai_kalmyk,german,co_mention,1,['grano1893'],grano1893_p00441
 altai_kalmyk,jew,co_mention,1,['grano1893'],grano1893_p00441
 altai_kalmyk,kazakh_kirghiz,administration_tribute,4,"['cochrane1829', 'colquhoun1900', 'radloff1893']",cochrane1829_p00626
-altai_kalmyk,kazakh_kirghiz,co_mention,41,"['atkinson1858', 'atkinson1860', 'boulangier1891', 'carruthers1914', 'cochrane1829', 'cottrell1842', 'dobell1830', 'finsch1879', 'gerrare1903', 'grano1893', 'grondijs1922', 'kotzebue1802', 'kubalski1856', 'lansdell1883', 'latkinson1863', 'perryayscough1914', 'radloff1893', 'rosenberg1904', 'ujfalvy1879', 'vaydevaya1906']",atkinson1858_p02260
+altai_kalmyk,kazakh_kirghiz,co_mention,40,"['atkinson1858', 'atkinson1860', 'boulangier1891', 'carruthers1914', 'cochrane1829', 'cottrell1842', 'dobell1830', 'finsch1879', 'gerrare1903', 'grano1893', 'grondijs1922', 'kotzebue1802', 'kubalski1856', 'lansdell1883', 'latkinson1863', 'perryayscough1914', 'radloff1893', 'rosenberg1904', 'vaydevaya1906']",atkinson1858_p02260
 altai_kalmyk,kazakh_kirghiz,coexistence_neighbourhood,1,['radloff1893'],radloff1893_p00880
 altai_kalmyk,kazakh_kirghiz,conflict,4,"['finsch1879', 'gerrare1903', 'radloff1893']",finsch1879_p00765
 altai_kalmyk,kazakh_kirghiz,intermarriage_mixing,1,['atkinson1860'],atkinson1860_p00300
 altai_kalmyk,kazakh_kirghiz,religious_mission,1,['debaye1897'],debaye1897_p00168
 altai_kalmyk,kazakh_kirghiz,trade_exchange,3,"['atkinson1860', 'cochrane1829', 'gerrare1903']",atkinson1860_p01032
 altai_kalmyk,khanty,co_mention,1,['boulangier1891'],boulangier1891_p02244
+altai_kalmyk,kyrgyz,co_mention,1,['ujfalvy1879'],ujfalvy1879_p01297
 altai_kalmyk,manchu,co_mention,1,['finsch1879'],finsch1879_p01081
 altai_kalmyk,mongol,co_mention,10,"['carruthers1914', 'cottrell1842', 'dobell1830', 'grondijs1922', 'hansteen1857', 'joest1883', 'michie1864', 'radloff1893']",carruthers1914_p00792
 altai_kalmyk,mongol,trade_exchange,2,"['michie1864', 'ronaldshay1904']",michie1864_p00714
@@ -662,6 +663,8 @@ kamas,tuvan,co_mention,2,['castren1856'],castren1856_p01415
 kazakh_kirghiz,khanty,co_mention,11,"['boulangier1891', 'castren1856', 'finsch1879', 'heller1930', 'lansdell1883', 'meakin1901', 'mpprice1912', 'rosenberg1904', 'sommier1885']",boulangier1891_p02244
 kazakh_kirghiz,khanty,trade_exchange,1,['erman1833'],erman1833_p02551
 kazakh_kirghiz,korean,co_mention,1,['harrison1910'],harrison1910_p00478
+kazakh_kirghiz,kyrgyz,administration_tribute,1,['carruthers1914'],carruthers1914_p01414
+kazakh_kirghiz,kyrgyz,co_mention,3,"['radloff1893', 'sommier1885', 'ujfalvy1879']",radloff1893_p03538
 kazakh_kirghiz,manchu,co_mention,1,['meignan1877'],meignan1877_p00646
 kazakh_kirghiz,manchu,conflict,1,['finsch1879'],finsch1879_p01293
 kazakh_kirghiz,mongol,administration_tribute,2,"['carruthers1914', 'radloff1893']",carruthers1914_p01567
@@ -818,6 +821,7 @@ koryak,sibiriak,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
 koryak,yukaghir,co_mention,2,"['cochrane1829', 'simpson1898']",cochrane1829_p00722
 koryak,yukaghir,coexistence_neighbourhood,1,['digby1928'],digby1928_p00117
 koryak,yukaghir,labour_service,1,['maynard1859'],maynard1859_p00470
+kyrgyz,russian,co_mention,1,['sommier1885'],sommier1885_p03059
 manchu,mongol,administration_tribute,3,"['colquhoun1900', 'harrison1910']",colquhoun1900_p00095
 manchu,mongol,co_mention,10,"['castren1856', 'digby1928', 'gerrare1903', 'hawes1903', 'lansdell1883', 'meignan1877', 'nansen1914']",castren1856_p00751
 manchu,mongol,coexistence_neighbourhood,1,['harrison1910'],harrison1910_p00255

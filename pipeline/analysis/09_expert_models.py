@@ -19,7 +19,7 @@ L = pd.concat([pd.read_csv(f, sep='\t', header=None, names=['i', 'pol', 'obs_m',
                for f in sorted(glob.glob(str(ROOT / 'validation/expert_v04_labels_b*.tsv')))])
 L['i'] = L.i.astype(int)
 E = S.join(L.set_index('i'), how='inner')
-E['annotator'] = 'Claude'; E['stay'] = E.work_id.map(W.stay_type); E['nat'] = E.work_id.map(W.nat_group); E['gender'] = E.work_id.map(W.gender)
+E['annotator'] = 'model'; E['stay'] = E.work_id.map(W.stay_type); E['nat'] = E.work_id.map(W.nat_group); E['gender'] = E.work_id.map(W.gender)
 E.drop(columns=['polarity', 'obs_type']).to_csv(ROOT / 'data/expert_annotations_v04.csv', index=False)
 valid = E[E.pol != 'invalid'].copy()
 inv = (E.pol == 'invalid').sum(); lo, hi = wilson(len(E) - inv, len(E))
@@ -98,4 +98,4 @@ jdump('expert_v04.json', dict(validity=dict(units=len(E), invalid=int(inv), shar
                               relations=dict(rule_precision=round(k / len(typed), 3), rule_precision_ci=[round(lo, 3), round(hi, 3)], untyped_with_relation=round(miss, 3),
                                              profile=prof.to_dict(orient='records')),
                               stereotypes=valid[valid.stereotype.str.len() > 0][['work', 'group', 'pol', 'obs_m', 'frame', 'stereotype', 'pid', 'context']].assign(context=lambda d: d.context.str[:300]).to_dict(orient='records'),
-                              note='разметчик — Claude (один); веса страт; ДИ — кластерный бутстреп по книгам'))
+                              note='разметчик — языковая модель (один, предварительно); веса страт; ДИ — кластерный бутстреп по книгам'))

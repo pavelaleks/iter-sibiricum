@@ -1,151 +1,151 @@
 n,mid,work_id,group_id,ethnonym_id,form,correct,error_note,round,annotator
-0,gaunt1919_p00549_117,gaunt1919,chinese,chinese,Chinaman,1,,1,"Claude (model), single-annotator judgement"
-1,barzini1908_p01247_151,barzini1908,chinese,chinese,Chinesen,1,,1,"Claude (model), single-annotator judgement"
-2,barzini1908_p01145_1,barzini1908,russian,russian,Russen,1,,1,"Claude (model), single-annotator judgement"
-3,leroybeaulieu1900_p00125_1107,leroybeaulieu1900,exiles,exile,exiles,1,,1,"Claude (model), single-annotator judgement"
-4,donner1915_p00075_36,donner1915,samoyedic,samoyed,samojedit,1,,1,"Claude (model), single-annotator judgement"
-5,leroybeaulieu1900_p00239_172,leroybeaulieu1900,korean,korean,Koreans,1,,1,"Claude (model), single-annotator judgement"
-6,leroybeaulieu1900_p00093_176,leroybeaulieu1900,siberian_tatar,tartar,Tatar,1,,1,"Claude (model), single-annotator judgement"
-7,knox1870_p01028_658,knox1870,cossack,cossack,Cossack,1,,1,"Claude (model), single-annotator judgement"
-8,grano1893_p00030_134,grano1893,finn_estonian,finn,suomalaisella,0,"adjective: Finnish ship (country, not people)",1,"Claude (model), single-annotator judgement"
-9,knox1870_p01899_348,knox1870,russian,russian,Russians,1,,1,"Claude (model), single-annotator judgement"
-10,knox1870_p00789_12,knox1870,pereselentsy,settlers,colonists,1,,1,"Claude (model), single-annotator judgement"
-11,ward1920_p00055_68,ward1920,czech_slovak,czech,Czechs,1,,1,"Claude (model), single-annotator judgement"
-12,dewindt1903_p00270_111,dewindt1903,exiles,exile,exiles,1,,1,"Claude (model), single-annotator judgement"
-13,dewindt1903_p00246_784,dewindt1903,political_exiles,political_exile,political exiles,1,,1,"Claude (model), single-annotator judgement"
-14,dewindt1903_p00324_345,dewindt1903,chukchi,chukchi,Tchuktchi,1,,1,"Claude (model), single-annotator judgement"
-15,grano1893_p00121_277,grano1893,russian,russian,venäläisissä,1,,1,"Claude (model), single-annotator judgement"
-16,svinhufvud1928_p00776_44,svinhufvud1928,exiles,exile,karkoitettua,1,,1,"Claude (model), single-annotator judgement"
-17,grano1893_p00062_2425,grano1893,finn_estonian,finn,suomalaista,1,,1,"Claude (model), single-annotator judgement"
-18,kennan1870_p00521_1851,kennan1870,itelmen_kamchadal,kamchadal,Kamchadals,1,,1,"Claude (model), single-annotator judgement"
-19,knox1870_p01134_182,knox1870,cossack,cossack,Cossack,1,,1,"Claude (model), single-annotator judgement"
-20,kennan1870_p00502_106,kennan1870,koryak,koryak,Koraks,1,,1,"Claude (model), single-annotator judgement"
-21,moore1919_p00204_21,moore1919,russian,russian,Russians,1,,1,"Claude (model), single-annotator judgement"
-22,ward1920_p00189_60,ward1920,czech_slovak,czech,Czecho-Slovak,1,,1,"Claude (model), single-annotator judgement"
-23,knox1870_p00828_159,knox1870,chinese,chinese,and Chinese,1,,1,"Claude (model), single-annotator judgement"
-24,ward1920_p00518_316,ward1920,chinese,chinese,Chinese,0,adjective: Chinese frontier (en text matched by de pattern),1,"Claude (model), single-annotator judgement"
-25,donner1915_p00069_1100,donner1915,samoyedic,samoyed,samojedi,1,,1,"Claude (model), single-annotator judgement"
-26,ward1920_p00356_1320,ward1920,russian,russian,Russians,1,,1,"Claude (model), single-annotator judgement"
-27,vanderlip1903_p00229_158,vanderlip1903,korean,korean,Koreans,1,,1,"Claude (model), single-annotator judgement"
-28,michie1864_p00366_319,michie1864,mongol,mongol,Mongols,1,,1,"Claude (model), single-annotator judgement"
-29,vanderlip1903_p00126_432,vanderlip1903,natives_generic,natives,natives,1,,1,"Claude (model), single-annotator judgement"
-30,kennan1870_p00518_1228,kennan1870,natives_generic,natives,natives,1,,1,"Claude (model), single-annotator judgement"
-31,knox1870_p00329_331,knox1870,natives_generic,natives,natives,1,,1,"Claude (model), single-annotator judgement"
-32,moore1919_p00819_338,moore1919,political_exiles,political_exile,political convict,1,,1,"Claude (model), single-annotator judgement"
-33,dewindt1903_p00218_762,dewindt1903,exiles,exile,exile,1,,1,"Claude (model), single-annotator judgement"
-34,donner1915_p00017_566,donner1915,samoyedic,samoyed,samojedit,1,,1,"Claude (model), single-annotator judgement"
-35,dewindt1889_p00876_2555,dewindt1889,sibiriak,sibiriak,Siberians,1,,1,"Claude (model), single-annotator judgement"
-36,donner1915_p00378_1069,donner1915,kamas,kamas,kamassit,1,,1,"Claude (model), single-annotator judgement"
-37,knox1870_p02018_434,knox1870,kazakh_kirghiz,kirghiz,Kirghese,1,,1,"Claude (model), single-annotator judgement"
-38,vanderlip1903_p00133_75,vanderlip1903,exiles,exile,convict,1,,1,"Claude (model), single-annotator judgement"
-39,vanderlip1903_p00268_803,vanderlip1903,koryak,koryak,Koraks,1,,1,"Claude (model), single-annotator judgement"
-40,ready1904_p00080_56,ready1904,manchu,manchu,Manchu,1,,1,"Claude (model), single-annotator judgement"
-41,knox1870_p01823_865,knox1870,russian,russian,Russians,1,,1,"Claude (model), single-annotator judgement"
-42,moore1919_p00430_262,moore1919,japanese,japanese,Japanese soldiers,1,,1,"Claude (model), single-annotator judgement"
-43,meignan1885_p00079_143,meignan1885,chinese,chinese,the Chinese,1,,1,"Claude (model), single-annotator judgement"
-44,kennan1870_p00260_82,kennan1870,natives_generic,natives,natives,1,,1,"Claude (model), single-annotator judgement"
-45,donner1915_p00077_86,donner1915,samoyedic,samoyed,samojedeilla,1,,1,"Claude (model), single-annotator judgement"
-46,grano1893_p00506_388,grano1893,kazakh_kirghiz,kirghiz,kirgiisi,1,,1,"Claude (model), single-annotator judgement"
-47,grano1893_p00065_135,grano1893,russian,russian,venäläisissä,0,adjective: Russian documents (state),1,"Claude (model), single-annotator judgement"
-48,dewindt1903_p00141_809,dewindt1903,political_exiles,political_exile,political exiles,1,,1,"Claude (model), single-annotator judgement"
-49,knox1870_p01028_342,knox1870,pereselentsy,settlers,colonists,1,,1,"Claude (model), single-annotator judgement"
-50,barzini1908_p01686_1284,barzini1908,siberian_tatar,tartar,Tataren,1,,1,"Claude (model), single-annotator judgement"
-51,meignan1885_p00505_590,meignan1885,samoyedic,samoyed,Samoyeds,1,,1,"Claude (model), single-annotator judgement"
-52,dewindt1903_p00399_341,dewindt1903,natives_generic,natives,natives,1,,1,"Claude (model), single-annotator judgement"
-53,donner1915_p00071_522,donner1915,samoyedic,samoyed,samojedin,1,,1,"Claude (model), single-annotator judgement"
-54,meignan1885_p00911_816,meignan1885,chinese,chinese,Chinese,1,,1,"Claude (model), single-annotator judgement"
-55,leroybeaulieu1900_p00171_714,leroybeaulieu1900,pereselentsy,settlers,emigrants,1,,1,"Claude (model), single-annotator judgement"
-56,kubalski1856_p00125_531,kubalski1856,russian,russian,des Russes,1,,1,"Claude (model), single-annotator judgement"
-57,grano1893_p00150_732,grano1893,finn_estonian,finn,suomalaiselle,1,,1,"Claude (model), single-annotator judgement"
-58,gaunt1919_p00848_362,gaunt1919,siberian_tatar,tartar,Tartar,1,,1,"Claude (model), single-annotator judgement"
-59,donner1915_p00125_323,donner1915,samoyedic,samoyed,samojedin,1,,1,"Claude (model), single-annotator judgement"
-60,knox1870_p00451_188,knox1870,cossack,cossack,Cossacks,1,,1,"Claude (model), single-annotator judgement"
-61,leroybeaulieu1900_p00179_237,leroybeaulieu1900,korean,korean,Koreans,1,,1,"Claude (model), single-annotator judgement"
-62,ward1920_p00507_154,ward1920,cossack,cossack,Cossack,1,,1,"Claude (model), single-annotator judgement"
-63,kubalski1856_p00114_938,kubalski1856,chinese,chinese,Chinois,1,,1,"Claude (model), single-annotator judgement"
-64,grano1893_p00320_20,grano1893,finn_estonian,finn,suomalaisen,1,,1,"Claude (model), single-annotator judgement"
-65,kennan1870_p00275_1389,kennan1870,chukchi,chukchi,Chukchis,1,,1,"Claude (model), single-annotator judgement"
-66,grano1893_p00438_1472,grano1893,altai_kalmyk,kalmyk,Kalmukki,1,,1,"Claude (model), single-annotator judgement"
-67,dewindt1889_p00748_2079,dewindt1889,cossack,cossack,Cossack,1,,1,"Claude (model), single-annotator judgement"
-68,dewindt1889_p00882_1830,dewindt1889,exiles,exile,exile,0,"'term of exile' = banishment, not person",1,"Claude (model), single-annotator judgement"
-69,kennan1870_p00906_13,kennan1870,evenki_even,tungus,Tunguse,1,,1,"Claude (model), single-annotator judgement"
-70,donner1915_p00122_463,donner1915,samoyedic,samoyed,samojedia,1,,1,"Claude (model), single-annotator judgement"
-71,svinhufvud1928_p00543_412,svinhufvud1928,russian,russian_pejor,ryssänpappikin,1,,1,"Claude (model), single-annotator judgement"
-72,dewindt1889_p00777_188,dewindt1889,cossack,cossack,Cossacks,1,,1,"Claude (model), single-annotator judgement"
-73,dewindt1903_p00398_1820,dewindt1903,chukchi,chukchi,Tchuktchis,1,,1,"Claude (model), single-annotator judgement"
-74,donner1915_p00247_1990,donner1915,evenki_even,tungus,Tunguuseilla,1,,1,"Claude (model), single-annotator judgement"
-75,donner1915_p00152_1860,donner1915,samoyedic,samoyed,samojedi,1,,1,"Claude (model), single-annotator judgement"
-76,kennan1870_p00501_3224,kennan1870,koryak,koryak,Korak,1,,1,"Claude (model), single-annotator judgement"
-77,moore1919_p00952_574,moore1919,cossack,cossack,Cossack,1,,1,"Claude (model), single-annotator judgement"
-78,michie1864_p00714_531,michie1864,altai_kalmyk,kalmyk,Kalmuks,1,,1,"Claude (model), single-annotator judgement"
-79,donner1915_p00293_275,donner1915,evenki_even,tungus,tunguusin,1,,1,"Claude (model), single-annotator judgement"
-80,grano1893_p00533_632,grano1893,russian,russian,venäläiset,1,,1,"Claude (model), single-annotator judgement"
-81,donner1915_p00065_1410,donner1915,samoyedic,samoyed,samojedit,1,,1,"Claude (model), single-annotator judgement"
-82,barzini1908_p01155_4,barzini1908,buryat,buryat,Burjate,1,,1,"Claude (model), single-annotator judgement"
-83,knox1870_p01501_427,knox1870,exiles,exile,exiles,1,,1,"Claude (model), single-annotator judgement"
-84,svinhufvud1928_p00487_308,svinhufvud1928,russian,russian,Venäläiset,1,,1,"Claude (model), single-annotator judgement"
-85,ready1904_p00119_24,ready1904,chinese,chinese,Chinese,1,,1,"Claude (model), single-annotator judgement"
-86,michie1864_p00546_2137,michie1864,russian,russian,Russians,1,,1,"Claude (model), single-annotator judgement"
-87,kennan1870_p00344_707,kennan1870,itelmen_kamchadal,kamchadal,Kamchadal,1,,1,"Claude (model), single-annotator judgement"
-88,kubalski1856_p00093_250,kubalski1856,altai_kalmyk,kalmyk,Kalmouks,1,,1,"Claude (model), single-annotator judgement"
-89,leroybeaulieu1900_p00122_1145,leroybeaulieu1900,russian,russian,Russians,1,,1,"Claude (model), single-annotator judgement"
-90,grano1893_p00318_435,grano1893,german,german,saksalaisen,0,adjective: German-language service,1,"Claude (model), single-annotator judgement"
-91,knox1870_p00751_284,knox1870,chinese,chinese,Chinese,0,Chinese empire (state; de pattern on en text),1,"Claude (model), single-annotator judgement"
-92,kennan1870_p00426_4,kennan1870,itelmen_kamchadal,kamchadal,Kamchadal,1,,1,"Claude (model), single-annotator judgement"
-93,dewindt1889_p00803_761,dewindt1889,exiles,exile,exiles,1,,1,"Claude (model), single-annotator judgement"
-94,moore1919_p00508_8,moore1919,russian,russian,Russians,1,,1,"Claude (model), single-annotator judgement"
-95,knox1870_p01608_816,knox1870,exiles,exile,exiles,1,,1,"Claude (model), single-annotator judgement"
-96,barzini1908_p01698_330,barzini1908,japanese,japanese,Japaner,1,,1,"Claude (model), single-annotator judgement"
-97,svinhufvud1928_p00577_1183,svinhufvud1928,exiles,exile,maanpakolaisten,1,,1,"Claude (model), single-annotator judgement"
-98,gaunt1919_p00848_273,gaunt1919,exiles,exile,exiles,1,,1,"Claude (model), single-annotator judgement"
-99,michie1864_p00371_1610,michie1864,siberian_tatar,tartar,Tartars,0,group mapping: Michie's 'Tartars' in Gobi = Mongols,1,"Claude (model), single-annotator judgement"
-100,donner1915_p00079_2066,donner1915,samoyedic,samoyed,samojedin,1,,1,"Claude (model), single-annotator judgement"
-101,ward1920_p00123_539,ward1920,japanese,japanese,Japanese soldiers,1,,1,"Claude (model), single-annotator judgement"
-102,kennan1870_p00504_1509,kennan1870,natives_generic,natives,natives,1,,1,"Claude (model), single-annotator judgement"
-103,grano1893_p00211_1695,grano1893,cossack,cossack,kasakka,1,,1,"Claude (model), single-annotator judgement"
-104,meignan1885_p00722_376,meignan1885,mongol,mongol,Mongols,1,,1,"Claude (model), single-annotator judgement"
-105,moore1919_p00016_329,moore1919,sibiriak,sibiriak,Siberians,1,,1,"Claude (model), single-annotator judgement"
-106,dewindt1903_p00198_3231,dewindt1903,exiles,exile,exile,1,,1,"Claude (model), single-annotator judgement"
-107,knox1870_p01583_284,knox1870,pereselentsy,settlers,colonists,1,,1,"Claude (model), single-annotator judgement"
-108,leroybeaulieu1900_p00108_160,leroybeaulieu1900,mongol,mongol,Mongols,1,,1,"Claude (model), single-annotator judgement"
-109,gaunt1919_p00646_224,gaunt1919,pereselentsy,settlers,settlers,1,,1,"Claude (model), single-annotator judgement"
-110,grano1893_p00539_890,grano1893,finn_estonian,finn,suomalaisia,1,,1,"Claude (model), single-annotator judgement"
-111,dewindt1903_p00113_42,dewindt1903,cossack,cossack,Cossack,1,,1,"Claude (model), single-annotator judgement"
-112,kennan1870_p00694_2139,kennan1870,cossack,cossack,Cossacks,1,,1,"Claude (model), single-annotator judgement"
-113,knox1870_p00412_4,knox1870,chukchi,chukchi,Chukchee,1,,1,"Claude (model), single-annotator judgement"
-114,ward1920_p00491_751,ward1920,russian,russian,Russians,1,,1,"Claude (model), single-annotator judgement"
-115,dewindt1903_p00189_576,dewindt1903,exiles,exile,exiles,1,,1,"Claude (model), single-annotator judgement"
-116,kennan1870_p00481_3308,kennan1870,natives_generic,natives,natives,1,,1,"Claude (model), single-annotator judgement"
-117,vanderlip1903_p00219_329,vanderlip1903,cossack,cossack,Cossack,1,,1,"Claude (model), single-annotator judgement"
-118,donner1915_p00122_641,donner1915,evenki_even,tungus,tunguusi,1,,1,"Claude (model), single-annotator judgement"
-119,leroybeaulieu1900_p00179_2317,leroybeaulieu1900,chinese,chinese,Chinese,1,,1,"Claude (model), single-annotator judgement"
-120,dewindt1889_p00627_5,dewindt1889,exiles,exile,convicts,1,,1,"Claude (model), single-annotator judgement"
-121,svinhufvud1928_p00481_587,svinhufvud1928,russian,russian,venäläiset,1,,1,"Claude (model), single-annotator judgement"
-122,moore1919_p00283_39,moore1919,mongol,mongol,Mongol,1,,1,"Claude (model), single-annotator judgement"
-123,knox1870_p01249_29,knox1870,buryat,buryat,Bouriat,1,,1,"Claude (model), single-annotator judgement"
-124,moore1919_p00205_57,moore1919,chinese,chinese,Chinese,1,,1,"Claude (model), single-annotator judgement"
-125,donner1915_p00124_1939,donner1915,khanty,ostyak,ostjakkeja,1,,1,"Claude (model), single-annotator judgement"
-126,dewindt1903_p00117_26,dewindt1903,russian,russian,Russians,1,,1,"Claude (model), single-annotator judgement"
-127,kennan1870_p00578_1841,kennan1870,chukchi,chukchi,Chukchis,1,,1,"Claude (model), single-annotator judgement"
-128,kennan1870_p00668_423,kennan1870,chukchi,chukchi,Chukchis,1,,1,"Claude (model), single-annotator judgement"
-129,dewindt1889_p00806_1174,dewindt1889,tramps,tramp,vagabonds,1,,1,"Claude (model), single-annotator judgement"
-130,moore1919_p01159_54,moore1919,czech_slovak,czech,Czechs,1,,1,"Claude (model), single-annotator judgement"
-131,ward1920_p00543_1092,ward1920,japanese,japanese,the Japanese,1,,1,"Claude (model), single-annotator judgement"
-132,donner1915_p00071_698,donner1915,samoyedic,samoyed,Samojedin,1,,1,"Claude (model), single-annotator judgement"
-133,donner1915_p00267_1534,donner1915,samoyedic,samoyed,samojedeja,1,,1,"Claude (model), single-annotator judgement"
-134,kennan1870_p00399_256,kennan1870,koryak,koryak,Koraks,1,,1,"Claude (model), single-annotator judgement"
-135,knox1870_p01054_512,knox1870,exiles,exile,exiles,1,,1,"Claude (model), single-annotator judgement"
-136,grano1893_p00350_1279,grano1893,siberian_tatar,tartar,tataari,1,,1,"Claude (model), single-annotator judgement"
-137,svinhufvud1928_p01000_437,svinhufvud1928,russian,russian,venäläisten,1,,1,"Claude (model), single-annotator judgement"
-138,donner1915_p00226_847,donner1915,german,german,saksalainen,1,,1,"Claude (model), single-annotator judgement"
-139,meignan1885_p00413_4,meignan1885,kazakh_kirghiz,kirghiz,Kirghiz,1,,1,"Claude (model), single-annotator judgement"
-140,knox1870_p01129_518,knox1870,cossack,cossack,Cossack,1,,1,"Claude (model), single-annotator judgement"
-141,leroybeaulieu1900_p00179_2676,leroybeaulieu1900,chinese,chinese,Chinese,1,,1,"Claude (model), single-annotator judgement"
-142,dewindt1889_p00546_178,dewindt1889,mongol,mongol,Mongols,1,,1,"Claude (model), single-annotator judgement"
-143,knox1870_p01255_212,knox1870,chinese,chinese,Chinese,0,'Chinese title' = language,1,"Claude (model), single-annotator judgement"
-144,leroybeaulieu1900_p00108_2416,leroybeaulieu1900,russian,russian,Russians,1,,1,"Claude (model), single-annotator judgement"
-145,donner1915_p00242_617,donner1915,japanese,japanese,japanilaisessa,0,Russo-Japanese war (compound),1,"Claude (model), single-annotator judgement"
-146,grano1893_p00297_555,grano1893,finn_estonian,finn,virolaisen,0,Estonian-language service,1,"Claude (model), single-annotator judgement"
-147,knox1870_p01276_115,knox1870,chinese,chinese,Chinese,1,,1,"Claude (model), single-annotator judgement"
-148,svinhufvud1928_p00655_202,svinhufvud1928,finn_estonian,finn,suomalaiseksi,1,,1,"Claude (model), single-annotator judgement"
-149,dewindt1903_p00138_1017,dewindt1903,sakha,yakut,Yakute,1,,1,"Claude (model), single-annotator judgement"
+0,gaunt1919_p00549_117,gaunt1919,chinese,chinese,Chinaman,1,,1,model (single annotator; expert check pending)
+1,barzini1908_p01247_151,barzini1908,chinese,chinese,Chinesen,1,,1,model (single annotator; expert check pending)
+2,barzini1908_p01145_1,barzini1908,russian,russian,Russen,1,,1,model (single annotator; expert check pending)
+3,leroybeaulieu1900_p00125_1107,leroybeaulieu1900,exiles,exile,exiles,1,,1,model (single annotator; expert check pending)
+4,donner1915_p00075_36,donner1915,samoyedic,samoyed,samojedit,1,,1,model (single annotator; expert check pending)
+5,leroybeaulieu1900_p00239_172,leroybeaulieu1900,korean,korean,Koreans,1,,1,model (single annotator; expert check pending)
+6,leroybeaulieu1900_p00093_176,leroybeaulieu1900,siberian_tatar,tartar,Tatar,1,,1,model (single annotator; expert check pending)
+7,knox1870_p01028_658,knox1870,cossack,cossack,Cossack,1,,1,model (single annotator; expert check pending)
+8,grano1893_p00030_134,grano1893,finn_estonian,finn,suomalaisella,0,"adjective: Finnish ship (country, not people)",1,model (single annotator; expert check pending)
+9,knox1870_p01899_348,knox1870,russian,russian,Russians,1,,1,model (single annotator; expert check pending)
+10,knox1870_p00789_12,knox1870,pereselentsy,settlers,colonists,1,,1,model (single annotator; expert check pending)
+11,ward1920_p00055_68,ward1920,czech_slovak,czech,Czechs,1,,1,model (single annotator; expert check pending)
+12,dewindt1903_p00270_111,dewindt1903,exiles,exile,exiles,1,,1,model (single annotator; expert check pending)
+13,dewindt1903_p00246_784,dewindt1903,political_exiles,political_exile,political exiles,1,,1,model (single annotator; expert check pending)
+14,dewindt1903_p00324_345,dewindt1903,chukchi,chukchi,Tchuktchi,1,,1,model (single annotator; expert check pending)
+15,grano1893_p00121_277,grano1893,russian,russian,venäläisissä,1,,1,model (single annotator; expert check pending)
+16,svinhufvud1928_p00776_44,svinhufvud1928,exiles,exile,karkoitettua,1,,1,model (single annotator; expert check pending)
+17,grano1893_p00062_2425,grano1893,finn_estonian,finn,suomalaista,1,,1,model (single annotator; expert check pending)
+18,kennan1870_p00521_1851,kennan1870,itelmen_kamchadal,kamchadal,Kamchadals,1,,1,model (single annotator; expert check pending)
+19,knox1870_p01134_182,knox1870,cossack,cossack,Cossack,1,,1,model (single annotator; expert check pending)
+20,kennan1870_p00502_106,kennan1870,koryak,koryak,Koraks,1,,1,model (single annotator; expert check pending)
+21,moore1919_p00204_21,moore1919,russian,russian,Russians,1,,1,model (single annotator; expert check pending)
+22,ward1920_p00189_60,ward1920,czech_slovak,czech,Czecho-Slovak,1,,1,model (single annotator; expert check pending)
+23,knox1870_p00828_159,knox1870,chinese,chinese,and Chinese,1,,1,model (single annotator; expert check pending)
+24,ward1920_p00518_316,ward1920,chinese,chinese,Chinese,0,adjective: Chinese frontier (en text matched by de pattern),1,model (single annotator; expert check pending)
+25,donner1915_p00069_1100,donner1915,samoyedic,samoyed,samojedi,1,,1,model (single annotator; expert check pending)
+26,ward1920_p00356_1320,ward1920,russian,russian,Russians,1,,1,model (single annotator; expert check pending)
+27,vanderlip1903_p00229_158,vanderlip1903,korean,korean,Koreans,1,,1,model (single annotator; expert check pending)
+28,michie1864_p00366_319,michie1864,mongol,mongol,Mongols,1,,1,model (single annotator; expert check pending)
+29,vanderlip1903_p00126_432,vanderlip1903,natives_generic,natives,natives,1,,1,model (single annotator; expert check pending)
+30,kennan1870_p00518_1228,kennan1870,natives_generic,natives,natives,1,,1,model (single annotator; expert check pending)
+31,knox1870_p00329_331,knox1870,natives_generic,natives,natives,1,,1,model (single annotator; expert check pending)
+32,moore1919_p00819_338,moore1919,political_exiles,political_exile,political convict,1,,1,model (single annotator; expert check pending)
+33,dewindt1903_p00218_762,dewindt1903,exiles,exile,exile,1,,1,model (single annotator; expert check pending)
+34,donner1915_p00017_566,donner1915,samoyedic,samoyed,samojedit,1,,1,model (single annotator; expert check pending)
+35,dewindt1889_p00876_2555,dewindt1889,sibiriak,sibiriak,Siberians,1,,1,model (single annotator; expert check pending)
+36,donner1915_p00378_1069,donner1915,kamas,kamas,kamassit,1,,1,model (single annotator; expert check pending)
+37,knox1870_p02018_434,knox1870,kazakh_kirghiz,kirghiz,Kirghese,1,,1,model (single annotator; expert check pending)
+38,vanderlip1903_p00133_75,vanderlip1903,exiles,exile,convict,1,,1,model (single annotator; expert check pending)
+39,vanderlip1903_p00268_803,vanderlip1903,koryak,koryak,Koraks,1,,1,model (single annotator; expert check pending)
+40,ready1904_p00080_56,ready1904,manchu,manchu,Manchu,1,,1,model (single annotator; expert check pending)
+41,knox1870_p01823_865,knox1870,russian,russian,Russians,1,,1,model (single annotator; expert check pending)
+42,moore1919_p00430_262,moore1919,japanese,japanese,Japanese soldiers,1,,1,model (single annotator; expert check pending)
+43,meignan1885_p00079_143,meignan1885,chinese,chinese,the Chinese,1,,1,model (single annotator; expert check pending)
+44,kennan1870_p00260_82,kennan1870,natives_generic,natives,natives,1,,1,model (single annotator; expert check pending)
+45,donner1915_p00077_86,donner1915,samoyedic,samoyed,samojedeilla,1,,1,model (single annotator; expert check pending)
+46,grano1893_p00506_388,grano1893,kazakh_kirghiz,kirghiz,kirgiisi,1,,1,model (single annotator; expert check pending)
+47,grano1893_p00065_135,grano1893,russian,russian,venäläisissä,0,adjective: Russian documents (state),1,model (single annotator; expert check pending)
+48,dewindt1903_p00141_809,dewindt1903,political_exiles,political_exile,political exiles,1,,1,model (single annotator; expert check pending)
+49,knox1870_p01028_342,knox1870,pereselentsy,settlers,colonists,1,,1,model (single annotator; expert check pending)
+50,barzini1908_p01686_1284,barzini1908,siberian_tatar,tartar,Tataren,1,,1,model (single annotator; expert check pending)
+51,meignan1885_p00505_590,meignan1885,samoyedic,samoyed,Samoyeds,1,,1,model (single annotator; expert check pending)
+52,dewindt1903_p00399_341,dewindt1903,natives_generic,natives,natives,1,,1,model (single annotator; expert check pending)
+53,donner1915_p00071_522,donner1915,samoyedic,samoyed,samojedin,1,,1,model (single annotator; expert check pending)
+54,meignan1885_p00911_816,meignan1885,chinese,chinese,Chinese,1,,1,model (single annotator; expert check pending)
+55,leroybeaulieu1900_p00171_714,leroybeaulieu1900,pereselentsy,settlers,emigrants,1,,1,model (single annotator; expert check pending)
+56,kubalski1856_p00125_531,kubalski1856,russian,russian,des Russes,1,,1,model (single annotator; expert check pending)
+57,grano1893_p00150_732,grano1893,finn_estonian,finn,suomalaiselle,1,,1,model (single annotator; expert check pending)
+58,gaunt1919_p00848_362,gaunt1919,siberian_tatar,tartar,Tartar,1,,1,model (single annotator; expert check pending)
+59,donner1915_p00125_323,donner1915,samoyedic,samoyed,samojedin,1,,1,model (single annotator; expert check pending)
+60,knox1870_p00451_188,knox1870,cossack,cossack,Cossacks,1,,1,model (single annotator; expert check pending)
+61,leroybeaulieu1900_p00179_237,leroybeaulieu1900,korean,korean,Koreans,1,,1,model (single annotator; expert check pending)
+62,ward1920_p00507_154,ward1920,cossack,cossack,Cossack,1,,1,model (single annotator; expert check pending)
+63,kubalski1856_p00114_938,kubalski1856,chinese,chinese,Chinois,1,,1,model (single annotator; expert check pending)
+64,grano1893_p00320_20,grano1893,finn_estonian,finn,suomalaisen,1,,1,model (single annotator; expert check pending)
+65,kennan1870_p00275_1389,kennan1870,chukchi,chukchi,Chukchis,1,,1,model (single annotator; expert check pending)
+66,grano1893_p00438_1472,grano1893,altai_kalmyk,kalmyk,Kalmukki,1,,1,model (single annotator; expert check pending)
+67,dewindt1889_p00748_2079,dewindt1889,cossack,cossack,Cossack,1,,1,model (single annotator; expert check pending)
+68,dewindt1889_p00882_1830,dewindt1889,exiles,exile,exile,0,"'term of exile' = banishment, not person",1,model (single annotator; expert check pending)
+69,kennan1870_p00906_13,kennan1870,evenki_even,tungus,Tunguse,1,,1,model (single annotator; expert check pending)
+70,donner1915_p00122_463,donner1915,samoyedic,samoyed,samojedia,1,,1,model (single annotator; expert check pending)
+71,svinhufvud1928_p00543_412,svinhufvud1928,russian,russian_pejor,ryssänpappikin,1,,1,model (single annotator; expert check pending)
+72,dewindt1889_p00777_188,dewindt1889,cossack,cossack,Cossacks,1,,1,model (single annotator; expert check pending)
+73,dewindt1903_p00398_1820,dewindt1903,chukchi,chukchi,Tchuktchis,1,,1,model (single annotator; expert check pending)
+74,donner1915_p00247_1990,donner1915,evenki_even,tungus,Tunguuseilla,1,,1,model (single annotator; expert check pending)
+75,donner1915_p00152_1860,donner1915,samoyedic,samoyed,samojedi,1,,1,model (single annotator; expert check pending)
+76,kennan1870_p00501_3224,kennan1870,koryak,koryak,Korak,1,,1,model (single annotator; expert check pending)
+77,moore1919_p00952_574,moore1919,cossack,cossack,Cossack,1,,1,model (single annotator; expert check pending)
+78,michie1864_p00714_531,michie1864,altai_kalmyk,kalmyk,Kalmuks,1,,1,model (single annotator; expert check pending)
+79,donner1915_p00293_275,donner1915,evenki_even,tungus,tunguusin,1,,1,model (single annotator; expert check pending)
+80,grano1893_p00533_632,grano1893,russian,russian,venäläiset,1,,1,model (single annotator; expert check pending)
+81,donner1915_p00065_1410,donner1915,samoyedic,samoyed,samojedit,1,,1,model (single annotator; expert check pending)
+82,barzini1908_p01155_4,barzini1908,buryat,buryat,Burjate,1,,1,model (single annotator; expert check pending)
+83,knox1870_p01501_427,knox1870,exiles,exile,exiles,1,,1,model (single annotator; expert check pending)
+84,svinhufvud1928_p00487_308,svinhufvud1928,russian,russian,Venäläiset,1,,1,model (single annotator; expert check pending)
+85,ready1904_p00119_24,ready1904,chinese,chinese,Chinese,1,,1,model (single annotator; expert check pending)
+86,michie1864_p00546_2137,michie1864,russian,russian,Russians,1,,1,model (single annotator; expert check pending)
+87,kennan1870_p00344_707,kennan1870,itelmen_kamchadal,kamchadal,Kamchadal,1,,1,model (single annotator; expert check pending)
+88,kubalski1856_p00093_250,kubalski1856,altai_kalmyk,kalmyk,Kalmouks,1,,1,model (single annotator; expert check pending)
+89,leroybeaulieu1900_p00122_1145,leroybeaulieu1900,russian,russian,Russians,1,,1,model (single annotator; expert check pending)
+90,grano1893_p00318_435,grano1893,german,german,saksalaisen,0,adjective: German-language service,1,model (single annotator; expert check pending)
+91,knox1870_p00751_284,knox1870,chinese,chinese,Chinese,0,Chinese empire (state; de pattern on en text),1,model (single annotator; expert check pending)
+92,kennan1870_p00426_4,kennan1870,itelmen_kamchadal,kamchadal,Kamchadal,1,,1,model (single annotator; expert check pending)
+93,dewindt1889_p00803_761,dewindt1889,exiles,exile,exiles,1,,1,model (single annotator; expert check pending)
+94,moore1919_p00508_8,moore1919,russian,russian,Russians,1,,1,model (single annotator; expert check pending)
+95,knox1870_p01608_816,knox1870,exiles,exile,exiles,1,,1,model (single annotator; expert check pending)
+96,barzini1908_p01698_330,barzini1908,japanese,japanese,Japaner,1,,1,model (single annotator; expert check pending)
+97,svinhufvud1928_p00577_1183,svinhufvud1928,exiles,exile,maanpakolaisten,1,,1,model (single annotator; expert check pending)
+98,gaunt1919_p00848_273,gaunt1919,exiles,exile,exiles,1,,1,model (single annotator; expert check pending)
+99,michie1864_p00371_1610,michie1864,siberian_tatar,tartar,Tartars,0,group mapping: Michie's 'Tartars' in Gobi = Mongols,1,model (single annotator; expert check pending)
+100,donner1915_p00079_2066,donner1915,samoyedic,samoyed,samojedin,1,,1,model (single annotator; expert check pending)
+101,ward1920_p00123_539,ward1920,japanese,japanese,Japanese soldiers,1,,1,model (single annotator; expert check pending)
+102,kennan1870_p00504_1509,kennan1870,natives_generic,natives,natives,1,,1,model (single annotator; expert check pending)
+103,grano1893_p00211_1695,grano1893,cossack,cossack,kasakka,1,,1,model (single annotator; expert check pending)
+104,meignan1885_p00722_376,meignan1885,mongol,mongol,Mongols,1,,1,model (single annotator; expert check pending)
+105,moore1919_p00016_329,moore1919,sibiriak,sibiriak,Siberians,1,,1,model (single annotator; expert check pending)
+106,dewindt1903_p00198_3231,dewindt1903,exiles,exile,exile,1,,1,model (single annotator; expert check pending)
+107,knox1870_p01583_284,knox1870,pereselentsy,settlers,colonists,1,,1,model (single annotator; expert check pending)
+108,leroybeaulieu1900_p00108_160,leroybeaulieu1900,mongol,mongol,Mongols,1,,1,model (single annotator; expert check pending)
+109,gaunt1919_p00646_224,gaunt1919,pereselentsy,settlers,settlers,1,,1,model (single annotator; expert check pending)
+110,grano1893_p00539_890,grano1893,finn_estonian,finn,suomalaisia,1,,1,model (single annotator; expert check pending)
+111,dewindt1903_p00113_42,dewindt1903,cossack,cossack,Cossack,1,,1,model (single annotator; expert check pending)
+112,kennan1870_p00694_2139,kennan1870,cossack,cossack,Cossacks,1,,1,model (single annotator; expert check pending)
+113,knox1870_p00412_4,knox1870,chukchi,chukchi,Chukchee,1,,1,model (single annotator; expert check pending)
+114,ward1920_p00491_751,ward1920,russian,russian,Russians,1,,1,model (single annotator; expert check pending)
+115,dewindt1903_p00189_576,dewindt1903,exiles,exile,exiles,1,,1,model (single annotator; expert check pending)
+116,kennan1870_p00481_3308,kennan1870,natives_generic,natives,natives,1,,1,model (single annotator; expert check pending)
+117,vanderlip1903_p00219_329,vanderlip1903,cossack,cossack,Cossack,1,,1,model (single annotator; expert check pending)
+118,donner1915_p00122_641,donner1915,evenki_even,tungus,tunguusi,1,,1,model (single annotator; expert check pending)
+119,leroybeaulieu1900_p00179_2317,leroybeaulieu1900,chinese,chinese,Chinese,1,,1,model (single annotator; expert check pending)
+120,dewindt1889_p00627_5,dewindt1889,exiles,exile,convicts,1,,1,model (single annotator; expert check pending)
+121,svinhufvud1928_p00481_587,svinhufvud1928,russian,russian,venäläiset,1,,1,model (single annotator; expert check pending)
+122,moore1919_p00283_39,moore1919,mongol,mongol,Mongol,1,,1,model (single annotator; expert check pending)
+123,knox1870_p01249_29,knox1870,buryat,buryat,Bouriat,1,,1,model (single annotator; expert check pending)
+124,moore1919_p00205_57,moore1919,chinese,chinese,Chinese,1,,1,model (single annotator; expert check pending)
+125,donner1915_p00124_1939,donner1915,khanty,ostyak,ostjakkeja,1,,1,model (single annotator; expert check pending)
+126,dewindt1903_p00117_26,dewindt1903,russian,russian,Russians,1,,1,model (single annotator; expert check pending)
+127,kennan1870_p00578_1841,kennan1870,chukchi,chukchi,Chukchis,1,,1,model (single annotator; expert check pending)
+128,kennan1870_p00668_423,kennan1870,chukchi,chukchi,Chukchis,1,,1,model (single annotator; expert check pending)
+129,dewindt1889_p00806_1174,dewindt1889,tramps,tramp,vagabonds,1,,1,model (single annotator; expert check pending)
+130,moore1919_p01159_54,moore1919,czech_slovak,czech,Czechs,1,,1,model (single annotator; expert check pending)
+131,ward1920_p00543_1092,ward1920,japanese,japanese,the Japanese,1,,1,model (single annotator; expert check pending)
+132,donner1915_p00071_698,donner1915,samoyedic,samoyed,Samojedin,1,,1,model (single annotator; expert check pending)
+133,donner1915_p00267_1534,donner1915,samoyedic,samoyed,samojedeja,1,,1,model (single annotator; expert check pending)
+134,kennan1870_p00399_256,kennan1870,koryak,koryak,Koraks,1,,1,model (single annotator; expert check pending)
+135,knox1870_p01054_512,knox1870,exiles,exile,exiles,1,,1,model (single annotator; expert check pending)
+136,grano1893_p00350_1279,grano1893,siberian_tatar,tartar,tataari,1,,1,model (single annotator; expert check pending)
+137,svinhufvud1928_p01000_437,svinhufvud1928,russian,russian,venäläisten,1,,1,model (single annotator; expert check pending)
+138,donner1915_p00226_847,donner1915,german,german,saksalainen,1,,1,model (single annotator; expert check pending)
+139,meignan1885_p00413_4,meignan1885,kazakh_kirghiz,kirghiz,Kirghiz,1,,1,model (single annotator; expert check pending)
+140,knox1870_p01129_518,knox1870,cossack,cossack,Cossack,1,,1,model (single annotator; expert check pending)
+141,leroybeaulieu1900_p00179_2676,leroybeaulieu1900,chinese,chinese,Chinese,1,,1,model (single annotator; expert check pending)
+142,dewindt1889_p00546_178,dewindt1889,mongol,mongol,Mongols,1,,1,model (single annotator; expert check pending)
+143,knox1870_p01255_212,knox1870,chinese,chinese,Chinese,0,'Chinese title' = language,1,model (single annotator; expert check pending)
+144,leroybeaulieu1900_p00108_2416,leroybeaulieu1900,russian,russian,Russians,1,,1,model (single annotator; expert check pending)
+145,donner1915_p00242_617,donner1915,japanese,japanese,japanilaisessa,0,Russo-Japanese war (compound),1,model (single annotator; expert check pending)
+146,grano1893_p00297_555,grano1893,finn_estonian,finn,virolaisen,0,Estonian-language service,1,model (single annotator; expert check pending)
+147,knox1870_p01276_115,knox1870,chinese,chinese,Chinese,1,,1,model (single annotator; expert check pending)
+148,svinhufvud1928_p00655_202,svinhufvud1928,finn_estonian,finn,suomalaiseksi,1,,1,model (single annotator; expert check pending)
+149,dewindt1903_p00138_1017,dewindt1903,sakha,yakut,Yakute,1,,1,model (single annotator; expert check pending)
