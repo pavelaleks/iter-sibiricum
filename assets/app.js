@@ -44,7 +44,20 @@ const CAT = {indigenous: 'коренные народы', settler: 'русски
 const CATC = {indigenous: '#3f7296', settler: '#a3173a', social: '#9a6b1f', neighbour: '#6a5a9e', foreign: '#6b7785', generic: '#3c7a5a', work: '#a3173a', authority: '#8e9aa6'};
 let mapRO = null;
 
-function setMenu(r) { document.querySelectorAll('#menu a').forEach((a) => a.classList.toggle('on', r.startsWith(a.dataset.r) || (a.dataset.r === 'peoples' && r.startsWith('people')) || (a.dataset.r === 'library' && r.startsWith('book')))); }
+function setMenu(r) { document.querySelectorAll('#menu a').forEach((a) => a.classList.toggle('on', r.startsWith(a.dataset.r) || (a.dataset.r === 'peoples' && r.startsWith('people')) || (a.dataset.r === 'library' && r.startsWith('book'))));
+  const mb = document.querySelector('.more-btn'); if (mb) mb.classList.toggle('on', !!document.querySelector('.more-list a.on'));
+  closeMenus(); }
+// меню: на узких экранах — кнопка-бургер, «О ресурсе» — выпадающий список
+const hdr = document.querySelector('header.top'), burger = document.getElementById('burger'), more = document.getElementById('more');
+function closeMenus() {
+  hdr?.classList.remove('open'); burger?.setAttribute('aria-expanded', 'false');
+  more?.classList.remove('open'); more?.querySelector('.more-btn')?.setAttribute('aria-expanded', 'false');
+}
+burger?.addEventListener('click', () => { const o = !hdr.classList.contains('open'); hdr.classList.toggle('open', o); burger.setAttribute('aria-expanded', o); });
+more?.querySelector('.more-btn').addEventListener('click', (e) => { e.stopPropagation(); const o = !more.classList.contains('open'); more.classList.toggle('open', o); e.currentTarget.setAttribute('aria-expanded', o); });
+document.addEventListener('click', (e) => { if (more && !more.contains(e.target)) { more.classList.remove('open'); more.querySelector('.more-btn').setAttribute('aria-expanded', 'false'); } });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenus(); });
+document.getElementById('menu')?.addEventListener('click', (e) => { if (e.target.closest('a[href^="#"]')) closeMenus(); });
 async function route() {
   const h = (location.hash || '#home').slice(1) || 'home';
   setMenu(h.startsWith('analytics') ? 'analytics' : h.split('?')[0]); if (mapRO) { mapRO.disconnect(); mapRO = null; }

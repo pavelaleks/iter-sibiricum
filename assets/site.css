@@ -299,3 +299,41 @@ html[lang=en] .ill .ru,html[lang=en] .dlg-ru,html[lang=en] .pl-ru{display:none}
 .gloss dd{margin:0}
 @media (max-width:640px){.gloss{grid-template-columns:1fr}.gloss dd{margin-bottom:8px}}
 .src-note{border-left:3px solid var(--acc);padding:6px 10px;background:var(--bg2,rgba(0,0,0,.03))}
+
+/* меню: «О ресурсе» — выпадающий список; ниже 1000 px — бургер */
+header.top .wrap{flex-wrap:nowrap}
+nav.menu{flex-wrap:nowrap;align-items:center}
+nav.menu a{white-space:nowrap}
+.more{position:relative}
+.more-btn{font:inherit;font-size:15px;font-weight:480;color:var(--mute);background:none;border:0;padding:10px 22px 10px 10px;cursor:pointer;position:relative;white-space:nowrap}
+.more-btn::before{content:"";position:absolute;right:8px;top:50%;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-70%) rotate(45deg);transition:transform .15s}
+.more.open .more-btn::before{transform:translateY(-30%) rotate(-135deg)}
+.more-btn:hover,.more-btn.on{color:var(--ink)}
+.more-btn.on::after{content:"";position:absolute;left:10px;right:22px;bottom:2px;height:2px;background:var(--acc);border-radius:2px}
+.more-list{display:none;position:absolute;right:0;top:100%;min-width:220px;background:var(--bg);border:1px solid var(--line);border-radius:6px;box-shadow:0 8px 24px rgba(20,30,40,.12);padding:6px 0;z-index:30}
+.more.open .more-list{display:block}
+.more-list a{display:block;padding:9px 16px}
+.more-list a.on::after{left:16px;right:auto;width:24px;bottom:4px}
+.burger{display:none;margin-left:auto;width:42px;height:42px;border:1px solid var(--line);border-radius:6px;background:none;cursor:pointer;padding:0;flex-direction:column;justify-content:center;align-items:center;gap:5px}
+.burger span{display:block;width:18px;height:1.5px;background:var(--ink);transition:transform .2s,opacity .2s}
+header.top.open .burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+header.top.open .burger span:nth-child(2){opacity:0}
+header.top.open .burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media (max-width:1000px){
+  header.top .wrap{flex-wrap:wrap}
+  .burger{display:flex}
+  nav.menu{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;margin:0 0 12px;padding-top:6px;border-top:1px solid var(--line)}
+  header.top.open nav.menu{display:flex}
+  nav.menu a,.more-btn{padding:12px 4px;font-size:16px}
+  nav.menu a.on::after{left:4px;right:auto;width:28px}
+  .more-btn{display:none}
+  .more-list{display:block;position:static;border:0;box-shadow:none;padding:0;min-width:0;background:none}
+  .more-list a{padding:12px 4px}
+  nav.menu a.lang-sw{align-self:flex-start;margin:8px 0 0;padding:4px 10px}
+}
+@media (prefers-reduced-motion:reduce){.burger span,.more-btn::before{transition:none}}
+.more-btn{border:0!important;border-radius:0!important;box-shadow:none!important;min-height:0}
+.more-btn:focus{outline:none}
+.more-btn:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.more-list,.more-list a{text-align:left}
+.more-list a.on::after{bottom:3px}
