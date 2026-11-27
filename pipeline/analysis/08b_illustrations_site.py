@@ -21,6 +21,12 @@ def main():
     # HTML-издания Gutenberg (08c): изображения и подписи из набранного текста
     pgx = ROOT / 'data' / 'illustrations_gutenberg.csv'
     if pgx.exists(): rows += list(csv.DictReader(open(pgx, encoding='utf-8')))
+    # закреплённые иллюстрации из прежних сканов (книга перешла на другую копию, а рисунки в новой не найдены);
+    # в списке id не повторяются: при совпадении побеждает основной список
+    pex = ROOT / 'data' / 'illustrations_extra.csv'
+    if pex.exists():
+        have = {r['ill_id'] for r in rows}
+        rows += [r for r in csv.DictReader(open(pex, encoding='utf-8')) if r['ill_id'] not in have]
     works = {w['id']: w for w in json.load(open(SITE / 'data' / 'works.json', encoding='utf-8'))}
     # проверка подписей (агенты по инструкции validation/illustrations/INSTRUCTIONS.md):
     # исправленная подпись, перевод, тип, народы, места, «не иллюстрация»

@@ -1,0 +1,3 @@
+ill_id,work_id,ia,leaf,kind,layout,rotated,caption,facing_page,bbox,page_w,page_h,area,pid,pid_votes,groups,places,thumb,thumb_w,thumb_h,method,status
+reid1899-0002,reid1899,dli.ministry.05111,2,other,plate,0,,,60 52 948 1512,1024,1600,0.791,,0,,,img/ill/reid1899/reid1899-0002.webp,393,640,ia_djvu_layout_v1,auto
+reid1899-0302,reid1899,dli.ministry.05111,302,other,plate,0,i tel *@,,52 12 2676 1696,2800,1700,0.928,,73,,om_colonies;petropavlovsk_kz,img/ill/reid1899/reid1899-0302.webp,640,406,ia_djvu_layout_v1,auto
