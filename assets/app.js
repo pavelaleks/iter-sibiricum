@@ -353,7 +353,7 @@ async function illustrations() {
 
 // ---------------- атлас ----------------
 async function atlas2() {
-  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=57'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=58'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   const d = await window.Atlas2.render(V, {get, getRoutes, esc, toH, PER, NAT});
   if (/^#atlas(\?|$)/.test(location.hash)) atlasDestroy = d; else d();
 }
@@ -512,7 +512,8 @@ async function book(id, par) {
       <p class="small mute" id="tqn"></p>
       <label class="small mute">Подсветить народ <select id="tg"><option value="">все</option>${[...new Set(w.top_groups.map((g) => g[0]))].map((n) => `<option>${esc(n)}</option>`).join('')}</select></label>
       ${SN[w.id] ? `<p class="small src-note"><b>Критика источника.</b> ${esc(SN[w.id])}</p>` : ''}
-    </aside><div class="text" id="txt"><p class="mute">${EN ? 'Loading the text…' : 'Загрузка текста…'}</p></div><figure class="scan" id="scan" hidden aria-live="polite"></figure><figure class="bookmap" id="bmap" hidden data-noi18n></figure></div></div></section>`;
+    </aside><div class="text" id="txt"><p class="mute">${EN ? 'Loading the text…' : 'Загрузка текста…'}</p></div><figure class="scan" id="scan" hidden aria-live="polite"></figure><figure class="bookmap" id="bmap" hidden data-noi18n></figure></div></div></section>
+    <button class="fab-map" id="mapFab" type="button" aria-label="${EN ? 'Show the map beside the text' : 'Показать карту рядом с текстом'}" data-noi18n>${EN ? 'Map' : 'Карта'}</button>`;
   let T;
   try { T = await (C['t:' + id] ||= fetch('texts/' + id + '.json').then((x) => x.json())); } catch (e) { document.getElementById('txt').innerHTML = EN ? '<p class="mute">Text not found.</p>' : '<p class="mute">Текст не найден.</p>'; return; }
   let only = false, q = '', hg = '';
@@ -553,7 +554,7 @@ async function book(id, par) {
   const mapEl = document.getElementById('bmap'), mbtn = document.getElementById('mapBtn');
   const plOf = (el) => [...new Set((PM[+el.id.slice(1)] || []).map((x) => x[2]))];
   const track = () => { cancelAnimationFrame(rafR); rafR = requestAnimationFrame(() => {
-    if (!mapOn || !RD) return; const y = innerHeight * 0.4;
+    if (!mapOn || !RD) return; const y = innerWidth <= 960 ? mapEl.getBoundingClientRect().bottom + 48 : innerHeight * 0.4; // на телефоне карта сверху: читается то, что под ней
     const ps = [...vis].filter((el) => el.isConnected).sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
     const cur = ps.find((el) => el.getBoundingClientRect().bottom > y) || ps[ps.length - 1]; if (!cur) return;
     if (curP !== cur) { curP && curP.classList.remove('cur'); cur.classList.add('cur'); curP = cur; }
@@ -566,12 +567,12 @@ async function book(id, par) {
   const goPara = (n, pl) => { const el = document.getElementById('p' + String(n).padStart(5, '0')); if (!el) return; el.scrollIntoView({block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
     if (pl) el.querySelectorAll(`.plm[data-pl="${CSS.escape(pl)}"]`).forEach((m) => { m.classList.add('flash'); setTimeout(() => m.classList.remove('flash'), 1600); }); };
   const toggleMap = async (on) => {
-    const a = anchorP(); mapOn = on; mbtn.classList.toggle('on', on); mbtn.setAttribute('aria-pressed', on); mapEl.hidden = !on;
+    const a = anchorP(); mapOn = on; mbtn.classList.toggle('on', on); mbtn.setAttribute('aria-pressed', on); mapEl.hidden = !on; document.getElementById('mapFab').hidden = on;
     document.querySelector('.reader').classList.toggle('with-map', on); try { localStorage.setItem('bookmap', on ? '1' : '0'); } catch (e) {}
     if (a) a.scrollIntoView({block: 'center'});
     if (!on) { if (RD) { RD.destroy(); RD = null; } if (curP) { curP.classList.remove('cur'); curP = null; } watchMap(); return; }
     if (scanOn) toggleScan(false);
-    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=57'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=58'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
     if (!mapOn) return;
     RD = await window.Atlas2.reader(mapEl, {work: id, route: r0, PL: Object.fromEntries((await get('places.json')).map((p) => [p.id, p])), bookgeo: (await get('bookgeo.json'))[id], period: w.period,
       onClose: () => toggleMap(false),
@@ -581,6 +582,8 @@ async function book(id, par) {
     watchMap(); track();
   };
   mbtn.addEventListener('click', () => toggleMap(!mapOn));
+  // на телефоне кнопка карты всегда под рукой, читатель не листает к началу книги
+  document.getElementById('mapFab').addEventListener('click', () => toggleMap(true));
   document.getElementById('txt').addEventListener('mouseover', (e) => { if (!RD) return; const m = e.target.closest('.plm'); RD.hover(m ? m.dataset.pl : null); });
   atlasDestroy = () => { removeEventListener('scroll', track); if (io2) io2.disconnect(); if (RD) RD.destroy(); };
   let fromMap = null; try { fromMap = sessionStorage.getItem('from:book-' + toH(id)); } catch (e) {}

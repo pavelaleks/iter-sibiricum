@@ -477,8 +477,7 @@ html:not([lang=en]) .en-only,html[lang=en] .ru-only{display:none}
 
 .a2-time .dual input:focus-visible::-webkit-slider-thumb{outline:2px solid var(--acc);outline-offset:2px}.a2-time .dual input::-webkit-slider-runnable-track{background:none}
 /* ---- карта рядом с текстом книги ---- */
-.reader.with-map{grid-template-columns:minmax(0,240px) minmax(0,1fr) minmax(0,42%)}
-.reader.with-map .text p{max-width:none}
+
 .bookmap{position:sticky;top:84px;align-self:start;margin:0;height:calc(100vh - 100px);min-height:420px;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r);background:var(--sea);overflow:hidden}
 .bookmap .bm-bar{display:flex;align-items:center;gap:14px;padding:8px 12px;background:var(--paper);border-bottom:1px solid var(--line);font-size:14px}
 .bookmap .bm-bar b{font-weight:620;margin-right:auto}.bookmap .bm-bar label{color:var(--mute);display:inline-flex;gap:5px;align-items:center}
@@ -498,6 +497,13 @@ html:not([lang=en]) .en-only,html[lang=en] .ru-only{display:none}
 }
 .bookmap[hidden]{display:none}
 .scan[hidden]{display:none}
-.wrap:has(>.reader.with-map){max-width:1680px}
+@media(min-width:961px){.wrap:has(>.reader.with-map){max-width:1680px}
 .reader.with-map{grid-template-columns:minmax(0,220px) minmax(0,1fr) minmax(0,clamp(360px,38%,620px));gap:clamp(20px,2.4vw,36px)}
-.reader.with-map .text p{max-width:66ch}
+.reader.with-map .text p{max-width:66ch}}
+.fab-map{display:none}
+@media(max-width:960px){
+  .fab-map{display:inline-flex;align-items:center;gap:6px;position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;padding:11px 18px;border-radius:999px;border:0;background:var(--ink);color:var(--paper);font:inherit;font-size:15px;font-weight:600;box-shadow:0 8px 24px -8px rgba(19,38,58,.55);cursor:pointer}
+  .fab-map::before{content:"";width:14px;height:14px;border:2px solid currentColor;border-radius:50% 50% 50% 0;transform:rotate(-45deg);margin-right:2px}
+  .fab-map[hidden]{display:none}
+  .bookmap .bm-bar{gap:10px;padding:6px 10px;font-size:13px}.bookmap .bm-cap{padding:6px 10px;font-size:12.5px;min-height:0}
+}
