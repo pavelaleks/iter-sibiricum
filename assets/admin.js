@@ -320,6 +320,7 @@ async function pubs() {
       <label>Статус<select name="status">${Object.entries(STP).map(([k, v]) => `<option value="${k}">${v}</option>`).join('')}</select></label>
       <label>Авторы<input name="authors" placeholder="Алексеев П. В., Шарыпова В. С."></label>
       <label>Название<input name="title"></label>
+      <label>Название по-английски (для английской версии; названия книг — между *звёздочками*)<input name="title_en"></label>
       <label>Журнал, сборник, издательство<input name="venue"></label>
       <label>Год<input name="year" type="number" min="2020" max="2035"></label>
       <label>Страницы, том, номер<input name="pages"></label>

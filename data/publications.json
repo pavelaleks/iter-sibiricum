@@ -1,76 +1,82 @@
 [
-  {
-    "type": "article",
-    "status": "published",
-    "year": 2026,
-    "authors": "Жданов С. С.",
-    "title": "Репрезентация этнических образов сибирского пространства в травелоге М. Ф. Прайса",
-    "venue": "Журнал фронтирных исследований",
-    "pages": "Т. 11, № 2. С. 291–322",
-    "doi": "10.46539/jfs.v11i2.723"
-  },
-  {
-    "type": "article",
-    "status": "published",
-    "year": 2026,
-    "authors": "Жданов С. С.",
-    "title": "«Великая перемена»: образы Сибири и сибиряков в травелоге М. и А. Летбриджей",
-    "venue": "Научный диалог",
-    "pages": "Т. 15, № 8. С. 291–315",
-    "doi": "10.24224/2227-1295-2026-15-8-291-315"
-  },
-  {
-    "type": "conference",
-    "status": "published",
-    "year": 2026,
-    "authors": "Алексеев П. В., Жданов С. С., Шарыпова В. С.",
-    "title": "Образы калмыков в англоязычных травелогах конца XIX – начала XX века",
-    "venue": "Интерэкспо ГЕО-Сибирь : сб. материалов XXII Междунар. науч. конгр. Т. 5. Новосибирск : СГУГиТ",
-    "pages": "С. 23–37",
-    "doi": "10.33764/2618-981X-2026-5-23-37"
-  },
-  {
-    "type": "conference",
-    "status": "published",
-    "year": 2026,
-    "authors": "Алексеева С. П., Алексеев П. В., Жданов С. С.",
-    "title": "Рецепция межнациональных отношений в Сибири в травелоге М. Уйфальви-Бурдон «От Парижа до Самарканда» (1880)",
-    "venue": "Интерэкспо ГЕО-Сибирь : сб. материалов XXII Междунар. науч. конгр. Т. 5. Новосибирск : СГУГиТ",
-    "pages": "С. 45–64",
-    "doi": "10.33764/2618-981X-2026-5-45-64"
-  },
-  {
-    "type": "conference",
-    "status": "published",
-    "year": 2026,
-    "authors": "Жданов С. С.",
-    "title": "Этнические образы Сибири в травелоге «По крыше мира» П. Т. Этертона",
-    "venue": "Интерэкспо ГЕО-Сибирь : сб. материалов XXII Междунар. науч. конгр. Т. 5. Новосибирск : СГУГиТ",
-    "pages": "С. 3–15",
-    "doi": "10.33764/2618-981X-2026-5-3-15"
-  },
-  {
-    "type": "conference",
-    "status": "published",
-    "year": 2025,
-    "authors": "Жданов С. С.",
-    "title": "Рецепция межнациональных отношений в Сибири в травелоге «Из Пекина в Петербург» А. Рида",
-    "venue": "Интерэкспо ГЕО-Сибирь : сб. материалов XXI Междунар. науч. конгр. Т. 5. Новосибирск : СГУГиТ",
-    "pages": "С. 30–41",
-    "doi": "10.33764/2618-981X-2025-5-30-41"
-  },
-  {
-    "type": "dataset",
-    "status": "published",
-    "year": 2026,
-    "doi": "10.5281/zenodo.24531924",
-    "cite": "Alekseev, P. V. (2026). Iter Sibiricum: Catalogue of European Travel Accounts of Siberia (19th – early 20th c.) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24531924"
-  },
-  {
-    "type": "dataset",
-    "status": "published",
-    "year": 2026,
-    "doi": "10.5281/zenodo.24532195",
-    "cite": "Alekseev, P. V. (2026). Iter Sibiricum: Atlas of Peoples and Places in European Travel Accounts of Siberia [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24532195"
-  }
+ {
+  "type": "article",
+  "status": "published",
+  "year": 2026,
+  "authors": "Жданов С. С.",
+  "title": "Репрезентация этнических образов сибирского пространства в травелоге М. Ф. Прайса",
+  "venue": "Журнал фронтирных исследований",
+  "pages": "Т. 11, № 2. С. 291–322",
+  "doi": "10.46539/jfs.v11i2.723",
+  "title_en": "Representation of ethnic images of Siberian space in M. Philips Price’s travelogue"
+ },
+ {
+  "type": "article",
+  "status": "published",
+  "year": 2026,
+  "authors": "Жданов С. С.",
+  "title": "«Великая перемена»: образы Сибири и сибиряков в травелоге М. и А. Летбриджей",
+  "venue": "Научный диалог",
+  "pages": "Т. 15, № 8. С. 291–315",
+  "doi": "10.24224/2227-1295-2026-15-8-291-315",
+  "title_en": "“The Great Change”: images of Siberia and Siberians in the travelogue of M. and A. Lethbridge"
+ },
+ {
+  "type": "conference",
+  "status": "published",
+  "year": 2026,
+  "authors": "Алексеев П. В., Жданов С. С., Шарыпова В. С.",
+  "title": "Образы калмыков в англоязычных травелогах конца XIX – начала XX века",
+  "venue": "Интерэкспо ГЕО-Сибирь : сб. материалов XXII Междунар. науч. конгр. Т. 5. Новосибирск : СГУГиТ",
+  "pages": "С. 23–37",
+  "doi": "10.33764/2618-981X-2026-5-23-37",
+  "title_en": "Images of the Kalmyks in English-language travelogues of the late 19th and early 20th centuries"
+ },
+ {
+  "type": "conference",
+  "status": "published",
+  "year": 2026,
+  "authors": "Алексеева С. П., Алексеев П. В., Жданов С. С.",
+  "title": "Рецепция межнациональных отношений в Сибири в травелоге М. Уйфальви-Бурдон «От Парижа до Самарканда» (1880)",
+  "venue": "Интерэкспо ГЕО-Сибирь : сб. материалов XXII Междунар. науч. конгр. Т. 5. Новосибирск : СГУГиТ",
+  "pages": "С. 45–64",
+  "doi": "10.33764/2618-981X-2026-5-45-64",
+  "title_en": "The reception of interethnic relations in Siberia in M. Ujfalvy-Bourdon’s travelogue *De Paris à Samarkand* (1880)"
+ },
+ {
+  "type": "conference",
+  "status": "published",
+  "year": 2026,
+  "authors": "Жданов С. С.",
+  "title": "Этнические образы Сибири в травелоге «По крыше мира» П. Т. Этертона",
+  "venue": "Интерэкспо ГЕО-Сибирь : сб. материалов XXII Междунар. науч. конгр. Т. 5. Новосибирск : СГУГиТ",
+  "pages": "С. 3–15",
+  "doi": "10.33764/2618-981X-2026-5-3-15",
+  "title_en": "Ethnic images of Siberia in P. T. Etherton’s travelogue *Across the Roof of the World*"
+ },
+ {
+  "type": "conference",
+  "status": "published",
+  "year": 2025,
+  "authors": "Жданов С. С.",
+  "title": "Рецепция межнациональных отношений в Сибири в травелоге «Из Пекина в Петербург» А. Рида",
+  "venue": "Интерэкспо ГЕО-Сибирь : сб. материалов XXI Междунар. науч. конгр. Т. 5. Новосибирск : СГУГиТ",
+  "pages": "С. 30–41",
+  "doi": "10.33764/2618-981X-2025-5-30-41",
+  "title_en": "The reception of interethnic relations in Siberia in A. Reid’s travelogue *From Peking to Petersburg*"
+ },
+ {
+  "type": "dataset",
+  "status": "published",
+  "year": 2026,
+  "doi": "10.5281/zenodo.24531924",
+  "cite": "Alekseev, P. V. (2026). Iter Sibiricum: Catalogue of European Travel Accounts of Siberia (19th – early 20th c.) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24531924"
+ },
+ {
+  "type": "dataset",
+  "status": "published",
+  "year": 2026,
+  "doi": "10.5281/zenodo.24532195",
+  "cite": "Alekseev, P. V. (2026). Iter Sibiricum: Atlas of Peoples and Places in European Travel Accounts of Siberia [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24532195"
+ }
 ]
