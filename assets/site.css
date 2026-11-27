@@ -337,3 +337,8 @@ header.top.open .burger span:nth-child(3){transform:translateY(-6.5px) rotate(-4
 .more-btn:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 .more-list,.more-list a{text-align:left}
 .more-list a.on::after{bottom:3px}
+/* сноска к названию: сразу под назначением ресурса, тем же размером, приглушённо */
+h1.name .ast{font-size:.42em;vertical-align:super;margin-left:.06em;color:var(--acc);font-style:normal}
+.purpose:has(+ .name-note){margin-bottom:10px}
+.name-note{font-size:clamp(16px,1.4vw,19px);line-height:1.45;max-width:52ch;margin:0 0 26px;color:var(--mute)}
+.name-note .ast{color:var(--acc)}
