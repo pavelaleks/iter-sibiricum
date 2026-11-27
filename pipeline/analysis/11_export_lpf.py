@@ -31,6 +31,23 @@ def link(ref):
     if ref.startswith('wikidata:'): return dict(type='closeMatch', identifier='wd:' + ref.split(':', 1)[1])
     return None
 
+
+# классы объектов GeoNames (WHG требует properties.fclasses или types):
+# P населённые пункты, H воды, T рельеф, L области/местности, A административные, S сооружения
+FC_GAZ = {'city': 'P', 'town': 'P', 'village': 'P', 'villages': 'P', 'river': 'H', 'sea': 'H', 'lake': 'H', 'strait': 'H',
+          'mountains': 'T', 'island': 'T', 'peninsula': 'T', 'cape': 'T', 'desert': 'T', 'region': 'L', 'country': 'A'}
+TY_RU = {'P': 'населённый пункт', 'H': 'водный объект', 'T': 'элемент рельефа', 'L': 'местность / область', 'A': 'административная единица', 'S': 'сооружение / станция'}
+import re
+def fclass_new(name, ref):
+    n = name.lower(); first = n.split('(')[0].strip()
+    W = lambda words: r'^(?:' + words + r')(?=[\s.,/]|$)'
+    if re.search(r'(селение|стойбищ|улус|аул|прииск|деревн|посёлок|город)', n): return 'P'
+    if re.search(r'\(станция|^(?:ст\.|станция)\s', n) or re.search(W('монастырь|маяк|станок|зимовье|застава|пикет|крепость'), first): return 'S'
+    if re.search(W('р\\.|река|оз\\.|озеро|протока|залив|бухта|губа|пролив|море|порог'), first) or re.search(r'\s(озеро|залив|море|пролив)$', first): return 'H'
+    if re.search(W('мыс|гора|хребет|перевал|полуостров|о\\.|остров|сопка|пик|ледник'), first): return 'T'
+    if re.search(W('долина|край|угодье|тундра|степь|область|земля|страна|пустыня|тайга|урочище|район|верховья|южный берег|берег'), first) or re.search(r'край\s', first): return 'L'
+    return 'P'
+
 feats = []
 # --- места газеттира (упоминания во всём корпусе) ---
 PL = pd.read_csv(ROOT / 'data/places.csv'); PM = pd.read_csv(ROOT / 'data/place_mentions.csv')
@@ -45,8 +62,8 @@ for r in PL.itertuples():
     yrs = sorted({y for w in PM[PM.place_id == r.place_id].work_id.unique() for y in [wyear(w)] if y})
     cs = str(r.coord_source)
     feats.append(dict(type='Feature', **{'@id': PID + r.place_id},
-                      properties=dict(title=r.label_ru, src='gazetteer', region=r.region, in_siberia=bool(r.in_siberia)),
-                      when=dict(timespans=[dict(start={'earliest': yrs[0]}, end={'latest': yrs[-1]})]) if yrs else None,
+                      properties=dict(title=r.label_ru, src='gazetteer', region=r.region, in_siberia=bool(r.in_siberia), fclasses=[FC_GAZ.get(str(r.type), 'P')]),
+                      when=dict(timespans=[dict(start={'earliest': str(yrs[0])}, end={'latest': str(yrs[-1])})]) if yrs else None,
                       names=names, types=[dict(label=r.type)],
                       geometry=dict(type='Point', coordinates=[round(r.lon, 5), round(r.lat, 5)], certainty='certain' if cs.startswith('geonames') else 'less-certain'),
                       links=[l for l in [link(cs.replace('geonames_cities1000:', 'geonames:'))] if l and l['identifier'][3:].isdigit()]))
@@ -64,10 +81,12 @@ for r in NEW.itertuples():
     yrs = sorted({y for w, _, _ in c for y in [wyear(w)] if y})
     names = [dict(toponym=r.name, lang='ru', citations=[dict(label=f'{wlabel(w)}: «{q[:120]}»', **{'@id': f'{BASE}#book-{w.replace("_", "-")}-p{p}'}) for w, p, q in c[:5]] or [dict(label='Iter Sibiricum', **{'@id': BASE})])]
     l = link(r.ref if isinstance(r.ref, str) else '')
+    fc = fclass_new(r.name, r.ref)
     feats.append(dict(type='Feature', **{'@id': PID + r.place_id.replace('new:', 'route-')},
                       properties=dict(title=r.name, src='route_stop', coord_source=r.coord_source,
-                                      precision=(r.ref.split(':', 1)[1] if isinstance(r.ref, str) and r.ref.startswith('precision:') else '')),
-                      when=dict(timespans=[dict(start={'earliest': yrs[0]}, end={'latest': yrs[-1]})]) if yrs else None,
+                                      precision=(r.ref.split(':', 1)[1] if isinstance(r.ref, str) and r.ref.startswith('precision:') else ''), fclasses=[fc]),
+                      types=[dict(label=TY_RU[fc])],
+                      when=dict(timespans=[dict(start={'earliest': str(yrs[0])}, end={'latest': str(yrs[-1])})]) if yrs else None,
                       names=names,
                       geometry=dict(type='Point', coordinates=[round(r.lon, 5), round(r.lat, 5)], certainty=CERT.get(r.coord_source, 'less-certain')),
                       links=[l] if l else []))
