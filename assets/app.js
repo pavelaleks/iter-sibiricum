@@ -68,7 +68,7 @@ document.getElementById('menu')?.addEventListener('click', (e) => { if (e.target
 // Откуда пришёл читатель: при переходе в книгу или к народу с карты, из иллюстраций, связей и т. п.
 // запоминается полный адрес исходного вида (с фильтрами и масштабом), чтобы вернуться туда одной кнопкой.
 let atlasDestroy = null;
-const ORIG = [['atlas2', 'к карте', 'to the map'], ['atlas', 'к карте', 'to the map'], ['people-', 'к народу', 'to the people'], ['peoples', 'к народам', 'to the peoples'], ['illustrations', 'к иллюстрациям', 'to the illustrations'], ['links', 'к связям', 'to the networks'], ['analytics', 'к аналитике', 'to the analytics'], ['publications', 'к публикациям', 'to the publications'], ['home', 'на главную', 'to the home page']];
+const ORIG = [['atlas', 'к карте', 'to the map'], ['people-', 'к народу', 'to the people'], ['peoples', 'к народам', 'to the peoples'], ['illustrations', 'к иллюстрациям', 'to the illustrations'], ['links', 'к связям', 'to the networks'], ['analytics', 'к аналитике', 'to the analytics'], ['publications', 'к публикациям', 'to the publications'], ['home', 'на главную', 'to the home page']];
 function noteOrigin(e) {
   const h = location.hash.slice(1), old = e && e.oldURL ? (new URL(e.oldURL).hash || '#home').slice(1) : '';
   const key = h.startsWith('book-') ? 'book-' + h.slice(5).replace(/-p\d+$/, '') : h.startsWith('people-') ? h.split('?')[0] : '';
@@ -95,8 +95,9 @@ async function route(e) {
   V.innerHTML = '<div class="wrap loading">Загрузка…</div>';
   try {
     if (h === 'home') await home();
-    else if (h === 'atlas2' || h.startsWith('atlas2?')) await atlas2();
-    else if (h === 'atlas' || h.startsWith('atlas?')) await atlas();
+    else if (h === 'atlas2' || h.startsWith('atlas2?')) { history.replaceState(null, '', '#atlas' + h.slice(6)); await atlas2(); }
+    else if (h === 'atlas' || h.startsWith('atlas?')) await atlas2();
+    else if (h === 'atlas-classic' || h.startsWith('atlas-classic?')) await atlas();
     else if (h === 'peoples') await peoples();
     else if (h.startsWith('people-')) await people(fromH(h.slice(7)));
     else if (h === 'library') await library();
@@ -113,7 +114,7 @@ async function route(e) {
   } catch (e) { V.innerHTML = `<div class="wrap band"><h2>Не удалось загрузить данные</h2><p class="mute">${esc(e.message)}. Сайт читает файлы из папки data/; откройте его через веб-сервер (GitHub Pages или python -m http.server).</p></div>`; }
 }
 window.addEventListener('hashchange', route);
-const TITLES = {atlas2: 'Атлас', atlas: 'Атлас', peoples: 'Народы', people: 'Народы', library: 'Библиотека', book: 'Библиотека', illustrations: 'Иллюстрации', links: 'Связи', analytics: 'Аналитика', publications: 'Публикации', scope: 'Границы и категории', method: 'Метод и данные'};
+const TITLES = {atlas: 'Атлас', peoples: 'Народы', people: 'Народы', library: 'Библиотека', book: 'Библиотека', illustrations: 'Иллюстрации', links: 'Связи', analytics: 'Аналитика', publications: 'Публикации', scope: 'Границы и категории', method: 'Метод и данные'};
 
 function mapIn(el, opts) {
   const draw = () => SibMap.draw(el, opts());
@@ -354,7 +355,7 @@ async function illustrations() {
 async function atlas2() {
   await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=57'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   const d = await window.Atlas2.render(V, {get, getRoutes, esc, toH, PER, NAT});
-  if (location.hash.startsWith('#atlas2')) atlasDestroy = d; else d();
+  if (/^#atlas(\?|$)/.test(location.hash)) atlasDestroy = d; else d();
 }
 async function atlas() {
   const [works, routes, places, geo, groups, bookgeo] = await Promise.all([get('works.json'), getRoutes(), get('places.json'), get('geo.json'), get('groups.json'), get('bookgeo.json')]);
@@ -506,12 +507,12 @@ async function book(id, par) {
       <div class="chips">${w.top_groups.map((g) => `<span class="chip"><span>${esc(g[0])}</span> · ${g[1]}</span>`).join('')}</div>
       <p class="small">${w.sources.map((s) => `<a href="${esc(s)}" rel="noopener">${esc(s.replace('https://', ''))}</a>`).join('<br>')}</p>
       ${r ? `<p class="small"><span>${r.method === 'draft' ? 'Черновик маршрута, на проверке' : 'Маршрут, восстановленный по тексту'}</span>: ${r.stops.map((s) => esc(s[1])).join(r.method === 'draft' ? ', ' : ' → ')}. <a href="#atlas?work=${esc(id)}">Показать на карте</a></p>` : `<p class="small"><a href="#atlas?work=${esc(id)}">география книги на карте</a></p>`}
-      <div class="ctl"><button id="onlySib">только о Сибири</button><button id="scanBtn" hidden aria-pressed="false">скан рядом с текстом</button></div>
+      <div class="ctl"><button id="onlySib">только о Сибири</button><button id="scanBtn" hidden aria-pressed="false">скан рядом с текстом</button><button id="mapBtn" aria-pressed="false">карта рядом с текстом</button></div>
       <label class="small mute">Найти в тексте <input type="search" id="tq" aria-label="Поиск в тексте"></label>
       <p class="small mute" id="tqn"></p>
       <label class="small mute">Подсветить народ <select id="tg"><option value="">все</option>${[...new Set(w.top_groups.map((g) => g[0]))].map((n) => `<option>${esc(n)}</option>`).join('')}</select></label>
       ${SN[w.id] ? `<p class="small src-note"><b>Критика источника.</b> ${esc(SN[w.id])}</p>` : ''}
-    </aside><div class="text" id="txt"><p class="mute">${EN ? 'Loading the text…' : 'Загрузка текста…'}</p></div><figure class="scan" id="scan" hidden aria-live="polite"></figure></div></div></section>`;
+    </aside><div class="text" id="txt"><p class="mute">${EN ? 'Loading the text…' : 'Загрузка текста…'}</p></div><figure class="scan" id="scan" hidden aria-live="polite"></figure><figure class="bookmap" id="bmap" hidden data-noi18n></figure></div></div></section>`;
   let T;
   try { T = await (C['t:' + id] ||= fetch('texts/' + id + '.json').then((x) => x.json())); } catch (e) { document.getElementById('txt').innerHTML = EN ? '<p class="mute">Text not found.</p>' : '<p class="mute">Текст не найден.</p>'; return; }
   let only = false, q = '', hg = '';
@@ -519,6 +520,8 @@ async function book(id, par) {
   let PG = null; try { const r = await fetch('data/pages/' + id + '.json', {cache: 'no-cache'}); if (r.ok) PG = await r.json(); } catch (e) { PG = null; }
   const pageOf = (n) => { if (!PG) return null; const k = +n; let lo = 0, hi = PG.s.length - 1, a = null; while (lo <= hi) { const m = (lo + hi) >> 1; if (PG.s[m][0] <= k) { a = m; lo = m + 1; } else hi = m - 1; } return a == null ? PG.s[0] : PG.s[a]; };
   const starts = new Set(PG ? PG.s.map((x) => x[0]) : []);
+  // упоминания мест по абзацам (10b): номер абзаца → [[начало, конец, место]]
+  const PM = {}; try { const r = await fetch('data/geo/' + id + '.json'); if (r.ok) (await r.json()).m.forEach(([n, pl, a, b]) => (PM[n] ||= []).push([a, b, pl])); } catch (e) {}
   let scanOn = false, shown = '';
   const scanEl = document.getElementById('scan'), btn = document.getElementById('scanBtn');
   const showScan = (v, n) => {
@@ -544,12 +547,50 @@ async function book(id, par) {
     if (a) a.scrollIntoView({block: 'center'});
     if (on) { const pg = pageOf(a ? a.id.slice(1) : (PG.s[0] || [0])[0]); if (pg) showScan(pg[1], pg[2]); setTimeout(watch, 400); } else watch();
   };
-  if (PG) { btn.hidden = false; btn.addEventListener('click', () => toggleScan(!scanOn)); }
+  if (PG) { btn.hidden = false; btn.addEventListener('click', () => { if (!scanOn && mapOn) toggleMap(false); toggleScan(!scanOn); }); }
+  // ---- карта рядом с текстом: путь доезжает до абзаца, который читается сейчас; места абзаца подсвечены ----
+  let mapOn = false, RD = null, vis = new Set(), io2 = null, rafR = 0, curP = null;
+  const mapEl = document.getElementById('bmap'), mbtn = document.getElementById('mapBtn');
+  const plOf = (el) => [...new Set((PM[+el.id.slice(1)] || []).map((x) => x[2]))];
+  const track = () => { cancelAnimationFrame(rafR); rafR = requestAnimationFrame(() => {
+    if (!mapOn || !RD) return; const y = innerHeight * 0.4;
+    const ps = [...vis].filter((el) => el.isConnected).sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
+    const cur = ps.find((el) => el.getBoundingClientRect().bottom > y) || ps[ps.length - 1]; if (!cur) return;
+    if (curP !== cur) { curP && curP.classList.remove('cur'); cur.classList.add('cur'); curP = cur; }
+    RD.setPara(+cur.id.slice(1), plOf(cur));
+  }); };
+  const watchMap = () => { if (io2) io2.disconnect(); vis = new Set(); if (!mapOn) return;
+    io2 = new IntersectionObserver((es) => { es.forEach((e) => (e.isIntersecting ? vis.add(e.target) : vis.delete(e.target))); track(); });
+    document.querySelectorAll('#txt p[id]').forEach((el) => io2.observe(el)); };
+  addEventListener('scroll', track, {passive: true});
+  const goPara = (n, pl) => { const el = document.getElementById('p' + String(n).padStart(5, '0')); if (!el) return; el.scrollIntoView({block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+    if (pl) el.querySelectorAll(`.plm[data-pl="${CSS.escape(pl)}"]`).forEach((m) => { m.classList.add('flash'); setTimeout(() => m.classList.remove('flash'), 1600); }); };
+  const toggleMap = async (on) => {
+    const a = anchorP(); mapOn = on; mbtn.classList.toggle('on', on); mbtn.setAttribute('aria-pressed', on); mapEl.hidden = !on;
+    document.querySelector('.reader').classList.toggle('with-map', on); try { localStorage.setItem('bookmap', on ? '1' : '0'); } catch (e) {}
+    if (a) a.scrollIntoView({block: 'center'});
+    if (!on) { if (RD) { RD.destroy(); RD = null; } if (curP) { curP.classList.remove('cur'); curP = null; } watchMap(); return; }
+    if (scanOn) toggleScan(false);
+    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=57'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+    if (!mapOn) return;
+    RD = await window.Atlas2.reader(mapEl, {work: id, route: r0, PL: Object.fromEntries((await get('places.json')).map((p) => [p.id, p])), bookgeo: (await get('bookgeo.json'))[id], period: w.period,
+      onClose: () => toggleMap(false),
+      onStop: (i) => { const s = r0.stops[i]; if (s && s[4]) goPara(+s[4].split('_p')[1], s[0]); },
+      onPlace: (pl) => { const ns = Object.keys(PM).map(Number).filter((k) => PM[k].some((x) => x[2] === pl)).sort((a, b) => a - b); if (!ns.length) return; const c = curP ? +curP.id.slice(1) : 0; goPara(ns.find((k) => k > c) ?? ns[0], pl); }});
+    if (!mapOn) { RD.destroy(); RD = null; return; }
+    watchMap(); track();
+  };
+  mbtn.addEventListener('click', () => toggleMap(!mapOn));
+  document.getElementById('txt').addEventListener('mouseover', (e) => { if (!RD) return; const m = e.target.closest('.plm'); RD.hover(m ? m.dataset.pl : null); });
+  atlasDestroy = () => { removeEventListener('scroll', track); if (io2) io2.disconnect(); if (RD) RD.destroy(); };
+  let fromMap = null; try { fromMap = sessionStorage.getItem('from:book-' + toH(id)); } catch (e) {}
+  const wantMap = (fromMap && /^#atlas(\?|$)/.test(fromMap)) || (() => { try { return localStorage.getItem('bookmap') === '1'; } catch (e) { return false; } })();
   const render = () => {
     const re = q.length > 2 ? new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi') : null; let hits = 0;
     const html = T.p.filter((p) => (p[4].match(/\p{L}/gu) || []).length >= 4 && (!only || p[3] || p[1] === 'h')).map((p) => {
       const [n, type, reg, sib, text, ms] = p; let out = '', pos = 0;
-      ms.slice().sort((a, b) => a[0] - b[0]).forEach(([a, b, g]) => { if (a < pos) return; out += esc(text.slice(pos, a)) + `<mark class="${hg && GN[g] === hg ? 'sel' : ''}" title="${esc(GE[g] || GN[g] || g)}">${esc(text.slice(a, b))}</mark>`; pos = b; });
+      ms.map(([a, b, g]) => [a, b, 0, g]).concat((PM[+n] || []).map(([a, b, pl]) => [a, b, 1, pl])).sort((x, y) => x[0] - y[0] || x[2] - y[2]).forEach(([a, b, k, g]) => { if (a < pos) return;
+        out += esc(text.slice(pos, a)) + (k ? `<span class="plm" data-pl="${esc(g)}">${esc(text.slice(a, b))}</span>` : `<mark class="${hg && GN[g] === hg ? 'sel' : ''}" title="${esc(GE[g] || GN[g] || g)}">${esc(text.slice(a, b))}</mark>`); pos = b; });
       out += esc(text.slice(pos));
       if (re) { const c = (text.match(re) || []).length; if (!c) return ''; hits += c; }
       const pg = starts.has(+n) ? pageOf(n) : null;
@@ -558,11 +599,13 @@ async function book(id, par) {
     }).join('');
     document.getElementById('txt').innerHTML = html || (EN ? '<p class="mute">No matches.</p>' : '<p class="mute">Ничего не найдено.</p>');
     document.getElementById('tqn').textContent = re ? `Совпадений: ${hits}` : '';
-    watch();
+    watch(); if (mapOn) { curP = null; watchMap(); }
   };
   document.getElementById('txt').addEventListener('click', (e) => { const a = e.target.closest('a.pgm'); if (a && scanOn && !e.metaKey && !e.ctrlKey) { e.preventDefault(); showScan(+a.dataset.v, +a.dataset.n); } });
   render();
+  if (par) par = String(par).padStart(5, '0'); // ссылки вида -p163 и -p00163 ведут к одному абзацу
   if (par) { const el = document.getElementById('p' + par); if (el) { el.scrollIntoView({block: 'center'}); el.style.background = 'color-mix(in srgb, var(--acc) 12%, transparent)'; } }
+  if (wantMap && innerWidth > 960) toggleMap(true);
   document.getElementById('onlySib').addEventListener('click', (e) => { only = !only; e.target.classList.toggle('on', only); render(); });
   let tmr; document.getElementById('tq').addEventListener('input', (e) => { clearTimeout(tmr); tmr = setTimeout(() => { q = e.target.value.trim(); render(); }, 250); });
   document.getElementById('tg').addEventListener('change', (e) => { hg = e.target.value; render(); });

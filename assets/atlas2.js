@@ -20,7 +20,8 @@ window.Atlas2 = (() => {
   const km = (a, b) => { const r = Math.PI / 180, d = Math.sin((b[1] - a[1]) * r / 2) ** 2 + Math.cos(a[1] * r) * Math.cos(b[1] * r) * Math.sin((b[0] - a[0]) * r / 2) ** 2; return 12742 * Math.asin(Math.sqrt(d)); };
   // круг заданного радиуса в км: пикселей на км на широте 58° при zoom 0, дальше — ×2 на каждый уровень
   const PX0 = 1000 / (156543 * Math.cos(58 * Math.PI / 180));
-  const kmR = (k) => ['interpolate', ['exponential', 2], ['zoom'], 0, k * PX0, 10, k * PX0 * 1024];
+  // радиус по признаку q (1 — приблизительно, 2 — центр объекта); zoom — только на верхнем уровне выражения
+  const kmQ = () => ['interpolate', ['exponential', 2], ['zoom'], 0, ['case', ['==', ['get', 'q'], 2], UKM[2] * PX0, UKM[1] * PX0], 10, ['case', ['==', ['get', 'q'], 2], UKM[2] * PX0 * 1024, UKM[1] * PX0 * 1024]];
   const wrap = (lo) => ((lo + 540) % 360) - 180;
   const ulon = (lon) => (lon < -100 ? lon + 360 : lon); // Чукотка: 180…200, чтобы линии и подписи не прыгали через весь мир
 
@@ -94,22 +95,28 @@ window.Atlas2 = (() => {
       <h1>Атлас путешествий</h1>
       <p class="lede" data-noi18n>${EN ? `${nMan} routes reconstructed from the texts: for each stop there is a paragraph in which the author says they were there${nNF ? ` (${nNF} stops were not found in the text; they are shown as hollow circles)` : ''}. The line colour gives the period of the journey; a dashed line marks a stretch of more than ${GAP} km where the author names no places. The better a location is known, the sharper its circle.` : `${nMan} маршрутов, восстановленных по текстам: у каждой остановки есть абзац, где автор пишет, что был в этом месте${nNF ? ` (${nNF} ${plural(nNF, 'остановка', 'остановки', 'остановок')} в тексте не ${nNF === 1 ? 'найдена' : 'найдены'}, они показаны пустыми кружками)` : ''}. Цвет линии — период поездки; пунктир — перегон длиннее ${GAP} км, на котором автор не называет ни одного места. Чем точнее известно место, тем чётче его круг.`}</p>
       <div class="ctl a2-ctl">
-        <label>Книга <select id="fWork"><option value="">все</option>${opt(works.slice().sort((a, b) => a.year - b.year).map((w) => [w.id, w.label + (RT[w.id] ? '' : ' (без маршрута)')]), st.work)}</select></label>
+        <label>Книга <select id="fWork"><option value="">все</option>${opt(works.slice().sort((a, b) => a.year - b.year).map((w) => [w.id, w.label + (RT[w.id] ? '' : ' (' + T('без маршрута', 'no route') + ')')]), st.work)}</select></label>
         <label>Народ <select id="fGr"><option value="">—</option>${opt(ind.map((g) => [g.id, g.name]), st.group)}</select></label>
         <span class="a2-lay" role="group" aria-label="${T('Слои', 'Layers')}"><button data-l="r">маршруты</button>${nDraft ? '<button data-l="d">черновики</button>' : ''}<button data-l="p">места</button><button data-l="a">ареалы</button></span>
       </div>
-      <details class="a2-more"${st.period || st.nat || st.stay || st.y0 !== Y0 || st.y1 !== Y1 ? ' open' : ''}><summary>Фильтры: период, страна, годы</summary><div class="ctl a2-ctl">
+      <details class="a2-more"${st.period || st.nat || st.stay ? ' open' : ''}><summary>Фильтры: период, страна, тип поездки</summary><div class="ctl a2-ctl">
         <label>Период <select id="fPer"><option value="">все</option>${opt(Object.entries(PER), st.period)}</select></label>
         <label>Страна автора <select id="fNat"><option value="">все</option>${opt(NATS.map((n) => [n, NAT[n] || n]), st.nat)}</select></label>
         <label>Тип поездки <select id="fStay"><option value="">все</option>${opt(STAYS.map((x) => [x, works.find((w) => w.stay === x).stay_ru]), st.stay)}</select></label>
-        <div class="yr2"><span>Годы поездки</span><span class="dual"><i></i><input type="range" id="fY0" min="${Y0}" max="${Y1}" value="${st.y0}" aria-label="${T('Поездки не раньше', 'Journeys from')}"><input type="range" id="fY1" min="${Y0}" max="${Y1}" value="${st.y1}" aria-label="${T('Поездки не позже', 'Journeys until')}"></span><output id="oYr"></output></div>
       </div></details>
+      <div class="a2-time" data-noi18n>
+        <button id="tPlay" class="a2-play" aria-pressed="false" title="${T('Показать поездки год за годом', 'Show the journeys year by year')}"><span class="ic" aria-hidden="true">▶</span> <span class="tx">${T('по годам', 'year by year')}</span></button>
+        <div class="tl"><svg class="tl-svg" aria-hidden="true"></svg><span class="dual"><i></i><input type="range" id="fY0" min="${Y0}" max="${Y1}" value="${st.y0}" aria-label="${T('Поездки не раньше', 'Journeys from')}"><input type="range" id="fY1" min="${Y0}" max="${Y1}" value="${st.y1}" aria-label="${T('Поездки не позже', 'Journeys until')}"></span>
+          <div class="tl-ax" aria-hidden="true">${(() => { const out = []; for (let y = Math.ceil(Y0 / 25) * 25; y <= Y1; y += 25) out.push(`<span style="left:calc(9px + (100% - 18px) * ${(y - Y0) / (Y1 - Y0)})">${y}</span>`); return out.join(''); })()}</div></div>
+        <output id="oYr"></output>
+      </div>
     </div>
     <div class="a2-stage" data-noi18n>
       <div class="a2-map" id="a2map"></div>
       <div class="a2-labels" aria-hidden="true"></div>
       <div class="tip" hidden></div>
       <p class="sr-only" aria-live="polite" id="a2status"></p>
+      <div class="a2-year" hidden aria-hidden="true"><b></b><span></span></div>
       <div class="a2-tools" role="toolbar" aria-label="${T('Инструменты карты', 'Map tools')}">
         <button id="bIn" title="${T('Крупнее', 'Zoom in')}" aria-label="${T('Крупнее', 'Zoom in')}">+</button>
         <button id="bOut" title="${T('Мельче', 'Zoom out')}" aria-label="${T('Мельче', 'Zoom out')}">−</button>
@@ -131,7 +138,7 @@ window.Atlas2 = (() => {
         </div>
       </div>
     </div>
-    <div class="wrap"><p class="small mute a2-note">${T('Новая версия атласа, на проверке. Прежняя карта:', 'New version of the atlas, under review. The previous map:')} <a href="#atlas">${T('атлас', 'atlas')}</a>.</p></div></section>`;
+    </section>`;
 
     const stage = V.querySelector('.a2-stage'), labEl = V.querySelector('.a2-labels'), tip = V.querySelector('.tip'), body = V.querySelector('#a2body');
     const panelEl = V.querySelector('#a2panel'), grip = V.querySelector('.a2-grip'), legEl = V.querySelector('.a2-legend'), status = V.querySelector('#a2status');
@@ -140,7 +147,7 @@ window.Atlas2 = (() => {
     const destroy = () => { if (dead) return; dead = true; if (my === tok) tok++; clearTimeout(urlT); cancelAnimationFrame(raf); cleanup.forEach((f) => { try { f(); } catch (e) {} }); try { map && map.remove(); } catch (e) {} };
 
     // без WebGL — объяснение и прежняя карта вместо падения страницы
-    const noMap = (msg) => { stage.innerHTML = `<div class="a2-nogl"><p>${msg}</p><p><a href="#atlas">${T('Открыть прежнюю версию атласа', 'Open the previous version of the atlas')}</a></p></div>`; return destroy; };
+    const noMap = (msg) => { stage.innerHTML = `<div class="a2-nogl"><p>${msg}</p><p><a href="#atlas-classic">${T('Открыть упрощённую версию атласа', 'Open the simplified version of the atlas')}</a></p></div>`; return destroy; };
     if (!hasGL()) return noMap(T('Этот браузер не поддерживает WebGL, поэтому новая карта не может отрисоваться.', 'This browser does not support WebGL, so the new map cannot be drawn.'));
     if (!window.__a2proto) { window.__a2proto = new pmtiles.Protocol(); maplibregl.addProtocol('pmtiles', window.__a2proto.tile); }
     const base = new URL('data/tiles/basemap.pmtiles', location.href).href;
@@ -160,7 +167,7 @@ window.Atlas2 = (() => {
         style: {version: 8, projection: {type: st.globe ? 'globe' : 'mercator'}, sources: {}, layers: [{id: 'bg', type: 'background', paint: {'background-color': C.sea}}]},
       });
     } catch (e) { return noMap(`${T('Карту не удалось создать', 'The map could not be created')}: ${esc(e.message)}.`); }
-    map.touchZoomRotate.disableRotation();
+    map.touchZoomRotate.disableRotation(); stage.__map = map;
     const ro = new ResizeObserver(() => { if (!dead) { map.resize(); map.setPadding(pad()); place(); } }); ro.observe(stage); cleanup.push(() => ro.disconnect());
 
     // ---------- данные слоёв ----------
@@ -186,7 +193,7 @@ window.Atlas2 = (() => {
         if (cur.length > 1) segs.push(cur);
         const near = [], far = [];
         for (const sg of segs) { let run = [sg[0]]; for (let i = 1; i < sg.length; i++) { if (km(sg[i - 1], sg[i]) > GAP) { if (run.length > 1) near.push(run); far.push([sg[i - 1], sg[i]]); run = [sg[i]]; } else run.push(sg[i]); } if (run.length > 1) near.push(run); }
-        const pr = {work: r.work, per: per(r.work), focus: r.work === st.work ? 1 : 0, grp: GW ? (GW[r.work] ? 1 : 0) : 1};
+        const pr = {work: r.work, per: per(r.work), focus: r.work === st.work ? 1 : 0, grp: GW ? (GW[r.work] ? 1 : 0) : 1, j0: j0(W[r.work]), j1: j1(W[r.work])};
         if (near.length) F.push({type: 'Feature', properties: {...pr, gap: 0}, geometry: {type: 'MultiLineString', coordinates: near}});
         if (far.length) F.push({type: 'Feature', properties: {...pr, gap: 1}, geometry: {type: 'MultiLineString', coordinates: far}});
       }
@@ -250,12 +257,12 @@ window.Atlas2 = (() => {
       'routes': {'line-color': RC(), 'line-width': RW(1.3), 'line-opacity': ROP(.78)},
       'dstops': {'circle-color': PC(), 'circle-radius': ['interpolate', ['linear'], ['zoom'], 2, 8, 7, 16], 'circle-blur': 1, 'circle-opacity': .55},
       // неопределённость координат — ореол постоянного радиуса в километрах, не связанный с числом упоминаний
-      'places-unc': {'circle-color': C.ink, 'circle-blur': .85, 'circle-opacity': ['case', ['==', ['get', 'q'], 2], .1, .13], 'circle-radius': ['case', ['==', ['get', 'q'], 2], kmR(UKM[2]), kmR(UKM[1])]},
+      'places-unc': {'circle-color': C.ink, 'circle-blur': .85, 'circle-opacity': ['case', ['==', ['get', 'q'], 2], .1, .13], 'circle-radius': kmQ()},
       'places': {'circle-color': C.ink, 'circle-opacity': ['case', ['==', ['get', 'q'], 0], .28, .12],
         'circle-stroke-color': C.ink, 'circle-stroke-opacity': ['case', ['==', ['get', 'q'], 0], .85, .35],
         'circle-stroke-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2.2, ['==', ['get', 'q'], 0], 1.1, .6],
         'circle-radius': ['interpolate', ['linear'], ['zoom'], 2, ['+', 1.8, ['*', 12, ['get', 'r']]], 7, ['+', 3, ['*', 22, ['get', 'r']]]]},
-      'stops-unc': {'circle-color': PC(), 'circle-blur': .85, 'circle-opacity': .25, 'circle-radius': ['case', ['==', ['get', 'q'], 2], kmR(UKM[2]), kmR(UKM[1])]},
+      'stops-unc': {'circle-color': PC(), 'circle-blur': .85, 'circle-opacity': .25, 'circle-radius': kmQ()},
       'stops': {'circle-color': ['case', ['==', ['get', 'flag'], 'not_found_in_text'], C.paper, PC()], 'circle-radius': ['case', ['boolean', ['feature-state', 'hover'], false], 6.5, 4.6],
         'circle-stroke-color': ['case', ['==', ['get', 'flag'], 'not_found_in_text'], PC(), C.paper], 'circle-stroke-width': ['case', ['==', ['get', 'flag'], 'not_found_in_text'], 1.8, 1.2]},
     });
@@ -335,6 +342,7 @@ window.Atlas2 = (() => {
     const qTxt = (q) => [T('координаты по справочнику (GeoNames, Wikidata)', 'coordinates from a gazetteer (GeoNames, Wikidata)'), T('координаты приблизительные', 'approximate coordinates'), T('точка — условный центр реки, озера или области', 'the point is a nominal centre of a river, lake or region'), T('черновик: посещение выведено из текста', 'draft: visit inferred from the text')][q];
     const jour = (w) => `${j0(w) || '?'}${j1(w) && j1(w) !== j0(w) ? '–' + j1(w) : ''}`;
     const pnum = (pid) => +String(pid || '').split('_p')[1] || 0;
+    const pad5 = (pid) => String(pnum(pid)).padStart(5, '0');
     const quote = (s) => { const t = String(s[7] || '').trim(); return t ? `<i class="q">«${esc(t.length > 180 ? t.slice(0, 177).replace(/\s+\S*$/, '') + '…' : t)}»</i>` : ''; };
     const visRoutes = () => routes.filter((r) => r.method === 'manual' && filt(W[r.work]));
     function panel() {
@@ -352,7 +360,7 @@ window.Atlas2 = (() => {
         h += `<h3><a href="#book-${toH(w.id)}">${esc(w.label)}</a></h3><p class="small mute">${esc(w.author)} · ${esc(nm(w.nat_ru))} · ${esc(nm(w.stay_ru))} · ${T('поездка', 'journey')} ${jour(w)}</p>`;
         h += r ? `<p><span class="status${r.method === 'manual' ? ' rec' : ''}">${stTxt(r)}</span></p>` : `<p class="small">${T('Маршрут по этой книге не восстановлен. На карте — места, упомянутые в книге; круг тем больше, чем чаще упоминание.', 'No route has been reconstructed for this book. The map shows the places it mentions; the larger the circle, the more often mentioned.')}</p>`;
         if (r && r.summary && !EN) h += `<p class="small">${esc(r.summary)}</p>`;
-        if (r) h += `<ol class="small a2-stops">${r.stops.map((s, i) => `<li><button class="lnk" data-stop="${i}"${s[2] == null ? ' disabled' : ''}>${esc(nm(s[1]))}</button>${s[4] ? ` <a class="mute" href="#book-${toH(st.work)}-p${pnum(s[4])}">${T('абзац', 'para.')} ${pnum(s[4])}</a>` : ''}${s[2] == null ? ` <span class="mute">${T('без координат', 'no coordinates')}</span>` : stopQ(s) === 2 ? ` <span class="mute">${T('в районе объекта', 'somewhere in the area')}</span>` : stopQ(s) ? ' <span class="mute">≈</span>' : ''}${s[5] === 'not_found_in_text' ? ` <span class="mute">${T('в тексте не найдено', 'not found in the text')}</span>` : ''}</li>`).join('')}</ol>`;
+        if (r) h += `<ol class="small a2-stops">${r.stops.map((s, i) => `<li><button class="lnk" data-stop="${i}"${s[2] == null ? ' disabled' : ''}>${esc(nm(s[1]))}</button>${s[4] ? ` <a class="mute" href="#book-${toH(st.work)}-p${pad5(s[4])}">${T('абзац', 'para.')} ${pnum(s[4])}</a>` : ''}${s[2] == null ? ` <span class="mute">${T('без координат', 'no coordinates')}</span>` : stopQ(s) === 2 ? ` <span class="mute">${T('в районе объекта', 'somewhere in the area')}</span>` : stopQ(s) ? ' <span class="mute">≈</span>' : ''}${s[5] === 'not_found_in_text' ? ` <span class="mute">${T('в тексте не найдено', 'not found in the text')}</span>` : ''}</li>`).join('')}</ol>`;
         h += `<p class="small"><a href="#" data-clear="work">${T('← все маршруты', '← all routes')}</a></p>`;
         body.innerHTML = h; return;
       }
@@ -391,23 +399,23 @@ window.Atlas2 = (() => {
     // ---------- обновление ----------
     function url() {
       clearTimeout(urlT); urlT = setTimeout(() => {
-        if (dead || !stage.isConnected || !location.hash.startsWith('#atlas2')) return;
+        if (dead || !stage.isConnected || !/^#atlas(\?|$)/.test(location.hash)) return;
         const c = map.getCenter(), p = new URLSearchParams();
         if (st.work) p.set('work', st.work); if (st.group) p.set('g', st.group); if (st.period) p.set('per', st.period); if (st.nat) p.set('nat', st.nat); if (st.stay) p.set('stay', st.stay);
         if (st.y0 !== Y0) p.set('y0', st.y0); if (st.y1 !== Y1) p.set('y1', st.y1); if (st.lay !== 'rpa') p.set('l', st.lay); if (!st.globe) p.set('p', 'flat');
         p.set('v', [wrap(c.lng).toFixed(2), c.lat.toFixed(2), map.getZoom().toFixed(2)].join(','));
-        history.replaceState(null, '', '#atlas2?' + p.toString().replace(/%2C/g, ','));
+        history.replaceState(null, '', '#atlas?' + p.toString().replace(/%2C/g, ','));
       }, 300);
     }
     function refresh() {
-      if (dead) return;
+      if (dead) return; if (play) stopPlay();
       const n = visRoutes().length;
       V.querySelectorAll('.a2-lay button').forEach((b) => { b.classList.toggle('on', on(b.dataset.l)); b.setAttribute('aria-pressed', String(on(b.dataset.l))); });
       V.querySelector('#oYr').textContent = `${st.y0}–${st.y1}`;
       ['fY0', 'fY1'].forEach((id) => { const el = V.querySelector('#' + id); el.setAttribute('aria-valuetext', T(`${el.value} год`, `${el.value}`)); });
       const bar = V.querySelector('.dual i'), f = (y) => (y - Y0) / (Y1 - Y0); bar.style.left = `calc(9px + (100% - 18px) * ${f(st.y0)})`; bar.style.width = `calc((100% - 18px) * ${f(st.y1) - f(st.y0)})`;
       status.textContent = st.work ? W[st.work].label : st.group ? (EN ? GR[st.group].name_en : GR[st.group].name) : `${T('Показано', 'Showing')} ${routesN(n)}`;
-      panel();
+      panel(); if (typeof histo === 'function' && svgT) histo();
       if (!map.getSource('routes')) return;
       map.getSource('routes').setData(routeLines()); map.getSource('stops').setData(stopPoints()); map.getSource('places').setData(placePoints()); map.getSource('areas').setData(areaPolys());
       for (const [id, pp] of Object.entries(paint())) if (/^routes/.test(id)) for (const [k, v] of Object.entries(pp)) map.setPaintProperty(id, k, v);
@@ -453,7 +461,7 @@ window.Atlas2 = (() => {
     function onClick(e) {
       const f = pick(e.point); if (!f) return;
       const id = f.layer.id;
-      if (id === 'stops') { const s = RT[st.work].stops[f.properties.k]; if (s[4]) location.hash = `#book-${toH(st.work)}-p${pnum(s[4])}`; }
+      if (id === 'stops') { const s = RT[st.work].stops[f.properties.k]; if (s[4]) location.hash = `#book-${toH(st.work)}-p${pad5(s[4])}`; }
       else if (id === 'places') placePanel(f.properties.id);
       else if (id === 'routes' || id === 'routes-gap') { st.group = ''; V.querySelector('#fGr').value = ''; setWork(f.properties.work); }
       else if (id === 'dstops' && f.properties.work) setWork(f.properties.work);
@@ -469,6 +477,61 @@ window.Atlas2 = (() => {
     });
     map.on('move', place); map.on('moveend', url);
     map.on('error', (e) => console.warn('map', e && e.error && e.error.message));
+
+    // ---------- шкала времени: сколько поездок шло в каждый год (по годам самой поездки), с разбивкой по периодам ----------
+    const svgT = V.querySelector('.tl-svg'), yearEl = V.querySelector('.a2-year'), playB = V.querySelector('#tPlay');
+    function histo() {
+      const base = (w) => !!w && (!st.period || w.period === st.period) && (!st.nat || w.nat === st.nat) && (!st.stay || w.stay === st.stay);
+      const cnt = {}; let mx = 1;
+      for (const r of routes) { if (r.method !== 'manual') continue; const w = W[r.work]; if (!base(w)) continue; const k = per(r.work);
+        for (let y = j0(w); y <= j1(w); y++) { const c = cnt[y] ||= [0, 0, 0, 0, 0]; c[k]++; mx = Math.max(mx, c.reduce((a, b) => a + b, 0)); } }
+      const Wd = svgT.clientWidth || 600, H = 46, x = (y) => 9 + (Wd - 18) * (y - Y0) / (Y1 - Y0), bw = Math.max(1, (Wd - 18) / (Y1 - Y0 + 1) - .6);
+      let h = '';
+      for (let y = Y0; y <= Y1; y++) { const c = cnt[y]; if (!c) continue; let acc = 0; const inR = y >= st.y0 && y <= st.y1;
+        c.forEach((n, k) => { if (!n) return; const hh = n / mx * (H - 4); h += `<rect x="${(x(y) - bw / 2).toFixed(1)}" y="${(H - acc - hh).toFixed(1)}" width="${bw.toFixed(1)}" height="${hh.toFixed(1)}" fill="var(${PERV[k]})" opacity="${inR ? .95 : .25}"/>`; acc += hh; }); }
+      h += `<line class="tl-cur" x1="0" x2="0" y1="0" y2="${H}" visibility="hidden"/>`;
+      svgT.setAttribute('viewBox', `0 0 ${Wd} ${H}`); svgT.innerHTML = h; svgT._x = x;
+    }
+    const ro2 = new ResizeObserver(() => !dead && histo()); ro2.observe(svgT); cleanup.push(() => ro2.disconnect());
+    // проигрывание: год за годом; идущие в этот год поездки — яркие, прошедшие — бледные серые, будущие скрыты
+    let play = null;
+    // состояние маршрута в год Y хранится в feature-state (t: 1 — в пути, 2 — поездка уже прошла, 0 — ещё не началась): это дёшево для каждого кадра
+    const playPaint = (on) => {
+      if (!map.getLayer('routes')) return;
+      if (on === false) { for (const [id, pp] of Object.entries(paint())) if (/^routes/.test(id)) for (const [k, v] of Object.entries(pp)) map.setPaintProperty(id, k, v); vis(); labels(); return; }
+      const t = ['coalesce', ['feature-state', 't'], 0];
+      ['routes', 'routes-gap'].forEach((id) => {
+        map.setPaintProperty(id, 'line-color', ['case', ['==', t, 1], PC(), C.land2]);
+        map.setPaintProperty(id, 'line-opacity', ['case', ['==', t, 1], 1, ['==', t, 2], .45, 0]);
+        // тот же вид выражения (зум + данные), что и в обычном стиле: иначе MapLibre не пересобирает униформы
+        const a = id === 'routes' ? 3.2 : 1.6, b = id === 'routes' ? 1.1 : .7;
+        map.setPaintProperty(id, 'line-width', ['interpolate', ['linear'], ['zoom'], 2, ['case', ['==', t, 1], a, b], 6, ['case', ['==', t, 1], a * 1.3, b * 1.3]]);
+      });
+    };
+    const playState = (y) => { for (const r of visRoutes()) { const w = W[r.work]; map.setFeatureState({source: 'routes', id: r.work}, {t: j0(w) <= y && j1(w) >= y ? 1 : j1(w) < y ? 2 : 0}); } };
+    const playHide = () => { ['places', 'places-unc', 'routes-case'].forEach((id) => map.getLayer(id) && map.setLayoutProperty(id, 'visibility', 'none')); labEl.innerHTML = ''; };
+    function setYear(y) {
+      playState(y);
+      const act = visRoutes().filter((r) => j0(W[r.work]) <= y && j1(W[r.work]) >= y).map((r) => W[r.work].label);
+      yearEl.querySelector('b').textContent = y; yearEl.querySelector('span').textContent = act.length ? (act.length > 3 ? act.slice(0, 3).join(', ') + T(` и ещё ${act.length - 3}`, ` and ${act.length - 3} more`) : act.join(', ')) : T('никто не в пути', 'nobody on the road');
+      const ln = svgT.querySelector('.tl-cur'); if (ln && svgT._x) { const xx = svgT._x(y); ln.setAttribute('x1', xx); ln.setAttribute('x2', xx); ln.setAttribute('visibility', 'visible'); }
+    }
+    function stopPlay() {
+      if (!play) return; cancelAnimationFrame(play.raf); play = null; yearEl.hidden = true; playB.setAttribute('aria-pressed', 'false'); playB.querySelector('.ic').textContent = '▶'; playB.querySelector('.tx').textContent = T('по годам', 'year by year');
+      const ln = svgT.querySelector('.tl-cur'); if (ln) ln.setAttribute('visibility', 'hidden'); map.removeFeatureState({source: 'routes'}); playPaint(false); status.textContent = T('Проигрывание остановлено', 'Playback stopped');
+    }
+    function startPlay() {
+      if (st.work) { st.work = ''; V.querySelector('#fWork').value = ''; refresh(); }
+      if (!map.getLayer('routes')) return;
+      const a = st.y0, b = st.y1, sp = reduce() ? 40 : 6; // лет в секунду
+      play = {raf: 0, t0: performance.now(), y: a}; playHide(); playPaint(true); yearEl.hidden = false; setYear(a);
+      playB.setAttribute('aria-pressed', 'true'); playB.querySelector('.ic').textContent = '■'; playB.querySelector('.tx').textContent = T('стоп', 'stop');
+      status.textContent = T(`Проигрывание: ${a}–${b}`, `Playing: ${a}–${b}`);
+      const step = (t) => { if (!play || dead) return; const y = Math.min(b, Math.floor(a + (t - play.t0) / 1000 * sp)); if (y !== play.y) { play.y = y; setYear(y); } if (y >= b) { play.raf = 0; setTimeout(() => play && play.y >= b && stopPlay(), 1800); return; } play.raf = requestAnimationFrame(step); };
+      play.raf = requestAnimationFrame(step);
+    }
+    playB.addEventListener('click', () => (play ? stopPlay() : startPlay()));
+    cleanup.push(() => { if (play) cancelAnimationFrame(play.raf); });
 
     // ---------- элементы управления ----------
     const bind = (id, k, fn) => V.querySelector('#' + id).addEventListener('change', (e) => (fn ? fn(e.target.value) : (st[k] = e.target.value, refresh())));
@@ -526,5 +589,105 @@ window.Atlas2 = (() => {
     refresh();
     return destroy;
   }
-  return {render};
+
+  // ---------- карта рядом с текстом книги: путь «доезжает» до абзаца, который читается сейчас ----------
+  // reader(el, {work, route, PL, bookgeo, period, onPlace(id), onStop(i)}) → {setPara(n, ids), hover(id), destroy}
+  async function reader(el, o) {
+    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=57'), loadJS('assets/vendor/maplibre-gl.js?v=57'), loadJS('assets/vendor/pmtiles.js?v=57')]);
+    if (!hasGL()) { el.innerHTML = `<p class="small mute" style="padding:14px">${T('Браузер не поддерживает WebGL, карта недоступна.', 'This browser does not support WebGL; the map is unavailable.')}</p>`; return {setPara() {}, hover() {}, destroy() {}}; }
+    if (!window.__a2proto) { window.__a2proto = new pmtiles.Protocol(); maplibregl.addProtocol('pmtiles', window.__a2proto.tile); }
+    let C = palette(el), dead = false, raf = 0, follow = true, userAt = 0, curN = -1, curIds = [], hovId = null;
+    const r = o.route, PL = o.PL, pi = PERK.indexOf(o.period);
+    const pcol = () => C.per[pi] || C.acc;
+    const pnum = (pid) => +String(pid || '').split('_p')[1] || 0;
+    const isArea = (p) => p && /centroid|area/.test(p.coord || '');
+    // нормализованные координаты остановок (Чукотка — за 180°)
+    let prev = null; const N = r ? r.stops.map((s) => { if (s[2] == null || s[3] == null) return null; let lo = ulon(s[2]); if (prev != null) { while (lo - prev > 180) lo -= 360; while (prev - lo > 180) lo += 360; } prev = lo; return [lo, s[3]]; }) : [];
+    const vert = (i) => N[i] && !isArea(PL[r.stops[i][0]]);
+    const lineTo = (k) => { const segs = []; let cur = [], jj = null; for (let i = 0; i <= k && r && i < r.stops.length; i++) { const s = r.stops[i]; if (!N[i] || (s[6] || 1) !== jj) { if (cur.length > 1) segs.push(cur); cur = []; } jj = s[6] || 1; if (vert(i)) cur.push(N[i]); } if (cur.length > 1) segs.push(cur); return {type: 'Feature', properties: {}, geometry: {type: 'MultiLineString', coordinates: segs}}; };
+    el.innerHTML = `<div class="bm-bar"><b>${T('Карта книги', 'Map of the book')}</b><label class="small"><input type="checkbox" id="bmF" checked> ${T('следовать за текстом', 'follow the text')}</label><a class="small" href="#atlas?work=${esc(o.work)}">${T('в атласе', 'in the atlas')}</a><button class="bm-x" aria-label="${T('Закрыть карту', 'Close the map')}">×</button></div>
+      <div class="bm-map"></div><div class="a2-labels" aria-hidden="true"></div><div class="tip" hidden></div>
+      <p class="bm-cap small mute" aria-live="polite"></p>`;
+    const box = el.querySelector('.bm-map'), labEl = el.querySelector('.a2-labels'), cap = el.querySelector('.bm-cap'), tip = el.querySelector('.tip');
+    const pts = (o.bookgeo || []).map(([id, n]) => [PL[id], n]).filter(([p]) => p);
+    const mx = Math.max(1, ...pts.map((x) => x[1]));
+    const all = N.filter(Boolean).concat(pts.filter(([p]) => p.sib || OUTER.includes(p.region)).map(([p]) => [ulon(p.lon), p.lat]));
+    const bb = all.length ? [[Math.min(...all.map((c) => c[0])), Math.min(...all.map((c) => c[1]))], [Math.max(...all.map((c) => c[0])), Math.max(...all.map((c) => c[1]))]] : [[60, 45], [150, 70]];
+    const map = new maplibregl.Map({container: box, attributionControl: false, dragRotate: false, pitchWithRotate: false, maxPitch: 0, cooperativeGestures: true, bounds: bb, fitBoundsOptions: {padding: 30, maxZoom: 5},
+      locale: {'CooperativeGesturesHandler.WindowsHelpText': T('Чтобы менять масштаб, прокручивайте с нажатой Ctrl', 'Use Ctrl + scroll to zoom the map'), 'CooperativeGesturesHandler.MacHelpText': T('Чтобы менять масштаб, прокручивайте с нажатой ⌘', 'Use ⌘ + scroll to zoom the map'), 'CooperativeGesturesHandler.MobileHelpText': T('Двигайте карту двумя пальцами', 'Use two fingers to move the map')},
+      style: {version: 8, projection: {type: 'globe'}, sources: {}, layers: [{id: 'bg', type: 'background', paint: {'background-color': C.sea}}]}});
+    map.touchZoomRotate.disableRotation(); el.__map = map;
+    const ro = new ResizeObserver(() => !dead && map.resize()); ro.observe(el);
+    const fc = (F) => ({type: 'FeatureCollection', features: F});
+    const placeFC = () => fc(pts.map(([p, n]) => ({type: 'Feature', id: p.id, properties: {id: p.id, r: Math.sqrt(n / mx), q: /^(geonames|wikidata)/.test(p.coord || '') ? 0 : isArea(p) ? 2 : 1, cur: curIds.includes(p.id) ? 1 : 0}, geometry: {type: 'Point', coordinates: [ulon(p.lon), p.lat]}})));
+    const stopFC = (k) => fc(r ? r.stops.map((s, i) => N[i] && {type: 'Feature', properties: {i, done: i <= k ? 1 : 0, here: i === k ? 1 : 0, nf: s[5] === 'not_found_in_text' ? 1 : 0}, geometry: {type: 'Point', coordinates: N[i]}}).filter(Boolean) : []);
+    let K = -1;
+    map.on('load', () => {
+      if (dead) return;
+      map.addSource('base', {type: 'vector', url: 'pmtiles://' + new URL('data/tiles/basemap.pmtiles', location.href).href});
+      map.addSource('pl', {type: 'geojson', data: placeFC(), promoteId: 'id'});
+      map.addSource('all', {type: 'geojson', data: r ? lineTo(r.stops.length) : fc([])});
+      map.addSource('done', {type: 'geojson', data: fc([])});
+      map.addSource('st', {type: 'geojson', data: stopFC(-1)});
+      const L = [
+        {id: 'land', type: 'fill', source: 'base', 'source-layer': 'land', paint: {'fill-color': C.land}},
+        {id: 'coast', type: 'line', source: 'base', 'source-layer': 'land', paint: {'line-color': C.land2, 'line-width': .6}},
+        {id: 'lakes', type: 'fill', source: 'base', 'source-layer': 'lakes', paint: {'fill-color': C.sea}},
+        {id: 'rivers', type: 'line', source: 'base', 'source-layer': 'rivers', filter: ['<=', ['coalesce', ['get', 'scalerank'], 9], ['+', 3.2, ['*', .9, ['zoom']]]], paint: {'line-color': C.river, 'line-opacity': .6, 'line-width': .8}},
+        {id: 'pl', type: 'circle', source: 'pl', paint: {'circle-color': C.ink, 'circle-opacity': ['case', ['==', ['get', 'cur'], 1], .55, .12], 'circle-stroke-color': C.ink, 'circle-stroke-opacity': ['case', ['==', ['get', 'cur'], 1], 1, .35],
+          'circle-stroke-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2.5, ['==', ['get', 'cur'], 1], 1.6, .6], 'circle-radius': ['case', ['boolean', ['feature-state', 'hover'], false], ['+', 6, ['*', 12, ['get', 'r']]], ['+', 2, ['*', 10, ['get', 'r']]]], 'circle-blur': ['case', ['==', ['get', 'q'], 0], 0, .4]}},
+        {id: 'all', type: 'line', source: 'all', layout: {'line-cap': 'round', 'line-join': 'round'}, paint: {'line-color': C.land2, 'line-width': 2, 'line-dasharray': [1, 2]}},
+        {id: 'done-case', type: 'line', source: 'done', layout: {'line-cap': 'round', 'line-join': 'round'}, paint: {'line-color': C.paper, 'line-width': 6.5}},
+        {id: 'done', type: 'line', source: 'done', layout: {'line-cap': 'round', 'line-join': 'round'}, paint: {'line-color': pcol(), 'line-width': 3.4}},
+        {id: 'st', type: 'circle', source: 'st', paint: {'circle-color': ['case', ['==', ['get', 'nf'], 1], C.paper, ['==', ['get', 'done'], 1], pcol(), C.land2], 'circle-radius': ['case', ['==', ['get', 'here'], 1], 7, 3.6], 'circle-stroke-color': ['case', ['==', ['get', 'here'], 1], C.ink, C.paper], 'circle-stroke-width': ['case', ['==', ['get', 'here'], 1], 2.5, 1]}},
+      ];
+      L.forEach((l) => map.addLayer(l));
+      const pick = (pt) => map.queryRenderedFeatures([[pt.x - 5, pt.y - 5], [pt.x + 5, pt.y + 5]], {layers: ['st', 'pl']})[0];
+      map.on('mousemove', (e) => { const f = pick(e.point); map.getCanvas().style.cursor = f ? 'pointer' : ''; if (!f) { tip.hidden = true; return; }
+        const html = f.layer.id === 'st' ? `<b>${esc(nm(r.stops[f.properties.i][1]))}</b>${T('остановка', 'stop')} ${f.properties.i + 1}${r.stops[f.properties.i][4] ? ' · ' + T('абзац ', 'paragraph ') + pnum(r.stops[f.properties.i][4]) : ''}<br><span class="mute">${T('щёлкните, чтобы перейти к абзацу', 'click to go to the paragraph')}</span>`
+          : `<b>${esc(nm(PL[f.properties.id].name))}</b>${ment((pts.find(([p]) => p.id === f.properties.id) || [0, 0])[1])} ${T('в этой книге', 'in this book')}<br><span class="mute">${T('щёлкните — следующее упоминание в тексте', 'click for the next mention in the text')}</span>`;
+        tip.innerHTML = html; tip.hidden = false; let x = e.point.x + 12, y = e.point.y + 12; if (x + tip.offsetWidth > box.clientWidth) x = e.point.x - tip.offsetWidth - 8; if (y + tip.offsetHeight > box.clientHeight) y = e.point.y - tip.offsetHeight - 8; tip.style.left = x + 'px'; tip.style.top = (y + box.offsetTop) + 'px'; });
+      map.on('mouseout', () => { tip.hidden = true; });
+      map.on('click', (e) => { const f = pick(e.point); if (!f) return; if (f.layer.id === 'st') o.onStop && o.onStop(f.properties.i); else o.onPlace && o.onPlace(f.properties.id); });
+      ['dragstart', 'zoomstart'].forEach((ev) => map.on(ev, (e) => { if (e.originalEvent) userAt = Date.now(); }));
+      map.on('move', place);
+      upd(true);
+    });
+    el.querySelector('#bmF').addEventListener('change', (e) => { follow = e.target.checked; if (follow) { userAt = 0; upd(true); } });
+    el.querySelector('.bm-x').addEventListener('click', () => o.onClose && o.onClose());
+    function place() {
+      cancelAnimationFrame(raf); raf = requestAnimationFrame(() => {
+        if (dead) return; const W = box.clientWidth, H = box.clientHeight, top = box.offsetTop, placed = [], html = [];
+        const c = []; if (K >= 0 && N[K]) c.push({ll: N[K], t: nm(r.stops[K][1]), cls: 'stop', dx: 10});
+        curIds.concat(hovId && !curIds.includes(hovId) ? [hovId] : []).forEach((id) => { const p = PL[id]; if (p) c.push({ll: [ulon(p.lon), p.lat], t: nm(p.name), cls: isArea(p) ? 'reg' : 'pl', dx: 8}); });
+        for (const x of c) { const p = map.project(x.ll); if (p.x < 0 || p.y < 0 || p.x > W || p.y > H) continue; const w = 6.7 * x.t.length + 6, b = [p.x + x.dx, p.y - 8 + top, p.x + x.dx + w, p.y + 8 + top];
+          if (placed.some((q) => !(b[2] < q[0] || b[0] > q[2] || b[3] < q[1] || b[1] > q[3]))) continue; placed.push(b); html.push(`<span class="${x.cls}" style="transform:translate(${Math.round(b[0])}px,${Math.round(b[1])}px)">${esc(x.t)}</span>`); }
+        labEl.innerHTML = html.join('');
+      });
+    }
+    function upd(force) {
+      if (dead || !map.getSource('done')) return;
+      map.getSource('done').setData(r && K >= 0 ? lineTo(K) : fc([])); map.getSource('st').setData(stopFC(K)); map.getSource('pl').setData(placeFC());
+      const s = r && K >= 0 ? r.stops[K] : null;
+      cap.textContent = s ? T(`Остановка ${K + 1} из ${r.stops.length}: ${nm(s[1])}`, `Stop ${K + 1} of ${r.stops.length}: ${nm(s[1])}`) + (curIds.length ? T(' · в абзаце: ', ' · in this paragraph: ') + curIds.map((id) => nm(PL[id].name)).join(', ') : '') : curIds.length ? T('В абзаце: ', 'In this paragraph: ') + curIds.map((id) => nm(PL[id].name)).join(', ') : (r ? T('Путешествие ещё не началось', 'The journey has not started yet') : T('В этом абзаце мест нет', 'No places in this paragraph'));
+      place();
+      if (!follow || Date.now() - userAt < 5000) return;
+      const cs = curIds.map((id) => PL[id]).filter((p) => p && !isArea(p) && (p.sib || OUTER.includes(p.region) || (r && r.stops.some((x) => x[0] === p.id)))).map((p) => [ulon(p.lon), p.lat]);
+      if (s && N[K]) cs.push(N[K]);
+      if (!cs.length) return;
+      const lo = cs.map((c) => c[0]), la = cs.map((c) => c[1]);
+      map.fitBounds([[Math.min(...lo), Math.min(...la)], [Math.max(...lo), Math.max(...la)]], {padding: 50, maxZoom: Math.max(3.5, Math.min(5.5, map.getZoom())), duration: reduce() || force ? 0 : 700});
+    }
+    return {
+      setPara(n, ids) {
+        if (n === curN && String(ids) === String(curIds)) return; curN = n; curIds = ids;
+        let k = -1; if (r) r.stops.forEach((s, i) => { if (s[4] && pnum(s[4]) <= n) k = i; });
+        K = k; upd(false);
+      },
+      hover(id) { if (dead || !map.getSource('pl')) return; if (hovId) map.setFeatureState({source: 'pl', id: hovId}, {hover: false}); hovId = id; if (id && PL[id]) map.setFeatureState({source: 'pl', id}, {hover: true}); place(); },
+      restyle() { C = palette(el); },
+      destroy() { dead = true; cancelAnimationFrame(raf); ro.disconnect(); try { map.remove(); } catch (e) {} el.innerHTML = ''; },
+    };
+  }
+  return {render, reader};
 })();
