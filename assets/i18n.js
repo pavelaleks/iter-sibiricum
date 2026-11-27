@@ -86,4 +86,4 @@ window.I18N = (() => {
   document.addEventListener('DOMContentLoaded', () => { toggle(); start(); });
   return {lang, tr, walk, miss, en: lang === 'en', locale: lang === 'en' ? 'en-GB' : 'ru-RU'};
 })();
-if (window.I18N.en) document.write('<script src="assets/i18n-en.js?v=37"><\/script>');
+if (window.I18N.en) document.write('<script src="assets/i18n-en.js?v=38"><\/script>');

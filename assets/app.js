@@ -573,8 +573,9 @@ function loadScript(src) { return new Promise((res, rej) => { if (window.ForceGr
 
 // ---------------- аналитика ----------------
 async function analytics() {
-  const [A, works, reuse] = await Promise.all([get('analytics.json'), get('works.json'), get('reuse.json')]);
+  const [A, works, reuse, AR] = await Promise.all([get('analytics.json'), get('works.json'), get('reuse.json'), get('review/annotation_review.json').catch(() => ({}))]);
   const W = Object.fromEntries(works.map((w) => [w.id, w]));
+  const nRev = Object.keys(AR).length;
   const ex = (dim) => A.expert.filter((r) => r.dimension === dim);
   const FR = {ethno: 'этнографическое описание', contact: 'повседневный контакт', econ: 'хозяйство и торговля', decline: 'упадок, вымирание, болезни', civ: 'иерархия «цивилизованности»', relig: 'религия', conflict: 'конфликт', admin: 'власть и управление', other: 'прочее'};
   const TERM = {personal: 'личное наблюдение', brit: 'британский автор', transit: 'транзит, плавание, война', 'C(per3)[T.b_1881_1904]': '1881–1904 (к до 1880)', 'C(per3)[T.c_после1904]': 'после 1904 (к до 1880)'};
@@ -585,7 +586,7 @@ async function analytics() {
     <h1>Аналитика</h1>
     <div class="ctl scroll"><a class="btn" href="#analytics-eval">Оценки</a><a class="btn" href="#analytics-ngram">Ngram</a><a class="btn" href="#analytics-disc">Дискурсы</a><a class="btn" href="#analytics-rel">Отношения</a><a class="btn" href="#analytics-topics">Темы</a><a class="btn" href="#analytics-reuse">Заимствования</a></div>
     <h2 id="analytics-eval">Отчего зависит оценка народа</h2>
-    <p>Размеченная выборка: ${ex('all')[0].n} описаний коренных народов из ${ex('all')[0].works} книг, страты «страна автора × период», доли взвешены, интервалы — бутстреп по книгам. Результаты предварительные: разметку по протоколу проекта выполнила языковая модель, эксперты проекта её проверяют.</p>
+    <p>Размеченная выборка: ${ex('all')[0].n} описаний коренных народов из ${ex('all')[0].works} книг, страты «страна автора × период», доли взвешены, интервалы — бутстреп по книгам. Результаты предварительные: разметку по протоколу проекта выполнила языковая модель, эксперты проекта её проверяют. Проверено экспертом: ${fmt(nRev)} из 250.</p>
     <div class="cols">
       <div><h3>Рамка описания</h3><table class="stack"><thead><tr><th>Рамка</th><th class="n">n</th><th class="n">отрицательных</th><th class="n">положительных</th></tr></thead><tbody>${ex('frame').sort((a, b) => b.n - a.n).map((r) => `<tr><td>${FR[r.key] || esc(r.key)}</td><td class="n">${r.n}</td><td class="n">${ci(r, 'neg')}</td><td class="n">${ci(r, 'pos')}</td></tr>`).join('')}</tbody></table></div>
       <div><h3>Модель (отношение шансов)</h3><table class="stack"><thead><tr><th>Исход</th><th>Фактор</th><th class="n">ОШ</th><th class="n">95% ДИ</th></tr></thead><tbody>${A.models.filter((m) => m.term !== 'Intercept').map((m) => `<tr><td>${m.model.startsWith('neg') ? 'отрицательная' : 'положительная'}</td><td>${TERM[m.term] || esc(m.term)}</td><td class="n"><b>${fmt(m.OR, 2)}</b></td><td class="n">${fmt(m.lo, 2)}–${fmt(m.hi, 2)}</td></tr>`).join('')}</tbody></table><p class="small mute">ОШ больше 1 — фактор связан с более высокой вероятностью исхода; интервал, не включающий 1, — статистически значимая связь в этой выборке (n = 230), не причинный вывод.</p></div>

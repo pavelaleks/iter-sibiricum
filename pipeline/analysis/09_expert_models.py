@@ -19,7 +19,17 @@ L = pd.concat([pd.read_csv(f, sep='\t', header=None, names=['i', 'pol', 'obs_m',
                for f in sorted(glob.glob(str(ROOT / 'validation/expert_v04_labels_b*.tsv')))])
 L['i'] = L.i.astype(int)
 E = S.join(L.set_index('i'), how='inner')
-E['annotator'] = 'model'; E['stay'] = E.work_id.map(W.stay_type); E['nat'] = E.work_id.map(W.nat_group); E['gender'] = E.work_id.map(W.gender)
+E['annotator'] = 'model'
+# экспертная проверка из рабочего места заменяет предварительные метки (pipeline/validation/ANNOTATION_PROTOCOL.md)
+_rv = ROOT.parent / 'site' / 'data' / 'review' / 'annotation_review.json'
+if _rv.exists():
+    import json as _j
+    for _uid, _x in _j.load(open(_rv, encoding='utf-8')).items():
+        _m = E.unit_id == _uid
+        if _m.any():
+            E.loc[_m, ['pol', 'obs_m', 'frame', 'annotator']] = [_x['pol'], _x['obs'], _x['frame'], _x['by']]
+    print('экспертная проверка:', int((E.annotator != 'model').sum()), 'из', len(E))
+E['stay'] = E.work_id.map(W.stay_type); E['nat'] = E.work_id.map(W.nat_group); E['gender'] = E.work_id.map(W.gender)
 E.drop(columns=['polarity', 'obs_type']).to_csv(ROOT / 'data/expert_annotations_v04.csv', index=False)
 valid = E[E.pol != 'invalid'].copy()
 inv = (E.pol == 'invalid').sum(); lo, hi = wilson(len(E) - inv, len(E))

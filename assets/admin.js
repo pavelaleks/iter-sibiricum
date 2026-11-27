@@ -7,6 +7,7 @@
      data/review/journeys_review.json — проверка маршрутов (статус, остановки, кто и когда)
      data/review/books_queue.json     — предложенные новые книги (обрабатывает конвейер при сборке)
      data/review/illustrations_review.json — проверка иллюстраций (подпись, перевод, тип, поворот, отбор)
+     data/review/annotation_review.json — экспертная проверка разметки выборки (оценка, источник знания, рамка)
      data/publications.json, data/project.json — публикации и сведения о проекте */
 const REPO = 'pavelaleks/iter-sibiricum', BRANCH = 'main';
 const A = document.getElementById('A');
@@ -85,7 +86,7 @@ async function start() {
 function route() {
   const t = (location.hash.slice(1) || 'routes').split('/');
   document.querySelectorAll('#atabs a').forEach((a) => a.classList.toggle('on', a.dataset.t === t[0]));
-  ({routes, books, ills, pubs, team, log}[t[0]] || routes)(t[1]);
+  ({routes, books, ills, ann, pubs, team, log}[t[0]] || routes)(t[1]);
 }
 
 // ---------- маршруты ----------
@@ -253,6 +254,55 @@ async function ills(arg) {
     try { const n = Object.keys(ch).length;
       await commitJSON('data/review/illustrations_review.json', (Q) => { for (const [id, v] of Object.entries(ch)) { const prev = Q[id] || {}; Q[id] = {...prev, ...v, status: v.status || (prev.status === 'rejected' ? 'rejected' : 'checked'), by: WHO, date: today()}; } return Q; }, `Иллюстрации: проверено ${n}`);
       toast(`Сохранено: ${n}. На сайте — через 1–2 минуты.`); ills(); } catch (err) { toast(err.message, true); e.target.disabled = false; } };
+  draw();
+}
+
+// ---------- экспертная проверка разметки выборки ----------
+// 250 описаний коренных народов размечены предварительно (языковая модель по протоколу проекта).
+// Эксперт подтверждает или исправляет каждую метку; решения — data/review/annotation_review.json (кто и когда),
+// конвейер (09_expert_models.py) берёт экспертные метки вместо предварительных.
+const POL = {pos: 'положительная', neg: 'отрицательная', neu: 'нейтральная', amb: 'амбивалентная', invalid: 'не описание народа'};
+const OBS = {personal: 'личное наблюдение', reported: 'пересказ', bookish: 'из книг', generalization: 'обобщение'};
+const FRAME = {ethno: 'этнографическое описание', contact: 'бытовой контакт', econ: 'хозяйство и торговля', relig: 'религия', conflict: 'конфликт', civ: 'иерархия «цивилизованности»', decline: 'упадок, вымирание', admin: 'власть', other: 'другое', '-': '—'};
+async function ann() {
+  A.innerHTML = '<div class="wrap loading">Загрузка выборки…</div>';
+  const [U, rev] = await Promise.all([site('data/review/annotation_units.json'), readJSON('data/review/annotation_review.json', {})]);
+  const R = rev.data, ch = {}, st = {f: 'todo', page: 0}, PER = 20;
+  const done = () => U.filter((u) => R[u.id]).length;
+  A.innerHTML = `<section class="wrap band"><h1>Проверка разметки</h1>
+    <p class="lede">Предварительную разметку выборки сделала языковая модель по протоколу проекта. Прочитайте фрагмент и подтвердите или исправьте оценку, источник знания и рамку описания. Проверенные единицы получат ваше имя как разметчика; пока проверены не все, выводы на сайте помечены как предварительные.</p>
+    <p class="mute">Проверено: <b id="adone">${done()}</b> из ${U.length}. Протокол разметки — <a href="https://github.com/${REPO}/blob/main/pipeline/validation/ANNOTATION_PROTOCOL.md" target="_blank" rel="noopener">ANNOTATION_PROTOCOL.md</a>.</p>
+    <div class="row"><label>Показать <select id="af"><option value="todo">непроверенные</option><option value="done">проверенные</option><option value="all">все</option></select></label></div>
+    <div id="alist"></div><div class="row" id="apg"></div>
+    <p class="savebar"><button id="asave" class="primary" disabled>Сохранить проверку</button> <span id="acnt" class="mute"></span></p></section>`;
+  const v = (u, k) => (ch[u.id] && k in ch[u.id]) ? ch[u.id][k] : (R[u.id] && k in R[u.id]) ? R[u.id][k] : u[k];
+  const sel = (u, k, M) => `<select data-k="${k}">${Object.entries(M).map(([a, t]) => `<option value="${a}" ${v(u, k) === a ? 'selected' : ''}>${t}${u[k] === a ? ' ·' : ''}</option>`).join('')}</select>`;
+  const draw = () => {
+    let L = U; if (st.f === 'todo') L = U.filter((u) => !R[u.id]); else if (st.f === 'done') L = U.filter((u) => R[u.id]);
+    const pages = Math.ceil(L.length / PER); st.page = Math.min(st.page, Math.max(0, pages - 1));
+    document.getElementById('alist').innerHTML = L.slice(st.page * PER, st.page * PER + PER).map((u) => `<div class="acard${R[u.id] ? ' ok' : ''}" data-id="${u.id}">
+      <div class="small mute">${esc(u.work)} · ${esc(u.gn)} · <a href="./#book-${u.w.replace(/_/g, '-')}-p${u.pid.split('_p').pop()}" target="_blank" rel="noopener">абзац</a>${R[u.id] ? ` · проверил(а) ${esc(R[u.id].by)}, ${esc(R[u.id].date)}` : ''}</div>
+      <blockquote>${esc(u.t)}</blockquote>
+      <div class="row">${sel(u, 'pol', POL)} ${sel(u, 'obs', OBS)} ${sel(u, 'frame', FRAME)}</div>
+      <label>Комментарий<input data-k="note" value="${esc(v(u, 'note') || '')}" placeholder="почему изменено (необязательно)"></label>
+      <label class="ck"><input type="checkbox" data-k="confirm" ${ch[u.id] ? 'checked' : ''}> проверено</label>
+      <p class="small mute">Точкой (·) отмечена предварительная метка${u.st ? '; предварительный комментарий: ' + esc(u.st) : ''}.</p></div>`).join('') || '<p class="mute">Здесь пусто.</p>';
+    document.getElementById('apg').innerHTML = pages > 1 ? Array.from({length: pages}, (_, i) => `<button type="button" data-p="${i}" ${i === st.page ? 'class="on"' : ''}>${i + 1}</button>`).join('') : '';
+    upd();
+  };
+  const upd = () => { const n = Object.keys(ch).length; document.getElementById('asave').disabled = !n; document.getElementById('acnt').textContent = n ? `к сохранению: ${n}` : ''; };
+  const list = document.getElementById('alist');
+  list.addEventListener('input', (e) => { const c = e.target.closest('.acard'), k = e.target.dataset.k; if (!c || !k) return; const id = c.dataset.id;
+    if (k === 'confirm') { if (e.target.checked) ch[id] ||= {}; else delete ch[id]; }
+    else { (ch[id] ||= {})[k] = e.target.value; c.querySelector('[data-k="confirm"]').checked = true; }
+    upd(); });
+  document.getElementById('apg').addEventListener('click', (e) => { const b = e.target.closest('[data-p]'); if (b) { st.page = +b.dataset.p; draw(); scrollTo(0, 0); } });
+  document.getElementById('af').onchange = (e) => { st.f = e.target.value; st.page = 0; draw(); };
+  document.getElementById('asave').onclick = async (e) => { e.target.disabled = true;
+    try { const n = Object.keys(ch).length;
+      await commitJSON('data/review/annotation_review.json', (Q) => { for (const [id, x] of Object.entries(ch)) { const u = U.find((y) => y.id === id);
+        Q[id] = {pol: x.pol ?? Q[id]?.pol ?? u.pol, obs: x.obs ?? Q[id]?.obs ?? u.obs, frame: x.frame ?? Q[id]?.frame ?? u.frame, note: x.note ?? Q[id]?.note ?? '', by: WHO, date: today()}; } return Q; }, `Разметка: проверено ${n}`);
+      toast(`Сохранено: ${n}.`); ann(); } catch (err) { toast(err.message, true); e.target.disabled = false; } };
   draw();
 }
 
