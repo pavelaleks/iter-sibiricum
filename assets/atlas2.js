@@ -65,7 +65,7 @@ window.Atlas2 = (() => {
     const {get, getRoutes, toH, PER, NAT} = ctx;
     V.innerHTML = `<div class="wrap loading">${T('Загрузка карты…', 'Loading the map…')}</div>`;
     const [works, routes, places, groups, bookgeo, AREAS] = await Promise.all([get('works.json'), getRoutes(), get('places.json'), get('groups.json'), get('bookgeo.json'), get('areas1914.geojson').catch(() => null),
-      loadCSS('assets/vendor/maplibre-gl.css?v=63'), loadJS('assets/vendor/maplibre-gl.js?v=63'), loadJS('assets/vendor/pmtiles.js?v=63')]);
+      loadCSS('assets/vendor/maplibre-gl.css?v=64'), loadJS('assets/vendor/maplibre-gl.js?v=64'), loadJS('assets/vendor/pmtiles.js?v=64')]);
     if (!alive()) return () => {};
     const W = Object.fromEntries(works.map((w) => [w.id, w])), RT = Object.fromEntries(routes.map((r) => [r.work, r]));
     const PL = Object.fromEntries(places.map((p) => [p.id, p]));
@@ -84,7 +84,7 @@ window.Atlas2 = (() => {
     const yv = (x, d) => { const n = parseInt(x, 10); return isFinite(n) ? Math.max(Y0, Math.min(Y1, n)) : d; };
     const st = {work: W[q.get('work')] ? q.get('work') : '', group: GR[q.get('g')] ? q.get('g') : '', period: PERK.includes(q.get('per')) ? q.get('per') : '',
       nat: NATS.includes(q.get('nat')) ? q.get('nat') : '', stay: STAYS.includes(q.get('stay')) ? q.get('stay') : '',
-      y0: yv(q.get('y0'), Y0), y1: yv(q.get('y1'), Y1), lay: q.has('l') ? (q.get('l') || '').replace(/[^rpadhc]/g, '') : 'rpa', globe: q.get('p') !== 'flat', old: ['1822', '1914'].includes(q.get('old')) ? q.get('old') : '', op: Math.max(20, Math.min(100, +q.get('op') || 85))};
+      y0: yv(q.get('y0'), Y0), y1: yv(q.get('y1'), Y1), lay: q.has('l') ? (q.get('l') || '').replace(/[^rpadhc]/g, '') : 'rpa', globe: q.get('p') !== 'flat', relief: q.get('b') === 'relief', old: ['1822', '1914'].includes(q.get('old')) ? q.get('old') : '', op: Math.max(20, Math.min(100, +q.get('op') || 85))};
     if (st.y0 > st.y1) [st.y0, st.y1] = [st.y1, st.y0];
     if (st.work && st.group) st.group = '';
     let v0 = (q.get('v') || '').split(',').map(Number);
@@ -125,6 +125,7 @@ window.Atlas2 = (() => {
         <button id="bOut" title="${T('Мельче', 'Zoom out')}" aria-label="${T('Мельче', 'Zoom out')}">−</button>
         <button id="bHome" title="${T('Вся Сибирь', 'Whole of Siberia')}" aria-label="${T('Вся Сибирь', 'Whole of Siberia')}">⌂</button>
         <button id="bProj" aria-pressed="${!st.globe}" title="${T('Глобус или проекция Меркатора (сильно увеличивает север)', 'Globe or Mercator projection (strongly enlarges the north)')}">${st.globe ? T('Меркатор', 'Mercator') : T('глобус', 'globe')}</button>
+        <button id="bRel" aria-pressed="${st.relief}" title="${T('Подложка с рельефом и цветом высот (Natural Earth)', 'Base map with relief and elevation colours (Natural Earth)')}">${T('рельеф', 'relief')}</button>
         <button id="bMore" class="mob" aria-expanded="false" title="${T('Ещё', 'More')}" aria-label="${T('Ещё', 'More')}">⋯</button>
         <button id="bLink" class="x" title="${T('Скопировать ссылку на этот вид', 'Copy a link to this view')}">${T('ссылка', 'link')}</button>
         <button id="bPng" class="x" title="${T('Скачать изображение этого вида с легендой', 'Download an image of this view with the legend')}">PNG</button>
@@ -270,6 +271,7 @@ window.Atlas2 = (() => {
       g.strokeStyle = C.mute; g.globalAlpha = .6; g.lineWidth = 1; g.beginPath(); g.moveTo(0, n); g.lineTo(n, 0); g.moveTo(-1, 1); g.lineTo(1, -1); g.moveTo(n - 1, n + 1); g.lineTo(n + 1, n - 1); g.stroke();
       return g.getImageData(0, 0, n, n);
     }
+    const dark = () => { const m = String(C.bg).match(/\d+/g); return !!m && (+m[0] + +m[1] + +m[2]) < 300; };
     const paint = () => ({
       'bg': {'background-color': C.sea},
       'grat': {'line-color': C.line, 'line-width': .6, 'line-opacity': .8},
@@ -281,6 +283,7 @@ window.Atlas2 = (() => {
       'area-fill': {'fill-pattern': 'hatch', 'fill-opacity': ['case', ['==', ['get', 'hi'], 1], 1, ['boolean', ['feature-state', 'hover'], false], .9, .45]},
       'area-edge': {'line-color': C.mute, 'line-opacity': ['case', ['==', ['get', 'hi'], 1], .85, .38], 'line-width': ['case', ['==', ['get', 'hi'], 1], 1.5, .8]},
       'area-edge-s': {'line-color': C.mute, 'line-opacity': ['case', ['==', ['get', 'hi'], 1], .8, .3], 'line-width': ['case', ['==', ['get', 'hi'], 1], 1.4, .8], 'line-dasharray': [3, 2]},
+      'relief': {'raster-fade-duration': 0, 'raster-saturation': -.12, 'raster-brightness-max': dark() ? .62 : 1, 'raster-contrast': dark() ? -.1 : 0},
       'old1822': {'raster-opacity': st.op / 100, 'raster-fade-duration': 0},
       'old1914': {'raster-opacity': st.op / 100, 'raster-fade-duration': 0},
       // плотность упоминаний: вес точки — её доля от самого частого места в выборке
@@ -306,6 +309,7 @@ window.Atlas2 = (() => {
       map.addImage('hatch', hatch(), {pixelRatio: 1});
       map.addSource('base', {type: 'vector', url: 'pmtiles://' + base, attribution: 'Natural Earth'});
       map.addSource('grat', {type: 'geojson', data: graticule()});
+      map.addSource('relief', {type: 'raster', url: 'pmtiles://' + new URL('data/tiles/relief.pmtiles', location.href).href, tileSize: 256, attribution: 'Natural Earth'});
       ['1822', '1914'].forEach((y) => map.addSource('old' + y, {type: 'raster', url: 'pmtiles://' + new URL(`data/tiles/${y === '1822' ? 'weimar1822' : 'ethno1914'}.pmtiles`, location.href).href, tileSize: 256}));
       map.addSource('areas', {type: 'geojson', data: areaPolys(), generateId: true});
       map.addSource('routes', {type: 'geojson', data: routeLines(), promoteId: 'work'});
@@ -314,7 +318,7 @@ window.Atlas2 = (() => {
       map.addSource('corr', {type: 'geojson', data: corridors(), promoteId: 'k'});
       const P = paint();
       const L = [
-        ['grat', 'line', 'grat'], ['land', 'fill', 'base', {'source-layer': 'land'}], ['coast', 'line', 'base', {'source-layer': 'land'}],
+        ['grat', 'line', 'grat'], ['land', 'fill', 'base', {'source-layer': 'land'}], ['relief', 'raster', 'relief', {layout: {visibility: st.relief ? 'visible' : 'none'}}], ['coast', 'line', 'base', {'source-layer': 'land'}],
         ['lakes', 'fill', 'base', {'source-layer': 'lakes', filter: ['<=', ['coalesce', ['get', 'scalerank'], 9], ['+', 2, ['*', 1.2, ['zoom']]]]}],
         ['rivers', 'line', 'base', {'source-layer': 'rivers', filter: ['<=', ['coalesce', ['get', 'scalerank'], 9], ['+', 3.2, ['*', .9, ['zoom']]]], layout: {'line-cap': 'round', 'line-join': 'round'}}],
         ['old1822', 'raster', 'old1822', {layout: {visibility: st.old === '1822' ? 'visible' : 'none'}}], ['old1914', 'raster', 'old1914', {layout: {visibility: st.old === '1914' ? 'visible' : 'none'}}],
@@ -340,7 +344,7 @@ window.Atlas2 = (() => {
     }
     function vis() {
       const s = (ids, v) => ids.forEach((id) => map.getLayer(id) && map.setLayoutProperty(id, 'visibility', v ? 'visible' : 'none'));
-      s(['routes', 'routes-gap', 'routes-case'], on('r')); s(['area-fill', 'area-edge', 'area-edge-s'], on('a')); s(['heat'], on('h')); s(['corr'], on('c')); s(['old1822'], st.old === '1822'); s(['old1914'], st.old === '1914'); s(['places', 'places-unc'], on('p') || !!st.work);
+      s(['routes', 'routes-gap', 'routes-case'], on('r')); s(['area-fill', 'area-edge', 'area-edge-s'], on('a')); s(['heat'], on('h')); s(['corr'], on('c')); s(['old1822'], st.old === '1822'); s(['relief'], st.relief); s(['lakes'], !st.relief); s(['old1914'], st.old === '1914'); s(['places', 'places-unc'], on('p') || !!st.work);
     }
 
     // ---------- подписи ----------
@@ -452,7 +456,7 @@ window.Atlas2 = (() => {
         if (dead || !stage.isConnected || !/^#atlas(\?|$)/.test(location.hash)) return;
         const c = map.getCenter(), p = new URLSearchParams();
         if (st.work) p.set('work', st.work); if (st.group) p.set('g', st.group); if (st.period) p.set('per', st.period); if (st.nat) p.set('nat', st.nat); if (st.stay) p.set('stay', st.stay);
-        if (st.y0 !== Y0) p.set('y0', st.y0); if (st.y1 !== Y1) p.set('y1', st.y1); if (st.lay !== 'rpa') p.set('l', st.lay); if (!st.globe) p.set('p', 'flat'); if (st.old) { p.set('old', st.old); if (st.op !== 85) p.set('op', st.op); }
+        if (st.y0 !== Y0) p.set('y0', st.y0); if (st.y1 !== Y1) p.set('y1', st.y1); if (st.lay !== 'rpa') p.set('l', st.lay); if (!st.globe) p.set('p', 'flat'); if (st.relief) p.set('b', 'relief'); if (st.old) { p.set('old', st.old); if (st.op !== 85) p.set('op', st.op); }
         p.set('v', [wrap(c.lng).toFixed(2), c.lat.toFixed(2), map.getZoom().toFixed(2)].join(','));
         history.replaceState(null, '', '#atlas?' + p.toString().replace(/%2C/g, ','));
       }, 300);
@@ -604,6 +608,7 @@ window.Atlas2 = (() => {
     V.querySelector('#bIn').onclick = () => map.zoomIn(); V.querySelector('#bOut').onclick = () => map.zoomOut();
     V.querySelector('#bHome').onclick = () => home(800);
     V.querySelector('#bMore').onclick = (e) => { const o = V.querySelector('.a2-tools').classList.toggle('more'); e.currentTarget.setAttribute('aria-expanded', String(o)); };
+    V.querySelector('#bRel').onclick = (e) => { st.relief = !st.relief; e.currentTarget.setAttribute('aria-pressed', String(st.relief)); vis(); url(); };
     V.querySelector('#bProj').onclick = (e) => { st.globe = !st.globe; map.setProjection({type: st.globe ? 'globe' : 'mercator'}); e.currentTarget.textContent = st.globe ? T('Меркатор', 'Mercator') : T('глобус', 'globe'); e.currentTarget.setAttribute('aria-pressed', String(!st.globe)); url(); place(); };
     const toast = (t) => { const n = document.createElement('div'); n.className = 'a2-toast'; n.setAttribute('role', 'status'); n.textContent = t; stage.appendChild(n); setTimeout(() => n.remove(), 2200); };
     V.querySelector('#bLink').onclick = async () => { url(); await new Promise((r) => setTimeout(r, 350)); try { await navigator.clipboard.writeText(location.href); toast(T('Ссылка скопирована', 'Link copied')); } catch (e) { prompt(T('Ссылка на этот вид', 'Link to this view'), location.href); } };
@@ -654,7 +659,7 @@ window.Atlas2 = (() => {
   // ---------- карта рядом с текстом книги: путь «доезжает» до абзаца, который читается сейчас ----------
   // reader(el, {work, route, PL, bookgeo, period, onPlace(id), onStop(i)}) → {setPara(n, ids), hover(id), destroy}
   async function reader(el, o) {
-    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=63'), loadJS('assets/vendor/maplibre-gl.js?v=63'), loadJS('assets/vendor/pmtiles.js?v=63')]);
+    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=64'), loadJS('assets/vendor/maplibre-gl.js?v=64'), loadJS('assets/vendor/pmtiles.js?v=64')]);
     if (!hasGL()) { el.innerHTML = `<p class="small mute" style="padding:14px">${T('Браузер не поддерживает WebGL, карта недоступна.', 'This browser does not support WebGL; the map is unavailable.')}</p>`; return {setPara() {}, hover() {}, destroy() {}}; }
     if (!window.__a2proto) { window.__a2proto = new pmtiles.Protocol(); maplibregl.addProtocol('pmtiles', window.__a2proto.tile); }
     let C = palette(el), dead = false, raf = 0, follow = true, userAt = 0, curN = -1, curIds = [], hovId = null;
@@ -753,7 +758,7 @@ window.Atlas2 = (() => {
   // preview(el, {routes, works, ind, areaGeo, onWork(w)}) → {restyle, destroy}: карта на главной — глобус, все проверенные
   // маршруты цветом периода и ареалы по карте 1914 г.; без панели и фильтров, наведение — подпись, щелчок — книга
   async function preview(el, o) {
-    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=63'), loadJS('assets/vendor/maplibre-gl.js?v=63'), loadJS('assets/vendor/pmtiles.js?v=63')]);
+    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=64'), loadJS('assets/vendor/maplibre-gl.js?v=64'), loadJS('assets/vendor/pmtiles.js?v=64')]);
     if (!hasGL() || !el.isConnected) return {restyle() {}, destroy() {}};
     if (!window.__a2proto) { window.__a2proto = new pmtiles.Protocol(); maplibregl.addProtocol('pmtiles', window.__a2proto.tile); }
     const W = Object.fromEntries(o.works.map((w) => [w.id, w])), per = (w) => PERK.indexOf((W[w] || {}).period);

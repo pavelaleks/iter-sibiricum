@@ -247,7 +247,7 @@ async function home() {
   let first = !reduce;
   (async () => {
     const el = document.getElementById('homeMap'); if (!el) return;
-    if (!window.Atlas2) { try { await new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'assets/atlas2.js?v=63'; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); } catch (x) { return; } }
+    if (!window.Atlas2) { try { await new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'assets/atlas2.js?v=64'; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); } catch (x) { return; } }
     if (!el.isConnected) return;
     const pv = await Atlas2.preview(el, {routes, works, ind, areaGeo: AGEO, onWork: (w) => location.hash = 'book-' + toH(w)});
     if (!el.isConnected) { pv.destroy(); return; }
@@ -366,11 +366,11 @@ async function illustrations() {
 
 // ---------------- атлас ----------------
 async function research(page) {
-  if (!window.Research) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/research.js?v=63'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  if (!window.Research) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/research.js?v=64'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   await window.Research[page](V, {get, esc, toH, fmt, PER, NAT, EN, cites, citeDialog, reportLinks, SITE_URL, pad5, project});
 }
 async function atlas2() {
-  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=63'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=64'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   const d = await window.Atlas2.render(V, {get, getRoutes, esc, toH, PER, NAT});
   if (/^#atlas(\?|$)/.test(location.hash)) atlasDestroy = d; else d();
 }
@@ -633,7 +633,7 @@ async function book(id, par) {
     if (a) a.scrollIntoView({block: 'center'});
     if (!on) { if (RD) { RD.destroy(); RD = null; } if (curP) { curP.classList.remove('cur'); curP = null; } watchMap(); return; }
     if (scanOn) toggleScan(false);
-    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=63'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=64'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
     if (!mapOn) return;
     RD = await window.Atlas2.reader(mapEl, {work: id, route: r0, PL: Object.fromEntries((await get('places.json')).map((p) => [p.id, p])), bookgeo: (await get('bookgeo.json'))[id], period: w.period,
       onClose: () => toggleMap(false),
