@@ -66,6 +66,43 @@
   "title_en": "The reception of interethnic relations in Siberia in A. Reid’s travelogue *From Peking to Petersburg*"
  },
  {
+  "type": "article",
+  "status": "accepted",
+  "year": 2027,
+  "authors": "Алексеев П. В., Дюсекенев Д. Н.",
+  "title": "Между империей и степью: этническое многообразие и межнациональные отношения в травелоге Александра Мичи «The Siberian Overland Route from Peking to Petersburg» (1864)",
+  "title_en": "Between empire and steppe: ethnic diversity and interethnic relations in Alexander Michie’s travelogue *The Siberian Overland Route from Peking to Petersburg* (1864)",
+  "venue": "Журнал фронтирных исследований",
+  "issue": "№ 4, 2027",
+  "works": [
+   "michie1864"
+  ]
+ },
+ {
+  "type": "article",
+  "status": "accepted",
+  "year": 2027,
+  "authors": "Дюсекенев Д. Н., Алексеев П. В.",
+  "title": "Образ казаха-кочевника в травелоге С. Соммье «Un’estate in Siberia»: сюжетная динамика и рецептивные парадоксы степного локуса",
+  "title_en": "The image of the Kazakh nomad in S. Sommier’s travelogue *Un’estate in Siberia*: plot dynamics and receptive paradoxes of the steppe locus",
+  "venue": "Вестник Томского государственного университета. Филология",
+  "issue": "№ 110, 2027",
+  "works": [
+   "sommier1885"
+  ]
+ },
+ {
+  "type": "article",
+  "status": "accepted",
+  "authors": "Алексеев П. В., Дюсекенев Д. Н.",
+  "title": "Сибирские этносы и межнациональные отношения в травелоге Й. Стадлинга «Through Siberia» (1901)",
+  "title_en": "Siberian ethnic groups and interethnic relations in J. Stadling’s travelogue *Through Siberia* (1901)",
+  "venue": "Вестник Томского государственного университета. Филология",
+  "works": [
+   "stadling1901"
+  ]
+ },
+ {
   "type": "dataset",
   "status": "published",
   "year": 2026,
