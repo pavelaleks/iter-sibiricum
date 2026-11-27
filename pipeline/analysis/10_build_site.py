@@ -123,7 +123,7 @@ for g, r in G.iterrows():
     places = sorted(((p['name'], dict(p['groups']).get(r.name_ru, 0)) for p in prows if dict(p['groups']).get(r.name_ru)), key=lambda x: -x[1])[:8]
     grows.append(dict(id=g, name=r.name_ru, name_en=r.name_en, category=r.category, family=num(r.language_family), sub=num(r.subcategory), note=num(r.note),
                       mentions=int(len(d)), works=int(d.work_id.nunique()), forms=FORMS.get(g, []), areas=AREAS.get(g, []), series=series,
-                      authors=authors, collocations=col, discourses=disc, quotes=quotes, places=places))
+                      authors=authors, by_work=[[w, int(n)] for w, n in byw.items()], collocations=col, discourses=disc, quotes=quotes, places=places))
 dump('groups.json', sorted(grows, key=lambda x: (x['category'] != 'indigenous', -x['mentions'])))
 
 # ---------- networks ----------

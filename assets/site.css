@@ -10,7 +10,7 @@
   --acc:light-dark(#a3173a,#f0607a);--acc2:light-dark(#3f7296,#79a9cc);--ok:light-dark(#2f6f4e,#6cc495);--bad:light-dark(#a3173a,#f0607a);
   --area:light-dark(rgba(63,114,150,.12),rgba(121,169,204,.16));
   --serif:"Literata Variable",Georgia,serif;--sans:"Onest Variable",system-ui,sans-serif;
-  --p1:light-dark(#e09aab,#5e2a37);--p2:light-dark(#cc5f78,#8e3a50);--p3:light-dark(#b02a4b,#c25270);--p4:light-dark(#86112f,#e27d95);--p5:light-dark(#52081c,#f6b6c4);
+  --p1:light-dark(#c47a00,#f2b84b);--p2:light-dark(#c04a2a,#f58a52);--p3:light-dark(#a3175a,#f06ea8);--p4:light-dark(#5b3a9e,#b59af0);--p5:light-dark(#1d6a7a,#6ec3d6);
   --r:6px}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
@@ -399,10 +399,11 @@ html:not([lang=en]) .en-only,html[lang=en] .ru-only{display:none}
 .a2-stops{padding-left:1.6em;margin:10px 0}.a2-stops li{padding:2px 0}
 .a2-bars{list-style:none;margin:0;padding:0;font-size:14px}.a2-bars li{display:flex;justify-content:space-between;gap:12px;padding:3px 0;border-bottom:1px solid var(--line)}.a2-bars span{color:var(--mute);font-variant-numeric:tabular-nums}
 .a2-legend{position:absolute;left:12px;bottom:12px;z-index:3;max-width:min(560px,calc(100% - 400px));background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:var(--r);padding:9px 12px;font-size:12.5px;color:var(--mute);display:grid;gap:5px}
-.a2-legend>div{display:flex;flex-wrap:wrap;gap:4px 14px}.a2-legend span{white-space:nowrap}
+.a2-lg{display:grid;gap:6px}.a2-lg>div{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}.a2-lg b{font-weight:600;color:var(--ink);margin-right:4px}.a2-legend span{white-space:nowrap}
+.a2-lgbtn{display:none}
 .a2-per i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:3px;margin-right:5px}
-.a2-unc i{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-right:5px;background:var(--acc)}
-.a2-unc .u0{opacity:.75;box-shadow:0 0 0 1px var(--acc)}.a2-unc .u1{opacity:.55;filter:blur(1.6px)}.a2-unc .u2{opacity:.35;filter:blur(3px);width:15px;height:15px;vertical-align:-3px}.a2-unc .u3{background:var(--p3);opacity:.6;filter:blur(2.4px)}
+.a2-unc i{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-right:5px;background:color-mix(in srgb,var(--ink) 28%,transparent)}
+.a2-unc .u0{box-shadow:0 0 0 1.2px var(--ink)}.a2-unc .u1{box-shadow:0 0 0 5px color-mix(in srgb,var(--ink) 12%,transparent),0 0 0 .6px color-mix(in srgb,var(--ink) 40%,transparent)}.a2-unc .u2{width:9px;height:9px;margin-left:3px;margin-right:8px;box-shadow:0 0 6px 6px color-mix(in srgb,var(--ink) 12%,transparent)}.a2-unc .u3{background:var(--p3);opacity:.6;filter:blur(2.4px)}
 .a2-src{font-size:11.5px}
 .a2-note{margin-top:10px}
 .a2-toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:7;background:var(--ink);color:var(--paper);padding:7px 14px;border-radius:var(--r);font-size:13.5px}
@@ -415,8 +416,8 @@ html:not([lang=en]) .en-only,html[lang=en] .ru-only{display:none}
   .a2-grip::after{content:"";position:absolute;left:50%;top:5px;width:36px;height:4px;margin-left:-18px;border-radius:2px;background:var(--line)}
   .a2-legend{top:12px;bottom:auto;left:62px;right:12px;max-width:none;padding:6px 9px;font-size:11.5px}.a2-legend .a2-src{display:none}
 }
-@media (max-width:560px){.a2-legend .a2-unc{display:none}}
-.a2-unc .gap{width:20px;height:0;border-radius:0;background:none;border-top:2px dashed var(--p3);vertical-align:3px}
+
+.a2-unc .gap{width:20px;height:0;border-radius:0;background:none;border-top:2px dashed var(--p3);vertical-align:3px}.a2-unc .nf{background:var(--paper);box-shadow:0 0 0 1.8px var(--p3)}.a2-unc .ar{border-radius:2px;width:18px;background:repeating-linear-gradient(-45deg,color-mix(in srgb,var(--mute) 60%,transparent) 0 1px,transparent 1px 5px);outline:1px dashed color-mix(in srgb,var(--mute) 70%,transparent)}
 .a2-stage{background:var(--bg2)}
 .yr2 .dual{position:relative;flex:1 1 200px;height:28px}
 .yr2 .dual input{position:absolute;left:0;right:0;top:0;width:100%;height:28px;margin:0;background:none;pointer-events:none;-webkit-appearance:none;appearance:none}
@@ -433,3 +434,23 @@ html:not([lang=en]) .en-only,html[lang=en] .ru-only{display:none}
 }
 @media (max-width:860px){.a2-tools{left:auto;right:12px}.a2-legend{left:12px;right:76px}}
 .a2-hr{border:0;border-top:1px solid var(--line);margin:14px 0}
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin:0 0 18px;font-size:14px}
+.crumbs ol{display:flex;flex-wrap:wrap;list-style:none;margin:0;padding:0;color:var(--mute)}
+.crumbs li+li::before{content:"›";margin:0 8px;color:var(--mute)}
+.crumbs a{color:var(--mute)}.crumbs a:hover{color:var(--acc)}.crumbs [aria-current]{color:var(--ink)}
+.crumb-back{order:-1;display:inline-flex;align-items:center;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink)!important;text-decoration:none;font-weight:560}
+.crumb-back:hover{border-color:var(--acc);color:var(--acc)!important}
+.a2-more{margin:4px 0 0}.a2-more summary{cursor:pointer;font-size:14px;color:var(--mute);padding:4px 0;width:max-content}.a2-more summary:hover{color:var(--ink)}
+.a2-more[open] summary{color:var(--ink)}
+.lnk{background:none;border:0;padding:0;font:inherit;color:var(--acc2);text-decoration:underline;text-underline-offset:2px;cursor:pointer;text-align:left}
+.lnk:disabled{color:var(--mute);text-decoration:none;cursor:default}.lnk:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.a2-list i.none{background:none;border-top:1px dashed var(--mute);height:0}
+.a2-stage .tip .q{display:block;margin-top:6px;font-family:var(--serif);font-size:13.5px;line-height:1.45;color:var(--ink)}
+.a2-nogl{position:absolute;inset:0;display:grid;place-content:center;text-align:center;padding:24px;background:var(--bg2)}
+.a2-bars .lnk{font-size:14px}
+@media (max-width:860px){
+  .a2-legend{padding:0;background:var(--paper)}.a2-lgbtn{display:block;width:100%;background:none;border:0;padding:7px 10px;font:inherit;font-size:13px;font-weight:600;color:var(--ink);text-align:left;cursor:pointer}
+  .a2-legend .a2-lg{padding:0 10px 9px}.a2-legend.shut .a2-lg{display:none}.a2-legend.shut{right:auto}
+  .a2-legend .a2-unc{display:flex!important}
+}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

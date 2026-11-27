@@ -65,7 +65,31 @@ more?.querySelector('.more-btn').addEventListener('click', (e) => { e.stopPropag
 document.addEventListener('click', (e) => { if (more && !more.contains(e.target)) { more.classList.remove('open'); more.querySelector('.more-btn').setAttribute('aria-expanded', 'false'); } });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenus(); });
 document.getElementById('menu')?.addEventListener('click', (e) => { if (e.target.closest('a[href^="#"]')) closeMenus(); });
-async function route() {
+// Откуда пришёл читатель: при переходе в книгу или к народу с карты, из иллюстраций, связей и т. п.
+// запоминается полный адрес исходного вида (с фильтрами и масштабом), чтобы вернуться туда одной кнопкой.
+let atlasDestroy = null;
+const ORIG = [['atlas2', 'к карте', 'to the map'], ['atlas', 'к карте', 'to the map'], ['people-', 'к народу', 'to the people'], ['peoples', 'к народам', 'to the peoples'], ['illustrations', 'к иллюстрациям', 'to the illustrations'], ['links', 'к связям', 'to the networks'], ['analytics', 'к аналитике', 'to the analytics'], ['publications', 'к публикациям', 'to the publications'], ['home', 'на главную', 'to the home page']];
+function noteOrigin(e) {
+  const h = location.hash.slice(1), old = e && e.oldURL ? (new URL(e.oldURL).hash || '#home').slice(1) : '';
+  const key = h.startsWith('book-') ? 'book-' + h.slice(5).replace(/-p\d+$/, '') : h.startsWith('people-') ? h.split('?')[0] : '';
+  if (!key || !old) return;
+  const oldKey = old.startsWith('book-') ? 'book-' + old.slice(5).replace(/-p\d+$/, '') : old.split('?')[0];
+  if (oldKey === key) return; // листание абзацев той же книги — источник не меняется
+  if (ORIG.some(([p]) => old.startsWith(p)) || old.startsWith('book-')) { try { sessionStorage.setItem('from:' + key, '#' + old); } catch (x) {} }
+  else { try { sessionStorage.removeItem('from:' + key); } catch (x) {} }
+}
+function crumbs(trail, key) {
+  let back = ''; let from = null; try { from = sessionStorage.getItem('from:' + key); } catch (x) {}
+  if (from) {
+    const f = from.slice(1), o = ORIG.find(([p]) => f.startsWith(p));
+    const lbl = o ? (EN ? o[2] : o[1]) : f.startsWith('book-') ? (EN ? 'to the book' : 'к книге') : (EN ? 'back' : 'назад');
+    back = `<a class="crumb-back" href="${esc(from)}" data-noi18n>← ${EN ? 'Back ' : 'Вернуться '}${lbl}</a>`;
+  }
+  return `<nav class="crumbs" aria-label="${EN ? 'Breadcrumbs' : 'Навигационная цепочка'}">${back}<ol>${trail.map(([t, href], i) => `<li>${href && i < trail.length - 1 ? `<a href="${href}">${esc(t)}</a>` : `<span aria-current="page">${esc(t)}</span>`}</li>`).join('')}</ol></nav>`;
+}
+async function route(e) {
+  noteOrigin(e);
+  if (atlasDestroy) { try { atlasDestroy(); } catch (x) {} atlasDestroy = null; }
   const h = (location.hash || '#home').slice(1) || 'home';
   setMenu(h.startsWith('analytics') ? 'analytics' : h.split('?')[0]); if (mapRO) { mapRO.disconnect(); mapRO = null; }
   V.innerHTML = '<div class="wrap loading">Загрузка…</div>';
@@ -328,8 +352,9 @@ async function illustrations() {
 
 // ---------------- атлас ----------------
 async function atlas2() {
-  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=56'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
-  await window.Atlas2.render(V, {get, getRoutes, esc, toH, PER, NAT});
+  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=57'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  const d = await window.Atlas2.render(V, {get, getRoutes, esc, toH, PER, NAT});
+  if (location.hash.startsWith('#atlas2')) atlasDestroy = d; else d();
 }
 async function atlas() {
   const [works, routes, places, geo, groups, bookgeo] = await Promise.all([get('works.json'), getRoutes(), get('places.json'), get('geo.json'), get('groups.json'), get('bookgeo.json')]);
@@ -407,7 +432,7 @@ async function people(id) {
   const W = Object.fromEntries(works.map((w) => [w.id, w]));
   const langs = ['en', 'fr', 'de'].filter((l) => (g.collocations[l] || []).length);
   V.innerHTML = `<section class="band"><div class="wrap">
-    <p class="small"><a href="#peoples">← все народы</a></p>
+    ${crumbs([['Народы и группы', '#peoples'], [EN ? g.name_en : g.name]], 'people-' + toH(id))}
     <h1>${esc(g.name)}</h1>
     <p class="mute">${EN ? '' : esc(g.name_en) + ' · '}${g.family ? esc(g.family) + ' · ' : ''}${CAT[g.category] || ''} · ${fmt(g.mentions)} упоминаний в Сибири, ${g.works} книг</p>
     ${g.note && EN ? `<p class="small">${esc(g.note)}</p>` : ''}
@@ -472,7 +497,7 @@ async function book(id, par) {
   const w = works.find((x) => x.id === id); if (!w) return library();
   const GN = Object.fromEntries(groups.map((g) => [g.id, g.name])), GE = Object.fromEntries(groups.map((g) => [g.id, EN ? g.name_en : g.name]));
   const r0 = routes.find((x) => x.work === id); const r = r0 && {...r0, stops: r0.stops.filter(inBox)};
-  V.innerHTML = `<section class="band"><div class="wrap"><p class="small"><a href="#library">← библиотека</a></p>
+  V.innerHTML = `<section class="band"><div class="wrap">${crumbs([['Библиотека', '#library'], [w.label]], 'book-' + toH(id))}
     <div class="reader"><aside>
       <h2 style="font-size:24px">${esc(w.label)}</h2>
       <p><b>${esc(w.author)}</b><br><span class="small mute">${esc(ruOf(NAT_RU, w.nationality || ''))}${w.role ? ' · ' + esc(ruOf(ROLE_RU, w.role)) : ''}${w.gender === 'f' ? ' · женщина-автор' : ''}</span></p>
