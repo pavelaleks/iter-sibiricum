@@ -750,5 +750,77 @@ window.Atlas2 = (() => {
       destroy() { dead = true; cancelAnimationFrame(raf); ro.disconnect(); try { map.remove(); } catch (e) {} el.innerHTML = ''; },
     };
   }
-  return {render, reader};
+  // preview(el, {routes, works, ind, areaGeo, onWork(w)}) → {restyle, destroy}: карта на главной — глобус, все проверенные
+  // маршруты цветом периода и ареалы по карте 1914 г.; без панели и фильтров, наведение — подпись, щелчок — книга
+  async function preview(el, o) {
+    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=63'), loadJS('assets/vendor/maplibre-gl.js?v=63'), loadJS('assets/vendor/pmtiles.js?v=63')]);
+    if (!hasGL() || !el.isConnected) return {restyle() {}, destroy() {}};
+    if (!window.__a2proto) { window.__a2proto = new pmtiles.Protocol(); maplibregl.addProtocol('pmtiles', window.__a2proto.tile); }
+    const W = Object.fromEntries(o.works.map((w) => [w.id, w])), per = (w) => PERK.indexOf((W[w] || {}).period);
+    let C = palette(el), dead = false;
+    el.innerHTML = '<div class="pv-map"></div><div class="tip" hidden></div>';
+    const box = el.querySelector('.pv-map'), tip = el.querySelector('.tip');
+    const fc = (F) => ({type: 'FeatureCollection', features: F});
+    const lines = [];
+    for (const r of o.routes) {
+      if (r.method !== 'manual') continue;
+      let prev = null, cur = [], jj = null; const segs = [];
+      r.stops.forEach((s) => {
+        if (s[2] == null || s[3] == null || (s[6] || 1) !== jj) { if (cur.length > 1) segs.push(cur); cur = []; prev = null; }
+        jj = s[6] || 1; if (s[2] == null || s[3] == null) return;
+        let lo = ulon(s[2]); if (prev != null) { while (lo - prev > 180) lo -= 360; while (prev - lo > 180) lo += 360; } prev = lo;
+        const p = [lo, s[3]]; if (cur.length && km(cur[cur.length - 1], p) > GAP) { if (cur.length > 1) segs.push(cur); cur = []; } cur.push(p);
+      });
+      if (cur.length > 1) segs.push(cur);
+      if (segs.length) lines.push({type: 'Feature', id: lines.length + 1, properties: {work: r.work, per: per(r.work)}, geometry: {type: 'MultiLineString', coordinates: segs}});
+    }
+    const AG = new Set(o.ind.map((g) => g.id));
+    const areas = ((o.areaGeo && o.areaGeo.features) || []).filter((f) => f.properties.groups.some((g) => AG.has(g)));
+    const small = () => el.clientWidth < 700;
+    const map = new maplibregl.Map({container: box, attributionControl: false, dragRotate: false, pitchWithRotate: false, maxPitch: 0, cooperativeGestures: true, minZoom: .8, maxZoom: 6,
+      bounds: [[8, 34], [182, 72]], fitBoundsOptions: {padding: small() ? 6 : 24},
+      locale: {'CooperativeGesturesHandler.WindowsHelpText': T('Чтобы менять масштаб, прокручивайте с нажатой Ctrl', 'Use Ctrl + scroll to zoom the map'), 'CooperativeGesturesHandler.MacHelpText': T('Чтобы менять масштаб, прокручивайте с нажатой ⌘', 'Use ⌘ + scroll to zoom the map'), 'CooperativeGesturesHandler.MobileHelpText': T('Двигайте карту двумя пальцами', 'Use two fingers to move the map')},
+      style: {version: 8, projection: {type: 'globe'}, sources: {}, layers: [{id: 'bg', type: 'background', paint: {'background-color': C.sea}}]}});
+    map.touchZoomRotate.disableRotation(); el.__map = map;
+    const ro = new ResizeObserver(() => !dead && map.resize()); ro.observe(el);
+    const PC = () => ['match', ['get', 'per'], 0, C.per[0], 1, C.per[1], 2, C.per[2], 3, C.per[3], 4, C.per[4], C.acc];
+    const paint = () => ({
+      bg: {'background-color': C.sea}, land: {'fill-color': C.land}, coast: {'line-color': C.land2}, lakes: {'fill-color': C.sea}, rivers: {'line-color': C.river},
+      ar: {'fill-color': C.acc, 'fill-opacity': .09}, 'ar-edge': {'line-color': C.acc, 'line-opacity': .45},
+      'rt-case': {'line-color': C.paper}, rt: {'line-color': PC()},
+    });
+    map.on('load', () => {
+      if (dead) return;
+      map.addSource('base', {type: 'vector', url: 'pmtiles://' + new URL('data/tiles/basemap.pmtiles', location.href).href});
+      map.addSource('ar', {type: 'geojson', data: fc(areas)});
+      map.addSource('rt', {type: 'geojson', data: fc(lines)});
+      [
+        {id: 'land', type: 'fill', source: 'base', 'source-layer': 'land', paint: {}},
+        {id: 'coast', type: 'line', source: 'base', 'source-layer': 'land', paint: {'line-width': .6}},
+        {id: 'lakes', type: 'fill', source: 'base', 'source-layer': 'lakes', paint: {}},
+        {id: 'rivers', type: 'line', source: 'base', 'source-layer': 'rivers', filter: ['<=', ['coalesce', ['get', 'scalerank'], 9], ['+', 3.2, ['*', .9, ['zoom']]]], paint: {'line-opacity': .55, 'line-width': .7}},
+        {id: 'ar', type: 'fill', source: 'ar', paint: {}},
+        {id: 'ar-edge', type: 'line', source: 'ar', paint: {'line-width': .8, 'line-dasharray': [2, 2]}},
+        {id: 'rt-case', type: 'line', source: 'rt', layout: {'line-cap': 'round', 'line-join': 'round'}, paint: {'line-width': ['case', ['boolean', ['feature-state', 'hover'], false], 6, 0]}},
+        {id: 'rt', type: 'line', source: 'rt', layout: {'line-cap': 'round', 'line-join': 'round'}, paint: {'line-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 1, .72], 'line-width': ['interpolate', ['linear'], ['zoom'], 1, ['case', ['boolean', ['feature-state', 'hover'], false], 3.2, 1.3], 5, ['case', ['boolean', ['feature-state', 'hover'], false], 4.5, 2.4]]}},
+      ].forEach((l) => map.addLayer(l));
+      restyle();
+      let hov = null;
+      const setHov = (id) => { if (hov === id) return; if (hov != null) map.setFeatureState({source: 'rt', id: hov}, {hover: false}); hov = id; if (id != null) map.setFeatureState({source: 'rt', id}, {hover: true}); };
+      map.on('mousemove', (e) => {
+        const f = map.queryRenderedFeatures([[e.point.x - 4, e.point.y - 4], [e.point.x + 4, e.point.y + 4]], {layers: ['rt']})[0];
+        map.getCanvas().style.cursor = f ? 'pointer' : ''; setHov(f ? f.id : null);
+        if (!f) { tip.hidden = true; return; }
+        const w = W[f.properties.work] || {}; tip.innerHTML = `<b>${esc(w.label || f.properties.work)}</b><span class="mute">${w.j0 ? esc(w.j0 + (w.j1 && w.j1 !== w.j0 ? '–' + w.j1 : '')) + ' · ' : ''}${T('щёлкните — открыть книгу', 'click to open the book')}</span>`;
+        tip.hidden = false; let x = e.point.x + 12, y = e.point.y + 12; if (x + tip.offsetWidth > box.clientWidth) x = e.point.x - tip.offsetWidth - 8; if (y + tip.offsetHeight > box.clientHeight) y = e.point.y - tip.offsetHeight - 8; tip.style.left = Math.max(4, x) + 'px'; tip.style.top = Math.max(4, y) + 'px';
+      });
+      map.on('mouseout', () => { tip.hidden = true; setHov(null); });
+      map.on('click', (e) => { const f = map.queryRenderedFeatures([[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]], {layers: ['rt']})[0]; if (f && o.onWork) o.onWork(f.properties.work); });
+    });
+    function restyle() { if (dead || !map.getLayer('rt')) return; C = palette(el); const P = paint(); for (const [id, pr] of Object.entries(P)) for (const [k, v] of Object.entries(pr)) map.setPaintProperty(id, k, v); }
+    const mo = new MutationObserver(restyle); mo.observe(document.documentElement, {attributes: true, attributeFilter: ['data-theme']});
+    const mq = matchMedia('(prefers-color-scheme: dark)'); mq.addEventListener('change', restyle);
+    return {restyle, destroy() { dead = true; ro.disconnect(); mo.disconnect(); mq.removeEventListener('change', restyle); try { map.remove(); } catch (e) {} el.innerHTML = ''; }};
+  }
+  return {render, reader, preview};
 })();

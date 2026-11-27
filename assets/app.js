@@ -196,7 +196,7 @@ async function home() {
   <section class="band"><div class="wrap">
     <div class="sechead"><h2>Маршруты путешественников</h2><a href="#atlas">Открыть атлас</a></div>
     <div class="mapbox heromap" id="homeMap"></div>
-    <div class="mapnote"><span><i></i>${pl(manual, ['маршрут восстановлен', 'маршрута восстановлены', 'маршрутов восстановлено'])} по тексту книг, у каждой остановки — абзац-доказательство; цвет — период поездки</span><span><i class="a"></i>ареалы коренных народов около 1900 года, схематично</span></div>
+    <div class="mapnote" data-noi18n><span class="pv-per">${['--p1', '--p2', '--p3', '--p4', '--p5'].map((v, k) => `<span><i style="background:var(${v})"></i>${esc(EN ? ['before 1855', '1856–1880', '1881–1904', '1905–1917', '1918–1930'][k] : ['до 1855', '1856–1880', '1881–1904', '1905–1917', '1918–1930'][k])}</span>`).join('')}</span><span>${EN ? `${manual} routes reconstructed from the texts, each stop backed by a paragraph; line colour is the period of the journey. Point at a route to see the book, click to open it.` : `${pl(manual, ['маршрут восстановлен', 'маршрута восстановлены', 'маршрутов восстановлено'])} по тексту книг, у каждой остановки — абзац-доказательство; цвет линии — период поездки. Наведите на маршрут, чтобы увидеть книгу, щёлкните, чтобы открыть её.`}</span><span><i class="a"></i>${EN ? 'areas of indigenous peoples after the Ethnographic Map of Asiatic Russia (1914)' : 'ареалы коренных народов по «Этнографической карте Азиатской России» (1914)'}</span></div>
   </div></section>
   <section class="band alt"><div class="wrap">
     <h2>Что показывает корпус</h2>
@@ -245,7 +245,14 @@ async function home() {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   heroPlates(works, reduce);
   let first = !reduce;
-  mapIn(document.getElementById('homeMap'), () => { const o = {geo, routes, places, works, areas: ind, areaGeo: AGEO, showPlaces: false, labels: false, zoom: false, showAuto: false, animate: first, routeWidth: 2, onWork: (w) => location.hash = 'book-' + toH(w), onGroup: (g) => location.hash = 'people-' + toH(g)}; first = false; return o; });
+  (async () => {
+    const el = document.getElementById('homeMap'); if (!el) return;
+    if (!window.Atlas2) { try { await new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'assets/atlas2.js?v=63'; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); } catch (x) { return; } }
+    if (!el.isConnected) return;
+    const pv = await Atlas2.preview(el, {routes, works, ind, areaGeo: AGEO, onWork: (w) => location.hash = 'book-' + toH(w)});
+    if (!el.isConnected) { pv.destroy(); return; }
+    atlasDestroy = pv.destroy;
+  })();
 }
 
 // ---------------- иллюстрации ----------------

@@ -554,3 +554,11 @@ html:not([lang=en]) .en-only,html[lang=en] .ru-only{display:none}
 .data-pg h2{margin-top:30px}.data-ds{padding-left:1.2em}.data-ds li{margin:4px 0}
 .data-pg td code{font-size:12.5px;word-break:break-all}
 @media(max-width:860px){.ev-sum,.ev-cmp{grid-template-columns:1fr}}
+/* карта на главной (MapLibre) */
+.heromap{position:relative;overflow:hidden;background:var(--sea)}
+.heromap .pv-map{position:absolute;inset:0}
+.heromap .tip{position:absolute;z-index:3;pointer-events:none;max-width:300px}
+.heromap .tip b{display:block}
+.heromap .tip .mute{font-size:12.5px}
+.mapnote .pv-per{display:flex;gap:12px;flex-wrap:wrap;width:100%}
+.mapnote .pv-per i{height:3px;width:20px;border-radius:2px;vertical-align:3px}
