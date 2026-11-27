@@ -369,3 +369,67 @@ html:not([lang=en]) .en-only,html[lang=en] .ru-only{display:none}
 .g3lab{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2}
 .g3lab span{position:absolute;left:0;top:0;white-space:nowrap;font-size:12.5px;line-height:1.2;color:#e4ecf2;text-shadow:0 0 3px #0e1a26,0 0 6px #0e1a26;transition:opacity .2s}
 .refs .pst{display:inline-block;font-family:var(--sans);font-size:13px;color:var(--mute);border:1px solid var(--line);border-radius:3px;padding:0 6px;margin-left:4px;line-height:1.6}
+/* ---- атлас на MapLibre ---- */
+.a2 .a2-ctl{margin:10px 0}
+.yr2{display:flex;align-items:center;gap:10px;flex:1 1 360px;font-size:14px;color:var(--mute)}
+.yr2 input{flex:1 1 120px;min-width:0;accent-color:var(--acc)}.yr2 output{font-variant-numeric:tabular-nums;color:var(--ink);min-width:84px}
+.a2-lay{display:flex;flex-wrap:wrap;gap:6px}
+.a2-stage{position:relative;margin:14px auto 0;max-width:1680px;height:clamp(520px,78vh,940px);background:var(--sea);border-block:1px solid var(--line);overflow:hidden}
+@media (min-width:1700px){.a2-stage{border:1px solid var(--line);border-radius:var(--r)}}
+.a2-stage .a2-map{position:absolute;inset:0}
+.a2-map canvas:focus-visible{outline:2px solid var(--acc);outline-offset:-2px}
+.a2-labels{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2}
+.a2-labels span{position:absolute;left:0;top:0;white-space:nowrap;font-family:var(--sans);font-size:12px;line-height:15px;color:var(--ink);text-shadow:0 0 3px var(--paper),0 0 3px var(--paper),0 0 2px var(--paper)}
+.a2-labels .reg{font-family:var(--serif);font-style:italic;color:var(--mute)}
+.a2-labels .stop{font-weight:600;font-size:12.5px}
+.a2-labels .sub{color:var(--mute);font-size:11.5px}
+.a2-labels .num{width:14px;text-align:center;font-size:10.5px;font-weight:650;line-height:14px;color:var(--ink)}
+.a2-stage .tip{z-index:6}
+.a2-tools{position:absolute;left:12px;top:12px;z-index:4;display:flex;flex-direction:column;gap:4px;align-items:stretch}
+.a2-tools button{min-width:36px;min-height:34px;padding:4px 9px;font-size:13px;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 4px 14px -8px rgba(19,38,58,.4);cursor:pointer}
+.a2-tools button:hover{border-color:var(--mute)}.a2-tools #bIn,.a2-tools #bOut{font-size:18px;line-height:1}
+.a2-tools button:focus-visible,.a2-panel button:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.a2-panel{position:absolute;right:12px;top:12px;bottom:12px;width:min(360px,34%);z-index:4;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 14px 40px -18px rgba(19,38,58,.45);display:flex;flex-direction:column;overflow:hidden}
+.a2-grip{display:none}
+#a2body{overflow:auto;padding:16px 18px 18px;overscroll-behavior:contain}
+#a2body h3{margin-top:0}#a2body h4{font-family:var(--sans);font-size:14px;font-weight:620;margin:14px 0 6px}.a2-gh{margin-top:20px!important}
+.a2-list{list-style:none;margin:8px 0 12px;padding:0}
+.a2-list button{display:grid;grid-template-columns:18px 1fr auto;gap:8px;align-items:center;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:8px 2px;color:var(--ink);font:inherit;font-size:14px;cursor:pointer}
+.a2-list button:hover span:nth-child(2){color:var(--acc)}.a2-list i{width:16px;height:3px;border-radius:2px}
+.a2-stops{padding-left:1.6em;margin:10px 0}.a2-stops li{padding:2px 0}
+.a2-bars{list-style:none;margin:0;padding:0;font-size:14px}.a2-bars li{display:flex;justify-content:space-between;gap:12px;padding:3px 0;border-bottom:1px solid var(--line)}.a2-bars span{color:var(--mute);font-variant-numeric:tabular-nums}
+.a2-legend{position:absolute;left:12px;bottom:12px;z-index:3;max-width:min(560px,calc(100% - 400px));background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:var(--r);padding:9px 12px;font-size:12.5px;color:var(--mute);display:grid;gap:5px}
+.a2-legend>div{display:flex;flex-wrap:wrap;gap:4px 14px}.a2-legend span{white-space:nowrap}
+.a2-per i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:3px;margin-right:5px}
+.a2-unc i{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-right:5px;background:var(--acc)}
+.a2-unc .u0{opacity:.75;box-shadow:0 0 0 1px var(--acc)}.a2-unc .u1{opacity:.55;filter:blur(1.6px)}.a2-unc .u2{opacity:.35;filter:blur(3px);width:15px;height:15px;vertical-align:-3px}.a2-unc .u3{background:var(--p3);opacity:.6;filter:blur(2.4px)}
+.a2-src{font-size:11.5px}
+.a2-note{margin-top:10px}
+.a2-toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:7;background:var(--ink);color:var(--paper);padding:7px 14px;border-radius:var(--r);font-size:13.5px}
+.maplibregl-canvas{outline:none}
+@media (max-width:860px){
+  .a2-stage{height:min(82vh,720px)}
+  .a2-panel{left:0;right:0;top:auto;bottom:0;width:auto;max-height:46%;border-radius:12px 12px 0 0;border-inline:0;border-bottom:0}
+  .a2-panel.shut{max-height:42px}.a2-panel.shut #a2body{display:none}
+  .a2-grip{display:block;flex:none;width:100%;background:none;border:0;border-bottom:1px solid var(--line);padding:10px 16px;font:inherit;font-size:14px;font-weight:600;color:var(--ink);text-align:left;cursor:pointer;position:relative}
+  .a2-grip::after{content:"";position:absolute;left:50%;top:5px;width:36px;height:4px;margin-left:-18px;border-radius:2px;background:var(--line)}
+  .a2-legend{top:12px;bottom:auto;left:62px;right:12px;max-width:none;padding:6px 9px;font-size:11.5px}.a2-legend .a2-src{display:none}
+}
+@media (max-width:560px){.a2-legend .a2-unc{display:none}}
+.a2-unc .gap{width:20px;height:0;border-radius:0;background:none;border-top:2px dashed var(--p3);vertical-align:3px}
+.a2-stage{background:var(--bg2)}
+.yr2 .dual{position:relative;flex:1 1 200px;height:28px}
+.yr2 .dual input{position:absolute;left:0;right:0;top:0;width:100%;height:28px;margin:0;background:none;pointer-events:none;-webkit-appearance:none;appearance:none}
+.yr2 .dual input::-webkit-slider-thumb{pointer-events:auto;-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--acc);border:2px solid var(--paper);box-shadow:0 1px 4px rgba(0,0,0,.3);cursor:pointer}
+.yr2 .dual input::-moz-range-thumb{pointer-events:auto;width:16px;height:16px;border-radius:50%;background:var(--acc);border:2px solid var(--paper);cursor:pointer}
+.yr2 .dual::before{content:"";position:absolute;left:9px;right:9px;top:12px;height:4px;border-radius:2px;background:var(--line)}
+.yr2 .dual i{position:absolute;top:12px;height:4px;border-radius:2px;background:var(--acc)}
+.yr2 .dual input:focus-visible::-webkit-slider-thumb{outline:2px solid var(--ink);outline-offset:2px}
+.a2-tools .mob{display:none}
+@media (max-width:860px){
+  .a2-tools #bIn,.a2-tools #bOut{display:none}.a2-tools .mob{display:block}
+  .a2-tools .x{display:none}.a2-tools.more .x{display:block}
+  .a2-tools button{min-height:36px;font-size:12.5px;padding:4px 8px}
+}
+@media (max-width:860px){.a2-tools{left:auto;right:12px}.a2-legend{left:12px;right:76px}}
+.a2-hr{border:0;border-top:1px solid var(--line);margin:14px 0}

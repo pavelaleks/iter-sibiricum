@@ -71,6 +71,7 @@ async function route() {
   V.innerHTML = '<div class="wrap loading">Загрузка…</div>';
   try {
     if (h === 'home') await home();
+    else if (h === 'atlas2' || h.startsWith('atlas2?')) await atlas2();
     else if (h === 'atlas' || h.startsWith('atlas?')) await atlas();
     else if (h === 'peoples') await peoples();
     else if (h.startsWith('people-')) await people(fromH(h.slice(7)));
@@ -88,7 +89,7 @@ async function route() {
   } catch (e) { V.innerHTML = `<div class="wrap band"><h2>Не удалось загрузить данные</h2><p class="mute">${esc(e.message)}. Сайт читает файлы из папки data/; откройте его через веб-сервер (GitHub Pages или python -m http.server).</p></div>`; }
 }
 window.addEventListener('hashchange', route);
-const TITLES = {atlas: 'Атлас', peoples: 'Народы', people: 'Народы', library: 'Библиотека', book: 'Библиотека', illustrations: 'Иллюстрации', links: 'Связи', analytics: 'Аналитика', publications: 'Публикации', scope: 'Границы и категории', method: 'Метод и данные'};
+const TITLES = {atlas2: 'Атлас', atlas: 'Атлас', peoples: 'Народы', people: 'Народы', library: 'Библиотека', book: 'Библиотека', illustrations: 'Иллюстрации', links: 'Связи', analytics: 'Аналитика', publications: 'Публикации', scope: 'Границы и категории', method: 'Метод и данные'};
 
 function mapIn(el, opts) {
   const draw = () => SibMap.draw(el, opts());
@@ -326,6 +327,10 @@ async function illustrations() {
 }
 
 // ---------------- атлас ----------------
+async function atlas2() {
+  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=56'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  await window.Atlas2.render(V, {get, getRoutes, esc, toH, PER, NAT});
+}
 async function atlas() {
   const [works, routes, places, geo, groups, bookgeo] = await Promise.all([get('works.json'), getRoutes(), get('places.json'), get('geo.json'), get('groups.json'), get('bookgeo.json')]);
   const W = Object.fromEntries(works.map((w) => [w.id, w])), RT = Object.fromEntries(routes.map((r) => [r.work, r]));
