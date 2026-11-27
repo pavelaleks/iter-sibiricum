@@ -512,3 +512,6 @@ html:not([lang=en]) .en-only,html[lang=en] .ru-only{display:none}
 .a2-old input{width:110px;accent-color:var(--ink)}
 .a2-unc .ar.s{outline-style:dashed;background:repeating-linear-gradient(-45deg,color-mix(in srgb,var(--mute) 35%,transparent) 0 1px,transparent 1px 5px)}
 .a2-oldsrc:empty{display:none}
+.a2-unc .cr{width:22px;height:5px;border-radius:3px;background:var(--ink);opacity:.6;vertical-align:2px}
+.a2-unc .ht{width:22px;border-radius:6px;background:linear-gradient(90deg,transparent,var(--p1),var(--p2),var(--p3),var(--p4))}
+.a2-lg [hidden]{display:none}

@@ -65,7 +65,7 @@ window.Atlas2 = (() => {
     const {get, getRoutes, toH, PER, NAT} = ctx;
     V.innerHTML = `<div class="wrap loading">${T('Загрузка карты…', 'Loading the map…')}</div>`;
     const [works, routes, places, groups, bookgeo, AREAS] = await Promise.all([get('works.json'), getRoutes(), get('places.json'), get('groups.json'), get('bookgeo.json'), get('areas1914.geojson').catch(() => null),
-      loadCSS('assets/vendor/maplibre-gl.css?v=59'), loadJS('assets/vendor/maplibre-gl.js?v=59'), loadJS('assets/vendor/pmtiles.js?v=59')]);
+      loadCSS('assets/vendor/maplibre-gl.css?v=60'), loadJS('assets/vendor/maplibre-gl.js?v=60'), loadJS('assets/vendor/pmtiles.js?v=60')]);
     if (!alive()) return () => {};
     const W = Object.fromEntries(works.map((w) => [w.id, w])), RT = Object.fromEntries(routes.map((r) => [r.work, r]));
     const PL = Object.fromEntries(places.map((p) => [p.id, p]));
@@ -84,7 +84,7 @@ window.Atlas2 = (() => {
     const yv = (x, d) => { const n = parseInt(x, 10); return isFinite(n) ? Math.max(Y0, Math.min(Y1, n)) : d; };
     const st = {work: W[q.get('work')] ? q.get('work') : '', group: GR[q.get('g')] ? q.get('g') : '', period: PERK.includes(q.get('per')) ? q.get('per') : '',
       nat: NATS.includes(q.get('nat')) ? q.get('nat') : '', stay: STAYS.includes(q.get('stay')) ? q.get('stay') : '',
-      y0: yv(q.get('y0'), Y0), y1: yv(q.get('y1'), Y1), lay: q.has('l') ? (q.get('l') || '').replace(/[^rpad]/g, '') : 'rpa', globe: q.get('p') !== 'flat', old: ['1822', '1914'].includes(q.get('old')) ? q.get('old') : '', op: Math.max(20, Math.min(100, +q.get('op') || 85))};
+      y0: yv(q.get('y0'), Y0), y1: yv(q.get('y1'), Y1), lay: q.has('l') ? (q.get('l') || '').replace(/[^rpadhc]/g, '') : 'rpa', globe: q.get('p') !== 'flat', old: ['1822', '1914'].includes(q.get('old')) ? q.get('old') : '', op: Math.max(20, Math.min(100, +q.get('op') || 85))};
     if (st.y0 > st.y1) [st.y0, st.y1] = [st.y1, st.y0];
     if (st.work && st.group) st.group = '';
     let v0 = (q.get('v') || '').split(',').map(Number);
@@ -99,7 +99,7 @@ window.Atlas2 = (() => {
       <div class="ctl a2-ctl">
         <label>Книга <select id="fWork"><option value="">все</option>${opt(works.slice().sort((a, b) => a.year - b.year).map((w) => [w.id, w.label + (RT[w.id] ? '' : ' (' + T('без маршрута', 'no route') + ')')]), st.work)}</select></label>
         <label>Народ <select id="fGr"><option value="">—</option>${opt(ind.map((g) => [g.id, g.name]), st.group)}</select></label>
-        <span class="a2-lay" role="group" aria-label="${T('Слои', 'Layers')}"><button data-l="r">маршруты</button>${nDraft ? '<button data-l="d">черновики</button>' : ''}<button data-l="p">места</button><button data-l="a">ареалы</button></span>
+        <span class="a2-lay" role="group" aria-label="${T('Слои', 'Layers')}"><button data-l="r">маршруты</button>${nDraft ? '<button data-l="d">черновики</button>' : ''}<button data-l="p">места</button><button data-l="a">ареалы</button><button data-l="h" title="${T('Где упоминания мест гуще всего', 'Where place mentions are densest')}">плотность</button><button data-l="c" title="${T('Сколько авторов проехало каждый перегон', 'How many authors travelled each stretch')}">коридоры</button></span>
         <span class="a2-old" role="group" aria-label="${T('Старая карта подложкой', 'Old map as a base layer')}"><span class="lbl">${T('Старая карта', 'Old map')}</span><button data-o="" aria-pressed="${!st.old}">${T('нет', 'none')}</button><button data-o="1822" aria-pressed="${st.old === '1822'}" title="Charte vom Asiatischen Russland, Weimar 1822">1822</button><button data-o="1914" aria-pressed="${st.old === '1914'}" title="${T('Этнографическая карта Азиатской России, 1914', 'Ethnographic map of Asiatic Russia, 1914')}">1914</button><input type="range" id="oOp" min="20" max="100" value="${st.op}" aria-label="${T('Непрозрачность старой карты', 'Old map opacity')}"${st.old ? '' : ' hidden'}></span>
       </div>
       <details class="a2-more"${st.period || st.nat || st.stay ? ' open' : ''}><summary>Фильтры: период, страна, тип поездки</summary><div class="ctl a2-ctl">
@@ -137,6 +137,8 @@ window.Atlas2 = (() => {
           <div class="a2-per"><b>${T('Цвет линии — период поездки', 'Line colour: period of the journey')}</b>${PERK.map((k, i) => `<span><i style="background:var(${PERV[i]})"></i>${esc(EN && I18N.tr ? I18N.tr(PER[k]) || PER[k] : PER[k])}</span>`).join('')}</div>
           <div class="a2-unc"><b>${T('Круг — место; чем больше, тем чаще упоминается', 'Circle: a place; the larger, the more often mentioned')}</b><span><i class="u0"></i>${T('координаты точные', 'exact coordinates')}</span><span><i class="u1"></i>${T('приблизительные', 'approximate')}</span><span><i class="u2"></i>${T('центр реки, озера, области', 'centre of a river, lake or region')}</span></div>
           <div class="a2-unc"><span><i class="gap"></i>${T('перегон без названных мест', 'stretch with no places named')}</span><span><i class="nf"></i>${T('остановка не найдена в тексте', 'stop not found in the text')}</span><span><i class="ar"></i>${T('ареал народа по этнографической карте 1914 г.', 'area of a people after the 1914 ethnographic map')}</span><span><i class="ar s"></i>${T('схематично', 'schematic')}</span></div>
+          <div class="a2-unc a2-lc"><span><i class="cr"></i>${T('коридор: толщина — число книг, чьи авторы проехали этот перегон', 'corridor: width = number of books whose authors travelled this stretch')}</span></div>
+          <div class="a2-unc a2-lh"><span><i class="ht"></i>${T('плотность упоминаний мест (в выборке)', 'density of place mentions (in the selection)')}</span></div>
           <div class="a2-src a2-oldsrc"></div>
           <div class="a2-src">${T('Прямые соединяют остановки и не повторяют дорогу. Подложка: Natural Earth.', 'Straight lines join stops; they do not trace the road. Base map: Natural Earth.')}</div>
         </div>
@@ -203,6 +205,24 @@ window.Atlas2 = (() => {
       }
       return {type: 'FeatureCollection', features: F};
     }
+    // коридоры: перегоны между соседними остановками, общие для нескольких маршрутов; толщина — число книг
+    function corridors() {
+      const S = {};
+      for (const r of routes) {
+        if (r.method !== 'manual' || !filt(W[r.work])) continue;
+        const N = normStops(r); let prev = null, pj = null;
+        r.stops.forEach((s, i) => {
+          if (!N[i] || stopQ(s) === 2) return; const jj = s[6] || 1;
+          if (prev && pj === jj && km(prev.c, N[i]) <= GAP && prev.id !== s[0]) {
+            const a = prev, b = {id: s[0], c: N[i], n: s[1]}, k = [a.id || a.c.join(), b.id || b.c.join()].sort().join('|');
+            const e = S[k] ||= {a: a.c, b: b.c, na: a.n, nb: b.n, w: new Set()}; e.w.add(r.work);
+          }
+          prev = {id: s[0], c: N[i], n: s[1]}; pj = jj;
+        });
+      }
+      const F = Object.entries(S).map(([k, e], i) => ({type: 'Feature', id: i + 1, properties: {k, n: e.w.size, na: e.na, nb: e.nb, w: [...e.w].join(' ')}, geometry: {type: 'LineString', coordinates: [e.a, e.b]}}));
+      F.sort((x, y) => x.properties.n - y.properties.n); return {type: 'FeatureCollection', features: F};
+    }
     function stopPoints() {
       const F = []; const r = RT[st.work];
       if (r) { const N = normStops(r); r.stops.forEach((s, i) => { if (N[i]) F.push({type: 'Feature', properties: {i: i + 1, k: i, name: s[1], flag: s[5], q: r.method === 'draft' ? 3 : stopQ(s), per: per(r.work)}, geometry: {type: 'Point', coordinates: N[i]}}); }); }
@@ -263,6 +283,11 @@ window.Atlas2 = (() => {
       'area-edge-s': {'line-color': C.mute, 'line-opacity': ['case', ['==', ['get', 'hi'], 1], .8, .3], 'line-width': ['case', ['==', ['get', 'hi'], 1], 1.4, .8], 'line-dasharray': [3, 2]},
       'old1822': {'raster-opacity': st.op / 100, 'raster-fade-duration': 0},
       'old1914': {'raster-opacity': st.op / 100, 'raster-fade-duration': 0},
+      // плотность упоминаний: вес точки — её доля от самого частого места в выборке
+      'heat': {'heatmap-weight': ['get', 'r'], 'heatmap-intensity': ['interpolate', ['linear'], ['zoom'], 1, 1.6, 6, 3], 'heatmap-radius': ['interpolate', ['exponential', 2], ['zoom'], 1, 16, 3, 30, 6, 80],
+        'heatmap-opacity': .8, 'heatmap-color': ['interpolate', ['linear'], ['heatmap-density'], 0, 'rgba(0,0,0,0)', .15, C.per[0].replace('rgb(', 'rgba(').replace(')', ',.35)'), .45, C.per[1], .75, C.per[2], 1, C.per[3]]},
+      'corr': {'line-color': C.ink, 'line-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], .95, ['interpolate', ['linear'], ['get', 'n'], 1, .25, 6, .6, 20, .8]],
+        'line-width': ['interpolate', ['linear'], ['zoom'], 2, ['interpolate', ['linear'], ['get', 'n'], 1, .6, 5, 2.5, 20, 9, 40, 14], 6, ['interpolate', ['linear'], ['get', 'n'], 1, 1.2, 5, 4, 20, 14, 40, 22]]},
       'routes-case': {'line-color': C.paper, 'line-opacity': .9, 'line-width': ['interpolate', ['linear'], ['zoom'], 2, 6, 6, 8]},
       'routes-gap': {'line-color': RC(), 'line-dasharray': [1.5, 2.5], 'line-width': RW(.8), 'line-opacity': ROP(.5)},
       'routes': {'line-color': RC(), 'line-width': RW(1.3), 'line-opacity': ROP(.78)},
@@ -286,6 +311,7 @@ window.Atlas2 = (() => {
       map.addSource('routes', {type: 'geojson', data: routeLines(), promoteId: 'work'});
       map.addSource('stops', {type: 'geojson', data: stopPoints(), promoteId: 'k'});
       map.addSource('places', {type: 'geojson', data: placePoints(), promoteId: 'id'});
+      map.addSource('corr', {type: 'geojson', data: corridors(), promoteId: 'k'});
       const P = paint();
       const L = [
         ['grat', 'line', 'grat'], ['land', 'fill', 'base', {'source-layer': 'land'}], ['coast', 'line', 'base', {'source-layer': 'land'}],
@@ -293,7 +319,9 @@ window.Atlas2 = (() => {
         ['rivers', 'line', 'base', {'source-layer': 'rivers', filter: ['<=', ['coalesce', ['get', 'scalerank'], 9], ['+', 3.2, ['*', .9, ['zoom']]]], layout: {'line-cap': 'round', 'line-join': 'round'}}],
         ['old1822', 'raster', 'old1822', {layout: {visibility: st.old === '1822' ? 'visible' : 'none'}}], ['old1914', 'raster', 'old1914', {layout: {visibility: st.old === '1914' ? 'visible' : 'none'}}],
         ['area-fill', 'fill', 'areas'], ['area-edge', 'line', 'areas', {filter: ['==', ['get', 'sch'], 0]}], ['area-edge-s', 'line', 'areas', {filter: ['==', ['get', 'sch'], 1]}],
+        ['heat', 'heatmap', 'places'],
         ['places-unc', 'circle', 'places', {filter: ['>=', ['get', 'q'], 1]}],
+        ['corr', 'line', 'corr', {layout: {'line-cap': 'round'}}],
         ['routes-case', 'line', 'routes', {filter: ['all', ['==', ['get', 'focus'], 1], ['==', ['get', 'gap'], 0]], layout: {'line-cap': 'round', 'line-join': 'round'}}],
         ['routes-gap', 'line', 'routes', {filter: ['==', ['get', 'gap'], 1]}],
         ['routes', 'line', 'routes', {filter: ['==', ['get', 'gap'], 0], layout: {'line-cap': 'round', 'line-join': 'round'}}],
@@ -312,7 +340,7 @@ window.Atlas2 = (() => {
     }
     function vis() {
       const s = (ids, v) => ids.forEach((id) => map.getLayer(id) && map.setLayoutProperty(id, 'visibility', v ? 'visible' : 'none'));
-      s(['routes', 'routes-gap', 'routes-case'], on('r')); s(['area-fill', 'area-edge', 'area-edge-s'], on('a')); s(['old1822'], st.old === '1822'); s(['old1914'], st.old === '1914'); s(['places', 'places-unc'], on('p') || !!st.work);
+      s(['routes', 'routes-gap', 'routes-case'], on('r')); s(['area-fill', 'area-edge', 'area-edge-s'], on('a')); s(['heat'], on('h')); s(['corr'], on('c')); s(['old1822'], st.old === '1822'); s(['old1914'], st.old === '1914'); s(['places', 'places-unc'], on('p') || !!st.work);
     }
 
     // ---------- подписи ----------
@@ -394,6 +422,13 @@ window.Atlas2 = (() => {
         <p class="small"><a href="#" data-back="1">${T('← назад', '← back')}</a></p>`;
       openPanel(); body.querySelector('h3').focus({preventScroll: true});
     }
+    function corrPanel(pp) {
+      const ws = pp.w.split(' ').filter((w) => W[w]).sort((a, b) => j0(W[a]) - j0(W[b]));
+      body.innerHTML = `<h3 tabindex="-1">${esc(nm(pp.na))} — ${esc(nm(pp.nb))}</h3><p class="small mute">${T(`Перегон между соседними остановками, общий для ${ws.length} ${plural(ws.length, 'маршрута', 'маршрутов', 'маршрутов')} в выборке. Прямая соединяет остановки и не повторяет дорогу.`, `A stretch between neighbouring stops shared by ${ws.length} route${ws.length === 1 ? '' : 's'} in the selection. The straight line joins the stops; it does not trace the road.`)}</p>
+        <ul class="a2-list">${ws.map((w) => `<li><button data-work="${esc(w)}"><i style="background:var(${PERV[per(w)]})"></i><span>${esc(W[w].label)}</span><span class="mute">${jour(W[w])}</span></button></li>`).join('')}</ul>
+        <p class="small"><a href="#" data-back="1">${T('← назад', '← back')}</a></p>`;
+      openPanel(); body.querySelector('h3').focus({preventScroll: true});
+    }
     const openPanel = () => { if (panelEl.classList.contains('shut')) { panelEl.classList.remove('shut'); grip.setAttribute('aria-expanded', 'true'); map.setPadding(pad()); } };
     grip.addEventListener('click', () => { const o = panelEl.classList.toggle('shut'); grip.setAttribute('aria-expanded', String(!o)); map.setPadding(pad()); place(); });
     V.querySelector('.a2-lgbtn').addEventListener('click', (e) => { const o = legEl.classList.toggle('shut'); e.currentTarget.setAttribute('aria-expanded', String(!o)); map.setPadding(pad()); place(); });
@@ -430,9 +465,10 @@ window.Atlas2 = (() => {
       status.textContent = st.work ? W[st.work].label : st.group ? (EN ? GR[st.group].name_en : GR[st.group].name) : `${T('Показано', 'Showing')} ${routesN(n)}`;
       panel(); if (typeof histo === 'function' && svgT) histo();
       if (!map.getSource('routes')) return;
-      map.getSource('routes').setData(routeLines()); map.getSource('stops').setData(stopPoints()); map.getSource('places').setData(placePoints()); map.getSource('areas').setData(areaPolys());
+      map.getSource('routes').setData(routeLines()); map.getSource('corr').setData(corridors()); map.getSource('stops').setData(stopPoints()); map.getSource('places').setData(placePoints()); map.getSource('areas').setData(areaPolys());
       for (const [id, pp] of Object.entries(paint())) if (/^routes/.test(id)) for (const [k, v] of Object.entries(pp)) map.setPaintProperty(id, k, v);
       vis(); labels(); url();
+      V.querySelector('.a2-lc').hidden = !on('c'); V.querySelector('.a2-lh').hidden = !on('h');
     }
     const fitTo = (coords, mz = 6) => {
       if (!coords.length) return; const lo = coords.map((c) => c[0]), la = coords.map((c) => c[1]);
@@ -451,9 +487,9 @@ window.Atlas2 = (() => {
     const routeTip = (f) => { const w = W[f.properties.work] || {}; return `<b>${esc(w.label)}</b>${esc(w.author || '')}<br>${T('поездка', 'journey')} ${jour(w)} · ${esc(nm(w.stay_ru || ''))}<br>${stTxt(RT[w.id] || {})}${f.properties.gap ? '<br><span class="mute">' + T('пунктир: между этими остановками автор не называет мест', 'dashed: the author names no places between these stops') + '</span>' : ''}`; };
     const placeTip = (f) => { const p = PL[f.properties.id]; return `<b>${esc(nm(p.name))}</b>${f.properties.book ? ment(f.properties.v) + ' ' + T('в этой книге', 'in this book') : st.group ? T(`${f.properties.v} ${plural(f.properties.v, 'абзац', 'абзаца', 'абзацев')} рядом с этим народом`, `${f.properties.v} paragraph${f.properties.v === 1 ? '' : 's'} next to this people`) : defaultF() ? ment(p.mentions) + ' ' + T('в', 'in') + ' ' + books(p.works) : ment(f.properties.v) + ' ' + T('в выборке', 'in the selection')}<br><span class="mute">${qTxt(f.properties.q)}</span>`; };
     function pick(pt) {
-      const L = ['stops', 'places', 'dstops', 'routes', 'routes-gap', 'area-fill'].filter((l) => map.getLayer(l) && map.getLayoutProperty(l, 'visibility') !== 'none');
+      const L = ['stops', 'places', 'dstops', 'corr', 'routes', 'routes-gap', 'area-fill'].filter((l) => map.getLayer(l) && map.getLayoutProperty(l, 'visibility') !== 'none');
       const F = map.queryRenderedFeatures([[pt.x - 6, pt.y - 6], [pt.x + 6, pt.y + 6]], {layers: L}); if (!F.length) return null;
-      const rank = {stops: 0, dstops: 1, places: 2, routes: 3, 'routes-gap': 4, 'area-fill': 5};
+      const rank = {stops: 0, dstops: 1, places: 2, corr: 3, routes: 4, 'routes-gap': 5, 'area-fill': 6};
       const d = (f) => { if (f.geometry.type !== 'Point') return 0; const p = map.project(f.geometry.coordinates); return Math.hypot(p.x - pt.x, p.y - pt.y); };
       // мелкий кружок над крупным: выбирается тот, чей центр ближе к курсору
       F.sort((a, b) => rank[a.layer.id] - rank[b.layer.id] || d(a) - d(b)); return F[0];
@@ -461,12 +497,13 @@ window.Atlas2 = (() => {
     let cur = null;
     function onMove(e) {
       const f = pick(e.point); cur = f;
-      ['routes', 'places', 'stops'].forEach((s) => { const want = f && f.source === s ? f.id : null; if (HOV[s] !== want) hl(s, want); });
+      ['routes', 'places', 'stops', 'corr'].forEach((s) => { const want = f && f.source === s ? f.id : null; if (HOV[s] !== want) hl(s, want); });
       if (!f) { map.getCanvas().style.cursor = ''; return hide(); }
       map.getCanvas().style.cursor = 'pointer';
       const id = f.layer.id;
       if (id === 'routes' || id === 'routes-gap') show(e.point, routeTip(f));
       else if (id === 'places') show(e.point, placeTip(f));
+      else if (id === 'corr') show(e.point, `<b>${esc(nm(f.properties.na))} — ${esc(nm(f.properties.nb))}</b>${T(`этим перегоном проехали авторы ${f.properties.n} ${plural(f.properties.n, 'книги', 'книг', 'книг')}`, `travelled by the authors of ${f.properties.n} book${f.properties.n === 1 ? '' : 's'}`)}<br><span class="mute">${f.properties.w.split(' ').slice(0, 6).map((w) => esc(W[w].label)).join(', ')}${f.properties.n > 6 ? '…' : ''}</span><br><span class="mute">${T('щёлкните — список книг', 'click for the list of books')}</span>`);
       else if (id === 'stops') show(e.point, stopTip(RT[st.work].stops[f.properties.k], f.properties.q));
       else if (id === 'dstops') show(e.point, `<b>${esc(nm(f.properties.name))}</b>${esc((W[f.properties.work || st.work] || {}).label || '')}<br><span class="mute">${qTxt(3)}</span>`);
       else if (id === 'area-fill') { const g = GR[f.properties.g]; show(e.point, `<b>${esc(EN ? g.name_en : g.name)}</b>${f.properties.sch ? T('схематичный ареал около 1900 г.', 'schematic area, c. 1900') : T(`по этнографической карте 1914 г.: «${esc(f.properties.term)}»`, `after the 1914 ethnographic map: “${esc(f.properties.term)}”`)}<br>${ment(g.mentions)} ${T('в', 'in')} ${books(g.works)}`); }
@@ -476,6 +513,7 @@ window.Atlas2 = (() => {
       const id = f.layer.id;
       if (id === 'stops') { const s = RT[st.work].stops[f.properties.k]; if (s[4]) location.hash = `#book-${toH(st.work)}-p${pad5(s[4])}`; }
       else if (id === 'places') placePanel(f.properties.id);
+      else if (id === 'corr') corrPanel(f.properties);
       else if (id === 'routes' || id === 'routes-gap') { st.group = ''; V.querySelector('#fGr').value = ''; setWork(f.properties.work); }
       else if (id === 'dstops' && f.properties.work) setWork(f.properties.work);
       else if (id === 'area-fill') setGroup(f.properties.g);
@@ -552,7 +590,9 @@ window.Atlas2 = (() => {
     const y0 = V.querySelector('#fY0'), y1 = V.querySelector('#fY1');
     const yr = () => { let a = +y0.value, b = +y1.value; if (a > b) [a, b] = [b, a]; st.y0 = a; st.y1 = b; refresh(); };
     y0.addEventListener('input', yr); y1.addEventListener('input', yr);
-    V.querySelectorAll('.a2-lay button').forEach((b) => b.addEventListener('click', () => { const k = b.dataset.l; st.lay = on(k) ? st.lay.replace(k, '') : st.lay + k; refresh(); }));
+    V.querySelectorAll('.a2-lay button').forEach((b) => b.addEventListener('click', () => { const k = b.dataset.l; const was = on(k); st.lay = was ? st.lay.replace(k, '') : st.lay + k;
+      // коридоры читаются только без пучка отдельных маршрутов
+      if (k === 'c' && !was) st.lay = st.lay.replace('r', ''); if (k === 'r' && !was) st.lay = st.lay.replace('c', ''); refresh(); }));
     const OLDSRC = {'1822': T('Подложка: Charte vom Asiatischen Russland. Weimar, 1822 (РНБ / World Digital Library). Привязка приблизительная, ±50–100 км.', 'Base layer: Charte vom Asiatischen Russland. Weimar, 1822 (National Library of Russia / World Digital Library). Approximate fit, ±50–100 km.'),
       '1914': T('Подложка: Этнографическая карта Азиатской России. Атлас Азиатской России. СПб., 1914 (скан: Harvard). Привязка ±20–30 км.', 'Base layer: Ethnographic Map of Asiatic Russia. Atlas of Asiatic Russia, St Petersburg, 1914 (scan: Harvard). Fit ±20–30 km.')};
     const oldUI = () => { V.querySelectorAll('.a2-old button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.o === st.old))); V.querySelector('#oOp').hidden = !st.old; V.querySelector('.a2-oldsrc').textContent = st.old ? OLDSRC[st.old] : ''; };
@@ -612,7 +652,7 @@ window.Atlas2 = (() => {
   // ---------- карта рядом с текстом книги: путь «доезжает» до абзаца, который читается сейчас ----------
   // reader(el, {work, route, PL, bookgeo, period, onPlace(id), onStop(i)}) → {setPara(n, ids), hover(id), destroy}
   async function reader(el, o) {
-    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=59'), loadJS('assets/vendor/maplibre-gl.js?v=59'), loadJS('assets/vendor/pmtiles.js?v=59')]);
+    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=60'), loadJS('assets/vendor/maplibre-gl.js?v=60'), loadJS('assets/vendor/pmtiles.js?v=60')]);
     if (!hasGL()) { el.innerHTML = `<p class="small mute" style="padding:14px">${T('Браузер не поддерживает WebGL, карта недоступна.', 'This browser does not support WebGL; the map is unavailable.')}</p>`; return {setPara() {}, hover() {}, destroy() {}}; }
     if (!window.__a2proto) { window.__a2proto = new pmtiles.Protocol(); maplibregl.addProtocol('pmtiles', window.__a2proto.tile); }
     let C = palette(el), dead = false, raf = 0, follow = true, userAt = 0, curN = -1, curIds = [], hovId = null;
