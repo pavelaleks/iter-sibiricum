@@ -38,3 +38,5 @@ fieldset.mem{border:1px solid var(--line);border-radius:var(--r);padding:16px;ma
 .acard blockquote{margin:8px 0 10px;padding:8px 12px;border-left:3px solid var(--line);font-family:Georgia,serif;line-height:1.5}
 .acard select{margin-right:6px}
 .acard label{display:block;margin-top:8px}
+.acard label input[type=text],.acard label input:not([type]){display:block;width:100%;margin-top:4px}
+.acard label.ck{display:inline-flex;gap:6px;align-items:center}
