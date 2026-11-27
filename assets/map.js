@@ -2,6 +2,12 @@
    window.SibMap.draw(el, {geo, routes, places, works, bookgeo, areas, focusWork, focusGroup, showManual, showPlaces, showAreas, filter, onWork, onPlace})
    Линией рисуются только маршруты, восстановленные по тексту или проверенные (method 'manual'); черновики — пронумерованными точками. */
 window.SibMap = (() => {
+  // английская версия: подсказки собираются сразу на нужном языке (словарь I18N — только для названий)
+  const EN = !!(window.I18N && I18N.en);
+  const T = (ru, en) => (EN ? en : ru);
+  const nm = (s) => (EN && window.I18N.tr ? (I18N.tr(String(s ?? '')) || s) : s);
+  const books = (n) => EN ? `${n} book${n === 1 ? '' : 's'}` : `${n} ${n % 10 === 1 && n % 100 !== 11 ? 'книге' : 'книгах'}`;
+  const ment = (n) => EN ? `${n} mention${n === 1 ? '' : 's'}` : `${n} ${n % 10 === 1 && n % 100 !== 11 ? 'упоминание' : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 'упоминания' : 'упоминаний'}`;
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   function ellipse(lon, lat, rx, ry) {
     const pts = []; for (let a = 0; a <= 360; a += 10) { const t = a * Math.PI / 180; pts.push([lon + rx * Math.cos(t), lat + ry * Math.sin(t)]); }
@@ -15,7 +21,7 @@ window.SibMap = (() => {
     const inBox = (s) => s[2] >= 40 && s[2] <= 195 && s[3] >= 34 && s[3] <= 79;
     const proj = d3.geoConicEqualArea().parallels([50, 68]).rotate([-105, 0]).fitExtent([[8, 8], [W - 8, H - 8]], o.extent || frame);
     const path = d3.geoPath(proj);
-    const svg = d3.select(el).append('svg').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', o.label || 'Карта Сибири');
+    const svg = d3.select(el).append('svg').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', o.label || T('Карта Сибири', 'Map of Siberia'));
     const g = svg.append('g');
     const tip = document.createElement('div'); tip.className = 'tip'; tip.hidden = true; el.appendChild(tip);
     const show = (ev, html) => { tip.innerHTML = html; tip.hidden = false; const r = el.getBoundingClientRect(); let x = ev.clientX - r.left + 14, y = ev.clientY - r.top + 14; if (x + tip.offsetWidth > W) x = W - tip.offsetWidth - 6; if (y + tip.offsetHeight > H) y = ev.clientY - r.top - tip.offsetHeight - 10; tip.style.left = x + 'px'; tip.style.top = y + 'px'; };
@@ -30,7 +36,7 @@ window.SibMap = (() => {
       const A = [];
       o.areas.forEach((gr) => (gr.areas || []).forEach((a) => A.push({gr, geom: ellipse(...a)})));
       g.append('g').selectAll('path').data(A).join('path').attr('class', (d) => 'area' + (o.focusGroup === d.gr.id ? ' hi' : '')).attr('d', (d) => path(d.geom))
-        .on('mousemove', (ev, d) => show(ev, `<b>${esc(d.gr.name)}</b>${esc(d.gr.name_en)}<br>ареал схематично, около 1900 г.<br>${d.gr.mentions} упоминаний в ${d.gr.works} книгах`))
+        .on('mousemove', (ev, d) => show(ev, `<b>${esc(EN ? d.gr.name_en : d.gr.name)}</b>${EN ? '' : esc(d.gr.name_en) + '<br>'}${T('ареал схематично, около 1900 г.', 'approximate area, c. 1900')}<br>${ment(d.gr.mentions)} ${T('в', 'in')} ${books(d.gr.works)}`))
         .on('mouseleave', hide).on('click', (ev, d) => o.onGroup && o.onGroup(d.gr.id));
     }
     const workById = Object.fromEntries((o.works || []).map((w) => [w.id, w]));
@@ -50,7 +56,7 @@ window.SibMap = (() => {
         .attr('class', 'route' + (o.animate ? ' draw' : '')).attr('stroke', (r) => col(r.work)).attr('stroke-width', o.routeWidth || 1.8).attr('d', line)
         .attr('pathLength', o.animate ? 1 : null).style('animation-delay', (r, i, a) => o.animate ? (300 + i * Math.min(140, 2400 / Math.max(1, a.length))) + 'ms' : null)
         .style('stroke-opacity', o.focusWork ? .14 : many ? .38 : null).attr('stroke-width', many ? 1.25 : (o.routeWidth || 1.8))
-        .on('mousemove', (ev, r) => { const w = workById[r.work] || {}; show(ev, `<b>${esc(w.label || r.work)}</b>${esc(w.author || '')}<br>поездка ${w.j0 || '?'}${w.j1 && w.j1 !== w.j0 ? '–' + w.j1 : ''} · ${esc(w.stay_ru || '')}<br>${r.status === 'verified' ? 'маршрут подтверждён экспертом' : r.status === 'checked' ? 'маршрут проверен по тексту' : 'маршрут восстановлен по тексту'}`); })
+        .on('mousemove', (ev, r) => { const w = workById[r.work] || {}; show(ev, `<b>${esc(w.label || r.work)}</b>${esc(w.author || '')}<br>${T('поездка', 'journey')} ${w.j0 || '?'}${w.j1 && w.j1 !== w.j0 ? '–' + w.j1 : ''} · ${esc(nm(w.stay_ru || ''))}<br>${r.status === 'verified' ? T('маршрут подтверждён экспертом', 'route confirmed by an expert') : r.status === 'checked' ? T('маршрут проверен по тексту', 'route checked against the text') : T('маршрут восстановлен по тексту', 'route reconstructed from the text')}`); })
         .on('mouseleave', hide).on('click', (ev, r) => o.onWork && o.onWork(r.work));
       const F0 = o.routes.find((r) => r.work === o.focusWork);
       // География выбранной книги: все упомянутые места, круг — число упоминаний. Это не путь.
@@ -59,21 +65,21 @@ window.SibMap = (() => {
         const r = d3.scaleSqrt().domain([0, d3.max(BG, (d) => d.n) || 1]).range([2, 16]);
         g.append('g').selectAll('circle').data(BG).join('circle').attr('class', 'bgeo').attr('r', (d) => r(d.n))
           .attr('transform', (d) => `translate(${proj([d.p.lon, d.p.lat])})`)
-          .on('mousemove', (ev, d) => show(ev, `<b>${esc(d.p.name)}</b>${d.n} упоминаний в этой книге`)).on('mouseleave', hide).on('click', (ev, d) => o.onPlace && o.onPlace(d.p));
+          .on('mousemove', (ev, d) => show(ev, `<b>${esc(nm(d.p.name))}</b>${ment(d.n)} ${T('в этой книге', 'in this book')}`)).on('mouseleave', hide).on('click', (ev, d) => o.onPlace && o.onPlace(d.p));
       }
       if (F0 && F0.method === 'manual') {
         const F = {...F0, all: F0.stops, stops: F0.stops.filter((s) => s[2] != null && inBox(s))};
         g.append('path').attr('class', 'route hi').attr('stroke', col(F.work)).attr('d', line(F));
         g.append('g').selectAll('circle').data(F.stops).join('circle').attr('r', 3.6).attr('fill', col(F.work)).attr('stroke', 'var(--bg)')
           .attr('transform', (s) => `translate(${proj([s[2], s[3]])})`)
-          .on('mousemove', (ev, s) => show(ev, `<b>${esc(s[1])}</b>${s[5] === 'not_found_in_text' ? 'в тексте не найдено' : 'абзац ' + esc(String(+((s[4] || '').split('_p')[1] || 0)))}${(s[8] === 'estimate' || String(s[8]).endsWith('_ctx')) ? '<br>координаты приблизительные' : ''}${s[7] ? '<br>«' + esc(s[7]) + '»' : ''}`)).on('mouseleave', hide);
+          .on('mousemove', (ev, s) => show(ev, `<b>${esc(nm(s[1]))}</b>${s[5] === 'not_found_in_text' ? T('в тексте не найдено', 'not found in the text') : T('абзац ', 'paragraph ') + esc(String(+((s[4] || '').split('_p')[1] || 0)))}${(s[8] === 'estimate' || String(s[8]).endsWith('_ctx')) ? '<br>' + T('координаты приблизительные', 'approximate coordinates') : ''}${s[7] ? '<br>«' + esc(s[7]) + '»' : ''}`)).on('mouseleave', hide);
         g.append('g').selectAll('text').data(F.stops.filter((s, i) => i % Math.max(1, Math.round(F.stops.length / 14)) === 0)).join('text').attr('class', 'mlabel')
           .attr('transform', (s) => { const p = proj([s[2], s[3]]); return `translate(${p[0] + 6},${p[1] - 5})`; }).text((s) => s[1]);
       } else if (F0 && F0.method === 'draft') {
         // Черновик: пронумерованные остановки без соединяющей линии — порядок предполагаемый.
         const F = F0.stops.filter((s) => s[2] != null && inBox(s));
         const gg = g.append('g').selectAll('g').data(F).join('g').attr('class', 'dstop').attr('transform', (s) => `translate(${proj([s[2], s[3]])})`)
-          .on('mousemove', (ev, s) => show(ev, `<b>${esc(s[1])}</b>черновик: посещение по тексту ${s[5] === 'higher' ? '(несколько свидетельств)' : '(одно свидетельство)'}`)).on('mouseleave', hide);
+          .on('mousemove', (ev, s) => show(ev, `<b>${esc(nm(s[1]))}</b>${T('черновик: посещение по тексту', 'draft: visit inferred from the text')} ${s[5] === 'higher' ? T('(несколько свидетельств)', '(several mentions)') : T('(одно свидетельство)', '(single mention)')}`)).on('mouseleave', hide);
         gg.append('circle').attr('r', 7).attr('class', (s) => s[5] === 'higher' ? 'hi' : '');
         gg.append('text').attr('dy', 3.2).attr('text-anchor', 'middle').text((s, i) => i + 1);
       }
@@ -84,7 +90,7 @@ window.SibMap = (() => {
       const mx = d3.max(P, val) || 1; const r = d3.scaleSqrt().domain([0, mx]).range([1.5, o.placeMax || 14]);
       g.append('g').selectAll('circle').data(P.filter((p) => val(p) > 0)).join('circle').attr('class', 'pcirc').attr('r', (p) => r(val(p)))
         .attr('transform', (p) => `translate(${proj([p.lon, p.lat])})`)
-        .on('mousemove', (ev, p) => show(ev, `<b>${esc(p.name)}</b>${p.mentions} упоминаний в ${p.works} книгах` + (p.groups.length ? '<br>рядом описаны: ' + p.groups.slice(0, 4).map((x) => esc(x[0]) + ' (' + x[1] + ')').join(', ') : '')))
+        .on('mousemove', (ev, p) => show(ev, `<b>${esc(nm(p.name))}</b>${ment(p.mentions)} ${T('в', 'in')} ${books(p.works)}` + (p.groups.length ? '<br>' + T('рядом описаны: ', 'peoples described nearby: ') + p.groups.slice(0, 4).map((x) => esc(nm(x[0])) + ' (' + x[1] + ')').join(', ') : '')))
         .on('mouseleave', hide).on('click', (ev, p) => o.onPlace && o.onPlace(p));
       if (o.labels !== false) {
         const top = P.slice().sort((a, b) => b.mentions - a.mentions).slice(0, o.nLabels || 16);

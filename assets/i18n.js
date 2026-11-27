@@ -59,9 +59,11 @@ window.I18N = (() => {
     const v = t.nodeValue; if (!v || !CYR.test(v)) return;
     const r = tr(v); if (r === null) return;
     const lead = v.match(/^\s*/)[0], tail = v.match(/\s*$/)[0];
-    t.nodeValue = lead + r + tail;
+    t.nodeValue = lead + quo(r) + tail;
   }
-  function attrs(el) { for (const a of ATTR) { const v = el.getAttribute?.(a); if (v && CYR.test(v)) { const r = tr(v); if (r !== null) el.setAttribute(a, r); } } }
+  // русские кавычки-ёлочки в английском тексте → “ ” (ключи словаря хранятся без краевых знаков, поэтому возможное удвоение схлопывается)
+  const quo = (s) => s.replace(/«/g, '“').replace(/»/g, '”').replace(/““/g, '“').replace(/””/g, '”');
+  function attrs(el) { for (const a of ATTR) { const v = el.getAttribute?.(a); if (v && CYR.test(v)) { const r = tr(v); if (r !== null) el.setAttribute(a, quo(r)); } } }
   function start() {
     if (lang !== 'en') return;
     walk(document.body); if (document.title && CYR.test(document.title)) { const r = tr(document.title); if (r) document.title = r; }
@@ -86,4 +88,4 @@ window.I18N = (() => {
   document.addEventListener('DOMContentLoaded', () => { toggle(); start(); });
   return {lang, tr, walk, miss, en: lang === 'en', locale: lang === 'en' ? 'en-GB' : 'ru-RU'};
 })();
-if (window.I18N.en) document.write('<script src="assets/i18n-en.js?v=45"><\/script>');
+if (window.I18N.en) document.write('<script src="assets/i18n-en.js?v=46"><\/script>');

@@ -16,7 +16,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2313263a'/%3E%3Cpath d='M5 22 L11 17 L15 19 L20 11 L27 9' fill='none' stroke='%23f0607a' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preload" href="assets/fonts/onest-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/literata-latin-standard-italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=45">
+<link rel="stylesheet" href="assets/site.css?v=46">
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -40,17 +40,36 @@
   </nav>
 </div></header>
 <main id="view"><div class="wrap loading">Загрузка…</div></main>
-<footer><div class="wrap">
-  <a class="brand" href="#home">Iter Sibiricum</a>
-  <div>
-    <p>Ресурс подготовлен при поддержке гранта Российского научного фонда № 25-28-20397, <a href="https://rscf.ru/project/25-28-20397/">https://rscf.ru/project/25-28-20397/</a>, и Правительства Республики Алтай.</p>
-    <p>Коллектив: П. В. Алексеев (руководитель, ГАГУ), С. С. Жданов (СГУГиТ), В. С. Шарыпова (НИ ТГУ), С. П. Алексеева (ГАГУ); приглашённый зарубежный исследователь — Д. Н. Дюсекенев (Alikhan Bokeikhan University).</p>
-    <p>Тексты источников — общественное достояние. Каталог и разметка — CC BY 4.0, атлас — CC BY-NC 4.0, код — MIT. <a href="https://github.com/pavelaleks/iter-sibiricum">Репозиторий на GitHub</a>, <a href="https://zenodo.org/communities/iter-sibiricum">данные на Zenodo</a>. <a href="#scope">Границы, категории и глоссарий</a>. <a href="admin.html">Рабочее место команды</a></p>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-about">
+      <a class="brand" href="#home">Iter Sibiricum</a>
+      <p class="ru-only" data-noi18n>Европейские травелоги о Сибири и её народах, 1800–1930: тексты, маршруты, карточки народов и данные для исследований.</p><p class="en-only" data-noi18n>European travel writing on Siberia and its peoples, 1800–1930: texts, routes, profiles of peoples and research data.</p>
+      <p class="foot-mail"><span class="ru-only" data-noi18n>Руководитель проекта — Павел Алексеев</span><span class="en-only" data-noi18n>Project leader: Pavel Alekseev</span><br><a href="mailto:pavel.alekseev.gasu@gmail.com">pavel.alekseev.gasu@gmail.com</a><br><a href="https://palekseev.ru">palekseev.ru</a></p>
+    </div>
+    <nav class="foot-col" aria-label="Разделы">
+      <h2>Разделы</h2>
+      <a href="#atlas">Атлас</a><a href="#peoples">Народы</a><a href="#library">Библиотека</a><a href="#illustrations">Иллюстрации</a><a href="#links">Связи</a><a href="#analytics">Аналитика</a>
+    </nav>
+    <nav class="foot-col" aria-label="О ресурсе">
+      <h2>О ресурсе</h2>
+      <a href="#publications">Публикации</a><a href="#method">Метод и данные</a><a href="#scope">Границы, категории и глоссарий</a><a href="https://rscf.ru/project/25-28-20397/">Проект на сайте РНФ</a><a href="admin.html">Рабочее место команды</a>
+    </nav>
+    <div class="foot-col">
+      <h2>Данные и код</h2>
+      <a href="https://github.com/pavelaleks/iter-sibiricum">Репозиторий на GitHub</a><a href="https://zenodo.org/communities/iter-sibiricum">Наборы данных на Zenodo</a><a href="data/export/iter-sibiricum-places.lpf.jsonld">Места для World Historical Gazetteer</a><a href="data/export/iter-sibiricum-routes.geojson">Маршруты (GeoJSON)</a><a href="https://github.com/pavelaleks/iter-sibiricum/blob/main/CITATION.cff">Как цитировать</a>
+    </div>
   </div>
-</div></footer>
-<script src="assets/i18n.js?v=45"></script>
+  <div class="wrap foot-legal">
+    <div class="ru-only" data-noi18n><p>Ресурс подготовлен при поддержке гранта Российского научного фонда <span class="nw">№ 25-28-20397</span> и Правительства Республики Алтай. Коллектив: П. В. Алексеев (руководитель, ГАГУ), С. С. Жданов (СГУГиТ), В. С. Шарыпова (НИ ТГУ), С. П. Алексеева (ГАГУ); приглашённый зарубежный исследователь — Д. Н. Дюсекенев (Alikhan Bokeikhan University).</p>
+    <p>Тексты источников — общественное достояние. Каталог и разметка — <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, атлас — <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>, код — <a href="https://github.com/pavelaleks/iter-sibiricum/blob/main/LICENSE">MIT</a>. © 2025–2026, коллектив проекта.</p></div>
+    <div class="en-only" data-noi18n><p>Prepared with the support of the Russian Science Foundation, <a href="https://rscf.ru/project/25-28-20397/">grant <span class="nw">No. 25-28-20397</span></a>, and the Government of the Altai Republic. Team: P. V. Alekseev (principal investigator, Gorno-Altaisk State University), S. S. Zhdanov (Siberian State University of Geosystems and Technologies), V. S. Sharypova (Tomsk State University), S. P. Alekseeva (Gorno-Altaisk State University); invited international researcher: D. N. Dyussekenev (Alikhan Bokeikhan University).</p>
+    <p>Source texts are in the public domain. Catalogue and annotation: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; atlas: <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>; code: <a href="https://github.com/pavelaleks/iter-sibiricum/blob/main/LICENSE">MIT</a>. © 2025–2026, the project team.</p></div>
+  </div>
+</footer>
+<script src="assets/i18n.js?v=46"></script>
 <script src="assets/vendor/d3.min.js"></script>
-<script src="assets/map.js?v=45"></script>
-<script src="assets/app.js?v=45"></script>
+<script src="assets/map.js?v=46"></script>
+<script src="assets/app.js?v=46"></script>
 </body>
 </html>
