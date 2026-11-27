@@ -128,8 +128,8 @@ async function home() {
   const top = ['khanty', 'sakha', 'buryat', 'evenki_even', 'chukchi', 'kazakh_kirghiz'].map((id) => groups.find((g) => g.id === id)).filter(Boolean);
   V.innerHTML = `
   <section class="wrap intro">
-    ${P.grant ? `<p class="ack">Ресурс подготовлен при поддержке гранта Российского научного фонда № ${esc(P.grant)}, <a href="${esc(P.grant_url)}">${esc(P.grant_url)}</a>, и Правительства Республики Алтай.</p>` : ''}
     <div class="intro-grid"><div class="intro-text">
+    ${P.grant ? `<p class="ack">Ресурс подготовлен при поддержке гранта Российского научного фонда <span style="white-space:nowrap">№ ${esc(P.grant)}</span>, <a href="${esc(P.grant_url)}">${esc(P.grant_url)}</a>, и Правительства Республики Алтай.</p>` : ''}
     <h1 class="name">Iter Sibiricum<span class="ast" aria-hidden="true">*</span></h1>
     <p class="purpose">Цифровой ресурс о том, как европейские путешественники 1800–1930 годов описывали народы Сибири и отношения между ними: ${pl(works.length, ['книга', 'книги', 'книг'])} на ${langs} языках с полными текстами, маршруты на карте, карточки народов и проверяемые данные для исследований.</p>
     ${EN ? `<p class="name-note" data-noi18n><span class="ast" aria-hidden="true">*</span> <i>Iter Sibiricum</i> means “Siberian journey”: eighteenth-century scholars used the Latin word <i>iter</i> both for a journey and for its written account (cf. Linnaeus’s <i>Iter Lapponicum</i>, 1732).</p>` : `<p class="name-note"><span class="ast" aria-hidden="true">*</span> <i>Iter Sibiricum</i> — «сибирский путь»: латинским словом <i>iter</i> учёные XVIII века называли и путешествие, и его отчёт (<i>Iter Lapponicum</i> Линнея, 1732).</p>`}
