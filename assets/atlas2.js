@@ -64,8 +64,8 @@ window.Atlas2 = (() => {
     const my = ++tok; const alive = () => my === tok && V.isConnected;
     const {get, getRoutes, toH, PER, NAT} = ctx;
     V.innerHTML = `<div class="wrap loading">${T('Загрузка карты…', 'Loading the map…')}</div>`;
-    const [works, routes, places, groups, bookgeo] = await Promise.all([get('works.json'), getRoutes(), get('places.json'), get('groups.json'), get('bookgeo.json'),
-      loadCSS('assets/vendor/maplibre-gl.css?v=58'), loadJS('assets/vendor/maplibre-gl.js?v=58'), loadJS('assets/vendor/pmtiles.js?v=58')]);
+    const [works, routes, places, groups, bookgeo, AREAS] = await Promise.all([get('works.json'), getRoutes(), get('places.json'), get('groups.json'), get('bookgeo.json'), get('areas1914.geojson').catch(() => null),
+      loadCSS('assets/vendor/maplibre-gl.css?v=59'), loadJS('assets/vendor/maplibre-gl.js?v=59'), loadJS('assets/vendor/pmtiles.js?v=59')]);
     if (!alive()) return () => {};
     const W = Object.fromEntries(works.map((w) => [w.id, w])), RT = Object.fromEntries(routes.map((r) => [r.work, r]));
     const PL = Object.fromEntries(places.map((p) => [p.id, p]));
@@ -75,6 +75,8 @@ window.Atlas2 = (() => {
     const per = (w) => PERK.indexOf((W[w] || {}).period);
     const j0 = (w) => w.j0 || w.year, j1 = (w) => w.j1 || w.j0 || w.year;
     const Y0 = Math.min(...works.map(j0).filter(Boolean)), Y1 = Math.max(...works.map(j1).filter(Boolean));
+    // ареалы по этнографической карте 1914 г.: группа → [{term, geometry}]
+    const AG = {}; ((AREAS && AREAS.features) || []).forEach((f) => f.properties.groups.forEach((g) => (AG[g] ||= []).push(f)));
     const NATS = [...new Set(works.map((w) => w.nat))], STAYS = [...new Set(works.map((w) => w.stay))];
 
     // ---------- состояние; всё, что влияет на вид, лежит в адресе; испорченные значения отбрасываются ----------
@@ -82,7 +84,7 @@ window.Atlas2 = (() => {
     const yv = (x, d) => { const n = parseInt(x, 10); return isFinite(n) ? Math.max(Y0, Math.min(Y1, n)) : d; };
     const st = {work: W[q.get('work')] ? q.get('work') : '', group: GR[q.get('g')] ? q.get('g') : '', period: PERK.includes(q.get('per')) ? q.get('per') : '',
       nat: NATS.includes(q.get('nat')) ? q.get('nat') : '', stay: STAYS.includes(q.get('stay')) ? q.get('stay') : '',
-      y0: yv(q.get('y0'), Y0), y1: yv(q.get('y1'), Y1), lay: q.has('l') ? (q.get('l') || '').replace(/[^rpad]/g, '') : 'rpa', globe: q.get('p') !== 'flat'};
+      y0: yv(q.get('y0'), Y0), y1: yv(q.get('y1'), Y1), lay: q.has('l') ? (q.get('l') || '').replace(/[^rpad]/g, '') : 'rpa', globe: q.get('p') !== 'flat', old: ['1822', '1914'].includes(q.get('old')) ? q.get('old') : '', op: Math.max(20, Math.min(100, +q.get('op') || 85))};
     if (st.y0 > st.y1) [st.y0, st.y1] = [st.y1, st.y0];
     if (st.work && st.group) st.group = '';
     let v0 = (q.get('v') || '').split(',').map(Number);
@@ -98,6 +100,7 @@ window.Atlas2 = (() => {
         <label>Книга <select id="fWork"><option value="">все</option>${opt(works.slice().sort((a, b) => a.year - b.year).map((w) => [w.id, w.label + (RT[w.id] ? '' : ' (' + T('без маршрута', 'no route') + ')')]), st.work)}</select></label>
         <label>Народ <select id="fGr"><option value="">—</option>${opt(ind.map((g) => [g.id, g.name]), st.group)}</select></label>
         <span class="a2-lay" role="group" aria-label="${T('Слои', 'Layers')}"><button data-l="r">маршруты</button>${nDraft ? '<button data-l="d">черновики</button>' : ''}<button data-l="p">места</button><button data-l="a">ареалы</button></span>
+        <span class="a2-old" role="group" aria-label="${T('Старая карта подложкой', 'Old map as a base layer')}"><span class="lbl">${T('Старая карта', 'Old map')}</span><button data-o="" aria-pressed="${!st.old}">${T('нет', 'none')}</button><button data-o="1822" aria-pressed="${st.old === '1822'}" title="Charte vom Asiatischen Russland, Weimar 1822">1822</button><button data-o="1914" aria-pressed="${st.old === '1914'}" title="${T('Этнографическая карта Азиатской России, 1914', 'Ethnographic map of Asiatic Russia, 1914')}">1914</button><input type="range" id="oOp" min="20" max="100" value="${st.op}" aria-label="${T('Непрозрачность старой карты', 'Old map opacity')}"${st.old ? '' : ' hidden'}></span>
       </div>
       <details class="a2-more"${st.period || st.nat || st.stay ? ' open' : ''}><summary>Фильтры: период, страна, тип поездки</summary><div class="ctl a2-ctl">
         <label>Период <select id="fPer"><option value="">все</option>${opt(Object.entries(PER), st.period)}</select></label>
@@ -133,7 +136,8 @@ window.Atlas2 = (() => {
         <div class="a2-lg">
           <div class="a2-per"><b>${T('Цвет линии — период поездки', 'Line colour: period of the journey')}</b>${PERK.map((k, i) => `<span><i style="background:var(${PERV[i]})"></i>${esc(EN && I18N.tr ? I18N.tr(PER[k]) || PER[k] : PER[k])}</span>`).join('')}</div>
           <div class="a2-unc"><b>${T('Круг — место; чем больше, тем чаще упоминается', 'Circle: a place; the larger, the more often mentioned')}</b><span><i class="u0"></i>${T('координаты точные', 'exact coordinates')}</span><span><i class="u1"></i>${T('приблизительные', 'approximate')}</span><span><i class="u2"></i>${T('центр реки, озера, области', 'centre of a river, lake or region')}</span></div>
-          <div class="a2-unc"><span><i class="gap"></i>${T('перегон без названных мест', 'stretch with no places named')}</span><span><i class="nf"></i>${T('остановка не найдена в тексте', 'stop not found in the text')}</span><span><i class="ar"></i>${T('ареал народа, схематично, около 1900 г.', 'area of a people, schematic, c. 1900')}</span></div>
+          <div class="a2-unc"><span><i class="gap"></i>${T('перегон без названных мест', 'stretch with no places named')}</span><span><i class="nf"></i>${T('остановка не найдена в тексте', 'stop not found in the text')}</span><span><i class="ar"></i>${T('ареал народа по этнографической карте 1914 г.', 'area of a people after the 1914 ethnographic map')}</span><span><i class="ar s"></i>${T('схематично', 'schematic')}</span></div>
+          <div class="a2-src a2-oldsrc"></div>
           <div class="a2-src">${T('Прямые соединяют остановки и не повторяют дорогу. Подложка: Natural Earth.', 'Straight lines join stops; they do not trace the road. Base map: Natural Earth.')}</div>
         </div>
       </div>
@@ -228,7 +232,11 @@ window.Atlas2 = (() => {
       F.sort((a, b) => b.properties.v - a.properties.v); return {type: 'FeatureCollection', features: F};
     }
     function areaPolys() {
-      const F = []; ind.forEach((g) => (g.areas || []).forEach((a) => F.push({type: 'Feature', properties: {g: g.id, hi: g.id === st.group ? 1 : 0}, geometry: ellipse(...a)})));
+      const F = [];
+      ind.forEach((g) => {
+        if (AG[g.id]) AG[g.id].forEach((f) => F.push({type: 'Feature', properties: {g: g.id, hi: g.id === st.group ? 1 : 0, sch: 0, term: f.properties.term}, geometry: f.geometry}));
+        else (g.areas || []).forEach((a) => F.push({type: 'Feature', properties: {g: g.id, hi: g.id === st.group ? 1 : 0, sch: 1}, geometry: ellipse(...a)}));
+      });
       return {type: 'FeatureCollection', features: F};
     }
 
@@ -251,7 +259,10 @@ window.Atlas2 = (() => {
       'rivers': {'line-color': C.river, 'line-opacity': .7, 'line-width': ['interpolate', ['linear'], ['zoom'], 2, ['max', .35, ['-', 1.5, ['*', .16, ['coalesce', ['get', 'scalerank'], 9]]]], 7, ['max', .8, ['-', 3.4, ['*', .3, ['coalesce', ['get', 'scalerank'], 9]]]]]},
       // ареал — штриховка: не путается с водой; граница расселения не была линией
       'area-fill': {'fill-pattern': 'hatch', 'fill-opacity': ['case', ['==', ['get', 'hi'], 1], 1, ['boolean', ['feature-state', 'hover'], false], .9, .45]},
-      'area-edge': {'line-color': C.mute, 'line-opacity': ['case', ['==', ['get', 'hi'], 1], .8, .3], 'line-width': ['case', ['==', ['get', 'hi'], 1], 1.4, .8], 'line-dasharray': [3, 2]},
+      'area-edge': {'line-color': C.mute, 'line-opacity': ['case', ['==', ['get', 'hi'], 1], .85, .38], 'line-width': ['case', ['==', ['get', 'hi'], 1], 1.5, .8]},
+      'area-edge-s': {'line-color': C.mute, 'line-opacity': ['case', ['==', ['get', 'hi'], 1], .8, .3], 'line-width': ['case', ['==', ['get', 'hi'], 1], 1.4, .8], 'line-dasharray': [3, 2]},
+      'old1822': {'raster-opacity': st.op / 100, 'raster-fade-duration': 0},
+      'old1914': {'raster-opacity': st.op / 100, 'raster-fade-duration': 0},
       'routes-case': {'line-color': C.paper, 'line-opacity': .9, 'line-width': ['interpolate', ['linear'], ['zoom'], 2, 6, 6, 8]},
       'routes-gap': {'line-color': RC(), 'line-dasharray': [1.5, 2.5], 'line-width': RW(.8), 'line-opacity': ROP(.5)},
       'routes': {'line-color': RC(), 'line-width': RW(1.3), 'line-opacity': ROP(.78)},
@@ -270,6 +281,7 @@ window.Atlas2 = (() => {
       map.addImage('hatch', hatch(), {pixelRatio: 1});
       map.addSource('base', {type: 'vector', url: 'pmtiles://' + base, attribution: 'Natural Earth'});
       map.addSource('grat', {type: 'geojson', data: graticule()});
+      ['1822', '1914'].forEach((y) => map.addSource('old' + y, {type: 'raster', url: 'pmtiles://' + new URL(`data/tiles/${y === '1822' ? 'weimar1822' : 'ethno1914'}.pmtiles`, location.href).href, tileSize: 256}));
       map.addSource('areas', {type: 'geojson', data: areaPolys(), generateId: true});
       map.addSource('routes', {type: 'geojson', data: routeLines(), promoteId: 'work'});
       map.addSource('stops', {type: 'geojson', data: stopPoints(), promoteId: 'k'});
@@ -279,7 +291,8 @@ window.Atlas2 = (() => {
         ['grat', 'line', 'grat'], ['land', 'fill', 'base', {'source-layer': 'land'}], ['coast', 'line', 'base', {'source-layer': 'land'}],
         ['lakes', 'fill', 'base', {'source-layer': 'lakes', filter: ['<=', ['coalesce', ['get', 'scalerank'], 9], ['+', 2, ['*', 1.2, ['zoom']]]]}],
         ['rivers', 'line', 'base', {'source-layer': 'rivers', filter: ['<=', ['coalesce', ['get', 'scalerank'], 9], ['+', 3.2, ['*', .9, ['zoom']]]], layout: {'line-cap': 'round', 'line-join': 'round'}}],
-        ['area-fill', 'fill', 'areas'], ['area-edge', 'line', 'areas'],
+        ['old1822', 'raster', 'old1822', {layout: {visibility: st.old === '1822' ? 'visible' : 'none'}}], ['old1914', 'raster', 'old1914', {layout: {visibility: st.old === '1914' ? 'visible' : 'none'}}],
+        ['area-fill', 'fill', 'areas'], ['area-edge', 'line', 'areas', {filter: ['==', ['get', 'sch'], 0]}], ['area-edge-s', 'line', 'areas', {filter: ['==', ['get', 'sch'], 1]}],
         ['places-unc', 'circle', 'places', {filter: ['>=', ['get', 'q'], 1]}],
         ['routes-case', 'line', 'routes', {filter: ['all', ['==', ['get', 'focus'], 1], ['==', ['get', 'gap'], 0]], layout: {'line-cap': 'round', 'line-join': 'round'}}],
         ['routes-gap', 'line', 'routes', {filter: ['==', ['get', 'gap'], 1]}],
@@ -299,7 +312,7 @@ window.Atlas2 = (() => {
     }
     function vis() {
       const s = (ids, v) => ids.forEach((id) => map.getLayer(id) && map.setLayoutProperty(id, 'visibility', v ? 'visible' : 'none'));
-      s(['routes', 'routes-gap', 'routes-case'], on('r')); s(['area-fill', 'area-edge'], on('a')); s(['places', 'places-unc'], on('p') || !!st.work);
+      s(['routes', 'routes-gap', 'routes-case'], on('r')); s(['area-fill', 'area-edge', 'area-edge-s'], on('a')); s(['old1822'], st.old === '1822'); s(['old1914'], st.old === '1914'); s(['places', 'places-unc'], on('p') || !!st.work);
     }
 
     // ---------- подписи ----------
@@ -350,7 +363,7 @@ window.Atlas2 = (() => {
       const vr = visRoutes();
       if (st.group) {
         const g = GR[st.group], GW = gWorks(), rows = Object.entries(GW).filter(([w]) => W[w] && filt(W[w])).sort((a, b) => b[1] - a[1]);
-        h += `<h3><a href="#people-${toH(g.id)}">${esc(EN ? g.name_en : g.name)}</a></h3><p class="small mute">${T(`Описывают ${rows.length} ${plural(rows.length, 'книга', 'книги', 'книг')} из выборки; число — абзацы с упоминанием. Маршруты этих книг выделены цветом. Круги — места, названные в одних абзацах с этим народом (по всему корпусу). Штриховка — схематичный ареал около 1900 г.`, `${rows.length} book${rows.length === 1 ? '' : 's'} in the selection describe this people; the number is paragraphs that mention them. Routes of these books are coloured. Circles are places named in the same paragraphs as this people (whole corpus). Hatching is a schematic area, c. 1900.`)}</p>
+        h += `<h3><a href="#people-${toH(g.id)}">${esc(EN ? g.name_en : g.name)}</a></h3><p class="small mute">${T(`Описывают ${rows.length} ${plural(rows.length, 'книга', 'книги', 'книг')} из выборки; число — абзацы с упоминанием. Маршруты этих книг выделены цветом. Круги — места, названные в одних абзацах с этим народом (по всему корпусу). ${AG[st.group] ? `Штриховка — ареал по «Этнографической карте Азиатской России» (1914), где народ назван «${AG[st.group][0].properties.term}».` : 'Штриховка — схематичный ареал около 1900 г.'}`, `${rows.length} book${rows.length === 1 ? '' : 's'} in the selection describe this people; the number is paragraphs that mention them. Routes of these books are coloured. Circles are places named in the same paragraphs as this people (whole corpus). ${AG[st.group] ? `Hatching is the area on the Ethnographic Map of Asiatic Russia (1914), where the people is called “${AG[st.group][0].properties.term}”.` : 'Hatching is a schematic area, c. 1900.'}`)}</p>
           <ul class="a2-list">${rows.slice(0, 50).map(([w, n]) => `<li><button data-work="${esc(w)}">${RT[w] ? `<i style="background:var(${PERV[per(w)]})"></i>` : '<i class="none"></i>'}<span>${esc(W[w].label)}</span><span class="mute">${n}</span></button></li>`).join('')}</ul>
           <p class="small"><a href="#" data-clear="group">${T('← без народа', '← no people selected')}</a></p>`;
         body.innerHTML = h; return;
@@ -402,7 +415,7 @@ window.Atlas2 = (() => {
         if (dead || !stage.isConnected || !/^#atlas(\?|$)/.test(location.hash)) return;
         const c = map.getCenter(), p = new URLSearchParams();
         if (st.work) p.set('work', st.work); if (st.group) p.set('g', st.group); if (st.period) p.set('per', st.period); if (st.nat) p.set('nat', st.nat); if (st.stay) p.set('stay', st.stay);
-        if (st.y0 !== Y0) p.set('y0', st.y0); if (st.y1 !== Y1) p.set('y1', st.y1); if (st.lay !== 'rpa') p.set('l', st.lay); if (!st.globe) p.set('p', 'flat');
+        if (st.y0 !== Y0) p.set('y0', st.y0); if (st.y1 !== Y1) p.set('y1', st.y1); if (st.lay !== 'rpa') p.set('l', st.lay); if (!st.globe) p.set('p', 'flat'); if (st.old) { p.set('old', st.old); if (st.op !== 85) p.set('op', st.op); }
         p.set('v', [wrap(c.lng).toFixed(2), c.lat.toFixed(2), map.getZoom().toFixed(2)].join(','));
         history.replaceState(null, '', '#atlas?' + p.toString().replace(/%2C/g, ','));
       }, 300);
@@ -456,7 +469,7 @@ window.Atlas2 = (() => {
       else if (id === 'places') show(e.point, placeTip(f));
       else if (id === 'stops') show(e.point, stopTip(RT[st.work].stops[f.properties.k], f.properties.q));
       else if (id === 'dstops') show(e.point, `<b>${esc(nm(f.properties.name))}</b>${esc((W[f.properties.work || st.work] || {}).label || '')}<br><span class="mute">${qTxt(3)}</span>`);
-      else if (id === 'area-fill') { const g = GR[f.properties.g]; show(e.point, `<b>${esc(EN ? g.name_en : g.name)}</b>${EN ? '' : esc(g.name_en) + '<br>'}${T('схематичный ареал около 1900 г.', 'schematic area, c. 1900')}<br>${ment(g.mentions)} ${T('в', 'in')} ${books(g.works)}`); }
+      else if (id === 'area-fill') { const g = GR[f.properties.g]; show(e.point, `<b>${esc(EN ? g.name_en : g.name)}</b>${f.properties.sch ? T('схематичный ареал около 1900 г.', 'schematic area, c. 1900') : T(`по этнографической карте 1914 г.: «${esc(f.properties.term)}»`, `after the 1914 ethnographic map: “${esc(f.properties.term)}”`)}<br>${ment(g.mentions)} ${T('в', 'in')} ${books(g.works)}`); }
     }
     function onClick(e) {
       const f = pick(e.point); if (!f) return;
@@ -540,6 +553,12 @@ window.Atlas2 = (() => {
     const yr = () => { let a = +y0.value, b = +y1.value; if (a > b) [a, b] = [b, a]; st.y0 = a; st.y1 = b; refresh(); };
     y0.addEventListener('input', yr); y1.addEventListener('input', yr);
     V.querySelectorAll('.a2-lay button').forEach((b) => b.addEventListener('click', () => { const k = b.dataset.l; st.lay = on(k) ? st.lay.replace(k, '') : st.lay + k; refresh(); }));
+    const OLDSRC = {'1822': T('Подложка: Charte vom Asiatischen Russland. Weimar, 1822 (РНБ / World Digital Library). Привязка приблизительная, ±50–100 км.', 'Base layer: Charte vom Asiatischen Russland. Weimar, 1822 (National Library of Russia / World Digital Library). Approximate fit, ±50–100 km.'),
+      '1914': T('Подложка: Этнографическая карта Азиатской России. Атлас Азиатской России. СПб., 1914 (скан: Harvard). Привязка ±20–30 км.', 'Base layer: Ethnographic Map of Asiatic Russia. Atlas of Asiatic Russia, St Petersburg, 1914 (scan: Harvard). Fit ±20–30 km.')};
+    const oldUI = () => { V.querySelectorAll('.a2-old button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.o === st.old))); V.querySelector('#oOp').hidden = !st.old; V.querySelector('.a2-oldsrc').textContent = st.old ? OLDSRC[st.old] : ''; };
+    V.querySelectorAll('.a2-old button').forEach((b) => b.addEventListener('click', () => { st.old = b.dataset.o; oldUI(); if (map.getLayer('old1914')) vis(); url(); map.setPadding(pad()); }));
+    V.querySelector('#oOp').addEventListener('input', (e) => { st.op = +e.target.value; ['old1822', 'old1914'].forEach((id) => map.getLayer(id) && map.setPaintProperty(id, 'raster-opacity', st.op / 100)); url(); });
+    oldUI();
     V.querySelector('#bIn').onclick = () => map.zoomIn(); V.querySelector('#bOut').onclick = () => map.zoomOut();
     V.querySelector('#bHome').onclick = () => home(800);
     V.querySelector('#bMore').onclick = (e) => { const o = V.querySelector('.a2-tools').classList.toggle('more'); e.currentTarget.setAttribute('aria-expanded', String(o)); };
@@ -593,7 +612,7 @@ window.Atlas2 = (() => {
   // ---------- карта рядом с текстом книги: путь «доезжает» до абзаца, который читается сейчас ----------
   // reader(el, {work, route, PL, bookgeo, period, onPlace(id), onStop(i)}) → {setPara(n, ids), hover(id), destroy}
   async function reader(el, o) {
-    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=58'), loadJS('assets/vendor/maplibre-gl.js?v=58'), loadJS('assets/vendor/pmtiles.js?v=58')]);
+    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=59'), loadJS('assets/vendor/maplibre-gl.js?v=59'), loadJS('assets/vendor/pmtiles.js?v=59')]);
     if (!hasGL()) { el.innerHTML = `<p class="small mute" style="padding:14px">${T('Браузер не поддерживает WebGL, карта недоступна.', 'This browser does not support WebGL; the map is unavailable.')}</p>`; return {setPara() {}, hover() {}, destroy() {}}; }
     if (!window.__a2proto) { window.__a2proto = new pmtiles.Protocol(); maplibregl.addProtocol('pmtiles', window.__a2proto.tile); }
     let C = palette(el), dead = false, raf = 0, follow = true, userAt = 0, curN = -1, curIds = [], hovId = null;

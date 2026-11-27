@@ -34,9 +34,13 @@ window.SibMap = (() => {
     const k0 = {k: 1};
     if (o.showAreas !== false && o.areas) {
       const A = [];
-      o.areas.forEach((gr) => (gr.areas || []).forEach((a) => A.push({gr, geom: ellipse(...a)})));
+      // ареалы по этнографической карте 1914 г. (o.areaGeo), для остальных групп — схематичные эллипсы.
+      // d3-geo ждёт внешние кольца по часовой стрелке, GeoJSON (RFC 7946) хранит их против — кольца разворачиваются.
+      const AGm = {}; ((o.areaGeo && o.areaGeo.features) || []).forEach((f) => f.properties.groups.forEach((g) => (AGm[g] ||= []).push(f)));
+      const rw = (g) => ({type: g.type, coordinates: g.type === 'Polygon' ? g.coordinates.map((r) => r.slice().reverse()) : g.coordinates.map((p) => p.map((r) => r.slice().reverse()))});
+      o.areas.forEach((gr) => AGm[gr.id] ? AGm[gr.id].forEach((f) => A.push({gr, geom: rw(f.geometry), term: f.properties.term})) : (gr.areas || []).forEach((a) => A.push({gr, geom: ellipse(...a)})));
       g.append('g').selectAll('path').data(A).join('path').attr('class', (d) => 'area' + (o.focusGroup === d.gr.id ? ' hi' : '')).attr('d', (d) => path(d.geom))
-        .on('mousemove', (ev, d) => show(ev, `<b>${esc(EN ? d.gr.name_en : d.gr.name)}</b>${EN ? '' : esc(d.gr.name_en) + '<br>'}${T('схематичный ареал около 1900 г.', 'schematic area, c. 1900')}<br>${ment(d.gr.mentions)} ${T('в', 'in')} ${books(d.gr.works)}`))
+        .on('mousemove', (ev, d) => show(ev, `<b>${esc(EN ? d.gr.name_en : d.gr.name)}</b>${EN ? '' : esc(d.gr.name_en) + '<br>'}${d.term ? T(`по этнографической карте 1914 г.: «${esc(d.term)}»`, `after the 1914 ethnographic map: “${esc(d.term)}”`) : T('схематичный ареал около 1900 г.', 'schematic area, c. 1900')}<br>${ment(d.gr.mentions)} ${T('в', 'in')} ${books(d.gr.works)}`))
         .on('mouseleave', hide).on('click', (ev, d) => o.onGroup && o.onGroup(d.gr.id));
     }
     const workById = Object.fromEntries((o.works || []).map((w) => [w.id, w]));

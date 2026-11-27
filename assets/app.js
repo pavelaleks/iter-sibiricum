@@ -20,6 +20,7 @@ const pl = (n, f) => { const a = Math.abs(n) % 100, b = a % 10; return fmt(n) + 
 const C = {};
 const get = (n) => (C[n] ||= fetch('data/' + n, {cache: 'no-cache'}).then((r) => { if (!r.ok) throw new Error(n); return r.json(); }));
 // Решения проверки маршрутов (админка) накладываются на маршруты конвейера: проверенное по тексту и подтверждённое экспертом рисуется линией.
+let AGEO = null; get('areas1914.geojson').then((x) => { AGEO = x; }).catch(() => {});
 const getRoutes = () => (C['routes+review'] ||= Promise.all([get('routes.json'), fetch('data/review/journeys_review.json', {cache: 'no-cache'}).then((r) => r.ok ? r.json() : {}).catch(() => ({}))]).then(([R, REV]) => {
   const out = R.filter((r) => !REV[r.work]);
   for (const [w, v] of Object.entries(REV)) {
@@ -89,6 +90,7 @@ function crumbs(trail, key) {
 }
 async function route(e) {
   noteOrigin(e);
+  if (!AGEO) { try { AGEO = await get('areas1914.geojson'); } catch (x) {} }
   if (atlasDestroy) { try { atlasDestroy(); } catch (x) {} atlasDestroy = null; }
   const h = (location.hash || '#home').slice(1) || 'home';
   setMenu(h.startsWith('analytics') ? 'analytics' : h.split('?')[0]); if (mapRO) { mapRO.disconnect(); mapRO = null; }
@@ -241,7 +243,7 @@ async function home() {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   heroPlates(works, reduce);
   let first = !reduce;
-  mapIn(document.getElementById('homeMap'), () => { const o = {geo, routes, places, works, areas: ind, showPlaces: false, labels: false, zoom: false, showAuto: false, animate: first, routeWidth: 2, onWork: (w) => location.hash = 'book-' + toH(w), onGroup: (g) => location.hash = 'people-' + toH(g)}; first = false; return o; });
+  mapIn(document.getElementById('homeMap'), () => { const o = {geo, routes, places, works, areas: ind, areaGeo: AGEO, showPlaces: false, labels: false, zoom: false, showAuto: false, animate: first, routeWidth: 2, onWork: (w) => location.hash = 'book-' + toH(w), onGroup: (g) => location.hash = 'people-' + toH(g)}; first = false; return o; });
 }
 
 // ---------------- иллюстрации ----------------
@@ -353,7 +355,7 @@ async function illustrations() {
 
 // ---------------- атлас ----------------
 async function atlas2() {
-  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=58'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=59'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   const d = await window.Atlas2.render(V, {get, getRoutes, esc, toH, PER, NAT});
   if (/^#atlas(\?|$)/.test(location.hash)) atlasDestroy = d; else d();
 }
@@ -384,7 +386,7 @@ async function atlas() {
   const el = document.getElementById('atlasMap');
   const filt = (w) => (!st.period || w.period === st.period) && (!st.nat || w.nat === st.nat) && (!st.stay || w.stay === st.stay) && (st.year >= 1930 || (w.j0 || w.year) <= st.year);
   const gr = () => ind.find((g) => g.id === st.group);
-  const draw = mapIn(el, () => ({geo, routes, places, works, bookgeo, areas: st.areas ? ind : null, showAreas: st.areas, showManual: st.manual, showPlaces: st.places && !st.work, filter: filt,
+  const draw = mapIn(el, () => ({geo, routes, places, works, bookgeo, areas: st.areas ? ind : null, areaGeo: AGEO, showAreas: st.areas, showManual: st.manual, showPlaces: st.places && !st.work, filter: filt,
     focusWork: st.work, focusGroup: st.group,
     placeValue: st.group ? ((p) => (p.groups.find((x) => x[0] === gr().name) || [0, 0])[1]) : null,
     onWork: (w) => { st.work = w; document.getElementById('fWork').value = w; draw(); info(); },
@@ -439,7 +441,7 @@ async function people(id) {
     ${g.note && EN ? `<p class="small">${esc(g.note)}</p>` : ''}
     <div class="chips">${g.forms.map((f) => `<span class="chip">${esc(f)}</span>`).join('')}</div>
     <div class="side" style="margin-top:20px">
-      <div><div class="mapbox" id="pMap"></div><p class="small mute">Пятно — схематичный ареал около 1900 г.; круги — места, названные в одних абзацах с этим народом.</p></div>
+      <div><div class="mapbox" id="pMap"></div><p class="small mute" data-noi18n>${(() => { const f = ((AGEO && AGEO.features) || []).find((x) => x.properties.groups.includes(g.id)); return EN ? (f ? `Hatched area: as on the Ethnographic Map of Asiatic Russia (1914), where the people is called “${esc(f.properties.term)}”` : 'Shaded patch: a schematic area, c. 1900') + '; circles are places named in the same paragraphs as this people.' : (f ? `Ареал — по «Этнографической карте Азиатской России» (1914), где народ назван «${esc(f.properties.term)}»` : 'Пятно — схематичный ареал около 1900 г.') + '; круги — места, названные в одних абзацах с этим народом.'; })()}</p></div>
       <div><h3>Упоминания во времени</h3><div class="chart" id="pSeries"></div><p class="small mute">На миллион слов о Сибири по десятилетию поездки; подпись — число упоминаний.</p></div>
     </div>
     <div class="cols" style="margin-top:20px">
@@ -450,8 +452,11 @@ async function people(id) {
     ${g.quotes.length ? `<h2 style="margin-top:28px">Как о них писали: размеченная выборка</h2>${g.quotes.map((q) => `<div class="quote">${esc(q.text)}<div class="m">${esc(q.work)} · оценка: <span class="${q.pol === 'отрицательная' ? 'neg' : q.pol === 'положительная' ? 'pos' : ''}">${esc(q.pol)}</span>${q.stereotype ? ' · ' + esc(q.stereotype) : ''} · <a href="#book-${toH(q.pid.split('_p')[0])}-p${esc(q.pid.split('_p')[1])}">абзац</a></div></div>`).join('')}` : ''}
   </div></section>`;
   const val = (p) => (p.groups.find((x) => x[0] === g.name) || [0, 0])[1];
-  const ext = g.areas.length ? {type: 'MultiPoint', coordinates: g.areas.flatMap((a) => [[a[0] - a[2] - 8, a[1] - a[3] - 5], [a[0] + a[2] + 8, a[1] + a[3] + 5]])} : null;
-  mapIn(document.getElementById('pMap'), () => ({geo, places, areas: [g], focusGroup: g.id, placeValue: val, placeMax: 16, nLabels: 6, extent: ext, labels: true}));
+  const gf = ((AGEO && AGEO.features) || []).filter((f) => f.properties.groups.includes(g.id));
+  const flat = (c) => (typeof c[0] === 'number' ? [c] : c.flatMap(flat));
+  const ext = gf.length ? (() => { const P = gf.flatMap((f) => flat(f.geometry.coordinates)), lo = P.map((p) => p[0]), la = P.map((p) => p[1]); return {type: 'MultiPoint', coordinates: [[Math.min(...lo) - 6, Math.min(...la) - 4], [Math.max(...lo) + 6, Math.max(...la) + 4]]}; })()
+    : g.areas.length ? {type: 'MultiPoint', coordinates: g.areas.flatMap((a) => [[a[0] - a[2] - 8, a[1] - a[3] - 5], [a[0] + a[2] + 8, a[1] + a[3] + 5]])} : null;
+  mapIn(document.getElementById('pMap'), () => ({geo, places, areas: [g], areaGeo: AGEO, focusGroup: g.id, placeValue: val, placeMax: 16, nLabels: 6, extent: ext, labels: true}));
   seriesChart(document.getElementById('pSeries'), g.series);
   const col = (l) => { const el = document.getElementById('pCol'); if (!el) return; const rows = g.collocations[l] || []; el.innerHTML = `<table><thead><tr><th>Слово</th><th class="n">Частота</th><th class="n">logDice</th><th>Пример</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${esc(r[0])}</td><td class="n">${r[1]}</td><td class="n">${fmt(r[2], 2)}</td><td><a href="#book-${toH(r[3].split('_p')[0])}-p${esc(r[3].split('_p')[1])}">${esc(r[3].split('_p')[0])}</a></td></tr>`).join('')}</tbody></table>`; };
   if (langs.length) { col(langs[0]); V.querySelectorAll('[data-l]').forEach((b) => b.addEventListener('click', () => { V.querySelectorAll('[data-l]').forEach((x) => x.classList.toggle('on', x === b)); col(b.dataset.l); })); }
@@ -572,7 +577,7 @@ async function book(id, par) {
     if (a) a.scrollIntoView({block: 'center'});
     if (!on) { if (RD) { RD.destroy(); RD = null; } if (curP) { curP.classList.remove('cur'); curP = null; } watchMap(); return; }
     if (scanOn) toggleScan(false);
-    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=58'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=59'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
     if (!mapOn) return;
     RD = await window.Atlas2.reader(mapEl, {work: id, route: r0, PL: Object.fromEntries((await get('places.json')).map((p) => [p.id, p])), bookgeo: (await get('bookgeo.json'))[id], period: w.period,
       onClose: () => toggleMap(false),

@@ -507,3 +507,8 @@ html:not([lang=en]) .en-only,html[lang=en] .ru-only{display:none}
   .fab-map[hidden]{display:none}
   .bookmap .bm-bar{gap:10px;padding:6px 10px;font-size:13px}.bookmap .bm-cap{padding:6px 10px;font-size:12.5px;min-height:0}
 }
+.a2-old{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px}.a2-old .lbl{font-size:14px;color:var(--mute);margin-right:2px}
+.a2-old button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.a2-old input{width:110px;accent-color:var(--ink)}
+.a2-unc .ar.s{outline-style:dashed;background:repeating-linear-gradient(-45deg,color-mix(in srgb,var(--mute) 35%,transparent) 0 1px,transparent 1px 5px)}
+.a2-oldsrc:empty{display:none}
