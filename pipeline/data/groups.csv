@@ -3,22 +3,22 @@ khanty,ханты,Khanty,indigenous,West Siberia,Uralic (Ob-Ugric),
 mansi,манси,Mansi,indigenous,West Siberia,Uralic (Ob-Ugric),
 selkup,селькупы,Selkup,indigenous,West Siberia,Uralic (Samoyedic),'Ostyak-Samoyeds'; Narym/Tym/Ket rivers
 ket,кеты,Ket,indigenous,Yenisei,Yeniseian,'Yenisei Ostyaks'
-samoyedic,самодийские народы (без уточнения),Samoyedic peoples (unspecified),indigenous,North,Uralic (Samoyedic),"umbrella for 'Samoyed' when Nenets/Enets/Nganasan/Selkup cannot be distinguished"
+samoyedic,самодийские народы (без уточнения),Samoyedic peoples (unspecified),indigenous,North,Uralic (Samoyedic),umbrella for 'Samoyed' when Nenets/Enets/Nganasan/Selkup cannot be distinguished
 nenets,ненцы,Nenets,indigenous,North,Uralic (Samoyedic),
 kamas,камасинцы,Kamassians,indigenous,Sayan,Uralic (Samoyedic),
-evenki_even,эвенки / эвены,Evenki / Even ('Tungus'),indigenous,East Siberia,Tungusic,'Tungus' covers both; 'Lamut' = Even
+evenki_even,эвенки / эвены,Evenki / Even (‘Tungus’),indigenous,East Siberia,Tungusic,'Tungus' covers both; 'Lamut' = Even
 sakha,якуты (саха),Sakha (Yakuts),indigenous,Yakutia,Turkic,
 buryat,буряты,Buryats,indigenous,Baikal,Mongolic,
 chukchi,чукчи,Chukchi,indigenous,North-East,Chukotko-Kamchatkan,
 koryak,коряки,Koryaks,indigenous,North-East,Chukotko-Kamchatkan,
 itelmen_kamchadal,ительмены / камчадалы,Itelmen / Kamchadals,indigenous,Kamchatka,Chukotko-Kamchatkan,'Kamchadal' in 19th c. often = mixed Itelmen-Russian population
 yukaghir,юкагиры,Yukaghirs,indigenous,North-East,Yukaghir,
-nivkh,нивхи,Nivkh ('Gilyaks'),indigenous,Amur/Sakhalin,isolate,
+nivkh,нивхи,Nivkh (‘Gilyaks’),indigenous,Amur/Sakhalin,isolate,
 ainu,айны,Ainu,indigenous,Sakhalin,isolate,
-nanai_amur,нанайцы и др. народы Амура,Nanai and other Amur peoples ('Golds'),indigenous,Amur,Tungusic,
-tuvan,тувинцы,Tuvans ('Soyots'),indigenous,Sayan,Turkic,
-altai_kalmyk,алтайцы / ойраты ('калмыки'),Altaians / Oirats ('Kalmyks'),indigenous,Altai,Turkic/Mongolic,'Kalmyk' ambiguous: Mountain Kalmyks (Altaians) vs Oirat Kalmyks
-kazakh_kirghiz,казахи ('киргизы' XIX в.),Kazakhs ('Kirghiz' of 19th-c. usage),indigenous,Steppe,Turkic,19th-c. 'Kirghiz' in Western Siberia = Kazakhs (Kirghiz-Kaisaks)
+nanai_amur,нанайцы и др. народы Амура,Nanai and other Amur peoples (‘Golds’),indigenous,Amur,Tungusic,
+tuvan,тувинцы,Tuvans (‘Soyots’),indigenous,Sayan,Turkic,
+altai_kalmyk,алтайцы / ойраты ('калмыки'),Altaians / Oirats (‘Kalmyks’),indigenous,Altai,Turkic/Mongolic,'Kalmyk' ambiguous: Mountain Kalmyks (Altaians) vs Oirat Kalmyks
+kazakh_kirghiz,казахи ('киргизы' XIX в.),Kazakhs (‘Kirghiz’ of 19th-c. usage),indigenous,Steppe,Turkic,19th-c. 'Kirghiz' in Western Siberia = Kazakhs (Kirghiz-Kaisaks)
 kyrgyz,киргизы (тянь-шаньские и памирские),Kyrgyz (Tian Shan and Pamir),neighbour,Central Asia,Turkic,"'Kara-Kirghiz', 'Dikokamennye Kirghiz' of 19th-c. sources; outside Siberia"
 siberian_tatar,татары (в т.ч. сибирские),Tatars (incl. Siberian Tatars),indigenous,West Siberia,Turkic,'Tartar' highly ambiguous in European usage
 mongol,монголы,Mongols,neighbour,Mongolia,Mongolic,
@@ -28,7 +28,7 @@ cossack,казаки,Cossacks,settler,,Slavic,estate group
 sibiriak,сибиряки / старожилы,Siberians (old settlers),settler,,Slavic,"'Siberians', 'Sibiriaks', starozhily"
 pereselentsy,переселенцы,settlers / colonists (migrants),settler,,mixed,
 old_believer,старообрядцы,Old Believers,settler,confessional,Slavic,
-ukrainian,украинцы ('малороссы'),Ukrainians ('Little Russians'),settler,,Slavic,
+ukrainian,украинцы ('малороссы'),Ukrainians (‘Little Russians’),settler,,Slavic,
 pole,поляки,Poles,settler,,Slavic,often exiles
 jew,евреи,Jews,settler,,,
 finn_estonian,финны и эстонцы,Finns and Estonians,settler,,Uralic (Finnic),Finnish/Estonian colonists (Granö)
