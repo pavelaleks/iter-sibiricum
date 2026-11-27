@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /pipeline/
+
+Sitemap: https://iter-sibiricum.ru/sitemap.xml
