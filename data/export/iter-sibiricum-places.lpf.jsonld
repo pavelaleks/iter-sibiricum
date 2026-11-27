@@ -8354,7 +8354,7 @@
      "citations": [
       {
        "label": "Arnot Reid, 1899",
-       "@id": "https://iter-sibiricum.ru/#book-reid1899-p00374"
+       "@id": "https://iter-sibiricum.ru/#book-reid1899-p00352"
       }
      ]
     },
@@ -8372,7 +8372,7 @@
      "citations": [
       {
        "label": "Arnot Reid, 1899",
-       "@id": "https://iter-sibiricum.ru/#book-reid1899-p00466"
+       "@id": "https://iter-sibiricum.ru/#book-reid1899-p00439"
       }
      ]
     },
@@ -13609,6 +13609,10 @@
       {
        "label": "Alexander Michie, 1864",
        "@id": "https://iter-sibiricum.ru/#book-michie1864-p00157"
+      },
+      {
+       "label": "Arnot Reid, 1899",
+       "@id": "https://iter-sibiricum.ru/#book-reid1899-p00114"
       }
      ]
     },
@@ -13636,15 +13640,6 @@
       {
        "label": "Edgar Boulangier, 1891",
        "@id": "https://iter-sibiricum.ru/#book-boulangier1891-p03041"
-      }
-     ]
-    },
-    {
-     "toponym": "Kalgangto",
-     "citations": [
-      {
-       "label": "Arnot Reid, 1899",
-       "@id": "https://iter-sibiricum.ru/#book-reid1899-p00120"
       }
      ]
     }
@@ -13833,7 +13828,7 @@
       },
       {
        "label": "Arnot Reid, 1899",
-       "@id": "https://iter-sibiricum.ru/#book-reid1899-p00045"
+       "@id": "https://iter-sibiricum.ru/#book-reid1899-p00066"
       }
      ]
     },
@@ -15097,7 +15092,7 @@
       },
       {
        "label": "Arnot Reid, 1899",
-       "@id": "https://iter-sibiricum.ru/#book-reid1899-p01188"
+       "@id": "https://iter-sibiricum.ru/#book-reid1899-p01095"
       }
      ]
     },
@@ -15351,7 +15346,7 @@
    "properties": {
     "title": "Болгары",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -15384,15 +15379,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     49.06667,
-     54.96667
+     49.04972,
+     54.98472
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:575370"
+     "identifier": "wd:Q20501157"
     }
    ]
   },
@@ -15908,7 +15903,7 @@
    "properties": {
     "title": "Ичан",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "CN"
@@ -15941,15 +15936,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     111.28472,
-     30.71444
+     111.28028,
+     30.70833
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:1786764"
+     "identifier": "wd:Q71266"
     }
    ]
   },
@@ -16264,7 +16259,7 @@
    "properties": {
     "title": "Туркестан",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "KZ"
@@ -16297,15 +16292,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     68.26917,
-     43.30194
+     68.25685,
+     43.29458
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q848638"
+     "identifier": "gn:1517945"
     }
    ]
   },
@@ -16315,7 +16310,7 @@
    "properties": {
     "title": "Ташкент",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "UZ"
@@ -16356,15 +16351,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     69.27972,
-     41.31111
+     69.25,
+     41.33333
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q269"
+     "identifier": "gn:1484839"
     }
    ]
   },
@@ -16374,7 +16369,7 @@
    "properties": {
     "title": "Ходжент",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "estimate",
     "precision": "",
     "ccodes": [
      "TJ"
@@ -16411,17 +16406,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     69.63194,
-     40.27944
+     69.62,
+     40.28
     ],
-    "certainty": "certain"
+    "certainty": "less-certain"
    },
-   "links": [
-    {
-     "type": "closeMatch",
-     "identifier": "wd:Q373808"
-    }
-   ]
+   "links": []
   },
   {
    "type": "Feature",
@@ -18426,7 +18416,7 @@
    "properties": {
     "title": "Айгунь",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "CN"
@@ -18467,15 +18457,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     127.48119,
-     49.97946
+     127.48466,
+     49.97686
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:2038670"
+     "identifier": "wd:Q404795"
     }
    ]
   },
@@ -18536,7 +18526,7 @@
    "properties": {
     "title": "Хакодате",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "JP"
@@ -18585,15 +18575,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     140.72892,
-     41.76867
+     140.72641,
+     41.774
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q26418"
+     "identifier": "gn:2130187"
     }
    ]
   },
@@ -19657,7 +19647,7 @@
    "properties": {
     "title": "Усть-Каменогорск",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "KZ"
@@ -19698,15 +19688,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     82.61667,
-     49.95
+     82.59316,
+     49.94858
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q162548"
+     "identifier": "gn:1537286"
     }
    ]
   },
@@ -19854,7 +19844,7 @@
    "properties": {
     "title": "Уймон",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "estimate",
     "precision": "",
     "ccodes": [
      "RU"
@@ -19891,17 +19881,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     85.92778,
-     50.20306
+     85.98,
+     50.24
     ],
-    "certainty": "certain"
+    "certainty": "less-certain"
    },
-   "links": [
-    {
-     "type": "closeMatch",
-     "identifier": "wd:Q15224790"
-    }
-   ]
+   "links": []
   },
   {
    "type": "Feature",
@@ -20160,7 +20145,7 @@
    "properties": {
     "title": "Архангельск",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -20201,15 +20186,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     40.55183,
-     64.5461
+     40.5375,
+     64.54306
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:581049"
+     "identifier": "wd:Q1851"
     }
    ]
   },
@@ -20321,7 +20306,7 @@
    "properties": {
     "title": "Кандалакша",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -20354,15 +20339,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     32.41284,
-     67.15123
+     32.41167,
+     67.15694
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:553190"
+     "identifier": "wd:Q144264"
     }
    ]
   },
@@ -20372,7 +20357,7 @@
    "properties": {
     "title": "Умба",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "RU"
@@ -20405,15 +20390,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     34.34556,
-     66.68139
+     34.34291,
+     66.68706
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q2306836"
+     "identifier": "gn:479071"
     }
    ]
   },
@@ -20423,7 +20408,7 @@
    "properties": {
     "title": "Великий Устюг",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -20456,15 +20441,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     46.31352,
-     60.76186
+     46.30389,
+     60.75889
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:476062"
+     "identifier": "wd:Q111048"
     }
    ]
   },
@@ -20851,7 +20836,7 @@
    "properties": {
     "title": "Алеппо",
     "src": "route_stop",
-    "coord_source": "estimate",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "SY"
@@ -20887,9 +20872,14 @@
      37.16,
      36.2
     ],
-    "certainty": "less-certain"
+    "certainty": "certain"
    },
-   "links": []
+   "links": [
+    {
+     "type": "closeMatch",
+     "identifier": "wd:Q41183"
+    }
+   ]
   },
   {
    "type": "Feature",
@@ -20943,7 +20933,7 @@
    "properties": {
     "title": "Багдад",
     "src": "route_stop",
-    "coord_source": "estimate",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "IQ"
@@ -20976,12 +20966,17 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     44.37,
-     33.31
+     44.36611,
+     33.31528
     ],
-    "certainty": "less-certain"
+    "certainty": "certain"
    },
-   "links": []
+   "links": [
+    {
+     "type": "closeMatch",
+     "identifier": "wd:Q1530"
+    }
+   ]
   },
   {
    "type": "Feature",
@@ -20989,7 +20984,7 @@
    "properties": {
     "title": "Керманшах",
     "src": "route_stop",
-    "coord_source": "estimate",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "IR"
@@ -21022,12 +21017,17 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     47.07,
-     34.31
+     47.06861,
+     34.31667
     ],
-    "certainty": "less-certain"
+    "certainty": "certain"
    },
-   "links": []
+   "links": [
+    {
+     "type": "closeMatch",
+     "identifier": "wd:Q180078"
+    }
+   ]
   },
   {
    "type": "Feature",
@@ -21035,7 +21035,7 @@
    "properties": {
     "title": "Тегеран",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "estimate",
     "precision": "",
     "ccodes": [
      "IR"
@@ -21068,17 +21068,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     51.4,
-     35.68333
+     51.42,
+     35.69
     ],
-    "certainty": "certain"
+    "certainty": "less-certain"
    },
-   "links": [
-    {
-     "type": "closeMatch",
-     "identifier": "wd:Q643031"
-    }
-   ]
+   "links": []
   },
   {
    "type": "Feature",
@@ -21132,7 +21127,7 @@
    "properties": {
     "title": "Баку",
     "src": "route_stop",
-    "coord_source": "estimate",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "AZ"
@@ -21169,12 +21164,17 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     49.87,
-     40.41
+     49.8533,
+     40.3725
     ],
-    "certainty": "less-certain"
+    "certainty": "certain"
    },
-   "links": []
+   "links": [
+    {
+     "type": "closeMatch",
+     "identifier": "wd:Q17004958"
+    }
+   ]
   },
   {
    "type": "Feature",
@@ -21524,7 +21524,7 @@
    "properties": {
     "title": "Уфа",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "RU"
@@ -21573,15 +21573,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     55.9475,
-     54.72611
+     55.96779,
+     54.74306
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q911"
+     "identifier": "gn:479561"
     }
    ]
   },
@@ -21628,15 +21628,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     131.37312,
-     44.4067
+     131.37847,
+     44.41041
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:2023860"
+     "identifier": "gn:2017851"
     }
    ]
   },
@@ -22623,7 +22623,7 @@
    "properties": {
     "title": "Урумчи",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "CN"
@@ -22656,15 +22656,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     87.6125,
-     43.8225
+     87.60046,
+     43.80096
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q16959"
+     "identifier": "gn:1529102"
     }
    ]
   },
@@ -22775,7 +22775,7 @@
    "properties": {
     "title": "Боготол",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -22808,15 +22808,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     89.53317,
-     56.20449
+     89.5279,
+     56.21279
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:1509852"
+     "identifier": "wd:Q16274511"
     }
    ]
   },
@@ -23248,15 +23248,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     106.71667,
-     26.58333
+     106.71,
+     26.58
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:1809461"
+     "identifier": "gn:1809458"
     }
    ]
   },
@@ -24045,7 +24045,7 @@
    "properties": {
     "title": "Улала (миссия)",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "RU"
@@ -24082,15 +24082,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     85.96,
-     51.96
+     85.91892,
+     51.96056
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q6025"
+     "identifier": "gn:1506271"
     }
    ]
   },
@@ -24151,7 +24151,7 @@
    "properties": {
     "title": "Телецкое озеро",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "estimate",
     "precision": "",
     "ccodes": [
      "RU"
@@ -24184,17 +24184,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     87.71472,
-     51.52917
+     87.7,
+     51.6
     ],
-    "certainty": "certain"
+    "certainty": "less-certain"
    },
-   "links": [
-    {
-     "type": "closeMatch",
-     "identifier": "wd:Q217109"
-    }
-   ]
+   "links": []
   },
   {
    "type": "Feature",
@@ -24472,7 +24467,7 @@
    "properties": {
     "title": "Токмак",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "KG"
@@ -24509,15 +24504,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     75.291,
-     42.839
+     75.30149,
+     42.84194
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q854333"
+     "identifier": "gn:1527199"
     }
    ]
   },
@@ -24832,7 +24827,7 @@
    "properties": {
     "title": "Киев",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "UA"
@@ -24873,7 +24868,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     30.53333,
+     30.52361,
      50.45
     ],
     "certainty": "certain"
@@ -24881,7 +24876,7 @@
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:703447"
+     "identifier": "wd:Q1899"
     }
    ]
   },
@@ -25741,7 +25736,7 @@
    "properties": {
     "title": "Зилово",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -25774,15 +25769,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     117.50545,
-     53.06649
+     117.50444,
+     53.06528
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:2012485"
+     "identifier": "wd:Q4191852"
     }
    ]
   },
@@ -26130,15 +26125,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     26.53889,
-     55.88139
+     26.53333,
+     55.88333
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:460414"
+     "identifier": "gn:460413"
     }
    ]
   },
@@ -26363,7 +26358,7 @@
    "properties": {
     "title": "ст. Екатерино-Никольская",
     "src": "route_stop",
-    "coord_source": "estimate",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "CN"
@@ -26396,12 +26391,17 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     130.97,
-     47.73
+     130.9675,
+     47.75167
     ],
-    "certainty": "less-certain"
+    "certainty": "certain"
    },
-   "links": []
+   "links": [
+    {
+     "type": "closeMatch",
+     "identifier": "wd:Q4174383"
+    }
+   ]
   },
   {
    "type": "Feature",
@@ -26991,7 +26991,7 @@
    "properties": {
     "title": "Усть-Каменогорск",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "KZ"
@@ -27040,15 +27040,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     82.61667,
-     49.95
+     82.59316,
+     49.94858
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q162548"
+     "identifier": "gn:1537286"
     }
    ]
   },
@@ -27257,7 +27257,7 @@
    "properties": {
     "title": "ст. Карымская",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -27298,15 +27298,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     114.33681,
-     51.62679
+     114.35032,
+     51.62443
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:2023094"
+     "identifier": "wd:Q20077521"
     }
    ]
   },
@@ -27515,7 +27515,7 @@
    "properties": {
     "title": "Тетюхе (Дальнегорск)",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "RU"
@@ -27548,15 +27548,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     135.56611,
-     44.55389
+     135.6209,
+     44.55745
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q7054"
+     "identifier": "gn:2051471"
     }
    ]
   },
@@ -27621,7 +27621,7 @@
    "properties": {
     "title": "Усть-Кан (Ouskam)",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "RU"
@@ -27654,15 +27654,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     84.76111,
-     50.9275
+     84.76608,
+     50.93254
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q918970"
+     "identifier": "gn:1488190"
     }
    ]
   },
@@ -27672,7 +27672,7 @@
    "properties": {
     "title": "Усть-Кокса (Koksa)",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "RU"
@@ -27705,15 +27705,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     85.61083,
-     50.26972
+     85.62613,
+     50.27246
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q1019141"
+     "identifier": "gn:1488167"
     }
    ]
   },
@@ -27723,7 +27723,7 @@
    "properties": {
     "title": "Уймон",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "estimate",
     "precision": "",
     "ccodes": [
      "RU"
@@ -27760,17 +27760,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     85.92778,
-     50.20306
+     85.91,
+     50.24
     ],
-    "certainty": "certain"
+    "certainty": "less-certain"
    },
-   "links": [
-    {
-     "type": "closeMatch",
-     "identifier": "wd:Q15224790"
-    }
-   ]
+   "links": []
   },
   {
    "type": "Feature",
@@ -27778,7 +27773,7 @@
    "properties": {
     "title": "Катанда (Katunda)",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -27815,15 +27810,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     86.17702,
-     50.16772
+     86.17556,
+     50.1675
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:1504231"
+     "identifier": "wd:Q4217148"
     }
    ]
   },
@@ -28037,7 +28032,7 @@
    "properties": {
     "title": "Колыванское озеро",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -28074,15 +28069,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     82.19309,
-     51.36611
+     82.19167,
+     51.36389
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:1502813"
+     "identifier": "wd:Q2446016"
     }
    ]
   },
@@ -28240,7 +28235,7 @@
    "properties": {
     "title": "Телецкое озеро (Altin-Kool)",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "estimate",
     "precision": "",
     "ccodes": [
      "RU"
@@ -28273,17 +28268,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     87.71472,
-     51.52917
+     87.7,
+     51.6
     ],
-    "certainty": "certain"
+    "certainty": "less-certain"
    },
-   "links": [
-    {
-     "type": "closeMatch",
-     "identifier": "wd:Q217109"
-    }
-   ]
+   "links": []
   },
   {
    "type": "Feature",
@@ -28291,7 +28281,7 @@
    "properties": {
     "title": "оз. Убсу-Нур (Монголия)",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "MN"
@@ -28324,15 +28314,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     92.7,
-     50.3
+     92.75,
+     50.33333
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q81150"
+     "identifier": "gn:1514965"
     }
    ]
   },
@@ -28831,7 +28821,7 @@
    "properties": {
     "title": "Александровский централ",
     "src": "route_stop",
-    "coord_source": "estimate",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -28864,12 +28854,17 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     104.0,
-     52.6
+     103.83322,
+     52.79891
     ],
-    "certainty": "less-certain"
+    "certainty": "certain"
    },
-   "links": []
+   "links": [
+    {
+     "type": "closeMatch",
+     "identifier": "wd:Q4061498"
+    }
+   ]
   },
   {
    "type": "Feature",
@@ -29396,7 +29391,7 @@
    "properties": {
     "title": "р. Анабар",
     "src": "route_stop",
-    "coord_source": "estimate",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -29429,12 +29424,17 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     113.0,
-     71.5
+     113.9,
+     71.632
     ],
-    "certainty": "less-certain"
+    "certainty": "certain"
    },
-   "links": []
+   "links": [
+    {
+     "type": "closeMatch",
+     "identifier": "wd:Q82187"
+    }
+   ]
   },
   {
    "type": "Feature",
@@ -29493,7 +29493,7 @@
    "properties": {
     "title": "Дудинка",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -29538,15 +29538,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     86.16361,
-     69.39667
+     86.18333,
+     69.4
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:1507115"
+     "identifier": "wd:Q135482"
     }
    ]
   },
@@ -29755,7 +29755,7 @@
    "properties": {
     "title": "Токийский залив",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "estimate",
     "precision": "",
     "ccodes": [
      "JP"
@@ -29788,17 +29788,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     139.78333,
-     35.41667
+     139.8,
+     35.4
     ],
-    "certainty": "certain"
+    "certainty": "less-certain"
    },
-   "links": [
-    {
-     "type": "closeMatch",
-     "identifier": "wd:Q141017"
-    }
-   ]
+   "links": []
   },
   {
    "type": "Feature",
@@ -29857,7 +29852,7 @@
    "properties": {
     "title": "о. Вайгач (бухта Варнека)",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -29890,15 +29885,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     60.0529,
-     69.7142
+     59.55,
+     70.01667
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:1487762"
+     "identifier": "wd:Q207677"
     }
    ]
   },
@@ -30402,7 +30397,7 @@
    "properties": {
     "title": "ст. Тайга",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "RU"
@@ -30443,15 +30438,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     85.62528,
-     56.0625
+     85.62179,
+     56.06541
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q4449828"
+     "identifier": "gn:1489907"
     }
    ]
   },
@@ -31621,7 +31616,7 @@
    "properties": {
     "title": "Тифлис",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "estimate",
     "precision": "",
     "ccodes": [
      "GE"
@@ -31654,17 +31649,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     44.7925,
-     41.7225
+     44.79,
+     41.72
     ],
-    "certainty": "certain"
+    "certainty": "less-certain"
    },
-   "links": [
-    {
-     "type": "closeMatch",
-     "identifier": "wd:Q994"
-    }
-   ]
+   "links": []
   },
   {
    "type": "Feature",
@@ -31672,7 +31662,7 @@
    "properties": {
     "title": "Джульфа",
     "src": "route_stop",
-    "coord_source": "estimate",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "AZ"
@@ -31705,12 +31695,17 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     45.63,
-     38.95
+     45.63069,
+     38.93778
     ],
-    "certainty": "less-certain"
+    "certainty": "certain"
    },
-   "links": []
+   "links": [
+    {
+     "type": "closeMatch",
+     "identifier": "wd:Q43401146"
+    }
+   ]
   },
   {
    "type": "Feature",
@@ -31718,7 +31713,7 @@
    "properties": {
     "title": "Тебриз",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "estimate",
     "precision": "",
     "ccodes": [
      "IR"
@@ -31751,17 +31746,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     46.28333,
-     38.08333
+     46.29,
+     38.08
     ],
-    "certainty": "certain"
+    "certainty": "less-certain"
    },
-   "links": [
-    {
-     "type": "closeMatch",
-     "identifier": "wd:Q1286247"
-    }
-   ]
+   "links": []
   },
   {
    "type": "Feature",
@@ -31815,7 +31805,7 @@
    "properties": {
     "title": "Константинополь",
     "src": "route_stop",
-    "coord_source": "estimate",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "TR"
@@ -31849,11 +31839,16 @@
     "type": "Point",
     "coordinates": [
      28.98,
-     41.01
+     41.0125
     ],
-    "certainty": "less-certain"
+    "certainty": "certain"
    },
-   "links": []
+   "links": [
+    {
+     "type": "closeMatch",
+     "identifier": "wd:Q16869"
+    }
+   ]
   },
   {
    "type": "Feature",
@@ -32683,7 +32678,7 @@
    "properties": {
     "title": "Александровский централ",
     "src": "route_stop",
-    "coord_source": "estimate",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -32728,12 +32723,17 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     104.1,
-     52.8
+     103.83322,
+     52.79891
     ],
-    "certainty": "less-certain"
+    "certainty": "certain"
    },
-   "links": []
+   "links": [
+    {
+     "type": "closeMatch",
+     "identifier": "wd:Q4061498"
+    }
+   ]
   },
   {
    "type": "Feature",
@@ -33855,7 +33855,7 @@
    "properties": {
     "title": "о. Диксон",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -33888,15 +33888,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     80.52918,
-     73.50819
+     80.54639,
+     73.50694
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:1507390"
+     "identifier": "wd:Q1225369"
     }
    ]
   },
@@ -34256,7 +34256,7 @@
    "properties": {
     "title": "ст. Талдан",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "RU"
@@ -34289,15 +34289,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     124.8,
-     53.66667
+     124.81704,
+     53.69052
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q4450388"
+     "identifier": "gn:2015646"
     }
    ]
   },
@@ -35875,7 +35875,7 @@
    "properties": {
     "title": "Каменский завод",
     "src": "route_stop",
-    "coord_source": "estimate",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -35908,12 +35908,17 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     61.92,
-     56.42
+     61.93333,
+     56.4
     ],
-    "certainty": "less-certain"
+    "certainty": "certain"
    },
-   "links": []
+   "links": [
+    {
+     "type": "closeMatch",
+     "identifier": "wd:Q105444"
+    }
+   ]
   },
   {
    "type": "Feature",
@@ -35921,7 +35926,7 @@
    "properties": {
     "title": "Телецкое озеро (Алтын-Куль)",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "estimate",
     "precision": "",
     "ccodes": [
      "RU"
@@ -35954,17 +35959,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     87.71472,
-     51.52917
+     87.7,
+     51.5
     ],
-    "certainty": "certain"
+    "certainty": "less-certain"
    },
-   "links": [
-    {
-     "type": "closeMatch",
-     "identifier": "wd:Q217109"
-    }
-   ]
+   "links": []
   },
   {
    "type": "Feature",
@@ -37392,7 +37392,7 @@
    "properties": {
     "title": "Великий Устюг",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -37425,15 +37425,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     46.31352,
-     60.76186
+     46.30389,
+     60.75889
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:476062"
+     "identifier": "wd:Q111048"
     }
    ]
   },
@@ -37679,15 +37679,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     31.10866,
-     70.3704
+     31.11066,
+     70.37048
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:6453313"
+     "identifier": "gn:777019"
     }
    ]
   },
@@ -38182,7 +38182,7 @@
    "properties": {
     "title": "Аксу",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "CN"
@@ -38215,15 +38215,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     80.27921,
-     41.18418
+     80.25,
+     41.16639
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:1529660"
+     "identifier": "wd:Q421648"
     }
    ]
   },
@@ -39189,7 +39189,7 @@
    "properties": {
     "title": "Усть-Каменогорск",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "KZ"
@@ -39222,15 +39222,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     82.61667,
-     49.95
+     82.59316,
+     49.94858
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q162548"
+     "identifier": "gn:1537286"
     }
    ]
   },
@@ -39393,7 +39393,7 @@
    "properties": {
     "title": "Хамар-Дабан (перевал)",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "RU"
@@ -39426,15 +39426,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     104.32528,
-     51.28611
+     105.0,
+     51.25
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q942698"
+     "identifier": "gn:2022808"
     }
    ]
   },
@@ -39702,7 +39702,7 @@
    "properties": {
     "title": "Александровский пост (Сахалин)",
     "src": "route_stop",
-    "coord_source": "estimate",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -39747,12 +39747,17 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     142.16,
+     142.15,
      50.9
     ],
-    "certainty": "less-certain"
+    "certainty": "certain"
    },
-   "links": []
+   "links": [
+    {
+     "type": "closeMatch",
+     "identifier": "wd:Q103406"
+    }
+   ]
   },
   {
    "type": "Feature",
@@ -40087,15 +40092,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     131.37312,
-     44.4067
+     131.37847,
+     44.41041
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:2023860"
+     "identifier": "gn:2017851"
     }
    ]
   },
@@ -40211,7 +40216,7 @@
    "properties": {
     "title": "Карымская",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -40252,15 +40257,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     114.33681,
-     51.62679
+     114.35032,
+     51.62443
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:2023094"
+     "identifier": "wd:Q20077521"
     }
    ]
   },
@@ -40959,7 +40964,7 @@
    "properties": {
     "title": "Дудинка",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -41000,15 +41005,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     86.16361,
-     69.39667
+     86.18333,
+     69.4
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:1507115"
+     "identifier": "wd:Q135482"
     }
    ]
   },
@@ -41318,7 +41323,7 @@
    "properties": {
     "title": "о. Диксон (гавань)",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -41355,15 +41360,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     80.52918,
-     73.50819
+     80.54639,
+     73.50694
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:1507390"
+     "identifier": "wd:Q1225369"
     }
    ]
   },
@@ -44222,7 +44227,7 @@
    "properties": {
     "title": "Албазин",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -44255,15 +44260,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     124.08289,
-     53.38087
+     124.095,
+     53.38333
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:2027977"
+     "identifier": "wd:Q2994707"
     }
    ]
   },
@@ -44421,7 +44426,7 @@
    "properties": {
     "title": "Тайга (станция)",
     "src": "route_stop",
-    "coord_source": "wikidata",
+    "coord_source": "geonames",
     "precision": "",
     "ccodes": [
      "RU"
@@ -44458,15 +44463,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     85.62528,
-     56.0625
+     85.62179,
+     56.06541
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "wd:Q4449828"
+     "identifier": "gn:1489907"
     }
    ]
   },
@@ -44974,7 +44979,7 @@
    "properties": {
     "title": "залив Анива (Сахалин)",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -45007,15 +45012,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     142.53683,
-     46.7167
+     142.6,
+     46.6
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:2127152"
+     "identifier": "wd:Q716044"
     }
    ]
   },
@@ -45224,7 +45229,7 @@
    "properties": {
     "title": "Дорогобуж",
     "src": "route_stop",
-    "coord_source": "geonames",
+    "coord_source": "wikidata",
     "precision": "",
     "ccodes": [
      "RU"
@@ -45257,15 +45262,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     33.29877,
-     54.91511
+     33.30778,
+     54.92
     ],
     "certainty": "certain"
    },
    "links": [
     {
      "type": "closeMatch",
-     "identifier": "gn:565202"
+     "identifier": "wd:Q135446"
     }
    ]
   },

@@ -1,1 +1,19 @@
-[]
+[
+ {
+  "author": "Reid, Arnot",
+  "title": "From Peking to Petersburg",
+  "year": 1899,
+  "lang": "en",
+  "nationality": "British",
+  "stay": "transit",
+  "journey": "1898",
+  "source": "https://archive.org/details/frompekingtopet00reidgoog",
+  "status": "added",
+  "by": "П. В. Алексеев",
+  "date": "2026-11-27",
+  "note": "London: E. Arnold, 1899; тема статьи Жданова С. С. (2025)",
+  "work_id": "reid1899",
+  "message": "книга уже была в плане корпуса (reid1899, не скачивалась); текст скачан, появится после пересборки",
+  "added": "2026-11-27"
+ }
+]
