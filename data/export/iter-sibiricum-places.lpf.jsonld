@@ -17426,14 +17426,26 @@
      "label": "населённый пункт"
     }
    ],
+   "when": {
+    "timespans": [
+     {
+      "start": {
+       "earliest": "1879"
+      },
+      "end": {
+       "latest": "1879"
+      }
+     }
+    ]
+   },
    "names": [
     {
      "toponym": "Верхнеуральск",
      "lang": "ru",
      "citations": [
       {
-       "label": "Iter Sibiricum",
-       "@id": "https://iter-sibiricum.ru/"
+       "label": "Charles-Eugène de Ujfalvy, 1879",
+       "@id": "https://iter-sibiricum.ru/#book-ujfalvy1879"
       }
      ]
     }
@@ -24736,14 +24748,26 @@
      "label": "населённый пункт"
     }
    ],
+   "when": {
+    "timespans": [
+     {
+      "start": {
+       "earliest": "1900"
+      },
+      "end": {
+       "latest": "1900"
+      }
+     }
+    ]
+   },
    "names": [
     {
      "toponym": "Гуйян",
      "lang": "ru",
      "citations": [
       {
-       "label": "Iter Sibiricum",
-       "@id": "https://iter-sibiricum.ru/"
+       "label": "Archibald R. Colquhoun, 1900",
+       "@id": "https://iter-sibiricum.ru/#book-colquhoun1900"
       }
      ]
     }
@@ -33990,14 +34014,26 @@
      "label": "населённый пункт"
     }
    ],
+   "when": {
+    "timespans": [
+     {
+      "start": {
+       "earliest": "1922"
+      },
+      "end": {
+       "latest": "1922"
+      }
+     }
+    ]
+   },
    "names": [
     {
      "toponym": "Ганьсу (попытка пройти в Тибет)",
      "lang": "ru",
      "citations": [
       {
-       "label": "Iter Sibiricum",
-       "@id": "https://iter-sibiricum.ru/"
+       "label": "Ferdynand Ossendowski, 1922",
+       "@id": "https://iter-sibiricum.ru/#book-ossendowski1922"
       }
      ]
     }
@@ -38032,14 +38068,26 @@
      "label": "населённый пункт"
     }
    ],
+   "when": {
+    "timespans": [
+     {
+      "start": {
+       "earliest": "1891"
+      },
+      "end": {
+       "latest": "1891"
+      }
+     }
+    ]
+   },
    "names": [
     {
      "toponym": "Берёзовский (золотые прииски)",
      "lang": "ru",
      "citations": [
       {
-       "label": "Iter Sibiricum",
-       "@id": "https://iter-sibiricum.ru/"
+       "label": "Edgar Boulangier, 1891",
+       "@id": "https://iter-sibiricum.ru/#book-boulangier1891"
       }
      ]
     }
@@ -38782,14 +38830,26 @@
      "label": "населённый пункт"
     }
    ],
+   "when": {
+    "timespans": [
+     {
+      "start": {
+       "earliest": "1928"
+      },
+      "end": {
+       "latest": "1928"
+      }
+     }
+    ]
+   },
    "names": [
     {
      "toponym": "Каримская (Баргузинская долина)",
      "lang": "ru",
      "citations": [
       {
-       "label": "Iter Sibiricum",
-       "@id": "https://iter-sibiricum.ru/"
+       "label": "George Bassett Digby, 1928",
+       "@id": "https://iter-sibiricum.ru/#book-digby1928"
       }
      ]
     }
@@ -38829,14 +38889,26 @@
      "label": "населённый пункт"
     }
    ],
+   "when": {
+    "timespans": [
+     {
+      "start": {
+       "earliest": "1928"
+      },
+      "end": {
+       "latest": "1928"
+      }
+     }
+    ]
+   },
    "names": [
     {
      "toponym": "Арбузовская",
      "lang": "ru",
      "citations": [
       {
-       "label": "Iter Sibiricum",
-       "@id": "https://iter-sibiricum.ru/"
+       "label": "George Bassett Digby, 1928",
+       "@id": "https://iter-sibiricum.ru/#book-digby1928"
       }
      ]
     }
@@ -39337,14 +39409,26 @@
      "label": "населённый пункт"
     }
    ],
+   "when": {
+    "timespans": [
+     {
+      "start": {
+       "earliest": "1802"
+      },
+      "end": {
+       "latest": "1802"
+      }
+     }
+    ]
+   },
    "names": [
     {
      "toponym": "Смоленск",
      "lang": "ru",
      "citations": [
       {
-       "label": "Iter Sibiricum",
-       "@id": "https://iter-sibiricum.ru/"
+       "label": "August von Kotzebue, 1802",
+       "@id": "https://iter-sibiricum.ru/#book-kotzebue1802"
       }
      ]
     }
@@ -39615,14 +39699,26 @@
      "label": "населённый пункт"
     }
    ],
+   "when": {
+    "timespans": [
+     {
+      "start": {
+       "earliest": "1863"
+      },
+      "end": {
+       "latest": "1863"
+      }
+     }
+    ]
+   },
    "names": [
     {
      "toponym": "соляной завод по пути в Нижнеудинск",
      "lang": "ru",
      "citations": [
       {
-       "label": "Iter Sibiricum",
-       "@id": "https://iter-sibiricum.ru/"
+       "label": "Lucy Atkinson, 1863",
+       "@id": "https://iter-sibiricum.ru/#book-latkinson1863"
       }
      ]
     }
@@ -40523,14 +40619,26 @@
      "label": "элемент рельефа"
     }
    ],
+   "when": {
+    "timespans": [
+     {
+      "start": {
+       "earliest": "1859"
+      },
+      "end": {
+       "latest": "1859"
+      }
+     }
+    ]
+   },
    "names": [
     {
      "toponym": "мыс Елизаветы (север Сахалина)",
      "lang": "ru",
      "citations": [
       {
-       "label": "Iter Sibiricum",
-       "@id": "https://iter-sibiricum.ru/"
+       "label": "J. M. Tronson, 1859",
+       "@id": "https://iter-sibiricum.ru/#book-tronson1859"
       }
      ]
     }
@@ -42906,14 +43014,26 @@
      "label": "населённый пункт"
     }
    ],
+   "when": {
+    "timespans": [
+     {
+      "start": {
+       "earliest": "1853"
+      },
+      "end": {
+       "latest": "1853"
+      }
+     }
+    ]
+   },
    "names": [
     {
      "toponym": "Мечигмен? (May-tchoo-emin)",
      "lang": "ru",
      "citations": [
       {
-       "label": "Iter Sibiricum",
-       "@id": "https://iter-sibiricum.ru/"
+       "label": "William Hulme Hooper, 1853",
+       "@id": "https://iter-sibiricum.ru/#book-hooper1853"
       }
      ]
     }
@@ -47770,14 +47890,26 @@
      "label": "населённый пункт"
     }
    ],
+   "when": {
+    "timespans": [
+     {
+      "start": {
+       "earliest": "1904"
+      },
+      "end": {
+       "latest": "1904"
+      }
+     }
+    ]
+   },
    "names": [
     {
      "toponym": "Култук (южная оконечность Байкала)",
      "lang": "ru",
      "citations": [
       {
-       "label": "Iter Sibiricum",
-       "@id": "https://iter-sibiricum.ru/"
+       "label": "Holger Rosenberg, 1904",
+       "@id": "https://iter-sibiricum.ru/#book-rosenberg1904"
       }
      ]
     }

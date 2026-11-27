@@ -78,8 +78,9 @@ CERT = {'geonames': 'certain', 'wikidata': 'certain', 'geonames_ctx': 'less-cert
 for r in NEW.itertuples():
     if r.coord_source == 'none' or pd.isna(r.lat): continue
     c = cit.get(r.place_id, [])
-    yrs = sorted({y for w, _, _ in c for y in [wyear(w)] if y})
-    names = [dict(toponym=r.name, lang='ru', citations=[dict(label=f'{wlabel(w)}: «{q[:120]}»', **{'@id': f'{BASE}#book-{w.replace("_", "-")}-p{p}'}) for w, p, q in c[:5]] or [dict(label='Iter Sibiricum', **{'@id': BASE})])]
+    ws = [w for w in re.split(r'[;,|\s]+', str(r.works)) if w in W] if isinstance(r.works, str) else []
+    yrs = sorted({y for w in ([w for w, _, _ in c] or ws) for y in [wyear(w)] if y})
+    names = [dict(toponym=r.name, lang='ru', citations=[dict(label=f'{wlabel(w)}: «{q[:120]}»', **{'@id': f'{BASE}#book-{w.replace("_", "-")}-p{p}'}) for w, p, q in c[:5]] or [dict(label=wlabel(w), **{'@id': f'{BASE}#book-{w.replace("_", "-")}'}) for w in ws[:5]] or [dict(label='Iter Sibiricum', **{'@id': BASE})])]
     l = link(r.ref if isinstance(r.ref, str) else '')
     fc = fclass_new(r.name, r.ref)
     feats.append(dict(type='Feature', **{'@id': PID + r.place_id.replace('new:', 'route-')},
