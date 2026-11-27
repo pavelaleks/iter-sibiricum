@@ -65,7 +65,7 @@ window.Atlas2 = (() => {
     const {get, getRoutes, toH, PER, NAT} = ctx;
     V.innerHTML = `<div class="wrap loading">${T('Загрузка карты…', 'Loading the map…')}</div>`;
     const [works, routes, places, groups, bookgeo, AREAS] = await Promise.all([get('works.json'), getRoutes(), get('places.json'), get('groups.json'), get('bookgeo.json'), get('areas1914.geojson').catch(() => null),
-      loadCSS('assets/vendor/maplibre-gl.css?v=60'), loadJS('assets/vendor/maplibre-gl.js?v=60'), loadJS('assets/vendor/pmtiles.js?v=60')]);
+      loadCSS('assets/vendor/maplibre-gl.css?v=62'), loadJS('assets/vendor/maplibre-gl.js?v=62'), loadJS('assets/vendor/pmtiles.js?v=62')]);
     if (!alive()) return () => {};
     const W = Object.fromEntries(works.map((w) => [w.id, w])), RT = Object.fromEntries(routes.map((r) => [r.work, r]));
     const PL = Object.fromEntries(places.map((p) => [p.id, p]));
@@ -392,7 +392,7 @@ window.Atlas2 = (() => {
       if (st.group) {
         const g = GR[st.group], GW = gWorks(), rows = Object.entries(GW).filter(([w]) => W[w] && filt(W[w])).sort((a, b) => b[1] - a[1]);
         h += `<h3><a href="#people-${toH(g.id)}">${esc(EN ? g.name_en : g.name)}</a></h3><p class="small mute">${T(`Описывают ${rows.length} ${plural(rows.length, 'книга', 'книги', 'книг')} из выборки; число — абзацы с упоминанием. Маршруты этих книг выделены цветом. Круги — места, названные в одних абзацах с этим народом (по всему корпусу). ${AG[st.group] ? `Штриховка — ареал по «Этнографической карте Азиатской России» (1914), где народ назван «${AG[st.group][0].properties.term}».` : 'Штриховка — схематичный ареал около 1900 г.'}`, `${rows.length} book${rows.length === 1 ? '' : 's'} in the selection describe this people; the number is paragraphs that mention them. Routes of these books are coloured. Circles are places named in the same paragraphs as this people (whole corpus). ${AG[st.group] ? `Hatching is the area on the Ethnographic Map of Asiatic Russia (1914), where the people is called “${AG[st.group][0].properties.term}”.` : 'Hatching is a schematic area, c. 1900.'}`)}</p>
-          <ul class="a2-list">${rows.slice(0, 50).map(([w, n]) => `<li><button data-work="${esc(w)}">${RT[w] ? `<i style="background:var(${PERV[per(w)]})"></i>` : '<i class="none"></i>'}<span>${esc(W[w].label)}</span><span class="mute">${n}</span></button></li>`).join('')}</ul>
+          <p class="small"><a href="#evidence?g=${esc(g.id)}">${T('Все абзацы о народе →', 'All paragraphs about this people →')}</a></p><ul class="a2-list">${rows.slice(0, 50).map(([w, n]) => `<li><button data-work="${esc(w)}">${RT[w] ? `<i style="background:var(${PERV[per(w)]})"></i>` : '<i class="none"></i>'}<span>${esc(W[w].label)}</span><span class="mute">${n}</span></button></li>`).join('')}</ul>
           <p class="small"><a href="#" data-clear="group">${T('← без народа', '← no people selected')}</a></p>`;
         body.innerHTML = h; return;
       }
@@ -402,6 +402,7 @@ window.Atlas2 = (() => {
         h += r ? `<p><span class="status${r.method === 'manual' ? ' rec' : ''}">${stTxt(r)}</span></p>` : `<p class="small">${T('Маршрут по этой книге не восстановлен. На карте — места, упомянутые в книге; круг тем больше, чем чаще упоминание.', 'No route has been reconstructed for this book. The map shows the places it mentions; the larger the circle, the more often mentioned.')}</p>`;
         if (r && r.summary && !EN) h += `<p class="small">${esc(r.summary)}</p>`;
         if (r) h += `<ol class="small a2-stops">${r.stops.map((s, i) => `<li><button class="lnk" data-stop="${i}"${s[2] == null ? ' disabled' : ''}>${esc(nm(s[1]))}</button>${s[4] ? ` <a class="mute" href="#book-${toH(st.work)}-p${pad5(s[4])}">${T('абзац', 'para.')} ${pnum(s[4])}</a>` : ''}${s[2] == null ? ` <span class="mute">${T('без координат', 'no coordinates')}</span>` : stopQ(s) === 2 ? ` <span class="mute">${T('в районе объекта', 'somewhere in the area')}</span>` : stopQ(s) ? ' <span class="mute">≈</span>' : ''}${s[5] === 'not_found_in_text' ? ` <span class="mute">${T('в тексте не найдено', 'not found in the text')}</span>` : ''}</li>`).join('')}</ol>`;
+        if (r && window.__reportLinks) h += `<p class="small">${window.__reportLinks(`${T('Маршрут', 'Route')}: ${w.label}`, [`${T('Книга', 'Book')}: ${w.label} (${w.id})`, location.href])}</p>`;
         h += `<p class="small"><a href="#" data-clear="work">${T('← все маршруты', '← all routes')}</a></p>`;
         body.innerHTML = h; return;
       }
@@ -419,6 +420,7 @@ window.Atlas2 = (() => {
       body.innerHTML = `<h3 tabindex="-1">${esc(nm(p.name))}</h3><p class="small mute">${ment(p.mentions)} ${T('в', 'in')} ${books(p.works)} ${T('по всему корпусу', 'across the corpus')}${!defaultF() && !st.work && !st.group ? `; ${T('в выборке', 'in the selection')}: ${PV[id] || 0}` : ''} · ${qTxt(coordQ(p.coord))}</p>
         <h4>${T('Чаще всего упоминают', 'Mentioned most often in')}</h4>${bar(tw.slice(0, 8).map(([w, n]) => [W[w].label, n, '#book-' + toH(w)]))}
         ${p.groups.length ? `<h4>${T('Народы в тех же абзацах', 'Peoples in the same paragraphs')}</h4>${bar(p.groups.slice(0, 8).map(([g, n]) => [nm(g), n]))}` : ''}
+        <p class="small"><a href="#evidence?pl=${esc(p.id)}">${T('Все абзацы об этом месте →', 'All paragraphs about this place →')}</a></p>
         <p class="small"><a href="#" data-back="1">${T('← назад', '← back')}</a></p>`;
       openPanel(); body.querySelector('h3').focus({preventScroll: true});
     }
@@ -652,7 +654,7 @@ window.Atlas2 = (() => {
   // ---------- карта рядом с текстом книги: путь «доезжает» до абзаца, который читается сейчас ----------
   // reader(el, {work, route, PL, bookgeo, period, onPlace(id), onStop(i)}) → {setPara(n, ids), hover(id), destroy}
   async function reader(el, o) {
-    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=60'), loadJS('assets/vendor/maplibre-gl.js?v=60'), loadJS('assets/vendor/pmtiles.js?v=60')]);
+    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=62'), loadJS('assets/vendor/maplibre-gl.js?v=62'), loadJS('assets/vendor/pmtiles.js?v=62')]);
     if (!hasGL()) { el.innerHTML = `<p class="small mute" style="padding:14px">${T('Браузер не поддерживает WebGL, карта недоступна.', 'This browser does not support WebGL; the map is unavailable.')}</p>`; return {setPara() {}, hover() {}, destroy() {}}; }
     if (!window.__a2proto) { window.__a2proto = new pmtiles.Protocol(); maplibregl.addProtocol('pmtiles', window.__a2proto.tile); }
     let C = palette(el), dead = false, raf = 0, follow = true, userAt = 0, curN = -1, curIds = [], hovId = null;

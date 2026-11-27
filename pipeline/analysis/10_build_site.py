@@ -13,7 +13,7 @@
   reuse.json      пары заимствований;
   texts/*.json    тексты: абзацы (тип, регион, флаг «Сибирь») и упоминания групп для подсветки.
 """
-import json, re, math, collections, pathlib, shutil
+import csv, json, re, math, collections, pathlib, shutil
 import pandas as pd, numpy as np
 import sys; sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from research_common import ROOT, works, groups, PERIOD_RU, NAT_RU, STAY_RU
@@ -53,6 +53,10 @@ for w, r in W.iterrows():
                       j0=num(r.journey_start), j1=num(r.journey_end), period=r.period, period_ru=PERIOD_RU[r.period], core=bool(r.core), genre=num(r.genre),
                       words=c.get('words_total'), words_sib=c.get('words_siberia'), mentions=c.get('mentions_siberia'), per10k=c.get('mentions_per_10k'),
                       top_groups=[[G.loc[g, 'name_ru'], int(n)] for g, n in gm.items()], sources=src, note=num(p.notes) if p is not None else None))
+# заглавия и выходные данные (10c_titles.py → data/titles.csv)
+_T = {r['work_id']: r for r in csv.DictReader(open(ROOT / 'data/titles.csv', encoding='utf-8'))} if (ROOT / 'data/titles.csv').exists() else {}
+for _w in wrows:
+    if _w['id'] in _T: _w.update(title=_T[_w['id']]['title'], title_short=_T[_w['id']]['title_short'], publisher=_T[_w['id']]['publisher'])
 dump('works.json', wrows)
 
 # ---------- places ----------

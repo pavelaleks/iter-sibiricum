@@ -69,7 +69,7 @@ document.getElementById('menu')?.addEventListener('click', (e) => { if (e.target
 // Откуда пришёл читатель: при переходе в книгу или к народу с карты, из иллюстраций, связей и т. п.
 // запоминается полный адрес исходного вида (с фильтрами и масштабом), чтобы вернуться туда одной кнопкой.
 let atlasDestroy = null;
-const ORIG = [['atlas', 'к карте', 'to the map'], ['people-', 'к народу', 'to the people'], ['peoples', 'к народам', 'to the peoples'], ['illustrations', 'к иллюстрациям', 'to the illustrations'], ['links', 'к связям', 'to the networks'], ['analytics', 'к аналитике', 'to the analytics'], ['publications', 'к публикациям', 'to the publications'], ['home', 'на главную', 'to the home page']];
+const ORIG = [['atlas', 'к карте', 'to the map'], ['evidence', 'к свидетельствам', 'to the evidence'], ['people-', 'к народу', 'to the people'], ['peoples', 'к народам', 'to the peoples'], ['illustrations', 'к иллюстрациям', 'to the illustrations'], ['links', 'к связям', 'to the networks'], ['analytics', 'к аналитике', 'to the analytics'], ['publications', 'к публикациям', 'to the publications'], ['home', 'на главную', 'to the home page']];
 function noteOrigin(e) {
   const h = location.hash.slice(1), old = e && e.oldURL ? (new URL(e.oldURL).hash || '#home').slice(1) : '';
   const key = h.startsWith('book-') ? 'book-' + h.slice(5).replace(/-p\d+$/, '') : h.startsWith('people-') ? h.split('?')[0] : '';
@@ -108,6 +108,8 @@ async function route(e) {
     else if (h === 'links') await links();
     else if (h.startsWith('analytics')) await analytics();
     else if (h === 'publications') await publications();
+    else if (h === 'evidence' || h.startsWith('evidence?')) await research('evidence');
+    else if (h === 'data') await research('data');
     else if (h === 'method') await method();
     else if (h === 'scope') await scope();
     else await home();
@@ -116,7 +118,7 @@ async function route(e) {
   } catch (e) { V.innerHTML = `<div class="wrap band"><h2>Не удалось загрузить данные</h2><p class="mute">${esc(e.message)}. Сайт читает файлы из папки data/; откройте его через веб-сервер (GitHub Pages или python -m http.server).</p></div>`; }
 }
 window.addEventListener('hashchange', route);
-const TITLES = {atlas: 'Атлас', peoples: 'Народы', people: 'Народы', library: 'Библиотека', book: 'Библиотека', illustrations: 'Иллюстрации', links: 'Связи', analytics: 'Аналитика', publications: 'Публикации', scope: 'Границы и категории', method: 'Метод и данные'};
+const TITLES = {evidence: 'Свидетельства', data: 'Данные', atlas: 'Атлас', peoples: 'Народы', people: 'Народы', library: 'Библиотека', book: 'Библиотека', illustrations: 'Иллюстрации', links: 'Связи', analytics: 'Аналитика', publications: 'Публикации', scope: 'Границы и категории', method: 'Метод и данные'};
 
 function mapIn(el, opts) {
   const draw = () => SibMap.draw(el, opts());
@@ -356,8 +358,12 @@ async function illustrations() {
 }
 
 // ---------------- атлас ----------------
+async function research(page) {
+  if (!window.Research) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/research.js?v=62'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  await window.Research[page](V, {get, esc, toH, fmt, PER, NAT, EN, cites, citeDialog, reportLinks, SITE_URL, pad5, project});
+}
 async function atlas2() {
-  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=60'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=62'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   const d = await window.Atlas2.render(V, {get, getRoutes, esc, toH, PER, NAT});
   if (/^#atlas(\?|$)/.test(location.hash)) atlasDestroy = d; else d();
 }
@@ -443,7 +449,7 @@ async function people(id) {
     ${g.note && EN ? `<p class="small">${esc(g.note)}</p>` : ''}
     <div class="chips">${g.forms.map((f) => `<span class="chip">${esc(f)}</span>`).join('')}</div>
     <div class="side" style="margin-top:20px">
-      <div><div class="mapbox" id="pMap"></div><p class="small mute" data-noi18n>${(() => { const f = ((AGEO && AGEO.features) || []).find((x) => x.properties.groups.includes(g.id)); return EN ? (f ? `Hatched area: as on the Ethnographic Map of Asiatic Russia (1914), where the people is called “${esc(f.properties.term)}”` : 'Shaded patch: a schematic area, c. 1900') + '; circles are places named in the same paragraphs as this people.' : (f ? `Ареал — по «Этнографической карте Азиатской России» (1914), где народ назван «${esc(f.properties.term)}»` : 'Пятно — схематичный ареал около 1900 г.') + '; круги — места, названные в одних абзацах с этим народом.'; })()}</p></div>
+      <div><p><a class="btnlike" href="#evidence?g=${esc(g.id)}">${EN ? 'All paragraphs about them' : 'Все абзацы о них'} (${fmt(g.mentions)}) →</a></p><div class="mapbox" id="pMap"></div><p class="small mute" data-noi18n>${(() => { const f = ((AGEO && AGEO.features) || []).find((x) => x.properties.groups.includes(g.id)); return EN ? (f ? `Hatched area: as on the Ethnographic Map of Asiatic Russia (1914), where the people is called “${esc(f.properties.term)}”` : 'Shaded patch: a schematic area, c. 1900') + '; circles are places named in the same paragraphs as this people.' : (f ? `Ареал — по «Этнографической карте Азиатской России» (1914), где народ назван «${esc(f.properties.term)}»` : 'Пятно — схематичный ареал около 1900 г.') + '; круги — места, названные в одних абзацах с этим народом.'; })()}</p></div>
       <div><h3>Упоминания во времени</h3><div class="chart" id="pSeries"></div><p class="small mute">На миллион слов о Сибири по десятилетию поездки; подпись — число упоминаний.</p></div>
     </div>
     <div class="cols" style="margin-top:20px">
@@ -490,9 +496,9 @@ async function library() {
     <p class="small mute" id="lc"></p></div></section>`;
   const render = () => {
     const q = st.q.toLowerCase();
-    const rows = works.filter((w) => (!q || [w.label, w.author, w.role, w.nationality].join(' ').toLowerCase().includes(q)) && (!st.lang || w.lang === st.lang) && (!st.nat || w.nat === st.nat) && (!st.per || w.period === st.per))
+    const rows = works.filter((w) => (!q || [w.label, w.author, w.role, w.nationality, w.title || ''].join(' ').toLowerCase().includes(q)) && (!st.lang || w.lang === st.lang) && (!st.nat || w.nat === st.nat) && (!st.per || w.period === st.per))
       .sort((a, b) => st.sort === 'year' ? a.year - b.year : (b[st.sort] || 0) - (a[st.sort] || 0));
-    document.getElementById('lb').innerHTML = rows.map((w) => `<tr class="click" data-id="${esc(w.id)}"><td><a href="#book-${toH(w.id)}">${esc(w.label)}</a>${w.core ? '' : ' <span class="small mute">на проверке</span>'}</td><td>${esc(w.author)}</td><td>${esc(w.nat_ru)}</td><td>${w.j0 ? yr(w.j0) : '—'}</td><td>${esc(w.stay_ru)}</td><td>${esc(w.lang)}${w.translation ? ' (пер.)' : ''}</td><td class="n">${fmt(w.words_sib)}</td><td class="n">${fmt(w.per10k, 1)}</td></tr>`).join('');
+    document.getElementById('lb').innerHTML = rows.map((w) => `<tr class="click" data-id="${esc(w.id)}"><td><a href="#book-${toH(w.id)}">${esc(w.label)}</a>${w.core ? '' : ' <span class="small mute">на проверке</span>'}${w.title_short ? `<br><span class="small mute lib-t" lang="${esc(w.lang)}" data-noi18n>${esc(w.title_short)}</span>` : ''}</td><td>${esc(w.author)}</td><td>${esc(w.nat_ru)}</td><td>${w.j0 ? yr(w.j0) : '—'}</td><td>${esc(w.stay_ru)}</td><td>${esc(w.lang)}${w.translation ? ' (пер.)' : ''}</td><td class="n">${fmt(w.words_sib)}</td><td class="n">${fmt(w.per10k, 1)}</td></tr>`).join('');
     document.getElementById('lc').textContent = `Показано ${rows.length} из ${works.length}.`;
   };
   document.getElementById('lq').addEventListener('input', (e) => { st.q = e.target.value; render(); });
@@ -500,6 +506,44 @@ async function library() {
   document.getElementById('lb').addEventListener('click', (e) => { const tr = e.target.closest('tr[data-id]'); if (tr && e.target.tagName !== 'A') location.hash = 'book-' + toH(tr.dataset.id); });
   render();
 }
+// ---------- цитирование, сообщение об ошибке ----------
+const SITE_URL = 'https://iter-sibiricum.ru/';
+const REPO_ISSUES = 'https://github.com/pavelaleks/iter-sibiricum/issues/new';
+const pad5 = (n) => String(n).padStart(5, '0');
+function nameParts(a) { const t = String(a || '').trim().split(/\s+/); const last = t.pop() || ''; const first = t.join(' '); const PART = /^(von|van|de|du|der|den|la|le|di|da|af|zu)$/i;
+  const ini = t.filter((x) => !PART.test(x)).map((x) => x.split('-').map((y) => y[0] + '.').join('-')).join(' '); const parts = t.filter((x) => PART.test(x)).join(' ');
+  return {last, first, ini: (ini + (parts ? ' ' + parts : '')).trim()}; }
+function cites(w, n) {
+  const N = nameParts(w.author), url = SITE_URL + '#book-' + toH(w.id) + (n ? '-p' + pad5(n) : ''), t = w.title || w.label, d = new Date().toLocaleDateString('ru-RU');
+  const pub = w.publisher || '', imprint = pub && w.place && pub.toLowerCase().includes(String(w.place).toLowerCase()) ? pub : [w.place, pub].filter(Boolean).join(' : ');
+  const pubName = pub.replace(/^[^:,]*[:,]\s*/, '') || pub;
+  const resEn = 'Iter Sibiricum: European travelogues about Siberia, 1800–1930', res = EN ? resEn : 'Iter Sibiricum: европейские травелоги о Сибири, 1800–1930';
+  return {
+    'ГОСТ Р 7.0.100': `${N.last} ${N.ini} ${t} / ${w.author}. — ${imprint || '[Б. м.]'}, ${w.year}. — Текст : электронный // ${res} : [сайт]. — URL: ${url} (дата обращения: ${d})${n ? '. — Абз. ' + n : ''}.`,
+    'Chicago': `${N.last}, ${N.first}. ${t}. ${[w.place, pubName].filter(Boolean).join(': ')}, ${w.year}. ${n ? `Para. ${n}. ` : ''}Digital text in ${resEn}. ${url}.`,
+    'BibTeX': `@book{${w.id},\n  author    = {${N.last}, ${N.first}},\n  title     = {${t}},\n  address   = {${w.place || ''}},\n  publisher = {${pubName}},\n  year      = {${w.year}},\n  note      = {Digital text in ${resEn}${n ? `, para.~${n}` : ''}},\n  url       = {${url}}\n}`,
+  };
+}
+function citeDialog(w, n) {
+  let dlg = document.getElementById('citeDlg'); if (!dlg) { dlg = document.createElement('dialog'); dlg.id = 'citeDlg'; dlg.className = 'cite-dlg'; document.body.appendChild(dlg); }
+  const C = cites(w, n);
+  dlg.innerHTML = `<div class="cite-in" data-noi18n><button class="x" aria-label="${EN ? 'Close' : 'Закрыть'}">×</button><h3>${EN ? 'Cite' : 'Цитировать'}: ${esc(w.label)}${n ? (EN ? ', paragraph ' : ', абзац ') + n : ''}</h3>
+    ${Object.entries(C).map(([k, v], i) => `<div class="cite-row"><div class="cite-h"><b>${k}</b><button data-i="${i}">${EN ? 'Copy' : 'Копировать'}</button></div><pre>${esc(v)}</pre></div>`).join('')}
+    <p class="small mute">${EN ? 'Annotation data: ' : 'Данные разметки: '}<a href="https://doi.org/10.5281/zenodo.24531924">doi:10.5281/zenodo.24531924</a>, <a href="https://doi.org/10.5281/zenodo.24532195">doi:10.5281/zenodo.24532195</a>. ${EN ? 'How to cite the resource itself: ' : 'Как цитировать сам ресурс — '}<a href="#data">${EN ? 'Data' : 'раздел «Данные»'}</a>.</p></div>`;
+  dlg.querySelector('.x').onclick = () => dlg.close();
+  dlg.querySelectorAll('[data-i]').forEach((b) => (b.onclick = async () => { try { await navigator.clipboard.writeText(Object.values(C)[+b.dataset.i]); b.textContent = EN ? 'Copied' : 'Скопировано'; } catch (e) {} }));
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  dlg.showModal();
+}
+// ссылка на новую задачу в GitHub с уже заполненным описанием; почта — для тех, у кого нет учётной записи GitHub
+function reportLinks(title, lines) {
+  const body = lines.filter(Boolean).join('\n') + '\n\n' + (EN ? 'What is wrong and how it should be:' : 'Что не так и как должно быть:') + '\n';
+  const gh = `${REPO_ISSUES}?labels=${encodeURIComponent('данные')}&title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+  const ml = `mailto:pavel.alekseev.gasu@gmail.com?subject=${encodeURIComponent('Iter Sibiricum: ' + title)}&body=${encodeURIComponent(body)}`;
+  return `<a href="${esc(gh)}" target="_blank" rel="noopener">${EN ? 'Report an error (GitHub)' : 'Сообщить об ошибке (GitHub)'}</a> <span class="mute">${EN ? 'or' : 'или'}</span> <a href="${esc(ml)}">${EN ? 'by e-mail' : 'письмом'}</a>`;
+}
+
+window.__reportLinks = (...a) => reportLinks(...a);
 async function book(id, par) {
   const [works, groups, routes, SN] = await Promise.all([get('works.json'), get('groups.json'), getRoutes(), get('source_notes.json').catch(() => ({}))]);
   const w = works.find((x) => x.id === id); if (!w) return library();
@@ -507,7 +551,8 @@ async function book(id, par) {
   const r0 = routes.find((x) => x.work === id); const r = r0 && {...r0, stops: r0.stops.filter(inBox)};
   V.innerHTML = `<section class="band"><div class="wrap">${crumbs([['Библиотека', '#library'], [w.label]], 'book-' + toH(id))}
     <div class="reader"><aside>
-      <h2 style="font-size:24px">${esc(w.label)}</h2>
+      <h2 style="font-size:24px">${esc(w.label)}</h2>${w.title ? `<p class="book-title" lang="${esc(w.lang)}" data-noi18n>${esc(w.title)}</p>` : ''}
+      <span class="Z3988" title="${esc('ctx_ver=Z39.88-2004&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.btitle=' + encodeURIComponent(w.title || w.label) + '&rft.au=' + encodeURIComponent(w.author) + '&rft.date=' + w.year + '&rft.place=' + encodeURIComponent(w.place || '') + '&rft.pub=' + encodeURIComponent(w.publisher || '') + '&rft_id=' + encodeURIComponent(SITE_URL + '#book-' + toH(w.id)))}"></span>
       <p><b>${esc(w.author)}</b><br><span class="small mute">${esc(ruOf(NAT_RU, w.nationality || ''))}${w.role ? ' · ' + esc(ruOf(ROLE_RU, w.role)) : ''}${w.gender === 'f' ? ' · женщина-автор' : ''}</span></p>
       <p class="small">Издание: ${yr(w.year)}${w.place ? ', ' + esc(w.place) : ''} · язык текста: ${esc(w.lang)}${w.translation ? ' (перевод с ' + esc(w.orig_lang) + ')' : ''}<br>Поездка: ${w.j0 ? yr(w.j0) : '?'}${w.j1 && w.j1 !== w.j0 ? '–' + yr(w.j1) : ''} · ${esc(w.stay_ru)}<br>Период: ${esc(w.period_ru)}</p>
       <p class="small">${fmt(w.words)} слов, из них о Сибири ${fmt(w.words_sib)}; ${fmt(w.mentions)} упоминаний народов (${fmt(w.per10k, 1)} на 10 тыс.)</p>
@@ -515,6 +560,8 @@ async function book(id, par) {
       <p class="small">${w.sources.map((s) => `<a href="${esc(s)}" rel="noopener">${esc(s.replace('https://', ''))}</a>`).join('<br>')}</p>
       ${r ? `<p class="small"><span>${r.method === 'draft' ? 'Черновик маршрута, на проверке' : 'Маршрут, восстановленный по тексту'}</span>: ${r.stops.map((s) => esc(s[1])).join(r.method === 'draft' ? ', ' : ' → ')}. <a href="#atlas?work=${esc(id)}">Показать на карте</a></p>` : `<p class="small"><a href="#atlas?work=${esc(id)}">география книги на карте</a></p>`}
       <div class="ctl"><button id="onlySib">только о Сибири</button><button id="scanBtn" hidden aria-pressed="false">скан рядом с текстом</button><button id="mapBtn" aria-pressed="false">карта рядом с текстом</button></div>
+      <div class="ctl"><button id="citeBtn" title="${EN ? 'Citation of the book and of the paragraph being read' : 'Ссылка на книгу и на абзац, который читается сейчас'}">цитировать</button><a class="btnlike" href="#evidence?w=${esc(id)}">свидетельства</a></div>
+      <p class="small" id="repLn"></p>
       <label class="small mute">Найти в тексте <input type="search" id="tq" aria-label="Поиск в тексте"></label>
       <p class="small mute" id="tqn"></p>
       <label class="small mute">Подсветить народ <select id="tg"><option value="">все</option>${[...new Set(w.top_groups.map((g) => g[0]))].map((n) => `<option>${esc(n)}</option>`).join('')}</select></label>
@@ -579,7 +626,7 @@ async function book(id, par) {
     if (a) a.scrollIntoView({block: 'center'});
     if (!on) { if (RD) { RD.destroy(); RD = null; } if (curP) { curP.classList.remove('cur'); curP = null; } watchMap(); return; }
     if (scanOn) toggleScan(false);
-    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=60'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=62'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
     if (!mapOn) return;
     RD = await window.Atlas2.reader(mapEl, {work: id, route: r0, PL: Object.fromEntries((await get('places.json')).map((p) => [p.id, p])), bookgeo: (await get('bookgeo.json'))[id], period: w.period,
       onClose: () => toggleMap(false),
@@ -589,10 +636,14 @@ async function book(id, par) {
     watchMap(); track();
   };
   mbtn.addEventListener('click', () => toggleMap(!mapOn));
+  const curPara = () => { const a = curP || anchorP(); return a ? +a.id.slice(1) : 0; };
+  document.getElementById('citeBtn').addEventListener('click', () => citeDialog(w, curPara()));
+  const repUpd = () => { const n = curPara(); document.getElementById('repLn').innerHTML = reportLinks(`${w.label}, ${EN ? 'para.' : 'абз.'} ${n}`, [`${EN ? 'Book' : 'Книга'}: ${w.label} (${w.id})`, `${EN ? 'Paragraph' : 'Абзац'}: ${n}`, `${SITE_URL}#book-${toH(w.id)}-p${pad5(n)}`]); };
+  let repT = 0; const repS = () => { clearTimeout(repT); repT = setTimeout(repUpd, 400); }; addEventListener('scroll', repS, {passive: true}); setTimeout(repUpd, 600);
   // на телефоне кнопка карты всегда под рукой, читатель не листает к началу книги
   document.getElementById('mapFab').addEventListener('click', () => toggleMap(true));
   document.getElementById('txt').addEventListener('mouseover', (e) => { if (!RD) return; const m = e.target.closest('.plm'); RD.hover(m ? m.dataset.pl : null); });
-  atlasDestroy = () => { removeEventListener('scroll', track); if (io2) io2.disconnect(); if (RD) RD.destroy(); };
+  atlasDestroy = () => { removeEventListener('scroll', track); removeEventListener('scroll', repS); if (io2) io2.disconnect(); if (RD) RD.destroy(); };
   let fromMap = null; try { fromMap = sessionStorage.getItem('from:book-' + toH(id)); } catch (e) {}
   const wantMap = (fromMap && /^#atlas(\?|$)/.test(fromMap)) || (() => { try { return localStorage.getItem('bookmap') === '1'; } catch (e) { return false; } })();
   const render = () => {
