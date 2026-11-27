@@ -540,7 +540,8 @@ async function book(id, par) {
 
 // ---------------- связи 3D ----------------
 async function links() {
-  const N = await get('networks.json');
+  const [N, GR] = await Promise.all([get('networks.json'), get('groups.json')]);
+  const GEN = Object.fromEntries(GR.map((g) => [g.id, g.name_en]));
   const pers = Object.keys(N.periods);
   V.innerHTML = `<section class="band"><div class="wrap"><h1>Связи</h1>
     <p>Переключатель над графом выбирает одну из двух сетей. В сети групп ребро соединяет группы, названные в одном предложении абзаца о Сибири; толщина ребра — число таких предложений. Сеть цитирований и заимствований показывает, кто на кого ссылается и у кого заимствует. Граф трёхмерный: его можно вращать, приближать и перетаскивать узлы; щелчок по узлу открывает карточку.</p>
@@ -555,11 +556,29 @@ async function links() {
   const ok = (() => { try { return !!document.createElement('canvas').getContext('webgl'); } catch (e) { return false; } })();
   if (!ok) { el.innerHTML = '<p style="color:#ccc;padding:20px">Браузер не поддерживает WebGL — 3D-граф недоступен.</p>'; return; }
   let mode = 'g', per = pers[2] || pers[0];
+  const lab = document.createElement('div'); lab.className = 'g3lab'; lab.setAttribute('data-noi18n', ''); lab.setAttribute('aria-hidden', 'true');
+  let labNodes = [];
+  const tick = () => {
+    if (!document.body.contains(el)) return;
+    if (FG && labNodes.length) {
+      const W = el.clientWidth, H = el.clientHeight, sp = lab.children, placed = [];
+      // узлы идут по убыванию размера: подпись, которая наложилась бы на уже поставленную, скрывается
+      labNodes.forEach((n, i) => { const e = sp[i]; if (!e) return; if (n.x == null) { e.style.opacity = 0; return; }
+        const c = FG.graph2ScreenCoords(n.x, n.y, n.z), r = 3 * Math.cbrt(n.val) * 1.6;
+        const w = e._w || (e._w = e.offsetWidth), x0 = c.x - w / 2, y0 = c.y + r + 4, bx = [x0 - 3, y0 - 2, x0 + w + 3, y0 + 17];
+        const free = !placed.some((q) => bx[0] < q[2] && bx[2] > q[0] && bx[1] < q[3] && bx[3] > q[1]);
+        const show = free && c.x > 0 && c.x < W && c.y > 0 && c.y < H;
+        if (show) placed.push(bx);
+        e.style.opacity = show ? 1 : 0; e.style.transform = `translate(${Math.round(x0)}px,${Math.round(y0)}px)`; });
+    }
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
   const show = () => {
     let data, legend;
     if (mode === 'g') {
       const d = N.periods[per];
-      data = {nodes: d.nodes.map((n) => ({...n, label: n.name, color: CATC[n.category] || '#999', val: Math.max(1, n.degree / 8)})), links: d.links.map((l) => ({...l}))};
+      data = {nodes: d.nodes.map((n) => ({...n, label: EN ? (GEN[n.id] || n.name) : n.name, color: CATC[n.category] || '#999', val: Math.max(1, n.degree / 8)})), links: d.links.map((l) => ({...l}))};
       legend = Object.entries(CAT).map(([k, v]) => `<span><i style="background:${CATC[k]}"></i>${v}</span>`).join('') + `<span>${d.works} книг, ${d.nodes.length} групп</span>`;
       const top = d.nodes.slice().sort((a, b) => b.betweenness - a.betweenness).slice(0, 5);
       document.getElementById('g3info').innerHTML = 'Главные посредники (betweenness): ' + top.map((n) => `<span>${esc(n.name)}</span> (${fmt(n.betweenness, 2)})`).join(', ');
@@ -583,7 +602,12 @@ async function links() {
         .onNodeClick((n) => { if (mode === 'g') location.hash = 'people-' + toH(n.id); else if (n.kind === 'work') location.hash = 'book-' + toH(n.id); });
       mapRO = new ResizeObserver(() => FG && FG.width(el.clientWidth).height(el.clientHeight)); mapRO.observe(el);
     }
-    FG.__fit = true; FG.graphData(data); FG.d3Force('charge').strength(-90); FG.cameraPosition({x: 0, y: 0, z: mode === 'g' ? 320 : 420});
+    FG.__fit = true; FG.graphData(data);
+    // подписи у самых крупных узлов: HTML-слой поверх сцены, координаты пересчитываются каждый кадр
+    const big = data.nodes.slice().sort((a, b) => b.val - a.val).slice(0, mode === 'g' ? 14 : 16);
+    if (!lab.isConnected) el.appendChild(lab);
+    lab.innerHTML = big.map((n, i) => `<span data-i="${i}">${esc(n.label || n.name || n.id)}</span>`).join('');
+    labNodes = big; FG.d3Force('charge').strength(-90); FG.cameraPosition({x: 0, y: 0, z: mode === 'g' ? 320 : 420});
   };
   show();
   document.getElementById('mG').addEventListener('click', (e) => { mode = 'g'; e.target.classList.add('on'); document.getElementById('mI').classList.remove('on'); show(); });

@@ -364,3 +364,7 @@ html:not([lang=en]) .en-only,html[lang=en] .ru-only{display:none}
 .text p{overflow-wrap:break-word}
 .yr label{white-space:nowrap}.yr input{min-width:0;flex:1 1 120px}
 @media(max-width:820px){.stack td:first-child{padding-inline-start:0;font-weight:560;color:var(--ink)}.stack td:first-child::before{display:none}}
+/* подписи крупных узлов 3D-графа */
+#g3{position:relative}
+.g3lab{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2}
+.g3lab span{position:absolute;left:0;top:0;white-space:nowrap;font-size:12.5px;line-height:1.2;color:#e4ecf2;text-shadow:0 0 3px #0e1a26,0 0 6px #0e1a26;transition:opacity .2s}
