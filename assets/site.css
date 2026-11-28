@@ -51,6 +51,7 @@ nav.menu a.on::after{content:"";position:absolute;left:10px;right:10px;bottom:2p
 .heromap{height:clamp(360px,64vh,720px);border-radius:var(--r)}
 .mapnote{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:13.5px;color:var(--mute)}
 .mapnote i{display:inline-block;width:18px;height:2px;background:var(--acc);vertical-align:4px;margin-right:6px}
+.mapnote i.g{height:0;background:none;border-top:2px dashed var(--mute)}
 .mapnote i.a{height:10px;width:14px;border-radius:50%;background:var(--area);border:1px dashed var(--acc2);vertical-align:-1px}
 .etym{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(24px,5vw,80px);align-items:start}
 .etym .word{font-family:var(--serif);font-size:clamp(30px,3.4vw,44px);line-height:1.1;font-variation-settings:"opsz" 60}

@@ -36,4 +36,5 @@ python3 ../site/pipeline/tools/seo_pages.py 2>/dev/null || true   # страни
 python3 analysis/11_export_lpf.py           # газеттир в Linked Places Format (WHG) и маршруты в GeoJSON
 python3 "$SITE"/pipeline/validation/check_places.py --filter-export   # в газеттир — только места, названные в абзацах корпуса
 python3 "$SITE"/pipeline/validation/check_numbers.py   # числа в текстах сайта против данных (ошибка при расхождении)
+python3 ../site/pipeline/tools/route_gaps.py   # перегоны > 800 км с местами по пути — очередь проверки в рабочем месте
 python3 tools/ingest_queue.py "$SITE" --finalize   # отметить в очереди книги, попавшие в библиотеку

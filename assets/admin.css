@@ -40,3 +40,9 @@ fieldset.mem{border:1px solid var(--line);border-radius:var(--r);padding:16px;ma
 .acard label{display:block;margin-top:8px}
 .acard label input[type=text],.acard label input:not([type]){display:block;width:100%;margin-top:4px}
 .acard label.ck{display:inline-flex;gap:6px;align-items:center}
+
+/* возможные пропуски остановок */
+.gaps{margin:18px 0;padding:12px 16px;border:1px solid var(--line,#ddd);border-radius:8px}
+.gaps .gap{margin-top:12px}
+.gaps ul{margin:6px 0 0;padding-left:18px}
+.gaps li{margin:6px 0}

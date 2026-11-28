@@ -65,7 +65,7 @@ window.Atlas2 = (() => {
     const {get, getRoutes, toH, PER, NAT} = ctx;
     V.innerHTML = `<div class="wrap loading">${T('Загрузка карты…', 'Loading the map…')}</div>`;
     const [works, routes, places, groups, bookgeo, AREAS] = await Promise.all([get('works.json'), getRoutes(), get('places.json'), get('groups.json'), get('bookgeo.json'), get('areas1914.geojson').catch(() => null),
-      loadCSS('assets/vendor/maplibre-gl.css?v=66'), loadJS('assets/vendor/maplibre-gl.js?v=66'), loadJS('assets/vendor/pmtiles.js?v=66')]);
+      loadCSS('assets/vendor/maplibre-gl.css?v=67'), loadJS('assets/vendor/maplibre-gl.js?v=67'), loadJS('assets/vendor/pmtiles.js?v=67')]);
     if (!alive()) return () => {};
     const W = Object.fromEntries(works.map((w) => [w.id, w])), RT = Object.fromEntries(routes.map((r) => [r.work, r]));
     const PL = Object.fromEntries(places.map((p) => [p.id, p]));
@@ -659,7 +659,7 @@ window.Atlas2 = (() => {
   // ---------- карта рядом с текстом книги: путь «доезжает» до абзаца, который читается сейчас ----------
   // reader(el, {work, route, PL, bookgeo, period, onPlace(id), onStop(i)}) → {setPara(n, ids), hover(id), destroy}
   async function reader(el, o) {
-    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=66'), loadJS('assets/vendor/maplibre-gl.js?v=66'), loadJS('assets/vendor/pmtiles.js?v=66')]);
+    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=67'), loadJS('assets/vendor/maplibre-gl.js?v=67'), loadJS('assets/vendor/pmtiles.js?v=67')]);
     if (!hasGL()) { el.innerHTML = `<p class="small mute" style="padding:14px">${T('Браузер не поддерживает WebGL, карта недоступна.', 'This browser does not support WebGL; the map is unavailable.')}</p>`; return {setPara() {}, hover() {}, destroy() {}}; }
     if (!window.__a2proto) { window.__a2proto = new pmtiles.Protocol(); maplibregl.addProtocol('pmtiles', window.__a2proto.tile); }
     let C = palette(el), dead = false, raf = 0, follow = true, userAt = 0, curN = -1, curIds = [], hovId = null;
@@ -758,7 +758,7 @@ window.Atlas2 = (() => {
   // preview(el, {routes, works, ind, areaGeo, onWork(w)}) → {restyle, destroy}: карта на главной — глобус, все проверенные
   // маршруты цветом периода и ареалы по карте 1914 г.; без панели и фильтров, наведение — подпись, щелчок — книга
   async function preview(el, o) {
-    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=66'), loadJS('assets/vendor/maplibre-gl.js?v=66'), loadJS('assets/vendor/pmtiles.js?v=66')]);
+    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=67'), loadJS('assets/vendor/maplibre-gl.js?v=67'), loadJS('assets/vendor/pmtiles.js?v=67')]);
     if (!hasGL() || !el.isConnected) return {restyle() {}, destroy() {}};
     if (!window.__a2proto) { window.__a2proto = new pmtiles.Protocol(); maplibregl.addProtocol('pmtiles', window.__a2proto.tile); }
     const W = Object.fromEntries(o.works.map((w) => [w.id, w])), per = (w) => PERK.indexOf((W[w] || {}).period);
@@ -769,15 +769,17 @@ window.Atlas2 = (() => {
     const lines = [];
     for (const r of o.routes) {
       if (r.method !== 'manual') continue;
-      let prev = null, cur = [], jj = null; const segs = [];
+      // как в атласе: перегон длиннее GAP км без названных мест не выбрасывается, а рисуется пунктиром (gap: 1)
+      let prev = null, cur = [], jj = null; const segs = [], far = [];
       r.stops.forEach((s) => {
         if (s[2] == null || s[3] == null || (s[6] || 1) !== jj) { if (cur.length > 1) segs.push(cur); cur = []; prev = null; }
         jj = s[6] || 1; if (s[2] == null || s[3] == null) return;
         let lo = ulon(s[2]); if (prev != null) { while (lo - prev > 180) lo -= 360; while (prev - lo > 180) lo += 360; } prev = lo;
-        const p = [lo, s[3]]; if (cur.length && km(cur[cur.length - 1], p) > GAP) { if (cur.length > 1) segs.push(cur); cur = []; } cur.push(p);
+        const p = [lo, s[3]]; if (cur.length && km(cur[cur.length - 1], p) > GAP) { far.push([cur[cur.length - 1], p]); if (cur.length > 1) segs.push(cur); cur = []; } cur.push(p);
       });
       if (cur.length > 1) segs.push(cur);
-      if (segs.length) lines.push({type: 'Feature', id: lines.length + 1, properties: {work: r.work, per: per(r.work)}, geometry: {type: 'MultiLineString', coordinates: segs}});
+            if (segs.length) lines.push({type: 'Feature', id: lines.length + 1, properties: {work: r.work, per: per(r.work), gap: 0}, geometry: {type: 'MultiLineString', coordinates: segs}});
+      if (far.length) lines.push({type: 'Feature', id: lines.length + 1, properties: {work: r.work, per: per(r.work), gap: 1}, geometry: {type: 'MultiLineString', coordinates: far}});
     }
     const AG = new Set(o.ind.map((g) => g.id));
     const areas = ((o.areaGeo && o.areaGeo.features) || []).filter((f) => f.properties.groups.some((g) => AG.has(g)));
@@ -794,7 +796,7 @@ window.Atlas2 = (() => {
       bg: {'background-color': C.sea}, land: {'fill-color': C.land}, coast: {'line-color': C.land2}, lakes: {'fill-color': C.sea}, rivers: {'line-color': C.river},
       relief: {'raster-fade-duration': 0, 'raster-saturation': -.12, 'raster-brightness-max': darkP() ? .62 : 1, 'raster-contrast': darkP() ? -.1 : 0},
       ar: {'fill-color': C.acc, 'fill-opacity': .09}, 'ar-edge': {'line-color': C.acc, 'line-opacity': .45},
-      'rt-case': {'line-color': C.paper}, rt: {'line-color': PC()},
+      'rt-case': {'line-color': C.paper}, rt: {'line-color': PC()}, 'rt-gap': {'line-color': PC()},
     });
     map.on('load', () => {
       if (dead) return;
@@ -810,21 +812,24 @@ window.Atlas2 = (() => {
         {id: 'rivers', type: 'line', source: 'base', 'source-layer': 'rivers', filter: ['<=', ['coalesce', ['get', 'scalerank'], 9], ['+', 3.2, ['*', .9, ['zoom']]]], paint: {'line-opacity': .55, 'line-width': .7}},
         {id: 'ar', type: 'fill', source: 'ar', paint: {}},
         {id: 'ar-edge', type: 'line', source: 'ar', paint: {'line-width': .8, 'line-dasharray': [2, 2]}},
-        {id: 'rt-case', type: 'line', source: 'rt', layout: {'line-cap': 'round', 'line-join': 'round'}, paint: {'line-width': ['case', ['boolean', ['feature-state', 'hover'], false], 6, 0]}},
-        {id: 'rt', type: 'line', source: 'rt', layout: {'line-cap': 'round', 'line-join': 'round'}, paint: {'line-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 1, .72], 'line-width': ['interpolate', ['linear'], ['zoom'], 1, ['case', ['boolean', ['feature-state', 'hover'], false], 3.2, 1.3], 5, ['case', ['boolean', ['feature-state', 'hover'], false], 4.5, 2.4]]}},
+        {id: 'rt-case', type: 'line', source: 'rt', filter: ['==', ['get', 'gap'], 0], layout: {'line-cap': 'round', 'line-join': 'round'}, paint: {'line-width': ['case', ['boolean', ['feature-state', 'hover'], false], 6, 0]}},
+        {id: 'rt-gap', type: 'line', source: 'rt', filter: ['==', ['get', 'gap'], 1], paint: {'line-opacity': .6, 'line-dasharray': [1.5, 2.5], 'line-width': ['interpolate', ['linear'], ['zoom'], 1, 1, 5, 1.6]}},
+        {id: 'rt', type: 'line', source: 'rt', filter: ['==', ['get', 'gap'], 0], layout: {'line-cap': 'round', 'line-join': 'round'}, paint: {'line-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 1, .72], 'line-width': ['interpolate', ['linear'], ['zoom'], 1, ['case', ['boolean', ['feature-state', 'hover'], false], 3.2, 1.3], 5, ['case', ['boolean', ['feature-state', 'hover'], false], 4.5, 2.4]]}},
       ].forEach((l) => map.addLayer(l));
       restyle();
       let hov = null;
-      const setHov = (id) => { if (hov === id) return; if (hov != null) map.setFeatureState({source: 'rt', id: hov}, {hover: false}); hov = id; if (id != null) map.setFeatureState({source: 'rt', id}, {hover: true}); };
+      // подсветка всей поездки: сплошные отрезки и пунктирные перегоны одной книги
+      const IDS = {}; lines.forEach((f) => (IDS[f.properties.work] ||= []).push(f.id));
+      const setHov = (w) => { if (hov === w) return; if (hov != null) IDS[hov].forEach((id) => map.setFeatureState({source: 'rt', id}, {hover: false})); hov = w; if (w != null) IDS[w].forEach((id) => map.setFeatureState({source: 'rt', id}, {hover: true})); };
       map.on('mousemove', (e) => {
-        const f = map.queryRenderedFeatures([[e.point.x - 4, e.point.y - 4], [e.point.x + 4, e.point.y + 4]], {layers: ['rt']})[0];
-        map.getCanvas().style.cursor = f ? 'pointer' : ''; setHov(f ? f.id : null);
+        const f = map.queryRenderedFeatures([[e.point.x - 4, e.point.y - 4], [e.point.x + 4, e.point.y + 4]], {layers: ['rt', 'rt-gap']})[0];
+        map.getCanvas().style.cursor = f ? 'pointer' : ''; setHov(f ? f.properties.work : null);
         if (!f) { tip.hidden = true; return; }
-        const w = W[f.properties.work] || {}; tip.innerHTML = `<b>${esc(w.label || f.properties.work)}</b><span class="mute">${w.j0 ? esc(w.j0 + (w.j1 && w.j1 !== w.j0 ? '–' + w.j1 : '')) + ' · ' : ''}${T('щёлкните — открыть книгу', 'click to open the book')}</span>`;
+        const w = W[f.properties.work] || {}; tip.innerHTML = `<b>${esc(w.label || f.properties.work)}</b><span class="mute">${w.j0 ? esc(w.j0 + (w.j1 && w.j1 !== w.j0 ? '–' + w.j1 : '')) + ' · ' : ''}${T('щёлкните — открыть книгу', 'click to open the book')}</span>${f.properties.gap ? `<br><span class="mute small">${T(`пунктир: на перегоне длиннее ${GAP} км автор не называет мест`, `dashed: over ${GAP} km with no places named`)}</span>` : ''}`;
         tip.hidden = false; let x = e.point.x + 12, y = e.point.y + 12; if (x + tip.offsetWidth > box.clientWidth) x = e.point.x - tip.offsetWidth - 8; if (y + tip.offsetHeight > box.clientHeight) y = e.point.y - tip.offsetHeight - 8; tip.style.left = Math.max(4, x) + 'px'; tip.style.top = Math.max(4, y) + 'px';
       });
       map.on('mouseout', () => { tip.hidden = true; setHov(null); });
-      map.on('click', (e) => { const f = map.queryRenderedFeatures([[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]], {layers: ['rt']})[0]; if (f && o.onWork) o.onWork(f.properties.work); });
+      map.on('click', (e) => { const f = map.queryRenderedFeatures([[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]], {layers: ['rt', 'rt-gap']})[0]; if (f && o.onWork) o.onWork(f.properties.work); });
     });
     function restyle() { if (dead || !map.getLayer('rt')) return; C = palette(el); const P = paint(); for (const [id, pr] of Object.entries(P)) for (const [k, v] of Object.entries(pr)) map.setPaintProperty(id, k, v); }
     const mo = new MutationObserver(restyle); mo.observe(document.documentElement, {attributes: true, attributeFilter: ['data-theme']});

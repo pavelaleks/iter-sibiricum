@@ -196,7 +196,7 @@ async function home() {
   <section class="band"><div class="wrap">
     <div class="sechead"><h2>Маршруты путешественников</h2><a href="#atlas">Открыть атлас</a></div>
     <div class="mapbox heromap" id="homeMap"></div>
-    <div class="mapnote" data-noi18n><span class="pv-per">${['--p1', '--p2', '--p3', '--p4', '--p5'].map((v, k) => `<span><i style="background:var(${v})"></i>${esc(EN ? ['before 1855', '1856–1880', '1881–1904', '1905–1917', '1918–1930'][k] : ['до 1855', '1856–1880', '1881–1904', '1905–1917', '1918–1930'][k])}</span>`).join('')}</span><span>${EN ? `${manual} routes reconstructed from the texts; each stop is supported by a paragraph of the source. The routes are provisional: they were reconstructed by a language model and are being reviewed by the project’s experts. Line colour indicates the period of the journey. Hover over a route to see the book; click to open it.` : `${pl(manual, ['маршрут восстановлен', 'маршрута восстановлены', 'маршрутов восстановлено'])} по тексту книг; каждая остановка подтверждена абзацем источника. Маршруты предварительные: их восстановила языковая модель, эксперты проекта их проверяют. Цвет линии обозначает период поездки. При наведении на маршрут появляется название книги, щелчок открывает её текст.`}</span><span><i class="a"></i>${EN ? 'areas of indigenous peoples after the Ethnographic Map of Asiatic Russia (1914)' : 'ареалы коренных народов по «Этнографической карте Азиатской России» (1914)'}</span></div>
+    <div class="mapnote" data-noi18n><span class="pv-per">${['--p1', '--p2', '--p3', '--p4', '--p5'].map((v, k) => `<span><i style="background:var(${v})"></i>${esc(EN ? ['before 1855', '1856–1880', '1881–1904', '1905–1917', '1918–1930'][k] : ['до 1855', '1856–1880', '1881–1904', '1905–1917', '1918–1930'][k])}</span>`).join('')}</span><span>${EN ? `${manual} routes reconstructed from the texts; each stop is supported by a paragraph of the source. The routes are provisional: they were reconstructed by a language model and are being reviewed by the project’s experts. Line colour indicates the period of the journey. Hover over a route to see the book; click to open it.` : `${pl(manual, ['маршрут восстановлен', 'маршрута восстановлены', 'маршрутов восстановлено'])} по тексту книг; каждая остановка подтверждена абзацем источника. Маршруты предварительные: их восстановила языковая модель, эксперты проекта их проверяют. Цвет линии обозначает период поездки. При наведении на маршрут появляется название книги, щелчок открывает её текст.`}</span><span><i class="g"></i>${EN ? 'dashed: a stretch of more than 800 km where the author names no places' : 'пунктир — перегон длиннее 800 км, на котором автор не называет мест'}</span><span><i class="a"></i>${EN ? 'areas of indigenous peoples after the Ethnographic Map of Asiatic Russia (1914)' : 'ареалы коренных народов по «Этнографической карте Азиатской России» (1914)'}</span></div>
   </div></section>
   <section class="band alt"><div class="wrap">
     <h2>Что показывает корпус</h2>
@@ -247,7 +247,7 @@ async function home() {
   let first = !reduce;
   (async () => {
     const el = document.getElementById('homeMap'); if (!el) return;
-    if (!window.Atlas2) { try { await new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'assets/atlas2.js?v=66'; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); } catch (x) { return; } }
+    if (!window.Atlas2) { try { await new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'assets/atlas2.js?v=67'; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); } catch (x) { return; } }
     if (!el.isConnected) return;
     const pv = await Atlas2.preview(el, {routes, works, ind, areaGeo: AGEO, onWork: (w) => location.hash = 'book-' + toH(w)});
     if (!el.isConnected) { pv.destroy(); return; }
@@ -366,11 +366,11 @@ async function illustrations() {
 
 // ---------------- атлас ----------------
 async function research(page) {
-  if (!window.Research) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/research.js?v=66'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  if (!window.Research) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/research.js?v=67'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   await window.Research[page](V, {get, esc, toH, fmt, PER, NAT, EN, cites, citeDialog, reportLinks, SITE_URL, pad5, project});
 }
 async function atlas2() {
-  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=66'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=67'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   const d = await window.Atlas2.render(V, {get, getRoutes, esc, toH, PER, NAT});
   if (/^#atlas(\?|$)/.test(location.hash)) atlasDestroy = d; else d();
 }
@@ -633,7 +633,7 @@ async function book(id, par) {
     if (a) a.scrollIntoView({block: 'center'});
     if (!on) { if (RD) { RD.destroy(); RD = null; } if (curP) { curP.classList.remove('cur'); curP = null; } watchMap(); return; }
     if (scanOn) toggleScan(false);
-    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=66'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=67'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
     if (!mapOn) return;
     RD = await window.Atlas2.reader(mapEl, {work: id, route: r0, PL: Object.fromEntries((await get('places.json')).map((p) => [p.id, p])), bookgeo: (await get('bookgeo.json'))[id], period: w.period,
       onClose: () => toggleMap(false),

@@ -71,9 +71,9 @@ function logout() { LS.set('is_token', null); TOKEN = null; location.hash = ''; 
 // ---------- каркас ----------
 let D = null;
 async function load() {
-  const [works, routes, places, jw, rev, queue] = await Promise.all([site('data/works.json'), site('data/routes.json'), site('data/places.json'), site('data/journeys_works.json').catch(() => []),
+  const [works, routes, places, jw, gaps, rev, queue] = await Promise.all([site('data/works.json'), site('data/routes.json'), site('data/places.json'), site('data/journeys_works.json').catch(() => []), site('data/review/route_gaps.json').catch(() => ({works: {}})),
     readJSON('data/review/journeys_review.json', {}), readJSON('data/review/books_queue.json', [])]);
-  D = {works, routes, places, rev: rev.data, queue: queue.data, W: Object.fromEntries(works.map((w) => [w.id, w])), P: Object.fromEntries(places.map((p) => [p.id, p])), R: Object.fromEntries(routes.map((r) => [r.work, r])), texts: {}};
+  D = {works, routes, places, gaps: gaps.works || {}, rev: rev.data, queue: queue.data, W: Object.fromEntries(works.map((w) => [w.id, w])), P: Object.fromEntries(places.map((p) => [p.id, p])), R: Object.fromEntries(routes.map((r) => [r.work, r])), texts: {}};
 }
 async function start() {
   if (!TOKEN || !WHO) return login();
@@ -94,17 +94,17 @@ function statusOf(w) { const v = D.rev[w]; if (v) return v.status; const r = D.R
 function routes(work) {
   if (work) return editRoute(work);
   const order = ['draft', 'none', 'checked', 'reconstructed', 'verified', 'no_journey'];
-  const rows = D.works.map((w) => ({w, s: statusOf(w.id), n: (D.rev[w.id] ? D.rev[w.id].stops : (D.R[w.id] || {stops: []}).stops).length})).sort((a, b) => order.indexOf(a.s) - order.indexOf(b.s) || a.w.year - b.w.year);
+  const rows = D.works.map((w) => ({w, s: statusOf(w.id), g: (D.gaps[w.id] || []).length, n: (D.rev[w.id] ? D.rev[w.id].stops : (D.R[w.id] || {stops: []}).stops).length})).sort((a, b) => order.indexOf(a.s) - order.indexOf(b.s) || a.w.year - b.w.year);
   const cnt = (s) => rows.filter((r) => r.s === s).length;
   A.innerHTML = `<section class="band"><div class="wrap">
     <h1>Проверка маршрутов</h1>
     <p>Откройте книгу, сверьте остановки с абзацами и сохраните решение. Подтверждённый маршрут сразу рисуется на карте сайта линией с пометкой «подтверждён экспертом».</p>
-    <div class="ctl"><input type="search" id="rf" placeholder="Автор или книга"> ${order.map((s) => `<button data-s="${s}">${ST[s][0]} · ${cnt(s)}</button>`).join('')}</div>
-    <div class="scroll"><table><thead><tr><th>Книга</th><th>Автор</th><th class="n">Поездка</th><th class="n">Остановок</th><th>Статус</th><th>Кто проверил</th></tr></thead><tbody id="rt"></tbody></table></div>
+    <div class="ctl"><input type="search" id="rf" placeholder="Автор или книга"> ${order.map((s) => `<button data-s="${s}">${ST[s][0]} · ${cnt(s)}</button>`).join('')} <button data-s="gaps" title="Перегоны длиннее 800 км, внутри которых текст называет место по пути">возможны пропуски · ${rows.filter((r) => r.g).length}</button></div>
+    <div class="scroll"><table><thead><tr><th>Книга</th><th>Автор</th><th class="n">Поездка</th><th class="n">Остановок</th><th class="n" title="Перегоны, где могли пропустить остановку">Пропуски?</th><th>Статус</th><th>Кто проверил</th></tr></thead><tbody id="rt"></tbody></table></div>
   </div></section>`;
   let fs = '';
   const draw = () => { const q = document.getElementById('rf').value.toLowerCase();
-    document.getElementById('rt').innerHTML = rows.filter((r) => (!fs || r.s === fs) && (!q || (r.w.label + r.w.author).toLowerCase().includes(q))).map((r) => `<tr class="click" data-w="${r.w.id}"><td><a href="#routes/${r.w.id}">${esc(r.w.label)}</a></td><td>${esc(r.w.author)}</td><td class="n">${r.w.j0 || '?'}${r.w.j1 && r.w.j1 !== r.w.j0 ? '–' + r.w.j1 : ''}</td><td class="n">${r.n}</td><td><span class="status ${ST[r.s][1]}">${ST[r.s][0]}</span></td><td class="small">${esc((D.rev[r.w.id] || {}).reviewer || '')} ${esc((D.rev[r.w.id] || {}).date || '')}</td></tr>`).join(''); };
+    document.getElementById('rt').innerHTML = rows.filter((r) => (!fs || (fs === 'gaps' ? r.g : r.s === fs)) && (!q || (r.w.label + r.w.author).toLowerCase().includes(q))).map((r) => `<tr class="click" data-w="${r.w.id}"><td><a href="#routes/${r.w.id}">${esc(r.w.label)}</a></td><td>${esc(r.w.author)}</td><td class="n">${r.w.j0 || '?'}${r.w.j1 && r.w.j1 !== r.w.j0 ? '–' + r.w.j1 : ''}</td><td class="n">${r.n}</td><td class="n">${r.g || ''}</td><td><span class="status ${ST[r.s][1]}">${ST[r.s][0]}</span></td><td class="small">${esc((D.rev[r.w.id] || {}).reviewer || '')} ${esc((D.rev[r.w.id] || {}).date || '')}</td></tr>`).join(''); };
   document.getElementById('rf').addEventListener('input', draw);
   document.querySelectorAll('[data-s]').forEach((b) => b.addEventListener('click', () => { fs = fs === b.dataset.s ? '' : b.dataset.s; document.querySelectorAll('[data-s]').forEach((x) => x.classList.toggle('on', x.dataset.s === fs)); draw(); }));
   document.getElementById('rt').addEventListener('click', (e) => { const tr = e.target.closest('tr'); if (tr && e.target.tagName !== 'A') location.hash = 'routes/' + tr.dataset.w; });
@@ -134,6 +134,7 @@ async function editRoute(w) {
           <form id="newf" class="aform row"><input id="nn" placeholder="Название"><input id="nlat" placeholder="широта, напр. 52.29" inputmode="decimal"><input id="nlon" placeholder="долгота, напр. 104.28" inputmode="decimal"><button type="submit">Добавить</button></form></details>
       </div>
     </div>
+    <div id="gapbox"></div>
     <div id="para" class="para"></div>
     <form id="savef" class="aform">
       <label>Комментарий<textarea id="note" rows="2" placeholder="Что исправлено, что спорно">${esc(v ? v.note || '' : '')}</textarea></label>
@@ -152,7 +153,23 @@ async function editRoute(w) {
     document.getElementById('sl').innerHTML = stops.map((s, i) => `<li data-i="${i}"><div class="sh"><b>${esc(s.name)}</b>
       <span class="sb"><button type="button" data-a="up" title="Выше" aria-label="Выше">↑</button><button type="button" data-a="down" title="Ниже" aria-label="Ниже">↓</button><button type="button" data-a="del" title="Убрать" aria-label="Убрать">✕</button></span></div>
       <div class="sp small">абзац <input class="pid" value="${esc(s.pid || '')}" size="6" aria-label="Номер абзаца"> <a href="#" data-a="show">показать</a>${String(s.place).startsWith('new:') ? ` · координаты <input class="crd" data-k="lat" value="${s.lat ?? ''}" size="6" aria-label="Широта" placeholder="шир."> <input class="crd" data-k="lon" value="${s.lon ?? ''}" size="6" aria-label="Долгота" placeholder="долг."> <span class="mute">${({geonames: 'GeoNames', wikidata: 'Wikidata', expert: 'эксперт', estimate: 'приблизительно', geonames_ctx: 'приблизительно (GeoNames)', wikidata_ctx: 'приблизительно (Wikidata)'})[s.coord_source] || 'не установлены'}</span>` : ''}${s.quote ? ` · <span class="mute">«${esc(s.quote)}»</span>` : ''}</div></li>`).join('') || '<li class="mute">Остановок нет.</li>';
-    redraw();
+    redraw(); gapBox();
+  };
+  // перегоны > 800 км, внутри которых текст называет место по пути (pipeline/tools/route_gaps.py)
+  const gapBox = () => {
+    const G = (D.gaps[w] || []).map((g) => ({...g, candidates: g.candidates.filter((c) => !stops.some((s) => s.place === c.place))})).filter((g) => g.candidates.length);
+    document.getElementById('gapbox').innerHTML = G.length ? `<details open class="gaps"><summary><b>Возможно, пропущены остановки</b> · ${G.length}</summary>
+      <p class="small mute">Перегоны длиннее 800 км (на карте — пунктир), внутри которых текст называет место по пути. Упоминание — ещё не посещение: откройте абзац и вставляйте только места, где автор был или проезжал. Мест, которых нет в справочнике, этот список не видит — их добавляйте вручную.</p>
+      ${G.map((g, gi) => `<div class="gap"><div><b>${esc(g.from)} → ${esc(g.to)}</b> <span class="mute">${g.km} км</span></div><ul>${g.candidates.map((c, ci) => `<li><b>${esc(c.name)}</b> · абзац ${+c.pid} · <a href="#" data-g="${gi}" data-c="${ci}" data-ga="show">показать</a> · <a href="#" data-g="${gi}" data-c="${ci}" data-ga="add">вставить</a><div class="small mute">${esc(c.snippet)}</div></li>`).join('')}</ul></div>`).join('')}</details>` : '';
+    document.querySelectorAll('[data-ga]').forEach((a) => a.addEventListener('click', (e) => {
+      e.preventDefault(); const g = G[+a.dataset.g], c = g.candidates[+a.dataset.c];
+      if (a.dataset.ga === 'show') return showPara(c.pid);
+      // вставка после начала перегона и уже вставленных остановок с меньшим номером абзаца
+      let i = stops.findIndex((s) => s.name === g.from); if (i < 0) i = stops.length - 1;
+      while (i + 1 < stops.length && stops[i + 1].name !== g.to && +(stops[i + 1].pid || 0) <= +c.pid) i++;
+      stops.splice(i + 1, 0, {place: c.place, name: c.name, lat: c.lat, lon: c.lon, pid: c.pid, quote: '', journey: stops[i] ? stops[i].journey || 1 : 1});
+      list(); showPara(c.pid); toast(`${c.name}: вставлено после «${stops[i] ? stops[i].name : ''}». Проверьте порядок и сохраните маршрут.`);
+    }));
   };
   const showPara = (pid) => { const t = T[pid]; document.getElementById('para').innerHTML = t ? `<h3>Абзац ${esc(+pid)}</h3><p class="src">${esc(t)}</p>` : '<p class="mute">Абзаца с таким номером нет.</p>'; };
   document.getElementById('sl').addEventListener('click', (e) => {
