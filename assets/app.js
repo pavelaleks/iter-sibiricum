@@ -195,8 +195,8 @@ async function home() {
   </section>
   <section class="wrap">
     <div class="doors">
-      <div class="door"><a class="dt" href="#library">Читать источники</a><span class="dd">Полные тексты ${pl(works.length, ['книги', 'книг', 'книг'])} с подсветкой названий народов, поиском и постоянной ссылкой на каждый абзац.</span><span class="dn">Библиотека</span></div>
-      <div class="door"><a class="dt" href="#atlas">Проследить маршруты</a><span class="dd">Пути путешественников по периодам, места, о которых они писали, и ареалы народов.</span><span class="dn">Атлас</span></div>
+      <div class="door"><a class="dt" href="#library">Библиотека источников</a><span class="dd">Полные тексты ${pl(works.length, ['книги', 'книг', 'книг'])} с подсветкой названий народов, поиском и постоянной ссылкой на каждый абзац.</span><span class="dn">Библиотека</span></div>
+      <div class="door"><a class="dt" href="#atlas">Маршруты путешествий</a><span class="dd">Маршруты путешественников по периодам, упомянутые в книгах места и ареалы народов по этнографической карте 1914 года.</span><span class="dn">Атлас</span></div>
       <div class="door"><a class="dt" href="#peoples">Как описывали народы</a><span class="dd">Кто и когда писал о каждом народе, в каких выражениях и в связи с какими сюжетами; цитаты из источников.</span><span class="chips">${top.map((g) => `<a class="chip" href="#people-${toH(g.id)}">${esc(g.name.split(' (')[0].split(' /')[0])}</a>`).join('')}</span><span class="dn">Народы</span></div>
       <div class="door"><a class="dt" href="#analytics">Закономерности в корпусе</a><span class="dd">Частоты по десятилетиям, дискурсы, сети совместных упоминаний, ссылки на предшественников и общие отрывки текста.</span><span class="dn">Аналитика и связи</span></div>
     </div>
@@ -210,7 +210,7 @@ async function home() {
     <h2>Что показывает корпус</h2>
     <div class="findings">
       ${SA ? `<div><div class="k">24 и 6%</div><h3>Оценка связана с личным наблюдением</h3><p>Положительные оценки встречаются в 24% описаний, сделанных по личному наблюдению, и в 6% — по пересказу, книгам или обобщениям (230 описаний из 61 книги; с поправкой на период, страну и тип поездки отношение шансов ${fmt(mod.OR, 1)}, 95% ДИ ${fmt(mod.lo, 1)}–${fmt(mod.hi, 1)}). Речь идёт о статистической связи, а не о причинной зависимости; разметка выборки предварительная.</p><a href="#analytics">Модели и рамки описания</a></div>` : ''}
-      <div><div class="k">${fmt(100 * e0.share, 1)} → ${fmt(100 * e1.share, 1)}%</div><h3>Мотив вымирания становится частотнее</h3><p>Такова его доля в абзацах о коренных народах до 1855 года и в 1905–1917 годах (у второй цифры широкий интервал: ${fmt(100 * e1.lo, 1)}–${fmt(100 * e1.hi, 1)}%, ${e1.works} книг). В те же десятилетия внимание к каторге сменяется вниманием к переселенцам.</p><a href="#analytics-ngram">Ngram и дискурсы</a></div>
+      <div><div class="k">${fmt(100 * e0.share, 1)} → ${fmt(100 * e1.share, 1)}%</div><h3>Мотив вымирания становится частотнее</h3><p>Доля абзацев о коренных народах со словами-маркерами этого мотива в книгах о поездках до 1855 года и 1905–1917 годов (у второй цифры широкий интервал: ${fmt(100 * e1.lo, 1)}–${fmt(100 * e1.hi, 1)}%, ${e1.works} книг). В англоязычных абзацах о Сибири из книг 1881–1904 годов слово <i>settlers</i> встречается втрое реже, чем <i>convicts</i>, а в книгах, изданных после 1905 года, — почти так же часто.</p><a href="#analytics-ngram">Ngram и дискурсы</a></div>
       <div><div class="k">${fmt(reuse.length)}</div><h3>Общие отрывки в разных книгах</h3><p>Число пар абзацев из разных книг с общими фрагментами текста: цитаты с указанием автора, цитаты в кавычках, самоповторы и совпадения без указания источника.</p><a href="#links?m=i">Сеть ссылок и общих отрывков</a></div>
     </div>
   </div></section>
@@ -236,7 +236,7 @@ async function home() {
         <dt>Тексты</dt><dd><a href="${REPO}/tree/main/texts">${fmt(works.length)} файлов JSON</a> с абзацами и разметкой</dd>
         <dt>Таблицы</dt><dd><a href="${REPO}/tree/main/pipeline/data">упоминания, места, маршруты, разметка выборки</a> в CSV</dd>
         <dt>Код</dt><dd><a href="${REPO}/tree/main/pipeline/analysis">скрипты на Python</a>: от очистки распознанного текста до сборки сайта</dd>
-        <dt>Проверки</dt><dd><a href="${REPO}/tree/main/pipeline/validation">выборки и протоколы</a> оценки качества</dd>
+        <dt>Проверки</dt><dd><a href="${REPO}/tree/main/pipeline/validation">скрипты</a> сверки данных с текстами книг</dd>
         <dt>Лицензии</dt><dd>каталог и разметка CC BY 4.0, атлас CC BY-NC 4.0, код MIT</dd>
       </dl>
     </div>
@@ -255,7 +255,7 @@ async function home() {
   let first = !reduce;
   (async () => {
     const el = document.getElementById('homeMap'); if (!el) return;
-    if (!window.Atlas2) { try { await new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'assets/atlas2.js?v=70'; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); } catch (x) { return; } }
+    if (!window.Atlas2) { try { await new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'assets/atlas2.js?v=71'; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); } catch (x) { return; } }
     if (!el.isConnected) return;
     const pv = await Atlas2.preview(el, {routes, works, ind, areaGeo: AGEO, onWork: (w) => location.hash = 'book-' + toH(w)});
     if (!el.isConnected) { pv.destroy(); return; }
@@ -373,11 +373,11 @@ async function illustrations() {
 
 // ---------------- атлас ----------------
 async function research(page) {
-  if (!window.Research) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/research.js?v=70'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  if (!window.Research) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/research.js?v=71'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   await window.Research[page](V, {get, esc, toH, fmt, PER, NAT, EN, cites, citeDialog, reportLinks, SITE_URL, pad5, project});
 }
 async function atlas2() {
-  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=70'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=71'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   const d = await window.Atlas2.render(V, {get, getRoutes, esc, toH, PER, NAT});
   if (/^#atlas(\?|$)/.test(location.hash)) atlasDestroy = d; else d();
 }
@@ -642,7 +642,7 @@ async function book(id, par) {
     if (a) a.scrollIntoView({block: 'center'});
     if (!on) { if (RD) { RD.destroy(); RD = null; } if (curP) { curP.classList.remove('cur'); curP = null; } watchMap(); return; }
     if (scanOn) toggleScan(false);
-    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=70'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=71'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
     if (!mapOn) return;
     RD = await window.Atlas2.reader(mapEl, {work: id, route: r0, PL: Object.fromEntries((await get('places.json')).map((p) => [p.id, p])), bookgeo: (await get('bookgeo.json'))[id], period: w.period,
       onClose: () => toggleMap(false),
@@ -690,7 +690,7 @@ async function book(id, par) {
 
 // ---------------- связи (assets/links.js) ----------------
 async function links() {
-  if (!window.Links) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/links.js?v=70'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  if (!window.Links) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/links.js?v=71'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   await window.Links.render(V, {get, esc, toH, fmt, PER, NAT, EN, CATC});
 }
 function loadScript(src) { return new Promise((res, rej) => { if (window.ForceGraph3D) return res(); const s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); }); }

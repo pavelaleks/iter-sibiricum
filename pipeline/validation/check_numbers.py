@@ -38,6 +38,14 @@ check('Размечено экспертами (не моделью)', None, int
 check('Фрагментов об отношениях в выборке (метод)', site(r'\d+ описаний коренных народов и (\d+) фрагментов'), len(R), 'pipeline/data/expert_relations_v04.csv')
 check('Фрагментов без выраженных отношений', site(r'в (\d+) фрагментах отношения между группами не выражены'), int((R.true_type == 'none').sum()))
 check('Предложений с отношениями (аналитика)', site(r'<p>(\d+) предложени'), int((R.true_type != 'none').sum()))
+# утверждение на главной: settlers / convicts в англоязычных абзацах о Сибири (по году издания)
+NG = json.load(open(ROOT / 'data/ngram_en.json', encoding='utf-8')); YT = {int(k): v for k, v in NG['year_totals'].items()}
+def pm(w, lo, hi):
+    c = {int(k): v for k, v in NG['ngrams'][w].items()}; t = sum(v for y, v in YT.items() if lo <= y <= hi)
+    return sum(v for y, v in c.items() if lo <= y <= hi) / t * 1e6
+r1 = pm('convicts', 1881, 1904) / pm('settlers', 1881, 1904); r2 = pm('convicts', 1905, 1940) / pm('settlers', 1905, 1940)
+check('convicts/settlers 1881–1904 «втрое»', 'втрое' if 'встречается втрое реже' in APP else None, 'втрое' if 2.5 <= r1 <= 3.5 else f'{r1:.2f}', f'отношение {r1:.2f}')
+check('convicts/settlers после 1905 «почти так же часто»', 'почти так же' if 'почти так же часто' in APP else None, 'почти так же' if r2 <= 1.3 else f'{r2:.2f}', f'отношение {r2:.2f}')
 # числа корпуса (книги, страны, маршруты) подставляются на сайте из данных и здесь не сверяются
 pc = ROOT / 'data/places_count.json'
 if pc.exists():
