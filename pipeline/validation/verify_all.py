@@ -51,6 +51,15 @@ AUTH = {'Gmelin': r'\bGmelin', 'Pallas': r'\bPallas\b', 'Castrén': r'\bCastr[é
 # топонимы и предметы, названные по фамилии, — не ссылки на автора
 NOT_PERSON = re.compile(r'Humboldt(?:\s+(?:Bay|River|Glacier|Current|Mountains|Range|county)|ia\b)|Pallas[’\']?s?\s+(?:cat|sand-?grouse|warbler|bunting|squirrel|iron)|Cape\s+Cochrane|Lake\s+Middendorf', re.I)
 ex = collections.defaultdict(list); cnt = collections.Counter(); books = collections.defaultdict(set)
+where = collections.defaultdict(list)   # (книга, авторитет) → абзацы с упоминанием: доказательства для рёбер сети
+# год, с которого человек известен в связи с Сибирью и Азией (начало поездок или работы, иначе первое издание):
+# книга, вышедшая раньше, не может его упоминать — совпадение фамилии означает другого человека
+# (у Коцебу, 1802, «Atkinson» — художник Джон Аткинсон; у Хилла, 1854, «Knox» — не Т. Нокс).
+# Берётся начало деятельности, а не год книги: Кокрейн встречал Добелла на Камчатке, Эрман ездил с Ханстеном.
+AUTH_FROM = {'Strahlenberg': 1720, 'Gmelin': 1733, 'Krasheninnikov': 1737, 'Steller': 1737, 'Pallas': 1768, 'Beniowski': 1770, 'Humboldt': 1799,
+             'Dobell': 1798, 'Hansteen': 1819, 'Wrangell': 1820, 'Cochrane': 1820, 'Erman': 1828, 'Castrén': 1838, 'Middendorff': 1842, 'Dostoevsky': 1846,
+             'Huc': 1844, 'Atkinson': 1848, 'Schrenck': 1853, 'Maack': 1853, 'Ahlqvist': 1853, 'Ravenstein': 1855, 'Radloff': 1859, 'Michie': 1863,
+             'Krapotkin': 1862, 'Kennan': 1865, 'Knox': 1866, 'Bush (R.J.)': 1865, 'Meignan': 1873, 'Lansdell': 1879, 'de Windt': 1887, 'Nansen': 1888}
 for w, meta in W.items():
     own = nfd(surname(meta.get('author', '')))
     for p in paras(w):
@@ -61,6 +70,7 @@ for w, meta in W.items():
             n = len(re.findall(rx, t))
             if n:
                 cnt[a] += n; books[a].add(w)
+                if len(where[(w, a)]) < 15: where[(w, a)].append(p[0])
                 if len(ex[a]) < 3: ex[a].append(f'{w}_p{p[0]}')
 cit = sorted(({'name': a, 'books': len(books[a]), 'mentions': cnt[a], 'examples': ex[a]} for a in cnt), key=lambda x: (-x['books'], -x['mentions']))
 OUT['citations'] = cit
@@ -70,15 +80,19 @@ def tgt_name(t):
     n = nodes.get(t, {})
     if n.get('kind') == 'authority': return n.get('label') or t.split(':', 1)[-1]
     return surname(W.get(t, {}).get('author', ''))
-ok_edges = []
+ok_edges, cite_ev, anachr = [], {}, []
 for l in N['links']:
     if l.get('type') != 'cites': continue
     a = tgt_name(l['target']); src = l['source']
     key = next((k for k in AUTH if nfd(k) == nfd(a) or nfd(k).split()[-1] == nfd(a).split()[-1]), None)
-    if key and src in books.get(key, set()): ok_edges.append(f"{src}>{l['target']}")
+    if key and src in books.get(key, set()):
+        if (W.get(src, {}).get('year') or 9999) < AUTH_FROM.get(key, 0):
+            anachr.append(f"{src}>{l['target']}"); continue
+        ok_edges.append(f"{src}>{l['target']}"); cite_ev[f"{src}>{l['target']}"] = where[(src, key)]
 OUT['cite_edges'] = sorted(ok_edges)
+OUT['cite_ev'] = dict(sorted(cite_ev.items()))   # абзацы, где фамилия названа (для панели сети «Связи»)
 n_cites = sum(1 for l in N['links'] if l.get('type') == 'cites')
-REP.append(('Ссылки на предшественников', f"{len(cit)} авторитетов; рёбер сети подтверждено {len(ok_edges)} из {n_cites} (остальные — самоупоминания или не найдены)",
+REP.append(('Ссылки на предшественников', f"{len(cit)} авторитетов; рёбер сети подтверждено {len(ok_edges)} из {n_cites} (остальные — самоупоминания, не найдены или анахронизмы: {', '.join(anachr) or 'нет'})",
             'Чаще всего (число книг других авторов): ' + ', '.join(f"{c['name']} ({c['books']})" for c in cit[:8])))
 
 # ---------- 2. остановки маршрутов и 3. краткие описания ----------

@@ -112,7 +112,7 @@ async function route(e) {
     else if (h === 'library') await library();
     else if (h.startsWith('book-')) { const m = h.slice(5).match(/^(.*?)(?:-p(\d+))?$/); await book(fromH(m[1]), m[2]); }
     else if (h === 'illustrations' || h.startsWith('illustrations?')) await illustrations();
-    else if (h === 'links') await links();
+    else if (h === 'links' || h.startsWith('links?')) await links();
     else if (h.startsWith('analytics')) await analytics();
     else if (h === 'publications') await publications();
     else if (h === 'evidence' || h.startsWith('evidence?')) await research('evidence');
@@ -255,7 +255,7 @@ async function home() {
   let first = !reduce;
   (async () => {
     const el = document.getElementById('homeMap'); if (!el) return;
-    if (!window.Atlas2) { try { await new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'assets/atlas2.js?v=68'; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); } catch (x) { return; } }
+    if (!window.Atlas2) { try { await new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'assets/atlas2.js?v=69'; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); } catch (x) { return; } }
     if (!el.isConnected) return;
     const pv = await Atlas2.preview(el, {routes, works, ind, areaGeo: AGEO, onWork: (w) => location.hash = 'book-' + toH(w)});
     if (!el.isConnected) { pv.destroy(); return; }
@@ -373,11 +373,11 @@ async function illustrations() {
 
 // ---------------- атлас ----------------
 async function research(page) {
-  if (!window.Research) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/research.js?v=68'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  if (!window.Research) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/research.js?v=69'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   await window.Research[page](V, {get, esc, toH, fmt, PER, NAT, EN, cites, citeDialog, reportLinks, SITE_URL, pad5, project});
 }
 async function atlas2() {
-  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=68'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=69'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   const d = await window.Atlas2.render(V, {get, getRoutes, esc, toH, PER, NAT});
   if (/^#atlas(\?|$)/.test(location.hash)) atlasDestroy = d; else d();
 }
@@ -642,7 +642,7 @@ async function book(id, par) {
     if (a) a.scrollIntoView({block: 'center'});
     if (!on) { if (RD) { RD.destroy(); RD = null; } if (curP) { curP.classList.remove('cur'); curP = null; } watchMap(); return; }
     if (scanOn) toggleScan(false);
-    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=68'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=69'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
     if (!mapOn) return;
     RD = await window.Atlas2.reader(mapEl, {work: id, route: r0, PL: Object.fromEntries((await get('places.json')).map((p) => [p.id, p])), bookgeo: (await get('bookgeo.json'))[id], period: w.period,
       onClose: () => toggleMap(false),
@@ -688,84 +688,10 @@ async function book(id, par) {
   document.getElementById('tg').addEventListener('change', (e) => { hg = e.target.value; render(); });
 }
 
-// ---------------- связи 3D ----------------
+// ---------------- связи (assets/links.js) ----------------
 async function links() {
-  const [N, GR, VF] = await Promise.all([get('networks.json'), get('groups.json'), getV()]);
-  const okCite = new Set(VF.cite_edges || []);
-  const GEN = Object.fromEntries(GR.map((g) => [g.id, g.name_en]));
-  const pers = Object.keys(N.periods);
-  V.innerHTML = `<section class="band"><div class="wrap"><h1>Связи</h1>
-    <p>Над графом можно выбрать одну из двух сетей. В сети групп связаны группы, названные в одном предложении абзаца о Сибири; толщина связи соответствует числу таких предложений. Сеть цитирований и заимствований отражает ссылки авторов на других путешественников и учёных, а также текстовые заимствования. Трёхмерный граф можно вращать и масштабировать, узлы — перетаскивать; щелчок по узлу открывает карточку народа или книги.</p>
-    <div class="ctl"><button id="mG" class="on">сеть групп</button><button id="mI">цитирования и заимствования</button></div>
-    <div class="ctl" id="perCtl">${pers.map((p, i) => `<button data-p="${esc(p)}" class="${i === 2 ? 'on' : ''}">${esc(PER[p] || p)}</button>`).join('')}</div>
-    <div class="graph3d" id="g3"></div>
-    <div class="legend" id="g3l" style="margin-top:10px"></div>
-    <div id="g3info" class="small" style="margin-top:12px"></div></div></section>`;
-  const el = document.getElementById('g3');
-  let FG = null;
-  try { await loadScript('assets/vendor/3d-force-graph.min.js'); } catch (e) { el.innerHTML = '<p style="color:#ccc;padding:20px">Не удалось загрузить библиотеку 3D-графа.</p>'; return; }
-  const ok = (() => { try { return !!document.createElement('canvas').getContext('webgl'); } catch (e) { return false; } })();
-  if (!ok) { el.innerHTML = '<p style="color:#ccc;padding:20px">Ваш браузер не поддерживает WebGL, поэтому трёхмерный граф недоступен.</p>'; return; }
-  let mode = 'g', per = pers[2] || pers[0];
-  const lab = document.createElement('div'); lab.className = 'g3lab'; lab.setAttribute('data-noi18n', ''); lab.setAttribute('aria-hidden', 'true');
-  let labNodes = [];
-  const tick = () => {
-    if (!document.body.contains(el)) return;
-    if (FG && labNodes.length) {
-      const W = el.clientWidth, H = el.clientHeight, sp = lab.children, placed = [];
-      // узлы идут по убыванию размера: подпись, которая наложилась бы на уже поставленную, скрывается
-      labNodes.forEach((n, i) => { const e = sp[i]; if (!e) return; if (n.x == null) { e.style.opacity = 0; return; }
-        const c = FG.graph2ScreenCoords(n.x, n.y, n.z), r = 3 * Math.cbrt(n.val) * 1.6;
-        const w = e._w || (e._w = e.offsetWidth), x0 = c.x - w / 2, y0 = c.y + r + 4, bx = [x0 - 3, y0 - 2, x0 + w + 3, y0 + 17];
-        const free = !placed.some((q) => bx[0] < q[2] && bx[2] > q[0] && bx[1] < q[3] && bx[3] > q[1]);
-        const show = free && c.x > 0 && c.x < W && c.y > 0 && c.y < H;
-        if (show) placed.push(bx);
-        e.style.opacity = show ? 1 : 0; e.style.transform = `translate(${Math.round(x0)}px,${Math.round(y0)}px)`; });
-    }
-    requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-  const show = () => {
-    let data, legend;
-    if (mode === 'g') {
-      const d = N.periods[per];
-      data = {nodes: d.nodes.map((n) => ({...n, label: EN ? (GEN[n.id] || n.name) : n.name, color: CATC[n.category] || '#999', val: Math.max(1, n.degree / 8)})), links: d.links.map((l) => ({...l}))};
-      legend = Object.entries(CAT).map(([k, v]) => `<span><i style="background:${CATC[k]}"></i>${v}</span>`).join('') + `<span>${d.works} книг, ${d.nodes.length} групп</span>`;
-      const top = d.nodes.slice().sort((a, b) => b.betweenness - a.betweenness).slice(0, 5);
-      document.getElementById('g3info').innerHTML = 'Группы с наибольшей посреднической центральностью (betweenness): ' + top.map((n) => `<span>${esc(n.name)}</span> (${fmt(n.betweenness, 2)})`).join(', ');
-    } else {
-      const d = N.intertext;
-      const links = d.links.filter((l) => l.type !== 'cites' || okCite.has(`${l.source}>${l.target}`));  // ссылки — только подтверждённые текстом
-      const deg = {}; links.forEach((l) => { deg[l.target] = (deg[l.target] || 0) + l.weight; });
-      const nodes = d.nodes.filter((n) => n.kind === 'work' || (deg[n.id] || 0) >= 5);
-      const ids = new Set(nodes.map((n) => n.id));
-      data = {nodes: nodes.map((n) => ({...n, color: CATC[n.kind], val: Math.max(1, Math.sqrt(deg[n.id] || 1))})), links: links.filter((l) => ids.has(l.source) && ids.has(l.target)).map((l) => ({...l, color: l.type === 'reuse' ? '#f0607a' : '#8597a8'}))};
-      legend = `<span><i style="background:${CATC.work}"></i>книги корпуса</span><span><i style="background:${CATC.authority}"></i>авторитеты вне корпуса</span><span><i style="background:#f0607a"></i>заимствование</span><span><i style="background:#8597a8"></i>ссылка</span>`;
-      const CT = (VF.citations || []).slice(0, 7);
-      document.getElementById('g3info').innerHTML = CT.length ? (EN ? 'Most often mentioned by other authors of the corpus (number of books): ' : 'Чаще всего упоминаются другими авторами корпуса (число книг): ') + CT.map((c) => `<span>${esc(c.name)}</span> (${c.books})`).join(', ') + '.' : '';
-    }
-    document.getElementById('g3l').innerHTML = legend;
-    document.getElementById('perCtl').hidden = mode !== 'g';
-    if (!FG) {
-      FG = ForceGraph3D()(el).showNavInfo(false).backgroundColor('#0e1a26').width(el.clientWidth).height(el.clientHeight)
-        .nodeLabel((n) => esc(n.label || n.name || n.id)).nodeColor('color').nodeVal('val').nodeOpacity(.92).nodeRelSize(3)
-        .linkWidth((l) => Math.min(4, Math.sqrt(l.weight || 1) / 2)).linkOpacity(.35).linkColor((l) => l.color || '#8597a8')
-        .linkDirectionalArrowLength((l) => mode === 'i' ? 3 : 0).linkDirectionalArrowRelPos(1).cooldownTicks(150)
-        .onEngineStop(() => { if (FG.__fit) { FG.__fit = false; FG.zoomToFit(600, 40); } })
-        .onNodeClick((n) => { if (mode === 'g') location.hash = 'people-' + toH(n.id); else if (n.kind === 'work') location.hash = 'book-' + toH(n.id); });
-      mapRO = new ResizeObserver(() => FG && FG.width(el.clientWidth).height(el.clientHeight)); mapRO.observe(el);
-    }
-    FG.__fit = true; FG.graphData(data);
-    // подписи у самых крупных узлов: HTML-слой поверх сцены, координаты пересчитываются каждый кадр
-    const big = data.nodes.slice().sort((a, b) => b.val - a.val).slice(0, mode === 'g' ? 14 : 16);
-    if (!lab.isConnected) el.appendChild(lab);
-    lab.innerHTML = big.map((n, i) => `<span data-i="${i}">${esc(n.label || n.name || n.id)}</span>`).join('');
-    labNodes = big; FG.d3Force('charge').strength(-90); FG.cameraPosition({x: 0, y: 0, z: mode === 'g' ? 320 : 420});
-  };
-  show();
-  document.getElementById('mG').addEventListener('click', (e) => { mode = 'g'; e.target.classList.add('on'); document.getElementById('mI').classList.remove('on'); show(); });
-  document.getElementById('mI').addEventListener('click', (e) => { mode = 'i'; e.target.classList.add('on'); document.getElementById('mG').classList.remove('on'); show(); });
-  document.querySelectorAll('[data-p]').forEach((b) => b.addEventListener('click', () => { per = b.dataset.p; document.querySelectorAll('[data-p]').forEach((x) => x.classList.toggle('on', x === b)); show(); }));
+  if (!window.Links) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/links.js?v=69'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  await window.Links.render(V, {get, esc, toH, fmt, PER, NAT, EN, CATC});
 }
 function loadScript(src) { return new Promise((res, rej) => { if (window.ForceGraph3D) return res(); const s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); }); }
 

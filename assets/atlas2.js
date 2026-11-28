@@ -65,7 +65,7 @@ window.Atlas2 = (() => {
     const {get, getRoutes, toH, PER, NAT} = ctx;
     V.innerHTML = `<div class="wrap loading">${T('Загрузка карты…', 'Loading the map…')}</div>`;
     const [works, routes, places, groups, bookgeo, AREAS] = await Promise.all([get('works.json'), getRoutes(), get('places.json'), get('groups.json'), get('bookgeo.json'), get('areas1914.geojson').catch(() => null),
-      loadCSS('assets/vendor/maplibre-gl.css?v=68'), loadJS('assets/vendor/maplibre-gl.js?v=68'), loadJS('assets/vendor/pmtiles.js?v=68')]);
+      loadCSS('assets/vendor/maplibre-gl.css?v=69'), loadJS('assets/vendor/maplibre-gl.js?v=69'), loadJS('assets/vendor/pmtiles.js?v=69')]);
     if (!alive()) return () => {};
     const W = Object.fromEntries(works.map((w) => [w.id, w])), RT = Object.fromEntries(routes.map((r) => [r.work, r]));
     const PL = Object.fromEntries(places.map((p) => [p.id, p]));
@@ -659,7 +659,7 @@ window.Atlas2 = (() => {
   // ---------- карта рядом с текстом книги: путь «доезжает» до абзаца, который читается сейчас ----------
   // reader(el, {work, route, PL, bookgeo, period, onPlace(id), onStop(i)}) → {setPara(n, ids), hover(id), destroy}
   async function reader(el, o) {
-    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=68'), loadJS('assets/vendor/maplibre-gl.js?v=68'), loadJS('assets/vendor/pmtiles.js?v=68')]);
+    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=69'), loadJS('assets/vendor/maplibre-gl.js?v=69'), loadJS('assets/vendor/pmtiles.js?v=69')]);
     if (!hasGL()) { el.innerHTML = `<p class="small mute" style="padding:14px">${T('Браузер не поддерживает WebGL, карта недоступна.', 'This browser does not support WebGL; the map is unavailable.')}</p>`; return {setPara() {}, hover() {}, destroy() {}}; }
     if (!window.__a2proto) { window.__a2proto = new pmtiles.Protocol(); maplibregl.addProtocol('pmtiles', window.__a2proto.tile); }
     let C = palette(el), dead = false, raf = 0, follow = true, userAt = 0, curN = -1, curIds = [], hovId = null;
@@ -758,7 +758,7 @@ window.Atlas2 = (() => {
   // preview(el, {routes, works, ind, areaGeo, onWork(w)}) → {restyle, destroy}: карта на главной — глобус, все проверенные
   // маршруты цветом периода и ареалы по карте 1914 г.; без панели и фильтров, наведение — подпись, щелчок — книга
   async function preview(el, o) {
-    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=68'), loadJS('assets/vendor/maplibre-gl.js?v=68'), loadJS('assets/vendor/pmtiles.js?v=68')]);
+    await Promise.all([loadCSS('assets/vendor/maplibre-gl.css?v=69'), loadJS('assets/vendor/maplibre-gl.js?v=69'), loadJS('assets/vendor/pmtiles.js?v=69')]);
     if (!hasGL() || !el.isConnected) return {restyle() {}, destroy() {}};
     if (!window.__a2proto) { window.__a2proto = new pmtiles.Protocol(); maplibregl.addProtocol('pmtiles', window.__a2proto.tile); }
     const W = Object.fromEntries(o.works.map((w) => [w.id, w])), per = (w) => PERK.indexOf((W[w] || {}).period);

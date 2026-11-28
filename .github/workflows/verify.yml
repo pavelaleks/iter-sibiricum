@@ -19,13 +19,14 @@ jobs:
         with: {python-version: '3.12'}
       - run: pip install pandas
       - run: python3 pipeline/validation/verify_all.py
+      - run: python3 pipeline/tools/network_data.py
       - run: python3 pipeline/validation/check_numbers.py
       - name: commit verification results
         run: |
-          if ! git diff --quiet -- data/verification.json pipeline/validation/VERIFICATION.md; then
+          if ! git diff --quiet -- data/verification.json pipeline/validation/VERIFICATION.md data/net; then
             git config user.name "iter-sibiricum-bot"
             git config user.email "actions@users.noreply.github.com"
-            git add data/verification.json pipeline/validation/VERIFICATION.md
+            git add data/verification.json pipeline/validation/VERIFICATION.md data/net
             git commit -m "Data verification: update whitelist"
             git push
           fi
