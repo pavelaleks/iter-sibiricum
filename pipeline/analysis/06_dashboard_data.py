@@ -90,7 +90,7 @@ for l in open(ROOT/'corpus/paragraphs.jsonl', encoding='utf-8'):
 reuse = []
 for r in RP.itertuples():
     bp = r.pid_a if r.borrower == r.work_a else r.pid_b; sp = r.pid_b if bp == r.pid_a else r.pid_a
-    reuse.append(dict(borrower=lab[r.borrower], source=lab[r.source], kind='цитата с указанием автора' if r.acknowledged_in_paragraph else 'общая цитата' if r.kind == 'shared_quotation' else 'кандидат в заимствование',
+    reuse.append(dict(borrower=lab[r.borrower], source=lab[r.source], kind='цитата с указанием автора' if r.acknowledged_in_paragraph else 'цитата в кавычках' if r.kind == 'shared_quotation' else 'совпадение без указания источника',
                       shared_8grams=int(r.shared_8grams), region=P[bp][1], borrower_pid=bp, source_pid=sp, borrower_text=P[bp][0][:220] + '…'))
 save('reuse', sorted(reuse, key=lambda x: -x['shared_8grams']), 'analysis/results/text_reuse_passages.csv')
 

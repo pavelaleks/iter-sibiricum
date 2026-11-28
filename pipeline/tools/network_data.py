@@ -38,6 +38,16 @@ def main():
 
     # ---------- 1. сеть групп ----------
     rows = list(csv.DictReader(open(SITE / 'pipeline/data/relations.csv', encoding='utf-8')))
+    # обе группы должны быть названы в самом предложении, которое показывается читателю (словарь этнонимов + формы с карточек)
+    ETH = collections.defaultdict(list)
+    for r in csv.DictReader(open(SITE / 'pipeline/data/ethnonyms.csv', encoding='utf-8')):
+        try: ETH[r['group_id']].append(re.compile(r['pattern'], re.I if r['ci'] == 'True' else 0))
+        except re.error: pass
+    for g in groups:
+        for f in g.get('forms') or []:
+            ETH[g['id']].append(re.compile(r'\b' + re.escape(f[0] if isinstance(f, list) else f), re.I))
+    named = lambda g, t: any(rx.search(t) for rx in ETH.get(g, []))
+    unnamed = 0
     sent_id, sents, edges, dropped = {}, [], collections.defaultdict(lambda: {'w': collections.Counter(), 's': []}), 0
     for r in rows:
         if r['in_siberia'] != 'True' or r['group_a'] == r['group_b'] or r['work_id'] not in works:
@@ -46,6 +56,9 @@ def main():
         s = ws(r['sentence'])
         if not s or s not in para(w, pid):
             dropped += 1
+            continue
+        if not (named(r['group_a'], s) and named(r['group_b'], s)):
+            unnamed += 1
             continue
         k = (w, pid, s)
         if k not in sent_id:
@@ -66,7 +79,7 @@ def main():
     E = [{'a': a, 'b': b, 'w': dict(e['w']), 's': sorted(set(e['s']))} for (a, b), e in sorted(edges.items()) if a in gids and b in gids]
     WK = {w: {'label': m['label'], 'author': m['author'], 'year': m['year'], 'j0': m.get('j0'), 'period': m['period'], 'nat': m['nat'],
               'nat_ru': m.get('nat_ru'), 'nationality': m.get('nationality'), 'stay_ru': m.get('stay_ru')} for w, m in works.items()}
-    json.dump({'works': WK, 'nodes': nodes, 'edges': E, 'n_sentences': len(sents), 'dropped': dropped},
+    json.dump({'works': WK, 'nodes': nodes, 'edges': E, 'n_sentences': len(sents), 'dropped': dropped, 'unnamed': unnamed},
               open(OUT / 'groups.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     json.dump(sents, open(OUT / 'groups_ev.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 
@@ -83,6 +96,8 @@ def main():
         k = f"{l['source']}>{l['target']}"
         if k in ok:
             links.append({'s': l['source'], 't': l['target'], 'type': 'cites', 'n': l['weight'], 'p': cev.get(k, [])})
+    # виды совпадений называются по тому, что проверяется правилом: имя автора источника в абзаце; кавычки; ни того ни другого
+    KIND = {'общая цитата': 'цитата в кавычках', 'кандидат в заимствование': 'совпадение без указания источника'}
     reuse = collections.defaultdict(list)
     r_drop = 0
     for x in J('data/reuse.json'):
@@ -95,7 +110,8 @@ def main():
         if norm(x.get('bt', ''))[:60] not in norm(para(b, bp)) or norm(x.get('st', ''))[:60] not in norm(para(s, sp)):
             r_drop += 1
             continue
-        reuse[(b, s)].append({'kind': x.get('kind', ''), 'n': x.get('n'), 'bp': bp, 'sp': sp, 'bt': x.get('bt', ''), 'st': x.get('st', '')})
+        same = re.sub(r'\s*\(.*?\)', '', works[b]['author']).split()[-1] == re.sub(r'\s*\(.*?\)', '', works[s]['author']).split()[-1]
+        reuse[(b, s)].append({'kind': 'самоповтор' if same else KIND.get(x.get('kind', ''), x.get('kind', '')), 'n': x.get('n'), 'bp': bp, 'sp': sp, 'bt': x.get('bt', ''), 'st': x.get('st', '')})
     for (b, s), L in reuse.items():
         links.append({'s': b, 't': s, 'type': 'reuse', 'n': len(L), 'x': L})
     used = {l['s'] for l in links} | {l['t'] for l in links}
@@ -109,10 +125,10 @@ def main():
     for nid, n in inodes.items():
         if n['kind'] == 'authority' and nid in used:
             name = n.get('label') or nid.split(':', 1)[1]
-            in_nodes.append({'id': nid, 'kind': 'authority', 'label': name, 'year': AF.get(name)})
+            in_nodes.append({'id': nid, 'kind': 'authority', 'label': name, 'year': None})  # годы деятельности не из корпуса — не выгружаются
     json.dump({'nodes': in_nodes, 'links': links, 'reuse_dropped': r_drop},
               open(OUT / 'intertext.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-    print(f'группы: {len(nodes)} узлов, {len(E)} рёбер, {len(sents)} предложений (не найдено в тексте: {dropped}); '
+    print(f'группы: {len(nodes)} узлов, {len(E)} рёбер, {len(sents)} предложений (не найдено в тексте: {dropped}; группа не названа в предложении: {unnamed}); '
           f'интертекст: {len(in_nodes)} узлов, {sum(l["type"] == "cites" for l in links)} ссылок, {len(reuse)} пар заимствований '
           f'({sum(len(v) for v in reuse.values())} отрывков; не сверено: {r_drop})')
 

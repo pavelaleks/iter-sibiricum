@@ -163,7 +163,7 @@ RP = pd.read_csv(ROOT / 'analysis/results/text_reuse_passages.csv')
 reuse = []
 for r in RP.itertuples():
     bp = r.pid_a if r.borrower == r.work_a else r.pid_b; sp = r.pid_b if bp == r.pid_a else r.pid_a
-    kind = 'цитата с указанием автора' if r.acknowledged_in_paragraph else ('общая цитата' if r.kind == 'shared_quotation' else 'кандидат в заимствование')
+    kind = 'цитата с указанием автора' if r.acknowledged_in_paragraph else ('цитата в кавычках' if r.kind == 'shared_quotation' else 'совпадение без указания источника')
     reuse.append(dict(b=r.borrower, s=r.source, kind=kind, n=int(r.shared_8grams), bp=bp, sp=sp, bt=Pt.get(bp, '')[:260], st=Pt.get(sp, '')[:260]))
 dump('reuse.json', sorted(reuse, key=lambda x: -x['n']))
 
