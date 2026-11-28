@@ -21,19 +21,23 @@ const C = {};
 const get = (n) => (C[n] ||= fetch('data/' + n, {cache: 'no-cache'}).then((r) => { if (!r.ok) throw new Error(n); return r.json(); }));
 // Решения проверки маршрутов (админка) накладываются на маршруты конвейера: проверенное по тексту и подтверждённое экспертом рисуется линией.
 let AGEO = null; get('areas1914.geojson').then((x) => { AGEO = x; }).catch(() => {});
-const getRoutes = () => (C['routes+review'] ||= Promise.all([get('routes.json'), fetch('data/review/journeys_review.json', {cache: 'no-cache'}).then((r) => r.ok ? r.json() : {}).catch(() => ({}))]).then(([R, REV]) => {
-  const out = R.filter((r) => !REV[r.work]);
+// Белый список проверки (pipeline/validation/verify_all.py): показывается только то, что сверено с текстами книг.
+const getV = () => (C['verif'] ||= get('verification.json').catch(() => ({})));
+const getRoutes = () => (C['routes+review'] ||= Promise.all([get('routes.json'), fetch('data/review/journeys_review.json', {cache: 'no-cache'}).then((r) => r.ok ? r.json() : {}).catch(() => ({})), getV()]).then(([R, REV, VF]) => {
+  const okStop = new Set(VF.route_stops || []), okSum = VF.route_summaries || {};
+  const out = [];  // маршруты без проверки по тексту не показываются
   for (const [w, v] of Object.entries(REV)) {
     if (v.status === 'no_journey') continue;
     // Остановки без координат остаются: на карте они разрывают линию, чтобы не рисовать прямой отрезок через неизвестное.
-    const stops = (v.stops || []).map((s) => [s.place, s.name, s.lon == null ? null : +s.lon, s.lat == null ? null : +s.lat, s.pid ? w + '_p' + s.pid : null, 'text', s.journey || 1, s.quote || '', s.coord_source || '']);
-    if (stops.filter((x) => x[2] != null).length > 1) out.push({work: w, method: v.status === 'draft' ? 'draft' : 'manual', status: v.status, reviewer: v.reviewer, date: v.date, summary: v.summary, stops});
+    const stops = (v.stops || []).filter((s) => okStop.has(`${w}:${s.pid}:${s.place}`)).map((s) => [s.place, s.name, s.lon == null ? null : +s.lon, s.lat == null ? null : +s.lat, s.pid ? w + '_p' + s.pid : null, 'text', s.journey || 1, s.quote || '', s.coord_source || '']);
+    if (stops.filter((x) => x[2] != null).length > 1) out.push({work: w, method: v.status === 'draft' ? 'draft' : 'manual', status: v.status, reviewer: v.reviewer, date: v.date, summary: okSum[w] === v.summary ? v.summary : '', stops});
   }
   return out;
 }));
 // Правки иллюстраций из рабочего места (подпись, перевод, тип, поворот, отбор) накладываются на результат конвейера.
-const getIll = () => (C['ill+review'] ||= Promise.all([get('illustrations.json'), fetch('data/review/illustrations_review.json', {cache: 'no-cache'}).then((r) => r.ok ? r.json() : {}).catch(() => ({}))]).then(([D, REV]) => {
-  const items = D.items.filter((x) => !(REV[x.id] && REV[x.id].status === 'rejected')).map((x) => { const v = REV[x.id]; return v ? {...x, c: v.caption ?? x.c, ru: v.ru || x.ru || '', k: v.kind || x.k, rx: v.rot || 0, ok: v.status === 'checked'} : x; });
+const getIll = () => (C['ill+review'] ||= Promise.all([get('illustrations.json'), fetch('data/review/illustrations_review.json', {cache: 'no-cache'}).then((r) => r.ok ? r.json() : {}).catch(() => ({})), getV()]).then(([D, REV, VF]) => {
+  const TG = VF.ill_tags || {};  // народы и места — только названные в подписи источника
+  const items = D.items.map((x) => ({...x, g: (TG[x.id] || {}).g || [], pl: (TG[x.id] || {}).pl || []})).filter((x) => !(REV[x.id] && REV[x.id].status === 'rejected')).map((x) => { const v = REV[x.id]; return v ? {...x, c: v.caption ?? x.c, ru: v.ru || x.ru || '', k: v.kind || x.k, rx: v.rot || 0, ok: v.status === 'checked'} : x; });
   const ids = new Set(items.map((x) => x.id));
   const hero = [...new Set([...D.hero.filter((id) => !(REV[id] && REV[id].hero === false)), ...Object.keys(REV).filter((id) => REV[id].hero)])].filter((id) => ids.has(id));
   return {...D, items, hero};
@@ -48,7 +52,10 @@ const illImg = (x, lazy = true) => {
 const toH = (id) => String(id).replace(/_/g, '-'); const fromH = (h) => h.replace(/-/g, '_');
 const NAT = {british: 'Великобритания', french: 'Франция/Бельгия', german: 'Германия/Австрия', scandinavian: 'Скандинавия', finnish: 'Финляндия', polish: 'Польша', italian: 'Италия', central_european: 'Центральная Европа', dutch: 'Нидерланды'};
 const PER = {'P1 до 1855': 'до 1855', 'P2 1856–1880': '1856–1880', 'P3 1881–1904': '1881–1904', 'P4 1905–1917': '1905–1917', 'P5 1918–1930': '1918–1930'};
-const CAT = {indigenous: 'коренные народы', settler: 'русские и пришлые', social: 'социальные группы', neighbour: 'соседи', foreign: 'иностранцы', generic: 'обобщённые «туземцы»'};
+// Рубрики народов — единый список для страницы «Народы», сети связей и «Свидетельств» (порядок важен)
+const CAT_RU = {indigenous: 'коренные народы Сибири и Степного края', generic: 'обобщённые названия коренного населения', settler: 'русские и другие переселенцы', social: 'социально-правовые группы', neighbour: 'соседние народы', foreign: 'иностранцы'};
+const CAT_EN = {indigenous: 'Indigenous peoples of Siberia and the Steppe', generic: 'Generic terms for the indigenous population', settler: 'Russians and other settlers', social: 'Social and legal groups', neighbour: 'Neighbouring peoples', foreign: 'Foreigners'};
+const CAT = CAT_RU; window.CATS = {ru: CAT_RU, en: CAT_EN, order: Object.keys(CAT_RU)};
 const CATC = {indigenous: '#3f7296', settler: '#a3173a', social: '#9a6b1f', neighbour: '#6a5a9e', foreign: '#6b7785', generic: '#3c7a5a', work: '#a3173a', authority: '#8e9aa6'};
 let mapRO = null;
 
@@ -155,7 +162,8 @@ const profiles = (t) => {
   return L.length ? `<span class="prof">${L.map(([n, u, title]) => `<a href="${esc(u)}"${title ? ` title="${esc(title)}"` : ''}>${n}</a>`).join('')}</span>` : '';
 };
 async function home() {
-  const [A, works, routes, places, geo, groups, reuse, P] = await Promise.all([get('analytics.json'), get('works.json'), getRoutes(), get('places.json'), get('geo.json'), get('groups.json'), get('reuse.json'), project()]);
+  const [A, works, routes, places, geo, groups, reuse, P, VF] = await Promise.all([get('analytics.json'), get('works.json'), getRoutes(), get('places.json'), get('geo.json'), get('groups.json'), get('reuse.json'), project(), getV()]);
+  const SA = !!(VF.sample_annotation && VF.sample_annotation.verified);  // результаты разметки выборки — только после проверки
   const S = A.summary;
   const mod = A.models.find((m) => m.term === 'personal' && m.model.startsWith('pos'));
   const ext = A.discourse.filter((r) => r.discourse === 'extinction' && r.dimension === 'period'), e0 = ext[0], e1 = ext.find((r) => r.key.startsWith('1905'));
@@ -169,7 +177,7 @@ async function home() {
     ${P.grant ? `${EN ? `<p class="ack" data-noi18n>Prepared with the support of the Russian Science Foundation, grant <span class="nw">No. ${esc(P.grant)}</span>, <a href="${esc(P.grant_url)}">${esc(P.grant_url)}</a>, and the Government of the Altai Republic.</p>` : `<p class="ack">Ресурс подготовлен при поддержке гранта Российского научного фонда <span style="white-space:nowrap">${EN ? 'No.' : '№'} ${esc(P.grant)}</span>, <a href="${esc(P.grant_url)}">${esc(P.grant_url)}</a>, и Правительства Республики Алтай.</p>`}` : ''}
     <h1 class="name">Iter Sibiricum<span class="ast" aria-hidden="true">*</span></h1>
     <p class="purpose">Цифровой ресурс посвящён тому, как европейские путешественники 1800–1930 годов описывали народы Сибири и отношения между ними. В нём собраны полные тексты ${pl(works.length, ['книги', 'книг', 'книг'])} на ${langs} языках, карты маршрутов, карточки народов и открытые данные со ссылками на абзацы источников.</p>
-    ${EN ? `<p class="name-note" data-noi18n><span class="ast" aria-hidden="true">*</span> <i>Iter Sibiricum</i> means “Siberian journey”: eighteenth-century scholars used the Latin word <i>iter</i> both for a journey and for its written account (cf. Linnaeus’s <i>Iter Lapponicum</i>, 1732).</p>` : `<p class="name-note"><span class="ast" aria-hidden="true">*</span> <i>Iter Sibiricum</i> — «сибирский путь»: латинским словом <i>iter</i> учёные XVIII века называли и путешествие, и его отчёт (<i>Iter Lapponicum</i> Линнея, 1732).</p>`}
+    ${EN ? `<p class="name-note" data-noi18n><span class="ast" aria-hidden="true">*</span> <i>Iter Sibiricum</i> means “Siberian journey”: eighteenth-century scholars used the Latin word <i>iter</i> both for a journey and for its written account (cf. Linnaeus’s <i>Iter Lapponicum</i>, 1732).</p>` : `<p class="name-note"><span class="ast" aria-hidden="true">*</span> <i>Iter Sibiricum</i> — «сибирское путешествие»: латинским словом <i>iter</i> учёные XVIII века называли и путешествие, и его описание (ср. «Лапландское путешествие» — <i>Iter Lapponicum</i> К. Линнея, 1732).</p>`}
     <div class="finder">
       <label for="q" class="sr">Поиск по ресурсу</label>
       <input id="q" type="search" placeholder="Автор, книга, народ или место — например, Lansdell, буряты, Иркутск" autocomplete="off">
@@ -196,12 +204,12 @@ async function home() {
   <section class="band"><div class="wrap">
     <div class="sechead"><h2>Маршруты путешественников</h2><a href="#atlas">Открыть атлас</a></div>
     <div class="mapbox heromap" id="homeMap"></div>
-    <div class="mapnote" data-noi18n><span class="pv-per">${['--p1', '--p2', '--p3', '--p4', '--p5'].map((v, k) => `<span><i style="background:var(${v})"></i>${esc(EN ? ['before 1855', '1856–1880', '1881–1904', '1905–1917', '1918–1930'][k] : ['до 1855', '1856–1880', '1881–1904', '1905–1917', '1918–1930'][k])}</span>`).join('')}</span><span>${EN ? `${manual} routes reconstructed from the texts; each stop is supported by a paragraph of the source. The routes are provisional: they were reconstructed by a language model and are being reviewed by the project’s experts. Line colour indicates the period of the journey. Hover over a route to see the book; click to open it.` : `${pl(manual, ['маршрут восстановлен', 'маршрута восстановлены', 'маршрутов восстановлено'])} по тексту книг; каждая остановка подтверждена абзацем источника. Маршруты предварительные: их восстановила языковая модель, эксперты проекта их проверяют. Цвет линии обозначает период поездки. При наведении на маршрут появляется название книги, щелчок открывает её текст.`}</span><span><i class="g"></i>${EN ? 'dashed: a stretch of more than 800 km where the author names no places' : 'пунктир — перегон длиннее 800 км, на котором автор не называет мест'}</span><span><i class="a"></i>${EN ? 'areas of indigenous peoples after the Ethnographic Map of Asiatic Russia (1914)' : 'ареалы коренных народов по «Этнографической карте Азиатской России» (1914)'}</span></div>
+    <div class="mapnote" data-noi18n><span class="pv-per">${['--p1', '--p2', '--p3', '--p4', '--p5'].map((v, k) => `<span><i style="background:var(${v})"></i>${esc(EN ? ['before 1855', '1856–1880', '1881–1904', '1905–1917', '1918–1930'][k] : ['до 1855', '1856–1880', '1881–1904', '1905–1917', '1918–1930'][k])}</span>`).join('')}</span><span>${EN ? `${manual} routes reconstructed from the texts; each stop is supported by a paragraph of the source. Line colour indicates the period of the journey. Hover over a route to see the book; click to open it.` : `${pl(manual, ['маршрут восстановлен', 'маршрута восстановлены', 'маршрутов восстановлено'])} по тексту книг; каждая остановка подтверждена абзацем источника. Цвет линии обозначает период поездки. При наведении на маршрут появляется название книги, щелчок открывает её текст.`}</span><span><i class="g"></i>${EN ? 'dashed: a stretch of more than 800 km where the author names no places' : 'пунктир — перегон длиннее 800 км, на котором автор не называет мест'}</span><span><i class="a"></i>${EN ? 'areas of indigenous peoples after the Ethnographic Map of Asiatic Russia (1914)' : 'ареалы коренных народов по «Этнографической карте Азиатской России» (1914)'}</span></div>
   </div></section>
   <section class="band alt"><div class="wrap">
     <h2>Что показывает корпус</h2>
     <div class="findings">
-      <div><div class="k">24 и 6%</div><h3>Оценка связана с личным наблюдением</h3><p>Положительные оценки встречаются в 24% описаний, сделанных по личному наблюдению, и в 6% — по пересказу, книгам или обобщениям (230 описаний из 61 книги; с поправкой на период, страну и тип поездки отношение шансов ${fmt(mod.OR, 1)}, 95% ДИ ${fmt(mod.lo, 1)}–${fmt(mod.hi, 1)}). Речь идёт о статистической связи, а не о причинной зависимости; разметка выборки предварительная.</p><a href="#analytics">Модели и рамки описания</a></div>
+      ${SA ? `<div><div class="k">24 и 6%</div><h3>Оценка связана с личным наблюдением</h3><p>Положительные оценки встречаются в 24% описаний, сделанных по личному наблюдению, и в 6% — по пересказу, книгам или обобщениям (230 описаний из 61 книги; с поправкой на период, страну и тип поездки отношение шансов ${fmt(mod.OR, 1)}, 95% ДИ ${fmt(mod.lo, 1)}–${fmt(mod.hi, 1)}). Речь идёт о статистической связи, а не о причинной зависимости; разметка выборки предварительная.</p><a href="#analytics">Модели и рамки описания</a></div>` : ''}
       <div><div class="k">${fmt(100 * e0.share, 1)} → ${fmt(100 * e1.share, 1)}%</div><h3>Мотив вымирания становится частотнее</h3><p>Такова его доля в абзацах о коренных народах до 1855 года и в 1905–1917 годах (у второй цифры широкий интервал: ${fmt(100 * e1.lo, 1)}–${fmt(100 * e1.hi, 1)}%, ${e1.works} книг). В те же десятилетия внимание к каторге сменяется вниманием к переселенцам.</p><a href="#analytics-ngram">Ngram и дискурсы</a></div>
       <div><div class="k">${fmt(reuse.length)}</div><h3>Текстовые заимствования</h3><p>Число пар абзацев с общими текстовыми фрагментами; среди них компиляции, самоповторы и заимствования без указания источника.</p><a href="#links">Сеть цитирований</a></div>
     </div>
@@ -209,7 +217,7 @@ async function home() {
   <section class="band"><div class="wrap about">
     <div>
       <h2>О проекте</h2>
-      <p>Ресурс создан по итогам исследования восприятия межнациональных отношений в Сибири в европейских травелогах XIX — начала XX века. Корпус сформирован по библиографическим справочникам и фондам электронных библиотек и обработан методами корпусной лингвистики. Выборка описаний размечена по протоколу проекта: первичную разметку выполнила языковая модель, сейчас её проверяют эксперты. Подробнее — в разделе <a href="#method">«Метод и данные»</a>.</p>
+      <p>Ресурс создан по итогам исследования восприятия межнациональных отношений в Сибири в европейских травелогах XIX — начала XX века. Корпус сформирован по библиографическим справочникам и фондам электронных библиотек и обработан методами корпусной лингвистики. Подробнее — в разделе <a href="#method">«Метод и данные»</a>.</p>
     </div>
   </div>
   <div class="wrap">${(P.team || []).length ? `<div class="crew"><h3>Коллектив</h3><ul>${P.team.map((t) => `<li><span class="nm">${esc(t.name)}</span>${t.role && t.role !== 'исполнитель' ? `<span class="rl">${esc(t.role)}</span>` : ''}<span class="af">${esc(t.degree)}<br>${esc(t.org)}</span>${t.orcid ? `<a class="oid" href="https://orcid.org/${esc(t.orcid)}" aria-label="ORCID ${esc(t.name)}"><span class="orcid">iD</span>${esc(t.orcid)}</a>` : ''}${profiles(t)}</li>`).join('')}</ul></div>` : ''}
@@ -247,7 +255,7 @@ async function home() {
   let first = !reduce;
   (async () => {
     const el = document.getElementById('homeMap'); if (!el) return;
-    if (!window.Atlas2) { try { await new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'assets/atlas2.js?v=67'; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); } catch (x) { return; } }
+    if (!window.Atlas2) { try { await new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'assets/atlas2.js?v=68'; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); }); } catch (x) { return; } }
     if (!el.isConnected) return;
     const pv = await Atlas2.preview(el, {routes, works, ind, areaGeo: AGEO, onWork: (w) => location.hash = 'book-' + toH(w)});
     if (!el.isConnected) { pv.destroy(); return; }
@@ -341,9 +349,8 @@ async function illustrations() {
         <dl>
           <dt>Книга</dt><dd><a href="#book-${toH(x.w)}">${esc(w ? w.author : x.w)}</a>${w ? `, ${w.year}` : ''}</dd>
           <dt>Тип</dt><dd>${KIND[x.k] || x.k}${x.r || x.rx ? ', альбомная вклейка (повёрнута)' : ''}</dd>
-          <dt>Проверка</dt><dd>${x.ok ? 'подпись и тип проверены экспертом' : 'определены автоматически, не проверены'}</dd>
           ${x.g.length ? `<dt>Народы</dt><dd>${x.g.filter((g) => G[g]).map((g) => `<a href="#people-${toH(g)}">${esc(G[g].name)}</a>`).join(', ')}</dd>` : ''}
-          <dt>Регион</dt><dd>${RG[rgOf(x)]}${x.rb === 'cap' ? ` — по подписи${x.pl.length ? ': ' + esc(x.pl.join(', ')) : ''}` : x.rb === 'par' ? ' — по тексту рядом (предварительно)' : ''}</dd>
+          <dt>Регион</dt><dd>${RG[rgOf(x)]}${x.rb === 'cap' ? ` — по подписи${x.pl.length ? ': ' + esc(x.pl.join(', ')) : ''}` : x.rb === 'par' ? ' — по соседнему абзацу' : ''}</dd>
           ${x.f ? `<dt>В книге</dt><dd>к странице ${esc(x.f)}</dd>` : ''}
         </dl>
         <p class="dlg-links">${x.p ? `<a href="#book-${toH(x.w)}-p${esc(x.p)}">Текст рядом с иллюстрацией</a>` : ''}<a href="${iaPage(x)}" target="_blank" rel="noopener">${x.src === 'pg' ? 'Издание в Project Gutenberg' : 'Страница скана в Internet Archive'}</a></p>
@@ -366,11 +373,11 @@ async function illustrations() {
 
 // ---------------- атлас ----------------
 async function research(page) {
-  if (!window.Research) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/research.js?v=67'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  if (!window.Research) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/research.js?v=68'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   await window.Research[page](V, {get, esc, toH, fmt, PER, NAT, EN, cites, citeDialog, reportLinks, SITE_URL, pad5, project});
 }
 async function atlas2() {
-  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=67'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  await new Promise((res, rej) => { if (window.Atlas2) return res(); const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=68'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   const d = await window.Atlas2.render(V, {get, getRoutes, esc, toH, PER, NAT});
   if (/^#atlas(\?|$)/.test(location.hash)) atlasDestroy = d; else d();
 }
@@ -384,7 +391,7 @@ async function atlas() {
   const P = window.SibMap.PERC;
   V.innerHTML = `<section class="band"><div class="wrap">
     <h1>Атлас путешествий</h1>
-    <p class="lede">Линиями показаны маршруты, каждая остановка которых подтверждена абзацем, где автор сообщает о своём пребывании в этом месте. Сейчас их ${nMan}; ${(() => { const nv = routes.filter((r) => r.status === 'verified').length; return nv ? `из них ${nv} подтверждены экспертами проекта, остальные восстановлены языковой моделью и ждут проверки` : 'все они восстановлены языковой моделью и ждут проверки экспертами проекта'; })()}. Цвет линии обозначает период поездки. Если выбрать книгу, на карте появятся её маршрут, остановки со ссылками на абзацы и все упомянутые в ней места.</p>
+    <p class="lede">Линиями показаны маршруты, каждая остановка которых подтверждена абзацем, где автор сообщает о своём пребывании в этом месте. Сейчас их ${nMan}. Цвет линии обозначает период поездки. Если выбрать книгу, на карте появятся её маршрут, остановки со ссылками на абзацы и все упомянутые в ней места.</p>
     <div class="ctl">
       <label>Книга <select id="fWork"><option value="">все</option>${opt(works.slice().sort((a, b) => a.year - b.year).map((w) => [w.id, w.label + (RT[w.id] ? (RT[w.id].method === 'manual' ? ' (маршрут)' : ' (черновик маршрута)') : '')]))}</select></label>
       <label>Период <select id="fPer"><option value="">все</option>${opt(Object.entries(PER))}</select></label>
@@ -412,8 +419,8 @@ async function atlas() {
     const box = document.getElementById('aInfo'); let h = '';
     if (st.work) {
       const w = W[st.work], r = RT[st.work];
-      const badge = !r ? '<span class="status">маршрут не определён</span>' : r.status === 'verified' ? '<span class="status rec">подтверждён экспертом</span>' : r.status === 'checked' ? '<span class="status rec">предварительный (языковая модель)</span>' : r.status === 'reconstructed' ? '<span class="status rec">восстановлен по тексту</span>' : '<span class="status draft">черновик, на проверке</span>';
-      h += `<h3><a href="#book-${toH(w.id)}">${esc(w.label)}</a></h3><p class="small mute">${esc(w.author)} · ${esc(w.nat_ru)} · ${esc(w.stay_ru)} · поездка ${w.j0 ? yr(w.j0) : '?'}${w.j1 && w.j1 !== w.j0 ? '–' + yr(w.j1) : ''}</p><p>${badge}</p>`;
+      const badge = !r ? '<span class="status">маршрут не определён</span>' : r.method === 'draft' ? '<span class="status draft">черновик маршрута</span>' : '';
+      h += `<h3><a href="#book-${toH(w.id)}">${esc(w.label)}</a></h3><p class="small mute">${esc(w.author)} · ${esc(w.nat_ru)} · ${esc(w.stay_ru)} · поездка ${w.j0 ? yr(w.j0) : '?'}${w.j1 && w.j1 !== w.j0 ? '–' + yr(w.j1) : ''}</p>${badge ? `<p>${badge}</p>` : ''}`;
       if (r && r.summary) h += `<p class="small">${esc(r.summary)}</p>`;
       if (r && r.method === 'manual') h += `<ol class="small">${r.stops.map((s) => `<li>${esc(s[1])}${(String(s[8]).startsWith('estimate') || String(s[8]).endsWith('_ctx')) ? ` <span class="mute" title="${s[8] === 'estimate_manual' ? 'Координаты оценены по историческим картам и ходу маршрута; требуют проверки' : 'Координаты приблизительные'}">≈</span>` : s[2] == null ? ' <span class="mute">· нет на карте: координаты не установлены</span>' : ''}${s[5] === 'not_found_in_text' ? ' <span class="mute">— в тексте не найдено</span>' : para(w.id, s[4])}</li>`).join('')}</ol>${r.stops.some((s) => String(s[8]).startsWith('estimate') || String(s[8]).endsWith('_ctx')) ? '<p class="small mute">≈ — координаты места приблизительные: пункт не найден однозначно ни в GeoNames, ни в Wikidata.</p>' : ''}`;
       else if (r) h += `<p class="small">Черновик маршрута составлен автоматически: в него включены места, о посещении которых пишет автор («мы прибыли в…», «we left…»); порядок остановок предварительный. Номера на карте соответствуют номерам в списке; пунктирным кружком отмечены места, посещение которых упомянуто в тексте лишь однажды.</p><ol class="small">${r.stops.map((s) => `<li>${esc(s[1])}${para(w.id, s[4])}${s[5] === 'higher' ? '' : ' <span class="mute">· одно свидетельство</span>'}</li>`).join('')}</ol>`;
@@ -441,12 +448,14 @@ async function peoples() {
   const card = (g) => `<a class="card" href="#people-${toH(g.id)}"><div class="t">${esc(g.name)}</div><div class="s">${fmt(g.mentions)} упоминаний · ${g.works} книг</div>${spark(g.series)}</a>`;
   V.innerHTML = `<section class="band"><div class="wrap"><h1>Народы и группы</h1>
     <p>Этнонимы источников («Ostiak», «Tartar», «Kirghiz») приводятся в авторском написании и соотнесены с современными названиями народов; спорные отождествления отмечены особо. Диаграмма на карточке показывает частоту упоминаний народа по десятилетиям поездок (на миллион слов о Сибири). Рубрики, по которым сгруппированы народы, носят рабочий характер и воспроизводят взгляд источников из имперского центра; их обоснование и принятые границы Сибири изложены на странице <a href="#scope">«Границы и категории»</a>.</p>
-    ${['indigenous', 'generic', 'settler', 'social', 'neighbour', 'foreign'].filter((c) => sec(c).length).map((c) => `<h2 class="cap" style="margin-top:28px">${CAT[c]}</h2><div class="cards">${sec(c).map(card).join('')}</div>`).join('')}
+    ${window.CATS.order.filter((c) => sec(c).length).map((c) => `<h2 class="cap" style="margin-top:28px">${CAT[c]}</h2><div class="cards">${sec(c).map(card).join('')}</div>`).join('')}
   </div></section>`;
 }
 async function people(id) {
-  const [groups, works, places, geo] = await Promise.all([get('groups.json'), get('works.json'), get('places.json'), get('geo.json')]);
+  const [groups, works, places, geo, VF] = await Promise.all([get('groups.json'), get('works.json'), get('places.json'), get('geo.json'), getV()]);
   const g = groups.find((x) => x.id === id); if (!g) return peoples();
+  const SA = !!(VF.sample_annotation && VF.sample_annotation.verified), okQ = new Set(VF.group_quotes || []);
+  const quotes = (g.quotes || []).filter((q) => okQ.has(q.pid));  // только цитаты, найденные в тексте книги
   const W = Object.fromEntries(works.map((w) => [w.id, w]));
   const langs = ['en', 'fr', 'de'].filter((l) => (g.collocations[l] || []).length);
   V.innerHTML = `<section class="band"><div class="wrap">
@@ -456,15 +465,15 @@ async function people(id) {
     ${g.note && EN ? `<p class="small">${esc(g.note)}</p>` : ''}
     <div class="chips">${g.forms.map((f) => `<span class="chip">${esc(f)}</span>`).join('')}</div>
     <div class="side" style="margin-top:20px">
-      <div><p><a class="btnlike" href="#evidence?g=${esc(g.id)}">${EN ? 'All paragraphs about them' : 'Все абзацы о них'} (${fmt(g.mentions)}) →</a></p><div class="mapbox" id="pMap"></div><p class="small mute" data-noi18n>${(() => { const f = ((AGEO && AGEO.features) || []).find((x) => x.properties.groups.includes(g.id)); return EN ? (f ? `Hatching shows the area as drawn on the Ethnographic Map of Asiatic Russia (1914), where this people is named “${esc(f.properties.term)}”` : 'Shading shows a schematic area, c. 1900') + '; circles mark places named in the same paragraphs as this people.' : (f ? `Ареал показан по «Этнографической карте Азиатской России» (1914), где народ назван «${esc(f.properties.term)}»` : 'Заливкой показан схематичный ареал около 1900 г.') + '; кругами отмечены места, упомянутые в одних абзацах с этим народом.'; })()}</p></div>
+      <div><p><a class="btnlike" href="#evidence?g=${esc(g.id)}">${EN ? 'All paragraphs about them' : 'Все абзацы о них'} (${fmt(g.mentions)}) →</a></p><div class="mapbox" id="pMap"></div><p class="small mute" data-noi18n>${(() => { const f = ((AGEO && AGEO.features) || []).find((x) => x.properties.groups.includes(g.id)); return EN ? (f ? `Hatching shows the area as drawn on the Ethnographic Map of Asiatic Russia (1914), where this people is named “${esc(f.properties.term)}”` : 'The Ethnographic Map of Asiatic Russia (1914) does not show an area for this people') + '; circles mark places named in the same paragraphs as this people.' : (f ? `Штриховкой показан ареал по «Этнографической карте Азиатской России» (1914), где народ назван «${esc(f.properties.term)}»` : 'На «Этнографической карте Азиатской России» (1914) ареал этого народа не обозначен') + '; кругами отмечены места, упомянутые в одних абзацах с этим народом.'; })()}</p></div>
       <div><h3>Упоминания во времени</h3><div class="chart" id="pSeries"></div><p class="small mute">Частота на миллион слов о Сибири по десятилетиям поездок; над столбцами указано число упоминаний.</p></div>
     </div>
     <div class="cols" style="margin-top:20px">
       <div><h3>Кто описывал чаще всего</h3><p class="small mute">Упоминаний на 10 тыс. слов о Сибири в книге (книги, где о Сибири больше 5 тыс. слов).</p>${bars(g.authors.map(([w, n, p]) => [W[w] ? W[w].label : w, p, '#book-' + toH(w)]), {d: 1})}</div>
       <div><h3>Коллокации</h3>${langs.length ? `<div class="ctl">${langs.map((l, i) => `<button data-l="${l}" class="${i ? '' : 'on'}">${l}</button>`).join('')}</div><div id="pCol"></div><p class="small mute">Окно ±5 слов, мера logDice; показаны только значимые сочетания (p &lt; 0,001). По ссылке — пример употребления в тексте.</p>` : '<p class="mute">Упоминаний недостаточно для выявления значимых коллокаций.</p>'}</div>
-      <div><h3>Дискурсы в абзацах о народе</h3>${g.discourses.length ? bars(g.discourses.filter((d) => d[1] > 0).map((d) => [d[0], d[1]]), {d: 1, unit: '%'}) + '<p class="small mute">Доля абзацев о народе, где встречается дискурс (точность поиска ≈0,75).</p>' : '<p class="mute">Данных недостаточно.</p>'}</div>
+      <div><h3>Дискурсы в абзацах о народе</h3>${g.discourses.length ? bars(g.discourses.filter((d) => d[1] > 0).map((d) => [d[0], d[1]]), {d: 1, unit: '%'}) + '<p class="small mute">Доля абзацев о народе, в которых встречаются слова-маркеры дискурса (поиск по правилам).</p>' : '<p class="mute">Данных недостаточно.</p>'}</div>
     </div>
-    ${g.quotes.length ? `<h2 style="margin-top:28px">Оценки в источниках: примеры из размеченной выборки</h2>${g.quotes.map((q) => `<div class="quote">${esc(q.text)}<div class="m">${esc(q.work)} · оценка: <span class="${q.pol === 'отрицательная' ? 'neg' : q.pol === 'положительная' ? 'pos' : ''}">${esc(q.pol)}</span>${q.stereotype ? ' · ' + esc(q.stereotype) : ''} · <a href="#book-${toH(q.pid.split('_p')[0])}-p${esc(q.pid.split('_p')[1])}">абзац</a></div></div>`).join('')}` : ''}
+    ${quotes.length ? `<h2 style="margin-top:28px">${SA ? 'Оценки в источниках: примеры из размеченной выборки' : 'Фрагменты из источников'}</h2>${quotes.map((q) => `<div class="quote">${esc(q.text)}<div class="m">${esc(q.work)}${SA ? ` · оценка: <span class="${q.pol === 'отрицательная' ? 'neg' : q.pol === 'положительная' ? 'pos' : ''}">${esc(q.pol)}</span>${q.stereotype ? ' · ' + esc(q.stereotype) : ''}` : ''} · <a href="#book-${toH(q.pid.split('_p')[0])}-p${esc(q.pid.split('_p')[1])}">абзац</a></div></div>`).join('')}` : ''}
   </div></section>`;
   const val = (p) => (p.groups.find((x) => x[0] === g.name) || [0, 0])[1];
   const gf = ((AGEO && AGEO.features) || []).filter((f) => f.properties.groups.includes(g.id));
@@ -633,7 +642,7 @@ async function book(id, par) {
     if (a) a.scrollIntoView({block: 'center'});
     if (!on) { if (RD) { RD.destroy(); RD = null; } if (curP) { curP.classList.remove('cur'); curP = null; } watchMap(); return; }
     if (scanOn) toggleScan(false);
-    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=67'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+    if (!window.Atlas2) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'assets/atlas2.js?v=68'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
     if (!mapOn) return;
     RD = await window.Atlas2.reader(mapEl, {work: id, route: r0, PL: Object.fromEntries((await get('places.json')).map((p) => [p.id, p])), bookgeo: (await get('bookgeo.json'))[id], period: w.period,
       onClose: () => toggleMap(false),
@@ -681,7 +690,8 @@ async function book(id, par) {
 
 // ---------------- связи 3D ----------------
 async function links() {
-  const [N, GR] = await Promise.all([get('networks.json'), get('groups.json')]);
+  const [N, GR, VF] = await Promise.all([get('networks.json'), get('groups.json'), getV()]);
+  const okCite = new Set(VF.cite_edges || []);
   const GEN = Object.fromEntries(GR.map((g) => [g.id, g.name_en]));
   const pers = Object.keys(N.periods);
   V.innerHTML = `<section class="band"><div class="wrap"><h1>Связи</h1>
@@ -725,12 +735,14 @@ async function links() {
       document.getElementById('g3info').innerHTML = 'Группы с наибольшей посреднической центральностью (betweenness): ' + top.map((n) => `<span>${esc(n.name)}</span> (${fmt(n.betweenness, 2)})`).join(', ');
     } else {
       const d = N.intertext;
-      const deg = {}; d.links.forEach((l) => { deg[l.target] = (deg[l.target] || 0) + l.weight; });
+      const links = d.links.filter((l) => l.type !== 'cites' || okCite.has(`${l.source}>${l.target}`));  // ссылки — только подтверждённые текстом
+      const deg = {}; links.forEach((l) => { deg[l.target] = (deg[l.target] || 0) + l.weight; });
       const nodes = d.nodes.filter((n) => n.kind === 'work' || (deg[n.id] || 0) >= 5);
       const ids = new Set(nodes.map((n) => n.id));
-      data = {nodes: nodes.map((n) => ({...n, color: CATC[n.kind], val: Math.max(1, Math.sqrt(deg[n.id] || 1))})), links: d.links.filter((l) => ids.has(l.source) && ids.has(l.target)).map((l) => ({...l, color: l.type === 'reuse' ? '#f0607a' : '#8597a8'}))};
+      data = {nodes: nodes.map((n) => ({...n, color: CATC[n.kind], val: Math.max(1, Math.sqrt(deg[n.id] || 1))})), links: links.filter((l) => ids.has(l.source) && ids.has(l.target)).map((l) => ({...l, color: l.type === 'reuse' ? '#f0607a' : '#8597a8'}))};
       legend = `<span><i style="background:${CATC.work}"></i>книги корпуса</span><span><i style="background:${CATC.authority}"></i>авторитеты вне корпуса</span><span><i style="background:#f0607a"></i>заимствование</span><span><i style="background:#8597a8"></i>ссылка</span>`;
-      document.getElementById('g3info').innerHTML = 'Чаще всего упоминаются: Pallas, Atkinson, Castrén, Humboldt, Schrenck, Erman, Middendorff.';
+      const CT = (VF.citations || []).slice(0, 7);
+      document.getElementById('g3info').innerHTML = CT.length ? (EN ? 'Most often mentioned by other authors of the corpus (number of books): ' : 'Чаще всего упоминаются другими авторами корпуса (число книг): ') + CT.map((c) => `<span>${esc(c.name)}</span> (${c.books})`).join(', ') + '.' : '';
     }
     document.getElementById('g3l').innerHTML = legend;
     document.getElementById('perCtl').hidden = mode !== 'g';
@@ -759,9 +771,9 @@ function loadScript(src) { return new Promise((res, rej) => { if (window.ForceGr
 
 // ---------------- аналитика ----------------
 async function analytics() {
-  const [A, works, reuse, AR] = await Promise.all([get('analytics.json'), get('works.json'), get('reuse.json'), get('review/annotation_review.json').catch(() => ({}))]);
+  const [A, works, reuse, VF] = await Promise.all([get('analytics.json'), get('works.json'), get('reuse.json'), getV()]);
   const W = Object.fromEntries(works.map((w) => [w.id, w]));
-  const nRev = Object.keys(AR).length;
+  const SA = !!(VF.sample_annotation && VF.sample_annotation.verified);  // оценки и отношения — только после проверки разметки
   const ex = (dim) => A.expert.filter((r) => r.dimension === dim);
   const FR = {ethno: 'этнографическое описание', contact: 'повседневный контакт', econ: 'хозяйство и торговля', decline: 'упадок, вымирание, болезни', civ: 'иерархия «цивилизованности»', relig: 'религия', conflict: 'конфликт', admin: 'власть и управление', other: 'прочее'};
   const TERM = {personal: 'личное наблюдение', brit: 'британский автор', transit: 'транзит, плавание, война', 'C(per3)[T.b_1881_1904]': '1881–1904 (относительно 1800–1880)', 'C(per3)[T.c_после1904]': 'после 1904 (относительно 1800–1880)'};
@@ -770,14 +782,14 @@ async function analytics() {
   const ci = (r, a) => r[a] === 0 && r[a + '_hi'] === 0 ? `0% <span class="mute small">(нет случаев)</span>` : `${fmt(100 * r[a], 1)}% <span class="mute small">(${fmt(100 * r[a + '_lo'], 1)}–${fmt(100 * r[a + '_hi'], 1)})</span>`;
   V.innerHTML = `<section class="band"><div class="wrap">
     <h1>Аналитика</h1>
-    <div class="ctl scroll"><a class="btn" href="#analytics-eval">Оценки</a><a class="btn" href="#analytics-ngram">Ngram</a><a class="btn" href="#analytics-disc">Дискурсы</a><a class="btn" href="#analytics-rel">Отношения</a><a class="btn" href="#analytics-topics">Темы</a><a class="btn" href="#analytics-reuse">Заимствования</a></div>
-    <h2 id="analytics-eval">Факторы, связанные с оценкой народа</h2>
-    <p>В расчёты вошли ${ex('all')[0].n} описаний коренных народов из ${pl(ex('all')[0].works, ['книги', 'книг', 'книг'])} (из 250 описаний выборки 20 при разметке признаны не относящимися к народам Сибири). Выборка стратифицирована по стране автора и периоду, доли взвешены, доверительные интервалы получены бутстрепом по книгам. Результаты предварительные: разметку по протоколу проекта выполнила языковая модель, эксперты проекта её проверяют. Проверено экспертами: ${fmt(nRev)} из 250 описаний выборки.</p>
+    <div class="ctl scroll">${SA ? '<a class="btn" href="#analytics-eval">Оценки</a>' : ''}<a class="btn" href="#analytics-ngram">Ngram</a><a class="btn" href="#analytics-disc">Дискурсы</a>${SA ? '<a class="btn" href="#analytics-rel">Отношения</a>' : ''}<a class="btn" href="#analytics-topics">Темы</a><a class="btn" href="#analytics-reuse">Заимствования</a></div>
+    ${SA ? `<h2 id="analytics-eval">Факторы, связанные с оценкой народа</h2>
+    <p>В расчёты вошли ${ex('all')[0].n} описаний коренных народов из ${pl(ex('all')[0].works, ['книги', 'книг', 'книг'])} (из 250 описаний выборки 20 при разметке признаны не относящимися к народам Сибири). Выборка стратифицирована по стране автора и периоду, доли взвешены, доверительные интервалы получены бутстрепом по книгам. Разметка выполнена по протоколу проекта и проверена экспертами.</p>
     <div class="cols">
       <div><h3>Рамка описания</h3><table class="stack"><thead><tr><th>Рамка</th><th class="n">n</th><th class="n">Отрицательные</th><th class="n">Положительные</th></tr></thead><tbody>${ex('frame').sort((a, b) => b.n - a.n).map((r) => `<tr><td>${FR[r.key] || esc(r.key)}</td><td class="n">${r.n}</td><td class="n">${ci(r, 'neg')}</td><td class="n">${ci(r, 'pos')}</td></tr>`).join('')}</tbody></table></div>
       <div><h3>Модель (отношение шансов)</h3><table class="stack"><thead><tr><th>Исход</th><th>Фактор</th><th class="n">ОШ</th><th class="n">95% ДИ</th></tr></thead><tbody>${A.models.filter((m) => m.term !== 'Intercept').map((m) => `<tr><td>${m.model.startsWith('neg') ? 'отрицательная' : 'положительная'}</td><td>${TERM[m.term] || esc(m.term)}</td><td class="n"><b>${fmt(m.OR, 2)}</b></td><td class="n">${fmt(m.lo, 2)}–${fmt(m.hi, 2)}</td></tr>`).join('')}</tbody></table><p class="small mute">ОШ больше 1 означает, что фактор связан с более высокой вероятностью исхода. Если интервал не включает 1, связь статистически значима для данной выборки (n = 230), но не доказывает причинной зависимости.</p></div>
     </div>
-    <div class="cols" style="margin-top:18px">${['observer', 'period', 'stay'].map((dim) => `<div><h3>${{observer: 'Страна автора', period: 'Период поездки', stay: 'Тип поездки'}[dim]}</h3><table class="stack"><thead><tr><th></th><th class="n">n</th><th class="n">Отриц.</th><th class="n">Полож.</th></tr></thead><tbody>${ex(dim).map((r) => `<tr><td>${esc(r.key)}</td><td class="n">${r.n}</td><td class="n">${ci2(r, 'neg')}</td><td class="n">${ci2(r, 'pos')}</td></tr>`).join('')}</tbody></table></div>`).join('')}</div>
+    <div class="cols" style="margin-top:18px">${['observer', 'period', 'stay'].map((dim) => `<div><h3>${{observer: 'Страна автора', period: 'Период поездки', stay: 'Тип поездки'}[dim]}</h3><table class="stack"><thead><tr><th></th><th class="n">n</th><th class="n">Отриц.</th><th class="n">Полож.</th></tr></thead><tbody>${ex(dim).map((r) => `<tr><td>${esc(r.key)}</td><td class="n">${r.n}</td><td class="n">${ci2(r, 'neg')}</td><td class="n">${ci2(r, 'pos')}</td></tr>`).join('')}</tbody></table></div>`).join('')}</div>` : ''}
 
     <h2 id="analytics-ngram" style="margin-top:36px">Ngram: частоты слов по годам</h2>
     <p>Частота на миллион слов в англоязычных абзацах о Сибири по году издания; кривые сглажены скользящим окном. Можно ввести слово или сочетание длиной до трёх слов: этнонимы, слова-маркеры или сочетания с этнонимами.</p>
@@ -785,13 +797,13 @@ async function analytics() {
     <div class="chart" id="ngc"></div>
 
     <h2 id="analytics-disc" style="margin-top:36px">Дискурсы по периодам</h2>
-    <p>Доля абзацев о коренных народах, в которых выявлен дискурс (поиск по правилам для 9 языков; точность ≈0,75, т. е. около четверти найденных случаев ошибочны; полнота не измерялась, поэтому часть случаев пропущена). Вертикальные отрезки — 95%-е интервалы, рассчитанные по книгам.</p>
+    <p>Доля абзацев о коренных народах, в которых встречаются слова-маркеры дискурса (поиск по правилам для 9 языков; маркеры указывают на тему, а не на позицию автора). Вертикальные отрезки — 95%-е интервалы, рассчитанные по книгам.</p>
     <div class="chart" id="dc"></div>
     <details><summary>Примеры абзацев</summary>${A.discourse_examples.slice(0, 60).map((e) => `<div class="quote">${esc(e.quote)}<div class="m">${esc(e.discourse_ru)} · ${esc(e.work)} · <a href="#book-${toH(e.pid.split('_p')[0])}-p${esc(e.pid.split('_p')[1])}">абзац</a></div></div>`).join('')}</details>
 
-    <h2 id="analytics-rel" style="margin-top:36px">Отношения: разметка выборки</h2>
+    ${SA ? `<h2 id="analytics-rel" style="margin-top:36px">Отношения: разметка выборки</h2>
     <p>84 предложения из 100 фрагментов выборки (в остальных 16 отношения не выражены), в которых коренная группа названа вместе с русскими, казаками, переселенцами или ссыльными и охарактеризованы отношения между ними. Выборка невелика, поэтому цифры лишь намечают вопросы для дальнейшей проверки.</p>
-    <div class="scroll" id="relT"></div>
+    <div class="scroll" id="relT"></div>` : ''}
 
     <h2 id="analytics-topics" style="margin-top:36px">Темы абзацев о коренных народах</h2>
     <p>Тематическая модель (NMF, 18 тем) по английским абзацам. Насыщенность цвета клетки соответствует доле темы в данном периоде.</p>
@@ -806,7 +818,7 @@ async function analytics() {
   const rel = A.relations_manual; const types = [...new Set(rel.map((r) => r.type_ru))];
   const v = (t, p) => (rel.find((r) => r.type_ru === t && r.per === p) || {share: 0}).share;
   types.sort((a, b) => (v(b, 'после 1880') + v(b, 'до 1880')) - (v(a, 'после 1880') + v(a, 'до 1880')));
-  document.getElementById('relT').innerHTML = `<table><thead><tr><th>Тип отношения</th><th class="n">до 1880</th><th class="n">после 1880</th></tr></thead><tbody>${types.map((t) => `<tr><td>${esc(t)}</td><td class="n">${fmt(100 * v(t, 'до 1880'), 1)}%</td><td class="n">${fmt(100 * v(t, 'после 1880'), 1)}%</td></tr>`).join('')}</tbody></table>`;
+  if (document.getElementById('relT')) document.getElementById('relT').innerHTML = `<table><thead><tr><th>Тип отношения</th><th class="n">до 1880</th><th class="n">после 1880</th></tr></thead><tbody>${types.map((t) => `<tr><td>${esc(t)}</td><td class="n">${fmt(100 * v(t, 'до 1880'), 1)}%</td><td class="n">${fmt(100 * v(t, 'после 1880'), 1)}%</td></tr>`).join('')}</tbody></table>`;
   // темы
   const TP = A.topics; const pk = [...new Set(TP.shares.filter((s) => s.dimension === 'period').map((s) => s.key))];
   const ord = ['до 1855', '1856–1880', '1881–1904', '1905–1917', '1918–1930']; pk.sort((a, b) => ord.findIndex((o) => a.startsWith(o)) - ord.findIndex((o) => b.startsWith(o)));
@@ -906,7 +918,7 @@ async function scope() {
     <p>Корпус неоднороден: ${nat('Великобритания')} книг из ${W.length} — британские. Поэтому Ngram, темы и поиск заимствований, которые рассчитаны только по англоязычным текстам, отражают прежде всего британскую точку зрения. Две книги требуют осторожности: «Сибирь» Кубальского (1856) — компиляция без собственной поездки автора, а достоверность ряда эпизодов книги Оссендовского «Звери, люди и боги» (1922) давно оспаривается.</p>
 
     <h2>Названия народов</h2>
-    <p>Этнонимы приводятся в написании источников («Ostiak», «Tartar», «Kirghiz») и соотнесены с современными названиями народов. Соответствие исторических имён современным не всегда однозначно; спорные отождествления отмечены особо. Рубрики на странице «Народы» («коренные народы», «русские и пришлые», «соседи», «иностранцы») носят рабочий характер: они воспроизводят взгляд из имперского центра, который сам является предметом исследования, и будут пересмотрены. Узел «туземцы, инородцы (обобщённо)» в сети связей соединён со всеми коренными группами, поскольку путешественники применяли эти слова к любым из них.</p>
+    <p>Этнонимы приводятся в написании источников («Ostiak», «Tartar», «Kirghiz») и соотнесены с современными названиями народов. Соответствие исторических имён современным не всегда однозначно; спорные отождествления отмечены особо. Рубрики на странице «Народы» («коренные народы Сибири и Степного края», «обобщённые названия коренного населения», «русские и другие переселенцы», «социально-правовые группы», «соседние народы», «иностранцы») носят рабочий характер: они воспроизводят взгляд из имперского центра, который сам является предметом исследования, и будут пересмотрены. Узел «туземцы, инородцы (обобщённо)» в сети связей соединён со всеми коренными группами, поскольку путешественники применяли эти слова к любым из них.</p>
 
     <h2>Глоссарий исторических терминов</h2>
     <dl class="gloss">
@@ -935,48 +947,38 @@ async function scope() {
 
 // ---------------- метод ----------------
 async function method() {
-  const [A, P, works, PC] = await Promise.all([get('analytics.json'), project(), get('works.json'), get('places_count.json').catch(() => ({attested: 0}))]);
-  const JE = A.journeys_eval || {n: 12, precision: 0.69, recall: 0.71}; const Q = A.quality, ok = (i) => Math.round(Q[i].value * Q[i].n), pct = (v) => fmt(100 * v, 0) + '%';
+  const [A, P, works, PC, VF, CL] = await Promise.all([get('analytics.json'), project(), get('works.json'), get('places_count.json').catch(() => ({attested: 0})), getV(), get('changelog.json').catch(() => [])]);
+  const SA = !!(VF.sample_annotation && VF.sample_annotation.verified);
   const steps = [
     ['Формирование корпуса', 'экспертная работа и цифровой поиск', `Корпус формировался с опорой на библиографические справочники (прежде всего A. G. Cross, «In the Lands of the Romanovs»), национальные библиографии и каталоги, фонды электронных библиотек и репозиториев (Internet Archive, Project Gutenberg и др.) и исследовательскую литературу о травелогах. Каждое издание проверялось на соответствие критериям отбора: европейский автор, собственная поездка или пребывание в Сибири, 1800–1930 годы. Из 168 рассмотренных изданий отобрано ${works.length}; сверка с библиографией Cross показывает охват 76% её европейских позиций.`],
-    ['Паспорт издания', 'экспертная работа', 'Для каждой книги вручную установлены автор, его страна и род занятий, тип пребывания в Сибири, годы поездки (отдельно от года издания) и надёжность датировки. На этих сведениях основаны все сравнения по периодам и странам.'],
+    ['Паспорт издания', 'экспертная работа', 'Для каждой книги установлены автор, его страна и род занятий, тип пребывания в Сибири, годы поездки (отдельно от года издания) и надёжность датировки. На этих сведениях основаны все сравнения по периодам и странам.'],
     ['Подготовка текстов', 'цифровая обработка с выборочным контролем', 'Распознанный текст очищен от колонтитулов, номеров страниц, переносов, подписей к иллюстрациям и служебных страниц и разделён на главы и абзацы. Каждый абзац получил постоянный номер, по которому на него можно сослаться.'],
-    ['Названия народов и мест', 'экспертная работа и цифровая обработка', `Словарь этнонимов на 10 языках составлен и выверен вручную: исторические и иноязычные формы (Ostiaken, Tongouses, Bratski) сведены к современным названиям народов, неоднозначные случаи разобраны по контексту. Для автоматического поиска упоминаний составлен справочник из 101 места с координатами; по нему и по словарю этнонимов упоминания выявлены во всех текстах. Вместе с остановками маршрутов газеттир проекта включает ${fmt(PC.attested)} мест: в него входят только места, названные хотя бы в одном абзаце корпуса (проверка повторяется автоматически при каждом обновлении данных).`],
-    ['Маршруты', 'цифровая обработка, экспертная проверка', 'Черновик маршрута составляется автоматически: в него входят места, о посещении которых пишет автор, с подтверждающими абзацами. Затем языковая модель по протоколу проекта прочитывает книгу целиком и оставляет в маршруте лишь места, где автор действительно побывал, в порядке следования и с дословной цитатой; цитаты и номера абзацев автоматически сверяются с текстом. Все маршруты на сайте пока предварительные: их проверяют эксперты проекта, и на карте отмечено, какие уже подтверждены.'],
-    ['Иллюстрации', 'цифровая обработка с проверкой', 'Страницы с графикой отбираются в сканах Internet Archive автоматически: вклейки и пробелы в наборе определяются по разметке распознанного текста, графическая область — по изображению страницы. Альбомные вклейки поворачиваются так, чтобы подпись распознавалась наиболее надёжно. Подписью считаются строки под изображением; иллюстрация привязывается к абзацу библиотеки по совпадению текста соседних страниц. Для книг из Project Gutenberg изображения и набранные подписи берутся прямо из HTML-издания, а сканы целых вклеек делятся на отдельные снимки. Подписи проверяются и переводятся, тип, народы и места уточняются; регион определяется по местам из подписи, а если их нет — предварительно по соседнему абзацу. Исправления вносятся в рабочем месте команды (код: 08a_illustrations.py, 08c_illustrations_gutenberg.py, 08b_illustrations_site.py).'],
-    ['Разметка выборки', 'автоматическая разметка, экспертная проверка', 'Выборка стратифицирована по стране автора и периоду: 250 описаний коренных народов и 100 фрагментов об отношениях между группами. При разметке 20 описаний признаны не относящимися к народам Сибири (топоним, другой регион или ошибочно опознанная группа) и исключены из расчётов, поэтому оценки строятся по 230 описаниям из 61 книги; в 16 фрагментах отношения между группами не выражены, и анализ отношений опирается на остальные 84. Для каждого фрагмента определены оценка, рамка описания (иерархия «цивилизованности», хозяйство, контакт и т. д.), источник знания (личное наблюдение или пересказ) и тип отношения. Предварительную разметку по протоколу проекта выполнила языковая модель; эксперты проекта её проверяют. Все выводы об оценках и отношениях на сайте построены на этой разметке и до окончания проверки считаются предварительными.'],
+    ['Названия народов и мест', 'экспертная работа и цифровая обработка', `Словарь этнонимов на 10 языках составлен и выверен по текстам: исторические и иноязычные формы (Ostiaken, Tongouses, Bratski) сведены к современным названиям народов, неоднозначные случаи разобраны по контексту. Для автоматического поиска упоминаний составлен справочник из 101 места с координатами; по нему и по словарю этнонимов упоминания выявлены во всех текстах. Вместе с остановками маршрутов газеттир проекта включает ${fmt(PC.attested)} мест: в него входят только места, названные хотя бы в одном абзаце корпуса (проверка повторяется автоматически при каждом обновлении данных).`],
+    ['Маршруты', 'цифровая обработка с автоматической проверкой', 'Маршрут восстанавливается по тексту книги. Сначала автоматически отбираются места, о посещении которых пишет автор; затем языковая модель прочитывает книгу целиком и оставляет в маршруте лишь места, где автор действительно побывал, в порядке следования и с дословной цитатой. На карте показываются только остановки, для которых проверка нашла эту цитату в указанном абзаце и название места в ней.'],
+    ['Иллюстрации', 'цифровая обработка с проверкой', 'Страницы с графикой отбираются в сканах Internet Archive автоматически: вклейки и пробелы в наборе определяются по разметке распознанного текста, графическая область — по изображению страницы. Альбомные вклейки поворачиваются так, чтобы подпись распознавалась наиболее надёжно. Подписью считаются строки под изображением; иллюстрация привязывается к абзацу библиотеки по совпадению текста соседних страниц. Для книг из Project Gutenberg изображения и набранные подписи берутся прямо из HTML-издания, а сканы целых вклеек делятся на отдельные снимки. Подписи переведены на русский язык. Народы и места указываются, только если они названы в подписи источника; регион определяется по местам из подписи, а если их нет — по соседнему абзацу.'],
+    ...(SA ? [['Разметка выборки', 'экспертная разметка', 'Выборка стратифицирована по стране автора и периоду: 250 описаний коренных народов и 100 фрагментов об отношениях между группами. При разметке 20 описаний признаны не относящимися к народам Сибири (топоним, другой регион или ошибочно опознанная группа) и исключены из расчётов, поэтому оценки строятся по 230 описаниям из 61 книги; в 16 фрагментах отношения между группами не выражены, и анализ отношений опирается на остальные 84. Для каждого фрагмента определены оценка, рамка описания (иерархия «цивилизованности», хозяйство, контакт и т. д.), источник знания (личное наблюдение или пересказ) и тип отношения. Разметка выполнена по протоколу проекта и проверена экспертами; на ней построены все выводы об оценках и отношениях.']] : []),
     ['Корпусный анализ', 'цифровая обработка', 'Частоты по десятилетиям, коллокации, дискурсы, тематическое моделирование, сети совместных упоминаний и цитирования, поиск текстовых заимствований, статистические модели с учётом того, что фрагменты одной книги не независимы.'],
-    ['Интерпретация', 'экспертная работа', 'Каждая закономерность проверялась чтением исходных фрагментов. От частот, подборок цитат и маршрутов можно перейти к абзацам, на которых они основаны; для статистических моделей и тем указаны выборка и способ расчёта.']];
-  const rows = [
-    ['ok', 'Найденное слово действительно обозначает народ', `${Q[1].n} случайных упоминаний после доработки словаря`, `верно ${ok(1)} из ${Q[1].n}`, 'Используется для всех частот и сетей.'],
-    ['ok', 'То же для текстов на итальянском, датском, норвежском, польском и чешском', `${Q[2].n} упоминаний`, `верно ${ok(2)} из ${Q[2].n}`, 'Прилагательные («tatarski», «kirgizský») исключены из поиска.'],
-    ['ok', 'Дополнительные исторические формы названий (Buriats, cosaques, Ostiaken)', `${Q[3].n} упоминаний`, `верно ${ok(3)} из ${Q[3].n}`, 'Используются наравне с основными формами.'],
-    ['ok', 'Абзац верно отнесён к Сибири', `${Q[9].n} абзацев`, `верно ${ok(9)} из ${Q[9].n}`, 'Анализ ведётся только по абзацам о Сибири.'],
-    ['ok', 'Фрагмент выборки действительно описывает народ Сибири', `${Q[4].n} фрагментов`, `подходят ${ok(4)} из ${Q[4].n}`, 'Неподходящие фрагменты исключены из расчётов.'],
-    ['mid', 'Отнесение к Сибири абзацев без собственных топонимов в книгах без деления на главы', `${Q[5].n} абзацев`, `верно ${ok(5)} из ${Q[5].n}`, 'Около пятой части таких абзацев в действительности относится к другим регионам; доли по этим книгам приблизительны.'],
-    ['mid', 'Черновики маршрутов: места, о которых автор пишет как о посещённых', `сравнение с ${JE.n} маршрутами, восстановленными по тексту`, `верных остановок ${pct(JE.precision)}, найдено ${pct(JE.recall)} остановок, порядок почти совпадает`, 'До проверки экспертом черновики маршрутов показываются на карте не линией, а пронумерованными точками.'],
-    ['mid', 'Автоматический поиск дискурсов (вымирание, ссылка, обрусение и др.)', `${Q[7].n} абзацев`, `верно ${ok(7)} из ${Q[7].n}`, 'Надёжнее сравнивать изменения во времени, чем абсолютные доли; часть случаев поиск пропускает.'],
-    ['low', 'Автоматическое выделение тем', `${Q[12].n} абзацев, сравнение с ручным определением`, 'совпадение примерно в половине случаев', 'Темы служат только для навигации, выводов по ним не делается.'],
-    ['no', 'Автоматическое определение типа отношений между народами', `${Q[6].n} фрагментов, сравнение с разметкой выборки`, `совпало ${ok(6)} из ${Q[6].n}`, 'Не используется: отношения описаны по разметке выборки.'],
-    ['no', 'Автоматическое определение оценки народа и источника знания', `${Q[10].n} фрагментов, сравнение с разметкой выборки`, 'согласие слабое', 'Не используется: все оценки на сайте — по разметке выборки.']];
-  const ST = {ok: 'надёжно', mid: 'с оговорками', low: 'как ориентир', no: 'заменено разметкой выборки'};
+    ['Интерпретация', 'экспертная работа', 'Закономерности интерпретируются по исходным фрагментам: от частот, подборок цитат и маршрутов можно перейти к абзацам, на которых они основаны; для статистических показателей указаны выборка и способ расчёта.']];
+  const VS = VF.summary || [];
   V.innerHTML = `<section class="band"><div class="wrap">
     <h1>Метод и данные</h1>
-    <p class="lede">Ресурс сочетает экспертную филологическую работу с источниками и цифровую обработку корпуса. Отбор книг, их описание, словарь названий народов и интерпретацию результатов выполнили исследователи. Автоматические методы применялись там, где требовалась обработка всего корпуса (11 млн слов); их результаты проверены на выборках (см. таблицу ниже). Маршруты и разметка оценок и отношений в выборке пока предварительные: их по протоколу проекта подготовила языковая модель, эксперты проекта их проверяют.</p>
+    <p class="lede">Ресурс сочетает экспертную филологическую работу с источниками и цифровую обработку корпуса. Отбор книг, их описание, словарь названий народов и интерпретацию результатов выполнили исследователи. Автоматические методы применялись там, где требовалась обработка всего корпуса (11 млн слов). Сведения, которые показывает сайт, автоматически сверяются с текстами книг; данные, не прошедшие проверку, не публикуются.</p>
     <p>Границы Сибири, критерии отнесения авторов к европейским и принципы передачи названий народов изложены на странице <a href="#scope">«Границы и категории»</a>; там же приведён глоссарий исторических терминов.</p>
     <h2 style="margin-top:40px">Этапы работы</h2>
     <ol class="steps">${steps.map(([t, k, d]) => `<li><h3>${esc(t)}</h3><p class="kind">${esc(k)}</p><p>${esc(d)}</p></li>`).join('')}</ol>
-    <h2 style="margin-top:48px">Проверка автоматической обработки</h2>
-    <p>Результаты каждого этапа автоматической обработки проверялись вручную на случайной выборке. В таблице указаны предмет проверки, объём выборки, результат и то, как он учтён на сайте. Если доля ошибок оказывалась слишком высокой, автоматические результаты заменялись разметкой выборки, выполненной по протоколу проекта.</p>
-    <div class="scroll"><table class="stack qual"><thead><tr><th>Что проверяли</th><th>На чём</th><th>Результат</th><th>Как учтено</th><th>Итог</th></tr></thead><tbody>${rows.map(([st, a, b, c, d]) => `<tr><td data-l="Что проверяли">${esc(a)}</td><td data-l="На чём">${esc(b)}</td><td data-l="Результат">${esc(c)}</td><td data-l="Как учтено">${esc(d)}</td><td data-l="Итог"><span class="st ${st}">${ST[st]}</span></td></tr>`).join('')}</tbody></table></div>
+    <h2 style="margin-top:48px">Проверка данных</h2>
+    <p>Сведения, которые показывает сайт, при каждом обновлении автоматически сверяются с текстами книг: названия мест и цитаты должны найтись в указанных абзацах, ссылки на предшественников — в тексте другого автора, народы и места на иллюстрациях — в подписи источника. Данные, не прошедшие проверку, на сайте не показываются.</p>
+    ${VS.length ? `<div class="scroll"><table class="stack"><thead><tr><th>Данные</th><th class="n">Подтверждено текстом</th></tr></thead><tbody>${VS.map((r) => `<tr><td data-l="Данные">${esc(EN ? r.en : r.ru)}</td><td class="n" data-l="Подтверждено текстом">${fmt(r.ok)}</td></tr>`).join('')}</tbody></table></div>` : ''}
     <h2 style="margin-top:48px">Ограничения</h2>
-    <ul class="lim"><li>Разметка выборки предварительная: её выполнила языковая модель по протоколу проекта, эксперты проекта её проверяют. Согласованность будет оценена по независимой разметке двух экспертов.</li>
-    <li>В распознанных книгах без деления на главы отнесение отдельных абзацев к Сибири приблизительно (см. таблицу).</li>
+    <ul class="lim"><li>В распознанных книгах без деления на главы отнесение отдельных абзацев к Сибири приблизительно: около пятой части таких абзацев относится к другим регионам.</li>
     <li>Корпус включает издания, доступные в электронных библиотеках и репозиториях; часть известных травелогов (например, M. A. Czaplicka, J. Noble, P. Labbé) пока не оцифрована в пригодном виде. Корпус будет пополняться.</li>
-    <li>Ареалы народов на карте схематичны и служат только для ориентира.</li></ul>
+    <li>Ареалы народов показаны только по «Этнографической карте Азиатской России» (1914) — так, как их обозначили составители карты; для народов, не отмеченных на ней, ареал не показывается.</li></ul>
     <h2 style="margin-top:48px">Данные</h2>
     <p>Каталог изданий и атлас народов и мест опубликованы на Zenodo с DOI${(P.datasets || []).length ? ': ' + P.datasets.map((d) => `<a href="https://doi.org/${esc(d.doi)}">${esc(d.title)}</a> (${esc(d.license)})`).join('; ') : ''}. Данные сайта размещены в каталоге <code>data/</code>, тексты — в каталоге <code>texts/</code>, программный код — в <a href="${REPO}">репозитории на GitHub</a>.</p>
     <p>Места и маршруты выгружены в открытых форматах исторической географии: <a href="data/export/iter-sibiricum-places.lpf.jsonld" download>газеттир в Linked Places Format</a> (для World Historical Gazetteer: формы названий из книг со ссылками на абзацы, годы, точность координат, ссылки на GeoNames и Wikidata) и <a href="data/export/iter-sibiricum-routes.geojson" download>маршруты в GeoJSON</a> (по поездкам, со статусом проверки). Выгрузки входят в атлас и распространяются, как и он, по лицензии CC BY-NC 4.0.</p>
+    ${CL.length ? `<h2 style="margin-top:48px">Развитие ресурса</h2>
+    <p>Iter Sibiricum — развивающийся ресурс: корпус пополняется, методы обработки и проверки данных совершенствуются, и каждое изменение фиксируется в истории репозитория.</p>
+    <ul class="changelog">${CL.map((c) => `<li><span class="mute small">${esc(c.date)}</span> ${esc(EN ? c.en : c.ru)}</li>`).join('')}</ul>` : ''}
     <div class="cite">${esc(citation(P))}</div>
   </div></section>`;
 }

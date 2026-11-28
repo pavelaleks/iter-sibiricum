@@ -23,8 +23,9 @@ window.Research = (() => {
     const st = {g: G[q.get('g')] ? q.get('g') : '', pl: P[q.get('pl')] ? q.get('pl') : '', w: W[q.get('w')] ? q.get('w') : '', per: PER[q.get('per')] ? q.get('per') : '', nat: NATS.includes(q.get('nat')) ? q.get('nat') : '',
       stay: STAYS.includes(q.get('stay')) ? q.get('stay') : '', sib: q.get('sib') === '1', s: q.get('s') || '', cmp: DIM[q.get('cmp')] ? q.get('cmp') : '', a: q.get('a') || '', b: q.get('b') || ''};
     const opt = (arr, cur) => arr.map(([v, t]) => `<option value="${esc(v)}"${v === cur ? ' selected' : ''}>${esc(t)}</option>`).join('');
-    const CAT = {indigenous: T('Коренные народы', 'Indigenous peoples'), settler: T('Русские и переселенцы', 'Russians and settlers'), exile: T('Ссыльные', 'Exiles'), foreign: T('Иностранцы', 'Foreigners'), other: T('Другие', 'Other')};
-    const gOpts = Object.entries(groups.reduce((a, g) => ((a[g.category] ||= []).push(g), a), {})).map(([c, L]) => `<optgroup label="${esc(CAT[c] || c)}">${opt(L.sort((x, y) => gName(x.id).localeCompare(gName(y.id), EN ? 'en' : 'ru')).map((g) => [g.id, gName(g.id)]), st.g)}</optgroup>`).join('');
+    const CAT = (window.CATS || {})[EN ? 'en' : 'ru'] || {}; const cap = (x) => x ? x[0].toUpperCase() + x.slice(1) : x;
+    const byCat = groups.reduce((a, g) => ((a[g.category] ||= []).push(g), a), {});
+    const gOpts = ((window.CATS || {}).order || Object.keys(byCat)).filter((c) => byCat[c]).map((c) => [c, byCat[c]]).map(([c, L]) => `<optgroup label="${esc(cap(CAT[c] || c))}">${opt(L.sort((x, y) => gName(x.id).localeCompare(gName(y.id), EN ? 'en' : 'ru')).map((g) => [g.id, gName(g.id)]), st.g)}</optgroup>`).join('');
     const pOpts = opt(places.slice().sort((a, b) => b.mentions - a.mentions).map((p) => [p.id, `${pName(p.id)} (${fmt(p.mentions)})`]), st.pl);
 
     V.innerHTML = `<section class="band ev" data-noi18n><div class="wrap">
@@ -157,7 +158,7 @@ window.Research = (() => {
       ['data/places.json', T('Места: координаты и их источник (GeoNames, Wikidata, вручную), упоминания, книги, народы в тех же абзацах', 'Places: coordinates and their source (GeoNames, Wikidata, manual), mentions, books, peoples in the same paragraphs'), 'JSON', 'CC BY-NC 4.0'],
       ['data/geo/<книга>.json', T('Упоминания мест по абзацам: [абзац, место, начало, конец]', 'Place mentions by paragraph: [paragraph, place, start, end]'), 'JSON', 'CC BY-NC 4.0'],
       ['data/evidence/g|p/<id>.json', T('Указатель свидетельств: все абзацы о группе или месте с фрагментом текста', 'Evidence index: all paragraphs about a group or a place with a text fragment'), 'JSON', 'CC BY 4.0'],
-      ['data/routes.json, data/review/journeys_review.json', T('Маршруты: остановки с абзацем-доказательством и цитатой; правки и статус экспертной проверки', 'Routes: stops with the evidence paragraph and quotation; corrections and expert review status'), 'JSON', 'CC BY-NC 4.0'],
+      ['data/routes.json, data/review/journeys_review.json', T('Маршруты: остановки с подтверждающим абзацем и цитатой', 'Routes: stops with the supporting paragraph and quotation'), 'JSON', 'CC BY-NC 4.0'],
       ['data/export/iter-sibiricum-routes.geojson', T('Маршруты для ГИС (QGIS, ArcGIS)', 'Routes for GIS (QGIS, ArcGIS)'), 'GeoJSON', 'CC BY-NC 4.0'],
       ['data/export/iter-sibiricum-places.lpf.jsonld', T('Газеттир мест в формате Linked Places (для World Historical Gazetteer)', 'Gazetteer of places in Linked Places Format (for the World Historical Gazetteer)'), 'JSON-LD', 'CC BY-NC 4.0'],
       ['data/areas1914.geojson', T('Ареалы 12 народов, оцифрованные с «Этнографической карты Азиатской России» (1914)', 'Areas of 12 peoples digitised from the Ethnographic Map of Asiatic Russia (1914)'), 'GeoJSON', 'CC BY 4.0'],

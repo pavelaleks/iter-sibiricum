@@ -46,8 +46,8 @@ def stems(forms):
 def skel(w):
     """Грубый фонетический ключ: разные транскрипции (Kongoor / Kungur, Kusnetzk / Kuznetsk, Tcherdine / Cherdyn) дают одну основу."""
     w = fold(w).replace(' ', '')
-    for a, b in (('shch', 'c'), ('tsch', 'c'), ('sch', 'c'), ('tch', 'c'), ('tsh', 'c'), ('ch', 'c'), ('sh', 'c'), ('zh', 'c'), ('kh', 'k'), ('tz', 'c'), ('ts', 'c'),
-                 ('ph', 'f'), ('ck', 'k'), ('dj', 'd'), ('dzh', 'd'), ('dsch', 'd')):
+    for a, b in (('dzh', 'c'), ('dsch', 'c'), ('dj', 'c'), ('dz', 'c'), ('shch', 'c'), ('tsch', 'c'), ('sch', 'c'), ('tch', 'c'), ('tsh', 'c'), ('ch', 'c'), ('sh', 'c'),
+                 ('zh', 'c'), ('kh', 'k'), ('tz', 'c'), ('ts', 'c'), ('ph', 'f'), ('ck', 'k')):
         w = w.replace(a, b)
     tr = str.maketrans({'g': 'k', 'q': 'k', 'h': 'k', 'x': 'k', 'z': 's', 'w': 'v', 'b': 'p', 'd': 't', 'j': '', 'y': '', 'ь': '', 'ъ': ''})
     w = w.translate(tr)

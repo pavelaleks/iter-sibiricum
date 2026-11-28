@@ -25336,65 +25336,6 @@
   },
   {
    "type": "Feature",
-   "@id": "https://iter-sibiricum.ru/data/export/iter-sibiricum-places.lpf.jsonld#route-urdzhar",
-   "properties": {
-    "title": "Урджар",
-    "src": "route_stop",
-    "coord_source": "geonames",
-    "precision": "",
-    "fclasses": [
-     "P"
-    ],
-    "ccodes": [
-     "KZ"
-    ]
-   },
-   "types": [
-    {
-     "label": "населённый пункт"
-    }
-   ],
-   "when": {
-    "timespans": [
-     {
-      "start": {
-       "earliest": "1893"
-      },
-      "end": {
-       "latest": "1893"
-      }
-     }
-    ]
-   },
-   "names": [
-    {
-     "toponym": "Урджар",
-     "lang": "ru",
-     "citations": [
-      {
-       "label": "Wilhelm Radloff, 1893: «Von Sergiopol wendete ich mich südlich vom Tarbagatai nach TJrdschar,»",
-       "@id": "https://iter-sibiricum.ru/#book-radloff1893-p00059"
-      }
-     ]
-    }
-   ],
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     81.62939,
-     47.09302
-    ],
-    "certainty": "certain"
-   },
-   "links": [
-    {
-     "type": "closeMatch",
-     "identifier": "gn:1517721"
-    }
-   ]
-  },
-  {
-   "type": "Feature",
    "@id": "https://iter-sibiricum.ru/data/export/iter-sibiricum-places.lpf.jsonld#route-issyk_kul",
    "properties": {
     "title": "р. Каркара у Иссык-Куля",

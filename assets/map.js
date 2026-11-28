@@ -34,11 +34,11 @@ window.SibMap = (() => {
     const k0 = {k: 1};
     if (o.showAreas !== false && o.areas) {
       const A = [];
-      // ареалы по этнографической карте 1914 г. (o.areaGeo), для остальных групп — схематичные эллипсы.
+      // ареалы — только по этнографической карте 1914 г. (o.areaGeo); схематичные эллипсы не показываются.
       // d3-geo ждёт внешние кольца по часовой стрелке, GeoJSON (RFC 7946) хранит их против — кольца разворачиваются.
       const AGm = {}; ((o.areaGeo && o.areaGeo.features) || []).forEach((f) => f.properties.groups.forEach((g) => (AGm[g] ||= []).push(f)));
       const rw = (g) => ({type: g.type, coordinates: g.type === 'Polygon' ? g.coordinates.map((r) => r.slice().reverse()) : g.coordinates.map((p) => p.map((r) => r.slice().reverse()))});
-      o.areas.forEach((gr) => AGm[gr.id] ? AGm[gr.id].forEach((f) => A.push({gr, geom: rw(f.geometry), term: f.properties.term})) : (gr.areas || []).forEach((a) => A.push({gr, geom: ellipse(...a)})));
+      o.areas.forEach((gr) => (AGm[gr.id] || []).forEach((f) => A.push({gr, geom: rw(f.geometry), term: f.properties.term})));  // только ареалы с карты 1914 г.
       g.append('g').selectAll('path').data(A).join('path').attr('class', (d) => 'area' + (o.focusGroup === d.gr.id ? ' hi' : '')).attr('d', (d) => path(d.geom))
         .on('mousemove', (ev, d) => show(ev, `<b>${esc(EN ? d.gr.name_en : d.gr.name)}</b>${EN ? '' : esc(d.gr.name_en) + '<br>'}${d.term ? T(`по этнографической карте 1914 г.: «${esc(d.term)}»`, `after the 1914 ethnographic map: “${esc(d.term)}”`) : T('схематичный ареал около 1900 г.', 'schematic area, c. 1900')}<br>${ment(d.gr.mentions)} ${T('в', 'in')} ${books(d.gr.works)}`))
         .on('mouseleave', hide).on('click', (ev, d) => o.onGroup && o.onGroup(d.gr.id));
@@ -60,7 +60,7 @@ window.SibMap = (() => {
         .attr('class', 'route' + (o.animate ? ' draw' : '')).attr('stroke', (r) => col(r.work)).attr('stroke-width', o.routeWidth || 1.8).attr('d', line)
         .attr('pathLength', o.animate ? 1 : null).style('animation-delay', (r, i, a) => o.animate ? (300 + i * Math.min(140, 2400 / Math.max(1, a.length))) + 'ms' : null)
         .style('stroke-opacity', o.focusWork ? .14 : many ? .38 : null).attr('stroke-width', many ? 1.25 : (o.routeWidth || 1.8))
-        .on('mousemove', (ev, r) => { const w = workById[r.work] || {}; show(ev, `<b>${esc(w.label || r.work)}</b>${esc(w.author || '')}<br>${T('поездка', 'journey')} ${w.j0 || '?'}${w.j1 && w.j1 !== w.j0 ? '–' + w.j1 : ''} · ${esc(nm(w.stay_ru || ''))}<br>${r.status === 'verified' ? T('маршрут подтверждён экспертом', 'route confirmed by an expert') : r.status === 'checked' ? T('маршрут предварительный: восстановлен языковой моделью', 'provisional route reconstructed by a language model') : T('маршрут восстановлен по тексту', 'route reconstructed from the text')}`); })
+        .on('mousemove', (ev, r) => { const w = workById[r.work] || {}; show(ev, `<b>${esc(w.label || r.work)}</b>${esc(w.author || '')}<br>${T('поездка', 'journey')} ${w.j0 || '?'}${w.j1 && w.j1 !== w.j0 ? '–' + w.j1 : ''} · ${esc(nm(w.stay_ru || ''))}<br>${r.method === 'draft' ? T('черновик маршрута', 'draft route') : T('маршрут восстановлен по тексту', 'route reconstructed from the text')}`); })
         .on('mouseleave', hide).on('click', (ev, r) => o.onWork && o.onWork(r.work));
       const F0 = o.routes.find((r) => r.work === o.focusWork);
       // География выбранной книги: все упомянутые места, круг — число упоминаний. Это не путь.

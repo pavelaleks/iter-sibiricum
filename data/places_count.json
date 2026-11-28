@@ -1,7 +1,7 @@
 {
- "attested": 640,
+ "attested": 639,
  "gazetteer": 101,
- "route_stops": 539,
+ "route_stops": 538,
  "checked": 699,
  "rule": "place named in at least one corpus paragraph"
 }

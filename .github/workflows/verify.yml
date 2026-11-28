@@ -1,0 +1,31 @@
+# Проверка данных сайта по текстам книг при каждом изменении данных.
+# Пересобирает белый список data/verification.json (pipeline/validation/verify_all.py) и сверяет числа
+# в текстах сайта (check_numbers.py). Сайт показывает только то, что есть в белом списке.
+name: verify-data
+on:
+  push:
+    branches: [main]
+    paths: ['data/**', 'texts/**', 'assets/app.js', 'pipeline/validation/**', 'pipeline/data/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install pandas
+      - run: python3 pipeline/validation/verify_all.py
+      - run: python3 pipeline/validation/check_numbers.py
+      - name: commit verification results
+        run: |
+          if ! git diff --quiet -- data/verification.json pipeline/validation/VERIFICATION.md; then
+            git config user.name "iter-sibiricum-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add data/verification.json pipeline/validation/VERIFICATION.md
+            git commit -m "Data verification: update whitelist"
+            git push
+          fi
