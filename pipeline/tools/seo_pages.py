@@ -17,6 +17,7 @@ works = json.load(open(D / 'works.json', encoding='utf-8'))
 groups = json.load(open(D / 'groups.json', encoding='utf-8'))
 places = json.load(open(D / 'places.json', encoding='utf-8'))
 P = json.load(open(D / 'project.json', encoding='utf-8'))
+HAS_ROUTE = {w for w, v in json.load(open(D / 'review/journeys_review.json', encoding='utf-8')).items() if v.get('status') in ('checked', 'verified', 'reconstructed') and len(v.get('stops') or []) >= 2}  # книги с маршрутом на карте
 EN = json.loads(re.search(r'=\s*(\{.*\})\s*;?\s*$', (ROOT / 'assets/i18n-en.js').read_text(encoding='utf-8'), re.S).group(1))
 VER = re.search(r'site\.css\?v=(\d+)', (ROOT / 'index.html').read_text(encoding='utf-8')).group(1)
 W = {w['id']: w for w in works}
@@ -91,9 +92,9 @@ for w in works:
         title = f"{w['author']}, {w['year']}: {w.get('title_short') or t}"
         tg = [(n, c) for n, c in (w.get('top_groups') or [])][:6]
         tgl = ', '.join(gname(GN[n], en) if n in GN else n for n, _ in tg[:4])
-        desc = (f"{w['author']}, “{w.get('title_short') or t}” ({w['year']}): full text in the Iter Sibiricum library with every paragraph linked, the reconstructed route and the peoples of Siberia the author describes"
+        desc = (f"{w['author']}, “{w.get('title_short') or t}” ({w['year']}): full text in the Iter Sibiricum library with permanent links to every paragraph{', the reconstructed route' if w['id'] in HAS_ROUTE else ''} and the peoples of Siberia the author describes"
                 + (f" ({tgl})." if tgl else '.')) if en else \
-               (f"{w['author']}, «{w.get('title_short') or t}» ({w['year']}): полный текст в библиотеке Iter Sibiricum с постоянными ссылками на абзацы, восстановленный маршрут и народы Сибири, о которых пишет автор"
+               (f"{w['author']}, «{w.get('title_short') or t}» ({w['year']}): полный текст в библиотеке Iter Sibiricum с постоянными ссылками на абзацы{', восстановленный маршрут' if w['id'] in HAS_ROUTE else ''} и народы Сибири, о которых пишет автор"
                 + (f" ({tgl})." if tgl else '.'))
         go = f"{{UP}}{{Q}}#book-{toH(w['id'])}"
         rows = [((('Author', 'Автор')[not en]), e(w['author'])), (('Published', 'Издание')[not en], e(', '.join(x for x in [w.get('publisher') or '', str(w['year'])] if x))),
@@ -121,13 +122,13 @@ for g in groups:
         nm = gname(g, en)
         bw = (g.get('by_work') or [])[:12]
         forms = ', '.join((g.get('forms') or [])[:10])
-        desc = (f"How European travellers of 1800–1930 described the {nm}: {num(g['mentions'], en)} mentions in {g['works']} books, the names they used ({forms[:80]}), quotations, contexts and places."
-                if en else f"Как европейские путешественники 1800–1930 годов описывали народ «{nm}»: {num(g['mentions'], en)} {plural(g['mentions'], 'упоминание', 'упоминания', 'упоминаний')} в {g['works']} {plural(g['works'], 'книге', 'книгах', 'книгах')}, названия ({forms[:80]}), цитаты, контексты и места.")
+        desc = (f"How European travellers of 1800–1930 described the {nm}: {num(g['mentions'], en)} mentions in {g['works']} books and the names used in the sources ({forms[:80]})."
+                if en else f"«{nm}» в описаниях европейских путешественников 1800–1930 годов: {num(g['mentions'], en)} {plural(g['mentions'], 'упоминание', 'упоминания', 'упоминаний')} в {g['works']} {plural(g['works'], 'книге', 'книгах', 'книгах')}, формы названий в источниках ({forms[:80]}).")
         books = ''.join(f'<li><a href="{{UP}}{"en/" if en else ""}b/{toH(wid)}/">{e(W[wid]["author"])}, {W[wid]["year"]}</a> — {n}</li>' for wid, n in bw if wid in W)
         body = f"""<p class="crumbs"><a href="{{HOME}}">Iter Sibiricum</a> › <a href="{{UP}}{{Q}}#peoples">{'Peoples' if en else 'Народы'}</a></p>
 <h1>{e(nm)}</h1>
 <p class="meta">{num(g['mentions'], en)} {'mentions' if en else plural(g['mentions'], 'упоминание', 'упоминания', 'упоминаний')} · {g['works']} {'books' if en else plural(g['works'], 'книга', 'книги', 'книг')}</p>
-<a class="go" href="{{UP}}{{Q}}#people-{toH(g['id'])}">{'Open the profile' if en else 'Открыть страницу народа'}</a>
+<a class="go" href="{{UP}}{{Q}}#people-{toH(g['id'])}">{'Open the profile' if en else 'Открыть карточку'}</a>
 {f'<p>{"Names in the travelogues" if en else "Названия в травелогах"}: {e(forms)}</p>' if forms else ''}
 {f'<p>{e(g["note"]) if not en else ""}</p>' if g.get('note') and not en else ''}
 {f'<h2>{"Books that mention them most" if en else "Книги, где они упоминаются чаще всего"}</h2><ul>{books}</ul>' if books else ''}
@@ -141,14 +142,14 @@ for p in places:
     for en in (False, True):
         nm = tr(p['name']) if en else p['name']
         tw = (p.get('top_works') or [])[:10]
-        desc = (f"{nm} in European travelogues of Siberia, 1800–1930: {num(p['mentions'], en)} mentions in {p['works']} books, with the paragraphs where travellers write about it."
-                if en else f"{nm} в европейских травелогах о Сибири, 1800–1930: {num(p['mentions'], en)} {plural(p['mentions'], 'упоминание', 'упоминания', 'упоминаний')} в {p['works']} {plural(p['works'], 'книге', 'книгах', 'книгах')} и абзацы, где о нём пишут путешественники.")
+        desc = (f"{nm} in European travelogues of Siberia, 1800–1930: {num(p['mentions'], en)} mentions in {p['works']} books, with links to the paragraphs that mention it."
+                if en else f"{nm} в европейских травелогах о Сибири, 1800–1930: {num(p['mentions'], en)} {plural(p['mentions'], 'упоминание', 'упоминания', 'упоминаний')} в {p['works']} {plural(p['works'], 'книге', 'книгах', 'книгах')} и абзацы, где упоминается это место.")
         books = ''.join(f'<li><a href="{{UP}}{"en/" if en else ""}b/{toH(wid)}/">{e(W[wid]["author"])}, {W[wid]["year"]}</a> — {n}</li>' for wid, n in tw if wid in W)
         body = f"""<p class="crumbs"><a href="{{HOME}}">Iter Sibiricum</a> › <a href="{{UP}}{{Q}}#atlas">{'Atlas' if en else 'Атлас'}</a></p>
 <h1>{e(nm)}</h1>
 <p class="meta">{num(p['mentions'], en)} {'mentions' if en else plural(p['mentions'], 'упоминание', 'упоминания', 'упоминаний')} · {p['works']} {'books' if en else plural(p['works'], 'книга', 'книги', 'книг')}</p>
 <a class="go" href="{{UP}}{{Q}}#evidence?pl={e(p['id'])}">{'All paragraphs about this place' if en else 'Все абзацы об этом месте'}</a>
-{f'<h2>{"Books that mention it most" if en else "Книги, где оно упоминается чаще всего"}</h2><ul>{books}</ul>' if books else ''}"""
+{f'<h2>{"Books that mention it most" if en else "Книги, в которых это место упоминается чаще всего"}</h2><ul>{books}</ul>' if books else ''}"""
         ld = {'@context': 'https://schema.org', '@type': 'Place', 'name': nm, 'description': desc, 'url': BASE + ('en/' if en else '') + f"pl/{toH(p['id'])}/",
               'geo': {'@type': 'GeoCoordinates', 'latitude': p['lat'], 'longitude': p['lon']}, 'isPartOf': ISPART} if p.get('lat') is not None else \
              {'@context': 'https://schema.org', '@type': 'Place', 'name': nm, 'url': BASE + ('en/' if en else '') + f"pl/{toH(p['id'])}/"}

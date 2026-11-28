@@ -34,4 +34,6 @@ python3 analysis/08c_illustrations_gutenberg.py   # иллюстрации из 
 python3 analysis/10c_titles.py && python3 analysis/10_build_site.py && python3 analysis/10b_book_places.py && python3 analysis/10d_evidence.py && python3 analysis/08b_illustrations_site.py   # данные сайта, иллюстрации с учётом проверки
 python3 ../site/pipeline/tools/seo_pages.py 2>/dev/null || true   # страницы для поисковиков, sitemap.xml, robots.txt (в корне сайта)
 python3 analysis/11_export_lpf.py           # газеттир в Linked Places Format (WHG) и маршруты в GeoJSON
+python3 "$SITE"/pipeline/validation/check_places.py --filter-export   # в газеттир — только места, названные в абзацах корпуса
+python3 "$SITE"/pipeline/validation/check_numbers.py   # числа в текстах сайта против данных (ошибка при расхождении)
 python3 tools/ingest_queue.py "$SITE" --finalize   # отметить в очереди книги, попавшие в библиотеку

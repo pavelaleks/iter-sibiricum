@@ -116,7 +116,7 @@ for w, v in REV.items():
         if len(S) < 2: continue
         rf.append(dict(type='Feature', geometry=dict(type='LineString', coordinates=[[round(s['lon'], 4), round(s['lat'], 4)] for s in S]),
                        properties=dict(work=w, author=W.get(w, {}).get('author', ''), edition_year=W.get(w, {}).get('edition_year', ''), journey=j,
-                                       years=v.get('years', ''), status=v['status'], status_ru='подтверждён экспертом' if v['status'] == 'verified' else 'проверен по тексту',
+                                       years=v.get('years', ''), status=v['status'], status_ru='подтверждён экспертом' if v['status'] == 'verified' else 'предварительный (языковая модель)',
                                        stops=[dict(name=s['name'], place=s['place'], paragraph=f"{BASE}#book-{w.replace('_', '-')}-p{s['pid']}" if s.get('pid') else None,
                                                    approx=str(s.get('coord_source', '')).startswith('estimate')) for s in S])))
 json.dump(dict(type='FeatureCollection', name='Iter Sibiricum: маршруты травелогов', license='CC BY-NC 4.0', features=rf),
